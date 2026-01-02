@@ -1,0 +1,49 @@
+{
+  "settings": {
+    "migrated": 6,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "native",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "🧑‍💻",
+      "LiFlaskConical",
+      "🖐",
+      "LiDatabaseZap",
+      "LiLibrary"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInTitlePosition": "above",
+    "iconInFrontmatterEnabled": false,
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconsInLinksEnabled": true,
+    "iconIdentifier": ":",
+    "lucideIconPackType": "native",
+    "debugMode": false,
+    "useInternalPlugins": false
+  },
+  "1 - Raw Notes": "LiAirplay",
+  "2 - Indexes": "LiSearchCode",
+  "3 - Zettelkasten/A - Templates/Academic Note.md": "LiLayoutTemplate",
+  "1 - Raw Notes/2 - LLM & Agent AI": "🎰",
+  "1 - Raw Notes/1 - Cloud Platforms": "LiCloudCog",
+  "1 - Raw Notes/3 - Technologies": "🧑‍💻",
+  "3 - Zettelkasten": "LiAlignHorizontalDistributeCenter",
+  "1 - Raw Notes/100 - Notes": "LiNotebook",
+  "1 - Raw Notes/4 - Libs & Frameworks": "LiLibrary",
+  "1 - Raw Notes/2 - LLM & Agent AI/Vector Storages": "LiDatabaseZap",
+  "1 - Raw Notes/5 - Terminology": "LiFlaskConical",
+  "1 - Raw Notes/6 - Interview Notes": "🧑‍💻"
+}

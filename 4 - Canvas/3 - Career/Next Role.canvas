@@ -1,0 +1,17 @@
+{
+	"nodes":[
+		{"id":"0fdb84385a9a1467","type":"text","text":"The Skill of Build Agent AI","x":-300,"y":-260,"width":250,"height":60},
+		{"id":"26ef0e9d81fa2f7a","type":"text","text":"The Skill of Kubernetes","x":-300,"y":-120,"width":250,"height":60},
+		{"id":"6eb5cfca5d35a7be","type":"text","text":"The Skill and Experience with Azure","x":-300,"y":40,"width":250,"height":60},
+		{"id":"47b89a46b47efb9b","type":"file","file":"4 - Canvas/1 - Road Maps/AI-Agent Leads Learning Plan.canvas","x":60,"y":-375,"width":400,"height":230},
+		{"id":"6699ce71a3ab47a2","type":"file","file":"5 - Images/Pasted image 20251026085640.png","x":-620,"y":-140,"width":100,"height":100},
+		{"id":"07e58b4f8e914b2d","type":"file","file":"5 - Images/Pasted image 20251026085732.png","x":760,"y":-145,"width":104,"height":104}
+	],
+	"edges":[
+		{"id":"cc03dcbf3b004a22","fromNode":"0fdb84385a9a1467","fromSide":"right","toNode":"47b89a46b47efb9b","toSide":"left"},
+		{"id":"f3cb72890c64a74e","fromNode":"47b89a46b47efb9b","fromSide":"right","toNode":"07e58b4f8e914b2d","toSide":"left"},
+		{"id":"3c3b0ec9cf62ff7a","fromNode":"6699ce71a3ab47a2","fromSide":"right","toNode":"0fdb84385a9a1467","toSide":"left"},
+		{"id":"8759f44e4a0cab1a","fromNode":"6699ce71a3ab47a2","fromSide":"right","toNode":"26ef0e9d81fa2f7a","toSide":"left"},
+		{"id":"2b260788e526711c","fromNode":"6699ce71a3ab47a2","fromSide":"right","toNode":"6eb5cfca5d35a7be","toSide":"left"}
+	]
+}

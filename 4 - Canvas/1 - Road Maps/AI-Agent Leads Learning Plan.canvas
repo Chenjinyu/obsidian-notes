@@ -1,0 +1,23 @@
+{
+	"nodes":[
+		{"id":"5eab7024dbc684b7","type":"group","x":-880,"y":-240,"width":820,"height":785,"label":"Untitled group"},
+		{"id":"a7937cb209627923","type":"text","text":"**First** - **Agent fundamentals & patterns**\n    **Plan-and-execute, multi-age3 - Zettelkastennt, critiquer/revise, ReAct, RAG + tools. Learn LangChain/Agent patterns. ([LangChain](https://www.langchain.com/agents?utm_source=chatgpt.com))","x":240,"y":-420,"width":520,"height":120},
+		{"id":"14cb335a70807f36","type":"text","text":"Second - **LLM & model Ops**\n\nPrompt engineering, grounding with RAG (vector DBs), fine-tuning or instruction tuning, cost/latency tradeoffs.","x":240,"y":-260,"width":518,"height":147},
+		{"id":"5acb388a60f2e19b","type":"text","text":"**Third - Tooling & orchestration**  \nHow to safely expose APIs/tools to agents, design tool adapters, and multi-agent orchestration patterns (sequential, concurrent, handoff). ([AI Agent Orchestration Patterns](https://learn.microsoft.com/en-us/azure/architecture/ai-ml/guide/ai-agent-design-patterns?utm_source=chatgpt.com))","x":240,"y":-60,"width":518,"height":140},
+		{"id":"e4543feeb33edcec","type":"text","text":"**Fourth - Identity, AuthN/Z & secure agent access**\n    OAuth2 / OpenID Connect, agent credentials, agent-to-app access models (XAA / cross-app access), secrets management. ([TechRadar](https://www.techradar.com/pro/security/ai-security-is-identity-security-how-okta-is-weaving-agents-into-the-security-fabric?utm_source=chatgpt.com))","x":240,"y":120,"width":518,"height":140},
+		{"id":"898312907aa4d392","type":"text","text":"Sixth - Observability, testing & SRE\n- Test agents (unit, integration, adversarial), metricize behavior (accuracy of actions, human escalations), chaos testing for workflows.\n    \n\n\n\n**","x":240,"y":480,"width":518,"height":133},
+		{"id":"9c5b33f201d175ad","type":"text","text":"**Fifth - Security & governance**\nZero-trust identity for agents, input/output guardrails, content moderation, approval workflows, and audit trails. Use NIST AI RMF and Zero Trust principles. ([NIST](https://www.nist.gov/itl/ai-risk-management-framework?utm_source=chatgpt.com))","x":240,"y":300,"width":518,"height":140},
+		{"id":"d12fbb0d89eff3c6","type":"text","text":"**Seventh - Business strategy & ROI (Return on Investment)**\n- Define KPIs: time saved, task success rate, errors avoided, revenue impact. Build business case for pilots.\n    \n\n\n\n**","x":240,"y":660,"width":518,"height":133},
+		{"id":"3d3151fad5b70306","type":"file","file":"5 - Images/Pasted image 20251026085859.png","x":-860,"y":-220,"width":779,"height":317},
+		{"id":"9c67fd151a3c0756","type":"text","text":"Until 2026, the enterprise will leverage AI agent from 5% 2025 to 40% 2026. As a software engineer, I have to catch up on the speed and to be an AI Agent Engineer Lead.\n\nMy goal is to be an AI Agent Lead, so the hands on is the most important skill to learn the AI knowledge, because the skillsets can be used in working with the Bank of America.\n\nHowever, the AI ML certification and the related orchestration and scalability are also important in the real work.\n\nReference: \n- [Gartner Predicts Sharp Rise in AI Agents within Enterprise Applications by 2026](https://consumergoods.com/gartner-predicts-sharp-rise-ai-agents-within-enterprise-applications-2026?utm_source=chatgpt.com)","x":-710,"y":245,"width":480,"height":280,"color":"#00855d"}
+	],
+	"edges":[
+		{"id":"477ea48c4cb6c8a8","fromNode":"5eab7024dbc684b7","fromSide":"right","toNode":"a7937cb209627923","toSide":"left"},
+		{"id":"9aa91a33a85db248","fromNode":"5eab7024dbc684b7","fromSide":"right","toNode":"14cb335a70807f36","toSide":"left"},
+		{"id":"7f9837aa4c67a354","fromNode":"5eab7024dbc684b7","fromSide":"right","toNode":"5acb388a60f2e19b","toSide":"left"},
+		{"id":"f6353910ce227d85","fromNode":"5eab7024dbc684b7","fromSide":"right","toNode":"e4543feeb33edcec","toSide":"left"},
+		{"id":"7600ab240e488d32","fromNode":"5eab7024dbc684b7","fromSide":"right","toNode":"9c5b33f201d175ad","toSide":"left"},
+		{"id":"5025938e8659e1ca","fromNode":"5eab7024dbc684b7","fromSide":"right","toNode":"898312907aa4d392","toSide":"left"},
+		{"id":"22cee06a9ff0c8a6","fromNode":"5eab7024dbc684b7","fromSide":"right","toNode":"d12fbb0d89eff3c6","toSide":"left"}
+	]
+}
