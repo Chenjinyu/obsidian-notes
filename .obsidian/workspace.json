@@ -11,24 +11,10 @@
             "id": "25cec54ee6bee060",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/7 - JCUS.LINK/System Design.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "System Design"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -200,13 +186,31 @@
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
       "audio-recorder:Start/stop recording": false,
-      "templater-obsidian:Templater": false
+      "templater-obsidian:Templater": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "25cec54ee6bee060",
   "lastOpenFiles": [
-    "1 - Raw Notes/4 - Libs & Frameworks/Kubernetes/Pods with Deployments.md",
+    "Untitled 5.canvas",
+    "1 - Raw Notes/7 - JCUS.LINK/1. articles/test.md",
+    "assets/Pasted image 20251026085640.png",
+    "assets/Pasted image 20251026085718.png",
+    "1 - Raw Notes/7 - JCUS.LINK/1. articles/assets/test/file-20260102013242718.png",
+    "Untitled 4.canvas",
+    "1 - Raw Notes/7 - JCUS.LINK/1. articles/assets/test/file-20260102013152082.png",
+    "1 - Raw Notes/7 - JCUS.LINK/1. articles/assets/test",
+    "1 - Raw Notes/7 - JCUS.LINK/1. articles/assets",
+    "Untitled 3.canvas",
+    "Untitled.canvas",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Popular System Design Interview Questions.md",
+    "assets/Pasted image 20251026085834.png",
+    "assets/Pasted image 20251026085732.png",
+    "Untitled 2.canvas",
+    "4 - Interview Notes/System Design",
+    "4 - Interview Notes",
     "1 - Raw Notes/7 - JCUS.LINK/System Design.md",
+    "1 - Raw Notes/4 - Libs & Frameworks/Kubernetes/Pods with Deployments.md",
     "1 - Raw Notes/4 - Libs & Frameworks/Kubernetes/Certification Preparation.md",
     "1 - Raw Notes/4 - Libs & Frameworks/Kubernetes/Pods vs Deployment vs Services.md",
     "1 - Raw Notes/4 - Libs & Frameworks/Kubernetes/Untitled.md",
@@ -224,34 +228,23 @@
     "3 - Zettelkasten/A - Templates/Academic Note.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP.md",
-    "1 - Raw Notes/2 - LLM & Agent AI/MCP",
     "1 - Raw Notes/2 - LLM & Agent AI/Google Gemini/Google Gemini Cli.md",
     "Pasted image 20251218082934.png",
     "1 - Raw Notes/4 - Libs & Frameworks/infrastructures/kubernetes/Kubectl command.md",
-    "1 - Raw Notes/2 - LLM & Agent AI/Google Gemini",
     "3 - Zettelkasten/B - Tags/Infrastructure.md",
     "1 - Raw Notes/4 - Libs & Frameworks/infrastructures/kubernetes/Kubernetes Entry Level.md",
-    "1 - Raw Notes/4 - Libs & Frameworks/infrastructures/kubernetes",
     "1 - Raw Notes/2 - LLM & Agent AI/LangChain/A - LangChain/Tools vs ReAct(Reasoning and Actioning).md",
-    "5 - Images/Pasted image 20251119011226.png",
-    "5 - Images/Pasted image 20251213225142.png",
+    "assets/Pasted image 20251119011226.png",
+    "assets/Pasted image 20251213225142.png",
     "1 - Raw Notes/4 - Libs & Frameworks/LangChain/LangChain Expression Language (LCEL).md",
-    "1 - Raw Notes/6 - Interview Notes/System Design",
     "1 - Raw Notes/4 - Libs & Frameworks/React NextJs NodeJs/React/providers/Explain LangChain's GraphProvider.md",
     "1 - Raw Notes/4 - Libs & Frameworks/React NextJs NodeJs/React/hooks/React Hooks Cheat Sheet (2025 Edition).md",
     "1 - Raw Notes/4 - Libs & Frameworks/React NextJs NodeJs/React/hooks/useEffect/useEffect in Server and Client Side.md",
     "1 - Raw Notes/4 - Libs & Frameworks/React NextJs NodeJs/React/hooks/useEffect/useEffect.md",
-    "1 - Raw Notes/4 - Libs & Frameworks/React NextJs NodeJs/React/Context.md",
-    "1 - Raw Notes/4 - Libs & Frameworks/React NextJs NodeJs/React/interface vs type.md",
     "Untitled 1.canvas",
-    "Untitled.canvas",
-    "1 - Raw Notes/4 - Libs & Frameworks/React NextJs NodeJs/React/Suspense/What is React.Suspence.md",
+    "i changed the canvas name - check sync to git.canvas",
     "4 - Canvas/1 - Road Maps/AI-Agent Leads Learning Plan.canvas",
     "4 - Canvas/3 - Career/Next Role.canvas",
-    "5 - Images/Pasted image 20251026085640.png",
-    "5 - Images/Pasted image 20251026085859.png",
-    "5 - Images/Pasted image 20251026085834.png",
-    "5 - Images/Pasted image 20251026085732.png",
-    "5 - Images/Pasted image 20251026085718.png"
+    "assets/Pasted image 20251026085859.png"
   ]
 }
