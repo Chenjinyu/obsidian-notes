@@ -11,10 +11,24 @@
             "id": "25cec54ee6bee060",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/Program Design/New Database Design (BoA).md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "New Database Design (BoA)"
             }
           }
         ]
@@ -193,6 +207,10 @@
   "active": "25cec54ee6bee060",
   "lastOpenFiles": [
     "Untitled 5.canvas",
+    "1 - Raw Notes/6 - Interview Notes/Program Design/New Database Design (BoA).md",
+    "1 - Raw Notes/6 - Interview Notes/Program Design/OOD.md",
+    "1 - Raw Notes/6 - Interview Notes/Program Design/SOLID.md",
+    "1 - Raw Notes/6 - Interview Notes/Program Design",
     "1 - Raw Notes/7 - JCUS.LINK/1. articles/test.md",
     "assets/Pasted image 20251026085640.png",
     "assets/Pasted image 20251026085718.png",
@@ -226,7 +244,6 @@
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/MCP Stateful vs REST Stateless.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/Why notification is needed after initilized.md",
     "3 - Zettelkasten/A - Templates/Academic Note.md",
-    "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP.md",
     "1 - Raw Notes/2 - LLM & Agent AI/Google Gemini/Google Gemini Cli.md",
     "Pasted image 20251218082934.png",
@@ -238,9 +255,6 @@
     "assets/Pasted image 20251213225142.png",
     "1 - Raw Notes/4 - Libs & Frameworks/LangChain/LangChain Expression Language (LCEL).md",
     "1 - Raw Notes/4 - Libs & Frameworks/React NextJs NodeJs/React/providers/Explain LangChain's GraphProvider.md",
-    "1 - Raw Notes/4 - Libs & Frameworks/React NextJs NodeJs/React/hooks/React Hooks Cheat Sheet (2025 Edition).md",
-    "1 - Raw Notes/4 - Libs & Frameworks/React NextJs NodeJs/React/hooks/useEffect/useEffect in Server and Client Side.md",
-    "1 - Raw Notes/4 - Libs & Frameworks/React NextJs NodeJs/React/hooks/useEffect/useEffect.md",
     "Untitled 1.canvas",
     "i changed the canvas name - check sync to git.canvas",
     "4 - Canvas/1 - Road Maps/AI-Agent Leads Learning Plan.canvas",
