@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/Program Design/typing.Protocol.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/Program Design/After * must be passed as keyword-only arguments.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "typing.Protocol"
+              "title": "After * must be passed as keyword-only arguments"
             }
           }
         ]
@@ -206,7 +206,8 @@
   },
   "active": "25cec54ee6bee060",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/Program Design/APIs.md",
+    "1 - Raw Notes/6 - Interview Notes/Program Design/APIs in General.md",
+    "1 - Raw Notes/6 - Interview Notes/Program Design/After * must be passed as keyword-only arguments.md",
     "1 - Raw Notes/6 - Interview Notes/Program Design/Protocol vs ABC.md",
     "1 - Raw Notes/6 - Interview Notes/Program Design/typing.Protocol.md",
     "1 - Raw Notes/6 - Interview Notes/Program Design/Collections.abc Callable.md",
@@ -253,7 +254,6 @@
     "Pasted image 20251218082934.png",
     "1 - Raw Notes/4 - Libs & Frameworks/infrastructures/kubernetes/Kubectl command.md",
     "3 - Zettelkasten/B - Tags/Infrastructure.md",
-    "1 - Raw Notes/4 - Libs & Frameworks/infrastructures/kubernetes/Kubernetes Entry Level.md",
     "assets/Pasted image 20251119011226.png",
     "assets/Pasted image 20251213225142.png",
     "Untitled 1.canvas",
