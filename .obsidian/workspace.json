@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/Program Design/After * must be passed as keyword-only arguments.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/Program Design/SOLID.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "After * must be passed as keyword-only arguments"
+              "title": "SOLID"
             }
           }
         ]
@@ -207,6 +207,7 @@
   "active": "25cec54ee6bee060",
   "lastOpenFiles": [
     "1 - Raw Notes/6 - Interview Notes/Program Design/APIs in General.md",
+    "1 - Raw Notes/6 - Interview Notes/Program Design/SOLID.md",
     "1 - Raw Notes/6 - Interview Notes/Program Design/After * must be passed as keyword-only arguments.md",
     "1 - Raw Notes/6 - Interview Notes/Program Design/Protocol vs ABC.md",
     "1 - Raw Notes/6 - Interview Notes/Program Design/typing.Protocol.md",
@@ -214,7 +215,6 @@
     "1 - Raw Notes/6 - Interview Notes/Program Design/New Database Design (BoA).md",
     "Untitled 5.canvas",
     "1 - Raw Notes/6 - Interview Notes/Program Design/OOD.md",
-    "1 - Raw Notes/6 - Interview Notes/Program Design/SOLID.md",
     "1 - Raw Notes/6 - Interview Notes/Program Design",
     "1 - Raw Notes/7 - JCUS.LINK/1. articles/test.md",
     "assets/Pasted image 20251026085640.png",

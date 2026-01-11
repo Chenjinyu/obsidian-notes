@@ -4,7 +4,7 @@ Tags:
 
 # Content
 
-### All of these are APIs:
+### All of these are APIs: Application Program Interfaces
 - Function APIs
 - Class interfaces
 - Plugin interfaces
