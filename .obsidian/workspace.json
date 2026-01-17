@@ -30,21 +30,8 @@
               "icon": "lucide-file",
               "title": "SOLID"
             }
-          },
-          {
-            "id": "8422b3f8efdb6fcb",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.11.4"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.11.4"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -217,7 +204,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8422b3f8efdb6fcb",
+  "active": "25cec54ee6bee060",
   "lastOpenFiles": [
     "1 - Raw Notes/6 - Interview Notes/Program Design/APIs in General.md",
     "1 - Raw Notes/6 - Interview Notes/Program Design/SOLID.md",
