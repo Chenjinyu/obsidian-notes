@@ -35,12 +35,24 @@
             "id": "bfec6f5234b436b8",
             "type": "leaf",
             "state": {
-              "type": "release-notes",
+              "type": "markdown",
               "state": {
-                "currentVersion": "1.11.5"
+                "file": "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/MCP SDK Client vs HTTP request direct.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
               },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.11.5"
+              "icon": "lucide-file",
+              "title": "MCP SDK Client vs HTTP request direct"
             }
           }
         ],
@@ -76,7 +88,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "kuber",
+                "query": "Why notification is needed after initilized",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -219,6 +231,9 @@
   },
   "active": "bfec6f5234b436b8",
   "lastOpenFiles": [
+    "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/Why notification is needed after initilized.md",
+    "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/MCP SDK Client vs HTTP request direct.md",
+    "1 - Raw Notes/7 - JCUS.LINK/System Design.md",
     "1 - Raw Notes/6 - Interview Notes/Program Design/APIs in General.md",
     "1 - Raw Notes/6 - Interview Notes/Program Design/SOLID.md",
     "1 - Raw Notes/6 - Interview Notes/Program Design/After * must be passed as keyword-only arguments.md",
@@ -245,7 +260,6 @@
     "Untitled 2.canvas",
     "4 - Interview Notes/System Design",
     "4 - Interview Notes",
-    "1 - Raw Notes/7 - JCUS.LINK/System Design.md",
     "1 - Raw Notes/4 - Libs & Frameworks/Kubernetes/Pods with Deployments.md",
     "1 - Raw Notes/4 - Libs & Frameworks/Kubernetes/Certification Preparation.md",
     "1 - Raw Notes/4 - Libs & Frameworks/Kubernetes/Pods vs Deployment vs Services.md",
@@ -260,13 +274,11 @@
     "1 - Raw Notes/7 - JCUS.LINK/1. articles",
     "1 - Raw Notes/7 - JCUS.LINK",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/MCP Stateful vs REST Stateless.md",
-    "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/Why notification is needed after initilized.md",
     "3 - Zettelkasten/A - Templates/Academic Note.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP.md",
     "1 - Raw Notes/2 - LLM & Agent AI/Google Gemini/Google Gemini Cli.md",
     "Pasted image 20251218082934.png",
     "1 - Raw Notes/4 - Libs & Frameworks/infrastructures/kubernetes/Kubectl command.md",
-    "3 - Zettelkasten/B - Tags/Infrastructure.md",
     "assets/Pasted image 20251119011226.png",
     "assets/Pasted image 20251213225142.png",
     "Untitled 1.canvas",
