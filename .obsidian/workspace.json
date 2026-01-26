@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/MCP SDK Client vs HTTP request direct.md",
+                "file": "1 - Raw Notes/5 - Terminology/Foundation Models.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "MCP SDK Client vs HTTP request direct"
+              "title": "Foundation Models"
             }
           }
         ],
@@ -88,7 +88,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Why notification is needed after initilized",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -229,10 +229,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "bfec6f5234b436b8",
+  "active": "1a71e9f0de9191ea",
   "lastOpenFiles": [
-    "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/Why notification is needed after initilized.md",
+    "1 - Raw Notes/2 - LLM & Agent AI/RAG",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/MCP SDK Client vs HTTP request direct.md",
+    "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/Why notification is needed after initilized.md",
     "1 - Raw Notes/7 - JCUS.LINK/System Design.md",
     "1 - Raw Notes/6 - Interview Notes/Program Design/APIs in General.md",
     "1 - Raw Notes/6 - Interview Notes/Program Design/SOLID.md",
@@ -278,7 +279,6 @@
     "1 - Raw Notes/2 - LLM & Agent AI/MCP.md",
     "1 - Raw Notes/2 - LLM & Agent AI/Google Gemini/Google Gemini Cli.md",
     "Pasted image 20251218082934.png",
-    "1 - Raw Notes/4 - Libs & Frameworks/infrastructures/kubernetes/Kubectl command.md",
     "assets/Pasted image 20251119011226.png",
     "assets/Pasted image 20251213225142.png",
     "Untitled 1.canvas",
