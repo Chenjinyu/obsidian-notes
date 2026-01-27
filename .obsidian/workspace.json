@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/5 - Terminology/Foundation Models.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/Dynamic Programming/What is Dynamic Programming.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Foundation Models"
+              "title": "What is Dynamic Programming"
             }
           }
         ],
@@ -229,8 +229,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1a71e9f0de9191ea",
+  "active": "bfec6f5234b436b8",
   "lastOpenFiles": [
+    "1 - Raw Notes/2 - LLM & Agent AI/RAG/Perform Better Search Capability By.md",
+    "1 - Raw Notes/6 - Interview Notes/Dynamic Programming/What is Dynamic Programming.md",
+    "1 - Raw Notes/6 - Interview Notes/Dynamic Programming",
+    "1 - Raw Notes/6 - Interview Notes/SQL Language",
+    "1 - Raw Notes/5 - Terminology/Foundation Models.md",
     "1 - Raw Notes/2 - LLM & Agent AI/RAG",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/MCP SDK Client vs HTTP request direct.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/Why notification is needed after initilized.md",
@@ -271,13 +276,8 @@
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/ID in MCP Request Data body.md",
     "1 - Raw Notes/7 - JCUS.LINK/4. profile_data",
     "1 - Raw Notes/7 - JCUS.LINK/3. personal_attributes",
-    "1 - Raw Notes/7 - JCUS.LINK/2. documents",
-    "1 - Raw Notes/7 - JCUS.LINK/1. articles",
-    "1 - Raw Notes/7 - JCUS.LINK",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/MCP Stateful vs REST Stateless.md",
     "3 - Zettelkasten/A - Templates/Academic Note.md",
-    "1 - Raw Notes/2 - LLM & Agent AI/MCP.md",
-    "1 - Raw Notes/2 - LLM & Agent AI/Google Gemini/Google Gemini Cli.md",
     "Pasted image 20251218082934.png",
     "assets/Pasted image 20251119011226.png",
     "assets/Pasted image 20251213225142.png",

@@ -1,0 +1,17 @@
+Date: 2026-01-26
+Course:
+Tags: 
+
+# Content
+**Dynamic Programming** (DP) is a programming paradigm that can systematically and efficiently explore all possible solutions to a problem. As such, it is capable of solving a wide variety of problems that often have the following characteristics:
+
+1. The problem can be broken down into "overlapping subproblems" - smaller versions of the original problem that are re-used multiple times.问题可以分解为“重叠子问题”——这些子问题是原问题的较小版本，并且会被多次重复使用。
+2. The problem has an "optimal substructure" - an optimal solution can be formed from optimal solutions to the overlapping subproblems of the original problem. 问题具有“最优子结构”——原问题的最优解可以由其重叠子问题的最优解构成。(**Important**)
+
+for example, the brute force solution for calculating the Fibonacci sequence has **exponential** time complexity, while the dynamic programming solution will have **linear** time complexity because it **reuses the results of subproblems** rather than recalculating the results for previously seen subproblems.
+
+# Note
+
+
+# Reference
+
