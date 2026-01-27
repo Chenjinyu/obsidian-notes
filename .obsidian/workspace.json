@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/Bitwise Operation (python vs mathematics).md",
+                "file": "1 - Raw Notes/6 - Interview Notes/English.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Bitwise Operation (python vs mathematics)"
+              "title": "English"
             }
           }
         ],
@@ -231,8 +231,12 @@
   },
   "active": "bfec6f5234b436b8",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/Dynamic Programming/What is Dynamic Programming.md",
+    "1 - Raw Notes/6 - Interview Notes/Dynamic Programming/1.2. Top-down(aka memoization) and Bottom-up(aka tablulation).md",
+    "1 - Raw Notes/6 - Interview Notes/Dynamic Programming/1.1. What is Dynamic Programming.md",
+    "1 - Raw Notes/6 - Interview Notes/English.md",
+    "1 - Raw Notes/6 - Interview Notes/Problems/Permutation Problem.md",
     "1 - Raw Notes/6 - Interview Notes/Bitwise Operation (python vs mathematics).md",
+    "1 - Raw Notes/6 - Interview Notes/Problems",
     "1 - Raw Notes/2 - LLM & Agent AI/RAG/Perform Better Search Capability By.md",
     "1 - Raw Notes/6 - Interview Notes/Dynamic Programming",
     "1 - Raw Notes/6 - Interview Notes/SQL Language",
@@ -273,11 +277,7 @@
     "1 - Raw Notes/4 - Libs & Frameworks/Kubernetes/Untitled.md",
     "1 - Raw Notes/4 - Libs & Frameworks/infrastructures/Infrastructure as CodeIaC Comparison.md",
     "1 - Raw Notes/7 - JCUS.LINK/1. articles/asyncpg_SQLAlcheme_SupabaseCient.md",
-    "1 - Raw Notes/7 - JCUS.LINK/1. articles/pool_vs_session.md",
-    "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/ID in MCP Request Data body.md",
     "1 - Raw Notes/7 - JCUS.LINK/4. profile_data",
-    "1 - Raw Notes/7 - JCUS.LINK/3. personal_attributes",
-    "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/MCP Stateful vs REST Stateless.md",
     "Pasted image 20251218082934.png",
     "assets/Pasted image 20251119011226.png",
     "assets/Pasted image 20251213225142.png",

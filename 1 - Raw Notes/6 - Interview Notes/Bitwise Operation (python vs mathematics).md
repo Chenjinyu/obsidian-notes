@@ -1,6 +1,6 @@
 Date: 2026-01-26
 Course:
-Tags: 
+Tags: [Interview]
 
 # Content
 In python: 
@@ -14,7 +14,7 @@ Bitwise XOR
 ```
 in math
 A⊕B
-True when **exactly one of A or B is** is 1.
+True when **exactly one of A or B is 1 then** is 1.
 
 | A   | B   | A XOR B |
 | --- | --- | ------- |
@@ -57,23 +57,26 @@ in math:
 
 << Left Shift: moves the binary representation of a number to the left by a specified number of positions, filling vacated bits with zeros.
 ```
-eg: a << b = a ** 2^b (in math) = a * 2 **2
+eg: a << b = a ** 2^b (in math) = a * 2**2
 5 << 1
 0101 << 1= 1010 = 10
 or 5 * 2 ** 1 = 10
 ```
-
+in math:
+5 x 2的一次方
 ##  >> Right Shift: shift bits right, 
 ```
 5 >> 1
 0101 >> 1 ** 2 = 0010 = 2
 ```
-
+in math
+5 / 2 的一次方
+x >> n 等于 x除以2的n次方
 
 # Note
 hexadecimal：十六进制
 decimal： 十进制
 binary： 二进制
-
+exponential: 指数
 # Reference
 
