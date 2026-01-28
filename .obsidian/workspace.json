@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/Algorithms/DFS (Depth-First Search).md",
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design/5 Steps for System Design Interview.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "DFS (Depth-First Search)"
+              "title": "5 Steps for System Design Interview"
             }
           }
         ]
@@ -204,11 +204,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1a71e9f0de9191ea",
+  "active": "25cec54ee6bee060",
   "lastOpenFiles": [
+    "1 - Raw Notes/7 - JCUS.LINK/System Design.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design/5 Steps for System Design Interview.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Popular System Design Interview Questions.md",
+    "1 - Raw Notes/6 - Interview Notes/Algorithms/DFS (Depth-First Search).md",
     "1 - Raw Notes/6 - Interview Notes/Data Structure Algorithms",
     "1 - Raw Notes/6 - Interview Notes/Dynamic Programming/1.3. When to use DP.md",
-    "1 - Raw Notes/6 - Interview Notes/Algorithms/DFS (Depth-First Search).md",
     "1 - Raw Notes/6 - Interview Notes/Algorithms/Untitled",
     "1 - Raw Notes/6 - Interview Notes/Algorithm",
     "1 - Raw Notes/6 - Interview Notes/Dynamic Programming/LeetCode Problems",
@@ -231,10 +234,8 @@
     "1 - Raw Notes/6 - Interview Notes/Dynamic Programming",
     "1 - Raw Notes/6 - Interview Notes/SQL Language",
     "1 - Raw Notes/5 - Terminology/Foundation Models.md",
-    "1 - Raw Notes/2 - LLM & Agent AI/RAG",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/MCP SDK Client vs HTTP request direct.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/Why notification is needed after initilized.md",
-    "1 - Raw Notes/7 - JCUS.LINK/System Design.md",
     "1 - Raw Notes/6 - Interview Notes/Program Design/APIs in General.md",
     "1 - Raw Notes/6 - Interview Notes/Program Design/After * must be passed as keyword-only arguments.md",
     "1 - Raw Notes/6 - Interview Notes/Program Design/Protocol vs ABC.md",
@@ -251,7 +252,6 @@
     "1 - Raw Notes/7 - JCUS.LINK/1. articles/assets/test/file-20260102013152082.png",
     "Untitled 3.canvas",
     "Untitled.canvas",
-    "1 - Raw Notes/6 - Interview Notes/System Design/Popular System Design Interview Questions.md",
     "assets/Pasted image 20251026085834.png",
     "Untitled 2.canvas",
     "1 - Raw Notes/4 - Libs & Frameworks/Kubernetes/Pods with Deployments.md",
