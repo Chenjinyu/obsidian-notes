@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/4 - System Design Glossary.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/English.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "4 - System Design Glossary"
+              "title": "English"
             }
           }
         ],
@@ -253,11 +253,15 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1a71e9f0de9191ea",
+  "active": "6ba7824bdd95fe8c",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/assets/English/file-20260128000607801.png",
+    "1 - Raw Notes/6 - Interview Notes/assets/English/file-20260128000547991.png",
+    "1 - Raw Notes/6 - Interview Notes/assets/English",
+    "1 - Raw Notes/6 - Interview Notes/assets",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/4 - System Design Glossary.md",
     "1 - Raw Notes/6 - Interview Notes/Software Engineering Interview Prep (Exponent)",
     "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/3 - Rubric for System Design Interviews (评分标准).md",
-    "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/4 - System Design Glossary.md",
     "1 - Raw Notes/6 - Interview Notes/System Design/Terminology/security auditing and logging.md",
     "1 - Raw Notes/6 - Interview Notes/System Design/Terminology/secure communication.md",
     "1 - Raw Notes/6 - Interview Notes/System Design/Terminology/write-ahead logging.md",
@@ -278,11 +282,8 @@
     "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/assets/2 - System Design Principles",
     "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/assets/1 - 5 Steps for System Design Interview",
     "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/assets/3 - Rubric for System Design Interviews (评分标准)",
-    "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/assets",
     "1 - Raw Notes/6 - Interview Notes/REST vs GraphQL vs RPC.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc",
     "1 - Raw Notes/6 - Interview Notes/Coding/SQL Language/Database/Partitioning VS Sharding.md",
-    "1 - Raw Notes/6 - Interview Notes/Coding/SQL Language/Database",
     "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/assets/3 - Rubric for System Design Interviews (评分标准)/file-20260127223752655.png",
     "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/assets/2 - System Design Principles/file-20260127222843159.png",
     "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/assets/2 - System Design Principles/file-20260127222830941.png",
@@ -297,7 +298,6 @@
     "1 - Raw Notes/6 - Interview Notes/Coding/Dynamic Programming/1.2. Top-down(aka memoization) and Bottom-up(aka tablulation).md",
     "1 - Raw Notes/6 - Interview Notes/Coding/Dynamic Programming/assets/1.1. What is Dynamic Programming/file-20260127003617478.png",
     "1 - Raw Notes/6 - Interview Notes/Coding/Dynamic Programming/assets/1.2. Top-down(aka memoization) and Bottom-up(aka tablulation)/file-20260127004949298.png",
-    "1 - Raw Notes/6 - Interview Notes/Coding/Dynamic Programming/assets/1.2. Top-down(aka memoization) and Bottom-up(aka tablulation)/file-20260127004937973.png",
     "1 - Raw Notes/6 - Interview Notes/Program Design/SOLID.md",
     "1 - Raw Notes/6 - Interview Notes/Coding/Dynamic Programming/1.1. What is Dynamic Programming.md",
     "1 - Raw Notes/6 - Interview Notes/Bitwise Operation (python vs mathematics).md",
