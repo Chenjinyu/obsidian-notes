@@ -1,6 +1,6 @@
 Date: 2026-01-27
-Course:
-Tags: 
+Course: https://www.tryexponent.com/courses/system-design-interviews/system-design-principles
+Tags: [[interview]] [[../../../7 - JCUS.LINK/System Design]]
 
 # Content
 

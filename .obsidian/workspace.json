@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design/2 - System Design Principles.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design/Terminology/secure communication.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,10 +28,59 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2 - System Design Principles"
+              "title": "secure communication"
+            }
+          },
+          {
+            "id": "6908dc1fc1285de2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design/Terminology/security auditing and logging.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "security auditing and logging"
+            }
+          },
+          {
+            "id": "6ba7824bdd95fe8c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/4 - System Design Glossary.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "4 - System Design Glossary"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -88,7 +137,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 405.5
+    "width": 482.5
   },
   "right": {
     "id": "c375af2eeef2242a",
@@ -204,59 +253,59 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "25cec54ee6bee060",
+  "active": "1a71e9f0de9191ea",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/System Design/assets/2 - System Design Principles/file-20260127222843159.png",
-    "1 - Raw Notes/6 - Interview Notes/System Design/assets/2 - System Design Principles/file-20260127222830941.png",
-    "1 - Raw Notes/6 - Interview Notes/System Design/assets/2 - System Design Principles/file-20260127222753562.png",
-    "1 - Raw Notes/6 - Interview Notes/System Design/assets/2 - System Design Principles",
-    "1 - Raw Notes/6 - Interview Notes/System Design/1 - 5 Steps for System Design Interview.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design/2 - System Design Principles.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design/assets/1 - 5 Steps for System Design Interview/file-20260127221905701.png",
-    "1 - Raw Notes/6 - Interview Notes/System Design/assets/1 - 5 Steps for System Design Interview/file-20260127221602928.png",
-    "1 - Raw Notes/6 - Interview Notes/System Design/assets/1 - 5 Steps for System Design Interview/file-20260127220420151.png",
-    "1 - Raw Notes/6 - Interview Notes/System Design/assets/1 - 5 Steps for System Design Interview",
-    "1 - Raw Notes/6 - Interview Notes/System Design/assets",
+    "1 - Raw Notes/6 - Interview Notes/Software Engineering Interview Prep (Exponent)",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/3 - Rubric for System Design Interviews (评分标准).md",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/4 - System Design Glossary.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Terminology/security auditing and logging.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Terminology/secure communication.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Terminology/write-ahead logging.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Terminology/Error handling and retry mechanisms.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Terminology/Distributed monitory systems.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Terminology/heartbeat mechanism.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Terminology/geo-redundancy.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Terminology/fault recovery algorithms.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding/Problems/Permutation Problem.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Terminology/self-healing.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Database",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Terminology",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Services",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/2 - System Design Principles.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/1 - 5 Steps for System Design Interview.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Popular System Design Interview Questions.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/assets/2 - System Design Principles",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/assets/1 - 5 Steps for System Design Interview",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/assets/3 - Rubric for System Design Interviews (评分标准)",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/assets",
+    "1 - Raw Notes/6 - Interview Notes/REST vs GraphQL vs RPC.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc",
+    "1 - Raw Notes/6 - Interview Notes/Coding/SQL Language/Database/Partitioning VS Sharding.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding/SQL Language/Database",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/assets/3 - Rubric for System Design Interviews (评分标准)/file-20260127223752655.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/assets/2 - System Design Principles/file-20260127222843159.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/assets/2 - System Design Principles/file-20260127222830941.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/assets/2 - System Design Principles/file-20260127222753562.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/assets/1 - 5 Steps for System Design Interview/file-20260127221905701.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/assets/1 - 5 Steps for System Design Interview/file-20260127221602928.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/assets/1 - 5 Steps for System Design Interview/file-20260127220420151.png",
     "1 - Raw Notes/6 - Interview Notes/English.md",
     "1 - Raw Notes/7 - JCUS.LINK/System Design.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design/Popular System Design Interview Questions.md",
     "1 - Raw Notes/6 - Interview Notes/Algorithms/DFS (Depth-First Search).md",
-    "1 - Raw Notes/6 - Interview Notes/Data Structure Algorithms",
-    "1 - Raw Notes/6 - Interview Notes/Dynamic Programming/1.3. When to use DP.md",
-    "1 - Raw Notes/6 - Interview Notes/Algorithms/Untitled",
-    "1 - Raw Notes/6 - Interview Notes/Algorithm",
-    "1 - Raw Notes/6 - Interview Notes/Dynamic Programming/LeetCode Problems",
-    "1 - Raw Notes/6 - Interview Notes/Dynamic Programming/1.2. Top-down(aka memoization) and Bottom-up(aka tablulation).md",
-    "1 - Raw Notes/6 - Interview Notes/Dynamic Programming/assets/1.1. What is Dynamic Programming/file-20260127003617478.png",
-    "1 - Raw Notes/6 - Interview Notes/Dynamic Programming/assets/1.2. Top-down(aka memoization) and Bottom-up(aka tablulation)/file-20260127004949298.png",
-    "1 - Raw Notes/6 - Interview Notes/Dynamic Programming/assets/1.2. Top-down(aka memoization) and Bottom-up(aka tablulation)/file-20260127004937973.png",
+    "1 - Raw Notes/6 - Interview Notes/Coding/Dynamic Programming/1.3. When to use DP.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding/Dynamic Programming/1.2. Top-down(aka memoization) and Bottom-up(aka tablulation).md",
+    "1 - Raw Notes/6 - Interview Notes/Coding/Dynamic Programming/assets/1.1. What is Dynamic Programming/file-20260127003617478.png",
+    "1 - Raw Notes/6 - Interview Notes/Coding/Dynamic Programming/assets/1.2. Top-down(aka memoization) and Bottom-up(aka tablulation)/file-20260127004949298.png",
+    "1 - Raw Notes/6 - Interview Notes/Coding/Dynamic Programming/assets/1.2. Top-down(aka memoization) and Bottom-up(aka tablulation)/file-20260127004937973.png",
     "1 - Raw Notes/6 - Interview Notes/Program Design/SOLID.md",
-    "Pasted image 20251218082934.png",
-    "1 - Raw Notes/6 - Interview Notes/Dynamic Programming/assets/1.2. Top-down(aka memoization) and Bottom-up(aka tablulation)/file-20260127004520531.png",
-    "1 - Raw Notes/6 - Interview Notes/Dynamic Programming/assets/1.2. Top-down(aka memoization) and Bottom-up(aka tablulation)",
-    "1 - Raw Notes/6 - Interview Notes/Dynamic Programming/1.1. What is Dynamic Programming.md",
-    "1 - Raw Notes/6 - Interview Notes/Dynamic Programming/assets/1.1. What is Dynamic Programming",
-    "1 - Raw Notes/6 - Interview Notes/Dynamic Programming/assets",
-    "1 - Raw Notes/6 - Interview Notes/Problems/Permutation Problem.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding/Dynamic Programming/1.1. What is Dynamic Programming.md",
     "1 - Raw Notes/6 - Interview Notes/Bitwise Operation (python vs mathematics).md",
-    "1 - Raw Notes/2 - LLM & Agent AI/RAG/Perform Better Search Capability By.md",
-    "1 - Raw Notes/5 - Terminology/Foundation Models.md",
-    "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/MCP SDK Client vs HTTP request direct.md",
-    "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/Why notification is needed after initilized.md",
-    "1 - Raw Notes/6 - Interview Notes/Program Design/APIs in General.md",
-    "1 - Raw Notes/6 - Interview Notes/Program Design/After * must be passed as keyword-only arguments.md",
-    "1 - Raw Notes/6 - Interview Notes/Program Design/Protocol vs ABC.md",
-    "1 - Raw Notes/6 - Interview Notes/Program Design/typing.Protocol.md",
-    "1 - Raw Notes/6 - Interview Notes/Program Design/Collections.abc Callable.md",
-    "1 - Raw Notes/6 - Interview Notes/Program Design/New Database Design (BoA).md",
     "Untitled 5.canvas",
-    "1 - Raw Notes/6 - Interview Notes/Program Design/OOD.md",
-    "1 - Raw Notes/7 - JCUS.LINK/1. articles/test.md",
     "Untitled 4.canvas",
     "Untitled 3.canvas",
     "Untitled.canvas",
     "Untitled 2.canvas",
-    "1 - Raw Notes/4 - Libs & Frameworks/Kubernetes/Pods with Deployments.md",
     "Untitled 1.canvas",
     "i changed the canvas name - check sync to git.canvas",
     "4 - Canvas/1 - Road Maps/AI-Agent Leads Learning Plan.canvas",

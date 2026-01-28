@@ -1,24 +1,25 @@
 Date: 2026-01-27
-Course: [[interview]] [[../../7 - JCUS.LINK/System Design]] 
+Course: https://www.tryexponent.com/courses/system-design-interviews/intro-architecture
+Tags: [[interview]] [[../../../7 - JCUS.LINK/System Design]]
 
 # Content
 
 ![](assets/1%20-%205%20Steps%20for%20System%20Design%20Interview/file-20260127221905701.png)
-### The Interviewers are looking for (interviewers don't expect you to create a 100% perfect solution, it should a open-ended solution, based on the trade off, to choose right one)
+## The Interviewers are looking for (interviewers don't expect you to create a 100% perfect solution, it should a open-ended solution, based on the trade off, to choose right one)
 - Design the blueprint of the architecture
 - Analyze a complex system
 - Discuss multiple solutions and requirements
 - Weight the pros and cons to reach a workable solution.
 
-### Purpose
+## Purpose
 - Design a complicated system under **tight time pressure**
 - Allocate your time wisely by focusing on the essential aspects of the design
 - Clearly communicate with the interviewer
 - Lead the discussion toward a productive outcome.
 	
 
-### A 5-step system design interview framework
-#### Step 1: Define the problem. Ask clarifying questions to gather more information about the system requirements. then, estimate the amount of data. (~ 8 mins)
+## A 5-step system design interview framework
+### Step 1: Define the problem. Ask clarifying questions to gather more information about the system requirements. then, estimate the amount of data. (~ 8 mins)
 Ask clarifying questions is a critical first step, as it creates the foundation that your system will be built upon.
 the main objective is to narrow down what key features and/or aspects of the system your interviewer is most interested in.
 some sample questions:
@@ -26,9 +27,9 @@ some sample questions:
 - how many users does the product have?
 - are we creating the system from scratch? do we need to talk to pieces of the existing system
 - who are our clients/consumers.
-##### then, define functional requirements
+#### then, define functional requirements
 example: based on the insights gathered from my clarifying questions, i can boil down the primary areas and features of xxx to the following:
-##### Define non-functional requirements
+#### Define non-functional requirements
 the non-functional requirements gathering might be linked to business objective or the user experience
 Common non-functional requirements include: **scalability, latency, security, consistency, reliability, availability, and maintainability.**
 
@@ -45,7 +46,7 @@ eg: Given our functional requirements, it is safe to assume that our non-functio
 - High availability
 - Scalability
 - Low latency
-##### Estimate the amount of data
+#### Estimate the amount of data
 Once you’ve defined your requirements, you’ll likely need to do some quick calculations to estimate the amount of data you're dealing with. These estimates should help you choose components and give you an idea of what scaling might look like later.
 
 **Interviewers generally want to see you make two key calculations:**
@@ -72,11 +73,11 @@ Write QPS: ~600k photo uploads = 6*10^5/86400 = **~10 uploads per sec**
 
 Read QPS: 10 reads per day * 3M DAU / 86400 = ~**350 reads per sec**
 ```
-#### Step 2: Design the system at a high level (estimate time: 10 mins)
+### Step 2: Design the system at a high level (estimate time: 10 mins)
 Based on the requirements outlined in Step 1, design a high-level system and briefly explain how each piece of the system will work together.
 
 The main objective in this step is to incorporate the requirements you identified in the previous step into your system’s main components. Your interviewer is assessing whether you can visualize and communicate the system’s overall data structure. Don't get into the details too soon, or you might run out of time or design something that doesn't work with the rest of the system.
-##### Design your APIs
+#### Design your APIs
 Introduce your system by designing your [APIs](https://www.tryexponent.com/courses/system-design-interview/fundamentals-system-design/system-design-apis) (Application Programming Interfaces). These APIs will become the foundation of your system's architecture, so they should not be easily changed once you’ve established them.
 
 Each requirement should translate to one or more APIs. You can choose what type of APIs you want to use. Common API types include:
@@ -86,7 +87,7 @@ Each requirement should translate to one or more APIs. You can choose what type 
 - Remote Procedure Call [RPC], and
 - GraphQL
 When choosing your APIs, consider the request's parameters and the response type. Clarify which APIs you’ve chosen with your interviewer, and explain why.
-##### Design your data model
+#### Design your data model
 When designing an effective data model, you need to determine:
 
 1. The type of the data that the system wants to collect/capture (for example, metadata, video files, blob storage, text, video storage)
@@ -116,7 +117,7 @@ Back-end services will perform a JOIN operation on the followers and photo table
 
 The Instagram product relies heavily on the relation between these data types to support fetching user feeds. A common query would be to fetch all photos for a group of (followed) users. Because of this, it would make sense to use a SQL Database to host our data models.
 ```
-#### Create a high-level design diagram (HLD)
+### Create a high-level design diagram (HLD)
 After designing the APIs and data model, the next step is to create a high-level design diagram. The diagram should act as a blueprint of our design and highlight the most critical pieces to fulfill the functional requirements.
 
 At this step, your interviewer wants to see that you have a broad understanding of how the overall system will function. Instead of diving into the details of each service, communicate whether the design satisfies all the functional requirements. Demonstrate to the interviewer how the data and control flow look in each functional requirement.
@@ -139,7 +140,7 @@ At this point all the functional requirements should be met. Moving forward, we 
 ```
 ![](assets/1%20-%205%20Steps%20for%20System%20Design%20Interview/file-20260127220420151.png)
 
-#### Step 3: Deep-dive into the design (time estimate: 10mins)
+### Step 3: Deep-dive into the design (time estimate: 10mins)
 Once you have a high-level diagram, it's time to examine system components and relationships in more detail. Walk your interviewer through the lifecycle of a user request to demonstrate that you understand how your system’s various components work together.
 
 The interviewer will likely want to ask questions about the system and how it works to support each functional requirement. Example questions include:
@@ -154,11 +155,11 @@ That being said, don't rely on them to drive the conversation. Check in regularl
 - Would you like me to expand on this, or am I okay to move on?
 - How does everything sound so far?
 
-##### assess tradeoffs and evaluate your design choices
+#### Assess Tradeoffs and Evaluate Your Design Choices
 If the interviewer doesn’t give you a clear directive, continue the conversation by explaining what tradeoffs you considered and how the system’s requirements impacted your design choices.
 
 Remember, there’s no single “right” answer to a system design question. What matters more is your ability to logically communicate your ideas and make well-informed decisions. 
-###### Weighing the tradeoffs between different choices to satisfy the system's requirements is considered one of the most critical skill sets in a system design interview.
+##### Weighing the tradeoffs between different choices to satisfy the system's requirements is considered one of the most critical skill sets in a system design interview.
 eg:
 ```txt
 In the “**How would you design Instagram?**” example, you might say:
@@ -186,7 +187,7 @@ I de-coupled the write vs. read capabilities into different services for the fol
 - This technique encourages independent horizontal scaling, where read servers will most likely scale out more than writes. This comes at a tradeoff of additional software engineering complexity, instead of maintaining a monolithic service.
 ```
 
-### Step 4: Identify bottlenecks and scale (time estimate: 10 mins)
+## Step 4: Identify bottlenecks and scale (time estimate: 10 mins)
 After completing a deep dive into the system components, it's time to zoom out and consider if the system can operate under various conditions and has room to support further growth. Your interviewer is assessing your ability to incorporate non-functional requirements through different optimization techniques.
 
 Potential topics your interviewer might ask you about include:
@@ -215,7 +216,7 @@ A few examples of areas that can be improved include:
 ```
 ![](assets/1%20-%205%20Steps%20for%20System%20Design%20Interview/file-20260127221602928.png)
 
-### Step 5: Review and Summarize (time estimate: 4 mins)
+## Step 5: Review and Summarize (time estimate: 4 mins)
 As you approach the end of the interview, take this opportunity to polish your response by calling out any topics you didn’t get to address during the interview. By filling the potential gaps in your design, you’re showing the interviewer that you have a comprehensive understanding of the system.
 
 Other topics to include in your summary include:
@@ -243,7 +244,7 @@ If given more time, I would check and see if our system would benefit from any o
 5. If the Metadata DB has an outage, then we can rely on our cache to provide a somewhat operational service, as opposed to the service being completely unavailable.
 ```
 
-### Tips
+## Tips
 - **Clarify the problem first, rather than jumping straight into the design.** If you skip this step, you’ll risk making incorrect assumptions about the features that the interviewer wants you to build. These assumptions can easily take you on the wrong track, because you haven’t checked which functional requirements are most important for your system. The interviewer will likely flag that you aren’t using your time efficiently.
 - **Budget time carefully by creating a high level design before diving into detail.** If you get into a rabbit hole of over-optimizing a specific design component, you may waste all your time focusing on something your interviewer doesn’t care too much about. By presenting the foundations of your design at a high-level, you can engage in a two-way dialogue with your interviewer about which parts of your design are actually important.
 - **Refer back to requirements periodically to ensure you’re staying on track.** It’s easy to forget about your requirements as you move through the interview. Once forgotten, these requirements may get neglected in your design components. Reminding yourself and the interviewee of the critical requirements throughout the interview helps you stay on track with your design and helps the interviewer follow your logic.
