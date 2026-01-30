@@ -32,6 +32,11 @@ GraphQL is especially good for:
 * feed-style apps
 * “profile pages” that assemble many components
 * BFF (backend-for-frontend) layers
+	* Use GraphQL for BFF when:
+	- UI screens need many different shapes
+	- you have multiple backend services
+	- you want the UI to iterate fast
+	- you’re willing to add guardrails (batching, limits, caching)
 
 ---
 
