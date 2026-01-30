@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/APIs/APIs - REST vs GraphQL vs RPC.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/APIs/API Gateway.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "APIs - REST vs GraphQL vs RPC"
+              "title": "API Gateway"
             }
           }
         ],
@@ -255,8 +255,14 @@
   },
   "active": "6ba7824bdd95fe8c",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/APIs/Long-Running Operation(LRO) vs Asynchronous.md",
+    "1 - Raw Notes/6 - Interview Notes/APIs/assets/API Gateway/file-20260129233216883.png",
+    "1 - Raw Notes/6 - Interview Notes/APIs/assets/API Gateway",
+    "1 - Raw Notes/6 - Interview Notes/APIs/assets",
+    "1 - Raw Notes/6 - Interview Notes/APIs/API Idempotency.md",
+    "1 - Raw Notes/6 - Interview Notes/APIs/API Gateway.md",
     "1 - Raw Notes/6 - Interview Notes/APIs/APIs - REST vs GraphQL vs RPC.md",
+    "1 - Raw Notes/6 - Interview Notes/APIs/Long-Running Operation(LRO) vs Asynchronous.md",
+    "1 - Raw Notes/6 - Interview Notes/APIs/What is and when to use RPC.md",
     "1 - Raw Notes/6 - Interview Notes/APIs",
     "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/1 - 5 Steps for System Design Interview.md",
     "1 - Raw Notes/6 - Interview Notes/English.md",
@@ -283,8 +289,6 @@
     "1 - Raw Notes/6 - Interview Notes/System Design/Services",
     "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/2 - System Design Principles.md",
     "1 - Raw Notes/6 - Interview Notes/System Design/Popular System Design Interview Questions.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/assets/2 - System Design Principles",
-    "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/assets/1 - 5 Steps for System Design Interview",
     "1 - Raw Notes/6 - Interview Notes/Coding/SQL Language/Database/Partitioning VS Sharding.md",
     "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/assets/3 - Rubric for System Design Interviews (评分标准)/file-20260127223752655.png",
     "1 - Raw Notes/6 - Interview Notes/System Design/Exponent Doc/assets/2 - System Design Principles/file-20260127222843159.png",
@@ -296,11 +300,7 @@
     "1 - Raw Notes/7 - JCUS.LINK/System Design.md",
     "1 - Raw Notes/6 - Interview Notes/Algorithms/DFS (Depth-First Search).md",
     "1 - Raw Notes/6 - Interview Notes/Coding/Dynamic Programming/1.3. When to use DP.md",
-    "1 - Raw Notes/6 - Interview Notes/Coding/Dynamic Programming/1.2. Top-down(aka memoization) and Bottom-up(aka tablulation).md",
     "1 - Raw Notes/6 - Interview Notes/Coding/Dynamic Programming/assets/1.1. What is Dynamic Programming/file-20260127003617478.png",
-    "1 - Raw Notes/6 - Interview Notes/Program Design/SOLID.md",
-    "1 - Raw Notes/6 - Interview Notes/Coding/Dynamic Programming/1.1. What is Dynamic Programming.md",
-    "1 - Raw Notes/6 - Interview Notes/Bitwise Operation (python vs mathematics).md",
     "Untitled 5.canvas",
     "Untitled 4.canvas",
     "Untitled 3.canvas",
