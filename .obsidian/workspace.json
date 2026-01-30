@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/APIs/API Gateway.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/APIs/GraphQL.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "API Gateway"
+              "title": "GraphQL"
             }
           }
         ],
@@ -255,12 +255,13 @@
   },
   "active": "6ba7824bdd95fe8c",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/APIs/APIs - REST vs GraphQL vs RPC.md",
+    "1 - Raw Notes/6 - Interview Notes/APIs/GraphQL.md",
+    "1 - Raw Notes/6 - Interview Notes/APIs/API Gateway.md",
     "1 - Raw Notes/6 - Interview Notes/APIs/assets/API Gateway/file-20260129233216883.png",
     "1 - Raw Notes/6 - Interview Notes/APIs/assets/API Gateway",
     "1 - Raw Notes/6 - Interview Notes/APIs/assets",
     "1 - Raw Notes/6 - Interview Notes/APIs/API Idempotency.md",
-    "1 - Raw Notes/6 - Interview Notes/APIs/API Gateway.md",
-    "1 - Raw Notes/6 - Interview Notes/APIs/APIs - REST vs GraphQL vs RPC.md",
     "1 - Raw Notes/6 - Interview Notes/APIs/Long-Running Operation(LRO) vs Asynchronous.md",
     "1 - Raw Notes/6 - Interview Notes/APIs/What is and when to use RPC.md",
     "1 - Raw Notes/6 - Interview Notes/APIs",
@@ -300,7 +301,6 @@
     "1 - Raw Notes/7 - JCUS.LINK/System Design.md",
     "1 - Raw Notes/6 - Interview Notes/Algorithms/DFS (Depth-First Search).md",
     "1 - Raw Notes/6 - Interview Notes/Coding/Dynamic Programming/1.3. When to use DP.md",
-    "1 - Raw Notes/6 - Interview Notes/Coding/Dynamic Programming/assets/1.1. What is Dynamic Programming/file-20260127003617478.png",
     "Untitled 5.canvas",
     "Untitled 4.canvas",
     "Untitled 3.canvas",
