@@ -59,10 +59,24 @@
             "id": "6ba7824bdd95fe8c",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/Content Delivery Network (CDN).md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Content Delivery Network (CDN)"
             }
           }
         ],
@@ -241,6 +255,7 @@
   },
   "active": "6ba7824bdd95fe8c",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/Content Delivery Network (CDN).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/3 - Load Balancing.md",
@@ -279,7 +294,6 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/self-healing.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Exponent Doc/2 - System Design Principles.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Popular System Design Interview Questions.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Exponent Doc/assets/3 - Rubric for System Design Interviews (评分标准)/file-20260127223752655.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Exponent Doc/assets/2 - System Design Principles/file-20260127222843159.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Exponent Doc/assets/2 - System Design Principles/file-20260127222830941.png",
