@@ -129,14 +129,14 @@ If Hotel fails at step 2:
 
 **Why orchestration is nice:** one place to see the workflow, retries, timeouts, compensation logic.
 
-## 2) Choreography (event-driven chain)
+## 2) Choreography(编舞) (event-driven chain)
 Services emit events and react to events:
 * FlightReserved → Hotel service tries to reserve
 * HotelReserved → Car service tries to reserve
 * CarReserved → Notification sends
 
 If something fails, services emit “Failed” events and others compensate.
-**Downside:** logic gets scattered; debugging becomes “event spaghetti” unless you’re very disciplined.
+**Downside:** logic gets scattered(分散); debugging becomes “event spaghetti” unless you’re very disciplined.
 
 ---
 
