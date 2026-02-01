@@ -12,7 +12,6 @@ Tags: [[API]] [[interview]]
 If Flight, Hotel, Car, Notification each have separate DBs, there’s **no single ACID transaction** that spans them (not safely, not at scale, not with good availability). So you need a coordination strategy.
 
 There are two main strategies people talk about:
-
 1. **Two-Phase Commit (2PC)** — strong consistency, heavy coordination
 2. **Saga pattern** — eventual consistency + compensations, designed for microservices
 
@@ -57,14 +56,12 @@ Instead of “all services commit together”, you do:
 * Services stay decoupled and independently deployable
 * Better availability and scalability
 * Works naturally with async messaging and queues
-
 ### Cons
 * **Eventual consistency**: system can be temporarily “in-between”
 * You must design **compensations** (undo) which are not always perfect
 * More engineering: idempotency, retries, timeouts, state tracking, ordering
 
 ---
-
 # Why you “need” Saga instead of 2PC
 Use Saga because, in microservices, you usually want:
 * **high availability**
