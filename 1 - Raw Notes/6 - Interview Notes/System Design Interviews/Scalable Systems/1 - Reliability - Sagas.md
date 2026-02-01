@@ -17,15 +17,12 @@ There are two main strategies people talk about:
 2. **Saga pattern** — eventual consistency + compensations, designed for microservices
 
 ---
-
 # Two-Phase Commit (2PC)
 
 ### What it is
-
 A classic distributed transaction protocol with a **coordinator** and participants.
 
 ### How it works
-
 **Phase 1: Prepare**
 * Coordinator asks each service: “Can you commit?”
 * Each service locks resources, writes “prepared” state, replies YES/NO.
@@ -33,11 +30,9 @@ A classic distributed transaction protocol with a **coordinator** and participan
 **Phase 2: Commit / Abort**
 * If everyone said YES → coordinator tells everyone COMMIT
 * If anyone said NO → coordinator tells everyone ABORT (rollback)
-
 ### Pros
 * **Strong consistency**: you get close to “atomic commit across services”
 * Clear “committed or not” outcome
-
 ### Cons (why it’s unpopular for microservices)
 * **Blocking**: if coordinator dies after “prepare”, participants can be stuck holding locks
 * **Locks/resources held** longer → reduced throughput, higher latency
@@ -49,7 +44,6 @@ In microservices, this tends to be a bad fit because teams prioritize **availabi
 
 ---
 # Saga Pattern
-
 ### What it is
 A saga is a **sequence of local transactions** (each service commits to its own DB), plus **compensating transactions** to undo work if something later fails.
 
@@ -58,7 +52,6 @@ Instead of “all services commit together”, you do:
 * Step 2 commits locally
 * Step 3 commits locally
 * If step 3 fails, you run compensations to undo step 2 and step 1
-
 ### Pros
 * No distributed locks across services
 * Services stay decoupled and independently deployable
