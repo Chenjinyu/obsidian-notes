@@ -136,7 +136,7 @@ Services emit events and react to events:
 * CarReserved → Notification sends
 
 If something fails, services emit “Failed” events and others compensate.
-**Downside:** logic gets scattered(分散); debugging becomes “event spaghetti” unless you’re very disciplined.
+**Downside(缺点):** logic gets scattered(分散); debugging becomes “event spaghetti” unless you’re very disciplined(自律).
 
 ---
 
@@ -185,7 +185,9 @@ Below is a **minimal-but-real** saga implementation pattern for your travel book
 - **Postgres** for **saga table** + **outbox table**
 - **SQS** (commands/events) _(I’ll note the Kafka swap at the end)_
 - **Transactional Outbox** (DB write + “publish later” so you don’t lose messages)
-    
+
+#### What is Transcational Outbox Pattern: guarantees that database changes and outgoing events/messages are saved atomically in the same local transaction.
+##### in plain english: update data record and event to send -- together or not at all
 This pattern prevents the classic “DB committed but message publish failed” problem.
 
 ---
@@ -205,6 +207,7 @@ This pattern prevents the classic “DB committed but message publish failed” 
 
 ---
 # 1) Postgres schema (saga table + outbox)
+### sages and outbox tables in the same database, so: update data and record the event to send -- together or not at all
 ```sql
 -- saga orchestration state
 create table if not exists sagas (
@@ -303,11 +306,11 @@ def create_trip(req: TripRequest):
         with conn.cursor() as cur:
             cur.execute("begin;")
             cur.execute("""
-              insert into sagas(saga_id, status, step)
+              insert into sagas(saga_id, status, step) # <----save data
               values (%s, 'RUNNING', 'RESERVE_FLIGHT')
             """, (saga_id,))
             cur.execute("""
-              insert into outbox(aggregate_type, aggregate_id, event_type, payload)
+              insert into outbox(aggregate_type, aggregate_id, event_type, payload) # <----record event. save data + record event/message are transaction outbox pattern. so the another script will read the data in outbox and send message istead of s
               values ('saga', %s, 'ReserveFlightCommand', %s::jsonb)
             """, (saga_id, json.dumps(cmd)))
             cur.execute("commit;")
