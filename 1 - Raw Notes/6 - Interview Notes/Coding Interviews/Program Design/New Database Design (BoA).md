@@ -94,15 +94,48 @@ Key Differences
 • Example Scenario: Your sales system (SOR) says a customer is in "CA," but your billing system (SOR) says "California." The SOT integrates these, resolves the conflict (perhaps based on a defined rule), and presents one consistent "California" for all reports. [1, 2, 3, 7, 8]  
 
 
-[1] https://business.adobe.com/blog/basics/systems-of-record
-[2] https://www.ibm.com/think/topics/system-of-record-vs-source-of-truth
-[3] https://blog.logrocket.com/product-management/what-is-a-single-source-of-truth/
-[4] https://www.linkedin.com/pulse/difference-between-system-record-source-truth-santosh-kudva
-[5] https://nulab.com/learn/project-management/single-source-of-truth-what-is-it-and-why-do-you-need-it/
-[6] https://www.getreba.com/blog/bi-single-source-of-truth
-[7] https://www.gaine.com/articles/system-of-record-vs-system-of-reference-why-you-need-both-for-reliable-healthcare-data
-[8] https://www.quora.com/What-is-the-difference-Between-System-of-Record-and-Source-of-Truth
+atomic pipeline:
+```py
+from sqlalchemy.orm import Session
 
+def process_pipeline(session: Session, new_rows: list[dict]):
+
+    with session.begin():   # START TRANSACTION
+
+        # 1️⃣ Insert into Table A
+        a_objects = [TableA(**row) for row in new_rows]
+        session.add_all(a_objects)
+
+        # Push inserts to DB (but not commit)
+        session.flush()
+
+        # 2️⃣ Query incremental rows + JOIN
+        rows = (
+            session.query(TableA, TableC)
+            .join(TableC, TableA.key == TableC.key)
+            .filter(TableA.processed == False)
+            .with_for_update()     # Postgres row lock (important if concurrency)
+            .all()
+        )
+
+        # 3️⃣ Insert into Table B
+        b_objects = [
+            TableB(
+                a_id=a.id,
+                joined_value=c.other_value
+            )
+            for a, c in rows
+        ]
+
+        session.add_all(b_objects)
+
+        # 4️⃣ Mark processed
+        for a, _ in rows:
+            a.processed = True
+
+    # COMMIT happens automatically here
+    # If any exception → ROLLBACK everything
+```
 
 
 # Note
