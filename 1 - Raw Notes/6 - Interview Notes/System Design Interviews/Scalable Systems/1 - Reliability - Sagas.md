@@ -241,7 +241,6 @@ create index if not exists idx_outbox_new on outbox(status, created_at);
 **Key idea:** whenever you change saga state, you **also insert outbox rows in the same DB transaction**. Publishing happens later.
 
 ---
-
 # 2) Message contracts (commands/events)
 
 Keep them small and explicit:

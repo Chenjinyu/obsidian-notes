@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/SQL Language/Isolate, Deadlocks and High-throughput.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Sagas.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Isolate, Deadlocks and High-throughput"
+              "title": "1 - Reliability - Sagas"
             }
           }
         ],
@@ -255,11 +255,13 @@
   },
   "active": "6ba7824bdd95fe8c",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/SQL Language/Postgres Lock Row.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Exponential Backoff Strategy.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/SQL Language/Isolate, Deadlocks and High-throughput.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Low Level System Design",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/High Level System Design",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/SQL Language/Postgres Lock Row.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/Partitioning VS Sharding.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Program Design/New Database Design (BoA).md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Exponential Backoff Strategy.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Sagas.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas/file-20260130012529784.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas/file-20260130012429138.png",
@@ -287,15 +289,12 @@
     "1 - Raw Notes/6 - Interview Notes/English.md",
     "1 - Raw Notes/6 - Interview Notes/assets/English/file-20260128000607801.png",
     "1 - Raw Notes/6 - Interview Notes/assets/English/file-20260128000547991.png",
-    "1 - Raw Notes/6 - Interview Notes/assets/English",
-    "1 - Raw Notes/6 - Interview Notes/assets",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Exponent Doc/4 - System Design Glossary.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Exponent Doc/3 - Rubric for System Design Interviews (评分标准).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/security auditing and logging.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/secure communication.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/write-ahead logging.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/Error handling and retry mechanisms.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/Distributed monitory systems.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Exponent Doc/assets/3 - Rubric for System Design Interviews (评分标准)/file-20260127223752655.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Exponent Doc/assets/2 - System Design Principles/file-20260127222843159.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Exponent Doc/assets/2 - System Design Principles/file-20260127222830941.png",
