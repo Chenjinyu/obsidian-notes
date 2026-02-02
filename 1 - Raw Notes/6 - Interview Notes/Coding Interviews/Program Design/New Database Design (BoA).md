@@ -95,7 +95,7 @@ Key Differences
 
 
 atomic pipeline:
-```py
+```python
 from sqlalchemy.orm import Session
 
 def process_pipeline(session: Session, new_rows: list[dict]):
