@@ -310,7 +310,7 @@ def create_trip(req: TripRequest):
               values (%s, 'RUNNING', 'RESERVE_FLIGHT')
             """, (saga_id,))
             cur.execute("""
-              insert into outbox(aggregate_type, aggregate_id, event_type, payload) # <----record event. save data + record event/message are transaction outbox pattern. so the another script will read the data in outbox and send message istead of s
+              insert into outbox(aggregate_type, aggregate_id, event_type, payload) # <----record event. save data + record event/message are transaction outbox pattern. so the another script will read the data in outbox and send message istead of using data table directly.
               values ('saga', %s, 'ReserveFlightCommand', %s::jsonb)
             """, (saga_id, json.dumps(cmd)))
             cur.execute("commit;")
@@ -327,6 +327,25 @@ def get_trip(saga_id: str):
                 return {"error": "not found"}
             cols = [d.name for d in cur.description]
             return dict(zip(cols, row))
+```
+
+```sql
+-- the above python function will insert data into two tables together or rollback for nothing changes.
+BEGIN;
+
+INSERT INTO bookings (...);
+
+INSERT INTO outbox (
+  event_type,
+  payload,
+  status
+) VALUES (
+  'FlightBooked',
+  '{ "booking_id": 123 }',
+  'pending'
+);
+
+COMMIT;
 ```
 
 Run:
