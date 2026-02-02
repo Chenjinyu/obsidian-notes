@@ -13,6 +13,22 @@ Isolation level: **is purely about read consistency** (what data a transaction i
 | FOR UPDATE         | protect rows     | when updating |
 | SKIP LOCKED        | parallel workers | job queues    |
 | Deadlock avoidance | system stability | always        |
+## Postgres isolation levels you care about
+(from weakest -> strongest)
+READ COMMITTED -> REPEATABLE READ -> SERIALIZABLE
+
+| Level                    | What you see                        | Typical use           |
+| ------------------------ | ----------------------------------- | --------------------- |
+| READ COMMITTED (default) | Latest committed data per query     | Most apps             |
+| REPEATABLE READ          | Same snapshot for whole transaction | Reports, pipelines    |
+| SERIALIZABLE             | As if tx ran one-by-one             | Financial correctness |
+SERIALIZABLE: Postgres enforces behavior as: transactions run one after another. it may: block, or throw serialization errors
+to preserve correctness. 
+Used for:
+- banking
+- accounting
+- 
+(Postgres does not really support dirty reads - so no READ UNCOMMITTED in practice)
 
 # 🧾 Interview-ready summary (very clean)
 
