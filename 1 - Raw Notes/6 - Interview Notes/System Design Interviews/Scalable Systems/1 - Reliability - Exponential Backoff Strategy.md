@@ -1,6 +1,6 @@
 Date: 2026-01-30
 Course:
-Tags: 
+Tags:  [[interview]] [[System Design]] [[High Level ]] [[Low Level]]
 
 # Content
 

@@ -32,30 +32,6 @@
             }
           },
           {
-            "id": "6908dc1fc1285de2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design/Terminology/security auditing and logging.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "security auditing and logging"
-            }
-          },
-          {
             "id": "6ba7824bdd95fe8c",
             "type": "leaf",
             "state": {
@@ -77,6 +53,30 @@
               },
               "icon": "lucide-file",
               "title": "1 - Reliability - Sagas"
+            }
+          },
+          {
+            "id": "4028619199a36443",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Consistent Hashing.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Consistent Hashing"
             }
           }
         ],
@@ -253,23 +253,27 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "6ba7824bdd95fe8c",
+  "active": "4028619199a36443",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Sagas.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Consistent Hashing.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/secure communication.md",
+    "1 - Raw Notes/6 - Interview Notes/English.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Exponential Backoff Strategy.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/SQL Language/Isolate, Deadlocks and High-throughput.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Low Level System Design",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/High Level System Design",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/SQL Language/Postgres Lock Row.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/Partitioning VS Sharding.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Program Design/New Database Design (BoA).md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Sagas.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas/file-20260130012529784.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas/file-20260130012429138.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/Content Delivery Network (CDN).md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/3 - Load Balancing.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/APIs/GraphQL.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems",
@@ -284,15 +288,12 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/APIs/API Idempotency.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/APIs/Long-Running Operation(LRO) vs Asynchronous.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/APIs/What is and when to use RPC.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/APIs",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Exponent Doc/1 - 5 Steps for System Design Interview.md",
-    "1 - Raw Notes/6 - Interview Notes/English.md",
     "1 - Raw Notes/6 - Interview Notes/assets/English/file-20260128000607801.png",
     "1 - Raw Notes/6 - Interview Notes/assets/English/file-20260128000547991.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Exponent Doc/4 - System Design Glossary.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Exponent Doc/3 - Rubric for System Design Interviews (评分标准).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/security auditing and logging.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/secure communication.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/write-ahead logging.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/Error handling and retry mechanisms.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Exponent Doc/assets/3 - Rubric for System Design Interviews (评分标准)/file-20260127223752655.png",
