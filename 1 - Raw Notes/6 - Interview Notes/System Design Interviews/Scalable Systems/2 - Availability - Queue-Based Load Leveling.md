@@ -252,7 +252,8 @@ With Queue (Write-Behind):
 └──────┘
            ↓
       ┌─────────┐
-      │  Cache  │ ← Accepts all writes (fast)
+      │  Cache  │ ← Accepts all writes (fast) #### the Redis Cache can immdiately for client reads(from Redis), from user's perspective, the response is immidately, even the data will effected 
+      |         |      
       │ (Redis) │
       └────┬────┘
            │
