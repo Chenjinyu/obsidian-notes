@@ -151,7 +151,7 @@ API Servers              Rules Engine
     ↓
 Database / OpenAI API
 ```
-
+![](assets/2%20-%20Availability%20-%20Rate%20Limiting/file-20260203204855632.png)
 ### Should you use middleware?
 
 **Yes, when**:

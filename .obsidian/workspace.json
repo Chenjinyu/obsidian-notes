@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Client-Side vs Server-Side Partitioning: Complete Interview Guide.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Rate Limiting.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,7 +100,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Client-Side vs Server-Side Partitioning: Complete Interview Guide"
+              "title": "2 - Availability - Rate Limiting"
             }
           }
         ],
@@ -279,10 +279,13 @@
   },
   "active": "f257aa83d342a370",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/2 - Availability - Rate Limiting/file-20260203204855632.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/2 - Availability - Rate Limiting/file-20260203204644825.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/2 - Availability - Rate Limiting",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Client-Side vs Server-Side Partitioning: Complete Interview Guide.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Consistent Hashing.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Circuit Breakers.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Round-Robin(RR) Algorithm.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Client-Side vs Server-Side Partitioning: Complete Interview Guide.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Rate Limiting.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Sagas.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability.md",
@@ -312,19 +315,16 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/APIs/API Gateway.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/APIs/assets/API Gateway/file-20260129233216883.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/APIs/assets/API Gateway",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/APIs/assets",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/APIs/API Idempotency.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/APIs/Long-Running Operation(LRO) vs Asynchronous.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/APIs/What is and when to use RPC.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Exponent Doc/1 - 5 Steps for System Design Interview.md",
     "1 - Raw Notes/6 - Interview Notes/assets/English/file-20260128000607801.png",
     "1 - Raw Notes/6 - Interview Notes/assets/English/file-20260128000547991.png",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Exponent Doc/4 - System Design Glossary.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Exponent Doc/assets/3 - Rubric for System Design Interviews (评分标准)/file-20260127223752655.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Exponent Doc/assets/2 - System Design Principles/file-20260127222843159.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Exponent Doc/assets/2 - System Design Principles/file-20260127222830941.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Exponent Doc/assets/2 - System Design Principles/file-20260127222753562.png",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Exponent Doc/assets/1 - 5 Steps for System Design Interview/file-20260127221905701.png",
     "Untitled 5.canvas",
     "Untitled 4.canvas",
     "Untitled 3.canvas",
