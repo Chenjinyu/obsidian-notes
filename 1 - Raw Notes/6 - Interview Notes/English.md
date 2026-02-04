@@ -15,7 +15,7 @@ hash_function(key) % N. % is called mod.
 1/sqrt N: compliexity of consistent hashing with circle.
 
 monotonic time: 只能往前不能退后的时间。用于rate limiter and round robin 。
-uniform:均匀分布
+uniform:均匀分布, used for sliding window counter for reliability, consistent hashing for cache, DynamoDB, CDN(content delivery Network)
 uneven：不均匀分布。用于 sliding window counter, consistent hashing circle(ring)
 Logarithmic: 对数
 Linear: 线性

@@ -8,6 +8,25 @@ Tags: [[API]]  [[interview]] [[System Design]] [[High Level ]]
 
 Let me walk you through rate limiting from fundamental concepts to distributed system complexities—exactly what you need for system design interviews.
 
+Used for 
+ - Public API Platform
+ - Authentication % Identity Systems
+ - CDNs / Edge Gateways / WAF / API Gateways
+ - Payment, FinTech, and Fraud-senstive workflows
+ - LLM/AI inference products
+ - High-traffic Consumer Apps (social, messaging, content)
+ - Search Systems & Autocomplete / Sugggestions
+ - File Upload / Download and Media Processing
+ - Notification Systems
+ - B2B Multi-tenant Backends (Enterprise SaaS)
+
+429 - Too many request
+	- X-Ratelimit-Remaning - remaining limit
+	- X-Ratelimit-Limit - Define limit
+	- X-Ratelimit-Retry-After - number of seconds to wait before retry again without being throttled.
+
+And RDBMS / File can be used to store Rate Limit Rules. workers reads rules from storage statically or dynamically and cache for quick look up
+
 ## 1. Purpose of Rate Limiting
 
 **Why do we need it?**
