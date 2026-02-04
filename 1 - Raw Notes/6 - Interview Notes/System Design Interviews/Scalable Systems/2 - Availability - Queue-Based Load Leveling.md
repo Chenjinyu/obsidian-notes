@@ -1164,7 +1164,7 @@ if message.expired():
 ---
 
 ## 7. Monitoring & Observability
-¬**Critical metrics to track:**
+**Critical metrics to track:**
 
 ```python
 import boto3
