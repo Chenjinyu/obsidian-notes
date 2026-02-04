@@ -316,6 +316,15 @@ Request 18: Success | State: CLOSED, failures: 0
 ```
 ## 5. Advanced Circuit Breaker with Sliding Window
 **Problem with simple counter:** One burst of errors can trip circuit, even if overall health is good.
+>Use a **sliding window** in a circuit breaker when you want the breaker to react to the **recent health** of a dependency (last N requests or last T seconds), not lifetime counters. It’s the most common production approach because it’s stable under traffic spikes and avoids “one old incident keeps poisoning the breaker.”
+
+eg:
+```
+If QPS changes a lot (API traffic, user-driven load), a simple “N consecutive failures” or “failure_count since start” behaves badly.
+- Sliding window answers: “In the last 20 calls (or last 10s), how bad is it?”
+- That’s what you want when load can spike.
+```
+
 **Solution:** Use sliding window to track failures over time.
 ```python
 from collections import deque
@@ -500,7 +509,6 @@ class CachedCircuitBreaker:
 def get_product_recommendations(user_id):
     try:
         return cb.call(ml_service.get_recommendations, user_id)
-    
     except CircuitBreakerOpenError:
         # Fallback to popular products (not personalized)
         print("⚠️  ML service down, showing popular products")
@@ -653,6 +661,22 @@ outlier_detection:
   base_ejection_time: 30s
   max_ejection_percent: 50
 ```
+#### NOTE: sidecar means here:
+- Same Pod
+- Different container
+- They share:
+	- the same network namespace (same pod ip)
+	- localhost access to each other
+- your app sends outbound traffic to Envoy (often transparently via iptables in a service mesh), and Envoy forwards to the external service.
+#### Why same Pod matters
+- Envoy can intercept the app’s traffic with low latency.
+- It can apply circuit breaking, retries, timeouts, outlier detection, mTLS, etc., consistently for that workload.
+#### Not always a sidecar
+
+Envoy can also be deployed in other roles:
+- **Ingress / Gateway** (separate deployment)
+- **Edge proxy** in front of many services
+- **Dedicated egress gateway** for outbound traffic
 
 ## 8. Real-World Examples
 AWS API Gateway Circuit Breaker

@@ -34,7 +34,6 @@ Excellent question! This is a critical distinction that many candidates miss. Le
 **Key characteristic**: Client directly connects to the correct server.
 
 ### Server-Side Partitioning (Smart Proxy/Coordinator)
-
 **Client talks to a proxy/coordinator that routes requests.**
 
 ```
@@ -43,12 +42,12 @@ Excellent question! This is a critical distinction that many candidates miss. Le
 └────┬────┘  ← Doesn't know topology
      │ "Just get user_123 for me"
      ▼
-┌─────────────────┐
-│  Proxy/Router   │  ← Smart proxy
-│  ┌───────────┐  │  ← Consistent hash library
-│  │Hash Ring  │  │  ← Knows all servers
-│  └───────────┘  │  ← Makes routing decision
-└────────┬────────┘
+┌─────────────────────┐
+│  **Proxy/Router**   │  ← Smart proxy
+│  ┌───────────┐      │  ← Consistent hash library
+│  │Hash Ring  │      │  ← Knows all servers
+│  └───────────┘      │  ← Makes routing decision
+└────────┬────────────┘
          │ "This goes to Server 2"
          │
     ┌────┼────┬─────────────┐
