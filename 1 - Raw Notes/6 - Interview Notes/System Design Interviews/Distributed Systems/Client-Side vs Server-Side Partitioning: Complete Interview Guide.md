@@ -679,8 +679,6 @@ DECISION: Choose approach based on above
 
 **Interview takeaway**: Always clarify this early! It significantly impacts your design. Most importantly, demonstrate you understand the **trade-offs** and can choose based on **requirements**, not just a default preference.
 
-Good luck with your interview! 🚀
-
 # Note
 
 
