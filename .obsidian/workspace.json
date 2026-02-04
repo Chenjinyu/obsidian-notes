@@ -85,6 +85,30 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Client-Side vs Server-Side Partitioning: Complete Interview Guide.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Client-Side vs Server-Side Partitioning: Complete Interview Guide"
+            }
+          },
+          {
+            "id": "52a796b5eed7463f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Circuit(ˈsərkət) Breakers (Non transient Failures).md",
                 "mode": "source",
                 "source": false,
@@ -104,7 +128,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -277,14 +301,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "25e8ab00779cff75",
+  "active": "52a796b5eed7463f",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/Content Delivery Network (CDN).md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Client-Side vs Server-Side Partitioning: Complete Interview Guide.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Circuit(ˈsərkət) Breakers (Non transient Failures).md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/Content Delivery Network (CDN).md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Sagas.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Exponential Backoff Strategy (Transient Failures).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Rate Limiting.md",
     "High Level.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Sagas.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas (Transient Failures)",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas (Transient)",
@@ -293,14 +319,12 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/2 - Availability - Rate Limiting/file-20260203204855632.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/2 - Availability - Rate Limiting/file-20260203204644825.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/2 - Availability - Rate Limiting",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Client-Side vs Server-Side Partitioning: Complete Interview Guide.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Consistent Hashing.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Round-Robin(RR) Algorithm.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/SQL Language/Postgres Lock Row.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/secure communication.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/SQL Language/Isolate, Deadlocks and High-throughput.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Low Level System Design",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/High Level System Design",

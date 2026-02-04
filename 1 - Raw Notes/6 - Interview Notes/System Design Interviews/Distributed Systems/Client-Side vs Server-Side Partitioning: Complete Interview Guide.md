@@ -61,7 +61,6 @@ Excellent question! This is a critical distinction that many candidates miss. Le
 **Key characteristic**: Client connects to proxy; proxy routes to backend servers.
 
 ---
-
 ## 2. Detailed Comparison
 
 ### Client-Side Partitioning

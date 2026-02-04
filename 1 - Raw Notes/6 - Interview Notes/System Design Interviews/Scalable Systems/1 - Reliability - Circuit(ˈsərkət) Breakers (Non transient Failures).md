@@ -1,18 +1,16 @@
-Date: 2026-02-03
 Course:
 Tags:  [[interview]] [[System Design]] [[High Level ]] [[Low Level]]
 
 # Content
 
 ## Examples
-✗ Service crashed/dead
-✗ Database is down
-✗ Invalid credentials/authentication
-✗ Bug causing service to always return 500
-✗ Dependency service deployed with breaking changes
-✗ Hardware failure
-✗ Configuration error
-✗ Code bug (null pointer, etc.)
+- Service crashed/dead
+- Database is down
+- Invalid credentials/authentication
+- Bug causing service to always return 500
+- Dependency service deployed with breaking changes
+- Hardware failure
+- Configuration error
 
 ### Circuit Breaker example
 ```python
@@ -131,7 +129,7 @@ Request 2 → FAILURE ✗
 
 **Characteristics:**
 - Only limited number of requests allowed through
-- Acts as "health check"
+- **Acts as "health check"**
 - All successes → CLOSED
 - Any failure → back to OPEN
 - Other requests (beyond test limit) still fail fast
@@ -285,7 +283,7 @@ cb = CircuitBreaker(
     success_threshold=2
 )
 
-# Test it
+# Test it, call it once per protected operation, here just an example to call once. 
 for i in range(20):
     try:
         result = cb.call(unreliable_service)
