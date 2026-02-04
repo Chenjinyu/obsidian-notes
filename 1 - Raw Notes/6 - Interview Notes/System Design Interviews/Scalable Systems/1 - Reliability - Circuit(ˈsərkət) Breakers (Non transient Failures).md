@@ -1,6 +1,6 @@
 Date: 2026-02-03
 Course:
-Tags: 
+Tags:  [[interview]] [[System Design]] [[High Level ]] [[Low Level]]
 
 # Content
 
@@ -528,7 +528,21 @@ def process_payment(order_id, amount):
 
 ### Strategy 4: Fail Gracefully with User Message
 ```python
-
+def send_email(user_email, subject, body):
+    try:
+        return cb.call(email_service.send, user_email, subject, body)
+    
+    except CircuitBreakerOpenError:
+        # Can't send email, but don't crash the request
+        logger.error(f"Email service unavailable for {user_email}")
+        
+        # Save to DB for retry
+        db.save_pending_email(user_email, subject, body)
+        
+        return {
+            "sent": False,
+            "message": "Email will be sent once service recovers"
+        }
 ```
 ## 7. Circuit Breaker in Distributed Systems
 ### Challenge: Multiple Instances

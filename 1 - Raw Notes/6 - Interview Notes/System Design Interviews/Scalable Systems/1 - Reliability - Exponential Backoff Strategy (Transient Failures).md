@@ -1,6 +1,6 @@
 Date: 2026-01-30
 Course:
-Tags:  [[interview]] [[../../../7 - JCUS.LINK/System Design]] [[High Level ]] [[Low Level]]
+Tags:  [[interview]] [[System Design]] [[High Level ]] [[Low Level]]
 
 # Content
 

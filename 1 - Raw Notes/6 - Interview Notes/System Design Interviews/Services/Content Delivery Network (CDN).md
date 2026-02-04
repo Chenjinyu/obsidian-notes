@@ -6,6 +6,14 @@ Tags:
 
 A Content Delivery Network (CDN) is a geographically distributed network of servers that caches website content (images, HTML, videos) at "edge" locations close to users. By serving data from the nearest server, it dramatically improves speed, reduces latency, enhances reliability, and protects against traffic spikes or DDoS attacks. [[1]
 
+### Popular CDN Providers
+- Cloudflare
+- Akamai
+- Amazon CloudFront (AWS)
+- Microsoft Azure CDN
+- Fastly
+- Google Cloud CDN 
+
 Key Aspects of a CDN
 - Edge Servers: Instead of users connecting to a single origin server, a CDN uses "Points of Presence" (PoPs - is a CDN’s **physical location** (a data center / edge site)) worldwide to deliver content.
 - Caching Mechanism: The CDN caches (stores) static content like CSS, JavaScript, and images, reducing the need for the origin server to handle every request.
