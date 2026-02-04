@@ -1,12 +1,11 @@
 Course:
-Tags:  [[interview]] [[System Design]] [[High Level ]] [[Low Level]]
+Tags:  [[interview]] [[../../../7 - JCUS.LINK/System Design]] [[../../../../High Level]] [[Low Level]]
 
 # Content
 
 ## Examples
 - Service crashed/dead
 - Database is down
-- Invalid credentials/authentication
 - Bug causing service to always return 500
 - Dependency service deployed with breaking changes
 - Hardware failure
@@ -945,7 +944,7 @@ Health Check (active):
 - "Hey service, are you alive?"
 - Proactive detection
 
-Circuit Breaker (passive):
+Circuit Breaker (passive): th circuit breakers must be in the request path so that it can observe the real calls.
 - Monitors actual traffic
 - "Service failed 5 real requests"
 - Reactive protection
@@ -985,22 +984,17 @@ class HealthAwareCircuitBreaker:
 ### Key Points to Cover
 
 ✅ **Problem**: Prevent cascading failures from non-transient errors
-
 ✅ **States**: CLOSED (normal), OPEN (blocking), HALF_OPEN (testing)
-
 ✅ **Thresholds**:
 - Failure threshold: When to open (e.g., 5 failures)
 - Timeout: How long to stay open (e.g., 60 seconds)
 - Success threshold: When to close (e.g., 3 successes)
-
 ✅ **Fallback**: What to do when circuit is open
 - Cached data
 - Default response
 - Queue for later
 - Graceful degradation
-
 ✅ **Distributed**: Local vs shared state
-
 ✅ **Monitoring**: Track state transitions, failure rates
 
 ### Quick Decision Framework
