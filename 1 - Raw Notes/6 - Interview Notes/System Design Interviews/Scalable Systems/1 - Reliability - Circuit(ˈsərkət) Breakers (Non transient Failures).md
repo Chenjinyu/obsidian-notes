@@ -562,7 +562,12 @@ Problem: Each instance has its own circuit breaker!
          Inconsistent behavior
 ```
 
-Solution 1: Shared State (Redis)
+Solution 1: Shared State (Redis) - redis is used when you need **shared state across instances**.
+
+>If you limit by **user ID / API key / tenant**, requests will hit many order-service instances behind a load balancer.  
+To enforce a single global limit, you need shared counters → **Redis is the common choice**.
+Example: “Free users: 30 req/min; paid: 300 req/min” across all instances.
+
 ```python
 import redis
 from datetime import datetime, timedelta
@@ -907,20 +912,22 @@ The fallback depends on whether the operation is critical and whether we have al
 - Should circuit state be shared (Redis) or local?
 - How do we coordinate across instances?
 - For most cases, local circuit breakers are simpler and sufficient."
+#### You usually run **separate breakers per dependency + per endpoint**:
+- Order → Payment (breaker A)
+- Order → Inventory (breaker B)
+- Order → Shipping (breaker C)
+Because each dependency has different failure modes and SLOs.
 
 ### ❌ Mistake 4: No Metrics/Monitoring
-
 **Wrong:**
 Just implementing circuit breaker without discussing observability.
-
 **Right:**
 "We need to monitor:
 - Circuit state transitions (OPEN/CLOSED)
 - Failure rates per service
 - Time spent in OPEN state
 - Fallback execution rates
-
-This helps us:
+This helps us: (Metrics/monitoring tells _humans_ (and alerting) what’s happening.)
 - Detect service degradation
 - Tune threshold values
 - Identify cascade failure patterns"
