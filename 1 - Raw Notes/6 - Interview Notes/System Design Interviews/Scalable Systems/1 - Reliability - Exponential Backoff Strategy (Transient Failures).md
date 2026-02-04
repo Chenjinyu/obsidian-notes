@@ -1,6 +1,6 @@
 Date: 2026-01-30
 Course:
-Tags:  [[interview]] [[System Design]] [[High Level ]] [[Low Level]]
+Tags:  [[interview]] [[../../../7 - JCUS.LINK/System Design]] [[High Level ]] [[Low Level]]
 
 # Content
 
@@ -11,8 +11,22 @@ Tags:  [[interview]] [[System Design]] [[High Level ]] [[Low Level]]
 
 Exponential Backoff Strategy: this is a **core reliability pattern** used everywhere: cloud APIs, message queues, microservices, databases, distributed locks.
 ## 🎯 Simple definition
-> **Exponential Backoff** means: when something fails, you retry — but wait longer and longer between each retry.
-Instead of hammering the system.
+> **Exponential Backoff** means: when something fails, you retry — but wait longer and longer between each retry. Instead of hammering the system.
+
+**Interview insight**: "Circuit breakers are for non-transient failures. For transient failures, we use retry logic. Using circuit breaker for transient failures would cause unnecessary service degradation. Using retry for non-transient failures wastes resources and increases latency."
+### Retry Example
+```python
+# Retry with exponential backoff
+@retry(
+    max_attempts=3,
+    backoff=ExponentialBackoff(base=2),
+    retryable_exceptions=[NetworkError, TimeoutError]
+)
+def call_api():
+    return requests.get("https://api.example.com/data")
+
+```
+
 
 ---
 ## 📈 Basic idea (human-friendly)
