@@ -672,7 +672,6 @@ outlier_detection:
 - Envoy can intercept the app’s traffic with low latency.
 - It can apply circuit breaking, retries, timeouts, outlier detection, mTLS, etc., consistently for that workload.
 #### Not always a sidecar
-
 Envoy can also be deployed in other roles:
 - **Ingress / Gateway** (separate deployment)
 - **Edge proxy** in front of many services
@@ -697,14 +696,12 @@ x-amazon-apigateway-integration:
 ```
 
 ---
-
 ## 9. System Design Interview Framework
 
 ### Question: "Design a resilient microservices architecture"
 **Interviewer**: "How would you handle one service going down?"
 **Your Answer** (Step-by-step):
 #### Step 1: Identify the Problem
-
 **You**: "When a dependency service fails, we face several risks:
 1. **Resource exhaustion**: Threads blocked waiting for timeouts
 2. **Cascading failures**: Slow service makes caller slow, which makes its caller slow...

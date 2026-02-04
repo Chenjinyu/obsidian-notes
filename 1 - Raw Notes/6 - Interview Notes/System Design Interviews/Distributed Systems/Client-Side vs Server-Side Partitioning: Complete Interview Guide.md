@@ -284,7 +284,28 @@ Application → mongos (router) → [Shard 1: users A-F]
 | **Monitoring/debugging** | Distributed | Centralized |
 | **Advanced features** | Hard to add | Easy (add at proxy) |
 | **Cost** | Lower | Higher (proxy infrastructure) |
+### Using Proxy has high cost because:
+1) Infra / $ cost (direct spend)
+	- More machines: you now need a proxy fleet sized for total QPS + headroom
+	- More network egress/ingress: extra hop means extra bandwidth
+	- More load balancers: often you need LBs in front of proxies (per AZ/region)
+	- Bigger instances: proxies are connection-heavy (FDs, memory, CPU)
+2) Performance cost (latency + capacity)
+	- Extra hop latency (TCP/TLS + queuing)
+	- Lower throughput per request path (parsing + hashing + forwarding)
+	- Tail latency (p95/p99) gets worse when proxies queue under load
+	- Backpressure propagation: slow shard → proxy queues → affects unrelated traffic
+3) Reliability cost (risk + blast radius)
+	- New single choke point: proxy overload/outage can impact many services
+	- Config mistakes become outages (wrong ring/server list/weights)
+	- Failover behavior can be surprising (ejection changes mapping; sudden hot spots)
+	- Requires HA design: multi-AZ, health checks, autoscaling, safe deploys
+4) Engineering / Ops cost (people time)
+	- Operating another tier: deploy, upgrade, patch, capacity plan
+	- Observability: dashboards/alerts for proxy latency, drops, shard skew
+	- Debugging complexity: more moving parts; harder root cause analysis
 
+Resharding/membership changes procedures: safe add/remove nodes, warmup, cache churn mitigation
 ---
 ## 4. Hybrid Approach
 

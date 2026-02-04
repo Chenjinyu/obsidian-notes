@@ -176,7 +176,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -349,11 +349,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "fbd2eb3cd5aa5e83",
+  "active": "52a796b5eed7463f",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Client-Side vs Server-Side Partitioning: Complete Interview Guide.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Consistent Hashing.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Circuit(ˈsərkət) Breakers (Non transient Failures).md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Client-Side vs Server-Side Partitioning: Complete Interview Guide.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/Content Delivery Network (CDN).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Sagas.md",
