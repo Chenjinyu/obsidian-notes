@@ -711,9 +711,9 @@ To address non-transient failures, I'd implement circuit breakers at service bou
 
 #### Step 2: Draw the Architecture
 ```
-┌────────────────────────────────────┐
-│        API Gateway                 │
-└─────────────┬──────────────────────┘
+┌─────────────────────────────┐
+│        API Gateway          │
+└─────────────┬───────────────┘
               │
               ▼
 ┌──────────────────────────────┐
@@ -724,8 +724,8 @@ To address non-transient failures, I'd implement circuit breakers at service bou
 │   └───┬────────────┘         │
 └───────┼──────────────────────┘
         │
-    ┌───┴──────┬─────────────────┐
-    ▼          ▼                 ▼
+    ┌───┴──────┬───────────────┐
+    ▼          ▼               ▼
 ┌────────┐ ┌──────────┐   ┌───────────┐
 │Payment │ │Inventory │   │Shipping   │
 │Service │ │Service   │   │Service    │
@@ -778,10 +778,10 @@ Request 101 → Test call to Payment Service
 #### Step 4: Discuss Configuration
 **Interviewer**: "What values would you use for the thresholds?"
 **You**: "It depends on the service's characteristics, but here's my thinking:
-**For critical services (Payment, Auth):**
+**For critical services (Payment, Auth):** setting the failure_threshold, timeout_seconds, success_threshold and window_size_seconds are higher than less critical, because, want to make sure the service is back without false position, otherwise, it will cost lot of issues, even for the downstream service will be invoked and get errors.
 ```python
 CircuitBreaker(
-    failure_threshold=10,          # More tolerance
+    failure_threshold=10,          # More tolerance to avoid false positives. if only 3 failures, it might block a lot of legit traffic even thought the dependency would successed on the next try
     timeout_seconds=120,           # Longer recovery time
     success_threshold=5,           # Need multiple successes
     window_size_seconds=60
@@ -797,7 +797,6 @@ CircuitBreaker(
 )
 ```
 **Rationale:**
-
 - Critical services: Give more time to recover, be more conservative
 - High traffic: Need more samples before tripping (avoid false positives)
 - Low traffic: Can trip faster (fewer samples is OK)"
@@ -883,20 +882,16 @@ I'd use **Option 1 for most cases** because:
 
 ## 10. Common Interview Mistakes
 ### ❌ Mistake 1: Confusing Retry with Circuit Breaker
-
 **Wrong:**
 "When a request fails, the circuit breaker retries it."
-
 **Right:**
 "Circuit breaker prevents calls to a failing service. Retry logic handles transient failures. They serve different purposes:
 - Retry: For temporary issues (network blip)
 - Circuit breaker: For persistent failures (service down)"
 
 ### ❌ Mistake 2: Not Discussing Fallback
-
 **Wrong:**
 "When circuit opens, requests fail."
-
 **Right:**
 "When circuit opens, we need a fallback strategy. For example:
 - Return cached data
@@ -905,10 +900,8 @@ I'd use **Option 1 for most cases** because:
 The fallback depends on whether the operation is critical and whether we have alternative data sources."
 
 ### ❌ Mistake 3: Ignoring Distributed Systems
-
 **Wrong:**
 "I'll add a circuit breaker class to my service."
-
 **Right:**
 "In a distributed system with multiple instances, I need to consider:
 - Should circuit state be shared (Redis) or local?
