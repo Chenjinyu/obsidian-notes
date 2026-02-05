@@ -109,7 +109,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/Database Sharding.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/CAP Theorem.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -124,7 +124,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Database Sharding"
+              "title": "CAP Theorem"
             }
           }
         ],
@@ -303,8 +303,10 @@
   },
   "active": "cb649b0d5f60aeb5",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/SQL vs NoSQL.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/Replication.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/CAP Theorem.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/Database Sharding.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/SQL vs NoSQL.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/3 - Load Balancing.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Queue-Based Load Leveling.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/Resilience vs Reliability.md",
@@ -335,10 +337,8 @@
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/SQL Language/Postgres Lock Row.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/secure communication.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems",
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/SQL Language/Isolate, Deadlocks and High-throughput.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Low Level System Design",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/High Level System Design",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/Partitioning VS Sharding.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas/file-20260130012529784.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas/file-20260130012429138.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets",
