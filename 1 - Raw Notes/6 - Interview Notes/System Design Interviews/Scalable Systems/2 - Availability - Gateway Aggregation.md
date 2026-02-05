@@ -1094,52 +1094,75 @@ def check_rate_limit():
 #### Step 2: High-Level Architecture
 
 ```
-┌───────────────────────────────────────────────────┐
-│                   CLIENTS                         │
-├───────────────────────────────────────────────────┤
-│  [Mobile App]  [Web App]  [Partner API]          │
-└────────┬──────────────┬───────────────┬───────────┘
-         │              │               │
-         │              │               │
-         ▼              ▼               ▼
-┌────────────────────────────────────────────────────┐
-│            LOAD BALANCER (AWS ALB)                 │
-└────────┬───────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────┐
+│                      CLIENTS                             │
+├──────────────────────────────────────────────────────────┤
+│    [Mobile App]      [Web App]      [Partner API]        │
+└────────┬─────────────────┬────────────────┬──────────────┘
+         │                 │                │
+         │                 │                │
+         ▼                 ▼                ▼
+┌──────────────────────────────────────────────────────────┐
+│            AWS ALB (Load Balancer)                       │
+│  - SSL Termination                                       │
+│  - Health Checks                                         │
+│  - WAF (DDoS protection)                                 │
+└────────┬─────────────────────────────────────────────────┘
          │
-         │ Distributes across multiple gateways
+         │ Auto-scales: 4-25 gateway instances
          │
-    ┌────┴─────┬──────────┬──────────┐
-    ▼          ▼          ▼          ▼
-┌────────┐ ┌────────┐ ┌────────┐ ┌────────┐
-│Gateway │ │Gateway │ │Gateway │ │Gateway │
-│   1    │ │   2    │ │   3    │ │   4    │
-└───┬────┘ └───┬────┘ └───┬────┘ └───┬────┘
-    │          │          │          │
-    │    ┌─────┴──────────┴────┬─────┘
-    │    │                     │
-    ▼    ▼                     ▼
-┌──────────┐             ┌──────────┐
-│  Redis   │             │ Circuit  │
-│  Cache   │             │ Breakers │
-└──────────┘             └──────────┘
-    │                          │
-    └──────────┬───────────────┘
-               │
-               │ Aggregation calls (parallel)
-               │
-    ┌──────────┼──────────┬────────────────┐
-    │          │          │                │
-    ▼          ▼          ▼                ▼
-┌────────┐┌─────────┐ ┌────────┐       ┌────────┐
-│Product ││Inventory│ │Review  │  ...  │Pricing │
-│Service ││Service  │ │Service │       │Service │
-└────────┘└─────────┘ └────────┘       └────────┘
+    ┌────┴─────┬──────────┬──────────┬─────────┐
+    ▼          ▼          ▼          ▼         ▼
+┌─────────┐┌─────────┐┌─────────┐┌─────────┐ ... (auto-scale)
+│Mobile   ││  Web    ││ Partner ││ Mobile  │
+│Gateway  ││ Gateway ││ Gateway ││ Gateway │
+│  (BFF)  ││  (BFF)  ││  (BFF)  ││  (BFF)  │  ← Each has:
+│         ││         ││         ││         │    - Rate limiting
+│ Circuit ││ Circuit ││ Circuit ││ Circuit │    - Circuit breakers
+│ Breakers││ Breakers││ Breakers││ Breakers│    - Aggregation logic
+└────┬────┘└────┬────┘└────┬────┘└────┬────┘
+     │          │          │          │
+     └──────────┴──────────┴──────────┘
+                │
+                ▼
+     ┌────────────────────────┐
+     │   Redis Sentinel       │  ← High Availability
+     │  ┌──────┐  ┌─────────┐ │
+     │  │Master│  │Replica 1│ │
+     │  └──────┘  └─────────┘ │
+     │  ┌─────────┐           │
+     │  │Replica 2│           │
+     │  └─────────┘           │
+     └───────────┬────────────┘
+                 │
+                 │ Parallel aggregation
+                 │
+    ┌────────────┼─────────┬──────────────────┬─────────┐
+    │            │         │                  │         │
+    ▼            ▼         ▼                  ▼         ▼
+┌──────────┐  ┌──────┐┌─────────┐  ...   ┌──────────┐┌───────┐
+│Product   │  │Inv.  ││Review   │  (15)  │Recommend.││Pricing│
+│(CRITICAL)│  │      ││(degrade)│        │(degrade) ││       │
+└──────────┘  └──────┘└─────────┘        └──────────┘└───────┘
+
+┌──────────────────────────────────────────────────────────┐
+│           Observability Stack                            │
+├──────────────────────────────────────────────────────────┤
+│  Prometheus  │  Grafana  │  Jaeger  │  ELK  │  Alerts    │
+└──────────────────────────────────────────────────────────┘
 ```
+**Key improvements:**
+1. ✅ **BFF pattern**: Mobile/Web/Partner gateways optimized for each client
+2. ✅ **Auto-scaling**: 4-25 instances based on load
+3. ✅ **Redis Sentinel**: High availability cache
+4. ✅ **Rate limiting**: Protection from abuse
+5. ✅ **Observability**: Monitoring, logging, tracing, alerts
+6. ✅ **Circuit breakers inside gateways**: Clear ownership
+7. ✅ **WAF at ALB**: DDoS protection
 
 #### Step 3: Explain Aggregation Strategy
 
 **You**: "The gateway will use parallel aggregation with these characteristics:
-
 **Request flow:**
 
 ```python

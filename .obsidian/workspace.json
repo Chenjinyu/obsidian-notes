@@ -126,81 +126,9 @@
               "icon": "lucide-file",
               "title": "2 - Availability - Queue-Based Load Leveling"
             }
-          },
-          {
-            "id": "a4542707db9feb18",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/Resilience vs Reliability.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Resilience vs Reliability"
-            }
-          },
-          {
-            "id": "0ef8b368d166dba6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Gateway Aggregation.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2 - Availability - Gateway Aggregation"
-            }
-          },
-          {
-            "id": "bf0479cdc5196917",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/AWS/SQS + Lambda (Visibility + ConcurrentExecution).md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "SQS + Lambda (Visibility + ConcurrentExecution)"
-            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -373,12 +301,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0ef8b368d166dba6",
+  "active": "cb649b0d5f60aeb5",
   "lastOpenFiles": [
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/Resilience vs Reliability.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/AWS/SQS + Lambda (Visibility + ConcurrentExecution).md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/Fan out vs Fan In.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Gateway Aggregation.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Queue-Based Load Leveling.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/AWS/SQS + Lambda (Visibility + ConcurrentExecution).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/AWS/Life cycle of SQS vs SNS vs Kafka.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Client-Side vs Server-Side Partitioning: Complete Interview Guide.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Consistent Hashing.md",
@@ -414,7 +343,6 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/3 - Load Balancing.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/APIs/GraphQL.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems",
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Algorithms/DFS (Depth-First Search).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/APIs/assets/API Gateway/file-20260129233216883.png",
     "1 - Raw Notes/6 - Interview Notes/assets/English/file-20260128000607801.png",
     "1 - Raw Notes/6 - Interview Notes/assets/English/file-20260128000547991.png",
