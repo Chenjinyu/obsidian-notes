@@ -241,10 +241,10 @@ def lambda_handler(event, context):
 ### Architecture B: Advanced with Redis Batching (RARE!)
 
 ```
-┌──────────┐
+┌───────────┐
 │Application│
-│  Server  │
-└────┬─────┘
+│  Server   │
+└────┬──────┘
      │
      │ Sends messages
      ↓
@@ -491,13 +491,377 @@ Resources:
 ## Summary
 
 1. ✅ **SQS Visibility**: SQS automatically manages visibility using a timer. Sets invisible when delivered, makes visible again after timeout expires.
-    
 2. ✅ **Redis Batching**: Architecture B is for ADVANCED use cases only. Standard flow (Architecture A) is: App → SQS → Lambda → Database (no Redis needed).
-    
 3. ✅ **Batch Size Config**: Set in the **Event Source Mapping** (not in SQS queue or Lambda itself). This is the connector between SQS and Lambda.
     
 
-Hope this clears everything up! 🎯
+# How does SQS manage message's visibility with lambda
+
+## How SQS Knows Success vs Failure
+### The Secret: Receipt Handle & Delete Message API
+```
+┌─────────────────────────────────────────────────────────────┐
+│ SQS Message Delivery Lifecycle                              │
+└─────────────────────────────────────────────────────────────┘
+
+Step 1: Lambda polls SQS (or SQS triggers Lambda)
+        ↓
+Step 2: SQS returns message + ReceiptHandle (unique token)
+        {
+          "MessageId": "msg-123",
+          "Body": "{...}",
+          "ReceiptHandle": "AQEBxxx...unique-token"  ← Key!
+        }
+        ↓
+Step 3: Message becomes INVISIBLE (visibility timeout starts)
+        ↓
+Step 4a: SUCCESS PATH
+        Lambda processes successfully
+        → Lambda calls DeleteMessage(ReceiptHandle)
+        → SQS receives delete request
+        → SQS permanently removes message
+        → DONE! ✅
+        
+Step 4b: FAILURE PATH  
+        Lambda crashes/times out/throws exception
+        → Lambda does NOT call DeleteMessage
+        → Visibility timeout expires
+        → SQS makes message VISIBLE again
+        → Ready for retry ⚠️
+```
+
+## Detailed Flow
+
+### 1. SQS Delivers Message with Receipt Handle
+```python
+# What SQS actually sends to Lambda
+{
+  "Records": [
+    {
+      "messageId": "059f36b4-87a3-44ab-83d2-661975830a7d",
+      "receiptHandle": "AQEBwJnKyrHigUMZj6rYigCgxlaS3SLy0a...",  # ← Unique token
+      "body": "{\"user_id\": 123, \"data\": \"new_data\"}",
+      "attributes": {
+        "ApproximateReceiveCount": "1",
+        "SentTimestamp": "1523232000000",
+        "ApproximateFirstReceiveTimestamp": "1523232000001"
+      }
+    }
+  ]
+}
+```
+
+### 2. Lambda Runtime Manages Deletion (Automatic)
+```python
+# AWS Lambda Runtime (hidden from you)
+
+def lambda_runtime_wrapper(event, context, user_handler):
+    """
+    This is what AWS actually runs (simplified)
+    You don't see this code - it's built into Lambda service
+    """
+    
+    successful_messages = []
+    failed_messages = []
+    
+    try:
+        # Call your handler function
+        result = user_handler(event, context)
+        
+        # If no exception and no batch failures reported
+        if result is None or 'batchItemFailures' not in result:
+            # SUCCESS! Delete all messages
+            for record in event['Records']:
+                sqs.delete_message(
+                    QueueUrl=queue_url,
+                    ReceiptHandle=record['receiptHandle']  # ← Key!
+                )
+                successful_messages.append(record['messageId'])
+        else:
+            # Partial batch failure
+            failed_ids = {f['itemIdentifier'] for f in result['batchItemFailures']}
+            
+            for record in event['Records']:
+                if record['messageId'] in failed_ids:
+                    # DON'T delete - let it retry
+                    failed_messages.append(record['messageId'])
+                else:
+                    # Delete successful ones
+                    sqs.delete_message(
+                        QueueUrl=queue_url,
+                        ReceiptHandle=record['receiptHandle']
+                    )
+                    successful_messages.append(record['messageId'])
+    
+    except Exception as e:
+        # FAILURE! Don't delete ANY messages
+        # Let visibility timeout expire and retry all
+        failed_messages = [r['messageId'] for r in event['Records']]
+        raise
+    
+    return {
+        'successful': successful_messages,
+        'failed': failed_messages
+    }
+```
+
+### 3. Your Lambda Handler (What You Write)
+```python
+# Your code - Lambda runtime wraps this
+def lambda_handler(event, context):
+    """
+    You just write business logic
+    Lambda runtime handles SQS message deletion automatically
+    """
+    
+    for record in event['Records']:
+        message = json.loads(record['body'])
+        
+        # Process message
+        write_to_database(message)
+        
+        # That's it! No need to manually delete
+        # If this succeeds, Lambda runtime deletes the message
+        # If this throws exception, Lambda runtime does NOT delete
+
+# Example with partial batch failure
+def lambda_handler(event, context):
+    """
+    Report which specific messages failed
+    """
+    
+    failed_items = []
+    
+    for record in event['Records']:
+        try:
+            message = json.loads(record['body'])
+            write_to_database(message)
+            # Success - will be deleted
+            
+        except Exception as e:
+            # Failure - mark for retry
+            print(f"Failed to process {record['messageId']}: {e}")
+            failed_items.append({
+                'itemIdentifier': record['messageId']
+            })
+    
+    # Return failed message IDs
+    # Lambda runtime will:
+    # - Delete successful messages
+    # - NOT delete failed messages (they'll retry)
+    if failed_items:
+        return {
+            'batchItemFailures': failed_items
+        }
+```
+
+## Behind the Scenes: AWS APIs
+
+### What Lambda Runtime Actually Calls
+```python
+import boto3
+
+sqs = boto3.client('sqs')
+
+# When Lambda receives messages from SQS
+response = sqs.receive_message(
+    QueueUrl='https://sqs.us-east-1.amazonaws.com/123456789012/my-queue',
+    MaxNumberOfMessages=10,
+    VisibilityTimeout=900,  # Makes messages invisible for 15 min
+    WaitTimeSeconds=20      # Long polling
+)
+
+# Response looks like:
+# {
+#   'Messages': [
+#     {
+#       'MessageId': 'msg-123',
+#       'ReceiptHandle': 'AQEBxxx...unique-token',  ← Used for deletion
+#       'Body': '{"user_id": 123}',
+#       'Attributes': {...}
+#     }
+#   ]
+# }
+
+# On SUCCESS - Lambda runtime calls this:
+for message in response['Messages']:
+    sqs.delete_message(
+        QueueUrl='https://sqs.us-east-1.amazonaws.com/123456789012/my-queue',
+        ReceiptHandle=message['ReceiptHandle']  # ← Proves we have this message
+    )
+    # SQS receives delete request and permanently removes message
+
+# On FAILURE - Lambda runtime does NOT call delete_message
+# Visibility timeout expires, message becomes visible again
+```
+
+## Key Concepts
+
+### 1. Receipt Handle = Proof of Delivery
+```python
+# Receipt Handle is like a "claim ticket"
+
+# Analogy: Dry Cleaning
+# 1. You drop off clothes → Get claim ticket (ReceiptHandle)
+# 2. Clothes invisible to others (VisibilityTimeout)
+# 3. You return with ticket → Get clothes (DeleteMessage)
+# 4. If you lose ticket (timeout) → Clothes available again
+
+# SQS Receipt Handle
+receipt_handle = "AQEBwJnKyrHigUMZj6rYigCgxlaS3SLy0a..."
+
+# Only this specific receipt handle can delete this message delivery
+# Same message can be delivered multiple times with different receipt handles
+```
+
+### 2. Message Lifecycle States
+```python
+# Message has internal state machine in SQS
+
+class MessageState:
+    AVAILABLE = "visible"      # Can be received by consumers
+    IN_FLIGHT = "invisible"    # Being processed (visibility timeout active)
+    DELETED = "deleted"        # Permanently removed
+    
+# State transitions:
+# AVAILABLE → (receive_message) → IN_FLIGHT
+# IN_FLIGHT → (delete_message) → DELETED  ✅ Success
+# IN_FLIGHT → (timeout) → AVAILABLE       ⚠️ Retry
+```
+
+### 3. How SQS Detects Failure
+```python
+# SQS doesn't actively "detect" failure
+# It uses TIMEOUT as the failure signal
+
+# Timeline:
+Time 0s:    Message delivered (IN_FLIGHT state)
+            Visibility timeout = 900s starts
+
+Time 0-900s: Waiting...
+            - If delete_message received → Move to DELETED ✅
+            - If nothing received → Keep waiting
+
+Time 900s:  Timeout expires!
+            - No delete_message received = FAILURE
+            - Move to AVAILABLE state (retry)
+
+# SQS logic (pseudocode):
+def check_message_timeout():
+    while True:
+        for message in in_flight_messages:
+            if current_time() > message.invisible_until:
+                if not message.deleted:
+                    # No delete received = failure
+                    message.state = AVAILABLE
+                    message.receive_count += 1
+```
+
+## Complete Example: Manual SQS Polling
+```python
+# If you were manually polling SQS (without Lambda event source)
+import boto3
+import time
+
+sqs = boto3.client('sqs')
+queue_url = 'https://sqs.us-east-1.amazonaws.com/123456789012/my-queue'
+
+while True:
+    # 1. Receive messages
+    response = sqs.receive_message(
+        QueueUrl=queue_url,
+        MaxNumberOfMessages=10,
+        VisibilityTimeout=900,  # 15 min invisible
+        WaitTimeSeconds=20
+    )
+    
+    if 'Messages' not in response:
+        continue
+    
+    for message in response['Messages']:
+        message_id = message['MessageId']
+        receipt_handle = message['ReceiptHandle']  # ← Important!
+        body = message['Body']
+        
+        try:
+            # 2. Process message
+            process_message(json.loads(body))
+            
+            # 3. SUCCESS - Tell SQS to delete
+            sqs.delete_message(
+                QueueUrl=queue_url,
+                ReceiptHandle=receipt_handle  # ← Proves we processed this delivery
+            )
+            print(f"✅ Deleted message {message_id}")
+            
+        except Exception as e:
+            # 4. FAILURE - Do NOT delete
+            # Message will become visible again after 900s
+            print(f"❌ Failed {message_id}: {e}")
+            # No delete_message call = automatic retry
+```
+
+## Visibility Timeout Extension
+```python
+# If processing takes longer than expected, you can extend visibility
+
+def lambda_handler(event, context):
+    for record in event['Records']:
+        receipt_handle = record['receiptHandle']
+        
+        # Start processing
+        long_running_task()
+        
+        # Oh no! This will take longer than visibility timeout
+        # Extend visibility to prevent duplicate processing
+        sqs.change_message_visibility(
+            QueueUrl=queue_url,
+            ReceiptHandle=receipt_handle,
+            VisibilityTimeout=1800  # Extend to 30 minutes
+        )
+        
+        continue_long_task()
+        
+        # Lambda runtime will still delete on success
+```
+
+## Monitoring: How to See What's Happening
+```python
+# CloudWatch metrics to monitor
+
+# 1. NumberOfMessagesReceived
+# How many times messages were delivered (includes retries)
+
+# 2. NumberOfMessagesDeleted  
+# How many delete_message calls succeeded
+
+# 3. ApproximateNumberOfMessagesVisible
+# Messages available for processing
+
+# 4. ApproximateNumberOfMessagesNotVisible
+# Messages currently being processed (in-flight)
+
+# 5. ApproximateAgeOfOldestMessage
+# How long oldest message has been waiting
+
+# If messages not being deleted:
+# NumberOfMessagesReceived > NumberOfMessagesDeleted
+# → Lambda is failing to process messages
+```
+
+## Summary
+
+**How SQS knows SUCCESS:**
+- Lambda runtime calls `delete_message(ReceiptHandle)`
+- SQS receives delete request → permanently removes message
+
+**How SQS knows FAILURE:**
+
+- Lambda does NOT call `delete_message`
+- Visibility timeout expires → SQS automatically makes message visible again
+- SQS doesn't need explicit "failure" signal - timeout = failure
+
+**Key takeaway:** SQS uses **absence of deletion** + **timeout** to detect failure, not active monitoring! 🎯
 
 # Note
 
