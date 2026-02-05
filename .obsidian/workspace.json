@@ -109,7 +109,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Queue-Based Load Leveling.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/AWS/Life cycle of SQS vs SNS vs Kafka.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -124,7 +124,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2 - Availability - Queue-Based Load Leveling"
+              "title": "Life cycle of SQS vs SNS vs Kafka"
             }
           },
           {
@@ -351,9 +351,11 @@
   },
   "active": "52a796b5eed7463f",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Queue-Based Load Leveling.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/AWS/Life cycle of SQS vs SNS vs Kafka.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/AWS",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Gateway Aggregation.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Exponential Backoff Strategy (Transient Failures).md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Queue-Based Load Leveling.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Client-Side vs Server-Side Partitioning: Complete Interview Guide.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Consistent Hashing.md",
@@ -387,11 +389,9 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/APIs/GraphQL.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Algorithms/DFS (Depth-First Search).md",
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/APIs/APIs - REST vs GraphQL vs RPC.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/APIs/API Gateway.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/APIs/assets/API Gateway/file-20260129233216883.png",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/APIs/API Idempotency.md",
     "1 - Raw Notes/6 - Interview Notes/assets/English/file-20260128000607801.png",
     "1 - Raw Notes/6 - Interview Notes/assets/English/file-20260128000547991.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Exponent Doc/assets/3 - Rubric for System Design Interviews (评分标准)/file-20260127223752655.png",
