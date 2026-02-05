@@ -1083,7 +1083,6 @@ def check_rate_limit():
 #### Step 1: Clarify Requirements
 
 **You**: "Let me understand the requirements:
-
 1. **How many microservices** are we aggregating?
 2. **What clients** will use this? (Mobile, web, partners?)
 3. **Expected traffic**? (requests/sec, peak loads?)
@@ -1131,10 +1130,10 @@ def check_rate_limit():
     ┌──────────┼──────────┬────────────────┐
     │          │          │                │
     ▼          ▼          ▼                ▼
-┌────────┐┌────────┐┌────────┐       ┌────────┐
-│Product ││Inventory││Review  │  ...  │Pricing │
-│Service ││Service  ││Service │       │Service │
-└────────┘└────────┘└────────┘       └────────┘
+┌────────┐┌─────────┐ ┌────────┐       ┌────────┐
+│Product ││Inventory│ │Review  │  ...  │Pricing │
+│Service ││Service  │ │Service │       │Service │
+└────────┘└─────────┘ └────────┘       └────────┘
 ```
 
 #### Step 3: Explain Aggregation Strategy
