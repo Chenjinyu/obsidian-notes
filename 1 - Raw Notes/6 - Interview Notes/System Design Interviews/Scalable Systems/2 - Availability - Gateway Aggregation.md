@@ -647,7 +647,6 @@ class ResilientGateway:
 ```
 
 **Resilience benefit:**
-
 ```
 Scenario: Review service crashes
 
@@ -671,9 +670,7 @@ Much better than complete failure!
 ---
 
 ### Technique 3: Request Collapsing (Deduplication)
-
 **Problem**: Multiple concurrent requests for same data
-
 ```python
 import asyncio
 from collections import defaultdict
@@ -739,7 +736,6 @@ async def get_product(product_id):
 ### Technique 4: Timeout Management
 
 **Problem**: Slow service delays entire aggregation
-
 ```python
 import asyncio
 

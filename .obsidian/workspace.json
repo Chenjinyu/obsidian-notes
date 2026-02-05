@@ -133,6 +133,30 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/Resilience vs Reliability.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Resilience vs Reliability"
+            }
+          },
+          {
+            "id": "0ef8b368d166dba6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Gateway Aggregation.md",
                 "mode": "source",
                 "source": false,
@@ -176,7 +200,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -349,15 +373,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a4542707db9feb18",
+  "active": "0ef8b368d166dba6",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/Resilience vs Reliability.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Gateway Aggregation.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Queue-Based Load Leveling.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/AWS/SQS + Lambda (Visibility + ConcurrentExecution).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/AWS/Life cycle of SQS vs SNS vs Kafka.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Client-Side vs Server-Side Partitioning: Complete Interview Guide.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Consistent Hashing.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/AWS",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Gateway Aggregation.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Exponential Backoff Strategy (Transient Failures).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/Content Delivery Network (CDN).md",
@@ -390,7 +415,6 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/APIs/GraphQL.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Algorithms/DFS (Depth-First Search).md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/APIs/APIs - REST vs GraphQL vs RPC.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/APIs/assets/API Gateway/file-20260129233216883.png",
     "1 - Raw Notes/6 - Interview Notes/assets/English/file-20260128000607801.png",
     "1 - Raw Notes/6 - Interview Notes/assets/English/file-20260128000547991.png",
