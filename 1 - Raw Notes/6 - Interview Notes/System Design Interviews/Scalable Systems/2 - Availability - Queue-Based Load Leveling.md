@@ -252,8 +252,8 @@ With Queue (Write-Behind):
 └──────┘
            ↓
       ┌─────────┐
-      │  Cache  │ ← Accepts all writes (fast) #### the Redis Cache can immdiately for client reads(from Redis), from user's perspective, the response is immidately, even the data will effected 
-      |         |      
+      │  Cache  │ ← Accepts all writes (fast) #### the Redis Cache can immdiately for client reads(from Redis), from user's perspective, the response is immdiately, even the data will effected 
+      |         |  into database by eventually consistant. and can use batch write into database, for example: 100 users click like, the script can get and aggreate them to one update sql.    
       │ (Redis) │
       └────┬────┘
            │
@@ -268,6 +268,9 @@ With Queue (Write-Behind):
       │Database │ ← Stays healthy
       └─────────┘
 ```
+#### When do not need Redis
+- you are okay with eventual consistency because there is no need to read immediately
+- the Queue is durable (SQS, Kafka, RabbitMQ with persistence)
 
 **Implementation:**
 ```python
