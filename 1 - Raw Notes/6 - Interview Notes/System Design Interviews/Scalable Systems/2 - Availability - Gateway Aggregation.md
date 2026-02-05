@@ -3,9 +3,9 @@ Course:
 Tags:  [[interview]] [[System Design]] [[High Level ]] [[Low Level]]
 
 # Gateway Aggregation Pattern: Complete Guide for Microservices
-Excellent topic! Gateway Aggregation (also called BFF - Backend for Frontend) is crucial for building efficient microservices. Let me give you a comprehensive breakdown.
 
----
+### Excellent topic! Gateway Aggregation (also called BFF - Backend for Frontend) is crucial for building efficient microservices. Let me give you a comprehensive breakdown.
+
 ## 1. The Problem: Microservice Chattiness
 
 ### Without Gateway (Direct Client-to-Microservices)
@@ -70,7 +70,11 @@ User experience: Fast! 🚀
 
 **Benefits:**
 
-✅ **66% latency reduction** (870ms → 300ms) ✅ **80% fewer network calls** (5 → 1) ✅ **Simpler client** (1 endpoint instead of 5) ✅ **Optimized payload** (only data client needs) ✅ **Centralized auth** (authenticate once at gateway)
+✅ **66% latency reduction** (870ms → 300ms)
+✅ **80% fewer network calls** (5 → 1)
+✅ **Simpler client** (1 endpoint instead of 5)
+✅ **Optimized payload** (only data client needs) 
+✅ **Centralized auth** (authenticate once at gateway)
 
 ---
 
@@ -173,7 +177,6 @@ Improvement: 67% faster! ⚡
 ### Pattern 2: GraphQL-Style Field Selection
 
 **Use case**: Client specifies exactly what data it needs
-
 ```python
 from flask import Flask, request, jsonify
 import asyncio
@@ -281,7 +284,6 @@ With field selection: 120KB (more fields, but still optimized)
 ### Pattern 3: Backend for Frontend (BFF)
 
 **Use case**: Different clients need different data shapes
-
 ```
 ┌─────────────────────────────────────────────────┐
 │            Microservices (Backend)              │
@@ -452,9 +454,7 @@ BFF = optimized for each client! ✅
 ## 3. Advanced Techniques
 
 ### Technique 1: Caching at Gateway Level
-
 **Problem**: Multiple clients request same data repeatedly
-
 ```python
 import redis
 import hashlib
@@ -530,9 +530,7 @@ Subsequent: 5ms (from cache)
 ---
 
 ### Technique 2: Circuit Breaker per Service
-
 **Problem**: One slow/failing service shouldn't block entire aggregation
-
 ```python
 from datetime import datetime, timedelta
 
