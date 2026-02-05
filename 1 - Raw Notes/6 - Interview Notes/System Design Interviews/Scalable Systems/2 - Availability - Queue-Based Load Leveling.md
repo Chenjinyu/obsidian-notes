@@ -249,24 +249,36 @@ Without Queue (Direct writes):
 With Queue (Write-Behind):
 ┌──────┐
 │Client│ ──→ 1000 writes/sec
-└──────┘
+└──────┘   |
            ↓
-      ┌─────────┐
-      │  Cache  │ ← Accepts all writes (fast) #### the Redis Cache can immdiately for client reads(from Redis), from user's perspective, the response is immdiately, even the data will effected 
-      |         |  into database by eventually consistant. and can use batch write into database, for example: 100 users click like, the script can get and aggreate them to one update sql.    
-      │ (Redis) │
-      └────┬────┘
-           │
-           │ Async writes to queue
-           ↓
-      ┌─────────┐
-      │  Queue  │
-      └────┬────┘
-           │ 100 writes/sec (controlled rate)
-           ↓
-      ┌─────────┐
-      │Database │ ← Stays healthy
-      └─────────┘
+      ┌──────────────────────────────────┐
+      │   Application Server             │
+      │                                  │
+      │  1. Write to Redis (sync)        │ ← the Redis cache can immdiately for client reads(from Redis), from user's perspective, the response is immdiately, even the data will effected 
+      |  2. Push to Queue (async)        |   into database by eventually consistant. and can use batch write into database, 
+      |  3. Return response to client    |   for example: 100 users click like, the script can get and aggreate them to one update sql.    
+      └────┬─────────────────┬───────────┘
+           │                 │
+           │ Sync write      │ Async push
+           ↓                 ↓
+      ┌─────────┐       ┌─────────┐
+      │  Redis  │       │  Queue  │
+      │  Cache  │       │(Kafka/  │
+      └─────────┘       │RabbitMQ)│
+                        └────┬────┘
+                             │
+                             │ Workers poll/subscribe
+                             ↓
+                        ┌─────────┐
+                        │ Worker  │ ← Consumes messages
+                        │ Process │   at controlled rate
+                        └────┬────┘   (100 writes/sec)
+                             │
+                             │ Batch/throttled writes
+                             ↓
+                        ┌─────────┐
+                        │Database │ ← Stays healthy
+                        └─────────┘
 ```
 #### When do not need Redis
 - you are okay with eventual consistency because there is no need to read immediately
@@ -1017,7 +1029,6 @@ With rate limiting via queue:
 - What's acceptable latency? Is eventual consistency OK?"
 
 **Interviewer**: "Normal: 100 req/sec. Peak (Black Friday): 10,000 req/sec. Database is the bottleneck (can handle 500 writes/sec). Users need immediate confirmation, but actual processing can be delayed."
-
 #### Step 2: Propose Queue-Based Load Leveling
 **You**: "Perfect use case for queue-based load leveling. Here's my approach:
 
