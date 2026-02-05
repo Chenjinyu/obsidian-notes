@@ -270,7 +270,7 @@ With Queue (Write-Behind):
                              │ Workers poll/subscribe
                              ↓
                         ┌─────────┐
-                        │ Worker  │ ← Consumes messages
+                        │ Worker  │ ← Consumes messages ← can use AWS Lambda with ReservedConcurrentExecution setup to max 100. lambda add the SQS as its trigger
                         │ Process │   at controlled rate
                         └────┬────┘   (100 writes/sec)
                              │
