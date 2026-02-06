@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/secure communication.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Strings.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "secure communication"
+              "title": "Strings"
             }
           }
         ]
@@ -204,8 +204,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1a71e9f0de9191ea",
+  "active": "25cec54ee6bee060",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets/Strings/file-20260205232630672.png",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets/Strings",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/secure communication.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Strings.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Sagas.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/Content Delivery Network (CDN).md",
@@ -237,15 +242,10 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/2 - Availability - Rate Limiting/file-20260203204644825.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/2 - Availability - Rate Limiting",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Round-Robin(RR) Algorithm.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability.md",
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/SQL Language/Postgres Lock Row.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Low Level System Design",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/High Level System Design",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas/file-20260130012529784.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas/file-20260130012429138.png",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/APIs/assets/API Gateway/file-20260129233216883.png",
     "1 - Raw Notes/6 - Interview Notes/assets/English/file-20260128000607801.png",
     "1 - Raw Notes/6 - Interview Notes/assets/English/file-20260128000547991.png",
