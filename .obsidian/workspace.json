@@ -30,105 +30,8 @@
               "icon": "lucide-file",
               "title": "secure communication"
             }
-          },
-          {
-            "id": "6ba7824bdd95fe8c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Sagas.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "1 - Reliability - Sagas"
-            }
-          },
-          {
-            "id": "4028619199a36443",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/Content Delivery Network (CDN).md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Content Delivery Network (CDN)"
-            }
-          },
-          {
-            "id": "52a796b5eed7463f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/AWS/SQS + Lambda (Visibility + ConcurrentExecution).md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "SQS + Lambda (Visibility + ConcurrentExecution)"
-            }
-          },
-          {
-            "id": "cb649b0d5f60aeb5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/CAP Theorem.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "CAP Theorem"
-            }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -301,16 +204,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "cb649b0d5f60aeb5",
+  "active": "1a71e9f0de9191ea",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/Replication.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Sagas.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/Content Delivery Network (CDN).md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/AWS/SQS + Lambda (Visibility + ConcurrentExecution).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/CAP Theorem.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/Replication.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/Database Sharding.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/SQL vs NoSQL.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/3 - Load Balancing.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Queue-Based Load Leveling.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/Resilience vs Reliability.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/AWS/SQS + Lambda (Visibility + ConcurrentExecution).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/Fan out vs Fan In.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Gateway Aggregation.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/AWS/Life cycle of SQS vs SNS vs Kafka.md",
@@ -319,9 +225,7 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/AWS",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Exponential Backoff Strategy (Transient Failures).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/Content Delivery Network (CDN).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Sagas.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Rate Limiting.md",
     "High Level.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas",
@@ -335,7 +239,6 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Round-Robin(RR) Algorithm.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/SQL Language/Postgres Lock Row.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/secure communication.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Low Level System Design",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/High Level System Design",
