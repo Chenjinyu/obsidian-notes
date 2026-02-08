@@ -1,6 +1,6 @@
 Date: 2026-02-05
 Course:
-Tags: 
+Tags: [[System Design]] [[]]
 
 # Content
 

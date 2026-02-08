@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Strings.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Consistent Hashing.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Strings"
+              "title": "Consistent Hashing"
             }
           }
         ]
@@ -206,16 +206,16 @@
   },
   "active": "25cec54ee6bee060",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/CAP Theorem.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Strings.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets/Strings/file-20260205232630672.png",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets/Strings",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/secure communication.md",
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Strings.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Sagas.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/Content Delivery Network (CDN).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/AWS/SQS + Lambda (Visibility + ConcurrentExecution).md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/CAP Theorem.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/Replication.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/Database Sharding.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/SQL vs NoSQL.md",
@@ -251,7 +251,6 @@
     "1 - Raw Notes/6 - Interview Notes/assets/English/file-20260128000547991.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Exponent Doc/assets/3 - Rubric for System Design Interviews (评分标准)/file-20260127223752655.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Exponent Doc/assets/2 - System Design Principles/file-20260127222843159.png",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Exponent Doc/assets/2 - System Design Principles/file-20260127222830941.png",
     "Untitled 5.canvas",
     "Untitled 4.canvas",
     "Untitled 3.canvas",
