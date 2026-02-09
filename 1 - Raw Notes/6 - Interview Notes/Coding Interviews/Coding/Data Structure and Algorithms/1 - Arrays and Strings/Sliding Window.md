@@ -4,8 +4,9 @@ Tags:
 
 # Content
 
-Below of the time complexity is O(n), because the 
+Below of the time complexity is O(n), because the left does not reset for each right, it only moves forward overall. (**[**amortized analysis**](https://en.wikipedia.org/wiki/Amortized_analysis)**)
 ```python
+# Time Complexity: O(n)
 function fn(arr):
     left = 0
     for (int right = 0; right < arr.length; right++):
@@ -17,6 +18,8 @@ function fn(arr):
 
         Do some logic to update the answer
 ```
+![](assets/Sliding%20Window/file-20260209005455197.png)
+
 
 # Note
 
