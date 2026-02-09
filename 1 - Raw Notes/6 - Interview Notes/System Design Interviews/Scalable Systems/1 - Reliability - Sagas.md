@@ -9,7 +9,12 @@ Saga reliability in system design ensures data consistency across distributed mi
 if one step fails, the sage executes compensating transactions to revert preceding steps, maintaining eventual consistency without relying on complex, two phrase commits
 ### Key aspects of Saga reliability include:
 - Compensating Transactions: explicit, pre-designed actions that undo changes made by a successful step if a later step fails, ensuring the system returns to a known, valid state
-- Choreography or Orchestration(编舞或配器): sagas are implemented via choreography (services exchange events) or orchestration (a central coordinator manages steps)
+- Choreography or Orchestration(编舞或配器): sagas are implemented via choreography (services exchange events) or orchestration (a central coordinator manages steps).
+- Eventual Consistency: Instead of immediate ACID compliance, the system is designed to reach a consistent state over time.
+- Failure Handing: The pattern enables automatic rollback, allowing the system to handle, for example, a stock reservation failure after a payment has already been processed.
+
+Common implementations for ensuring reliability includes the Outbox pattern (ensuring atomic, reliable message publishing) and maintaining Idempotency in services(allowing steps to retried without side effects)
+
 ![](assets/1%20-%20Reliability%20-%20Sagas/file-20260130012529784.png)
 ![](assets/1%20-%20Reliability%20-%20Sagas/file-20260130012429138.png)
 ## Why distributed transactions are hard in microservices
@@ -280,7 +285,6 @@ Keep them small and explicit:
 
 ---
 # 3) Orchestrator API (FastAPI) — creates saga + outbox command
-
 ```python
 # orchestrator_api.py
 import os, json, uuid
