@@ -2,7 +2,26 @@ Course:
 Tags:  [[interview]] [[../../../7 - JCUS.LINK/System Design]] [[../../../../High Level]] [[Low Level]]
 
 # Content
+A **circuit breaker** is a reliability pattern that **stops your service from repeatedly calling a failing dependency** (like another microservice, database, or third-party API), so you avoid **cascading failures** and recover faster.
+### How it works (the core idea)
+Your service wraps an outbound call with a “breaker” that tracks failures:
+- **Closed (normal):** calls go through.
+- **Open (tripped):** calls are **blocked immediately** (fail fast) for a cooldown period.
+- **Half-open (test mode):** after cooldown, allow a few test calls:
+    - if they succeed → go back to **Closed**
+    - if they fail → back to **Open**
 
+### Why it improves reliability
+- **Prevents retry storms** and thread/connection pool exhaustion
+- **Reduces latency** by failing fast instead of waiting on timeouts
+- **Limits blast radius** so one bad dependency doesn’t take down everything
+- **Gives dependencies time to recover**
+    
+### What you typically pair with it
+- **Timeouts** (always)
+- **Retries with exponential backoff** (only when it makes sense)
+- **Fallbacks** (cached data, default response, degrade gracefully)
+- **Bulkheads** (separate pools so one dependency can’t starve others)
 ## Examples
 - Service crashed/dead
 - Database is down
@@ -712,7 +731,6 @@ x-amazon-apigateway-integration:
 3. **User impact**: Long wait times, poor experience
 
 To address non-transient failures, I'd implement circuit breakers at service boundaries."
-
 #### Step 2: Draw the Architecture
 ```
 ┌─────────────────────────────┐
