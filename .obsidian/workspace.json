@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Rate Limiting - Redis - Atomic action.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/3 - Load Balancing.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2 - Availability - Rate Limiting - Redis - Atomic action"
+              "title": "3 - Load Balancing"
             }
           }
         ]
@@ -206,9 +206,10 @@
   },
   "active": "25cec54ee6bee060",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Gateway Aggregation.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Rate Limiting - Redis - Atomic action.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Rate Limiting.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Gateway Aggregation.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Exponential Backoff Strategy (Transient Failures).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Sagas - Orchestration vs Choreography.md",
@@ -246,7 +247,6 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas (Transient Failures)",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas (Transient)",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Rate Limiting - Redis - Atomic action.md",
     "1 - Raw Notes/6 - Interview Notes/English.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/2 - Availability - Rate Limiting/file-20260203204855632.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/2 - Availability - Rate Limiting/file-20260203204644825.png",

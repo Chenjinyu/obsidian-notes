@@ -27,7 +27,6 @@ Use one of these:
 - **Lua script (`EVAL`)**: multiple reads/writes in one script are executed as one atomic unit.
 - **Transactions (`MULTI/EXEC`)**: executes a batch sequentially without interleaving, but if you need “check then set” correctness, you usually pair it with **WATCH** (optimistic locking).
 - **Single composite commands** when available (e.g., `INCR` + `EXPIRE` patterns often use Lua to avoid races).
-
 ### Why this matters for rate limiting
 A limiter usually needs: “read state → compute → update state → decide allow/deny.”  
 If that’s not atomic, two requests can both pass when only one should.
