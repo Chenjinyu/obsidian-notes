@@ -25,6 +25,7 @@ There are two main strategies people talk about:
 
 ### What it is
 A classic distributed transaction protocol with a **coordinator** and participants.
+2-phase commit used **atomic rollback via coordinator** vs saga orchestration **uses explicit compensating actions**.
 
 ### How it works
 **Phase 1: Prepare**
