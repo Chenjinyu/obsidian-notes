@@ -267,7 +267,6 @@ def chat(request):
 ## 5. Rules Engine
 
 **Simple approach** (your OpenAI project):
-
 ```python
 RATE_LIMITS = {
     "free_user": {"requests": 10, "window": 3600},  # 10/hour
@@ -281,7 +280,6 @@ def get_limit(user):
 ```
 
 **Complex rules engine** (enterprise):
-
 ```python
 class RulesEngine:
     def get_limit(self, context):
@@ -313,7 +311,6 @@ class RulesEngine:
 **Should you cache rules?**
 
 **Yes** if:
-
 - Rules are complex/database-driven
 - High request volume
 - Rules change infrequently
@@ -328,7 +325,6 @@ def get_rate_limit_rule(user_id, endpoint):
 ## 6. Low-Level Implementation Details
 
 ### Redis-Based Sliding Window Counter
-
 ```python
 import redis
 import time
@@ -398,25 +394,22 @@ def is_allowed_fixed_window(user_id, max_requests, window_seconds=60):
 ## 7. Distributed Systems Design
 
 ### Architecture for Scale
-
 ```
-                    ┌─── Rate Limiter 1 ───┐
-                    │                       │
-Client → LB → API 1 ─┤                       ├─→ Redis Cluster
-                    │                       │   (Shared State)
-                    └─── Rate Limiter 2 ───┘
+                     ┌─── Rate Limiter 1 ───┐
+                     │                      │
+Client → LB → API 1 ─┤                      ├─→ Redis Cluster
+                     │                      │   (Shared State)
+                     └─── Rate Limiter 2 ───┘
                     
-                    ┌─── Rate Limiter 3 ───┐
-                    │                       │
-Client → LB → API 2 ─┤                       ├─→ Redis Cluster
-                    │                       │
-                    └─── Rate Limiter 4 ───┘
+                     ┌─── Rate Limiter 3 ───┐
+                     │                      │
+Client → LB → API 2 ─┤                      ├─→ Redis Cluster
+                     │                      │
+                     └─── Rate Limiter 4 ───┘
 ```
 
 ### Load Balancer Role
-
 **Yes, you need a load balancer because**:
-
 - Distributes requests across multiple API servers
 - Health checks (remove failed nodes)
 - SSL termination
@@ -430,9 +423,7 @@ Client → LB → API 2 ─┤                       ├─→ Redis Cluster
 **Interview insight**: Mention that consistent hashing can reduce cache misses but creates imbalance if user traffic is skewed.
 
 ### Shared Cache: Redis
-
 **Why Redis?**
-
 - Fast (in-memory)
 - Atomic operations (INCR, ZADD)
 - Built-in expiration
@@ -441,12 +432,10 @@ Client → LB → API 2 ─┤                       ├─→ Redis Cluster
 **Read vs Write Cache?**
 
 Rate limiting is **mostly writes**:
-
 - Every request = write (increment counter or add timestamp)
 - Read only to check current count
 
 **Caching strategy**:
-
 ```
 Local Cache (in-process)     →  Redis (shared)
 - Rules/configuration         - Request counts
@@ -455,7 +444,6 @@ Local Cache (in-process)     →  Redis (shared)
 ```
 
 **Example with local + Redis**:
-
 ```python
 import time
 from functools import lru_cache
@@ -487,7 +475,6 @@ class TwoTierRateLimiter:
 ### Geographic Rate Limiting
 
 **Approach 1: Separate limits per region**
-
 ```python
 def get_rate_limit_key(user_id, region):
     return f"rate_limit:{region}:{user_id}"
@@ -502,19 +489,15 @@ limit = REGIONAL_LIMITS[region]
 ```
 
 **Approach 2: Regional Redis clusters**
-
 ```
 EU Users  → EU Load Balancer → EU Redis Cluster
 US Users  → US Load Balancer → US Redis Cluster
 Asia Users → Asia Load Balancer → Asia Redis Cluster
 ```
-
 Benefits: Lower latency, regulatory compliance (data residency)
 
 ### Handling Race Conditions
-
 **Problem**: Two requests arrive simultaneously
-
 ```
 Request A: Read count (50) → Check limit (OK) → Increment (51)
 Request B: Read count (50) → Check limit (OK) → Increment (52)
@@ -522,7 +505,6 @@ Both allowed even if limit is 50!
 ```
 
 **Solution 1: Atomic operations (Redis)**
-
 ```lua
 -- Lua script executed atomically in Redis
 local current = redis.call('incr', KEYS[1])
@@ -551,7 +533,6 @@ result = script(keys=[key], args=[window, max_requests])
 ## 8. Handling Rate Limit from User Perspective
 
 ### Response Headers (Best Practice)
-
 ```http
 HTTP/1.1 429 Too Many Requests
 X-RateLimit-Limit: 100
@@ -568,7 +549,6 @@ Retry-After: 60
 ### Client-Side Strategies
 
 **1. Exponential Backoff**
-
 ```python
 import time
 
