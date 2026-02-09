@@ -4,7 +4,12 @@ Tags: [[API]]  [[interview]] [[../../../7 - JCUS.LINK/System Design]] [[High Lev
 
 # Content
 
-
+## Defination
+Saga reliability in system design ensures data consistency across distributed microservices by breaking long-running, multi-service transactions into smaller, independent lcal transactions. 
+if one step fails, the sage executes compensating transactions to revert preceding steps, maintaining eventual consistency without relying on complex, two phrase commits
+### Key aspects of Saga reliability include:
+- Compensating Transactions: explicit, pre-designed actions that undo changes made by a successful step if a later step fails, ensuring the system returns to a known, valid state
+- Choreography or Orchestration(编舞或配器): sagas are implemented via choreography (services exchange events) or orchestration (a central coordinator manages steps)
 ![](assets/1%20-%20Reliability%20-%20Sagas/file-20260130012529784.png)
 ![](assets/1%20-%20Reliability%20-%20Sagas/file-20260130012429138.png)
 ## Why distributed transactions are hard in microservices
