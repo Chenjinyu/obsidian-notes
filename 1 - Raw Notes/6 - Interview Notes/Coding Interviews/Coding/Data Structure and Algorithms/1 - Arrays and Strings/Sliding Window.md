@@ -23,7 +23,7 @@ function fn(arr):
 - Both pointers only move forward, never reset.
 - Each element is processed a constant number of time.
 - Right pointer expands the window (add elements)
-- Left pointer shrinks the window when sum >= k (remove elements)
+- Left pointer shrinks(收缩) the window when sum >= k (remove elements)
 ```python
 def countSubarrays(nums, k):
     left = 0
@@ -49,7 +49,8 @@ def countSubarrays(nums, k):
 # the code has logic error,just for reference.
 for left in range(len(nums)):
     while right < len(nums) + 1:
-        if product < k:
+	    arr_sum = sum(nums[left: right])
+        if arr_sum < k:
             ans += 1
         right += 1
     right = left + 1
