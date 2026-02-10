@@ -22,9 +22,20 @@ function fn(arr):
 ## A true sliding window needs to include:
 - Both pointers only move forward, never reset.
 - Each element is processed a constant number of time.
-
+```python
+left = 0
+product = 1
+ans = 0
+for right in range(len(nums)):
+    product *= nums[right]
+    while product >= k:
+        product //= nums[left]  # Remove left element
+        left += 1               # Shrink window
+    ans += (right - left + 1)   # Count all subarrays ending at right
+```
 #### Check below script, which has O(n^2), because:
-- the right is reset for each left. 
+- the right is reset for each left, which is loop back to left + 1. (the above example, the right visits each element exactly once in the for loop, and left visits each element at most once in the while loop)
+- re-checking many elements multi-times.
 ```python
 # the code has logic error,just for reference.
 for left in range(len(nums)):
