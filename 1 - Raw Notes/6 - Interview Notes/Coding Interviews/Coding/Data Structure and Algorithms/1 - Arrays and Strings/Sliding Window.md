@@ -23,7 +23,18 @@ function fn(arr):
 - Both pointers only move forward, never reset.
 - Each element is processed a constant number of time.
 
-#### Check below script, which
+#### Check below script, which has O(n^2), because:
+- the right is reset for each left. 
+```python
+# the code has logic error,just for reference.
+for left in range(len(nums)):
+    while right < len(nums) + 1:
+        product *= nums[right]
+        if product < k:
+            ans += 1
+        right += 1
+    right = left + 1
+```
 
 # Note
 
