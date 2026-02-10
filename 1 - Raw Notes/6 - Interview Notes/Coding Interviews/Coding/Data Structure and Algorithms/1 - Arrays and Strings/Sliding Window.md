@@ -3,7 +3,7 @@ Course:
 Tags: 
 
 # Content
-
+## Why the sliding window is O(n)
 Below of the time complexity is O(n), because the left does not reset for each right, it only moves forward overall. (**[**amortized analysis**](https://en.wikipedia.org/wiki/Amortized_analysis)**)
 ```python
 # Time Complexity: O(n)
@@ -19,7 +19,11 @@ function fn(arr):
         Do some logic to update the answer
 ```
 ![](assets/Sliding%20Window/file-20260209005455197.png)
+## A true sliding window needs to include:
+- Both pointers only move forward, never reset.
+- Each element is processed a constant number of time.
 
+#### Check below script, which
 
 # Note
 
