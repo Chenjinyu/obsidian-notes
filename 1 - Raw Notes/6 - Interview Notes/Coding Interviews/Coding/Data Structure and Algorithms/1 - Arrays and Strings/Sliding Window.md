@@ -29,10 +29,13 @@ def countSubarrays(nums, k):
     left = 0
     current_sum = 0
     count = 0
+    # do you see the right and left alwasy move to right.
     for right in range(len(nums)):
         # Expand window: add right element
         current_sum += nums[right]
         # Shrink window: remove left elements while sum >= k
+        # the point of the left needs to move one more step to right.
+        # find out the point and then correct the current result before moving forward to right.
         while current_sum >= k and left <= right:
             current_sum -= nums[left]
             left += 1
@@ -54,6 +57,50 @@ for left in range(len(nums)):
             ans += 1
         right += 1
     right = left + 1
+```
+
+## Leetcode example
+reference link: https://leetcode.com/problems/subarray-product-less-than-k/
+```text
+Given an array of integers `nums` and an integer `k`, return _the number of contiguous subarrays where the product of all the elements in the subarray is strictly less than_ `k`.
+
+**Example 1:**
+
+**Input:** nums = [10,5,2,6], k = 100
+**Output:** 8
+**Explanation:** The 8 subarrays that have product less than 100 are:
+[10], [5], [2], [6], [10, 5], [5, 2], [2, 6], [5, 2, 6]
+Note that [10, 5, 2] is not included as the product of 100 is not strictly less than k.
+
+**Example 2:**
+
+**Input:** nums = [1,2,3], k = 0
+**Output:** 0
+
+**Constraints:**
+
+- `1 <= nums.length <= 3 * 104`
+- `1 <= nums[i] <= 1000`
+- `0 <= k <= 106`
+```
+
+solution:
+```python
+class Solution:
+    def numSubarrayProductLessThanK(self, nums: List[int], k: int) -> int:
+        """ Since the length of subarray is the mount of combination subarraies which product less than K  """
+        if len(nums) == 0: return 0
+        if k <= 1: return 0
+        left = ans = 0
+        product = 1
+        for right in range(len(nums)):
+            product *= nums[right]
+            while product >= k:
+                product //= nums[left]
+                left += 1
+            ans += right - left + 1
+
+        return ans
 ```
 
 # Note
