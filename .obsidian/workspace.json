@@ -11,10 +11,24 @@
             "id": "7c3c2498a17b3570",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sliding Window.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Sliding Window"
             }
           }
         ]
@@ -192,8 +206,8 @@
   },
   "active": "7c3c2498a17b3570",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sliding Window.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/JC - Search/two functions comparsion.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sliding Window.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/JC - Search",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/JC - Serach",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets/Sliding Window/file-20260209005455197.png",
