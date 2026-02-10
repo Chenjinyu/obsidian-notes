@@ -103,6 +103,26 @@ class Solution:
         return ans
 ```
 
+Best practice here is provide the test cases including edge cases:
+```python
+#below is an example of count sub-array less than k
+# Test cases (if required)
+def test():
+    # Basic
+    assert countSubarrays([1, 2, 3], 7) == 6, "Basic case failed"
+    
+    # Edge cases
+    assert countSubarrays([], 5) == 0, "Empty array failed"
+    assert countSubarrays([1], 5) == 1, "Single element failed"
+    assert countSubarrays([10], 5) == 0, "Single large element failed"
+    
+    # All valid/invalid
+    assert countSubarrays([1, 1, 1], 10) == 6, "All valid failed"
+    assert countSubarrays([10, 20], 5) == 0, "All invalid failed"
+    
+    print("All tests passed!")
+```
+
 # Note
 
 
