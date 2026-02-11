@@ -123,6 +123,8 @@ def test():
     print("All tests passed!")
 ```
 
+### Maximum Average Subarray I - Easy
+
 # Note
 
 
