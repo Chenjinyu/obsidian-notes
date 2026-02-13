@@ -99,7 +99,6 @@ class Solution:
                 product //= nums[left]
                 left += 1
             ans += right - left + 1
-
         return ans
 ```
 
@@ -110,7 +109,6 @@ Best practice here is provide the test cases including edge cases:
 def test():
     # Basic
     assert countSubarrays([1, 2, 3], 7) == 6, "Basic case failed"
-    
     # Edge cases
     assert countSubarrays([], 5) == 0, "Empty array failed"
     assert countSubarrays([1], 5) == 1, "Single element failed"
