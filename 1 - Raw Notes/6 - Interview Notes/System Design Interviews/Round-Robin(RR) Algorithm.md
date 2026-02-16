@@ -1,1 +1,0 @@
-The Round Robin alogrithm is a simple, dlfair scheduling method in operation systems and networking that gives wach process or request a small, equal time alice(Quantum) in a circular order, though a short quantum cannincrease overhead from frequent context switching.
