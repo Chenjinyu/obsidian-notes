@@ -30,21 +30,8 @@
               "icon": "lucide-file",
               "title": "Sliding Window"
             }
-          },
-          {
-            "id": "4d3760f5f37ddc6e",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.11.7"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.11.7"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -217,10 +204,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "4d3760f5f37ddc6e",
+  "active": "7c3c2498a17b3570",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/JC - Search/two functions comparsion.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Strings.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sliding Window.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/JC - Search/two functions comparsion.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/JC - Search",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/JC - Serach",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets/Sliding Window/file-20260209005455197.png",
@@ -243,7 +231,6 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas - Orchestration vs Choreography/file-20260208221323831.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas - Choreography vs Orchestration",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability.md",
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Strings.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Consistent Hashing.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/CAP Theorem.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets/Strings/file-20260205232630672.png",
