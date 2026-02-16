@@ -5,9 +5,6 @@ Tags: [[Load Balancing]] [[System Design]] [[Algorithms]]
 # Content
 
 Load balancers track **“active connections”** by **owning the connection state**. Once you see that, everything clicks.
-Below is the clean mental model, then the technical details.
-
----
 ## One-sentence summary
 > Load balancers track active connections by sitting in the traffic path, maintaining a connection table, and incrementing or decrementing counts as connections open and close.
 
@@ -91,13 +88,31 @@ If responses bypass the LB:
 - Tracking becomes approximate or impossible
 
 ---
-## Sticky sessions interaction
+## Sticky sessions interaction (if the session timeout, the second session establish will sticky with new session)
 If **session affinity** is enabled:
 - New connections from the same client are forced to the same server
 - Least Connections is partially overridden
 Trade-off:
 - Better session consistency
 - Worse load distribution
+
+#### **Sticky sessions are tied to a _session identifier_, not to the user.**
+Typically:
+1. Client establishes a session (login or first request)
+2. Load balancer:
+    - routes the request to a backend
+    - **records a mapping**
+        `session_id → backend_server`
+3. Backend returns a response with:
+    - a **session cookie** (or affinity cookie)
+4. As long as:
+    - the session cookie is sent
+    - the session has **not expired**
+    - the backend is **still available**
+    - traffic goes through the **same load balancer scope**
+        
+
+👉 **All requests for that session go to the same server**
 
 ---
 ## Why this matters (engineering reality)

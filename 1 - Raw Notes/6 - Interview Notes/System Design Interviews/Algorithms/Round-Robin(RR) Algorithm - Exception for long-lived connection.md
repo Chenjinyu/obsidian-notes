@@ -80,11 +80,6 @@ These **avoid sending new traffic to already busy servers**.
 > **Round Robin is blind.**  
 > It hands out tickets in order and never looks back.
 
-If you want, I can explain:
-- Why **DNS Round Robin** is even worse for this
-- How load balancers track “active connections”
-- How sticky sessions interact with this behavior
-
 # Note
 
 
