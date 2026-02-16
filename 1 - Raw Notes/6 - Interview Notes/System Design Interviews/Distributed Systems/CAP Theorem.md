@@ -45,7 +45,7 @@ In a strongly consistent database, if data is written and then immediately read 
 
 I’ve heard the CAP Theorem defined differently as “Choose 2 of the 3, Consistency, Availability or Partition Tolerance”?
 
-This definition is incorrect. You can only choose a database to prioritize consistency or availability in the case of a network partition. You can’t choose to forfeit the “P” in CAP, because network partitions happen all the time in the real world. A database that is not partition tolerant would mean that it’s unresponsive during network failures, and could not be available either.
+This definition is incorrect. You can only choose a database to prioritize consistency or availability in the case of a network partition. You can’t choose to forfeit(丧失) the “P” in CAP, because network partitions happen all the time in the real world. A database that is not partition tolerant would mean that it’s unresponsive during network failures, and could not be available either.
 
 ## Short Exercises[](https://www.tryexponent.com/courses/system-design-interviews/cap-theorem#short-exercises)
 **Question 1**: You’re building a product listing app, similar to Amazon’s, where shoppers can browse a catalog of products and purchase them if they’re in-stock. You want to make sure that products are actually in-stock, or then you’ll have to refund shoppers for unavailable items and they get really angry. Should the distributed database you choose to store product information prioritize consistency or availability?
