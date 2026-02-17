@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Consistent Hashing.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/1 - Consistent Hashing.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Consistent Hashing"
+              "title": "1 - Consistent Hashing"
             }
           },
           {
@@ -157,7 +157,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/3 - Replication.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/1 - Consistent Hashing.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -172,7 +172,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "3 - Replication"
+              "title": "1 - Consistent Hashing"
             }
           }
         ],
@@ -351,8 +351,16 @@
   },
   "active": "91278594a1fe4f0a",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/2 - Database Sharding.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/1 - Consistent Hashing/file-20260216200918985.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/1 - Consistent Hashing/file-20260216200720997.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/1 - Consistent Hashing/file-20260216200532601.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/1 - Consistent Hashing/file-20260216200523298.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/1 - Consistent Hashing/file-20260216200500472.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/1 - Consistent Hashing/file-20260216200450896.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/1 - Consistent Hashing",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/3 - Replication.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/2 - Database Sharding.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/2 - Database Sharding - Partitioning VS Sharding.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/CAP Theorem.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/1 - SQL vs NoSQL.md",
@@ -362,7 +370,7 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Algorithms/Round-Robin(RR) Algorithm.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/3 - Load Balancing.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Rate Limiting.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Consistent Hashing.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/1 - Consistent Hashing.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Algorithms",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sliding Window.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Strings.md",
@@ -383,20 +391,12 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas - Orchestration vs Choreography/file-20260208222547987.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas - Orchestration vs Choreography",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas - Orchestration vs Choreography/file-20260208221740490.png",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas - Orchestration vs Choreography/file-20260208221642880.png",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas - Orchestration vs Choreography/file-20260208221323831.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas - Choreography vs Orchestration",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability.md",
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets/Strings/file-20260205232630672.png",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets/Strings",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/secure communication.md",
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/Content Delivery Network (CDN).md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/AWS/SQS + Lambda (Visibility + ConcurrentExecution).md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/AWS",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/2 - Availability - Rate Limiting/file-20260203204855632.png",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/2 - Availability - Rate Limiting/file-20260203204644825.png",
     "Untitled 5.canvas",
     "Untitled 4.canvas",
     "Untitled 3.canvas",

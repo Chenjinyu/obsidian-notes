@@ -1,15 +1,22 @@
 Date: 2026-02-02
 Course:
-Tags: [[API]]  [[interview]] [[System Design]] [[High Level ]] [[Low Level]] [[Consistent Hashing]]
-
-# Content
+Tags: [[API]]  [[interview]] [[System Design]] [[High Level]] [[Low Level]] [[1 - Consistent Hashing]]
 
 # Consistent Hashing: Complete System Design Interview Guide
 
-Let me break this down from fundamentals to advanced concepts—exactly how you'd explain it in an interview.
+Consistent hashing is a methodology for storing data (key and objects) across different servers. It's advantageous over traditional hashing methods because it efficiently adapts to the adding or removal of servers to the system architecture.
 
----
 
+##### Virtual Nodes resolve uneven distribution
+![](assets/1%20-%20Consistent%20Hashing/file-20260216200918985.png)
+
+Let's take a look at what might happen when server 1 fails. Note that none of the keys have to be rehashed. Instead, all the servers mapped on the circle associated with server 1 are removed. In this case, the key may be reassigned to a different server (since the closest one in the clockwise direction may no longer be server 1).
+
+**The advantages of this method include:**
+- Not all keys have to be reassigned to different servers.
+- The hash value of the keys do not need to be recomputed.
+![](assets/1%20-%20Consistent%20Hashing/file-20260216200720997.png)
+Therefore, we can see the advantages that consistent hashing offers over traditional hashing methods! Just as an aside, in real life, caching systems like **Memcached** and **Redis**, support out-of-the-box solutions for consistent hashing.
 ## 1. The Problem: Why Traditional Hashing Fails in Distributed Systems
 
 ### Traditional Hash Table Approach
@@ -335,7 +342,6 @@ Time to recover = minutes
 ---
 
 ## 5. Real-World Use Cases
-
 ### 1. Amazon DynamoDB
 ```
 Partition key: "user_123"
