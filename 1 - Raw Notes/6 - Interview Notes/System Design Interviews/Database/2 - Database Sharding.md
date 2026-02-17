@@ -4,10 +4,11 @@ Tags:
 
 # Content
 
-## Physical Sharding vs Logical Sharding
+## Physical Sharding vs Logical Sharding (Most production sharding are physical)
 - Data is split across **different physical servers/machines**. Each shard runs on separate hardware with its own CPU, memory, and storage. This is the most common approach for true scalability since it distributes both the data and the processing load.
-- Logical Sharding like: 
-
+	- eg: Example: User IDs 1-1M on Server A, 1M-2M on Server B, 2M-3M on Server C.
+- Data is split into **separate databases on the same physical server**, or uses logical partitions within the same database instance. This provides organizational benefits and some query performance improvements, but doesn't solve resource contention issues.
+	- Logical Sharding like: multiple schemas or database on one PostgreSQL server, each holding differenet shard.
 
 ```txt
 Traditionally, data has been stored in an RDBMS (Relational Database Management System), where data is stored in tables as rows and columns. 
@@ -47,7 +48,7 @@ Range-based sharding divides the data based on the ranges of the key value. For 
 ## Hash-based[](https://www.tryexponent.com/courses/system-design-interviews/database-sharding#hash-based)
 This uses a hashing algorithm to generate a hash based on the key value, and then uses the hash value to compute the partition. A good hash algorithm will distribute data evenly across partitions, thus reducing the risk of hotspots. However, it is likely to assign related rows to different partitions, so the server can’t enhance performance by trying to predict and pre-load future queries.
 ## Manual vs. automatic[](https://www.tryexponent.com/courses/system-design-interviews/database-sharding#manual-vs-automatic)
-Some database systems support automatic sharding, where the system will manage the data partitioning. Automatic sharding will dynamically re-partition the data when it detects an uneven distribution of the data (or queries) among the shards, leading to higher performance and better scalability.
+Some database systems support automatic sharding, where the system will manage the data partitioning. Automatic sharding will dynamically re-partition the data when it detects an **uneven** distribution of the data (or queries) among the shards, leading to higher performance and better scalability.
 
 Unfortunately, many monolithic databases do not support automatic sharding. If you need to continue using these databases, but have increasing data demands, then the sharding needs to be done at the application layer. However, this has some significant downsides.
 1. One downside is a significant increase in development complexity. The application needs to choose the appropriate sharding technique, and decide the number of shards based on the projected data trends. If those underlying assumptions change, the application has to figure out how to re-balance the data partitions. At runtime, the application has to figure out which shard the data resides in, and how to access that shard.

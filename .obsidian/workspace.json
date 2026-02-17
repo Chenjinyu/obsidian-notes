@@ -157,7 +157,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/2 - Database Sharding.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/3 - Replication.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -172,7 +172,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2 - Database Sharding"
+              "title": "3 - Replication"
             }
           }
         ],
@@ -351,9 +351,9 @@
   },
   "active": "91278594a1fe4f0a",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/2 - Database Sharding.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/3 - Replication.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/2 - Database Sharding - Partitioning VS Sharding.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/2 - Database Sharding.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/CAP Theorem.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/1 - SQL vs NoSQL.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Algorithms/Round-Robin(RR) Algorithm - Exception for long-lived connection.md",
