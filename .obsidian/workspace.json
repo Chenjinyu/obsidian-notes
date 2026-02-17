@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - AuthZ (ACs).md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,55 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "6 - Authentication & Authorization"
+              "title": "6 - Authentication & Authorization - AuthZ (ACs)"
+            }
+          },
+          {
+            "id": "c94039d2e3334f18",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/3 - Technologies/Agent-to-app Authorization.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Agent-to-app Authorization"
+            }
+          },
+          {
+            "id": "269e518d4910e78e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/3 - Technologies/Identity & Least Privilege.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Identity & Least Privilege"
             }
           }
         ]
@@ -206,8 +254,13 @@
   },
   "active": "560b9f98c5740ea9",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/5 - Encryption.md",
+    "1 - Raw Notes/3 - Technologies/Agent-to-app Authorization.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - AuthZ (ACs).md",
+    "1 - Raw Notes/3 - Technologies/Identity & Least Privilege.md",
+    "1 - Raw Notes/3 - Technologies/JWT vs SharedStorage Session Store.md",
+    "1 - Raw Notes/3 - Technologies/AuthN&Z.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/5 - Encryption.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/5 - Encryption/file-20260216232832722.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/5 - Encryption/file-20260216232820416.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/5 - Encryption/file-20260216232743654.png",
@@ -246,10 +299,6 @@
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/JC - Search",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/JC - Serach",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets/Sliding Window",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Gateway Aggregation.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Rate Limiting - Redis - Atomic action.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas - Orchestration vs Choreography",
     "Untitled 5.canvas",
     "Untitled 4.canvas",
