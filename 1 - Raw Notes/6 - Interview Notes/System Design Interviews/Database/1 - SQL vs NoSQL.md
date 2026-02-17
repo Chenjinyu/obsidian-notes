@@ -1,6 +1,6 @@
 Date: 2026-02-05
 Course:
-Tags: [[System Design]] [[Database]] [[SQL]] [[NONSQL]]
+Tags: [[../../../7 - JCUS.LINK/System Design]] [[Database]] [[SQL]] [[NONSQL]]
 
 # Content
 In system design interviews, you will often have to choose what database to use, and these databases are split into SQL and NoSQL types. SQL and NoSQL databases each have their own strengths (+) and weaknesses (-), and should be chosen appropriately based on the use case.

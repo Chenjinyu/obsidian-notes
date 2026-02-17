@@ -157,7 +157,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/CAP Theorem.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/2 - Database Sharding.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -172,7 +172,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "CAP Theorem"
+              "title": "2 - Database Sharding"
             }
           }
         ],
@@ -351,12 +351,15 @@
   },
   "active": "91278594a1fe4f0a",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/SQL vs NoSQL.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/3 - Replication.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/2 - Database Sharding - Partitioning VS Sharding.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/2 - Database Sharding.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/CAP Theorem.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/1 - SQL vs NoSQL.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Algorithms/Round-Robin(RR) Algorithm - Exception for long-lived connection.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Algorithms/Load Balancing - Track \"Active Connections\".md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Algorithms/Load Balancing Algorithm - Least Connection.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Algorithms/Round-Robin(RR) Algorithm.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/CAP Theorem.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/3 - Load Balancing.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Rate Limiting.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Consistent Hashing.md",
@@ -391,9 +394,6 @@
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/Content Delivery Network (CDN).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/AWS/SQS + Lambda (Visibility + ConcurrentExecution).md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/Replication.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/Database Sharding.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Queue-Based Load Leveling.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/AWS",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/2 - Availability - Rate Limiting/file-20260203204855632.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/2 - Availability - Rate Limiting/file-20260203204644825.png",

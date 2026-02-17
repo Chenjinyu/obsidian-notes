@@ -4,6 +4,11 @@ Tags:
 
 # Content
 
+## Physical Sharding vs Logical Sharding
+- Data is split across **different physical servers/machines**. Each shard runs on separate hardware with its own CPU, memory, and storage. This is the most common approach for true scalability since it distributes both the data and the processing load.
+- Logical Sharding like: 
+
+
 ```txt
 Traditionally, data has been stored in an RDBMS (Relational Database Management System), where data is stored in tables as rows and columns. 
 For data with 1-to-N or N-to-N relationships, a process of _normalization_ would instead store the data in separate tables joined together by _Foreign Keys_, 
