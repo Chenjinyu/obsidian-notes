@@ -1,6 +1,6 @@
 Date: 2026-02-02
 Course:
-Tags: [[API]]  [[interview]] [[System Design]] [[High Level]] [[Low Level]] [[1 - Consistent Hashing]]
+Tags: [[API]]  [[interview]] [[System Design]] [[High Level]] [[Low Level]] [[1 - Consistent Hashing]] [[Distributed System]]
 
 # Consistent Hashing: Complete System Design Interview Guide
 

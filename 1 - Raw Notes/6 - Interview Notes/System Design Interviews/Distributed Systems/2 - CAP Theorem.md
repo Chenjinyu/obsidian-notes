@@ -1,6 +1,6 @@
 Date: 2026-02-05
 Course:
-Tags: [[../../../7 - JCUS.LINK/System Design]] [[]]
+Tags: [[System Design]] [[Consistent Hashing]] [[Distributed System]]
 
 # Content
 
