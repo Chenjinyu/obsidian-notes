@@ -157,7 +157,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/3 - Asynchronous Processing.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Untitled.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -172,7 +172,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "3 - Asynchronous Processing"
+              "title": "Untitled"
             }
           }
         ],
@@ -351,12 +351,13 @@
   },
   "active": "91278594a1fe4f0a",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/3 - Asynchronous Processing.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/Untitled.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/3 - Asynchronous Processing/file-20260216222449604.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/3 - Asynchronous Processing/file-20260216222435683.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/3 - Asynchronous Processing/file-20260216222407312.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/3 - Asynchronous Processing",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/2 - CAP Theorem.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/3 - Asynchronous Processing.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/1 - Consistent Hashing.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/1 - Consistent Hashing/file-20260216200918985.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/1 - Consistent Hashing/file-20260216200720997.png",
@@ -391,7 +392,6 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Exponential Backoff Strategy (Transient Failures).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Sagas - Orchestration vs Choreography.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Sagas.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas - Orchestration vs Choreography/file-20260208223310272.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas - Orchestration vs Choreography",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas - Choreography vs Orchestration",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability.md",
