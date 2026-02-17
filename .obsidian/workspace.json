@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/5 - Encryption.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "5 - Encryption"
+              "title": "6 - Authentication & Authorization"
             }
           }
         ]
@@ -206,6 +206,12 @@
   },
   "active": "560b9f98c5740ea9",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/5 - Encryption.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/5 - Encryption/file-20260216232832722.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/5 - Encryption/file-20260216232820416.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/5 - Encryption/file-20260216232743654.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/5 - Encryption",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Rate Limiting.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/3 - Load Balancing.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/1 - Consistent Hashing.md",
@@ -214,8 +220,6 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Algorithms/Load Balancing Algorithm - Least Connection.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/8 - CDNs.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/7 - Cloud Architecture.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/5 - Encryption.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/4 - Caching.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/4 - Caching/file-20260216230944969.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/4 - Caching/file-20260216230928908.png",
@@ -227,9 +231,6 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/3 - Asynchronous Processing/file-20260216222407312.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/3 - Asynchronous Processing",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/1 - Consistent Hashing/file-20260216200918985.png",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/1 - Consistent Hashing/file-20260216200720997.png",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/1 - Consistent Hashing/file-20260216200532601.png",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/1 - Consistent Hashing/file-20260216200523298.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/1 - Consistent Hashing",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/3 - Replication.md",
@@ -249,9 +250,7 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Rate Limiting - Redis - Atomic action.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Exponential Backoff Strategy (Transient Failures).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas - Orchestration vs Choreography",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas - Choreography vs Orchestration",
     "Untitled 5.canvas",
     "Untitled 4.canvas",
     "Untitled 3.canvas",
