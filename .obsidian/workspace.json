@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - AuthZ (ACs).md",
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "6 - Authentication & Authorization - AuthZ (ACs)"
+              "title": "6 - Authentication & Authorization"
             }
           },
           {
@@ -254,8 +254,8 @@
   },
   "active": "560b9f98c5740ea9",
   "lastOpenFiles": [
-    "1 - Raw Notes/3 - Technologies/Agent-to-app Authorization.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - AuthZ (ACs).md",
+    "1 - Raw Notes/3 - Technologies/Agent-to-app Authorization.md",
     "1 - Raw Notes/3 - Technologies/Identity & Least Privilege.md",
     "1 - Raw Notes/3 - Technologies/JWT vs SharedStorage Session Store.md",
     "1 - Raw Notes/3 - Technologies/AuthN&Z.md",
