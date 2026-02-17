@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Deep Dive - Full Python Implementation/6 - Authentication & Authorization - Deep Dive - Full Python Implementation.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization -  Deep Dive.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,31 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "6 - Authentication & Authorization - Deep Dive - Full Python Implementation"
+              "title": "6 - Authentication & Authorization -  Deep Dive"
+            }
+          },
+          {
+            "id": "c31a09c83414349e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/1 - Keycloak Guide.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "1 - Keycloak Guide"
             }
           },
           {
@@ -79,7 +103,8 @@
               "title": "Identity & Least Privilege"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -252,12 +277,29 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "1a71e9f0de9191ea",
+  "active": "c31a09c83414349e",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Deep Dive - Full Python Implementation",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/assets/1 - Keycloak Guide/file-20260217013134496.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/assets/1 - Keycloak Guide/file-20260217013119444.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/assets/1 - Keycloak Guide/file-20260217013108284.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/assets/1 - Keycloak Guide/file-20260217013057496.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/assets/1 - Keycloak Guide/file-20260217013044189.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/assets/1 - Keycloak Guide/file-20260217013027995.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/assets/1 - Keycloak Guide/file-20260217013013420.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/assets/1 - Keycloak Guide/file-20260217013000538.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/assets/1 - Keycloak Guide/file-20260217012941486.png",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/assets/1 - Keycloak Guide",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/assets",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Build Self Auth Server/2 - Resource Server.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/1 - Keycloak Guide.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization -  Deep Dive.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Build Self Auth Server/1 - Auth Server.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Build Self Auth Server/4 - Steps to create machine-to-machine Scopes.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Build Self Auth Server/ReadMe.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Build Self Auth Server/3 - Demo Client.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Build Self Auth Server",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Deep Dive - Full Python Implementation/6 - Authentication & Authorization - Deep Dive - Full Python Implementation.md",
     "1 - Raw Notes/3 - Technologies/Agent-to-app Authorization.md",
     "1 - Raw Notes/3 - Technologies/Identity & Least Privilege.md",
     "1 - Raw Notes/3 - Technologies/JWT vs SharedStorage Session Store.md",
@@ -265,7 +307,6 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/5 - Encryption.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/5 - Encryption/file-20260216232832722.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/5 - Encryption/file-20260216232820416.png",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/5 - Encryption/file-20260216232743654.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/5 - Encryption",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Rate Limiting.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/3 - Load Balancing.md",
@@ -276,30 +317,14 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/8 - CDNs.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/7 - Cloud Architecture.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/4 - Caching.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/4 - Caching/file-20260216230944969.png",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/4 - Caching/file-20260216230928908.png",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/4 - Caching/file-20260216230911570.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/4 - Caching",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/3 - Asynchronous Processing.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/3 - Asynchronous Processing/file-20260216222449604.png",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/3 - Asynchronous Processing/file-20260216222435683.png",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/3 - Asynchronous Processing/file-20260216222407312.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/3 - Asynchronous Processing",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/1 - Consistent Hashing/file-20260216200918985.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/1 - Consistent Hashing",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/3 - Replication.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/2 - Database Sharding.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/2 - Database Sharding - Partitioning VS Sharding.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Database/1 - SQL vs NoSQL.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Algorithms/Round-Robin(RR) Algorithm - Exception for long-lived connection.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Algorithms/Round-Robin(RR) Algorithm.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Algorithms",
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sliding Window.md",
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/JC - Search",
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/JC - Serach",
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets/Sliding Window",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/assets/1 - Reliability - Sagas - Orchestration vs Choreography",
     "Untitled 5.canvas",
     "Untitled 4.canvas",
     "Untitled 3.canvas",
