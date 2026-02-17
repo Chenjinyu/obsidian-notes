@@ -81,12 +81,12 @@ Four roles are defined:
 - **Resource Server:** Houses the application and/or data owned by the user. Will allow access to a client if the client has a valid **access token**. Gmail in the above example.
 - **Authorization Server**: A 3rd party that verifies the identity of the user and the client, and issues access tokens.
 
+#### 5 Difference Grant Types
 There are 5 different **grant types** that OAuth 2 uses. Think of each grant type as a way for an application to get an access token. These are:
-
-- **Authorization code grant**. The most common grant type; the client exchanges an authorization code in exchange for an access token.
-- **Resource owner credentials grant** Allows a client to sign in directly using the resource owner's password.
-- **Client credentials grant**. Mainly used for server-to-server interactions; no resource-owner interaction required.
-- **Implicit grant**. This grant type was previously recommended for single page applications which couldn't keep a client secret. This has been superseded PKCE used with a standard authorization code grant.
+- **Authorization code grant** (`"grant_type": "authorization_code"`) : The most common grant type, standard web app flow. User logs in via browser, gets redirected back with a code, app exchanges code for token.
+- **Resource owner credentials grant**(`"grant_type": "password"`) Allows a client to sign in directly using the resource owner's password.
+- **Client credentials grant**(`"grant_type": "client_credentails"`). Mainly used for server-to-server interactions; no resource-owner interaction required.
+- **Implicit grant**(`"grant_type": "implicit"`). This grant type was previously recommended for single page applications which couldn't keep a client secret. This has been superseded PKCE used with a standard authorization code grant.
 
 ## When to bring these up in an interview[](https://www.tryexponent.com/courses/system-design-interviews/authentication-authorization#when-to-bring-these-up-in-an-interview)
 
