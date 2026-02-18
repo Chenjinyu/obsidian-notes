@@ -1,6 +1,6 @@
 Date: 2026-02-16
 Course:
-Tags: [[System Design]] [[Asynchronous]] [[Distributed System]]
+Tags: [[System Design Interview]][[Asynchronous]] [[Distributed System]]
  
 # Content
 

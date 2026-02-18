@@ -1,6 +1,6 @@
 Date: 2026-02-16
 Course:
-Tags: [[Round Robin]] [[System Design]] [[Scalabe Systems]] [[Load Balancing]]
+Tags: [[Round Robin]] [[System Design Interview]][[Scalabe Systems]] [[Load Balancing]]
 
 # Content
 

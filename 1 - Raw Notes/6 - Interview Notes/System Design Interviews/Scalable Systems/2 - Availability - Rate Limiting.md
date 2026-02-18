@@ -1,6 +1,6 @@
 Date: 2026-02-03
 Course:
-Tags: [[API]]  [[interview]] [[System Design]] [[High Level ]]
+Tags: [[API]]  [[System Design Interview]] [[High Level ]]
 
 # Content
 

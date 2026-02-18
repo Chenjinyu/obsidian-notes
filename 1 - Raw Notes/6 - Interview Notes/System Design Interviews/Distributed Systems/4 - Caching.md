@@ -1,6 +1,6 @@
 Date: 2026-02-16
 Course: https://www.tryexponent.com/courses/system-design-interviews/system-design-caching
-Tags: [[System Design]] [[Distributed System]] [[Caching]]
+Tags: [[System Design Interview]] [[Distributed System]] [[Caching]]
 
 # Content
 

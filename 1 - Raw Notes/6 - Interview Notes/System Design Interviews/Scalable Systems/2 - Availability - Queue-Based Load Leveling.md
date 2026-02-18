@@ -1,6 +1,6 @@
 Date: 2026-02-04
 Course:
-Tags:  [[interview]] [[System Design]] [[High Level ]] [[Low Level]]
+Tags: [[System Design Interview]] [[High Level ]] [[Low Level]]
 
 # Content
 # Queue-Based Load Leveling for Availability: Complete Guide

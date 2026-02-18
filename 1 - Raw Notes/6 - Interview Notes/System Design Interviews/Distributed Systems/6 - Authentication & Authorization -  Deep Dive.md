@@ -1,6 +1,6 @@
 Date: 2026-02-16
 Course: https://www.tryexponent.com/courses/system-design-interviews/authentication-authorization
-Tags: [[../../../7 - JCUS.LINK/System Design]] [[Distributed System]] [[6 - Authentication & Authorization]] [[../../../3 - Technologies/AuthN&Z|AuthN&Z]]
+Tags: [[System Design Interview]] [[Distributed System]] [[6 - Authentication & Authorization]] [[../../../3 - Technologies/AuthN&Z|AuthN&Z]]
 
 # Content
 

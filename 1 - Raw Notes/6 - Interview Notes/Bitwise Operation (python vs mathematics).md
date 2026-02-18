@@ -1,6 +1,6 @@
 Date: 2026-01-26
 Course:
-Tags: [Interview]
+Tags: [Interview] 
 
 # Content
 In python: 

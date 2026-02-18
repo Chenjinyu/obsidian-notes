@@ -1,6 +1,6 @@
 Date: 2026-02-16
 Course:
-Tags: [[Round Robin]] [[Round-Robin(RR) Algorithm]][[System Design]] [[Algorithms]]
+Tags: [[Round Robin]] [[Round-Robin(RR) Algorithm]][[System Design]] [[Algorithms]] [[System Design Interview]]
 
 # Content
 

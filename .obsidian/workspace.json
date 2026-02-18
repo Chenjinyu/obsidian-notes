@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization -  Deep Dive.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/7 - Cloud Architecture.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,83 +52,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "6 - Authentication & Authorization -  Deep Dive"
-            }
-          },
-          {
-            "id": "b18b0a6bda200a97",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization -  Deep Dive.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "6 - Authentication & Authorization -  Deep Dive"
-            }
-          },
-          {
-            "id": "c94039d2e3334f18",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/3 - Technologies/Agent-to-app Authorization.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Agent-to-app Authorization"
-            }
-          },
-          {
-            "id": "269e518d4910e78e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/3 - Technologies/Identity & Least Privilege.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Identity & Least Privilege"
+              "title": "7 - Cloud Architecture"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -301,14 +229,34 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "b18b0a6bda200a97",
+  "active": "c31a09c83414349e",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization -  Deep Dive.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/2 - Keycloak Auth.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/4 - Run Demo.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/3 - Token Validator.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/1 - Keycloak Guide - HTML.md",
+    "1 - Raw Notes/3 - Technologies/Identity & Least Privilege.md",
+    "1 - Raw Notes/3 - Technologies/Agent-to-app Authorization.md",
+    "1 - Raw Notes/6 - Interview Notes/Bitwise Operation (python vs mathematics).md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Terminology/Distributed monitory systems.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/Content Delivery Network (CDN).md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/AWS/SQS + Lambda (Visibility + ConcurrentExecution).md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Services/AWS/Life cycle of SQS vs SNS vs Kafka.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/3 - Load Balancing.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Rate Limiting - Redis - Atomic action.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Rate Limiting.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Queue-Based Load Leveling.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Gateway Aggregation.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Sagas - Orchestration vs Choreography.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Sagas.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Exponential Backoff Strategy (Transient Failures).md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/8 - CDNs.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/7 - Cloud Architecture.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Q & A(Important).md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/5 - Encryption.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/4 - Caching.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/3 - Asynchronous Processing.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/assets/1 - Keycloak Guide - HTML",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/assets/1 - Keycloak Guide - HTML/file-20260217013419709.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/assets/1 - Keycloak Guide - HTML/file-20260217013406221.png",
@@ -322,30 +270,10 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/assets/1 - Keycloak Guide - HTML/file-20260217013119444.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/assets/1 - Keycloak Guide",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/assets",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Build Self Auth Server/2 - Resource Server.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Build Self Auth Server/1 - Auth Server.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Build Self Auth Server/4 - Steps to create machine-to-machine Scopes.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Build Self Auth Server/ReadMe.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Build Self Auth Server/3 - Demo Client.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Build Self Auth Server",
-    "1 - Raw Notes/3 - Technologies/Agent-to-app Authorization.md",
-    "1 - Raw Notes/3 - Technologies/Identity & Least Privilege.md",
-    "1 - Raw Notes/3 - Technologies/JWT vs SharedStorage Session Store.md",
-    "1 - Raw Notes/3 - Technologies/AuthN&Z.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/5 - Encryption.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/5 - Encryption",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/2 - Availability - Rate Limiting.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/3 - Load Balancing.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/1 - Consistent Hashing.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/2 - CAP Theorem.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Algorithms/Load Balancing - Track \"Active Connections\".md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Algorithms/Load Balancing Algorithm - Least Connection.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/8 - CDNs.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/7 - Cloud Architecture.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/4 - Caching.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/4 - Caching",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/3 - Asynchronous Processing.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/3 - Asynchronous Processing",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/1 - Consistent Hashing",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets",

@@ -1,6 +1,6 @@
 Date: 2026-02-16
 Course:
-Tags: [[Load Balancing]] [[System Design]] [[Algorithms]]
+Tags: [[Load Balancing]] [[System Design Interview]] [[Algorithms]]
 
 # Content
 **Least Connections** is a **load-balancing algorithm**. Its job is to decide **which server should handle the next incoming request**.

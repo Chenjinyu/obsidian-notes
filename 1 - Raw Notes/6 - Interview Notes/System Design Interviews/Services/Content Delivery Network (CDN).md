@@ -1,6 +1,6 @@
 Date: 2026-01-30
 Course:
-Tags: 
+Tags: [[System Design Interview]]
 
 # Content
 

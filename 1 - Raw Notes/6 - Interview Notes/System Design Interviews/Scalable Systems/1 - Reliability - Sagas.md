@@ -1,6 +1,6 @@
 Date: 2026-01-30
 Course: https://www.youtube.com/watch?v=d2z78guUR4g(Youtube), https://www.tryexponent.com/courses/system-design-interviews/reliability-strategies(Exponent)
-Tags: [[API]]  [[interview]] [[../../../7 - JCUS.LINK/System Design]] [[High Level ]] [[Low Level]]
+Tags: [[API]]  [[System Design Interview]]
 
 # Content
 

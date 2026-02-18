@@ -1,6 +1,6 @@
 Date: 2026-01-29
 Course: https://www.tryexponent.com/courses/system-design-interviews/system-design-apis
-Tags: [[API]] [[interview]]
+Tags: [[API]] [[interview [[System Design Interview]]]]
 
 # Content
 

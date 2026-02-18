@@ -1,6 +1,6 @@
 Date: 2026-02-05
 Course:
-Tags: [[System Design]] [[Consistent Hashing]] [[Distributed System]]
+Tags: [[System Design Interview]] [[Consistent Hashing]] [[Distributed System]]
 
 # Content
 

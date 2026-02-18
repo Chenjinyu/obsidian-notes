@@ -1,6 +1,6 @@
 Date: 2026-02-05
 Course:
-Tags: 
+Tags: [[System Design Interview]]
 
 # Content
 Database replication is basically what you think it is: copying data from one data source to another, thus replicating it in one or more places. There are many reasons for copying data - to protect against data loss during system failures, to serve increased traffic, to improve latency when pursuing a regional strategy, etc. We'll cover some more specific use cases below. There are several strategies you should be aware of.

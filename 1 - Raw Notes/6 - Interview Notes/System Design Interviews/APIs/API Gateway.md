@@ -1,6 +1,6 @@
 Date: 2026-01-29
 Course: https://www.tryexponent.com/courses/system-design-interviews/system-design-apis
-Tags: [[API]] [[interview]]
+Tags: [[API]] [[interview]] [[System Design Interview]]
 
 # Content
 Although APIs offer security to the systems on either end, they are susceptible to overuse or abuse. If you're concerned about this, you may want to implement an _API gateway_ to collect requests and route them accordingly.

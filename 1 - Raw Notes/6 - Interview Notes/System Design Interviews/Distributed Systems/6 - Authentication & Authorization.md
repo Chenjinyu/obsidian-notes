@@ -1,6 +1,6 @@
 Date: 2026-02-16
 Course: https://www.tryexponent.com/courses/system-design-interviews/authentication-authorization
-Tags: [[System Design]] [[Distributed System]] [[6 - Authentication & Authorization]]
+Tags: [[System Design Interview]][[Distributed System]] [[6 - Authentication & Authorization]]
 
 # Content
 
