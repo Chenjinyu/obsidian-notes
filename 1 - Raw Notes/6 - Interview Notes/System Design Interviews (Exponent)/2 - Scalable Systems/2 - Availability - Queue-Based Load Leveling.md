@@ -280,7 +280,7 @@ With Queue (Write-Behind):
                         │Database │ ← Stays healthy
                         └─────────┘
 ```
-click [[../Services/AWS/SQS + Lambda (Visibility + ConcurrentExecution)|SQS + Lambda (Visibility + ConcurrentExecution)]] to understand how does SQS integrate with Lambda
+click [[../../Cloud Services/AWS/SQS + Lambda (Visibility + ConcurrentExecution)|SQS + Lambda (Visibility + ConcurrentExecution)]] to understand how does SQS integrate with Lambda
 
 #### When do not need Redis
 - you are okay with eventual consistency because there is no need to read immediately

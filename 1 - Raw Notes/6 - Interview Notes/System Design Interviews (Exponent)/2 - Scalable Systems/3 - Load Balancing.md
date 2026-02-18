@@ -20,9 +20,9 @@ At a certain point, though, increased traffic will cause any application to exce
 
 A good load balancer will efficiently distribute incoming traffic to maximize the system's capacity utilization and minimize the queueing time. Load balancers can distribute traffic using several different strategies:
 
-- Round robin [[../Algorithms/Round-Robin(RR) Algorithm|Round-Robin(RR) Algorithm]]: Servers are assigned in a repeating sequence, so that the next server assigned is guaranteed to be the least recently used.
-- Least connections [[../Algorithms/Load Balancing Algorithm - Least Connection|Load Balancing Algorithm - Least Connection]]: Assigns the server currently handling the fewest number of requests.
-- Consistent hashing [[../Distributed Systems/1 - Consistent Hashing|Consistent Hashing]]: Similar to database sharding, the server can be assigned consistently based on IP address or URL.
+- Round robin [[../../Algorithms/Round-Robin(RR) Algorithm|Round-Robin(RR) Algorithm]]: Servers are assigned in a repeating sequence, so that the next server assigned is guaranteed to be the least recently used.
+- Least connections [[../../Algorithms/Load Balancing Algorithm - Least Connection|Load Balancing Algorithm - Least Connection]]: Assigns the server currently handling the fewest number of requests.
+- Consistent hashing [[../4 - Distributed Systems/1 - Consistent Hashing|Consistent Hashing]]: Similar to database sharding, the server can be assigned consistently based on IP address or URL.
 
 Since load balancers must handle the traffic for the entire server pool, they need to be efficient and highly available. Depending on the chosen strategy and performance requirements, load balancers can operate at higher or lower network layers (HTTP vs. TCP/IP) or even be implemented in hardware. Engineering teams typically don't implement their own load balancers and instead use an industry-standard **reverse proxy** (like HAProxy or Nginx) to perform load balancing and other functions such as SSL termination and health checks. Most cloud providers also offer out-of-the-box load balancers, such as Amazon's Elastic Load Balancer (ELB).
 

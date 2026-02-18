@@ -30,7 +30,9 @@ Benefits of Using a CDN
 - Global Reach: Content is delivered rapidly regardless of the user's location. 
 
 # Note
-
+- [[../System Design Interviews (Exponent)/4 - Distributed Systems/7 - CDNs|7 - CDNs]]
+- [[../System Design Interviews (Exponent)/4 - Distributed Systems/7 - CDNs - Architecture and Interview Q &A|7 - CDNs - Architecture and Interview Q &A]]
+- 
 
 # Reference
 
