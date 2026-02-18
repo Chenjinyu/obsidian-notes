@@ -10,13 +10,17 @@ The takeaways from the video:
 
 the architecture choose:
 1. CDN before connect to Load balancer
-2. Load balancer connect to chat micro-services with scale policy.
+2. API Gateway / Load balancer connect to chat micro-services with scale policy.
 3. chat micro-services use pub/sub queue to publish event to any other subscriber services. 
-4. Database, choose cassandra, because based on the C
+4. Database, choose cassandra, because based on the CAP theorem, the chat application needs availability more than consistency. so its AP pattern,
 5. Cache layer to reduce latency. 
-6. 
+
+## One-line distinction (memorize this)
+- **API Gateway** = _how requests are routed, shaped, and managed_
+- **WAF** = _which requests are allowed or blocked_
+They are **complementary**, not interchangeable.
 # Note
-
-
+- [[../../1 - APIs/API Gateway|API Gateway]]
+- 
 # Reference
 

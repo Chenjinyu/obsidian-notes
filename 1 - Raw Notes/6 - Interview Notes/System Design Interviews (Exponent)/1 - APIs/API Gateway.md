@@ -9,7 +9,43 @@ An API gateway is a reverse proxy that acts as a single entry point for microser
 ![](assets/API%20Gateway/file-20260129233216883.png)
 All client requests are routed to the gateway, which directs them accordingly—to the API if it is available, or redirected if the request fails to meet security standards.
 
-Generally, use cases for API gateways include _user authentication_, _rate limiting_, and _billing_ if you're monetizing an API.
+## What an API Gateway does
+
+Think of **Amazon API Gateway** as the **front door manager for APIs**.
+### Core responsibilities
+API Gateway focuses on **API management and behavior**:
+1. **Routing**
+    - `/login` → auth service
+    - `/messages` → chat service
+    - `/users/{id}` → user service
+2. **Request/response transformation**
+    - Change headers
+    - Rewrite paths
+    - Map request formats (REST ↔ backend)
+3. **Authentication & authorization**
+    - JWT validation
+    - IAM auth
+    - Cognito integration
+    - API keys
+4. **Rate limiting & quotas**
+    - 100 req/sec per user
+    - Daily usage limits
+    - Burst control
+5. **Protocol handling**
+    - REST
+    - HTTP
+    - WebSocket
+    - gRPC (via HTTP APIs)
+6. **Observability**
+    - Metrics per endpoint
+    - Latency tracking
+    - Error rates
+
+### What API Gateway is _not_
+- Not a security firewall
+- Not good at blocking attacks like SQL injection
+- Not designed for DDoS filtering
+
 # Note
 
 
