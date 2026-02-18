@@ -17,15 +17,12 @@ Authorization goes one step further. For example, say a salesperson needs access
 A secure system includes both, and authentication comes first.
 
 ### Authentication (or AuthN)
-
 The most common **authentication factors** are usernames and passwords. When the right credentials are given, a system considers the identity valid and grants access. This is known as **1FA** or **single-factor authentication**, and it's considered fairly insecure. Why? Because users are notoriously bad at keeping their login information secure. **Multi-factor authentication (MFA)** is a more secure alternative that requires users to prove their identity in multiple ways. This could be through:
-
 - Single-use PIN numbers
 - Authentication apps run by a secure 3rd party
 - Biometrics
 
 When choosing an authentication process, there are a few things to keep in mind.
-
 First, remember that security measures shouldn't overly inconvenience users unless they're forced to use your service. Don't ask for biometrics if you're running a free online chess game.
 
 Second, there's an adage in cybersecurity that says "security is only as good as its weakest link." The weakest link is often users. Whether through password apathy, vulnerability to clever phishing schemes, or pure negligence, companies have their work cut out for them. Instituting policies that require good password hygiene can help (requiring long passwords with numbers and special characters, regular password updates, timed log-off, etc.)

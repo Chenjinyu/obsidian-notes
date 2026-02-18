@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/2 - Keycloak Auth.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "6 - Authentication & Authorization"
+              "title": "2 - Keycloak Auth"
             }
           },
           {
@@ -279,6 +279,7 @@
   },
   "active": "c31a09c83414349e",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization -  Deep Dive.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/1 - Keycloak Guide - HTML.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/2 - Keycloak Auth.md",
@@ -304,7 +305,6 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Build Self Auth Server/ReadMe.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Build Self Auth Server/3 - Demo Client.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Build Self Auth Server",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization.md",
     "1 - Raw Notes/3 - Technologies/Agent-to-app Authorization.md",
     "1 - Raw Notes/3 - Technologies/Identity & Least Privilege.md",
     "1 - Raw Notes/3 - Technologies/JWT vs SharedStorage Session Store.md",
