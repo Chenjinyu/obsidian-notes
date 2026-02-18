@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/7 - CDNs.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/7 - CDNs - Architecture and Interview Q &A.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "7 - CDNs"
+              "title": "7 - CDNs - Architecture and Interview Q &A"
             }
           }
         ],
@@ -231,6 +231,8 @@
   },
   "active": "c31a09c83414349e",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/7 - CDNs.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/7 - CDNs - Architecture and Interview Q &A.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/7 - CDNs/file-20260217225148779.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/7 - CDNs/file-20260217225106864.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/assets/7 - CDNs/file-20260217225048962.png",
@@ -257,7 +259,6 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Exponential Backoff Strategy (Transient Failures).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Scalable Systems/1 - Reliability.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/7 - CDNs.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Q & A(Important).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/5 - Encryption.md",
@@ -268,7 +269,6 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/assets/1 - Keycloak Guide - HTML/file-20260217013338521.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/assets/1 - Keycloak Guide - HTML/file-20260217013308387.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/assets/1 - Keycloak Guide - HTML/file-20260217013257698.png",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/assets/1 - Keycloak Guide - HTML/file-20260217013255391.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/assets/1 - Keycloak Guide",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/assets",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak",

@@ -22,17 +22,6 @@ Cloud providers typically offer their own CDN solutions, since it’s so popular
 
 Like mentioned above, a CDN can be thought of as a globally distributed group of servers that cache static assets for your origin server. Every CDN server has its own local cache and they should all be in sync. There are two primary ways for a CDN cache to be populated, which creates the distinction between Push and Pull CDNs. In a Push CDN, it’s the responsibility of the engineers to push new/updated files to the CDN, which would then propagate them to all of the CDN server caches. In a Pull CDN, the server cache is lazily updated: when a user sends a static asset request to the CDN server and it doesn’t have it, it’ll fetch the asset from the origin server, populate its cache with the asset, and then send the asset to the user.
 
-**Push CDN**
-![](assets/7%20-%20CDNs/file-20260217224849552.png)
-
-The origin server sends the asset to the CDN, which stores it in its cache. The CDN never makes any requests to the origin server.
-
-**Pull CDN**
-![](assets/7%20-%20CDNs/file-20260217224909509.png)
-If the CDN doesn’t have the static asset in its cache, then it forwards the request to the origin server and then caches the new asset.
-![](assets/7%20-%20CDNs/file-20260217225048962.png)
-If the CDN has the asset in its cache, it returns the cached asset.
-
 There are advantages and disadvantages to both approaches. In a Push CDN, it’s more engineering work for the developers to make sure that CDN assets are up to date. Whenever an asset is updated/created, developers have to make sure to push it to the CDN, otherwise the client won’t be able to fetch it. On the other hand, Pull CDNs require less maintenance, since the CDN will automatically fetch assets from the origin server that are not in its cache. The downside of Pull CDNs is that if they already have your asset cached, they won’t know if you decide to update it or not, and to fetch this updated asset. So for some period of time, a Pull CDN’s cache will become stale after assets are updated on the origin server. Another downside is that the first request to a Pull CDN will always take a while since it has to make a trip to the origin server.
 
 Even with its disadvantages, Pull CDNs are still a lot more popular than Push CDNs, because they are much easier to maintain. There are also several ways to reduce the time that a static asset is stale for. Pull CDNs usually attach a timestamp to an asset when cached, and typically only cache the asset for up to 24 hours by default. If a user makes a request for an asset that’s expired in the CDN cache, the CDN will re-fetch the asset from the origin server, and get an updated asset if there is one. Pull CDNs also usually support Cache-Control response headers, which offers more flexibility with regards to caching policy, so that cached assets can be re-fetched every five minutes, whenever there’s a new release version, etc. Another solution is “cache busting”, where you cache assets with a hash or etag that is unique compared to previous asset versions.
