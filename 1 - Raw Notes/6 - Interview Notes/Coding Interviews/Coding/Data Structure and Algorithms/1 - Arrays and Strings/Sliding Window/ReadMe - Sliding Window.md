@@ -5,6 +5,13 @@ Tags:
 # Content
 ## Why the sliding window is O(n)
 Below of the time complexity is O(n), because the left does not reset for each right, it only moves forward overall. (**[**amortized analysis**](https://en.wikipedia.org/wiki/Amortized_analysis)**)
+##### key point here is right does not reset backwards!!! so that its should be o(n)
+
+## A true sliding window needs to include:
+- Both pointers only move forward, never reset.
+- Each element is processed a constant number of time.
+- Right pointer expands the window (add elements)
+- Left pointer shrinks(收缩) the window when sum >= k (remove elements)
 
 ```python
 # Time Complexity: O(n)
@@ -20,11 +27,7 @@ function fn(arr):
         Do some logic to update the answer
 ```
 ![](assets/ReadMe%20-%20Sliding%20Window/file-20260209005455197.png)
-## A true sliding window needs to include:
-- Both pointers only move forward, never reset.
-- Each element is processed a constant number of time.
-- Right pointer expands the window (add elements)
-- Left pointer shrinks(收缩) the window when sum >= k (remove elements)
+
 ```python
 def countSubarrays(nums, k):
     left = 0
