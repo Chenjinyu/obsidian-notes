@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/1 - APIs/API Gateway vs WAF.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sliding Window/ReadMe - Sliding Window.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "API Gateway vs WAF"
+              "title": "ReadMe - Sliding Window"
             }
           }
         ],
@@ -231,9 +231,15 @@
   },
   "active": "1b6cacc8bfdb0b6a",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sliding Window/assets/ReadMe - Sliding Window",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sliding Window/assets/Sliding Window",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sliding Window/assets",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sliding Window",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/JC - Search/two functions comparsion.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Program Design/After * must be passed as keyword-only arguments.md",
+    "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/1 - APIs/API Gateway vs WAF.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/4 - Distributed Systems/2 - CAP Theorem - PACELC.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/1 - APIs/API Gateway.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/1 - APIs/API Gateway vs WAF.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/5 - Mock Interviews/1 - Real-Time/1 - Design Facebook Messenger.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/4 - Distributed Systems/6 - Authentication & Authorization -  Deep Dive.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/4 - Distributed Systems/2 - CAP Theorem (定理) - Database List.md",
@@ -262,9 +268,6 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/2 - Scalable Systems/2 - Availability - Rate Limiting - Redis - Atomic action.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/2 - Scalable Systems/2 - Availability - Rate Limiting.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/2 - Scalable Systems/2 - Availability - Queue-Based Load Leveling.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/2 - Scalable Systems/2 - Availability - Gateway Aggregation.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/2 - Scalable Systems/2 - Availability.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Sagas - Orchestration vs Choreography.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/4 - Distributed Systems/6 - Authentication & Authorization - Keycloak/assets/1 - Keycloak Guide - HTML",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/4 - Distributed Systems/6 - Authentication & Authorization - Keycloak/assets/1 - Keycloak Guide - HTML/file-20260217013419709.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/4 - Distributed Systems/6 - Authentication & Authorization - Keycloak/assets/1 - Keycloak Guide - HTML/file-20260217013406221.png",
@@ -274,9 +277,6 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews/Distributed Systems/6 - Authentication & Authorization - Keycloak/assets/1 - Keycloak Guide",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/4 - Distributed Systems/6 - Authentication & Authorization - Keycloak/assets",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/4 - Distributed Systems/6 - Authentication & Authorization - Keycloak",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/4 - Distributed Systems/6 - Authentication & Authorization - Build Self Auth Server",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/4 - Distributed Systems/assets/5 - Encryption",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/4 - Distributed Systems/assets/4 - Caching",
     "Untitled 5.canvas",
     "Untitled 4.canvas",
     "Untitled 3.canvas",
