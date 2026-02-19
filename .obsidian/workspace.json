@@ -104,7 +104,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -277,10 +277,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "edf3c99332d0a181",
+  "active": "ef7df4d7942e0086",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/Bitwise Operation (python vs mathematics).md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sliding Window/Q1 - Subarray Project Less Than K.md",
+    "1 - Raw Notes/6 - Interview Notes/Bitwise Operation (python vs mathematics).md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sliding Window/ReadMe - Sliding Window.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sliding Window/assets/ReadMe - Sliding Window",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sliding Window/assets/Sliding Window",
