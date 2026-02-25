@@ -54,16 +54,19 @@ def dijkstra_simple_example(graph, start, end) -> List:
 			return path
 		if cur_city in visted:
 			continue
-			
+		
+		visted.add(cur_city)
+		
 		for neighbor, cost_time in graphs[cur_city]:
-			cur_time = cur_time + cost_time
-			if cur_time < shortest_cost[neighbor]:
-				shortest_cost[neighbor] = cur_time
-			neighbor.append(neighbor)
-			heapq.heappush(pq, (cur_time, neighbor, path + [neighbor]))
-
+			new_time = cur_time + cost_time
+			if new_time < shortest_cost[neighbor]:
+				shortest_cost[neighbor] = new_time # relaxing neighbor vertex with new vaule
+				
+			heapq.heappush(pq, (new_time, neighbor, path + [neighbor]))
 
 ```
+### NOTE: The Term of Relaxing
+Since the original value is inf, then we can relax it with lower value, the processing we call it as relaxing.
 
 ## Bellman-Ford
 - 
