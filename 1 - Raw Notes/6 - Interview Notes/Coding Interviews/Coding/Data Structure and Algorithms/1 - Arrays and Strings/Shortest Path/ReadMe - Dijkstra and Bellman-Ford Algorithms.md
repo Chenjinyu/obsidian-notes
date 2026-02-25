@@ -102,7 +102,7 @@ def bellman_ford(graph, start, end):
     predecessor = {city: None for city in graph}
 
     # Step 2: relax all edges V-1 times
-    for i in range(len(graph) - 1):
+    for i in range(len(graph) - 1): # brute force every round
         for from_node, to_node, cost in edges:
 	        # when the from_node has not been reached yet, the shortest_cost[from_node] is inf
 	        # until reach out the start, which has cost is 0
