@@ -28,6 +28,7 @@ Every time an edge is checked and it leads to a shorter distance to a vertex bei
 ```python
 
 import heapq
+from typing import List
 
 graphs = {
 	"A": [("B", 4), ("C", 5)],
@@ -36,11 +37,30 @@ graphs = {
 	"D": [("B", 2), ("E", 8)],
 	"F": [("C", 3), ("E", 2)]
 }
-
-def dijkstra_simple_example(graph, start, end):
+# TO find the cloest paths
+def dijkstra_simple_example(graph, start, end) -> List:
 	# is a list, but it will push to heapq and order it with min order queue
-	#
-	pq = []
+	# current_time, current_city, and the path
+	pq = [(0, start, [start])]
+	# assign inf to all vertices
+	shortest_cost = {city: float("inf") for city in graphs}
+	shortest_cost[start] = 0
+	visted = set()
+	
+	while pq:
+		cur_time, cur_city, path = heapq.heappop(pq)
+		
+		if cur_city == end:
+			return path
+		if cur_city in visted:
+			continue
+			
+		for neighbor, cost_time in graphs[cur_city]:
+			cur_time = cur_time + cost_time
+			if cur_time < shortest_cost[neighbor]:
+				shortest_cost[neighbor] = cur_time
+			neighbor.append(neighbor)
+			heapq.heappush(pq, (cur_time, neighbor, path + [neighbor]))
 
 
 ```
