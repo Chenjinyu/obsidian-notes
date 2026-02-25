@@ -24,6 +24,7 @@ Every time an edge is checked and it leads to a shorter distance to a vertex bei
 - It needs an overview of the current shortest distance to each vertex as it works its way through the graph, 
 - and updating these distances when a shorter distance is found.
 ### Time Complexity: O((V+E) log V)
+the number of Vertex + the number of edges times log Vertex
 ### Simple Example 
 ```python
 
@@ -73,6 +74,8 @@ Since the original value is inf, then we can relax it with lower value, the proc
 ## Bellman-Ford
 - it loops through all edges V-1 times
 - can start at any vertex
+### Time Complexity: O(V+E)
+the number of Vertex + the number of edges
 ### Simple Example 
 ```python
 
@@ -103,7 +106,7 @@ def bellman_ford(graph, start, end):
             new_cost = shortest_cost[from_node] + cost
             if new_cost < shortest_cost[to_node]:
                 shortest_cost[to_node] = new_cost        # relaxation
-                predecessor[to_node] = from_node         # track the path
+                predecessor[to_node] = from_node         # track the path, use to_node, so that can get the from_node from the predeerror to_node keys
 
     # Step 3: rebuild path using predecessor
     path = []
