@@ -103,7 +103,10 @@ def bellman_ford(graph, start, end):
     # Step 2: relax all edges V-1 times
     for i in range(len(graph) - 1):
         for from_node, to_node, cost in edges:
-            new_cost = shortest_cost[from_node] + cost
+	        # when the from_node has not been reached yet, the shortest_cost[from_node] is inf
+	        # until reach out the start, which has cost is 0
+	        # in bellman-ford algorithm, does not "choose" which vertex to process next like
+            new_cost = shortest_cost[from_node] + cost 
             if new_cost < shortest_cost[to_node]:
                 shortest_cost[to_node] = new_cost        # relaxation
                 predecessor[to_node] = from_node         # track the path, use to_node, so that can get the from_node from the predeerror to_node keys
@@ -111,7 +114,7 @@ def bellman_ford(graph, start, end):
     # Step 3: rebuild path using predecessor
     path = []
     cur = end
-    while cur is not None:
+    while cur is not None: # the None assigned by predecessor = {city: None for city in graph}, so that the while loop can be stopped
         path.append(cur)
         cur = predecessor[cur]
     path.reverse()
@@ -122,6 +125,15 @@ def bellman_ford(graph, start, end):
 path, cost = bellman_ford(graphs, "A", "E")
 print(f"Path: {path}")   # Path: ['A', 'B', 'D', 'E']
 print(f"Cost: {cost}")   # Cost: 9
+
+# explanation: 
+predecessor = { "A": None,   ← start node, no one came before it
+                "B": "A",
+                "D": "B",
+                "E": "D" }
+
+Reconstruction: E → D → B → A → None (stop)
+Reversed:       A → B → D → E  ✅
 ```
 
 ---
