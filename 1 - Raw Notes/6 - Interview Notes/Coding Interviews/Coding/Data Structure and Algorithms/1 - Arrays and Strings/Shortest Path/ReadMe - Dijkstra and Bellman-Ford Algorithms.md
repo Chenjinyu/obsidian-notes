@@ -61,8 +61,9 @@ def dijkstra_simple_example(graph, start, end) -> List:
 			new_time = cur_time + cost_time
 			if new_time < shortest_cost[neighbor]:
 				shortest_cost[neighbor] = new_time # relaxing neighbor vertex with new vaule
-				
-			heapq.heappush(pq, (new_time, neighbor, path + [neighbor]))
+				# everytime push the smaller value to heapq, 
+				# since all vertices are assign postive inf, so all vertices will be pushed to heapq, and vist them once.
+				heapq.heappush(pq, (new_time, neighbor, path + [neighbor]))
 
 ```
 ### NOTE: The Term of Relaxing
