@@ -15,8 +15,15 @@ def selection_sort_example(nums: List) -> List:
 	for idx in range(len(nums)):
 		min_val_idx = idx
 		j_idx = idx + 1
-		while j < len(nums) - 1:
-			if nums[min_val_idx] <
+		while j_idx < len(nums) - 1:
+		    # find the min_val_idx in inner loop, swap with inner idx
+			if nums[min_val_idx] < nums[j_idx]:
+				min_val_dix = j_idx
+			j_idx += 1
+		
+		nums[idx], nums[min_val_dix] = nums[min_val_dix], nums[idx]
+		
+	return nums
 ```
 
 # Note
