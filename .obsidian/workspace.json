@@ -6,6 +6,7 @@
       {
         "id": "d89078f5b5420a3a",
         "type": "tabs",
+        "dimension": 45.25401069518716,
         "children": [
           {
             "id": "560b9f98c5740ea9",
@@ -80,7 +81,31 @@
             }
           },
           {
-            "id": "97b010db072bae9b",
+            "id": "43bcd2279a04273f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sort/2 - Selection Sort.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2 - Selection Sort"
+            }
+          },
+          {
+            "id": "7661cb007824ffeb",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -104,7 +129,38 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
+      },
+      {
+        "id": "aeb0872489833434",
+        "type": "tabs",
+        "dimension": 54.74598930481284,
+        "children": [
+          {
+            "id": "a7ce691daa1606b6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sort/3 - Insertion Sort.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "3 - Insertion Sort"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -161,7 +217,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 482.5
+    "width": 380.5
   },
   "right": {
     "id": "c375af2eeef2242a",
@@ -277,10 +333,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "97b010db072bae9b",
+  "active": "a7ce691daa1606b6",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sort/2 - Selection Sort.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sort/1 - Bubble Sort.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sort/3 - Insertion Sort.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sort/2 - Selection Sort.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sliding Window/ReadMe - Sliding Window.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Search/9 - Binary Search.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Search/8 - Linear Search.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Search",
@@ -289,8 +347,6 @@
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sort/5 - Counting Sort.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sort/4 - Quick Sort.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sort/Untitled",
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sort/3 - Insertion Sort.md",
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sliding Window/ReadMe - Sliding Window.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sliding Window/Q1 - M - 713.Subarray Project Less Than K.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/7 - Shortest Path/ReadMe - Dijkstra and Bellman-Ford Algorithms.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sort",

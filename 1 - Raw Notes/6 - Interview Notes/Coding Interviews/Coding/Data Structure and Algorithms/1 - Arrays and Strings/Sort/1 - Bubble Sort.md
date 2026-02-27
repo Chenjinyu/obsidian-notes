@@ -79,9 +79,7 @@ def bubble_sort_efficient(nums: List) -> List:
  swapped = False → EARLY EXIT ✅
 ```
 
-### Why the inner loop shrinks each pass
-
-python
+#### Why the inner loop shrinks each pass
 
 ````python
 for j in range(n - 1 - i):
