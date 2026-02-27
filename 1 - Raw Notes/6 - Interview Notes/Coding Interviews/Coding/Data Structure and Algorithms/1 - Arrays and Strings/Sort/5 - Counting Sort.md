@@ -17,9 +17,18 @@ The Counting Sort algorithm sorts an array by counting the number of times each 
 from typing import List
 
 def counting_sort(nums: List) -> List:
+	"""
+	
+	"""
 	max_val = max(nums) # O(n)
-	count = [0] * max_val
-	oup
+	# if max = 8, needs the count has idx = 8. which includes 9 items
+	count = [0] * (max_val + 1) 
+	for i in range(len(nums)):
+		count[nums[i]] += 1
+	output = []
+	for idx_is_num_val, val_is_num_idx in enumerate(count):
+		output.extend([val_is_num_idx] * idx_is_num_val) 
+	return output
 ```
 # Note
 
