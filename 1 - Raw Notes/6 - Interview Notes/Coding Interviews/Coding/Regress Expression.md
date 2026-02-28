@@ -28,7 +28,21 @@ Tags:
 `\` Special sequence (or escape special characters), "\d"
 `|` Either or "falls|stays"
 `()` Capture and group
+`P<name>` Named groups `(?P<name>...)` simply give groups an **alias**
 
+```python
+```python
+m = re.match(r'(?P<first>\w+) (?P<last>\w+)', 'Jane Doe')
+
+# All of these work ✅
+print(m.groupdict())      # {'first': 'Jane', 'last': 'Doe'}
+print(m.group('first'))   # Jane
+print(m.group('last'))    # Doe
+print(m.group(1))         # Jane
+print(m.group(2))         # Doe
+print(m.group(0))         # Jane Doe  (entire match)
+print(m.group(1, 2))      # ('Jane', 'Doe')  (multiple at once)
+```
 ### Quantifiers:
 - `*`: 0 or more
 - `+`: 1 or more
@@ -129,27 +143,36 @@ pattern = re.compile(r"([a-zA-Z0-9-]+)@([a-zA-Z]+)\.([a-zA-Z]+)")
 matches = pattern.finditer(emails)
 for match in matches:
 	print(match) # return matches object
+	print(match.groups())
 	print(match.group(0)) # return whole email address
 	print(match.group(1)) # return string beore @
 	print(match.group(2)) # return string between @ and .
 	print(match.group(3)) # return top domian, eg: com
+	
+print(match.group*(1,2,2)) # the index of group 
+# ('python-abd', 'gmail', 'gmail')
+
+pritn(match.groups())
 ```
 
 #### outputs:
 ```txt
 <re.Match object; span=(1, 21), match='python-abd@gmail.com'>
+('python-abd', 'gmail', 'com')
 python-abd@gmail.com
 python-abd
 gmail
 com
-<re.Match object; span=(28, 43), match='chen@icloud.com'>
-chen@icloud.com
-chen
+<re.Match object; span=(22, 43), match='jinyu.chen@icloud.com'>
+('jinyu.chen', 'icloud', 'com')
+jinyu.chen@icloud.com
+jinyu.chen
 icloud
 com
-<re.Match object; span=(54, 66), match='chen@xxx.org'>
-chen@xxx.org
-chen
+<re.Match object; span=(44, 66), match='jinyu2010.chen@xxx.org'>
+('jinyu2010.chen', 'xxx', 'org')
+jinyu2010.chen@xxx.org
+jinyu2010.chen
 xxx
 org
 ```
@@ -204,15 +227,56 @@ reg_exp = r"JIN[YU]*" # JIN, or JINYU, JINYUYUYUYU...
 ```
 
 ## Complication Flags:
+ASCII = American Standard Code for Information Interchange
 ```txt
 ASCII or A: Makes serveal excapes like \w, \b, \s and \d match only on ASCII characters with the respective print
 DOTALL or S: Make . match any character, including newlines.
 IGNORECASE or I: Do case-insensitive matches
-LOCALE or L: Do a locale-aware match
+LOCALE or L: Do a locale-aware match. # Mostly relevant for legacy Python 2 code, not recommended in Python 3
 NULTILINE or M: Multi-line matching, affecting ^ and $.
 VERBOSE or X: (for 'extended'), Enable verbose REs, which can be organized more cleanly and understandably.
 ```
-### re.VERBOSE
+
+### re.ASCII
+
+```python
+import re
+
+text = "hello 123 café"
+
+# Without re.A — \w matches Unicode letters too
+print(re.findall(r"\w+", text))           # ['hello', '123', 'café']
+
+# With re.A — \w matches ASCII only
+print(re.findall(r"\w+", text, re.A))     # ['hello', '123', 'caf']  (é is excluded)
+```
+
+### re.DOTALL
+
+```python
+text = "hello\nworld"
+
+# Without re.S — . does NOT match newline
+print(re.findall(r".+", text))            # ['hello', 'world']
+
+# With re.S — . matches everything including newline
+print(re.findall(r".+", text, re.S))      # ['hello\nworld']
+```
+### re.MULTILINE
+
+```python
+text = "hello\nworld\npython"
+
+# Without re.M — ^ and $ match only start/end of entire string
+print(re.findall(r"^\w+", text))          # ['hello']
+print(re.findall(r"\w+$", text))          # ['python']
+
+# With re.M — ^ and $ match start/end of each line
+print(re.findall(r"^\w+", text, re.M))    # ['hello', 'world', 'python']
+print(re.findall(r"\w+$", text, re.M))    # ['hello', 'world', 'python']
+```
+
+### re.VERBOSE(详细)
 
 ```python
 # How to use VERBOSE
