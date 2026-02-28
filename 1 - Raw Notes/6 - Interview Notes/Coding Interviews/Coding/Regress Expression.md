@@ -126,7 +126,7 @@ jinyu2010.chen@xxx.org
 """
 
 pattern = re.compile(r"([a-zA-Z0-9-]+)@([a-zA-Z]+)\.([a-zA-Z]+)")
-matches = pattern.findter(emails)
+matches = pattern.finditer(emails)
 for match in matches:
 	print(match) # return matches object
 	print(match.group(0)) # return whole email address
@@ -158,8 +158,8 @@ org
 - split()
 - sub() # replace, eg `code = re.sub(r'\s', '', code)` ->  remove all spaces
 
+### split example
 ```python
-
 # split()
 test_string = "123abc456abc123ABC"
 pattern = re.compile(r"abc")
@@ -170,11 +170,60 @@ print(splitted_list)
 ['123', '456', '123ABC']
 ```
 
+### sub example, it can use group idx
+```python
+
+emails = """
+python-abd@gmail.com
+jinyu.chen@icloud.com
+jinyu2010.chen@xxx.org
+"""
+
+pattern = re.compile(r"([a-zA-Z0-9-]+)@([a-zA-Z]+)\.([a-zA-Z]+)")
+matches = pattern.finditer(emails)
+for match in matches:
+	print(match) # return matches object
+	print(match.group(0)) # return whole email address
+	print(match.group(1)) # return string beore @
+	print(match.group(2)) # return string between @ and .
+	print(match.group(3)) # return top domian, eg: com
+sub_emails = pattern.sub(r"\2\3", emails)
+print(sub_emails)
+
+# sub_emails OUTPUT
+gmailcom
+icloudcom
+xxxorg
+```
+
 ```python
 reg_exp = r"JIN(YU)?" # JIN or JINYU
 reg_exp = r"JIN[YU]?" # JIN or JINY, JINYU
 reg_exp = r"JIN[Y|U]" # JINY or JINU
 reg_exp = r"JIN[YU]*" # JIN, or JINYU, JINYUYUYUYU...
+```
+
+## Complication Flags:
+```txt
+ASCII or A: Makes serveal excapes like \w, \b, \s and \d match only on ASCII characters with the respective print
+DOTALL or S: Make . match any character, including newlines.
+IGNORECASE or I: Do case-insensitive matches
+LOCALE or L: Do a locale-aware match
+NULTILINE or M: Multi-line matching, affecting ^ and $.
+VERBOSE or X: (for 'extended'), Enable verbose REs, which can be organized more cleanly and understandably.
+```
+### re.VERBOSE
+
+```python
+# How to use VERBOSE
+pat_with_annotation = re.compile(r"""
+ \s*                 # Skip leading whitespace
+ (?P<header>[^:]+)   # Header name
+ \s* :               # Whitespace, and a colon
+ (?P<value>.*?)      # The header's value -- *? used to
+                     # lose the following trailing whitespace
+ \s*$                # Trailing whitespace to end-of-line
+""", re.VERBOSE)
 ```
 # Note
 
