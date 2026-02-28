@@ -61,9 +61,9 @@ def binary_search_is_better(nums, k) -> int:
 	return search(nums)
 ```
 
-### If want to return the matched Index, then using left and right to store the nums's index
+### If want to return the matched Index, then using left and right to passing the index to all rest of recursive functions. 
 
-and alos pass the left and right to recursive call
+and also pass the left and right to recursive call
 ```python
 def binary_search(nums, k) -> int:
     nums = sorted(nums)  # sort once before searching
@@ -77,7 +77,7 @@ def binary_search(nums, k) -> int:
         if nums[mid] == k:
             return mid
         elif nums[mid] > k:
-            return search(left, mid - 1)  
+            return search(left, mid - 1)  # here should be mid-1, coz it's not list[] range, the end edge does not include
         else:
             return search(mid + 1, right)  
     
