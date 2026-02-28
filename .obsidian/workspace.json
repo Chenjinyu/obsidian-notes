@@ -190,7 +190,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/In-Place or New.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/2 - Check HTML Tags Matches.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -205,7 +205,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "In-Place or New"
+              "title": "2 - Check HTML Tags Matches"
             }
           }
         ],
@@ -384,8 +384,11 @@
   },
   "active": "a24e791998e125ea",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Search/9 - Binary Search.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/1 - Check Matches of Parentless.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/2 - Check HTML Tags Matches.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/Stacks & Queues.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/In-Place or New.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Search/9 - Binary Search.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sort/4 - Quick Sort.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sort/5 - Counting Sort.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sort/3 - Insertion Sort.md",
@@ -417,9 +420,6 @@
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/4 - Distributed Systems/2 - CAP Theorem - PACELC.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/1 - APIs/API Gateway.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/5 - Mock Interviews/1 - Real-Time/1 - Design Facebook Messenger.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/4 - Distributed Systems/6 - Authentication & Authorization -  Deep Dive.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/4 - Distributed Systems/2 - CAP Theorem (定理) - Database List.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/4 - Distributed Systems/2 - CAP Theorem (定理).md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/4 - Distributed Systems/assets/7 - CDNs/file-20260217225148779.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/4 - Distributed Systems/assets/7 - CDNs/file-20260217225106864.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/4 - Distributed Systems/assets/7 - CDNs/file-20260217225048962.png",
