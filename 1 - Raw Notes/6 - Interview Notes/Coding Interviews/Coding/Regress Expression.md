@@ -1,5 +1,5 @@
 Date: 2026-02-28
-Course:
+Course: https://docs.python.org/3/howto/regex.html
 Tags: 
 
 # Content
@@ -32,7 +32,7 @@ Tags:
 ### Quantifiers:
 - `*`: 0 or more
 - `+`: 1 or more
-- `?`: 0 or 1, -> optional character
+- `?`: 0 or 1, -> optional character. eg. r'https?", can be http or https. 
 - `{4}`: exact numer  
 ```
 eg. 
@@ -133,10 +133,9 @@ for match in matches:
 	print(match.group(1)) # return string beore @
 	print(match.group(2)) # return string between @ and .
 	print(match.group(3)) # return top domian, eg: com
-	
-# output:
-
 ```
+
+#### outputs:
 ```txt
 <re.Match object; span=(1, 21), match='python-abd@gmail.com'>
 python-abd@gmail.com
@@ -153,6 +152,29 @@ chen@xxx.org
 chen
 xxx
 org
+```
+
+## Modifications
+- split()
+- sub() # replace, eg `code = re.sub(r'\s', '', code)` ->  remove all spaces
+
+```python
+
+# split()
+test_string = "123abc456abc123ABC"
+pattern = re.compile(r"abc")
+splitted_list = pattern.split(test_string)
+print(splitted_list)
+
+# OUTPUT
+['123', '456', '123ABC']
+```
+
+```python
+reg_exp = r"JIN(YU)?" # JIN or JINYU
+reg_exp = r"JIN[YU]?" # JIN or JINY, JINYU
+reg_exp = r"JIN[Y|U]" # JINY or JINU
+reg_exp = r"JIN[YU]*" # JIN, or JINYU, JINYUYUYUYU...
 ```
 # Note
 
