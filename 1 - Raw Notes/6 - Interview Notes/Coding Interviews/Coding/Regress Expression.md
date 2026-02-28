@@ -29,6 +29,19 @@ Tags:
 `|` Either or "falls|stays"
 `()` Capture and group
 
+### Quantifiers:
+- `*`: 0 or more
+- `+`: 1 or more
+- `?`: 0 or 1, -> optional character
+- `{4}`: exact numer  
+```
+eg. 
+1. \d{4}, matches the integer has 4 digits, eg "200200" returns  2002. eg "20020001"  returns 2002 and 0001
+2. \d{1,4}. "12345", reeturns 1234 and 1
+3. \d{1,7}. "12345", reeturns 12345
+```
+- `{4,6}`: range numbers, from 4 to 6 # eg. \d{2,4}, matches the integers has 2 to 4 digits. eg: 12, 123, 1234
+
 ```python
 pattern = re.compile(regex_exp)
 matches = pattern.finditer(test_string)
@@ -62,6 +75,7 @@ for match in matches:
 test_string = "hello 123_ hello world"
 # Case sensitive. but can add `re.IGNORECASE` to p = re.compile('ab*', re.IGNORECASE)
 regex_exp = r"\d" # matched 3 integers, which is 1,2,3. since \d only matches one. 
+regex_exp = r"\d+" # matched 123.
 regex_exp = r"\D" # matched all characters which are not the integer, eg. h, e, l, l, o, space, ...
 regex_exp = r"\s" # matched 3 spaces, after first o, afeter _ and after second o
 regex_exp = r"\S" # matched all characters except space.
@@ -95,7 +109,12 @@ regex_exp = r"[123]" # return 1,2,3 matches. equivalent r"[1-3]", to matching an
 regex_exp = r"[elo]" # return e,l,l,o  4 matches.
 regex_exp = r"[\w]" # return all matches, except space
 
+# [0-9] is a range from 0 to 9, [0-9-], the second `-` is actual character. eg: 123-, it returns 1,2,3,-
+# [a-z] matches all lower cases, [a-zA-Z] equivalent to re.compile(r"[a-z]", re.IGNORECASE)
+
 ```
+
+NOTE: [a-zA-Z] equivalent to re.compile(r"[a-z]", re.IGNORECASE)
 # Note
 
 
