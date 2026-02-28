@@ -60,7 +60,7 @@ for match in matches:
 	print(match) # eg: <re.Match object; span=(6,7), match='1'>
 	
 test_string = "hello 123_ hello world"
-
+# Case sensitive. but can add `re.IGNORECASE` to p = re.compile('ab*', re.IGNORECASE)
 regex_exp = r"\d" # matched 3 integers, which is 1,2,3. since \d only matches one. 
 regex_exp = r"\D" # matched all characters which are not the integer, eg. h, e, l, l, o, space, ...
 regex_exp = r"\s" # matched 3 spaces, after first o, afeter _ and after second o
@@ -69,10 +69,33 @@ regex_exp = r"\bhello" # matched 2 `hello` in test_string. it seaches words.
 # if test_string = "hello123", returns hello. 
 # if test_string = "hello123hello". returns one hello, because the second hello is not at the beginning
 # if test_string = "hello123 hello". returns two hello
-regex_exp = r"\Bhello"
+regex_exp = r"\Bhello" # returns None, because there is no any hello words do not at the beginning.
+# if test_string = "hello123 HHhello". returns hello which gets from HHhello
 
 ```
 
+| Regular String  | Raw string   | To Match    |
+| --------------- | ------------ | ----------- |
+| `"ab*"`         | `r"ab*"`\    | eg. ab, abb |
+| `"\\\\section"` | r"\\section" | \\session   |
+| `"\\w+\\s+\\1"` | r"\w+\s+\1"  | ab \1       |
+|                 |              |             |
+
+## Sets
+use `[]` to get all items in a set. 
+```python
+pattern = re.compile(regex_exp)
+matches = pattern.finditer(test_string)
+for match in matches:
+	print(match) # eg: <re.Match object; span=(6,7), match='1'>
+	
+
+test_string = "hello 123_ hello world"
+regex_exp = r"[123]" # return 1,2,3 matches. equivalent r"[1-3]", to matching any integer from 1 to 3
+regex_exp = r"[elo]" # return e,l,l,o  4 matches.
+regex_exp = r"[\w]" # return all matches, except space
+
+```
 # Note
 
 
