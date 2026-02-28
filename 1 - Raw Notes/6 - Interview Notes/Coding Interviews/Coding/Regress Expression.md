@@ -19,7 +19,7 @@ Tags:
 ```
 
 `.` Any character (except newline charactor)
-`^` starts with "^hello"
+`^` starts with "^hello", if inside of [], means "except/negation"
 `$` Ends with "world$"
 `*` Zero or more occurrences "aix*"
 `+` One or more occurrences "aix+"
@@ -29,6 +29,24 @@ Tags:
 `|` Either or "falls|stays"
 `()` Capture and group
 `P<name>` Named groups `(?P<name>...)` simply give groups an **alias**
+
+```python
+# example of ^
+import re
+
+text = "hello world"
+print(re.findall(r'^hello', text))    # ['hello'] ✅ matches, hello is at start
+print(re.findall(r'^world', text))    # []  ❌ no match, world is not at start
+
+print(re.findall(r'[^0-9]+', "abc123"))   # ['abc']  → any char except digits
+print(re.findall(r'[^a-z]+', "abcDEF"))   # ['DEF']  → any char except lowercase
+```
+#### Important — `^` inside `[]` only negates if it's at the START:
+```
+r'[^abc]'    # negation(noun: 否定) — matches anything EXCEPT a, b, c
+r'[a^bc]'    # no negation — matches a, ^, b, or c  (^ is literal here)
+```
+
 
 ```python
 ```python
@@ -148,11 +166,14 @@ for match in matches:
 	print(match.group(1)) # return string beore @
 	print(match.group(2)) # return string between @ and .
 	print(match.group(3)) # return top domian, eg: com
-	
+	print(match.span()) # eg. (1, 21)
+
 print(match.group*(1,2,2)) # the index of group 
 # ('python-abd', 'gmail', 'gmail')
-
 pritn(match.groups())
+
+# <re.Match object; span=(1, 21), match='python-abd@gmail.com'>
+# to get start and end in span, then match.start() and match.end() or match.spam()
 ```
 
 #### outputs:
@@ -289,6 +310,25 @@ pat_with_annotation = re.compile(r"""
  \s*$                # Trailing whitespace to end-of-line
 """, re.VERBOSE)
 ```
+
+## ?=...
+```python
+import re
+
+text = "100USD 200EUR 300USD"
+
+# Match numbers only if followed by USD
+print(re.findall(r'\d+(?=USD)', text))    # ['100', '300']
+# EUR numbers are excluded
+```
+## !=...
+```python
+text = "100USD 200EUR 300USD"
+
+# Match numbers only if NOT followed by USD
+print(re.findall(r'\d+(?!USD)', text))    # ['200']  → only EUR number
+```
+
 # Note
 
 
