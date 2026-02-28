@@ -48,8 +48,31 @@ regex_exp = r"abc$" # return None, because the `abc` is not at the end of test_s
 `\S`: Matches any non-whitespace character. 
 `\w`: Matches any alphanumeric character. equivalent to the class [a-zA-Z0-9_]
 `\W`: Matches any non-alphanumeric character. this is equivalent to class `[^a-zA-Z0-9_]`
-`b`: Matches where the specified characters are at the beginning or at the end of a word. eg. `r"\bain"` `r"ain\b"`
-`\B`: Matches where the specified characters are present, but 
+
+NOTE: b means block, or word, it should has space between the words, can be the block
+`\b`: Matches where the specified characters are at the beginning or at the end of a word. eg. `r"\bain"` `r"ain\b"` 
+`\B`: Matches where the specified characters are present, but NOT at the beginning or at the end of a word. `r"\Bain"` `r"ain\B"`
+
+```python
+pattern = re.compile(regex_exp)
+matches = pattern.finditer(test_string)
+for match in matches:
+	print(match) # eg: <re.Match object; span=(6,7), match='1'>
+	
+test_string = "hello 123_ hello world"
+
+regex_exp = r"\d" # matched 3 integers, which is 1,2,3. since \d only matches one. 
+regex_exp = r"\D" # matched all characters which are not the integer, eg. h, e, l, l, o, space, ...
+regex_exp = r"\s" # matched 3 spaces, after first o, afeter _ and after second o
+regex_exp = r"\S" # matched all characters except space.
+regex_exp = r"\bhello" # matched 2 `hello` in test_string. it seaches words. 
+# if test_string = "hello123", returns hello. 
+# if test_string = "hello123hello". returns one hello, because the second hello is not at the beginning
+# if test_string = "hello123 hello". returns two hello
+regex_exp = r"\Bhello"
+
+```
+
 # Note
 
 
