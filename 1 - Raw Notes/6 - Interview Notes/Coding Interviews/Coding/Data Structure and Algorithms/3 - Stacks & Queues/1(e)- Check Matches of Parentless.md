@@ -1,6 +1,6 @@
 Date: 2026-02-27
 Course:
-Tags: 
+Tags: [[LeetCode]]
 
 # Content
 

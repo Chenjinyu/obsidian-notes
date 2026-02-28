@@ -81,6 +81,30 @@
             }
           },
           {
+            "id": "02a31d5bc18fc7d7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/2 - Check HTML Tags Matches.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2 - Check HTML Tags Matches"
+            }
+          },
+          {
             "id": "43bcd2279a04273f",
             "type": "leaf",
             "state": {
@@ -129,7 +153,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       },
       {
         "id": "aeb0872489833434",
@@ -382,10 +406,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a24e791998e125ea",
+  "active": "02a31d5bc18fc7d7",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/2 - Check HTML Tags Matches.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/1(e)- Check Matches of Parentless.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/2 - Check HTML Tags Matches.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/ReadMe - Stacks & Queues.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/In-Place or New.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Search/9 - Binary Search.md",
