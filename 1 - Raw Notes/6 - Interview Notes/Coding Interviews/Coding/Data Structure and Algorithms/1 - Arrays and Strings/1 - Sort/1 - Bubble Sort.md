@@ -1,6 +1,6 @@
 Date: 2026-02-26
 Course: https://www.w3schools.com/dsa/dsa_algo_bubblesort.php
-Tags: [[W3Schools]] [[Arrary Sort]]
+Tags: [[W3Schools]] [[Arrary]] [[Sort]]
 
 # Content
 Bubble Sort is an algorithm that sorts an array from the lowest value to the highest value.
