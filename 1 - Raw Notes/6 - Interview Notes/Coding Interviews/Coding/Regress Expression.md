@@ -88,12 +88,12 @@ regex_exp = r"\Bhello" # returns None, because there is no any hello words do no
 
 ```
 
-| Regular String  | Raw string   | To Match    |
-| --------------- | ------------ | ----------- |
-| `"ab*"`         | `r"ab*"`\    | eg. ab, abb |
-| `"\\\\section"` | r"\\section" | \\session   |
-| `"\\w+\\s+\\1"` | r"\w+\s+\1"  | ab \1       |
-|                 |              |             |
+| Regular String  | Raw string   | To Match              |
+| --------------- | ------------ | --------------------- |
+| `"ab*"`         | `r"ab*"`\    | eg. ab, abb           |
+| `"\\\\section"` | r"\\section" | \\session             |
+| `"\\w+\\s+\\1"` | r"\w+\s+\1"  | ab \1                 |
+| `.abc`          | `r"\.adc"`   | the . is actual  dash |
 
 ## Sets
 use `[]` to get all items in a set. 
@@ -115,6 +115,45 @@ regex_exp = r"[\w]" # return all matches, except space
 ```
 
 NOTE: [a-zA-Z] equivalent to re.compile(r"[a-z]", re.IGNORECASE)
+
+## Groups
+
+```python
+emails = """
+python-abd@gmail.com
+jinyu.chen@icloud.com
+jinyu2010.chen@xxx.org
+"""
+
+pattern = re.compile(r"([a-zA-Z0-9-]+)@([a-zA-Z]+)\.([a-zA-Z]+)")
+matches = pattern.findter(emails)
+for match in matches:
+	print(match) # return matches object
+	print(match.group(0)) # return whole email address
+	print(match.group(1)) # return string beore @
+	print(match.group(2)) # return string between @ and .
+	print(match.group(3)) # return top domian, eg: com
+	
+# output:
+
+```
+```txt
+<re.Match object; span=(1, 21), match='python-abd@gmail.com'>
+python-abd@gmail.com
+python-abd
+gmail
+com
+<re.Match object; span=(28, 43), match='chen@icloud.com'>
+chen@icloud.com
+chen
+icloud
+com
+<re.Match object; span=(54, 66), match='chen@xxx.org'>
+chen@xxx.org
+chen
+xxx
+org
+```
 # Note
 
 
