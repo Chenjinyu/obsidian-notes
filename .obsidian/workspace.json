@@ -190,7 +190,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/2 - Check HTML Tags Matches.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/1(e)- Check Matches of Parentless.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -205,7 +205,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2 - Check HTML Tags Matches"
+              "title": "1(e)- Check Matches of Parentless"
             }
           }
         ],
@@ -384,9 +384,9 @@
   },
   "active": "a24e791998e125ea",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/1 - Check Matches of Parentless.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/2 - Check HTML Tags Matches.md",
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/Stacks & Queues.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/1(e)- Check Matches of Parentless.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/ReadMe - Stacks & Queues.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/In-Place or New.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Search/9 - Binary Search.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sort/4 - Quick Sort.md",
