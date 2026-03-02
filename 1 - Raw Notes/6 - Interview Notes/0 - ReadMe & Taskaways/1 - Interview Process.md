@@ -20,6 +20,11 @@ It varies by company, but here's a general breakdown:
 | 6     | **Behavioral**             | 1-2    | teamwork, conflict, leadership   |
 | 7     | **Hiring Manager**         | 1      | culture fit, role expectations   |
 
+```txt
+Technical Phone Screen   →  filter/gate stage, quick check
+Coding Interview         →  deep evaluation, multiple rounds
+```
+
 ---
 
 **By company tier:**

@@ -133,7 +133,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/Untitled.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)/Example 1 - Design a Parking Lot.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -148,11 +148,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "Example 1 - Design a Parking Lot"
+            }
+          },
+          {
+            "id": "e1998d121a7a0cf8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/2 - Phone Screen vs Coding Interview.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2 - Phone Screen vs Coding Interview"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -209,7 +233,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 366.5
+    "width": 383.5
   },
   "right": {
     "id": "c375af2eeef2242a",
@@ -325,10 +349,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "c1c5898c162ac8e3",
+  "active": "e1998d121a7a0cf8",
   "lastOpenFiles": [
     "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/1 - Interview Process.md",
-    "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/Untitled.md",
+    "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/2 - Phone Screen vs Coding Interview.md",
+    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)/0 - ReadMe.md",
+    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)/Example 1 - Design a Parking Lot.md",
+    "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/2 - Low-Level System Design(LLD).md",
+    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)",
     "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/2 - Linked Lists/2 - Linked List Operations.md",
     "1 - Raw Notes/6 - Interview Notes/4 - Behavior Interviews",
@@ -363,11 +391,7 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sliding Window/Q3(m) - 1004.Max Consecutive Ones III.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sort/1 - Untitled",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sliding Window/Q2(e) - 643.Maximum Average Subarray I.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sliding Window/Q1(m) - 713.Subarray Project Less Than K.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/1(e)- Check Matches of Parentless.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/ReadMe - Stacks & Queues.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/2 - Search",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/assets/7 - CDNs/file-20260217225148779.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/assets/7 - CDNs/file-20260217225106864.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/assets/7 - CDNs/file-20260217225048962.png",
