@@ -150,78 +150,6 @@
               "icon": "lucide-file",
               "title": "2 - Linked List Operations"
             }
-          },
-          {
-            "id": "8cfbae5d680b8353",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/6 - Radix Sort.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "6 - Radix Sort"
-            }
-          },
-          {
-            "id": "63e1cc8a9df939fc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/2(m) - Check HTML Tags Matches.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2(m) - Check HTML Tags Matches"
-            }
-          },
-          {
-            "id": "a77534b63cae1169",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/3 - Insertion Sort.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "3 - Insertion Sort"
-            }
           }
         ],
         "currentTab": 5
@@ -399,8 +327,11 @@
   },
   "active": "c1c5898c162ac8e3",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/2 - Linked Lists/1 - Linked Lists Types.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/3 - Insertion Sort.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/2(m) - Check HTML Tags Matches.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/6 - Radix Sort.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/2 - Linked Lists/2 - Linked List Operations.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/2 - Linked Lists/1 - Linked Lists Types.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/2 - Linked Lists/assets/1 - Linked Lists Types/file-20260302004408902.png",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/2 - Linked Lists/assets/1 - Linked Lists Types/file-20260302004343235.png",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/2 - Linked Lists/assets/1 - Linked Lists Types/file-20260302004257081.png",
@@ -411,8 +342,6 @@
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/2 - Search/2 - Binary Search.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/9 - Heap Sort.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/8 - Tim Sort.md",
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/6 - Radix Sort.md",
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/3 - Insertion Sort.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/4 - Quick Sort.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/2 - Selection Sort.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/0 - Sort Comparsion.md",
@@ -423,7 +352,6 @@
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/assets/3(h) - Tag Valiator/file-20260228155944832.png",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/assets/3(h) - Tag Valiator",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/assets",
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/2(m) - Check HTML Tags Matches.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/5 - Counting Sort.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/1 - Bubble Sort.md",
     "1 - Raw Notes/6 - Interview Notes/Bitwise Operation (python vs mathematics).md",
