@@ -47,7 +47,13 @@ Coding Interview         →  deep evaluation, multiple rounds
 - no travel needed
 ```
 
-
+#### They are identical in terms of:
+```text
+✅ same number of rounds
+✅ same difficulty
+✅ same evaluation criteria
+✅ same stakes — this is the final interview before offer
+```
 ---
 
 ## **Depth difference on same problem:**
