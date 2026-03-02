@@ -20,27 +20,32 @@ Radix Sort uses the radix so that decimal values are put into 10 different bucke
 ```python
 from typing import List
 
-nums = [12,23,135,1567,115]
+nums = [12,23,135,1567,119]
 
 def radix_array(nums: List) -> List:
-    max_digits = max([len(str(x)) for x in nums])
-    
-    def sort_by_last_digit(nums):
-        trans_nums = [] 
+	"""
+	Time complexity: O(n * k), where n is the number of elements in the input list and k is the number of digits in the largest number.
+
+	Space complexity: O(n + k), where n is the number of elements in the input list and k is the number of digits in the largest number (for the buckets).
+	"""
+    max_digits = max([len(str(x)) for x in nums]) # O(n)
+        
+    def sort_by_digit(nums, digit_pos):
         # cannot create the radix_array with [[]] * 10, because each sub list will assign to the first sublist at the same time
-        radix_array = [ [] for _ in range(10) ] # 0-9
-        for idx in range(len(nums)):
-            last_digit, remaining = nums[idx] % 10, nums[idx] // 10
-            radix_array[last_digit].append(nums[idx])
-        
-        for bucket in radix_array:
-            trans_nums.extend(bucket)
-        return trans_nums
+        buckets = [ [] for _ in range(10) ] # 0-9
+        for num in nums:
+            digit = (num // digit_pos) % 10
+            buckets[digit].append(num)
+        result = []
+        for bucket in buckets:
+            result.extend(bucket)
+        return result
     
+    digit_pos = 1
     for _ in range(max_digits):
-        nums = sort_by_last_digit(nums)
-        
-    return nums		
+        nums = sort_by_digit(nums, digit_pos)
+        digit_pos *= 10
+    return nums	
 
 ```
 # Note
