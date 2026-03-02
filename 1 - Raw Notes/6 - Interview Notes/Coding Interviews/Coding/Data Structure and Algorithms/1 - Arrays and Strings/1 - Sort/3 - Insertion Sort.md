@@ -10,6 +10,10 @@ The Insertion Sort algorithm uses one part of the array to hold the sorted value
 from typing import List
 
 def insertion_sort(nums: List) -> List:
+	"""
+	time complexity: O(n²)
+	space complexity: O(1)
+	"""
 	n = len(nums)
 	
 	for i in range(1, n):

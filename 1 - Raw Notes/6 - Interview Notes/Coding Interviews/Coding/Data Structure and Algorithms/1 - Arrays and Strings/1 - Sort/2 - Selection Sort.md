@@ -11,7 +11,10 @@ The algorithm looks through the array again and again, moving the next lowest va
 from typing import List
 
 def selection_sort_example(nums: List) -> List:
-	
+	"""
+	Time Complexity: O(n²). 
+	Space Complexity: O(1)
+	"""
 	for idx in range(len(nums)):
 		min_val_idx = idx
 		j_idx = idx + 1
