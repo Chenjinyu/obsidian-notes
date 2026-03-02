@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/7 -  Merge Sort.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/2 - Search/2 - Binary Search.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "7 -  Merge Sort"
+              "title": "2 - Binary Search"
             }
           },
           {
@@ -333,8 +333,12 @@
   },
   "active": "82bcd3c25a76228c",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/6 - Radix Sort.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/2 - Search/1 - Linear Search.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/8 - Tim Sort.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/4 - Quick Sort.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/0 - Sort Comparsion.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/7 -  Merge Sort.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/6 - Radix Sort.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Python Trick.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/3(h) - Tag Valiator.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Regress Expression.md",
@@ -342,10 +346,8 @@
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/assets/3(h) - Tag Valiator",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/assets",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/2(m) - Check HTML Tags Matches.md",
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/2 - Search/9 - Binary Search.md",
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/2 - Search/8 - Linear Search.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/2 - Search/2 - Binary Search.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/5 - Counting Sort.md",
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/4 - Quick Sort.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/3 - Insertion Sort.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/2 - Selection Sort.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/1 - Bubble Sort.md",
@@ -368,8 +370,6 @@
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Shortest Path/ReadMe -  Algorithm.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/JC - Search/two functions comparsion.md",
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Program Design/After * must be passed as keyword-only arguments.md",
-    "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/1 - APIs/API Gateway vs WAF.md",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/4 - Distributed Systems/assets/7 - CDNs/file-20260217225148779.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/4 - Distributed Systems/assets/7 - CDNs/file-20260217225106864.png",
     "1 - Raw Notes/6 - Interview Notes/System Design Interviews (Exponent)/4 - Distributed Systems/assets/7 - CDNs/file-20260217225048962.png",

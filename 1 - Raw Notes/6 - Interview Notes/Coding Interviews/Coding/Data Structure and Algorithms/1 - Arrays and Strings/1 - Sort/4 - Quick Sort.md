@@ -12,6 +12,8 @@ The Quicksort algorithm takes an array of values, chooses one of the values as t
 from typing import List
 
 def quick_sort(nums: List) -> List:
+	# BEST.        Average    Worse.   Space
+	# O(n log n) O(n log n). O(n²).  O(log n)
 	n = len(n)
 	if n <= 1: return nums
 	mid = n // 2
