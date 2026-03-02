@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/6 - Radix Sort.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Python Trick.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "6 - Radix Sort"
+              "title": "Python Trick"
             }
           },
           {
@@ -167,7 +167,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 291.5
+    "width": 366.5
   },
   "right": {
     "id": "c375af2eeef2242a",
@@ -285,6 +285,8 @@
   },
   "active": "1b6cacc8bfdb0b6a",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/6 - Radix Sort.md",
+    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Python Trick.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/3(h) - Tag Valiator.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Regress Expression.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/assets/3(h) - Tag Valiator/file-20260228155944832.png",
@@ -294,7 +296,6 @@
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/2 - Search/9 - Binary Search.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/2 - Search/8 - Linear Search.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/7 -  Merge Sort.md",
-    "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/6 - Radix Sort.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/5 - Counting Sort.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/4 - Quick Sort.md",
     "1 - Raw Notes/6 - Interview Notes/Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/3 - Insertion Sort.md",
