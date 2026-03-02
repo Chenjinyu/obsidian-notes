@@ -22,18 +22,24 @@ Radix Sort uses the radix so that decimal values are put into 10 different bucke
 nums = [12,23,135,1567,115]
 
 def radix_array(nums: List) -> List:
-
-	transfer_nums = [] * len(nums)
-	radix_array = [[]] * 10
+	max_digits = max([len(x) for x in nums])
 	
-	def sort_by_last_digit(transfer_nums)
-	for idx in range(len(nums)):
-		last_digit, remaining = nums[idx] % 10, nums[idx] // 10
-		
-		if remaining == 0 and last_digit == 0:
-			continue
-		if remaining != 0:
+	def sort_by_last_digit(nums):
+		trans_nums = [] * len(nums)
+		radix_array = [[]] * 10
+		for idx in range(len(nums)):
+			last_digit, remaining = nums[idx] % 10, nums[idx] // 10
 			radix_array[last_digit].append(nums[idx])
+		
+		for arr_idx in radix_array:
+			trans_nums.extend(radix_array[arr_idx])
+		return trans_nums
+	
+	for count in range(max_digits):
+		nums = sort_by_last_digit(nums)
+		
+	return nums
+	
 		
 		
 
