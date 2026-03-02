@@ -20,13 +20,21 @@ Radix Sort uses the radix so that decimal values are put into 10 different bucke
 ```python
 
 nums = [12,23,135,1567,115]
-transfer_nums = [] * len(nums)
-radix_array = [[]] * 10
 
-for idx in range(len(nums)):
-	last_digit, remaining = nums[idx] % 10, nums[idx] // 10
+def radix_array(nums: List) -> List:
+
+	transfer_nums = [] * len(nums)
+	radix_array = [[]] * 10
 	
-	if last_digit != 0:
+	def sort_by_last_digit(transfer_nums)
+	for idx in range(len(nums)):
+		last_digit, remaining = nums[idx] % 10, nums[idx] // 10
+		
+		if remaining == 0 and last_digit == 0:
+			continue
+		if remaining != 0:
+			radix_array[last_digit].append(nums[idx])
+		
 		
 
 ```
