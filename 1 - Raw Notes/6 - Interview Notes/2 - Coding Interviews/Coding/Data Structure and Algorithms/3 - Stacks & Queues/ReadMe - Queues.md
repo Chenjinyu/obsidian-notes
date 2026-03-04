@@ -197,7 +197,7 @@ For n dequeue operations on a list, that's **O(n²) total** — a performance di
 
 ## Q7: Stack vs Queue — side by side
 
-|Stack|Queue|
+|Stack|Queue| |
 |---|---|---|
 |Order|LIFO (Last In, First Out)|FIFO (First In, First Out)|
 |Add|push → top|enqueue → back|
