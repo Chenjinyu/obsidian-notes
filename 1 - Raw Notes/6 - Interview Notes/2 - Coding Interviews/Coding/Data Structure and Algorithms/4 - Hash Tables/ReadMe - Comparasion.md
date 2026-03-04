@@ -4,7 +4,7 @@ Tags:
 
 ## What each one stores
 
-|Hash Table / `dict`|`set`|`map`|
+|Hash Table | `dict`|`set`|`map`|
 |---|---|---|---|
 |Stores|**key → value** pairs|**keys only** (no values)|**key → value** pairs|
 |Duplicates|❌ No duplicate keys|❌ No duplicates at all|❌ No duplicate keys|
