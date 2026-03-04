@@ -6,7 +6,7 @@ Tags: [[API]]  [[interview]] [[System Design Interview]] [[../../../../High Leve
 
 Consistent hashing is a methodology for storing data (key and objects) across different servers. It's advantageous over traditional hashing methods because it efficiently adapts to the adding or removal of servers to the system architecture.
 
-
+> It can multiple keys map to same server. (3/3/26)
 ##### Virtual Nodes resolve uneven distribution
 ![](assets/1%20-%20Consistent%20Hashing/file-20260216200918985.png)
 

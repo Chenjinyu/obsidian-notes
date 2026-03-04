@@ -221,20 +221,20 @@ d.get("age", 0)         # safe search with default
 
 ## Interview Cheat Sheet
 
-|Concept|One-liner|
-|---|---|
-|Hash table order|No guaranteed order (except Python 3.7+ dict preserves insertion order)|
-|Search average|O(1)|
-|Search worst case|O(n) — all keys collide|
-|Insert|O(1) amortized — rehashing like list reallocation|
-|Delete|O(1) average|
-|Collision|Two keys hash to the same index|
-|Chaining|Each bucket holds a linked list of colliding pairs|
-|Load factor|filled slots / total buckets — triggers rehash when too high|
-|Python rehash threshold|~0.67 load factor|
-|Hashable types|Immutable only — str, int, tuple (no list, dict, set)|
-|`key in dict`|O(1) — use dict/set over list for membership checks|
-|`key in list`|O(n) — scans every element|
+| Concept                 | One-liner                                                                                                                                               |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Hash table order        | No guaranteed order (except Python 3.7+ dict preserves insertion order)                                                                                 |
+| Search average          | O(1)                                                                                                                                                    |
+| Search worst case       | O(n) — all keys collide                                                                                                                                 |
+| Insert                  | O(1) amortized — rehashing like list reallocation                                                                                                       |
+| Delete                  | O(1) average                                                                                                                                            |
+| Collision               | Two keys hash to the same index                                                                                                                         |
+| Chaining                | Each bucket holds a linked list of colliding pairs                                                                                                      |
+| Load factor             | filled slots / total buckets — triggers rehash when too high                                                                                            |
+| Python rehash threshold | ~0.67 load factor                                                                                                                                       |
+| Hashable types          | Immutable only — str, int, tuple (no list, dict, set)                                                                                                   |
+| `key in dict`           | O(1) — use dict/set over list for membership checks, because python dictionary is implemented using a hash table, and jump directly to that memory slot |
+| `key in list`           | O(n) — scans every element                                                                                                                              |
 
 
 

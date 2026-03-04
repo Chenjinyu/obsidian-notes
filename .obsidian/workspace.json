@@ -80,6 +80,30 @@
             }
           },
           {
+            "id": "ac9cb7fc27631c8b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/1 - Consistent Hashing.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "1 - Consistent Hashing"
+            }
+          },
+          {
             "id": "4f103a4d7319f771",
             "type": "leaf",
             "state": {
@@ -128,7 +152,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -160,7 +184,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "hashing",
+                "query": "consistent",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -301,11 +325,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "82bcd3c25a76228c",
+  "active": "1a71e9f0de9191ea",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Hash Tables/ReadMe - Hash Tables.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/ReadMe - Queues.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/ReadMe - Stacks.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Hash Tables/ReadMe - Hash Tables.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/2(m) - Check HTML Tags Matches.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/9 - Heap Sort.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)/Example 1 - Design a Parking Lot.md",
