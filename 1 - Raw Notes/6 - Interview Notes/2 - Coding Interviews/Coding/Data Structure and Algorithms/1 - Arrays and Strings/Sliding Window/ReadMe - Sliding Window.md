@@ -3,6 +3,14 @@ Course:
 Tags: 
 
 # Content
+
+## Remember
+```
+Whenever you see a problem that not only describes subarrays being "valid", 
+but also asks you to find these subarrays, 
+you should immediately think about sliding window.
+```
+
 ## Why the sliding window is O(n)
 Below of the time complexity is O(n), because the left does not reset for each right, it only moves forward overall. (**[**amortized analysis**](https://en.wikipedia.org/wiki/Amortized_analysis)**)
 ##### key point here is right does not reset backwards!!! so that its should be o(n)
