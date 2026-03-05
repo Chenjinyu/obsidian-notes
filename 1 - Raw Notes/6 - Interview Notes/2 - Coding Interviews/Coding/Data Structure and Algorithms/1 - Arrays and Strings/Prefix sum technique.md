@@ -11,6 +11,8 @@ prefix` where `prefix[i]` is the sum of all elements up to the index `i` (i
 ```
 For example, given `nums = [5, 2, 1, 6, 3, 8]`, we would have `prefix = [5, 7, 8, 14, 17, 25]`.
 
+
+![](assets/Prefix%20sum%20technique/file-20260305010804782.png)
 # Note
 
 
