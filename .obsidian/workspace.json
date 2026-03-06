@@ -80,18 +80,6 @@
             }
           },
           {
-            "id": "36d5b19d8b581e96",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.12.4"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.12.4"
-            }
-          },
-          {
             "id": "ac9cb7fc27631c8b",
             "type": "leaf",
             "state": {
@@ -337,7 +325,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "36d5b19d8b581e96",
+  "active": "ac9cb7fc27631c8b",
   "lastOpenFiles": [
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets/Prefix sum technique/file-20260305010804782.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets/Prefix sum technique",
