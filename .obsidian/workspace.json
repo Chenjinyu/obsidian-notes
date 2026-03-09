@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Hash Tables/Counting.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/More Common Patterns.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Counting"
+              "title": "More Common Patterns"
             }
           },
           {
@@ -184,7 +184,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "consistent",
+                "query": "subsequence",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -327,15 +327,19 @@
   },
   "active": "82bcd3c25a76228c",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Mathematical formula.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Prefix sum technique.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/In-Place or New.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/More Common Patterns.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Hash Tables/Counting.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Hash Tables/ReadMe - Comparasion.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Hash Tables/ReadMe - Hash Tables.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Hash Tables/ReadMe - Hash Set.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Hash Tables/ReadMe - Hash Maps vs Hash Tables.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Hash Tables/ReadMe - Hash Tables.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Hash Tables/ReadMe - Comparasion.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/More Common Patterns.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Bitwise Operation (python vs mathematics).md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Regress Expression.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Python Trick.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Mathematical formula.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Strings.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Prefix sum technique.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/1 - Consistent Hashing.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets/Prefix sum technique/file-20260305010804782.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets/Prefix sum technique",
@@ -361,10 +365,6 @@
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/assets/8 - Microservices Chanlleges & Service Mesh Istio/file-20260303000511889.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/assets/8 - Microservices Chanlleges & Service Mesh Istio/file-20260303000417012.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/assets/8 - Microservices Chanlleges & Service Mesh Istio",
-    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/2 - CAP Theorem (定理).md",
-    "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/7 - Hiring Manager Interview.md",
-    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)/0 - ReadMe.md",
-    "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/2 - Low-Level System Design(LLD).md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)",
     "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways",
     "1 - Raw Notes/6 - Interview Notes/4 - Behavior Interviews",
