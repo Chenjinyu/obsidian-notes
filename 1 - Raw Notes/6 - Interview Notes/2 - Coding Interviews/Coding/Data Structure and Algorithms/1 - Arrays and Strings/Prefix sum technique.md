@@ -39,7 +39,7 @@ The **average** of `x` elements is the sum of the `x` elements divided by�
 from typing import List
 
 def get_averages(nums: List[int], k: int) -> List[int]:
-	n = len(n)
+	n = len(nums)
 	ans = [-1] * n
 	
 	if 2 * k + 1 > n: return ans
