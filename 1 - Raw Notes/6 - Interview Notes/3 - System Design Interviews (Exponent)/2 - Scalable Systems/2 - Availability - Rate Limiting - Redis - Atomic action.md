@@ -1,6 +1,6 @@
 Date: 2026-02-03
 Course:
-Tags: [[System Design Interview]]
+Tags: [[System Design Interview]] [[Availability]]
 
 # Content
 
