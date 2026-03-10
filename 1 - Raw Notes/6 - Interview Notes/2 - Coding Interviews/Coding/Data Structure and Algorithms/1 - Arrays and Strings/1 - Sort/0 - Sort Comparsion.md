@@ -1,7 +1,13 @@
 Date: 2026-03-01
 Course:
 Tags: 
-#review
+
+---  
+sr-due: 2026-03-09  
+sr-interval: 1  
+sr-ease: 2.5  
+---
+
 # Content
 
 
