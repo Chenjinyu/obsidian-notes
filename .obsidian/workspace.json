@@ -4,107 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d89078f5b5420a3a",
+        "id": "d92125c5b636f0a2",
         "type": "tabs",
         "children": [
           {
-            "id": "560b9f98c5740ea9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/5 - Mock Interviews/1 - Real-Time/1 - Design Facebook Messenger.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "1 - Design Facebook Messenger"
-            }
-          },
-          {
-            "id": "1b6cacc8bfdb0b6a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Python Trick.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Python Trick"
-            }
-          },
-          {
-            "id": "4f103a4d7319f771",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/ReadMe - Queues.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "ReadMe - Queues"
-            }
-          },
-          {
-            "id": "8ff7a772ef2d14df",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/Availability.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Availability"
-            }
-          },
-          {
-            "id": "d1aeb28f581562ac",
+            "id": "7bc07d3c8df86cb1",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -126,33 +30,8 @@
               "icon": "lucide-file",
               "title": "0560. Subarray Sum Equals K (M)"
             }
-          },
-          {
-            "id": "137234a25b472bbc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/Reliability.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Reliability"
-            }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -345,9 +224,15 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "d1aeb28f581562ac",
+  "active": "7bc07d3c8df86cb1",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/5 - Mock Interviews/1 - Real-Time/1 - Design Facebook Messenger.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Python Trick.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/ReadMe - Queues.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/Availability.md",
+    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/Reliability.md",
+    "3 - Zettelkasten/A - Templates/LeetCode.md",
+    "3 - Zettelkasten/A - Templates/Academic Note.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/0560. Subarray Sum Equals K (M).md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions",
     "1 - Raw Notes/6 - Interview Notes/Review Dashboard.md",
@@ -357,25 +242,19 @@
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/2 - Availability - Queue-Based Load Leveling.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/2 - Availability - Gateway Aggregation.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/2 - Availability.md",
-    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/Reliability.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Sagas - Orchestration vs Choreography.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Sagas.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Exponential Backoff Strategy (Transient Failures).md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)/Example 1 - Design a Parking Lot.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/ReadMe - Queues.md",
     "2026-03-09.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/1 - Bubble Sort.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Prefix sum technique.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/0 - Sort Comparsion.md",
     "Untitled.md",
-    "High Level.md",
     "i changed the canvas name - check sync to git.canvas",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/2 - Linked Lists/1 - Linked Lists Types.md",
-    "Welcome.md",
     "Untitled.canvas",
-    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/1 - Consistent Hashing.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets/Prefix sum technique/file-20260305010804782.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets/Prefix sum technique",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/assets/8 - Microservices Chanlleges & Service Mesh Istio/file-20260303000936153.png",
