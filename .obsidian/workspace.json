@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/1 - Consistent Hashing.md",
+                "file": "Untitled.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "1 - Consistent Hashing"
+              "title": "Untitled"
             }
           },
           {
@@ -194,6 +194,7 @@
       {
         "id": "c4e325c0b063c250",
         "type": "tabs",
+        "dimension": 68.33941605839416,
         "children": [
           {
             "id": "92e943b1ca42dffb",
@@ -249,23 +250,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Welcome.md",
+                "file": "Untitled.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Welcome"
-            }
-          },
-          {
-            "id": "6f0468b84a9b80eb",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {},
-              "icon": "lucide-ghost",
-              "title": "calendar"
+              "title": "Outline of Untitled"
             }
           },
           {
@@ -274,7 +265,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "3 - Zettelkasten/A - Templates/Academic Note.md"
+                "file": "Untitled.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -291,12 +282,28 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
+      },
+      {
+        "id": "5660c549cda35e24",
+        "type": "tabs",
+        "dimension": 31.66058394160584,
+        "children": [
+          {
+            "id": "6f0468b84a9b80eb",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 324.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -313,9 +320,15 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "2bac451f8a1b6d29",
+  "active": "ac9cb7fc27631c8b",
   "lastOpenFiles": [
+    "High Level.md",
+    "Untitled.md",
+    "i changed the canvas name - check sync to git.canvas",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/2 - Linked Lists/1 - Linked Lists Types.md",
+    "Welcome.md",
     "Untitled.canvas",
+    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/1 - Consistent Hashing.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/More Common Patterns.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Prefix sum technique.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/In-Place or New.md",
@@ -329,7 +342,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Python Trick.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Mathematical formula.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Strings.md",
-    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/1 - Consistent Hashing.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets/Prefix sum technique/file-20260305010804782.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets/Prefix sum technique",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sliding Window/Q1(m) - 713.Subarray Project Less Than K.md",
@@ -340,9 +352,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/2(m) - Check HTML Tags Matches.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/9 - Heap Sort.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)/Example 1 - Design a Parking Lot.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/2 - Search/1 - Linear Search.md",
-    "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/2 - Phone Screen vs Coding Interview.md",
-    "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/1 - Interview Process.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/assets/8 - Microservices Chanlleges & Service Mesh Istio/file-20260303000936153.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/assets/8 - Microservices Chanlleges & Service Mesh Istio/file-20260303000917921.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/assets/8 - Microservices Chanlleges & Service Mesh Istio/file-20260303000856693.png",
@@ -366,7 +375,6 @@
     "Untitled 3.canvas",
     "Untitled 2.canvas",
     "Untitled 1.canvas",
-    "i changed the canvas name - check sync to git.canvas",
     "4 - Canvas/1 - Road Maps/AI-Agent Leads Learning Plan.canvas",
     "4 - Canvas/3 - Career/Next Role.canvas"
   ]
