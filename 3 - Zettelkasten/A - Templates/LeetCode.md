@@ -12,8 +12,8 @@ Tags: [[LeetCode]]
 - What constraints matter?
 
 1. Allow duplicate?
-2. Negative numbers?
-3. Empty List
+2. Allow Negative numbers?
+3. Allow Empty List
 
 # Step 2 - Try Brute Force First to help you understand the structure of the problems
 
