@@ -112,7 +112,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "2090",
+                "query": "tag:#sliding_window",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -273,7 +273,7 @@
       "obsidian-spaced-repetition:Review flashcards": false
     }
   },
-  "active": "770cab940463d2f9",
+  "active": "1a71e9f0de9191ea",
   "lastOpenFiles": [
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Prefix sum technique.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/1248. Count Number of Nice Subarrays.md",
