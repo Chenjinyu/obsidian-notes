@@ -2,6 +2,7 @@ Date: 2026-03-04
 Course:
 Tags: 
 
+#review/3d
 # Content
 
 Prefix sum is a technique that can be used on arrays (of numbers, usually). 
