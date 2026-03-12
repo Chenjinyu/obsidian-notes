@@ -57,6 +57,36 @@
           }
         ],
         "currentTab": 1
+      },
+      {
+        "id": "46fb3916ffc2d6fd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c843f7c5955c4c63",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/0560. Subarray Sum Equals K (M).md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "0560. Subarray Sum Equals K (M)"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -113,7 +143,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 383.5
+    "width": 263.5
   },
   "right": {
     "id": "c375af2eeef2242a",
@@ -250,13 +280,13 @@
   },
   "active": "1a84a01e91408af1",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/0560. Subarray Sum Equals K (M).md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/1248. Count Number of Nice Subarrays.md",
     "1 - Raw Notes/6 - Interview Notes/Review Dashboard.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Prefix sum technique.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/0 - Sort Comparsion.md",
     "3 - Zettelkasten/A - Templates/Academic Note.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Untitled.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/0560. Subarray Sum Equals K (M).md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/1248. Count Number of Nice Subarrays.md",
     "3 - Zettelkasten/A - Templates/LeetCode.md",
     "2026-03-09.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/5 - Mock Interviews/1 - Real-Time/1 - Design Facebook Messenger.md",
