@@ -1,3 +1,16 @@
+## adding below to  the top of note page
+```text
+---
+sr-due: 2026-03-09 
+sr-interval: 1
+sr-ease: 2.5
+---
+```
+sr-due: is the next review date
+sr-interval: how many days until next review
+sr-ease: how fast the interval grows. rough idea: next_iterval = interval *  ease.
+- higher ease -> review less often
+- lower case -> review more often
 ## Daily
 ```query
 tag:#review/daily
