@@ -13,30 +13,6 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Prefix sum technique.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Prefix sum technique"
-            }
-          },
-          {
-            "id": "1a84a01e91408af1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/1248. Count Number of Nice Subarrays.md",
                 "mode": "source",
                 "source": false,
@@ -56,12 +32,12 @@
             }
           },
           {
-            "id": "37d5b006932db2c9",
+            "id": "dc6c6dec6abc8810",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/Review Dashboard.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/2225. Find Players With Zero or One Losses.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,41 +52,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Review Dashboard"
+              "title": "2225. Find Players With Zero or One Losses"
             }
           }
         ],
-        "currentTab": 2
-      },
-      {
-        "id": "46fb3916ffc2d6fd",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "c843f7c5955c4c63",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/0560. Subarray Sum Equals K (M).md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "0560. Subarray Sum Equals K (M)"
-            }
-          }
-        ]
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -232,13 +178,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/0560. Subarray Sum Equals K (M).md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/2225. Find Players With Zero or One Losses.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 0560. Subarray Sum Equals K (M)"
+              "title": "Outline of 2225. Find Players With Zero or One Losses"
             }
           },
           {
@@ -247,7 +193,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/0560. Subarray Sum Equals K (M).md"
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/2225. Find Players With Zero or One Losses.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -299,18 +245,21 @@
       "audio-recorder:Start/stop recording": false,
       "templater-obsidian:Templater": false,
       "obsidian-git:Open Git source control": false,
-      "obsidian-spaced-repetition:Review flashcards": false
+      "obsidian-spaced-repetition:Review flashcards": false,
+      "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "c843f7c5955c4c63",
+  "active": "dc6c6dec6abc8810",
   "lastOpenFiles": [
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Patterns/Pattern HashMap and Prefix Sum.md",
-    "1 - Raw Notes/6 - Interview Notes/Review Dashboard.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Patterns",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/0560. Subarray Sum Equals K (M).md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/2225. Find Players With Zero or One Losses.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/1248. Count Number of Nice Subarrays.md",
-    "3 - Zettelkasten/A - Templates/LeetCode.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/0560. Subarray Sum Equals K (M).md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Prefix sum technique.md",
+    "1 - Raw Notes/6 - Interview Notes/Review Dashboard.md",
+    "3 - Zettelkasten/B - Tags/ML.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Patterns",
+    "3 - Zettelkasten/A - Templates/LeetCode.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/0 - Sort Comparsion.md",
     "3 - Zettelkasten/A - Templates/Academic Note.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Untitled.md",
@@ -330,7 +279,6 @@
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Sagas - Orchestration vs Choreography.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Sagas.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Exponential Backoff Strategy (Transient Failures).md",
-    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
     "i changed the canvas name - check sync to git.canvas",
     "Untitled.canvas",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets/Prefix sum technique/file-20260305010804782.png",
