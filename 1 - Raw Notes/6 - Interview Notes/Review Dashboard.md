@@ -3,16 +3,26 @@
 copy below and ctrl + p to choose: templater: Replace templates in the active file
 ```text
 ---
-sr-due: <% tp.date.now("YYYY-MM-DD") %>
+sr-due: <% tp.date.now("YYYY-MM-DD", 3) %>
 sr-interval: 1
 sr-ease: 2.5
 ---
 ```
+### Explaination
+```text
 sr-due: is the next review date
 sr-interval: how many days until next review
 sr-ease: how fast the interval grows. rough idea: next_iterval = interval *  ease.
 - higher ease -> review less often
 - lower case -> review more often
+```
+
+After n days
+```yaml
+sr-due: <% tp.date.now("YYYY-MM-DD", n) %>
+```
+
+
 ## Daily
 ```query
 tag:#review/daily

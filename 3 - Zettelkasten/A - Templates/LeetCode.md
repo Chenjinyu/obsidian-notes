@@ -1,9 +1,9 @@
 ---
-sr-due: <% tp.date.now("YYYY-MM-DD") %>
+sr-due: <% tp.date.now("YYYY-MM-DD", 3) %>
 sr-interval: 1
 sr-ease: 2.5
 ---
-Date: {{date}}
+Creation Date: {{date}}
 Course:
 Tags: [[LeetCode]]
 
@@ -21,8 +21,14 @@ Tags: [[LeetCode]]
 3. Allow Empty List
 
 # Step 2 - Try Brute Force First to help you understand the structure of the problems
+```python
+
+```
 
 # Step 3 - Think about Optimization
+```python
+
+```
 
 # Step 4 - If stuck > 20 mins, Study the solution
 1. Why does the algorithm work?
@@ -30,9 +36,11 @@ Tags: [[LeetCode]]
 3. What problem type does it belong to?
 
 # Step 5 - Re implement from scratch. 
+```python
 
-
+```
 
 
 # Takeaways
 
+# Reference
