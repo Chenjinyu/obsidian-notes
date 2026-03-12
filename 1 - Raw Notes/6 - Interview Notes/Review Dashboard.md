@@ -1,7 +1,9 @@
 ## adding below to  the top of note page
+
+copy below and ctrl + p to choose: templater: Replace templates in the active file
 ```text
 ---
-sr-due: 2026-03-09 
+sr-due: <% tp.date.now("YYYY-MM-DD") %>
 sr-interval: 1
 sr-ease: 2.5
 ---
