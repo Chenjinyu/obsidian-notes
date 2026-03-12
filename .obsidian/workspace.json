@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "7bc07d3c8df86cb1",
+            "id": "ce568a0ac1a4d82e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/1248. Count Number of Nice Subarrays.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/2225. Find Players With Zero or One Losses.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,42 +28,17 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "1248. Count Number of Nice Subarrays"
-            }
-          },
-          {
-            "id": "c5d5fb53790664ab",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/0974. Subarray Sums Divisible by K.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "0974. Subarray Sums Divisible by K"
+              "title": "2225. Find Players With Zero or One Losses"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
-        "id": "2301296f06042c47",
+        "id": "52cf4417737bd3fa",
         "type": "tabs",
         "children": [
           {
-            "id": "45bf11770fd4a997",
+            "id": "7bc07d3c8df86cb1",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -208,13 +183,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/0974. Subarray Sums Divisible by K.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/2225. Find Players With Zero or One Losses.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 0974. Subarray Sums Divisible by K"
+              "title": "Outline of 2225. Find Players With Zero or One Losses"
             }
           },
           {
@@ -223,7 +198,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/0974. Subarray Sums Divisible by K.md"
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/2225. Find Players With Zero or One Losses.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -279,7 +254,7 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "c5d5fb53790664ab",
+  "active": "ce568a0ac1a4d82e",
   "lastOpenFiles": [
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/1248. Count Number of Nice Subarrays.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/0974. Subarray Sums Divisible by K.md",
