@@ -1,3 +1,8 @@
+---
+sr-due: 2026-03-28
+sr-interval: 15
+sr-ease: 2.5
+---
 Date: 2026-03-01
 Course:
 Tags: 
@@ -13,6 +18,13 @@ so, when you change one sub-list value, rest of sub-lists will be changed at the
 
 ## `2. [] * 10`
  It  only create an empty list. * on empty list is always []
+
+## 3 zip
+`grip = [[1,2,3],[3,2,1], [2,1,1]]`
+`print(list(zip(grip)))` returns:
+`[([1, 2, 3],), ([3, 2, 1],), ([2, 1, 1],)]`  <- change to set, element is a list
+`print(list(zip(*grip)))` returns:
+`[(1, 3, 2), (2, 2, 1), (3, 1, 1)]` <- rotate the row and column
 
 # Note
 
