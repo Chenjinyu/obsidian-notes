@@ -129,6 +129,30 @@
             }
           },
           {
+            "id": "a308b4fbf3eee951",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Patterns/Pattern HashMap and Prefix Sum.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Pattern HashMap and Prefix Sum"
+            }
+          },
+          {
             "id": "4a1b809e270f1184",
             "type": "leaf",
             "state": {
@@ -185,30 +209,6 @@
             }
           },
           {
-            "id": "a308b4fbf3eee951",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Patterns/Pattern HashMap and Prefix Sum.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Pattern HashMap and Prefix Sum"
-            }
-          },
-          {
             "id": "f3bcabc18d154123",
             "type": "leaf",
             "state": {
@@ -233,7 +233,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"

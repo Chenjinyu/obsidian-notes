@@ -28,7 +28,8 @@ sr-ease: 2.5
 
 # The template
 ```python
-pref_sum = {0: 1}   # seed: one left boundary before the array
+pref_sum = {0: 1}   # seed: one left boundary before the array, Without it, you'd miss all subarrays that start from index 0.
+# because the ans is be added before the prefix[] += 1
 curr = 0
 ans = 0
 
