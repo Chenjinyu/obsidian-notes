@@ -6,6 +6,7 @@
       {
         "id": "d92125c5b636f0a2",
         "type": "tabs",
+        "dimension": 37.98245614035088,
         "children": [
           {
             "id": "ce568a0ac1a4d82e",
@@ -61,6 +62,7 @@
       {
         "id": "52cf4417737bd3fa",
         "type": "tabs",
+        "dimension": 62.01754385964912,
         "children": [
           {
             "id": "7bc07d3c8df86cb1",
@@ -68,7 +70,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/2342. Max Sum of a Pair With Equal Sum of Digits.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/0525. Contiguous Array.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -83,31 +85,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2342. Max Sum of a Pair With Equal Sum of Digits"
-            }
-          },
-          {
-            "id": "14d809226c0eba1c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/2225. Find Players With Zero or One Losses.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "2225. Find Players With Zero or One Losses"
+              "title": "0525. Contiguous Array"
             }
           }
         ]
@@ -232,13 +210,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/2342. Max Sum of a Pair With Equal Sum of Digits.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/0525. Contiguous Array.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2342. Max Sum of a Pair With Equal Sum of Digits"
+              "title": "Outline of 0525. Contiguous Array"
             }
           },
           {
@@ -247,7 +225,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/2342. Max Sum of a Pair With Equal Sum of Digits.md"
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/0525. Contiguous Array.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -305,15 +283,16 @@
   },
   "active": "7bc07d3c8df86cb1",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/2225. Find Players With Zero or One Losses.md",
+    "1 - Raw Notes/6 - Interview Notes/Review Dashboard.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/0525. Contiguous Array.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/2342. Max Sum of a Pair With Equal Sum of Digits.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/2342. Max Sum of a Pair With Equal Sum of Digits/file-20260313021250514.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/2342. Max Sum of a Pair With Equal Sum of Digits",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/2225. Find Players With Zero or One Losses.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/2342. Max Sum of a Pair With Equal Sum of Digits.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/0974. Subarray Sums Divisible by K.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Python Trick.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/1248. Count Number of Nice Subarrays.md",
-    "1 - Raw Notes/6 - Interview Notes/Review Dashboard.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/More Common Patterns.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/0560. Subarray Sum Equals K (M).md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/Reliability.md",
@@ -347,7 +326,6 @@
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/assets/8 - Microservices Chanlleges & Service Mesh Istio/file-20260303000600782.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/assets/8 - Microservices Chanlleges & Service Mesh Istio/file-20260303000540005.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/assets/8 - Microservices Chanlleges & Service Mesh Istio/file-20260303000511889.png",
-    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/assets/8 - Microservices Chanlleges & Service Mesh Istio/file-20260303000417012.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/assets/8 - Microservices Chanlleges & Service Mesh Istio",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)",
     "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways",
