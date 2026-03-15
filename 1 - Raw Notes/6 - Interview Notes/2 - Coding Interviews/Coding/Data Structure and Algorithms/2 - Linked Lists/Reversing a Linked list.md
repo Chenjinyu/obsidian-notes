@@ -24,7 +24,8 @@ def reverse_list(head):
         curr.next = prev      # reverse the direction of the pointer
         prev = curr           # set the current node to prev for the next node
         curr = next_node      # move on
-        
+    
+    # here should return prev, because the curr will point to None in the last step when curr is the end of node.
     return prev
 ```
 # Note
