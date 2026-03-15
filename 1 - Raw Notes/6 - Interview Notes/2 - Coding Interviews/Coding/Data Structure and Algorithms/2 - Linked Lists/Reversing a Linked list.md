@@ -8,6 +8,11 @@ Date: 2026-03-14
 Course:
 Tags: 
 #review/15d 
+
+# Review Notes
+- to understand the purposes of different pointers. 
+
+
 # Content
 
 While [reversing a linked list](https://leetcode.com/problems/reverse-linked-list/) is a common interview problem in itself, it is also a technique that can be a step in solving different problems. 
@@ -30,9 +35,22 @@ def reverse_list(head):
 ```
 
 # Takeaway
-1. the reverse, ONLY swap the prev and curr, the next_node is ONLY used for curr node moves to next.
+### Reverse entire list - Both `prev` and `curr` move
+```txt
+prev = curr           # prev advances
+curr = next_node      # curr advances  
+```
+> Both pointers walk forward together, `prev` is the "last reversed node" and keeps moving. 
+### Reverse sublist - Only `curr`  moves, and `prev` stays frozen. 
+reference: [[../../../LeetCode Questions/M - 0092. Reverse Linked List II|M - 0092. Reverse Linked List II]]
+```text
+prev.next = next_node       # prev stays, but re-aims at new front
+curr stays at tail          # 
+```
+> `prev` is an anchor - it never moves, it just keeps re-pointing to whoever is the new front of the reversed section. `curr` is also frozen as the tail of the growing reversed section.
 # Note
 
 
 # Reference
+- [[../../../LeetCode Questions/M - 0092. Reverse Linked List II|M - 0092. Reverse Linked List II]]
 
