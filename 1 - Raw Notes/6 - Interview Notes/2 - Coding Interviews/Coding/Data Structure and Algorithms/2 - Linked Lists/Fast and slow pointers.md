@@ -12,7 +12,7 @@ Tags:
 # Content
 ## pseudocode
 ```python
-// head is the head node of a linked list
+# head is the head node of a linked list
 function fn(head):
     slow = head
     fast = head
