@@ -69,8 +69,8 @@ print(m.group(1, 2))      # ('Jane', 'Doe')  (multiple at once)
 ```
 eg. 
 1. \d{4}, matches the integer has 4 digits, eg "200200" returns  2002. eg "20020001"  returns 2002 and 0001
-2. \d{1,4}. "12345", reeturns 1234 and 1
-3. \d{1,7}. "12345", reeturns 12345
+2. \d{1,4}. "12345", returns 1234 and 1
+3. \d{1,7}. "12345", returns 12345
 ```
 - `{4,6}`: range numbers, from 4 to 6 # eg. \d{2,4}, matches the integers has 2 to 4 digits. eg: 12, 123, 1234
 
