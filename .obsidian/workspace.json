@@ -32,12 +32,12 @@
             }
           },
           {
-            "id": "4a1071368f225e53",
+            "id": "7f200ad2d88d4c23",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/Review Dashboard.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/ReadMe - Stacks.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,11 +52,59 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Review Dashboard"
+              "title": "ReadMe - Stacks"
+            }
+          },
+          {
+            "id": "cadd01205fcf3224",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/2(m) - Check HTML Tags Matches.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2(m) - Check HTML Tags Matches"
+            }
+          },
+          {
+            "id": "a6a422532b4b78a0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/3(h) - Tag Valiator.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "3(h) - Tag Valiator"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -178,13 +226,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/Review Dashboard.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/3(h) - Tag Valiator.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Review Dashboard"
+              "title": "Outline of 3(h) - Tag Valiator"
             }
           },
           {
@@ -193,7 +241,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/Review Dashboard.md"
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/3(h) - Tag Valiator.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -249,14 +297,16 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "4a1071368f225e53",
+  "active": "a6a422532b4b78a0",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/2(m) - Check HTML Tags Matches.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/ReadMe - Stacks.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/2 - Linked Lists/Reversing a Linked list.md",
+    "1 - Raw Notes/6 - Interview Notes/Review Dashboard.md",
     "3 - Zettelkasten/A - Templates/LeetCode.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2352. Equal Row and Column Pairs.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0092. Reverse Linked List II.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/2 - Linked Lists/Reversing a Linked list.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0024. Swap Nodes in Pairs.md",
-    "1 - Raw Notes/6 - Interview Notes/Review Dashboard.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0876. Middle of the Linked List.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0560. Subarray Sum Equals K.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/2 - Linked Lists/Fast and slow pointers.md",
@@ -279,8 +329,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/0 - Sort Comparsion.md",
     "3 - Zettelkasten/A - Templates/Academic Note.md",
     "2026-03-09.md",
-    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/5 - Mock Interviews/1 - Real-Time/1 - Design Facebook Messenger.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/3 - Stacks & Queues/ReadMe - Queues.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions",
     "i changed the canvas name - check sync to git.canvas",
     "Untitled.canvas",

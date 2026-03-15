@@ -149,11 +149,8 @@ Reallocation happens _rarely_. The cost gets spread over all the cheap appends:
 |n appends total|O(n) → O(1) amortized per append|
 
 ---
-
 ## Q5: Should I mention amortized analysis in an interview?
-
 **Yes, and it signals strong understanding.**
-
 - Just saying `O(1)` is acceptable for most answers
 - But saying **"O(1) amortized"** shows you know _why_ and earns more credibility
 - If an interviewer pushes back on `O(1)`, explain the amortized argument above

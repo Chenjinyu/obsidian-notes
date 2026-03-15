@@ -6,7 +6,7 @@ sr-ease: 2.5
 
 Date: 2026-03-14
 Course:
-Tags: 
+Tags: [[../../../../../../3 - Zettelkasten/A - Templates/LeetCode|LeetCode]] [[Linked Lists]]
 #review/15d 
 
 # Review Notes
