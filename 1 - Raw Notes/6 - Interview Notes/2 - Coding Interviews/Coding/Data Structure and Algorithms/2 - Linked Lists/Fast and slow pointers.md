@@ -1,6 +1,6 @@
 ---
 sr-due: 2026-03-14
-sr-interval: 10
+sr-interval: 15
 sr-ease: 2.5
 ---
 
@@ -8,6 +8,7 @@ Date: 2026-03-14
 Course:
 Tags: 
 
+#review/15d 
 # Content
 ## pseudocode
 ```python
@@ -49,6 +50,50 @@ So the two conditions guard two different failure modes:
 | `fast` | dereferencing null when list is even-length |
 | `fast.next` | dereferencing null.next when list is odd-length |
 
+# Example 1
+141. Linked List Cycle: Given the `head` of a linked list, determine if the linked list has a cycle.
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+from typing import Optional
+class Solution:
+    def hasCycle(self, head: Optional[ListNode]) -> bool:
+    # Time complexity: O(n), space complexity: O(1)
+        slow = head
+        fast = head
+        
+        while fast and fast.next: # if there is no loop, then, the while loop will exit, after end of link
+            slow = slow.next
+            fast = fast.next.next
+            
+            # if its a cycle, how matter the rounds, eventually, 
+            # the fast pointer will catch up and equals to slow.
+            if slow == fast:
+                return True
+        return False
+```
+
+# Example 2
+Given the head of a linked list and an integer `k`, return the k_th node from the end.
+For example, given the linked list that represents `1 -> 2 -> 3 -> 4 -> 5` and `k = 2`, return the node with value `4`, as it is the 2nd node from the end.
+```python
+def find_node(head, k):
+	fast = head
+	slow = head
+	
+	for _ in range(k):
+		fast = fast.next
+	
+	while fast:
+		slow = slow.next
+		fast = fast.next
+		
+	return slow
+```
+> Note: we could just convert the list to an array, or we could iterate through once to find the length and then iterate again once we know the length, but there is a more elegant solution.
 # Note
 
 
