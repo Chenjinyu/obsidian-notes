@@ -28,6 +28,9 @@ def reverse_list(head):
     # here should return prev, because the curr will point to None in the last step when curr is the end of node.
     return prev
 ```
+
+# Takeaway
+1. the reverse, ONLY swap the prev and curr, the next_node is ONLY used for curr node moves to next.
 # Note
 
 
