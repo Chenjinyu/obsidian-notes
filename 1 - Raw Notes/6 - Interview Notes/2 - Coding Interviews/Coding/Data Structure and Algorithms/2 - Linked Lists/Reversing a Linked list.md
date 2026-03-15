@@ -1,5 +1,5 @@
 ---
-sr-due: <% tp.date.now("YYYY-MM-DD") %>
+sr-due: 2026-03-15
 sr-interval: 15
 sr-ease: 2.5
 ---

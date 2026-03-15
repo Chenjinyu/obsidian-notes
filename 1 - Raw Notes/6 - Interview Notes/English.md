@@ -1,3 +1,8 @@
+---
+sr-due: 2026-03-18
+sr-interval: 15
+sr-ease: 2.5
+---
 Date: 2026-01-27
 Course:
 Tags: [Interview]
@@ -25,6 +30,22 @@ Exponential: 指数
 Factorial: 阶乘
 ![](assets/English/file-20260128000547991.png)
 ![](assets/English/file-20260128000607801.png)
+
+The common English names:
+
+| Symbol  | Common name     | Also called             |
+| ------- | --------------- | ----------------------- |
+| `(` `)` | parentheses     | round brackets          |
+| `[` `]` | square brackets | brackets                |
+| `{` `}` | curly braces    | curly brackets / braces |
+
+---
+
+So you would say:
+> "open paren, close paren, open bracket, close bracket, open brace, close brace"
+
+Or collectively just:
+> "parentheses, square brackets, and curly braces"
 
 # Note
 
