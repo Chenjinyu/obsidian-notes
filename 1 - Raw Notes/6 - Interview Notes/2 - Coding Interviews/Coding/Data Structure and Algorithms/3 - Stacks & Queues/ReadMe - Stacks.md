@@ -12,6 +12,8 @@ A **stack** is a Last-In-First-Out (LIFO) data structure. In Python, it can be i
 
 Each has different tradeoffs. Knowing them deeply will help you answer follow-up questions in interviews.
 
+
+
 ---
 
 ## Q1: What are the time complexities for each stack operation?
