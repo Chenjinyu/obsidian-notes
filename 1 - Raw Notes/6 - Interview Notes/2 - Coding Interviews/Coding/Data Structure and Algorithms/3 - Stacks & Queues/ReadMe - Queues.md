@@ -35,7 +35,20 @@ recentCounter.ping(3002);  // requests = [1, 100, 3001, 3002], range is [2,3002]
 
 ## Solution
 ```python
+from collections import deque
 
+class RecentCounter:
+    def __init__(self):
+        self.queue = deque()
+
+    def ping(self, t: int) -> int:
+        self.queue.append(t)
+        while self.queue[0] < t - 3000:
+            self.queue.popleft()
+        return len(self.queue)
+# Your RecentCounter object will be instantiated and called as such:
+# obj = RecentCounter()
+# param_1 = obj.ping(t)
 ```
 ## Overview
 
@@ -106,86 +119,6 @@ dequeue                enqueue
 |`is_empty`|O(n) default / O(1) with `_count`|Same trick as stack|
 
 > **Key insight:** You need **both a `_head` and `_tail` pointer**. Without `_tail`, enqueue would be O(n) since you'd have to traverse to the end every time.
-
----
-
-## Q3: Full Implementation — Linked List Queue
-
-```python
-class Node:
-    def __init__(self, val):
-        self.val = val
-        self.next = None
-
-class LinkedListQueue:
-    def __init__(self):
-        self._head = None   # front — dequeue from here
-        self._tail = None   # back  — enqueue from here
-        self._count = 0
-
-    def enqueue(self, val):
-        node = Node(val)
-        if self._tail:
-            self._tail.next = node
-        self._tail = node
-        if self._head is None:   # first element
-            self._head = node
-        self._count += 1         # O(1)
-
-    def dequeue(self):
-        if self.is_empty():
-            raise IndexError("Queue is empty")
-        val = self._head.val
-        self._head = self._head.next
-        if self._head is None:   # queue is now empty
-            self._tail = None
-        self._count -= 1         # O(1)
-        return val
-
-    def peek(self):
-        if self.is_empty():
-            raise IndexError("Queue is empty")
-        return self._head.val
-
-    def is_empty(self):
-        return self._count == 0  # O(1)
-
-    def __len__(self):
-        return self._count       # O(1)
-```
-
----
-
-## Q4: Full Implementation — deque-based Queue
-
-```python
-from collections import deque
-
-class Queue:
-    def __init__(self):
-        self._data = deque()
-
-    def enqueue(self, val):
-        self._data.append(val)       # add to right
-
-    def dequeue(self):
-        if self.is_empty():
-            raise IndexError("Queue is empty")
-        return self._data.popleft()  # remove from left — O(1)
-
-    def peek(self):
-        if self.is_empty():
-            raise IndexError("Queue is empty")
-        return self._data[0]
-
-    def is_empty(self):
-        return len(self._data) == 0
-
-    def __len__(self):
-        return len(self._data)
-```
-
----
 
 ## Q5: What about Search, Insert, and Delete?
 
