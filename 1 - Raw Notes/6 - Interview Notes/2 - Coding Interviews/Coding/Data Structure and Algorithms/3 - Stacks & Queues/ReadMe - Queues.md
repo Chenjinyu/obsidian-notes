@@ -4,7 +4,83 @@ Tags: [[DSA]]
 
 # Python Queue — Interview Study Notes
 
-## Code Example: [933. Number of Recent Calls](https://leetcode.com/problems/number-of-recent-calls/)
+## What is a Queue?
+
+FIFO — First In, First Out. Like a line at a store: you join at the back, leave from the front.
+
+```
+Front                    Back
+ ← [1] [2] [3] [4] [5] ←
+dequeue                enqueue
+```
+
+Three operations matter:
+- **enqueue** — add to the back
+- **dequeue** — remove from the front
+- **peek** — read the front without removing. queue[0]  peek from front, queue[-1], peek from end, no removal
+
+---
+## Always use `collections.deque`
+
+```python
+from collections import deque
+queue = deque()
+
+queue.append(val)      # enqueue — O(1)
+queue.popleft()        # dequeue — O(1)
+queue[0]               # peek front — O(1), no removal
+queue[-1]              # peek back  — O(1), no removal
+```
+
+### **Never use a plain list as a queue.** `list.pop(0)` is O(n) because every element shifts left. For n operations that becomes O(n²).
+
+---
+## `deque` as Stack vs Queue
+
+`deque` works for both, but for a pure stack a plain `list` is simpler:
+
+```python
+stack = []
+stack.append(val)   # push — O(1)
+stack.pop()         # pop  — O(1)
+```
+
+Use `deque` only when you need both ends — queue, sliding window, or monotonic(单调) deque problems.
+
+---
+
+## Time Complexity
+|Operation|`deque`|`list`|
+|---|---|---|
+|enqueue (add to back)|`queue.append(val)` O(1)|`lst.append(val)` O(1) amortized|
+|add to front|`queue.appendleft(val)` O(1)|`lst.insert(0, val)` O(n) ❌|
+|add to middle|`queue.insert(i, val)` O(n)|`lst.insert(i, val)` O(n)|
+|dequeue (remove from front)|`queue.popleft()` O(1) ✅|`lst.pop(0)` O(n) ❌|
+|remove from back|`queue.pop()` O(1)|`lst.pop()` O(1)|
+|remove from middle|`del queue[i]` O(n)|`del lst[i]` O(n)|
+|update by index|`queue[i] = val` O(n)|`lst[i] = val` O(1) ✅|
+|peek front|`queue[0]` O(1)|`lst[0]` O(1)|
+|peek back|`queue[-1]` O(1)|`lst[-1]` O(1)|
+|search|`val in queue` O(n)|`val in lst` O(n)|
+
+### One notable difference worth highlighting — **update by index**:
+- `list[i] = val` is O(1) because list is backed by a contiguous array, direct memory access
+- `deque[i] = val` is O(n) because deque is a doubly linked list of blocks, index `i` requires traversal
+
+So if your problem needs frequent random index access, `list` wins. If you need fast operations on both ends, `deque` wins.
+
+---
+## Peek — Python has no `.peek()`
+
+Unlike Java, Python `deque` has no `.peek()` method. Use index access instead:
+```python
+queue[0]    # front
+queue[-1]   # back
+```
+---
+## LeetCode Example — 933. Number of Recent Calls
+
+### Code Example: [933. Number of Recent Calls](https://leetcode.com/problems/number-of-recent-calls/)
 ```text
 You have a `RecentCounter` class which counts the number of recent requests within a certain time frame.
 Implement the `RecentCounter` class:
@@ -31,9 +107,7 @@ recentCounter.ping(3002);  // requests = [1, 100, 3001, 3002], range is [2,3002]
 - Each test case will call `ping` with **strictly increasing** values of `t`.
 - At most `104` calls will be made to `ping`.
 ```
-
-
-## Solution
+### Code solution
 ```python
 from collections import deque
 
@@ -46,153 +120,15 @@ class RecentCounter:
         while self.queue[0] < t - 3000:
             self.queue.popleft()
         return len(self.queue)
-# Your RecentCounter object will be instantiated and called as such:
-# obj = RecentCounter()
-# param_1 = obj.ping(t)
-```
-## Overview
-
-A **queue** is a First-In-First-Out (FIFO) data structure. In Python, it can be implemented using:
-
-- A **Python list**
-- A **collections.deque**
-- A **Linked list** (custom `Node` class)
-
-Each has different tradeoffs. Understanding them is key for interviews.
-
----
-
-## Q1: What is a Queue?
-
-A queue works like a line at a store:
-
-- **Enqueue** — add to the **back**
-- **Dequeue** — remove from the **front**
-- **Peek** — read the **front** without removing
-
-```
-Front                    Back
- ← [1] [2] [3] [4] [5] ←
-dequeue                enqueue
 ```
 
----
-
-## Q2: What are the time complexities for each implementation?
-
-### Python List-based Queue ❌ (naive, not recommended)
-
-|Operation|Time Complexity|Notes|
-|---|---|---|
-|`enqueue` (append to end)|O(1) amortized|Same reallocation behavior as stack|
-|`dequeue` (pop from front)|**O(n)**|Shifts all remaining elements left — expensive!|
-|`peek`|O(1)|Read index 0|
-|`len()`|O(1)|Python stores length internally|
-|`is_empty`|O(1)|Based on `len()`|
-
-> **Key insight:** Using a plain list as a queue is a common mistake. `pop(0)` is O(n) because every element shifts left after removal.
+Key insight: since `t` is always increasing, anything outside `[t-3000, t]` will never be valid again — safe to evict from the left permanently.
 
 ---
+## When to Reach for a Queue in LeetCode
 
-### collections.deque (pronounce: de:k)-based Queue ✅ (recommended for interviews)
-
-| Operation           | Time Complexity | Notes                               |
-| ------------------- | --------------- | ----------------------------------- |
-| `enqueue` (append)  | O(1) amortized  | Add to right end                    |
-| `dequeue` (popleft) | O(1)            | Remove from left end — no shifting! |
-| `peek`              | O(1)            | Read `deque[0]`                     |
-| `len()`             | O(1)            | Built-in                            |
-| `is_empty`          | O(1)            | Based on `len()`                    |
-
-`deque` (double-ended queue) is implemented as a **doubly linked list of fixed-size blocks** internally, so both ends are O(1).
-
----
-
-### Linked List-based Queue
-
-|Operation|Time Complexity|Notes|
-|---|---|---|
-|`enqueue`|O(1)|Insert at tail — requires a `_tail` pointer|
-|`dequeue`|O(1)|Remove from head|
-|`peek`|O(1)|Read head value|
-|`len()`|O(n) default / O(1) with `_count`|Same trick as stack|
-|`is_empty`|O(n) default / O(1) with `_count`|Same trick as stack|
-
-> **Key insight:** You need **both a `_head` and `_tail` pointer**. Without `_tail`, enqueue would be O(n) since you'd have to traverse to the end every time.
-
-## Q5: What about Search, Insert, and Delete?
-
-Queues are also **restricted structures** — you enqueue at the back and dequeue from the front only. Arbitrary access is not part of the queue interface. But interviewers may ask about the underlying cost.
-
-### Python List / deque-based Queue
-
-|Operation|Time Complexity|Notes|
-|---|---|---|
-|Search (find a value)|O(n)|Must scan all elements|
-|Insert (at arbitrary position)|O(n)|List shifts elements; deque also O(n) for middle|
-|Delete (at arbitrary position)|O(n)|Same reason as insert|
-
-### Linked List-based Queue
-
-|Operation|Time Complexity|Notes|
-|---|---|---|
-|Search (find a value)|O(n)|Traverse node by node|
-|Insert (at arbitrary position)|O(n) to find + O(1) to rewire|Traversal is the bottleneck|
-|Delete (at arbitrary position)|O(n) to find + O(1) to rewire|Same|
-
-> **Note:** Insert/delete at the **front or back** specifically are O(1) for a linked list queue since you have `_head` and `_tail` pointers — but arbitrary middle positions are still O(n).
-
-### deque insert/delete edge case
-
-`collections.deque` supports `appendleft` / `popleft` at O(1), but inserting or deleting from the **middle** (via `insert(i, val)` or `del`) is still **O(n)**.
-
----
-
-## Q6: Why not just use a list with `pop(0)`?
-
-`pop(0)` on a list is **O(n)** because Python must shift every remaining element one position to the left in memory.
-
-```
-Before dequeue: [1, 2, 3, 4, 5]
-Remove index 0: [2, 3, 4, 5]   ← elements 2-5 all shifted left
-```
-
-For n dequeue operations on a list, that's **O(n²) total** — a performance disaster for large queues.
-
----
-
-## Q7: Stack vs Queue — side by side
-
-|Stack|Queue| |
-|---|---|---|
-|Order|LIFO (Last In, First Out)|FIFO (First In, First Out)|
-|Add|push → top|enqueue → back|
-|Remove|pop ← top|dequeue ← front|
-|Common use|undo, recursion, DFS|scheduling, BFS, task queues|
-
----
-
-## Design Decision: When to choose which implementation?
-
-|Use case|Better choice|
+|Pattern|Why queue fits|
 |---|---|
-|Quick implementation in interview|`collections.deque`|
-|Need strict O(1) guaranteed (no amortized)|Linked list with `_head`, `_tail`, `_count`|
-|Memory efficiency|`deque` (internally optimized blocks)|
-|Teaching/understanding internals|Linked list|
-
----
-
-## Interview Cheat Sheet
-
-|Concept|One-liner|
-|---|---|
-|Queue order|FIFO — First In, First Out|
-|List `pop(0)`|O(n) — never use for queue dequeue|
-|`deque.popleft()`|O(1) — use this instead|
-|Linked list enqueue|O(1) — but needs a `_tail` pointer|
-|Linked list dequeue|O(1) — remove from `_head`|
-|Linked list `len()` with `_count`|O(1) — same trick as stack|
-|`_tail` pointer purpose|Avoid O(n) traversal on enqueue|
-|When `_tail` must be set to None|When the last element is dequeued|
-|Best built-in for queue in Python|`collections.deque`|
+|Sliding window with eviction|Evict stale elements from the left|
+|BFS / level-order traversal|Process nodes level by level, FIFO order|
+|Moving average / recent window|Fixed-size window, drop oldest first|
