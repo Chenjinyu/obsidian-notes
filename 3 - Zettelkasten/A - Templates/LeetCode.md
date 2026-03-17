@@ -7,6 +7,7 @@ Creation Date: {{date}}
 Course:
 Tags: [[LeetCode]]
 
+#review/daily #review/3d 
 # Problem
 
 
