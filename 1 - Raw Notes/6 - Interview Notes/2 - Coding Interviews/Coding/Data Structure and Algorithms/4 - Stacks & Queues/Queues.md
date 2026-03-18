@@ -132,3 +132,7 @@ Key insight: since `t` is always increasing, anything outside `[t-3000, t]` will
 |Sliding window with eviction|Evict stale elements from the left|
 |BFS / level-order traversal|Process nodes level by level, FIFO order|
 |Moving average / recent window|Fixed-size window, drop oldest first|
+
+# LeetCode Problems
+- [[../../../LeetCode Questions/H - 0239. Sliding Window Maximum|H - 0239. Sliding Window Maximum]] deque with monotonic decreasing queue.
+- 
