@@ -47,6 +47,9 @@ So you would say:
 Or collectively just:
 > "parentheses, square brackets, and curly braces"
 
+---
+logarithmic: 对数
+
 # Note
 
 
