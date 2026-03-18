@@ -1,5 +1,5 @@
 ---
-sr-due: <% tp.date.now("YYYY-MM-DD") %>
+sr-due: 2026-03-17
 sr-interval: 1
 sr-ease: 2.5
 ---
@@ -8,6 +8,7 @@ Date: 2026-03-17
 Course: https://leetcode.com/explore/interview/card/leetcodes-interview-crash-course-data-structures-and-algorithms/708/heaps/4638/
 Tags: [[Heaps]]
 
+#review/15d 
 # Content
 
 A heap is a data structure that is an implementation of the [priority queue](https://en.wikipedia.org/wiki/Priority_queue).
@@ -149,7 +150,7 @@ class Solution:
 			if first != second:
 				heapq.heappush(stones, -abs(first - second))
 				
-		return -stones[0]
+		return -stones[0] if stones else 0
 
 ```
 
