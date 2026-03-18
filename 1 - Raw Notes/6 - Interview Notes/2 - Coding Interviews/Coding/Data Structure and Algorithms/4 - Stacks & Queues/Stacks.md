@@ -188,3 +188,7 @@ Contrast with linked list push: it is **O(1) strict/guaranteed** every single ca
 |Linked list `len()` with `_count`|O(1) — just read the attribute|
 |Amortized meaning|Total cost spread over many operations|
 |When realloc hits|O(n) worst case for that one append|
+# LeetCode Problems
+- [[../../../LeetCode Questions/M - 0071. Simplify Path|M - 0071. Simplify Path]]
+- [[../../../LeetCode Questions/E - 0020. Check Matches of Parentless|E - 0020. Check Matches of Parentless]]
+- [[../../../LeetCode Questions/M - 0739. Daily Temperatures|M - 0739. Daily Temperatures]]

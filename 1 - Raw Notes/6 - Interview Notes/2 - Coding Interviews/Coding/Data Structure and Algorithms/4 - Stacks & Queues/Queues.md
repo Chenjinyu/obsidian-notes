@@ -19,6 +19,15 @@ Three operations matter:
 - **dequeue** — remove from the front
 - **peek** — read the front without removing. queue[0]  peek from front, queue[-1], peek from end, no removal
 
+## To implementation
+One way to implement an efficient queue is by using a doubly linked list. 
+Recall that with a doubly linked list, if you have the pointer to a node, you can add or delete at that location in O(1). 
+A doubly linked list that maintains pointers to the head and tail (both ends, usually with sentinel nodes) can implement an efficient queue.
+
+BUT, there is also a data structure called a deque(pronounced "deck"), short for double-ended queue. 
+In a deque, you can add or delete elements from both ends. A normal queue designates adding to one end and deleting to another end.
+
+
 ---
 ## Always use `collections.deque`
 
