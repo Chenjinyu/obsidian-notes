@@ -2,6 +2,7 @@ Date: 2026-02-09
 Course:
 Tags: 
 
+#pattern_sliding_window 
 # Content
 
 ## Remember
