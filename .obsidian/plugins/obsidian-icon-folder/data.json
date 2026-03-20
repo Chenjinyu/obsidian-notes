@@ -36,7 +36,6 @@
   },
   "1 - Raw Notes": "LiAirplay",
   "2 - Indexes": "LiSearchCode",
-  "3 - Zettelkasten/A - Templates/Academic Note.md": "LiLayoutTemplate",
   "1 - Raw Notes/2 - LLM & Agent AI": "🎰",
   "1 - Raw Notes/1 - Cloud Platforms": "LiCloudCog",
   "1 - Raw Notes/3 - Technologies": "🧑‍💻",
@@ -47,5 +46,6 @@
   "1 - Raw Notes/5 - Terminology": "LiFlaskConical",
   "1 - Raw Notes/6 - Interview Notes": "🧑‍💻",
   "1 - Raw Notes/6 - Interview Notes/Review Dashboard.md": "🖐",
-  "3 - Zettelkasten/A - Templates/LeetCode.md": "LiLayoutTemplate"
+  "3 - Zettelkasten/A - Templates/LeetCode Template.md": "LiLayoutTemplate",
+  "3 - Zettelkasten/A - Templates/Academic Note Template.md": "LiLayoutTemplate"
 }

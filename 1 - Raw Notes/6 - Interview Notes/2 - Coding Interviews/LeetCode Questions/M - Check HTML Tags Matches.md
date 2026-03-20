@@ -5,7 +5,7 @@ sr-ease: 2.5
 ---
 Creation Date: 2026-03-15
 Course:
-Tags: [[../../../../3 - Zettelkasten/A - Templates/LeetCode]] [[Stack]]
+Tags: [[../../../../3 - Zettelkasten/A - Templates/LeetCode Template]] [[Stack]]
 
 # Problem
 

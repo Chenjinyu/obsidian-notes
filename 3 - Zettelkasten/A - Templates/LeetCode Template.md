@@ -5,7 +5,7 @@ sr-ease: 2.5
 ---
 Creation Date: {{date}}
 Course:
-Tags: [[LeetCode]]
+Tags: [[LeetCode Template]]
 
 #review/daily #review/3d 
 # Problem
