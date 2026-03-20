@@ -64,7 +64,7 @@ heapq.heappush(heap, 2)
 heapq.heappush(heap, 3)
 
 # Check minimum element
-heap[0] # 1
+heap[0] # peek top heap[0] to get the min value, just read, no restructuring, so its O(1)
 
 # Pop minimum element
 heapq.heappop(heap) # 1
@@ -81,7 +81,9 @@ heapq.heappush(heap, -5352)
 
 # The numbers will be printed in sorted order
 while heap:
-    print(heapq.heappop(heap))
+	# the heapq.heappop(heap) will always return the min one, but does not mean the heap is sorted. 
+	# it will sifting the tree strcture and move the next min value to the top of tree.
+    print(heapq.heappop(heap)) # O(log n)
     
 # Now, you can use heappush and heappop on nums
 # and nums[0] will always be the minimum element

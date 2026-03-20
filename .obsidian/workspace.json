@@ -78,9 +78,33 @@
               "icon": "lucide-file",
               "title": "M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit"
             }
+          },
+          {
+            "id": "a63f96bebaebb8bb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/6 - Heaps/Heaps.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Heaps"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -202,13 +226,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/6 - Heaps/Heaps.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit"
+              "title": "Outline of Heaps"
             }
           },
           {
@@ -217,7 +241,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit.md"
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/6 - Heaps/Heaps.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -273,8 +297,9 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "71a7ffc186bdb50d",
+  "active": "a63f96bebaebb8bb",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/0 - Sort Comparsion.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1004. Max Consecutive Ones III.md",
     "3 - Zettelkasten/A - Templates/LeetCode Template.md",
@@ -282,7 +307,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0239. Sliding Window Maximum.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/2 - Hashing/ReadMe - Comparasion.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0560. Subarray Sum Equals K.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Stacks & Queues/Monotonic(单调性).md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Stacks & Queues/Queues.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Stacks & Queues/Stacks.md",
