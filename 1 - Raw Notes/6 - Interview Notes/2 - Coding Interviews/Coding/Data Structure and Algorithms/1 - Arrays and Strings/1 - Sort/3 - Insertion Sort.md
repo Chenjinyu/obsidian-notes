@@ -17,7 +17,7 @@ def insertion_sort(nums: List) -> List:
 	n = len(nums)
 	
 	for i in range(1, n):
-		
+		# range from 0 to i, but loop from i to 0, which are the first part of array to keep the sorted values.
 		for j in range(i, 0, -1): # does not incldue 0, so 1 - 1 = 0, not out of index
 			if nums[j] < nums[j - 1]:
 				nums[j], nums[j - 1] = nums[j - 1], nums[j]

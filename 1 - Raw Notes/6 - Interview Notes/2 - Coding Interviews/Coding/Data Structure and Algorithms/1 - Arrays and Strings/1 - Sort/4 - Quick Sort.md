@@ -2,6 +2,8 @@ Date: 2026-02-26
 Course: https://www.w3schools.com/dsa/dsa_algo_quicksort.php
 Tags: [[W3Schools]] [[Arrary]] [[Sort]]
 
+#pattern_binary_search
+
 # Content
 
 As the name suggests, Quicksort is one of the fastest sorting algorithms.
