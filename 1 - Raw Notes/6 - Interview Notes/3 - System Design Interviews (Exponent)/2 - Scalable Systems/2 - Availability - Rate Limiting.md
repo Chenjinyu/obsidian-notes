@@ -1,6 +1,6 @@
 Date: 2026-02-03
 Course:
-Tags: [[API]]  [[System Design Interview]] [[../../../../High Level]] [[Availability]]
+Tags: [[API]]  [[System Design Interview]] [[../../../../3 - Zettelkasten/B - Tags/High Level]] [[Availability]]
 
 # Content
 

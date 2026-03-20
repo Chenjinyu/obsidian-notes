@@ -1,5 +1,5 @@
 Course:
-Tags:  [[System Design Interview]] [[../../../../High Level]] [[Low Level]] [[Reliability]]
+Tags:  [[System Design Interview]] [[../../../../3 - Zettelkasten/B - Tags/High Level]] [[Low Level]] [[Reliability]]
 
 # Content
 A **circuit breaker** is a reliability pattern that **stops your service from repeatedly calling a failing dependency** (like another microservice, database, or third-party API), so you avoid **cascading failures** and recover faster.

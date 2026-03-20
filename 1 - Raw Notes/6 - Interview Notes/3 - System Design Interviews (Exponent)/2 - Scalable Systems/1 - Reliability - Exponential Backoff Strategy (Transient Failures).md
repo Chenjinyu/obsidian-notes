@@ -1,6 +1,6 @@
 Date: 2026-01-30
 Course:
-Tags:  [[interview]] [[System Design Interview]] [[../../../../High Level]] [[Low Level]] [[Reliability]]
+Tags:  [[interview]] [[System Design Interview]] [[../../../../3 - Zettelkasten/B - Tags/High Level]] [[Low Level]] [[Reliability]]
 
 # Content
 

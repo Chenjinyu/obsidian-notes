@@ -1,6 +1,6 @@
 Date: 2026-02-04
 Course:
-Tags: [[System Design Interview]] [[../../../../High Level]] [[Low Level]] [[Availability]]
+Tags: [[System Design Interview]] [[../../../../3 - Zettelkasten/B - Tags/High Level]] [[Low Level]] [[Availability]]
 
 # Gateway Aggregation Pattern: Complete Guide for Microservices
 
