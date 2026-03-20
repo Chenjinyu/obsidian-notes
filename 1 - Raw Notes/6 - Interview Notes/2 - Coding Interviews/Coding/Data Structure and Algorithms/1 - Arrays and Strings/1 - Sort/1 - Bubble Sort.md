@@ -33,6 +33,9 @@ from typing import List
 Standard Bubble Sort
 - Largest bubbles to end
 - Shrinks each time
+  
+Bubble sort, always bubble one item from left to right EACH. 
+so Each of time, the largest value will move to then end, and lock it by shrinking the right range.
 """
 def bubble_sort_efficient(nums: List) -> List:
 	"""
@@ -43,7 +46,7 @@ def bubble_sort_efficient(nums: List) -> List:
 	for idx in range(n):
 		swapped = False # optimization: detect if array is already sorted
 		
-		# Shrinking the range
+		# Shrinking the range: shrink the right side
 		for j_idx in range(0, n - idx - 1):
 			if nums[j_idx] > nums[j_idx + 1]:
 				nums[j_idx], nums[j_idx + 1] = nums[j_idx + 1], nums[j_idx]
