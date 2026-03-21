@@ -9,7 +9,7 @@ Tags: [[LeetCode Template]]
 
 #review/daily #review/3d 
 
-# Review
+# Reviews Knowledges Points
 
 # Review dates
 
