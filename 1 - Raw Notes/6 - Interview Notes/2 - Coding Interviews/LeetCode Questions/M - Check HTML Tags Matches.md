@@ -1,15 +1,18 @@
 ---
 sr-due: 2026-03-18
-sr-interval: 15
+sr-interval: 3
 sr-ease: 2.5
 ---
 Creation Date: 2026-03-15
 Course:
 Tags: [[../../../../3 - Zettelkasten/A - Templates/LeetCode Template]] [[Stack]]
 
+#review/15d 
+# Review with
+- regex 
+- stack
+
 # Problem
-
-
 
 # Step 1 - Understand the problem (10 mins)
 - What are the input and output
@@ -47,10 +50,10 @@ def is_valid_html(html: str) -> bool:
 	# using regex, * means zero or more characters that are not `>`
 	# <div class="foo">
 	#      ^^^^^^^^^^^ matched by [^>]*
-    tag_pattern = re.compile(r'<(/?\w+)[^>]*>')
+    tag_pattern = re.compile(r'<(/?\w+)[^>]*>') # r'<(?P<tag>/?\w+)[^>]*>' to name the group as tag.
     stack = []
     for matches in tag_pattern.finditer(html):
-        tag = matches.group(1)
+        tag = matches.group(1) # matches.group('tag') 
         if not tag.startswith('/'):
             # opening tag
             stack.append(tag)
