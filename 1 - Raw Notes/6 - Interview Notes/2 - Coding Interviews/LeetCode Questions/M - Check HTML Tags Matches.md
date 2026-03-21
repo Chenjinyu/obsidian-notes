@@ -44,7 +44,9 @@ html = """
 """
 import re
 def is_valid_html(html: str) -> bool:
-	# using regex
+	# using regex, * means zero or more characters that are not `>`
+	# <div class="foo">
+	#      ^^^^^^^^^^^ matched by [^>]*
     tag_pattern = re.compile(r'<(/?\w+)[^>]*>')
     stack = []
     for matches in tag_pattern.finditer(html):
