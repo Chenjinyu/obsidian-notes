@@ -7,10 +7,11 @@ Date: 2026-03-01
 Course:
 Tags: 
 
+# Reviews Knowledges Points
+
+# Review Dates
 
 # Content
-
-#review
 
 **Time Complexity Comparison:**
 
@@ -32,7 +33,7 @@ Tags:
 **Ranked most → least popular in practice:**
 
 ```
-1. Tim Sort      ← Python's built-in sort(), most used in real world
+1. Tim Sort      ← Python's built-in sort(), most used in real world. sorted(), and .sort()
 2. Quick Sort    ← most taught, used in many standard libraries
 3. Merge Sort    ← fundamental, used in databases, external sorting
 4. Heap Sort     ← used in priority queues
@@ -62,7 +63,7 @@ Linked lists                    → Merge Sort
 
 **Key takeaways:**
 
-- **Tim Sort** is the most practical — it's a hybrid of Merge Sort + Insertion Sort, used by Python, Java, and Android
+- **Tim Sort** is the most practical — it's a hybrid of Merge Sort + Insertion Sort, used by Python, Java, and Android. `sorted(), and .sort()`
 - **Quick Sort** is fastest on average in practice despite O(n²) worst case
 - **Bubble/Selection Sort** are only useful for learning concepts
 - **Radix/Counting Sort** can beat O(n log n) but only work on specific data types
