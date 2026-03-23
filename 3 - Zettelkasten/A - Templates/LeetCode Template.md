@@ -1,7 +1,7 @@
 ---
-sr-due: <% tp.date.now("YYYY-MM-DD", 3) %>
-sr-interval: 1
-sr-ease: 2.5
+sr-due: 2126-03-24
+sr-interval: 36525
+sr-ease: 22.5
 ---
 Creation Date: {{date}}
 Course:
