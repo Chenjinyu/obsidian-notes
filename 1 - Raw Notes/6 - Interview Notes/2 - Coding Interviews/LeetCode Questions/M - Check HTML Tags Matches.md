@@ -1,5 +1,5 @@
 ---
-sr-due: 2026-03-18
+sr-due: 2026-04-01
 sr-interval: 3
 sr-ease: 2.5
 ---
@@ -8,9 +8,11 @@ Course:
 Tags: [[../../../../3 - Zettelkasten/A - Templates/LeetCode Template]] [[Stack]]
 
 #review/15d 
-# Review with
+# Reviews Knowledges Points
 - regex 
 - stack
+# Review Dates
+- 03/20/2026
 
 # Problem
 

@@ -1,5 +1,5 @@
 ---
-sr-due: 2026-03-14
+sr-due: 2026-04-23
 sr-interval: 15
 sr-ease: 2.5
 ---
@@ -9,6 +9,15 @@ Course:
 Tags: 
 
 #review/15d 
+
+# Reviews Knowledges Points
+```text
+03/23/2026
+- check kth node from the end, let fast node loop to k first.
+```
+
+# Review Dates
+- 03/23/2026
 # Content
 ## pseudocode
 ```python
