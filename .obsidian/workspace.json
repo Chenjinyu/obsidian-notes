@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/Review Dashboard.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0020. Check Matches of Parentless.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -29,35 +29,10 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Review Dashboard"
-            }
-          },
-          {
-            "id": "70ac02e25d46e480",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0239. Sliding Window Maximum.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "H - 0239. Sliding Window Maximum"
+              "title": "E - 0020. Check Matches of Parentless"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "49984eabfd0cc068",
@@ -145,8 +120,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 393.5110321044922,
-    "collapsed": true
+    "width": 318.5
   },
   "right": {
     "id": "c375af2eeef2242a",
@@ -282,11 +256,12 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "70ac02e25d46e480",
+  "active": "5bdd121afe9fe012",
   "lastOpenFiles": [
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0239. Sliding Window Maximum.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0020. Check Matches of Parentless.md",
     "1 - Raw Notes/6 - Interview Notes/Review Dashboard.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0239. Sliding Window Maximum.md",
     "2026-03-21.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sliding Window/ReadMe - Sliding Window.md",
     "3 - Zettelkasten/A - Templates/LeetCode Template.md",
@@ -309,7 +284,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/8 - Tim Sort.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/0 - Sort Comparsion.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/5 - Counting Sort.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/4 - Quick Sort.md",
     "Untitled.base",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/9 - Backtracking",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/8 - Binary Search",
