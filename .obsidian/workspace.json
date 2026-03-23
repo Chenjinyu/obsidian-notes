@@ -6,31 +6,8 @@
       {
         "id": "7c7b066fdb0e6a51",
         "type": "tabs",
+        "dimension": 54.35393258426966,
         "children": [
-          {
-            "id": "38fcbbba137aa157",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit"
-            }
-          },
           {
             "id": "5bdd121afe9fe012",
             "type": "leaf",
@@ -53,6 +30,62 @@
               },
               "icon": "lucide-file",
               "title": "Review Dashboard"
+            }
+          },
+          {
+            "id": "70ac02e25d46e480",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0239. Sliding Window Maximum.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "H - 0239. Sliding Window Maximum"
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "49984eabfd0cc068",
+        "type": "tabs",
+        "dimension": 45.646067415730336,
+        "children": [
+          {
+            "id": "6d359df629416812",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit"
             }
           }
         ]
@@ -112,7 +145,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 393.5110321044922
+    "width": 393.5110321044922,
+    "collapsed": true
   },
   "right": {
     "id": "c375af2eeef2242a",
@@ -248,10 +282,12 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "38fcbbba137aa157",
+  "active": "70ac02e25d46e480",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/Review Dashboard.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0239. Sliding Window Maximum.md",
+    "1 - Raw Notes/6 - Interview Notes/Review Dashboard.md",
+    "2026-03-21.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Sliding Window/ReadMe - Sliding Window.md",
     "3 - Zettelkasten/A - Templates/LeetCode Template.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2225. Find Players With Zero or One Losses.md",
@@ -274,8 +310,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/0 - Sort Comparsion.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/5 - Counting Sort.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/4 - Quick Sort.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/3 - Insertion Sort.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/2 - Selection Sort.md",
     "Untitled.base",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/9 - Backtracking",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/8 - Binary Search",
