@@ -1,5 +1,5 @@
 ---
-sr-due: 2026-03-12
+sr-due: 2026-04-23
 sr-interval: 3
 sr-ease: 250
 ---
@@ -10,7 +10,7 @@ Tags:
 # Reviews Knowledges Points
 
 # Review Dates
-
+- 03/23/2026
 # Content
 
 **Time Complexity Comparison:**
@@ -35,7 +35,7 @@ Tags:
 ```
 1. Tim Sort      ← Python's built-in sort(), most used in real world. sorted(), and .sort()
 2. Quick Sort    ← most taught, used in many standard libraries
-3. Merge Sort    ← fundamental, used in databases, external sorting
+3. Merge Sort    ← fundamental, used in databases, external sorting.
 4. Heap Sort     ← used in priority queues
 5. Insertion Sort← used for small arrays, also used inside Tim Sort
 6. Radix Sort    ← used for integers/strings at scale
@@ -67,6 +67,10 @@ Linked lists                    → Merge Sort
 - **Quick Sort** is fastest on average in practice despite O(n²) worst case
 - **Bubble/Selection Sort** are only useful for learning concepts
 - **Radix/Counting Sort** can beat O(n log n) but only work on specific data types
+
+## Tim Sort
+it enforce a minimum run size(`minrun`), if a natural run is shorter than `minrun`, Timsort extends it using insertion sort, pulling in adjacent element until it reaches `minrun`
+runs are pushed onto a stack. and Timsort merges them according to invariants that keep the stack balanced.
 
 # Note
 
