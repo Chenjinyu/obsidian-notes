@@ -1,5 +1,5 @@
 ---
-sr-due: <% tp.date.now("YYYY-MM-DD") %>
+sr-due: 2026-03-28
 sr-interval: 1
 sr-ease: 2.5
 ---
@@ -8,8 +8,15 @@ Date: 2026-03-16
 Course:
 Tags: 
 
-# When 
+# When should consider the pattern
+Monotonic stack specifically shines when the problem is about **local** max/min — meaning _relative to each element's neighbors_, not the global max/min.
+- **Global** max/min → just scan or use a heap
+- **Local / nearest** max/min → think monotonic stack
 
+So the refined trigger is:
+> _"For each element, what is the nearest element that is larger/smaller than it?"_
+
+That "**nearest**" or "**per element**" framing is the real signal. If the problem has that shape, try monotonic stack first.
 # Content
 A monotonic stack or queue is one whose elements are always sorted. It can be sorted either ascending or descending, depending on the algorithm. Monotonic stacks and queues maintain their sorted property by removing elements that would violate the property before adding new elements. For example, let's say you had a monotonically increasing stack, currently `stack = [1, 5, 8, 15, 23]`. You want to push `14` onto the stack. To maintain the sorted property, we need to first pop the `15` and `23` before pushing the `14` - after the push operation, we have `stack = [1, 5, 8, 14]`.
 
