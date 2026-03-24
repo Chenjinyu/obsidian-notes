@@ -14,13 +14,13 @@ A monotonic stack or queue is one whose elements are always sorted. It can be so
 Here's some pseudocode for maintaining a monotonic increasing stack over an input array:
 ```python
 Given an integer array nums
-
+# Read it before updating it.
 stack = []
 for num in nums:
     while stack.length > 0 AND stack.top >= num:
-        stack.pop()
+        stack.pop() # Read it before updating it.
     // Between the above and below lines, do some logic depending on the problem
-    stack.push(num)
+    stack.push(num) # Read it before updating it.
     
     
 As you can see, before we push a `num` onto the stack, 
