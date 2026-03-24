@@ -54,6 +54,7 @@ def preorder_dfs(node):
     return
     
 # node -> left -> right
+# Pre -> before children
 ```
 
 #### 2. **Inorder traversal**
@@ -63,11 +64,12 @@ def inorder_dfs(node):
         return
 
     inorder_dfs(node.left)
-    print(node.val) # read the node only after travere all left nodes.
+    print(node.val) # read the node only after traversa all left nodes.
     inorder_dfs(node.right)
     return
     
-left -> node -> rigth
+# left -> node -> rigth
+# In -> in the middle of children
 ```
 
 #### 3. **Postorder traversal**
@@ -80,7 +82,15 @@ def postorder_dfs(node):
     postorder_dfs(node.right)
     print(node.val) # read the node only after traversa left and right
     return
+
+# left -> right -> node
+# Post -> after children
 ```
+
+#### for the three types of DFS, it always read the left and then read the right. only difference is when to read the node.
+
+### Solving Problems with DFS
+
 ## Breadth-First Search (BFS)
 # Note
 
