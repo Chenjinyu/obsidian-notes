@@ -50,6 +50,10 @@ Or collectively just:
 ---
 logarithmic: 对数
 
+
+## graph
+- The nodes of a graph are also called **vertices**, 
+- and the pointers that connect them are called **edges**
 # Note
 
 
