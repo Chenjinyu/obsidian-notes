@@ -40,7 +40,16 @@ So what makes a binary tree "binary"? In a binary tree, all nodes have a **maxi
 
 To summarize, a binary tree is a collection of nodes. Every node has between 0 to 2 children, and every node except the root has exactly one parent.
 
+### Tree terminology
+The **root** node is the node at the "top" of the tree. Every node in the tree is accessible starting from the root node. In most tree questions, the `root` of the tree will be given as the input, just like how in linked lists, the `head` was given as the input.
 
+If you have a node `A` with an edge to a node `B`, so `A -> B`, we call `A` the **parent** of node `B`, and node `B` a **child** of node `A`.
+
+If a node has no children, it is called a **leaf** node. The leaf nodes are the **leaves** of the tree.
+
+The **depth** of a node is how far it is from the root node. The root has a depth of `0`. Every child has a depth of `parentsDepth + 1`, so the root's children have a depth of 1, their children have a depth of 2, and so on.
+
+Lastly, perhaps the most important thing to understand: a **subtree** of a tree is a node and all its descendants. Trees are recursive - you can treat a subtree as if it was its own tree with the chosen node being the root. What do we mean by this? Let's look at the company example again. The entire company is represented by the tree **rooted** at the CEO. But what if we only cared about the engineering department? Let's say the CTO has a direct report who is an SVP (Senior Vice President) of engineering, and all engineers are under this person. Take this SVP, and separate them from the rest of the company (remove their connection to the CTO). What are you left with? It's still a valid tree, but now the SVP is the **root**! This subtree now represents the engineering department instead of the entire company. This is the most fundamental idea for solving tree problems - **you can take any given node and treat it as its own tree**, which allows you to solve problems in a recursive manner.
 
 # Note
 

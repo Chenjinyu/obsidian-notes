@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/ReadMe - Trees and Graphs.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Binary Trees - DFS.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,7 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "ReadMe - Trees and Graphs"
+              "title": "Binary Trees - DFS"
             }
           },
           {
@@ -323,8 +323,9 @@
   },
   "active": "cb3223d6fe6af249",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/English.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/ReadMe - Trees and Graphs.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Binary Trees - DFS.md",
+    "1 - Raw Notes/6 - Interview Notes/English.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M E - 0496. Next Greater Element I.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Stacks & Queues/Monotonic(单调性).md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/9 - Heap Sort.md",
@@ -348,7 +349,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/3 - Linked Lists/Fast and slow pointers.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0020. Check Matches of Parentless.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/0 - Sort Comparsion.md",
     "Untitled.base",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/9 - Backtracking",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/8 - Binary Search",
