@@ -8,6 +8,8 @@ Date: 2026-03-16
 Course:
 Tags: 
 
+# When 
+
 # Content
 A monotonic stack or queue is one whose elements are always sorted. It can be sorted either ascending or descending, depending on the algorithm. Monotonic stacks and queues maintain their sorted property by removing elements that would violate the property before adding new elements. For example, let's say you had a monotonically increasing stack, currently `stack = [1, 5, 8, 15, 23]`. You want to push `14` onto the stack. To maintain the sorted property, we need to first pop the `15` and `23` before pushing the `14` - after the push operation, we have `stack = [1, 5, 8, 14]`.
 
@@ -35,7 +37,7 @@ Monotonic stacks and queues are useful in problems that, for each element, invol
 - [[../../../LeetCode Questions/M - 0739. Daily Temperatures|M - 0739. Daily Temperatures]]
 > Note: technically, the correct mathematical term to use here is "monotonically non-increasing", not "monotonically decreasing". This is because "monotonically decreasing" implies that the elements are **always** decreasing, so something like `[5, 3, 3, 2]` is not valid since `3, 3` is not decreasing. In this problem, we can have elements in the stack that represent equal temperatures.
 > For simplicity, we have used the term "decreasing" because the important part is that the stack is always sorted. However, it's good to understand the difference. If you wanted to implement a monotonic stack that cannot have equal elements, you would simply need to change the less-than/greater-than operator to a less-than or equal to/greater-than or equal to operator, i.e. `>` becomes `>=` and `<` becomes `<=`.
-- [[]]
+- [[../../../LeetCode Questions/M E - 0496. Next Greater Element I|M E - 0496. Next Greater Element I]]
 
 # Note
 
