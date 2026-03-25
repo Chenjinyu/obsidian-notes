@@ -1,5 +1,5 @@
 ---
-sr-due: <% tp.date.now("YYYY-MM-DD") %>
+sr-due: 2026-03-28
 sr-interval: 1
 sr-ease: 2.5
 ---
@@ -40,7 +40,8 @@ For most tree problems the base case is either:
 
 ## **Then define what the function means for one node:**
 
-Ask — _"if I trust that my recursive calls give me the correct answer for the left and right subtrees, what do I do with those results at the current node?"_
+Ask — _
+#### ! Important !!! "if I trust that my recursive calls give me the correct answer for the left and right subtrees, what do I do with those results at the current node?"_
 
 For max depth:
 
@@ -54,7 +55,7 @@ right = self.maxDepth(root.right) # trust this is correct
 return max(left, right) + 1
 ```
 
-This mindset — **trust the recursion, don't trace it** — is the key. You don't need to mentally simulate the whole call stack. Just define what's correct for the current node assuming children are already solved.
+#### !!! Important !!! This mindset — **trust the recursion, don't trace it** — is the key. You don't need to mentally simulate the whole call stack. Just define what's correct for the current node assuming children are already solved.
 
 ---
 
