@@ -98,4 +98,6 @@ def postorder_dfs(node):
 # Reference
 - [[../../../LeetCode Questions/E - 0104. Maximum Depth of Binary Tree|E - 0104. Maximum Depth of Binary Tree]]
 - [[../../../LeetCode Questions/E - 0112. Path Sum|E - 0112. Path Sum]]
+- [[../../../LeetCode Questions/M - 1448. Count Good Nodes in Binary Tree|M - 1448. Count Good Nodes in Binary Tree]]
+- [[E - 0100. Same Tree]]
 
