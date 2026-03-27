@@ -41,7 +41,61 @@ parent = {}
 **BFS does NOT naturally preserve ancestry** — nodes at the same level have no relationship to each other in the queue, so ancestry tracking requires extra bookkeeping like a parent map.
 So ironically, **DFS is the better tool when ancestry matters**, and BFS is better when level/distance matters.
 
-# 2. Tree Nodes in Stack
+# 2. To understand the steps each node in the stack
+
+the tree
+```text
+          3
+        /   \
+       5     1
+      / \   /  \
+     6  2  0    8
+       / \
+      7   4 
+```
+
+Let's use the same stack-based DFS (append right first, then left — so left is popped first):
+```
+Initial: stack = [3]
+```
+**Step 1:** pop `3` → append right `1`, append left `5`
+```
+stack = [1, 5]
+```
+**Step 2:** pop `5` → append right `2`, append left `6`
+```
+stack = [1, 2, 6]
+```
+**Step 3:** pop `6` → leaf, nothing appended
+```
+stack = [1, 2]
+```
+**Step 4:** pop `2` → append right `4`, append left `7`
+```
+stack = [1, 4, 7]
+```
+**Step 5:** pop `7` → leaf, nothing appended
+```
+stack = [1, 4]
+```
+**Step 6:** pop `4` → leaf, nothing appended
+```
+stack = [1]
+```
+**Step 7:** pop `1` → append right `8`, append left `0`
+```
+stack = [8, 0]
+```
+**Step 8:** pop `0` → leaf, nothing appended
+```
+stack = [8]
+```
+**Step 9:** pop `8` → leaf, nothing appended
+```
+stack = []
+```
+**Visit order:** `3 → 5 → 6 → 2 → 7 → 4 → 1 → 0 → 8`
+This is pre-order DFS (root → left → right). The trick is always **append right before left** so that left gets popped first.
 
 # Note
 
