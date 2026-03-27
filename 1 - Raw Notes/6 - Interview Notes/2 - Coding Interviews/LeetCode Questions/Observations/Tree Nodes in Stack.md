@@ -6,9 +6,9 @@ sr-ease: 2.5
 
 Date: 2026-03-26
 Course:
-Tags: 
+Tags: [[../../Coding/Data Structure and Algorithms/5 - Trees and Graphs/Binary Trees - DFS]] [[../../Coding/Data Structure and Algorithms/4 - Stacks & Queues/Stacks|Stacks]]
 
-# Content
+# 1. How to know the two nodes are in the same ancestor lineage?
 
 The core question is: **in DFS, how do you know two nodes share the same ancestor lineage?**
 
@@ -41,6 +41,7 @@ parent = {}
 **BFS does NOT naturally preserve ancestry** — nodes at the same level have no relationship to each other in the queue, so ancestry tracking requires extra bookkeeping like a parent map.
 So ironically, **DFS is the better tool when ancestry matters**, and BFS is better when level/distance matters.
 
+# 2. Tree Nodes in Stack
 
 # Note
 
