@@ -13,6 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Observations/A Universal Principle for tree DFS traversal.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "A Universal Principle for tree DFS traversal"
+            }
+          },
+          {
+            "id": "3cd1dbc9dcf30897",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1026. Maximum Difference Between Node and Ancestor.md",
                 "mode": "source",
                 "source": false,
@@ -31,7 +55,8 @@
               "title": "M - 1026. Maximum Difference Between Node and Ancestor"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -224,10 +249,11 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "130c823274f4783c",
+  "active": "3cd1dbc9dcf30897",
   "lastOpenFiles": [
-    "3 - Zettelkasten/A - Templates/LeetCode Template.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Observations/A Universal Principle for tree DFS traversal.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1026. Maximum Difference Between Node and Ancestor.md",
+    "3 - Zettelkasten/A - Templates/LeetCode Template.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0236. Lowest Common Ancestor of a Binary Tree.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Observations/Tree Nodes in Stack.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1248. Count Number of Nice Subarrays.md",
