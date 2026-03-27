@@ -85,54 +85,6 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0100. Same Tree.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "E - 0100. Same Tree"
-            }
-          },
-          {
-            "id": "a93d30c120496c9a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0112. Path Sum.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "E - 0112. Path Sum"
-            }
-          },
-          {
-            "id": "172f1e69f793d79f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0111. Minimum Depth of Binary Tree.md",
                 "mode": "source",
                 "source": false,
@@ -150,9 +102,33 @@
               "icon": "lucide-file",
               "title": "E - 0111. Minimum Depth of Binary Tree"
             }
+          },
+          {
+            "id": "130c823274f4783c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1026. Maximum Difference Between Node and Ancestor.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "M - 1026. Maximum Difference Between Node and Ancestor"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -345,14 +321,18 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "1a71e9f0de9191ea",
+  "active": "130c823274f4783c",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Untitled",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1448. Count Good Nodes in Binary Tree.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0111. Minimum Depth of Binary Tree.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0112. Path Sum.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0100. Same Tree.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0236. Lowest Common Ancestor of a Binary Tree.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1026. Maximum Difference Between Node and Ancestor.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0111. Minimum Depth of Binary Tree.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1448. Count Good Nodes in Binary Tree.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0100. Same Tree.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0112. Path Sum.md",
+    "2026-03-21.md",
+    "2026-03-25.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Code Review Summary/2026-03-28.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Code Review Summary",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0104. Maximum Depth of Binary Tree.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1248. Count Number of Nice Subarrays.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Binary Trees - DFS.md",
@@ -370,9 +350,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0071. Simplify Path.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/6 - Heaps/Heaps.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Prefix sum technique.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2225. Find Players With Zero or One Losses.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1004. Max Consecutive Ones III.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2342. Max Sum of a Pair With Equal Sum of Digits.md",
     "Untitled.base",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/9 - Backtracking",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/8 - Binary Search",
@@ -386,7 +363,6 @@
     "i changed the canvas name - check sync to git.canvas",
     "Untitled.canvas",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets/Prefix sum technique/file-20260305010804782.png",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets/Prefix sum technique",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/assets/8 - Microservices Chanlleges & Service Mesh Istio/file-20260303000936153.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/assets/8 - Microservices Chanlleges & Service Mesh Istio/file-20260303000917921.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/assets/8 - Microservices Chanlleges & Service Mesh Istio/file-20260303000856693.png",
