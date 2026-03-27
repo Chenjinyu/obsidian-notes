@@ -27,8 +27,10 @@ Tags: [[LeetCode Template]]
 2. Allow Negative numbers?
 3. Allow Empty List
 
+## How do you think about this problem?
 ## Can you find out the exit condition? 
 ## What is the solution pattern? and why
+
 # Step 2 - Try Brute Force First to help you understand the structure of the problems
 ```python
 
