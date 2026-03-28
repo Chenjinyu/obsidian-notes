@@ -54,6 +54,16 @@ logarithmic: 对数
 ## graph
 - The nodes of a graph are also called **vertices**, 
 - and the pointers that connect them are called **edges**
+
+```text
+        1
+       / \
+      2   3
+     /
+    4
+    
+we call the above tree is a skewed tree, if no node 3, then, its a shewed linear tree.
+```
 # Note
 
 
