@@ -44,7 +44,7 @@ Monotonic stacks and queues are useful in problems that, for each element, invol
 - [[../../../LeetCode Questions/M - 0739. Daily Temperatures|M - 0739. Daily Temperatures]]
 > Note: technically, the correct mathematical term to use here is "monotonically non-increasing", not "monotonically decreasing". This is because "monotonically decreasing" implies that the elements are **always** decreasing, so something like `[5, 3, 3, 2]` is not valid since `3, 3` is not decreasing. In this problem, we can have elements in the stack that represent equal temperatures.
 > For simplicity, we have used the term "decreasing" because the important part is that the stack is always sorted. However, it's good to understand the difference. If you wanted to implement a monotonic stack that cannot have equal elements, you would simply need to change the less-than/greater-than operator to a less-than or equal to/greater-than or equal to operator, i.e. `>` becomes `>=` and `<` becomes `<=`.
-- [[../../../LeetCode Questions/M E - 0496. Next Greater Element I|M E - 0496. Next Greater Element I]]
+- [[../../../LeetCode Questions/E M - 0496. Next Greater Element I|M E - 0496. Next Greater Element I]]
 
 # Note
 
