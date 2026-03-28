@@ -176,7 +176,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -233,7 +233,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 546.5
+    "width": 378.5
   },
   "right": {
     "id": "c375af2eeef2242a",
@@ -351,7 +351,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 324.5
+    "width": 245.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -369,13 +369,13 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "94f66ed2e41c049e",
+  "active": "35e02e362c03df86",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/English.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E M - 0543. Diameter of Binary Tree.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1448. Count Good Nodes in Binary Tree.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Observations/DFS/A Universal Principle for tree DFS traversal.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Observations/DFS/Tree Nodes Longest Path.md",
-    "1 - Raw Notes/6 - Interview Notes/English.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Code Review Summary/More Practise.md",
     "1 - Raw Notes/6 - Interview Notes/Review Dashboard.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Code Review Summary/2026-03-28.md",
