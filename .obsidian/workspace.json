@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0543. Diameter of Binary Tree.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Observations/DFS/Tree Nodes Longest Path.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,11 +76,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "E - 0543. Diameter of Binary Tree"
+              "title": "Tree Nodes Longest Path"
+            }
+          },
+          {
+            "id": "c3d42553406edebe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Observations/DFS/Binary Tree DFS Traversal - Mental Checklist.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Binary Tree DFS Traversal - Mental Checklist"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -137,7 +161,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 405.5
+    "width": 467.5
   },
   "right": {
     "id": "c375af2eeef2242a",
@@ -273,12 +297,13 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "23358cbb4e782b6d",
+  "active": "c3d42553406edebe",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1026. Maximum Difference Between Node and Ancestor.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Observations/DFS/Tree Nodes Longest Path.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Observations/DFS/Tree Nodes in same ancestor.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0543. Diameter of Binary Tree.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1026. Maximum Difference Between Node and Ancestor.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Observations/DFS/Binary Tree DFS Traversal - Mental Checklist.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Observations/DFS/Tree Nodes in Stack.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Observations/DFS",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Observations/DFS/A Universal Principle for tree DFS traversal.md",
     "3 - Zettelkasten/A - Templates/LeetCode Template.md",
@@ -303,7 +328,6 @@
     "1 - Raw Notes/6 - Interview Notes/Review Dashboard.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/ReadMe - Trees and Graphs.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M E - 0496. Next Greater Element I.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/1 - Sort/9 - Heap Sort.md",
     "Untitled.base",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/9 - Backtracking",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/8 - Binary Search",
