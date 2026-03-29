@@ -320,6 +320,18 @@
             }
           },
           {
+            "id": "7254b0ddcb219ec5",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.12.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.12.7"
+            }
+          },
+          {
             "id": "5f02ae4f6b909382",
             "type": "leaf",
             "state": {
@@ -344,7 +356,7 @@
             }
           }
         ],
-        "currentTab": 12
+        "currentTab": 13
       }
     ],
     "direction": "vertical"
@@ -537,7 +549,7 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "afa5d41cdbb012ea",
+  "active": "2bac451f8a1b6d29",
   "lastOpenFiles": [
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0239. Sliding Window Maximum.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2225. Find Players With Zero or One Losses.md",
