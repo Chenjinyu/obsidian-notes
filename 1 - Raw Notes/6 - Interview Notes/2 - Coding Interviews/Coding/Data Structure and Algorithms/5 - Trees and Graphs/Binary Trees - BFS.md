@@ -39,6 +39,7 @@ from collections import deque
 def print_all_nodes(root):
     queue = deque([root])
     while queue:
+	    # when the previous level finished, the queue will store current all nodes. 
         nodes_in_current_level = len(queue)
         # do some logic here for the current level
 
