@@ -16,14 +16,16 @@ Tags:
 ## Meta Characters:
 ```
 . ^ $ * + ? { } [ ] \ | ( )
+
 ```
 
-`.` Any character (except newline charactor)
+`.` match one any character (except newline charactor)
 `^` starts with "^hello", if inside of [], means "except/negation"
 `$` Ends with "world$"
-`*` Zero or more occurrences "aix*"
-`+` One or more occurrences "aix+"
-`{}` Exactly the specified number of occurrences: "al{2}", eg: `all`
+`*` Zero or more occurrences "aix*", this is a quantifier
+`+` One or more occurrences "aix+", this is a quantifier
+`?` Zero or one occurrence. this is a quantifier
+`{}` Exactly the specified number of occurrences: "al{2}", eg: `all`. `[A-Z]{1,9}`, matches UPPERCASE less and euqals to 9.
 `[]` A set of characters "[a-m]" 
 `\` Special sequence (or escape special characters), "\d"
 `|` Either or "falls|stays"
