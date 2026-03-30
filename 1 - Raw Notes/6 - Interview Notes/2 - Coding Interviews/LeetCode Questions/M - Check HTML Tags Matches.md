@@ -1,18 +1,25 @@
 ---
-sr-due: 2026-03-29
+sr-due: 2026-04-18
 sr-interval: 3
 sr-ease: 2.5
 ---
 Creation Date: 2026-03-15
 Course:
-Tags: [[../../../../3 - Zettelkasten/A - Templates/LeetCode Template]] [[Stack]]
+Tags: [[../../../../3 - Zettelkasten/A - Templates/LeetCode Template]] [[Stack]] [[../Coding/Regress Expression|Regress Expression]]
 
 #review/15d 
 # Reviews Knowledges Points
 - regex 
 - stack
+```text
+03/29/2026
+r'<(/?\w+)[^>]*>', 
+<div class="div">
+     ~~~~~~~~~~~ excluded by [^>]* 
+```
 # Review Dates
 - 03/20/2026
+- 03/29/2026
 
 # Problem
 
@@ -51,7 +58,7 @@ import re
 def is_valid_html(html: str) -> bool:
 	# using regex, * means zero or more characters that are not `>`
 	# <div class="foo">
-	#      ^^^^^^^^^^^ matched by [^>]*
+	#      ^^^^^^^^^^^ matched by [^>]*, not include >,but any others.
     tag_pattern = re.compile(r'<(/?\w+)[^>]*>') # r'<(?P<tag>/?\w+)[^>]*>' to name the group as tag.
     stack = []
     for matches in tag_pattern.finditer(html):
