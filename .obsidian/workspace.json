@@ -56,12 +56,12 @@
             }
           },
           {
-            "id": "e925d04532dc51a9",
+            "id": "0b256dd93fa8fb74",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Regress Expression.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Binary Trees - DFS.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,11 +76,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Regress Expression"
+              "title": "Binary Trees - DFS"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -137,7 +137,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 413.5
+    "width": 210.5
   },
   "right": {
     "id": "c375af2eeef2242a",
@@ -273,10 +273,14 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "37d4d2d6dca1011c",
+  "active": "0b256dd93fa8fb74",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E M - 0543. Diameter of Binary Tree.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Binary Trees - BFS.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Binary Trees - Types.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/assets/Binary Trees - Types/file-20260330013538803.png",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/assets/Binary Trees - Types",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/assets",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E M - 0543. Diameter of Binary Tree.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0591. Tag Validator.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Regress Expression.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0236. Lowest Common Ancestor of a Binary Tree.md",
@@ -299,8 +303,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0024. Swap Nodes in Pairs.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Observations/Monotonic/Monotonic Decreasing Can do.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0876. Middle of the Linked List.md",
-    "3 - Zettelkasten/A - Templates/LeetCode Template.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1448. Count Good Nodes in Binary Tree.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Observations/Monotonic",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Observations/DFS",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Observations",
@@ -309,9 +311,7 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/9 - Backtracking",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/8 - Binary Search",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/7 - Greedy",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/6 - Heaps",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/2342. Max Sum of a Pair With Equal Sum of Digits/file-20260313021250514.png",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/2342. Max Sum of a Pair With Equal Sum of Digits",
     "i changed the canvas name - check sync to git.canvas",
     "Untitled.canvas",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/assets/Prefix sum technique/file-20260305010804782.png",
@@ -322,7 +322,6 @@
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/assets/8 - Microservices Chanlleges & Service Mesh Istio/file-20260303000730313.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/assets/8 - Microservices Chanlleges & Service Mesh Istio/file-20260303000600782.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/assets/8 - Microservices Chanlleges & Service Mesh Istio/file-20260303000540005.png",
-    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/assets/8 - Microservices Chanlleges & Service Mesh Istio/file-20260303000511889.png",
     "Untitled 5.canvas",
     "Untitled 4.canvas",
     "Untitled 3.canvas",
