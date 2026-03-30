@@ -25,7 +25,7 @@ Tags:
 `*` Zero or more occurrences "aix*", this is a quantifier
 `+` One or more occurrences "aix+", this is a quantifier
 `?` Zero or one occurrence. this is a quantifier
-`{}` Exactly the specified number of occurrences: "al{2}", eg: `all`. `[A-Z]{1,9}`, matches UPPERCASE less and euqals to 9.
+`{}` Exactly the specified number of occurrences: "al{2}", eg: `all`. `[A-Z]{1,9}`, matches UPPERCASE less and euqals to 9. {3}, exactly 3. 
 `[]` A set of characters "[a-m]" 
 `\` Special sequence (or escape special characters), "\d"
 `|` Either or "falls|stays"
