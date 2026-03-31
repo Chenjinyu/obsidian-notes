@@ -42,7 +42,7 @@ The good news is that the structure for performing a DFS is very similar across 
 > As we will see in a moment, steps 2 and 3 may happen in different orders.
 
 ### three types of DFS.
-#### 1. **Preorder traversal**
+#### 1. 1. **Preorder Recursive Traversal**
 ```python
 def preorder_dfs(node):
     if not node:
@@ -56,8 +56,22 @@ def preorder_dfs(node):
 # node -> left -> right
 # Pre -> before children
 ```
+#### 1. 2. **Preorder Stack Traversal**
+```python
+# 1. Preorder — node → left → right
+# Push right first, then left (LIFO means left gets processed first)
 
-#### 2. **Inorder traversal**
+def preorder_iterative(root):
+    if not root: return
+    stack = [root]
+    while stack:
+        node = stack.pop()
+        print(node.val)              # process node first
+        if node.right: stack.append(node.right)
+        if node.left:  stack.append(node.left)
+```
+
+#### 2.1. **Inorder Recursive Traversal**
 ```python
 def inorder_dfs(node):
     if not node:
@@ -72,7 +86,27 @@ def inorder_dfs(node):
 # In -> in the middle of children
 ```
 
-#### 3. **Postorder traversal**
+<span style="color:red; font-size:16px">Remember, the two of Inorder and postorder are more difficult. </span>
+#### **2. 2. Inorder Stack Traversal**
+<span style="color:red">In-order is the odd one out, it's the only one that cannot be done with a simple push/pop loop.
+because you need to defer processing until the entire left subtree is exhausted</span>
+```python
+# 2. Inorder — left → node → right
+# Can't process on push — must walk left first, then process on pop
+
+def inorder_iterative(root):
+    stack = []
+    curr = root
+    while stack or curr:
+        if curr:
+            stack.append(curr)
+            curr = curr.left         # keep walking left
+        else:
+            curr = stack.pop()
+            print(curr.val)          # process node after all left exhausted
+            curr = curr.right
+```
+#### 3.1. **Postorder Recursive Traversal**
 ```python
 def postorder_dfs(node):
     if not node:
@@ -86,7 +120,24 @@ def postorder_dfs(node):
 # left -> right -> node
 # Post -> after children
 ```
+#### 3.2. **Postorder Stack Traversal**
+<span style="color:red">below traversal just reverses the pre-order</span>
+```python
+# 3. Postorder — left → right → node
+# Trick: reverse of (node → right → left), which is just preorder with right/left swapped
 
+def postorder_iterative(root):
+    if not root: return
+    stack = [root]
+    result = []
+    while stack:
+        node = stack.pop()
+        result.append(node.val)      # collect in reverse postorder
+        if node.left:  stack.append(node.left)
+        if node.right: stack.append(node.right)
+    
+    print(result[::-1])              # reverse at the end → left → right → node
+```
 #### for the three types of DFS, it always read the left and then read the right. only difference is when to read the node.
 
 ### Solving Problems with DFS
