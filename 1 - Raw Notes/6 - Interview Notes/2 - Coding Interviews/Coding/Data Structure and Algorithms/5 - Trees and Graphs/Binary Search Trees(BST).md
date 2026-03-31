@@ -11,7 +11,9 @@ Tags:
 # Content
 A binary search tree (BST) is a type of binary tree. A BST has the following property:
 For each node, all values in its left subtree are less than the value in the node, and all values in its right subtree are greater than the value in the node.
-$ This property also implies that values in a BST must be unique.$
+<span style="color: red">This property also implies that values in a BST must be unique.$</span>
+
+> <span style="color:pink">Trivia to know: an inorder DFS traversal prioritizing left before right on a BST will handle the nodes in sorted order.</span>
 
 ![600](assets/Binary%20Search%20Trees(BST)/file-20260330234442967.png)
 With a binary search tree, operations like searching, adding, and removing can be done in <span style="color:red">O(log⁡n)</span> time on average, where n is the number of nodes in the tree, using something called **binary search**, which is the focus of an upcoming chapter.
