@@ -71,6 +71,25 @@ def preorder_iterative(root):
         if node.left:  stack.append(node.left)
 ```
 
+#### 1.3. Example of Tree nodes traversal with preorder
+```
+              9
+             / \
+            6   10
+           / \    \
+          5   7   14
+         /       /  \
+        4       13  15
+       / \      /     \
+      1   3    12     16 
+      
+      
+# LIST = 9, 6, 5, 4, 1, 3, 7, 10, 14, 13, 12, 15, 16
+# read the left node all the down after reading the node
+# for example, from the node 14, the order should be 14, 13, 12 -> then to 15, 16. after read 13, then is the left node of node 13.      
+```
+
+
 #### 2.1. **Inorder Recursive Traversal**
 ```python
 def inorder_dfs(node):
@@ -106,6 +125,24 @@ def inorder_iterative(root):
             print(curr.val)          # process node after all left exhausted
             curr = curr.right
 ```
+
+#### 2.3. Example of Tree nodes traversal with In-Order
+```
+              9
+             / \
+            6   10
+           / \    \
+          5   7   14
+         /       /  \
+        4       13  15
+       / \      /     \
+      1   3    12     16 
+      
+# In order read all left nodes all the way down before read node.      
+# LIST = 1, 4, 
+```
+
+
 #### 3.1. **Postorder Recursive Traversal**
 ```python
 def postorder_dfs(node):
