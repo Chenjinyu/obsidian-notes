@@ -56,6 +56,30 @@
             }
           },
           {
+            "id": "5f9034ed3da6ae88",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0103. Binary Tree Zigzag Level Order Traversal.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "M - 0103. Binary Tree Zigzag Level Order Traversal"
+            }
+          },
+          {
             "id": "c54564083da6600f",
             "type": "leaf",
             "state": {
@@ -80,7 +104,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -273,8 +297,9 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "d541f4025cd0a0bc",
+  "active": "5f9034ed3da6ae88",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Binary Trees - DFS.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E M - 0530. Minimum Absolute Difference in BST.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/E M - 0530. Minimum Absolute Difference in BST/file-20260331015953393.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/E M - 0530. Minimum Absolute Difference in BST/file-20260331015932163.png",
@@ -287,7 +312,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/assets/Binary Search Trees(BST)/file-20260330234442967.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/assets/Binary Search Trees(BST)",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Binary Trees - BFS.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Binary Trees - DFS.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Binary Trees - DFS - Tips for Tree Traversal with Recursive.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0103. Binary Tree Zigzag Level Order Traversal.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0104. Maximum Depth of Binary Tree.md",
