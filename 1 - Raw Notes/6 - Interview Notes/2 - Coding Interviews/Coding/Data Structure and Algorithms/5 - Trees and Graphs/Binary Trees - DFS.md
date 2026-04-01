@@ -1,5 +1,5 @@
 ---
-sr-due: <% tp.date.now("YYYY-MM-DD") %>
+sr-due: 2026-04-04
 sr-interval: 1
 sr-ease: 2.5
 ---
@@ -84,7 +84,7 @@ def preorder_iterative(root):
       1   3    12     16 
       
       
-# LIST = 9, 6, 5, 4, 1, 3, 7, 10, 14, 13, 12, 15, 16
+# Pre-Order: LIST = 9, 6, 5, 4, 1, 3, 7, 10, 14, 13, 12, 15, 16
 # read the left node all the down after reading the node
 # for example, from the node 14, the order should be 14, 13, 12 -> then to 15, 16. after read 13, then is the left node of node 13.      
 ```
@@ -119,7 +119,7 @@ def inorder_iterative(root):
     while stack or curr:
         if curr:
             stack.append(curr)
-            curr = curr.left         # keep walking left
+            curr = curr.left         # keep walking left all the way down, util curr = curr.left is None
         else:
             curr = stack.pop()
             print(curr.val)          # process node after all left exhausted
@@ -138,8 +138,8 @@ def inorder_iterative(root):
        / \      /     \
       1   3    12     16 
       
-# In order read all left nodes all the way down before read node.      
-# LIST = 1, 4, 
+# Read all left nodes all the way down, then read the node, then read the right subtree.
+# LIST = 1, 4, 3, 5, 6, 7, 9, 10, 12, 13, 14, 15, 16
 ```
 
 
@@ -175,6 +175,25 @@ def postorder_iterative(root):
     
     print(result[::-1])              # reverse at the end → left → right → node
 ```
+
+#### 3.3. Example of Tree nodes traversal with Post-Order
+```
+              9
+             / \
+            6   10
+           / \    \
+          5   7   14
+         /       /  \
+        4       13  15
+       / \      /     \
+      1   3    12     16 
+      
+# Post order read all left nodes all the way down before read right node.      
+# LIST = 1, 3, 4, 5, 7, 6, 12, 13, 16, 15, 14, 10, 9
+# the Post order also read all right nodes all the way down before read the parent node. 
+# like from the 10, 
+```
+
 #### for the three types of DFS, it always read the left and then read the right. only difference is when to read the node.
 
 ### Solving Problems with DFS
