@@ -128,7 +128,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -321,8 +321,9 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "e834f2e1fee0f90f",
+  "active": "18da5bfa0fb65d2d",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Graphs.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Depth and Breath First Traversal.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/ReadMe - Dijkstra and Bellman-Ford Algorithms.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/assets/Depth and Breath First Traversal",
@@ -330,7 +331,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/assets/Depth and Breath First Traversal/file-20260402234532979.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/assets/Depth and Breath First Traversal/file-20260402234412648.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/assets/Depth First Traversal",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Graphs.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/assets/Graphs",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/assets",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Trees/Binary Search Trees(BST).md",
