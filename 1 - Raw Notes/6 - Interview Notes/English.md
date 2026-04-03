@@ -64,6 +64,7 @@ logarithmic: 对数
     
 we call the above tree is a skewed tree, if no node 3, then, its a shewed linear tree.
 ```
+arrowheads箭头
 # Note
 
 

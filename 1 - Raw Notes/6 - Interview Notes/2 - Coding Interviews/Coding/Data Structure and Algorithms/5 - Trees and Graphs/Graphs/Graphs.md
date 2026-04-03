@@ -47,7 +47,7 @@ Let's say you had a hash map `graph` that mapped integers to lists of integers
 ### **Second input format: adjacency list**
 
 In an adjacency list, the nodes will be numbered from `0` to `n - 1`. The input will be a 2D integer array, let's call it `graph`. `graph[i]` will be a list of all the outgoing edges from the ithith node.
-
+![400](assets/Graphs/file-20260402233434731.png)
 ### **Third input format: adjacency matrix**
 
 The next format is an adjacency matrix. Once again, the nodes will be numbered from `0` to `n - 1`. You will be given a 2D matrix of size `n x n`, let's call it `graph`. If `graph[i][j] == 1`, that means there is an outgoing edge from node `i` to node `j`. For example:

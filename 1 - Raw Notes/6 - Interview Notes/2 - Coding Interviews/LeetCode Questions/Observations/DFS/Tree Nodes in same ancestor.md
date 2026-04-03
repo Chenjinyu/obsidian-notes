@@ -6,7 +6,7 @@ sr-ease: 2.5
 
 Date: 2026-03-26
 Course:
-Tags: [[../../../Coding/Data Structure and Algorithms/5 - Trees and Graphs/Binary Trees - DFS]] [[../../../Coding/Data Structure and Algorithms/4 - Stacks & Queues/Stacks|Stacks]]
+Tags: [[../../../Coding/Data Structure and Algorithms/5 - Trees and Graphs/Trees/Binary Trees - DFS]] [[../../../Coding/Data Structure and Algorithms/4 - Stacks & Queues/Stacks|Stacks]]
 
 # 1. How to know the two nodes are in the same ancestor lineage?
 

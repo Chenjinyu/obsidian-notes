@@ -6,7 +6,7 @@ sr-ease: 2.5
 
 Date: 2026-03-27
 Course:
-Tags: [[../../../Coding/Data Structure and Algorithms/5 - Trees and Graphs/Binary Trees - DFS|Binary Trees - DFS]]
+Tags: [[../../../Coding/Data Structure and Algorithms/5 - Trees and Graphs/Trees/Binary Trees - DFS|Binary Trees - DFS]]
 
 # Binary Tree DFS Traversal — Mental Checklist
 
