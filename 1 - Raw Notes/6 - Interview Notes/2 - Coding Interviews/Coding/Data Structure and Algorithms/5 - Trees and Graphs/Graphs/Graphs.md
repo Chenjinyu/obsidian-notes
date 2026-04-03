@@ -53,6 +53,8 @@ In an adjacency list, the nodes will be numbered from `0` to `n - 1`. The inp
 The next format is an adjacency matrix. Once again, the nodes will be numbered from `0` to `n - 1`. You will be given a 2D matrix of size `n x n`, let's call it `graph`. If `graph[i][j] == 1`, that means there is an outgoing edge from node `i` to node `j`. For example:
 
 ![650](assets/Graphs/file-20260402232320400.png)
+
+### Acyclic: no cycles
 # Note
 
 
