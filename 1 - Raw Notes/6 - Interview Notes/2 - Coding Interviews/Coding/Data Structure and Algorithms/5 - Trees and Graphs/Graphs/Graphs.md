@@ -55,6 +55,11 @@ The next format is an adjacency matrix. Once again, the nodes will be numbered f
 ![650](assets/Graphs/file-20260402232320400.png)
 
 ### Acyclic: no cycles
+
+## Complexity
+lets say the n = number of nodes, e = number of edges
+so the time complexity is O(e), depends on how many edges it has
+the space complexity is O(n), the number of nodes.
 # Note
 
 
