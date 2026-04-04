@@ -1,5 +1,5 @@
 ---
-sr-due: 2026-04-04
+sr-due: 2026-04-11
 sr-interval: 1
 sr-ease: 2.5
 ---
@@ -8,7 +8,58 @@ Date: 2026-04-04
 Course:
 Tags: [[Graphs]]
 
+#review/daily  
 # Content
+
+## Adjacency List vs Adjacency Matrix Time Complexity
+Adjacency List: O(v + e)
+Adjacency Matrix: O(v ^ 2)
+v == vertex
+
+**Note:** if the input were an adjacency list instead of a matrix, time complexity would drop to **O(V + E)** — you'd only visit real edges, not scan empty cells. That's the core trade-off between the two representations:
+
+|                | Adjacency Matrix            | Adjacency List |
+| -------------- | --------------------------- | -------------- |
+| Time (DFS/BFS) | O(V²)                       | O(V + E)       |
+| Space          | O(V²) for the matrix itself | O(V + E)       |
+| Best for       | dense graphs                | sparse graphs  |
+### Dense Graphs vs Sparse Graphs
+#### **Dense graph** — most possible edges exist, E ≈ V²:
+```text
+V = 4, possible edges = 4² = 16
+
+matrix:           adj list: (no gain compare with matrix)
+[1, 1, 1, 1]      0 → [1, 2, 3]
+[1, 1, 1, 1]      1 → [0, 2, 3]
+[1, 1, 1, 1]      2 → [0, 1, 3]
+[1, 1, 1, 1]      3 → [0, 1, 2]
+```
+Almost every cell is `1` — the matrix wastes almost no space. Both representations store roughly the same amount of information, so matrix's O(V²) time and space is **acceptable**.
+
+#### **Sparse graph** — few edges exist, E << V²:
+```text
+V = 4, only 2 edges exist
+
+matrix:           adj list:
+[0, 1, 0, 0]      0 → [1]
+[0, 0, 0, 0]      1 → []
+[0, 0, 0, 1]      2 → [3]
+[0, 0, 0, 0]      3 → []
+```
+Matrix stores 16 cells but only 2 are useful — **14 wasted cells**. And during DFS you still scan all 16 cells to find those 2 edges. The adj list stores exactly 2 entries and only visits those 2 during DFS.
+
+**The numbers make it obvious:**
+
+| | Dense (E ≈ V²) | Sparse (E << V²) |
+|---|---|---|
+| Matrix time | O(V²) ≈ O(E) — acceptable | O(V²) >> O(E) — wasteful |
+| List time | O(V + E) ≈ O(V²) — no gain | O(V + E) — efficient |
+| Matrix space | O(V²) ≈ O(E) — acceptable | O(V²) >> O(E) — wasteful |
+| List space | O(V + E) ≈ O(V²) — no gain | O(V + E) — efficient |
+**Real world graphs are almost always sparse:**
+- Social network: 1 billion users, but each person has ~1000 friends → E << V²
+- Road map: millions of intersections, but each connects to ~4 roads → E << V²
+This is why adjacency list is the **default choice** in practice.
 
 ## 1. Array of edges
 2D array: `edges = [[0, 1], [1, 2], [2, 0], [2, 3]]`
@@ -76,7 +127,7 @@ are the adjacency list, adjancency_list uses index to present the node
 ```
 
 ```python 
-def dfs(graph, nodes, start):
+def dfs_adjacency_list_with_node_to_get_node_val(graph, nodes, start):
 	"""
 	TIME Complexity: O(v + e)
 	
@@ -103,9 +154,17 @@ dfs(adj, nodes, 0)  # prints 'a', 'c', 'e', 'b', 'd'
 ```
 
 ```python
-def dfs(graph, start):
+def dfs_adjacency_list(graph, start):
 	"""
 	the traversal for adjancency_list
+	TIME Complexity: O(v + e)
+	
+	the nodes are the nodes list to present the node's info, eg value.
+	since adjancency_list use the node value as the key and items in list, the traversal should use second one
+	
+	while stack: each vertex is poped exactly once = O(v)
+	for neighbor in graph[node] -> iterates only real edges, not all n columns, the total edge scans across ALL pops = O(e)
+	total = O(v) + O(e) = O(v + e)
 	"""
     stack = [start]
     visited = set([start])
@@ -229,6 +288,9 @@ for u in range(n):
 
 dfs(adj, 0)  # your original dfs works now
 ```
+
+## Time Complexity:
+
 
 # Note
 
