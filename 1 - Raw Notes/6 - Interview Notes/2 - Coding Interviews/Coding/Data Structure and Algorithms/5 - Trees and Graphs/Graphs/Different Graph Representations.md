@@ -1,5 +1,5 @@
 ---
-sr-due: <% tp.date.now("YYYY-MM-DD") %>
+sr-due: 2026-04-05
 sr-interval: 1
 sr-ease: 2.5
 ---
@@ -154,8 +154,42 @@ def dfs_matrix(matrix, start):
 		# the neighbor is the index of row[n]
         for neighbor in range(n): # scan the entire row, the neighbor is the index of row[n]
             if matrix[node][neighbor] == 1 and neighbor not in visited:
-                visited.add(neighbor) # the neighbor is the index of row[n]
+                visited.add(neighbor) # the neighbor is the index of row[n], which is the node, there is asking: have we visited this node/vertex before?, 
                 stack.append(neighbor)
+                
+matrix = [
+    [0, 1, 1, 0], # a
+    [0, 0, 1, 1], # b 
+    [0, 1, 0, 1], # c 
+    [0, 1, 1, 1], # d
+]
+when pop 0(index of row), it will visit the neighbor which index 1(b) and index 2(c).
+when pop 2 (append b and c, so c will be pop first), the neighbor which index 1(b) has been visited.
+
+below is the walk through
+
+initial: stack = [0], visited = {0}
+pop 0 → scan row [0, 1, 1, 0]
+    neighbor=0 → matrix[0][0]=0 → skip
+    neighbor=1 → matrix[0][1]=1 → visited={0,1}, stack=[1]
+    neighbor=2 → matrix[0][2]=1 → visited={0,1,2}, stack=[1,2]
+    neighbor=3 → matrix[0][3]=0 → skip
+
+pop 2 → scan row [0, 1, 0, 1]
+    neighbor=0 → matrix[2][0]=0 → skip
+    neighbor=1 → matrix[2][1]=1 → already in visited → skip
+    neighbor=2 → matrix[2][2]=0 → skip
+    neighbor=3 → matrix[2][3]=1 → visited={0,1,2,3}, stack=[1,3]
+
+pop 3 → scan row [0, 1, 1, 1]
+    neighbor=1 → already visited → skip
+    neighbor=2 → already visited → skip
+    neighbor=3 → matrix[3][3]=1 → already visited → skip
+
+pop 1 → scan row [0, 0, 1, 1]
+    neighbor=2 → already visited → skip
+    neighbor=3 → already visited → skip
+
 ```
 **The short answer:** for LeetCode, if the input is already an adjacency matrix, just traverse it directly — converting first is unnecessary overhead unless you have a strong reason.
 OPTION 2: Convert to adjacency list first, then use original DFS
