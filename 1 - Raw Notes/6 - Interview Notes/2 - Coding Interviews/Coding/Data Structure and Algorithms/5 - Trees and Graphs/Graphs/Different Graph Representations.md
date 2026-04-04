@@ -6,7 +6,7 @@ sr-ease: 2.5
 
 Date: 2026-04-04
 Course:
-Tags: 
+Tags: [[Graphs]]
 
 # Content
 
@@ -163,6 +163,10 @@ matrix = [
     [0, 1, 0, 1], # c 
     [0, 1, 1, 1], # d
 ]
+dfs_matrix(matrix, 0) # start from vertex a 
+dfs_matrix(matrix, 2) # start from vertex c
+
+
 when pop 0(index of row), it will visit the neighbor which index 1(b) and index 2(c).
 when pop 2 (append b and c, so c will be pop first), the neighbor which index 1(b) has been visited.
 

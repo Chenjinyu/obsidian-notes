@@ -1,3 +1,9 @@
+---
+sr-due: 2026-04-04
+sr-interval: 1
+sr-ease: 2.5
+---
+
 Date: 2026-02-24
 Course: https://www.w3schools.com/dsa/dsa_theory_graphs.php
 Tags: [[DSA]] [[Shortest Path]] 
