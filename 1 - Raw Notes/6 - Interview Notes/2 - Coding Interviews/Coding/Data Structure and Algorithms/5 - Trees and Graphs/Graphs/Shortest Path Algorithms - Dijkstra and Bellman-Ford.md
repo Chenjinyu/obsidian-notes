@@ -23,7 +23,7 @@ Every time an edge is checked and it leads to a shorter distance to a vertex bei
 
 ## Dijkstra
 ### Dijkstra's algorithm is often considered to be the most straightforward algorithm for sloving the shortest path problem.
-- is used for resolving single-source shortest path for directed or undirected paths, (Single-source means that one vertex is chosen to be the start, and the algorithm finds the shortest path from that started vertex to all other vertices)
+- is used for resolving single-source shortest path for directed or undirected paths, <span style="color:red">(Single-source means that one vertex is chosen to be the start, and the algorithm finds the shortest path from that started vertex to all other vertices)</span>
 - does not work for graph with negative edges/weights
 - it needs to know which vertex is the source.
 - It needs a way to mark vertices as visited
@@ -31,7 +31,7 @@ Every time an edge is checked and it leads to a shorter distance to a vertex bei
 - and updating these distances when a shorter distance is found.
 ### Time Complexity: O((V+E) log V)
 the sumof the number of Vertex + the number of edges and then times log Vertex
-### Simple Example 
+### Simple Example 1
 ```python
 
 import heapq
@@ -42,7 +42,7 @@ graphs = {
 	"B": [("A", 4), ("C", 5), ("D", 3)],
 	"C": [("A", 5), ("B", 5), ("F", 3)],
 	"D": [("B", 2), ("E", 8)],
-	"F": [("C", 3), ("E", 2), ("G": 1)],
+	"F": [("C", 3), ("E", 2), ("G", 1)],
 	"G": []
 }
 # TO find the cloest paths
@@ -74,6 +74,56 @@ def dijkstra_simple_example(graph, start, end) -> List:
 				# since all vertices are assign postive inf, so all vertices will be pushed to heapq, and vist them once.
 				heapq.heappush(pq, (new_time, neighbor, path + [neighbor])) # log V per push to reorder the heap
 
+```
+
+### Simple Example 2: solution from Claude
+```python
+import heapq
+
+def dijkstra(graph, start, end):
+    # min heap: (cost, node)
+    heap = [(0, start)]
+    # track shortest distance to each node
+    dist = {start: 0}
+    # track the path: which node did we come from
+    prev = {start: None}
+
+    while heap:
+        cost, node = heapq.heappop(heap)
+        # early exit — found shortest path to end
+        if node == end:
+            break
+        # skip if we already found a better path to this node
+        if cost > dist[node]:
+            continue
+        for neighbor, weight in graph[node]:
+            new_cost = cost + weight
+            if neighbor not in dist or new_cost < dist[neighbor]:
+                dist[neighbor] = new_cost
+                prev[neighbor] = node
+                heapq.heappush(heap, (new_cost, neighbor))
+
+    # reconstruct path by walking back through prev
+    path = []
+    node = end
+    while node is not None:
+        path.append(node)
+        node = prev[node]
+    path.reverse()
+
+    return dist[end], path
+    
+# adjacency list: graph[u] = [(v, weight), ...]
+graph = {
+    'a': [('b', 1), ('c', 4)],
+    'b': [('c', 2), ('d', 6)],
+    'c': [('d', 3)],
+    'd': []
+}
+
+cost, path = dijkstra(graph, 'a', 'd')
+print(cost)   # 6
+print(path)   # ['a', 'b', 'c', 'd']
 ```
 ### NOTE: The Term of Relaxing
 Since the original value is inf, then we can relax it with lower value, the processing we call it as relaxing.
