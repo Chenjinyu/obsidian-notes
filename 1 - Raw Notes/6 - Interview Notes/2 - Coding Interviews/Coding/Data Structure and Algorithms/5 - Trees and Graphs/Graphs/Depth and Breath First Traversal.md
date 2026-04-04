@@ -26,7 +26,7 @@ def dfs(graph, start):
     visited = set([start])
     
     while stack:
-        node = stack.pop()
+        node = stack.pop() 
         print(node)  # process node
         
         for neighbor in graph[node]:
