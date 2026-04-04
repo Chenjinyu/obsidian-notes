@@ -31,8 +31,12 @@ Many times, the nodes of a graph will be labeled from `0` to `n - 1`. The pro
 
 ### **First input format: array of edges**
 
+![200](assets/Graphs/file-20260404014053712.png)
+```python
+# For example
+edges = [[0, 1], [1, 2], [2, 0], [2, 3]]
+```
 So, why can't we immediately start traversal? Let's say that we want to start a DFS from node `0` (sometimes the problem will state which node you should start from, sometimes you will need to figure this out yourself). When we're at node `0`, how do we find the neighbors? We would need to iterate over the entire input to find all edges that include `0`. When we move to a neighbor node, we would need to iterate over the entire input again to find all the neighbors of that node.
-
 
 **<span style="color:#bd736d;font-weight:bold">At every node, we would need to iterate over the entire input to find the neighbors.</span>** This is very slow!
 
@@ -40,12 +44,31 @@ Before starting the traversal, we can pre-process the input so that we can easil
 
 Let's say you had a hash map `graph` that mapped integers to lists of integers. We can iterate over the input and for each `[x, y]` pair, we can put `y` in the list associated with `graph[x]`. If the edges are undirected, we will also need to put `x` in the list associated with `graph[y]`. After building this hash map, we can do `graph[0]` and immediately have all the neighbors of node `0`.
 
+```python
+edges = [[0, 1], [1, 2], [2, 0], [2, 3]]
+
+from collections import defaultdict
+
+def build_graph(edges):
+    graph = defaultdict(list)
+    for x, y in edges:
+        graph[x].append(y)
+        # graph[y].append(x)
+        # uncomment the above line if the graph is undirected
+    
+    return graph
+
+```
 
 #### Why it is important to build the graph hashmap
 >A good analogy for this: imagine you're on Facebook and you want to see a list of all your friends. However, the Facebook engineers decided to keep their graph in the form of an array of edges! You would need to look at **every single connection in the world** (which is likely in the hundreds of billions if not trillions) and find the connections that involve you. However, if the `graph` is built beforehand, you can easily just click the friends tab on your profile to see only your friends.
 
 ### **Second input format: adjacency list**
 
+```python
+# adjacency list example
+graph = [[1], [2], [0, 3], []]
+```
 In an adjacency list, the nodes will be numbered from `0` to `n - 1`. The input will be a 2D integer array, let's call it `graph`. `graph[i]` will be a list of all the outgoing edges from the ithith node.
 ![400](assets/Graphs/file-20260402233434731.png)
 ### **Third input format: adjacency matrix**
