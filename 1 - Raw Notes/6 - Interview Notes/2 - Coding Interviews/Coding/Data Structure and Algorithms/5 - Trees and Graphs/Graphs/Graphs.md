@@ -54,6 +54,11 @@ The next format is an adjacency matrix. Once again, the nodes will be numbered f
 
 ![650](assets/Graphs/file-20260402232320400.png)
 
+![800](assets/Graphs/file-20260404004143091.png)
+![800](assets/Graphs/file-20260404004224172.png)
+As you can see, the weights are placed directly into the adjacency matrix for the correct edge, and for a directed Graph, 
+<span style="color:orange">the adjacency matrix does NOT have to be symmetric.</span>
+
 ### Acyclic: no cycles
 
 ## Complexity
