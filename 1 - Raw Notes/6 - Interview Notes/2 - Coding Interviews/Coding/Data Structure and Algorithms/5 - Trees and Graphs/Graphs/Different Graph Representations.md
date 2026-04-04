@@ -114,21 +114,67 @@ def dfs(graph, start):
                 stack.append(neighbor)
 ```
 
-### 2.2 Adjacency List looks like
+### 2.2 Adjacency List Graph Representation(画像)
 In the adjacency list representation, a graph is represented as an array of linked list. The index of the array represents a vertex and each element in its linked list represents the  vertices that form an edge with the vertex. 
-the linked list just a list, 
-#### 2.2.1. An undirected graphs and its adjacency list
+The "linked list" because conceptually each neighbor list can grow dynamically — but <span style="color: orange">the **idea** is the same whether you use a linked list or a dynamic array.</span>
+#### 2.2.1. An undirected graph and its adjacency list
 ![300](assets/Different%20Graph%20Representations/file-20260404025018005.png)
 
-
+#### 2.2.2. An directed and weighted graph and its adjacency list
+![300](assets/Different%20Graph%20Representations/file-20260404025410768.png)
 ## 3. Adjacency Matrix
-
+In the adjacency matrix representation, a graph is represented in the form of a two-dimensional array. The size of the array is **V x V**, where V is the set of vertices.
 ```python
 adjacency_matrix = [
 	[1,1,0],
 	[1,1,0],
 	[0,0,1]
 ]
+```
+### 3.1. Adjacency Matrix Graph Representation(画像)
+#### 3.1.1. An undirected graph an the adjacency matrix
+![300](assets/Different%20Graph%20Representations/file-20260404025557884.png)
+#### 3.1.2. An directed and weighted graph an the adjacency matrix
+![300](assets/Different%20Graph%20Representations/file-20260404025648961.png)
+NOTE: the adjacency matrix does not have to be symmetric, since the weighted
+
+#### 3.2. Adjacency Matrix Graph Traversal
+OPTION 1: Use adjacency matrix directly un DFS
+just change how you find neighbors - instead of `graph[mode]`, you can scan the row:
+```python
+def dfs_matrix(matrix, start):
+    n = len(matrix)
+    stack = [start]
+    visited = set([start])
+
+    while stack:
+        node = stack.pop() # the node is the row's index.
+        print(node)
+		
+		# the neighbor is the index of row[n]
+        for neighbor in range(n): # scan the entire row, the neighbor is the index of row[n]
+            if matrix[node][neighbor] == 1 and neighbor not in visited:
+                visited.add(neighbor) # the neighbor is the index of row[n]
+                stack.append(neighbor)
+```
+**The short answer:** for LeetCode, if the input is already an adjacency matrix, just traverse it directly — converting first is unnecessary overhead unless you have a strong reason.
+OPTION 2: Convert to adjacency list first, then use original DFS
+```python
+matrix = [
+    [0, 1, 1, 0],
+    [0, 0, 0, 1],
+    [0, 0, 0, 0],
+    [0, 0, 0, 0],
+]
+
+n = len(matrix) # the len of rows, not matter if its symmetric or not.
+adj = [[] for _ in range(n)]
+for u in range(n):
+    for v in range(n):
+        if matrix[u][v] == 1:
+            adj[u].append(v)
+
+dfs(adj, 0)  # your original dfs works now
 ```
 
 # Note
