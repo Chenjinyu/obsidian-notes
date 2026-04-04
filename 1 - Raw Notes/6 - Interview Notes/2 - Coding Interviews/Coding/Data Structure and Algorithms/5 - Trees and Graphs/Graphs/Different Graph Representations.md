@@ -151,7 +151,7 @@ just change how you find neighbors - instead of `graph[mode]`, you can scan the 
 def dfs_matrix(matrix, start):
 	"""
 	while stack               → each vertex popped exactly once = n pops
-	for neighbor in range(n)  → scans ALL n columns for every pop
+	for neighbor in range(n)  → scans ALL n columns for every pop, worse case, all nodes(vertexes) in the neighbor.
 	
 	total = n pops × n column scans = O(n²)
 	"""
