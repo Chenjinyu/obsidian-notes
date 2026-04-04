@@ -78,8 +78,14 @@ are the adjacency list, adjancency_list uses index to present the node
 ```python 
 def dfs(graph, nodes, start):
 	"""
+	TIME Complexity: O(v + e)
+	
 	the nodes are the nodes list to present the node's info, eg value.
 	since adjancency_list use the node value as the key and items in list, the traversal should use second one
+	
+	while stack: each vertex is poped exactly once = O(v)
+	for neighbor in graph[node] -> iterates only real edges, not all n columns, the total edge scans across ALL pops = O(e)
+	total = O(v) + O(e) = O(v + e)
 	"""
     stack = [start]
     visited = set([start])
@@ -143,6 +149,12 @@ OPTION 1: Use adjacency matrix directly un DFS
 just change how you find neighbors - instead of `graph[mode]`, you can scan the row:
 ```python
 def dfs_matrix(matrix, start):
+	"""
+	while stack               → each vertex popped exactly once = n pops
+	for neighbor in range(n)  → scans ALL n columns for every pop
+	
+	total = n pops × n column scans = O(n²)
+	"""
     n = len(matrix)
     stack = [start]
     visited = set([start])
