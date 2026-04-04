@@ -145,7 +145,10 @@ adjacency_matrix = [
 NOTE: the adjacency matrix does not have to be symmetric, since the weighted
 
 #### 3.2. Adjacency Matrix Graph Traversal
-OPTION 1: Use adjacency matrix directly un DFS
+compare with: [[../../../../LeetCode Questions/M - 0547. Number of Provinces|M - 0547. Number of Provinces]], this solution will loop all rows to find multi graphs.
+the below solution just a simple traversal from a single node. it does not know how many graphs exist. 
+
+OPTION 1: Use adjacency matrix directly with DFS
 just change how you find neighbors - instead of `graph[mode]`, you can scan the row:
 ```python
 def dfs_matrix(matrix, start):
