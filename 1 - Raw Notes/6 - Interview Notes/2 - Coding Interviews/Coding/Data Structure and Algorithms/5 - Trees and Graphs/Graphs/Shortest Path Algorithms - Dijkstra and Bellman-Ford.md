@@ -31,6 +31,43 @@ Every time an edge is checked and it leads to a shorter distance to a vertex bei
 - and updating these distances when a shorter distance is found.
 ### Time Complexity: O((V+E) log V)
 the sumof the number of Vertex + the number of edges and then times log Vertex
+<span style="color:red">
+Both example 1 and example 2 work correctly. 
+Example 1's visited approach is slightly cleaner to read
+Overall: correct solutions, just trade off being extra space cost of carrying path in heap versus reconstructing with prev dict.
+</span>
+
+Dijkstra's Algorithm on undirected graphs
+![400](assets/Shortest%20Path%20Algorithms%20-%20Dijkstra%20and%20Bellman-Ford/file-20260404185631636.png)
+Dijkstra's Algorithm on directed graphs
+![400](assets/Shortest%20Path%20Algorithms%20-%20Dijkstra%20and%20Bellman-Ford/file-20260404185758661.png)
+
+#### **Undirected** — add both directions:
+```python
+graph = {
+    'a': [('b', 4), ('c', 5)],
+    'b': [('a', 4), ('c', 5)],  # ← reverse edges added
+    'c': [('a', 5), ('b', 5)],
+}
+```
+#### **Directed** — add only one direction:
+```python
+graph = {
+    'a': [('b', 4), ('c', 5)],
+    'b': [('c', 5)],             # ← no reverse edge back to 'a'
+    'c': [],
+}
+```
+The dijkstra function itself stays **identical** — it just follows whatever neighbors are in `graph[node]`.
+#### **The same principle applies to all graph traversal algorithms:**
+
+|Algorithm|Directed|Undirected|
+|---|---|---|
+|DFS|same code|same code|
+|BFS|same code|same code|
+|Dijkstra|same code|same code|
+
+The graph representation absorbs the directed/undirected distinction — the traversal logic never needs to know.
 ### Simple Example 1
 ```python
 
@@ -41,7 +78,7 @@ graphs = {
 	"A": [("B", 4), ("C", 5)],
 	"B": [("A", 4), ("C", 5), ("D", 3)],
 	"C": [("A", 5), ("B", 5), ("F", 3)],
-	"D": [("B", 2), ("E", 8)],
+	"D": [("B", 3), ("E", 8)],
 	"F": [("C", 3), ("E", 2), ("G", 1)],
 	"G": []
 }
