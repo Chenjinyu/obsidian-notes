@@ -110,7 +110,7 @@ def inorder_dfs(node):
     inorder_dfs(node.right)
     return
     
-# left -> node -> rigth
+# left -> node -> right
 # In -> in the middle of children
 ```
 

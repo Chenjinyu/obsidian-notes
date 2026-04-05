@@ -22,7 +22,7 @@ To begin with, the algorithms set the distance from the start vertex to all vert
 Every time an edge is checked and it leads to a shorter distance to a vertex being found and updated, it is called a **relaxation**, or **relaxing** an edge.
 
 ## Dijkstra
-### Dijkstra's algorithm is often considered to be the most straightforward algorithm for sloving the shortest path problem.
+### Dijkstra's algorithm is often considered to be the most straightforward algorithm for solving the shortest path problem.
 - is used for resolving single-source shortest path for directed or undirected paths, <span style="color:red">(Single-source means that one vertex is chosen to be the start, and the algorithm finds the shortest path from that started vertex to all other vertices)</span>
 - does not work for graph with negative edges/weights
 - it needs to know which vertex is the source.
