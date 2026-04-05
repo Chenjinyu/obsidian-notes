@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/3 - Linked Lists/Reversing a Linked list.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1248. Count Number of Nice Subarrays.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Reversing a Linked list"
+              "title": "M - 1248. Count Number of Nice Subarrays"
             }
           },
           {
@@ -251,8 +251,10 @@
   },
   "active": "cdc6cc058d38439e",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0092. Reverse Linked List II.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1248. Count Number of Nice Subarrays.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0560. Subarray Sum Equals K.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/3 - Linked Lists/Reversing a Linked list.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0092. Reverse Linked List II.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1448. Count Good Nodes in Binary Tree.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Shortest Path Algorithms - Dijkstra and Bellman-Ford.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/assets/Shortest Path Algorithms - Dijkstra and Bellman-Ford/file-20260404185758661.png",
@@ -295,8 +297,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Trees/Binary Trees - BFS.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Trees/Binary Trees - DFS - Tips for Tree Traversal with Recursive.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0104. Maximum Depth of Binary Tree.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0199. Binary Tree Right Side View.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0515. Find Largest Value in Each Tree Row.md",
     "i changed the canvas name - check sync to git.canvas",
     "Untitled.canvas",
     "Untitled 5.canvas",
