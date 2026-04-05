@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2352. Equal Row and Column Pairs.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "M - 2352. Equal Row and Column Pairs"
+              "title": "M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit"
             }
           }
         ]
@@ -227,6 +227,7 @@
   },
   "active": "27010cd4de5b91e6",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2352. Equal Row and Column Pairs.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Patterns/Pattern HashMap and Prefix Sum.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0974. Subarray Sums Divisible by K.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0560. Subarray Sum Equals K.md",
@@ -272,7 +273,6 @@
     "1 - Raw Notes/6 - Interview Notes/English.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Prefix sum technique.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0701. Insert into a Binary Search Tree.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Trees/Binary Trees - DFS.md",
     "i changed the canvas name - check sync to git.canvas",
     "Untitled.canvas",
     "Untitled 5.canvas",
