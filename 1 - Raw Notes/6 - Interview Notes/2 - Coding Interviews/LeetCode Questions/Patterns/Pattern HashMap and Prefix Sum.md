@@ -4,13 +4,11 @@ sr-interval: 1
 sr-ease: 2.5
 ---
 # Reference
-- [[../M - 0525. Contiguous Array|0525. Contiguous Array]]
-- [[../M - 0560. Subarray Sum Equals K|0560. Subarray Sum Equals K (M)]]
-- [[../M - 0974. Subarray Sums Divisible by K|0974. Subarray Sums Divisible by K]]
-- [[../M - 1248. Count Number of Nice Subarrays|1248. Count Number of Nice Subarrays]]
-- [[../M - 2342. Max Sum of a Pair With Equal Sum of Digits|2342. Max Sum of a Pair With Equal Sum of Digits]]
-- 
-
+- [[../M - 1248. Count Number of Nice Subarrays|M - 1248. Count Number of Nice Subarrays]]
+- [[../M - 0974. Subarray Sums Divisible by K|M - 0974. Subarray Sums Divisible by K]]
+- [[../M - 0560. Subarray Sum Equals K|M - 0560. Subarray Sum Equals K]]
+- [[../M - 0525. Contiguous Array|M - 0525. Contiguous Array]]
+- [[../M - 2342. Max Sum of a Pair With Equal Sum of Digits|M - 2342. Max Sum of a Pair With Equal Sum of Digits]]
 # The criteria to meet the pattern
 ```text
 1. Count the number of subarrays (NOTE: it's not get the sub-array)
