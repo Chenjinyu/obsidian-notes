@@ -1,5 +1,5 @@
 ---
-sr-due: 2026-04-05
+sr-due: 2026-04-18
 sr-interval: 1
 sr-ease: 2.5
 ---
@@ -104,13 +104,16 @@ NOTE: <span style="color:red">**BFS is naturally iterative** — forcing it into
 ```python
 def bfs(graph, start, queue=None, visited=None):
     if queue is None:
-        queue = deque([start])
-        visited = set([start])
-    
-    if not queue: # the falsy / truthy base
+        queue = deque([start]) # ← only use of start
+        visited = set([start]) # ← only use of start
+        
+    # bool(deque([0])) # → True ← not empty 
+    # bool(deque([])) # → False ← empty, "not queue" is True
+    # the falsy / truthy based on deque size.
+    if not queue: 
         return
     
-    node = queue.popleft()
+    node = queue.popleft() # from here on, start is never referenced again
     print(node)  # process node
     
     for neighbor in graph[node]:
