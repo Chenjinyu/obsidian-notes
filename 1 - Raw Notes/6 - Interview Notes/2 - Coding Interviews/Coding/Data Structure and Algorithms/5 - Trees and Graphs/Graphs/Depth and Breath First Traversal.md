@@ -17,6 +17,15 @@ Tags: [[Graphs]] [[DFS]] [[BFS]] [[Stack]] [[Queues]] [[Recursive]]
 it will pick up any node to start, and choose a direction to move on until there is no node in that direction, then it choose other random direction until cannot move on
 ![](assets/Depth%20and%20Breath%20First%20Traversal/file-20260402234532979.png)
 
+#### 0. How to use Set
+```python
+visited = set([start])  # wraps start in a list first, then makes a set
+visited = set()         # empty set, then add start separately
+# or
+visited = {start}       # set literal, most Pythonic
+```
+
+`set(start)` without the list would be
 #### 1. DFS - using Stack
 ```python
 # depth first traversal pattern
