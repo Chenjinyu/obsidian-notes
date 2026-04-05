@@ -29,13 +29,7 @@ Every time an edge is checked and it leads to a shorter distance to a vertex bei
 - It needs a way to mark vertices as visited
 - It needs an overview of the current shortest distance to each vertex as it works its way through the graph, 
 - and updating these distances when a shorter distance is found.
-### Time Complexity: O((V+E) log V)
-the sumof the number of Vertex + the number of edges and then times log Vertex
-<span style="color:red">
-Both example 1 and example 2 work correctly. 
-Example 1's visited approach is slightly cleaner to read
-Overall: correct solutions, just trade off being extra space cost of carrying path in heap versus reconstructing with prev dict.
-</span>
+
 
 Dijkstra's Algorithm on undirected graphs
 ![400](assets/Shortest%20Path%20Algorithms%20-%20Dijkstra%20and%20Bellman-Ford/file-20260404185631636.png)
@@ -68,6 +62,17 @@ The Dijkstra function itself stays **identical** — it just follows whatever ne
 |Dijkstra|same code|same code|
 
 The graph representation absorbs the directed/undirected distinction — the traversal logic never needs to know.
+
+## Code Example
+
+### Time Complexity: O((V+E) log V)
+the sum of the number of Vertex + the number of edges and then times log Vertex
+
+<span style="color:red">
+Both example 1 and example 2 work correctly. 
+Example 1's visited approach is slightly cleaner to read
+Overall: correct solutions, just trade off being extra space cost of carrying path in heap versus reconstructing with prev dict.
+</span>
 ### Simple Example 1
 ```python
 
