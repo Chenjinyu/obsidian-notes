@@ -87,13 +87,13 @@ graphs = {
 	"F": [("C", 3), ("E", 2), ("G", 1)],
 	"G": []
 }
-# TO find the cloest paths
+# TO find the closest paths
 def dijkstra_simple_example(graph, start, end) -> List:
 	# is a list, but it will push to heapq and order it with min order queue
 	# current_time, current_city, and the path
 	pq = [(0, start, [start])]
 	# assign inf to all vertices
-	shortest_cost = {city: float("inf") for city in graphs}
+	shortest_cost = {city: float("inf") for city in graph}
 	shortest_cost[start] = 0
 	visted = set()
 	
@@ -102,19 +102,20 @@ def dijkstra_simple_example(graph, start, end) -> List:
 		cur_time, cur_city, path = heapq.heappop(pq) 
 		
 		if cur_city == end:
-			return path
+			return path # <- here is the return when find the end.
 		if cur_city in visted:
 			continue
 		
 		visted.add(cur_city)
 		
-		for neighbor, cost_time in graphs[cur_city]: # E total across all vertices
+		for neighbor, cost_time in graph[cur_city]: # E total across all vertices
 			new_time = cur_time + cost_time
 			if new_time < shortest_cost[neighbor]:
 				shortest_cost[neighbor] = new_time # relaxing neighbor vertex with new vaule
 				# everytime push the smaller value to heapq, 
 				# since all vertices are assign postive inf, so all vertices will be pushed to heapq, and vist them once.
 				heapq.heappush(pq, (new_time, neighbor, path + [neighbor])) # log V per push to reorder the heap
+	
 
 ```
 
