@@ -17,15 +17,13 @@ you need manually traversal the tree nodes with the three DFS traversal methods.
 
 # Review dates
 - 04/04/2026
-# Content
-
-## Traverse binary trees
+# Traverse binary trees
 Tree traversal is how we access the elements of a tree, and thus is mandatory for solving tree problems.
 We start at the `root` and traverse by using the child pointers `.left` and `.right`. When traversing linked lists, we usually do it iteratively. With binary trees, we usually do it recursively.
 
 There are two main types of tree traversals. The first is called depth-first search (DFS). For binary trees specifically, there are 3 ways to perform DFS - preorder, inorder, and postorder (don't worry though, the type you choose rarely matters). The other main type of traversal is called breadth-first search (BFS). Let's start by looking at DFS.
 
-## Depth-first Search(DFS)
+# Depth-first Search(DFS)
 >the depth of a node is its distance from the root.
 
 In a DFS, we prioritize depth by traversing as far down the tree as possible in one direction (until reaching a leaf node) before considering the other direction
@@ -50,8 +48,8 @@ The good news is that the structure for performing a DFS is very similar across 
 
 > As we will see in a moment, steps 2 and 3 may happen in different orders.
 
-### three types of DFS.
-#### 1. 1. **Preorder Recursive Traversal**
+## Three types of DFS.
+### 1. 1. **Preorder Recursive Traversal**
 ```python
 def preorder_dfs(node):
     if not node:
@@ -65,7 +63,7 @@ def preorder_dfs(node):
 # node -> left -> right
 # Pre -> before children
 ```
-#### 1. 2. **Preorder Stack Traversal**
+### 1. 2. **Preorder Stack Traversal**
 ```python
 # 1. Preorder — node → left → right
 # Push right first, then left (LIFO means left gets processed first)
@@ -80,7 +78,7 @@ def preorder_iterative(root):
         if node.left:  stack.append(node.left)
 ```
 
-#### 1.3. Example of Tree nodes traversal with preorder
+### 1.3. Example of Tree nodes traversal with preorder
 ```
               9
              / \
@@ -99,7 +97,7 @@ def preorder_iterative(root):
 ```
 
 
-#### 2.1. **Inorder Recursive Traversal**
+### 2.1. **Inorder Recursive Traversal**
 ```python
 def inorder_dfs(node):
     if not node:
@@ -115,7 +113,7 @@ def inorder_dfs(node):
 ```
 
 <span style="color:red; font-size:16px">Remember, the two of Inorder and postorder are more difficult. </span>
-#### **2. 2. Inorder Stack Traversal**
+### **2. 2. Inorder Stack Traversal**
 <span style="color:red">In-order is the odd one out, it's the only one that cannot be done with a simple push/pop loop.
 because you need to defer processing until the entire left subtree is exhausted</span>
 ```python
@@ -135,7 +133,7 @@ def inorder_iterative(root):
             curr = curr.right
 ```
 
-#### 2.3. Example of Tree nodes traversal with In-Order
+### 2.3. Example of Tree nodes traversal with In-Order
 ```
               9
              / \
@@ -152,7 +150,7 @@ def inorder_iterative(root):
 ```
 
 
-#### 3.1. **Postorder Recursive Traversal**
+### 3.1. **Postorder Recursive Traversal**
 ```python
 def postorder_dfs(node):
     if not node:
@@ -166,8 +164,11 @@ def postorder_dfs(node):
 # left -> right -> node
 # Post -> after children
 ```
-#### 3.2. **Postorder Stack Traversal**
+### 3.2. **Postorder Stack Traversal**
+
+#### 3.2.1. Method 1
 <span style="color:red">below traversal just reverses the pre-order</span>
+NOTE: This is a **trick** — it doesn't actually process children before parent, it just **reorders the output** at the end. It works for printing but is **useless** when you need to use children's computed values at the parent.
 ```python
 # 3. Postorder — left → right → node
 # Trick: reverse of (node → right → left), which is just preorder with right/left swapped
@@ -184,8 +185,22 @@ def postorder_iterative(root):
     
     print(result[::-1])              # reverse at the end → left → right → node
 ```
+#### 3.2.2. Method 2 (visited flag, my solution for [[../../../../LeetCode Questions/E M - 0543. Diameter of Binary Tree|E M - 0543. Diameter of Binary Tree]])
+```python
+stack = [(root, False)]
+while stack:
+    node, visited = stack.pop()
+    if visited:
+        # children already processed, use their values now
+        left_h = height.get(node.left, 0)
+        right_h = height.get(node.right, 0)
+    else:
+        stack.append((node, True))    # revisit current later
+        if node.right: stack.append((node.right, False))
+        if node.left:  stack.append((node.left, False))
+```
 
-#### 3.3. Example of Tree nodes traversal with Post-Order
+### 3.3. Example of Tree nodes traversal with Post-Order
 ```
               9
              / \
@@ -203,6 +218,7 @@ def postorder_iterative(root):
 # but in any left node which has left node, will be read first, and all the way down
 # like from the 10, 
 ```
+
 
 #### for the three types of DFS, it always read the left and then read the right. only difference is when to read the node.
 
