@@ -20,12 +20,26 @@ it will pick up any node to start, and choose a direction to move on until there
 #### 0. How to use Set
 ```python
 visited = set([start])  # wraps start in a list first, then makes a set
-visited = set()         # empty set, then add start separately
 # or
+visited = set()         # empty set, then add start separately
 visited = {start}       # set literal, most Pythonic
 ```
 
-`set(start)` without the list would be
+`set(start)` without the list would be wrong if `start` is a string
+```python
+start = "abc"
+set(start)    # → {'a', 'b', 'c'}  ← iterates characters! YES, the abc is iterable, same like [start] list is iterable
+set([start])  # → {'abc'}          ← correct, treats whole string as one element
+{start}       # → {'abc'}          ← correct
+
+# when start = "a", then,
+set(start), set([start]) are the same
+# BUT, if the graph node, which is integer
+# you cannot use
+set(start), it will raise TypeError, because integer cannot iterate.
+```
+
+
 #### 1. DFS - using Stack
 ```python
 # depth first traversal pattern
@@ -33,7 +47,7 @@ visited = {start}       # set literal, most Pythonic
 # A tree is acyclic by definition, but a graph can have cycles — without `visited` you'd loop forever.
 def dfs(graph, start):
     stack = [start]
-    visited = set([start])
+    visited = set([start]) # same to visited = {start}
     
     while stack:
         node = stack.pop() 
@@ -48,14 +62,14 @@ def dfs(graph, start):
 #### 2. DFS - using Recursive
 NOTE: <span style="color:red">Recursive DFS is standard and clean though, since the call stack naturally mirrors the depth-first nature of the traversal.</span>
 ```python
-def dfs(graph, node, visited=None):
+def dfs(graph, start, visited=None):
     if visited is None:
         visited = set()
     
-    visited.add(node)
-    print(node)  # process node
+    visited.add(start)
+    print(start)  # process node
     
-    for neighbor in graph[node]:
+    for neighbor in graph[start]:
         if neighbor not in visited:
             dfs(graph, neighbor, visited)
 ```
@@ -88,12 +102,12 @@ def bfs(graph, start):
 #### 2. BFS - using Recursive
 NOTE: <span style="color:red">**BFS is naturally iterative** — forcing it into recursion is unnatural because the recursion just mimics the `while queue` loop. In practice, nobody writes recursive BFS.</span>
 ```python
-def bfs(graph, queue=None, visited=None):
+def bfs(graph, start, queue=None, visited=None):
     if queue is None:
         queue = deque([start])
         visited = set([start])
     
-    if not queue:
+    if not queue: # the falsy / truthy base
         return
     
     node = queue.popleft()
@@ -104,7 +118,7 @@ def bfs(graph, queue=None, visited=None):
             visited.add(neighbor)
             queue.append(neighbor)
     
-    bfs(graph, queue, visited)  # recurse on remaining queue
+    bfs(graph, start, queue, visited)  # recurse on remaining queue
 ```
 > Also note that `visited.add()` happens **on insertion**, not on processing. If you add on processing instead, the same node can get pushed onto the stack/queue multiple times before it's visited, which wastes work or causes bugs in dense graphs.
 # Note
