@@ -11,7 +11,8 @@ Tags: [[Binary Trees - DFS]]
 
 # Reviews Knowledges Points
 ```text
-
+04/04/2026
+you need manually traversal the tree nodes with the three DFS traversal methods.
 ```
 
 # Review dates
@@ -68,7 +69,7 @@ def preorder_dfs(node):
 ```python
 # 1. Preorder — node → left → right
 # Push right first, then left (LIFO means left gets processed first)
-
+# read node and then all the left nodes, jump up to each node's right to read
 def preorder_iterative(root):
     if not root: return
     stack = [root]
@@ -199,6 +200,7 @@ def postorder_iterative(root):
 # Post order read all left nodes all the way down before read right node.      
 # LIST = 1, 3, 4, 5, 7, 6, 12, 13, 16, 15, 14, 10, 9
 # the Post order also read all right nodes all the way down before read the parent node. 
+# but in any left node which has left node, will be read first, and all the way down
 # like from the 10, 
 ```
 
