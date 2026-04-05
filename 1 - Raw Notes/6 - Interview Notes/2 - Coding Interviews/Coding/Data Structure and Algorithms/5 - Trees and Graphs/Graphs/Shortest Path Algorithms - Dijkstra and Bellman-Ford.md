@@ -58,7 +58,7 @@ graph = {
     'c': [],
 }
 ```
-The dijkstra function itself stays **identical** — it just follows whatever neighbors are in `graph[node]`.
+The Dijkstra function itself stays **identical** — it just follows whatever neighbors are in `graph[node]`.
 #### **The same principle applies to all graph traversal algorithms:**
 
 |Algorithm|Directed|Undirected|
