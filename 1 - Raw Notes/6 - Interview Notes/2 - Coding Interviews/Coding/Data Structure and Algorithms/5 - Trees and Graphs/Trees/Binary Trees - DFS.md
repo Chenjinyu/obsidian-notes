@@ -1,5 +1,5 @@
 ---
-sr-due: 2026-04-11
+sr-due: 2026-04-05
 sr-interval: 1
 sr-ease: 2.5
 ---
@@ -165,8 +165,22 @@ def postorder_dfs(node):
 # Post -> after children
 ```
 ### 3.2. **Postorder Stack Traversal**
+#### 3.2.1. Method 1 (visited flag, my solution for [[../../../../LeetCode Questions/E M - 0543. Diameter of Binary Tree|E M - 0543. Diameter of Binary Tree]])
+```python
+stack = [(root, False)]
+while stack:
+    node, visited = stack.pop()
+    if visited:
+        # children already processed, use their values now
+        left_h = height.get(node.left, 0)
+        right_h = height.get(node.right, 0)
+    else:
+        stack.append((node, True))    # revisit current later
+        if node.right: stack.append((node.right, False))
+        if node.left:  stack.append((node.left, False))
+```
 
-#### 3.2.1. Method 1
+#### 3.2.2. Method 2
 <span style="color:red">below traversal just reverses the pre-order</span>
 NOTE: This is a **trick** — it doesn't actually process children before parent, it just **reorders the output** at the end. It works for printing but is **useless** when you need to use children's computed values at the parent.
 ```python
@@ -184,20 +198,6 @@ def postorder_iterative(root):
         if node.right: stack.append(node.right)
     
     print(result[::-1])              # reverse at the end → left → right → node
-```
-#### 3.2.2. Method 2 (visited flag, my solution for [[../../../../LeetCode Questions/E M - 0543. Diameter of Binary Tree|E M - 0543. Diameter of Binary Tree]])
-```python
-stack = [(root, False)]
-while stack:
-    node, visited = stack.pop()
-    if visited:
-        # children already processed, use their values now
-        left_h = height.get(node.left, 0)
-        right_h = height.get(node.right, 0)
-    else:
-        stack.append((node, True))    # revisit current later
-        if node.right: stack.append((node.right, False))
-        if node.left:  stack.append((node.left, False))
 ```
 
 ### 3.3. Example of Tree nodes traversal with Post-Order
