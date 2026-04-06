@@ -120,7 +120,7 @@ because you need to defer processing until the entire left subtree is exhausted<
 # 2. Inorder — left → node → right
 # Can't process on push — must walk left first, then process on pop
 
-def inorder_iterative(root):
+def inorder_dfs(root):
     stack = []
     curr = root
     while stack or curr:
@@ -132,7 +132,6 @@ def inorder_iterative(root):
             print(curr.val)          # process node after all left exhausted
             curr = curr.right
 ```
-
 ### 2.3. Example of Tree nodes traversal with In-Order
 ```
               9
@@ -143,12 +142,10 @@ def inorder_iterative(root):
          /       /  \
         4       13  15
        / \      /     \
-      1   3    12     16 
-      
+      1   3    12     16     
 # Read all left nodes all the way down, then read the node, then read the right subtree.
 # LIST = 1, 4, 3, 5, 6, 7, 9, 10, 12, 13, 14, 15, 16
 ```
-
 
 ### 3.1. **Postorder Recursive Traversal**
 ```python
