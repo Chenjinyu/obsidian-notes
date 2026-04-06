@@ -89,8 +89,6 @@ def preorder_iterative(root):
         4       13  15
        / \      /     \
       1   3    12     16 
-      
-      
 # Pre-Order: LIST = 9, 6, 5, 4, 1, 3, 7, 10, 14, 13, 12, 15, 16
 # read the left node all the down after reading the node
 # for example, from the node 14, the order should be 14, 13, 12 -> then to 15, 16. after read 13, then is the left node of node 13.      
@@ -166,20 +164,20 @@ def postorder_dfs(node):
 ### 3.2. **Postorder Stack Traversal**
 #### 3.2.1. Method 1 (visited flag, my solution for [[../../../../LeetCode Questions/E M - 0543. Diameter of Binary Tree|E M - 0543. Diameter of Binary Tree]])
 ```python
-height = {}
-# tuple (node, visited) is the standard pattern for iterative post-order whenever
-# you need to process a node after its chilren.
-stack = [(root, False)] # 
-while stack:
-    node, visited = stack.pop()
-    if visited:
-        # process current node HERE
-        # children are already done at this point
-        print(node.val) # whatever computation you need.
-    else:
-        stack.append((node, True))    # revisit current later
-        if node.right: stack.append((node.right, False))
-        if node.left:  stack.append((node.left, False))
+def postorder_dfs(root):
+	# tuple (node, visited) is the standard pattern for iterative post-order whenever
+	# you need to process a node after its chilren.
+	stack = [(root, False)] # 
+	while stack:
+	    node, visited = stack.pop()
+	    if visited:
+	        # process current node HERE
+	        # children are already done at this point
+	        print(node.val) # whatever computation you need.
+	    else:
+	        stack.append((node, True))    # revisit current later
+	        if node.right: stack.append((node.right, False))
+	        if node.left:  stack.append((node.left, False))
 ```
 
 #### 3.2.2. Method 2
@@ -189,7 +187,7 @@ NOTE: This is a **trick** — it doesn't actually process children before parent
 # 3. Postorder — left → right → node
 # Trick: reverse of (node → right → left), which is just preorder with right/left swapped
 
-def postorder_iterative(root):
+def preorder_reverse_to_postorder_dfs(root):
     if not root: return
     stack = [root]
     result = []
