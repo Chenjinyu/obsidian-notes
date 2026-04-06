@@ -166,13 +166,16 @@ def postorder_dfs(node):
 ### 3.2. **Postorder Stack Traversal**
 #### 3.2.1. Method 1 (visited flag, my solution for [[../../../../LeetCode Questions/E M - 0543. Diameter of Binary Tree|E M - 0543. Diameter of Binary Tree]])
 ```python
-stack = [(root, False)]
+height = {}
+# tuple (node, visited) is the standard pattern for iterative post-order whenever
+# you need to process a node after its chilren.
+stack = [(root, False)] # 
 while stack:
     node, visited = stack.pop()
     if visited:
-        # children already processed, use their values now
-        left_h = height.get(node.left, 0)
-        right_h = height.get(node.right, 0)
+        # process current node HERE
+        # children are already done at this point
+        print(node.val) # whatever computation you need.
     else:
         stack.append((node, True))    # revisit current later
         if node.right: stack.append((node.right, False))
