@@ -1,5 +1,5 @@
 ---
-sr-due: 2026-04-05
+sr-due: 2026-04-11
 sr-interval: 1
 sr-ease: 2.5
 ---
@@ -15,8 +15,15 @@ Tags: [[Binary Trees - DFS]]
 you need manually traversal the tree nodes with the three DFS traversal methods.
 ```
 
+```text
+04/05/2026
+In order to improve the memory, 
+1. you need to manually get the pre-order, in-order and post-order's nodes to list
+2. write down the pre-order, in-order and post-order solution patterns.
+```
 # Review dates
 - 04/04/2026
+- 04/05/2026
 # Traverse binary trees
 Tree traversal is how we access the elements of a tree, and thus is mandatory for solving tree problems.
 We start at the `root` and traverse by using the child pointers `.left` and `.right`. When traversing linked lists, we usually do it iteratively. With binary trees, we usually do it recursively.
@@ -125,7 +132,7 @@ def inorder_dfs(root):
         if curr:
             stack.append(curr)
             curr = curr.left         # keep walking left all the way down, util curr = curr.left is None
-        else:
+        else: # else branch process node and node.right after if curr
             curr = stack.pop()
             print(curr.val)          # process node after all left exhausted
             # there is no stack.append(curr.right)
