@@ -130,6 +130,8 @@ def inorder_dfs(root):
         else:
             curr = stack.pop()
             print(curr.val)          # process node after all left exhausted
+            # there is no stack.append(curr.right)
+            # because the append will do in if curr:, and the curr is the curr.right, just from right here.
             curr = curr.right
 ```
 ### 2.3. Example of Tree nodes traversal with In-Order
