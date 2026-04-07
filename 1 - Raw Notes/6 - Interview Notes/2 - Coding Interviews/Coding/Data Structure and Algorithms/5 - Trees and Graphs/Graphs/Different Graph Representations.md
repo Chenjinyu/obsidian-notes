@@ -1,5 +1,5 @@
 ---
-sr-due: 2026-04-07
+sr-due: 2026-04-25
 sr-interval: 1
 sr-ease: 2.5
 ---
@@ -208,7 +208,7 @@ compare with: [[../../../../LeetCode Questions/M - 0547. Number of Provinces|M -
 the below solution just a simple traversal from a single node. it does not know how many graphs exist. 
 
 OPTION 1: Use adjacency matrix directly with DFS
-just change how you find neighbors - instead of `graph[mode]`, you can scan the row:
+just change how you find neighbors - instead of `graph[node]`, you can scan the row:
 ```python
 def dfs_matrix(matrix, start):
 	"""
@@ -227,6 +227,7 @@ def dfs_matrix(matrix, start):
 		
 		# the neighbor is the index of row[n]
         for neighbor in range(n): # scan the entire row, the neighbor is the index of row[n]
+	        # matrix[node][neighbor] == 1 means find the neighbor
             if matrix[node][neighbor] == 1 and neighbor not in visited:
                 visited.add(neighbor) # the neighbor is the index of row[n], which is the node, there is asking: have we visited this node/vertex before?, 
                 stack.append(neighbor)
