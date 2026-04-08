@@ -15,7 +15,7 @@ Imagine whatever node you start from as a "root". Then, the neighbors of the roo
 
 BFS on a graph always visits nodes according to their distance from the **starting point**. This is the key idea behind BFS on graphs - **<span style="color:orange">every time you visit a node, you must have reached it in the minimum steps possible from wherever you started your BFS.</span>
 
-> The above statement was always the case on binary trees, even if you did a DFS, because there is only one possible path to any node from the root. In a graph, there could be many paths from a given starting point to any other node. Using BFS will ensure that out of all possible paths, you take the shortest one.
+The above statement was always the case on binary trees, even if you did a DFS, because there is only one possible path to any node from the root. <span style="color:orange">In a graph, there could be many paths from a given starting point to any other node. Using BFS will ensure that out of all possible paths, you take the shortest one.</span>
 
 # Note
 
