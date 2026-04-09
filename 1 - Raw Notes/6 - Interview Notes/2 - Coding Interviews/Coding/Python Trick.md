@@ -16,6 +16,21 @@ Python will create 10 sub-lists, and all sub-lists pointer point to the first su
 because, the `* 10` copies the reference, not the object itself.
 so, when you change one sub-list value, rest of sub-lists will be changed at the same time
 
+another example to create 3 rows and 3 cols 2D array include 0 integer
+```python
+matrix = [[0] * mat_len for _ in range(mat_len)]
+# [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+# Below example is wrong
+matrix = [[0] * mat_len] * mat_len
+# although it create the same as above
+# [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+# when you 
+matrix[0][0] = 1
+print(matrix)
+# [[1, 0, 0], [1, 0, 0], [1, 0, 0]]
+# because in the [[0] * mat_len] is a list
+```
+
 ## 2. `[] * 10`
  It  only create an empty list. * on empty list is always []
 
