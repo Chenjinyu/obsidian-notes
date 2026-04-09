@@ -18,13 +18,13 @@ Here are **10 popular LeetCode problems that use the Multi‑Source BFS pattern*
 ### **1. 994. Rotten Oranges**  
 The classic multi‑source BFS example. All rotten oranges start as sources and spread simultaneously.
 
-### **2. 542. 01 Matrix**  
+### **2. [[../M - 0542. 01 Matrix|M - 0542. 01 Matrix]]
 Compute the distance of each cell to the nearest 0. All 0‑cells are BFS sources.
 
 ### **3. 286. Walls and Gates**  
 All gates (value 0) are sources; BFS fills in minimum distances to each room.
 
-### **4. 1293. Shortest Path in a Grid with Obstacles Elimination**  
+### **4. [[H - 1293. Shortest Path in a Grid with Obstacles Elimination]]
 Often solved with BFS + state, but multi‑source BFS variants appear in optimized solutions.
 
 ### **5. 1765. Map of Highest Peak**  
