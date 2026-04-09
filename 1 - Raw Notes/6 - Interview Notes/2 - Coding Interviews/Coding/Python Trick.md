@@ -28,7 +28,7 @@ matrix = [[0] * mat_len] * mat_len
 matrix[0][0] = 1
 print(matrix)
 # [[1, 0, 0], [1, 0, 0], [1, 0, 0]]
-# because in the [[0] * mat_len] is a list
+# because in the [[0] * mat_len] is a list, which only reference the pointer. 
 ```
 
 ## 2. `[] * 10`
