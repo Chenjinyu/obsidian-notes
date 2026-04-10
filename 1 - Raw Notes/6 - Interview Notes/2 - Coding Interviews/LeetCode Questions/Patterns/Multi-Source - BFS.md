@@ -11,7 +11,33 @@ Tags:
 # Content
 
 # Steps with the Multi-Source BFS
+## 🎯 **What This Demonstrates About Multi‑Source BFS**
 
+### ✔ All fire sources start at distance 0  
+### ✔ BFS expands in perfect “waves”  
+### ✔ Each wave represents 1 time unit  
+### ✔ All sources spread simultaneously 
+### ✔ The queue always contains the current wave  
+### ✔ The algorithm naturally finds the minimum time to reach each cell  
+
+## 🔥 The Key Principle of Multi‑Source BFS
+- **All sources spread simultaneously.**  
+- Each BFS wave expands from *every* source in the queue.
+
+```text
+My understanding of simultance
+eg: first time, append (1,1), (2,3) to the queue, in the while loop, we defined the two nodes are the frist time processed, it's like simultaneously, but it's not really processing at the exactally the same time. the (1,1) popleft first, and append its childrend to queue, the (2,3) popleft after (1,1), and append its childrend after (1,1)'s children.
+
+```
+
+So if you have two fire cells, both ignite their neighbors **in the same wave**.
+
+This is exactly the same pattern used in:
+- **01 Matrix**  
+- **Rotting Oranges**  
+- **Walls and Gates**  
+- **Map of Highest Peak**  
+- **As Far From Land As Possible**  
 
 ### Leetcode [[../M - 0542. 01 Matrix|M - 0542. 01 Matrix]] is the good example
 
