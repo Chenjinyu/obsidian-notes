@@ -12,7 +12,8 @@ Tags:
 
 # Steps with the Multi-Source BFS
 
-### Leetcode [[../M - 0542. 01 Matrix|M - 0542. 01 Matrix]] 
+
+### Leetcode [[../M - 0542. 01 Matrix|M - 0542. 01 Matrix]] is the good example
 
 Here are **10 popular LeetCode problems that use the Multi‑Source BFS pattern**, based on common interview patterns and widely referenced problem lists online. These are all well‑known problems where you **start BFS from multiple sources simultaneously** to compute minimum distances or simulate spreading processes. 
 
