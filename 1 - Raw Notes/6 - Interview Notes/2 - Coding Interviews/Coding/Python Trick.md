@@ -1,5 +1,5 @@
 ---
-sr-due: 2026-03-28
+sr-due: 2026-05-02
 sr-interval: 15
 sr-ease: 2.5
 ---
@@ -49,6 +49,20 @@ ord('a') = 97
 ord('A') = 65
 
 97 - 65 = 32
+```
+
+## 5. set()
+the parameter in set must be iterative. 
+if want to store (0,0), position in grid
+```python
+visited = set([(0, 0)])
+# equals to below
+visited = set()
+visited.add((0,0)) # {(0, 0)}
+
+## BUT DOES NOT equal to
+visited = set((0,0)) # the (0,0) is treated as two items.
+# {0, 0}
 ```
 # Note
 
