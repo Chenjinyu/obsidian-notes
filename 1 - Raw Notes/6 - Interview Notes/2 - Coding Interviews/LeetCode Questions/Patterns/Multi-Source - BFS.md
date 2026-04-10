@@ -25,10 +25,86 @@ Tags:
 - Each BFS wave expands from *every* source in the queue.
 
 ```text
-My understanding of simultance
+1. My understanding of simultaneously
 eg: first time, append (1,1), (2,3) to the queue, in the while loop, we defined the two nodes are the frist time processed, it's like simultaneously, but it's not really processing at the exactally the same time. the (1,1) popleft first, and append its childrend to queue, the (2,3) popleft after (1,1), and append its childrend after (1,1)'s children.
+eg. [[../M - 0542. 01 Matrix|M - 0542. 01 Matrix]], which has multi nodes(sources) are loaded into queue in the first time
+
+2. Even like [[../H - 1293. Shortest Path in a Grid with Obstacles Elimination|H - 1293. Shortest Path in a Grid with Obstacles Elimination]], the first time, only (0,0) loaded, but its children will be proceseed "simultaneously"
+
 
 ```
+
+## 📌 Results in each wave
+
+### 1. Initial Grid (wave 0)
+Fire at `(1,1)` and `(2,3)`:
+the fire is 0s, the ∞ s are unvisited lands
+```
+∞   ∞   ∞   ∞
+∞   0   ∞   ∞
+∞   ∞   ∞   0
+∞   ∞   ∞   ∞
+```
+
+Queue:
+```
+[(1,1), (2,3)]
+```
+
+### 2. 🌊 Wave 1 — Spread from BOTH sources
+Neighbors of `(1,1)` catch fire:
+```
+(1,0), (1,2), (0,1), (2,1)
+```
+
+Neighbors of `(2,3)` catch fire:
+```
+(2,2), (1,3), (3,3)
+```
+
+So Wave 1 should be:
+```
+∞   1   ∞   ∞
+1   0   1   1
+∞   1   1   0
+∞   ∞   1   1
+```
+### # 🌟 Why this happens
+Because BFS processes the queue like this:
+```
+Wave 0 queue: [(1,1), (2,3)]
+```
+When we expand Wave 1:
+- We pop `(1,1)` → ignite its neighbors  
+- We pop `(2,3)` → ignite its neighbors  
+
+### 🌊 **Wave 2 — Fire spreads again**
+
+Now BFS expands from *all* distance‑1 cells in parallel.
+```
+2   1   2   ∞
+1   0   1   2
+2   1   2   0
+∞   2   1   2
+```
+Cells at distance 2 catch fire.
+### 🌊 **Wave 3 — Next layer**
+```
+2   1   2   3
+1   0   1   2
+2   1   2   0
+3   2   1   2
+```
+### 🔥 **Final Distance Matrix (Fire Spread Time)**
+```
+2 1 2 3
+1 0 1 2
+2 1 2 0
+3 2 1 2
+```
+
+Each number tells you: <span style="color:orange">**How many steps until fire reaches that cell.**</span>
+
 
 So if you have two fire cells, both ignite their neighbors **in the same wave**.
 
