@@ -6,16 +6,16 @@ sr-ease: 2.5
 
 Date: 2026-04-02
 Course:
-Tags: [[Graphs]] [[DFS]] [[BFS]] [[Stack]] [[Queues]] [[Recursive]]
+Tags: [[Graphs]] [[DFS]] [[BFS]] [[Stack]] [[../../4 - Stacks & Queues/Queues]] [[Recursive]]
 
 #review/daily 
 # Content
 
-![300](assets/Depth%20and%20Breath%20First%20Traversal/file-20260402234412648.png)
+![300](assets/Graphs%20-%20Depth%20and%20Breath%20First%20Traversal/file-20260402234412648.png)
 
 ## Depth First Traversal: using Stack
 it will pick up any node to start, and choose a direction to move on until there is no node in that direction, then it choose other random direction until cannot move on
-![300](assets/Depth%20and%20Breath%20First%20Traversal/file-20260402234532979.png)
+![300](assets/Graphs%20-%20Depth%20and%20Breath%20First%20Traversal/file-20260402234532979.png)
 
 #### 0. How to use Set
 ```python
@@ -78,7 +78,7 @@ def dfs(graph, start, visited=None):
 
 ## Breadth First Traversal: Using queue
 it will pick up any node to start, and explore any possible nodes around it. 
-![300](assets/Depth%20and%20Breath%20First%20Traversal/file-20260402234709702.png)
+![300](assets/Graphs%20-%20Depth%20and%20Breath%20First%20Traversal/file-20260402234709702.png)
 
 #### 1. BFS - using Queue
 ```python
