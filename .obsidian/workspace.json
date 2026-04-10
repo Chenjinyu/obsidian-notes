@@ -104,7 +104,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -297,7 +297,7 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "35adcebd7eded79f",
+  "active": "490956e1862071cf",
   "lastOpenFiles": [
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0542. 01 Matrix.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 1293. Shortest Path in a Grid with Obstacles Elimination.md",
