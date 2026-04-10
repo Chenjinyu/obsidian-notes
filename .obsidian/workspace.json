@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Patterns/Multi-Source - BFS.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1129. Shortest Path with Alternating Colors.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -76,31 +76,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Multi-Source - BFS"
-            }
-          },
-          {
-            "id": "35adcebd7eded79f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 1293. Shortest Path in a Grid with Obstacles Elimination.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "H - 1293. Shortest Path in a Grid with Obstacles Elimination"
+              "title": "M - 1129. Shortest Path with Alternating Colors"
             }
           }
         ],
@@ -299,10 +275,11 @@
   },
   "active": "490956e1862071cf",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0542. 01 Matrix.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 1293. Shortest Path in a Grid with Obstacles Elimination.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Python Trick.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0542. 01 Matrix.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1129. Shortest Path with Alternating Colors.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Patterns/Multi-Source - BFS.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Python Trick.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/H - 1293. Shortest Path in a Grid with Obstacles Elimination/file-20260409024025380.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/H - 1293. Shortest Path in a Grid with Obstacles Elimination/file-20260409023959702.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/H - 1293. Shortest Path in a Grid with Obstacles Elimination",

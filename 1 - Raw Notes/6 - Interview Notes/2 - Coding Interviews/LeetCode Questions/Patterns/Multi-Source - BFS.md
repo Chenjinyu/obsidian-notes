@@ -31,7 +31,6 @@ eg. [[../M - 0542. 01 Matrix|M - 0542. 01 Matrix]], which has multi nodes(source
 
 2. Even like [[../H - 1293. Shortest Path in a Grid with Obstacles Elimination|H - 1293. Shortest Path in a Grid with Obstacles Elimination]], the first time, only (0,0) loaded, but its children will be proceseed "simultaneously"
 
-
 ```
 
 ## 📌 Results in each wave
