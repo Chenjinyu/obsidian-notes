@@ -64,6 +64,11 @@ visited.add((0,0)) # {(0, 0)}
 visited = set((0,0)) # the (0,0) is treated as two items.
 # {0, 0}
 ```
+
+## 6. List(range(n))
+range(10) returns range object, which return an object that produces a sequence of integers 
+list(range(10)), list gets the sequence from range 0 to 9
+so, list(range(10)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 # Note
 
 
