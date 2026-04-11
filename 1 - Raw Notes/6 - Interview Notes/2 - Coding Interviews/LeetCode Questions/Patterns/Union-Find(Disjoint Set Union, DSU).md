@@ -10,6 +10,7 @@ Tags:
 
 # Content
 
+check out [[../M - 0323. Number of Connected Components in an Undirected Graph|M - 0323. Number of Connected Components in an Undirected Graph]]
 
 
 # Note
