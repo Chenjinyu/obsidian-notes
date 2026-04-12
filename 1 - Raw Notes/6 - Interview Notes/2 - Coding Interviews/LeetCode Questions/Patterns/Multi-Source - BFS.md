@@ -10,6 +10,51 @@ Tags:
 
 # Content
 
+# 🧠 Single-source vs Multi-source BFS
+
+| Category                     | Single-source BFS                              | Multi-source BFS                                 |
+| ---------------------------- | ---------------------------------------------- | ------------------------------------------------ |
+| **Definition**               | Start BFS from **one node**                    | Start BFS from **multiple nodes simultaneously** |
+| **Queue Initialization**     | `queue = [start]`                              | `queue = [s1, s2, s3, ...]`                      |
+| **Goal**                     | Find shortest path **from one node to others** | Find shortest distance **to the nearest source** |
+| **Direction (mental model)** | From source → outward                          | From all sources → outward (covers space)        |
+| **Typical Question Pattern** | “Shortest path from A”                         | “Nearest / closest / minimum distance to X”      |
+| **Distance Meaning**         | Distance from the starting node                | Distance to the closest source                   |
+| **Number of BFS runs**       | Usually **1 BFS**                              | Still **1 BFS** (not multiple!)                  |
+| **Performance impact**       | Efficient                                      | Avoids repeated BFS → much more efficient        |
+| **Common mistake**           | N/A                                            | People incorrectly run BFS from each node        |
+| **Parallel expansion**       | Yes (level-order BFS)                          | Yes (but from multiple starting points)          |
+| **State transition**         | `dist[next] = dist[curr] + 1`                  | Same                                             |
+| **Visited logic**            | Mark visited when pushed                       | Same                                             |
+| **Graph requirement**        | Unweighted graph                               | Unweighted graph                                 |
+| **Complexity**               | O(V + E)                                       | O(V + E)                                         |
+| **When to use**              | One fixed starting point                       | Multiple “target” nodes or sources               |
+| **Key optimization idea**    | Standard BFS                                   | Reverse thinking: let sources expand             |
+
+# ✅ What’s the SAME (important)
+
+| Aspect           | Both BFS types                    |
+| ---------------- | --------------------------------- |
+| Traversal style  | Level-order (layer by layer)      |
+| Data structure   | Queue                             |
+| Distance update  | `+1 per level`                    |
+| Guarantees       | Shortest path in unweighted graph |
+| Complexity       | O(V + E)                          |
+| Visited handling | Prevent revisits                  |
+# 🔥 What’s DIFFERENT (core insight)
+
+| Core Difference     | Explanation                                                                                                                                                                                    |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Starting points     | One vs many                                                                                                                                                                                    |
+| Problem perspective | From source → others vs To nearest source (思考的方向不一样，Single Source从自身出发去寻找，Multi-source 向外搜寻任何可能的节点再与自身比较)， both them are outward to explore, but the comparison stands on opposite directions. |
+| Thinking direction  | Forward search vs “reverse” thinking                                                                                                                                                           |
+| Use case trigger    | “from A” vs “nearest / closest / minimum distance to any”                                                                                                                                      |
+# 🧠 One-line mental model
+
+* **Single-source BFS** → *“How far is everything from me?”*
+* **Multi-source BFS** → *“How far am I from the nearest of them?”*
+
+---
 # Steps with the Multi-Source BFS
 ## 🎯 **What This Demonstrates About Multi‑Source BFS**
 
@@ -212,12 +257,12 @@ Push all valid starting positions → BFS to compute shortest reachability.
 
 # ⭐ Summary of Patterns
 
-| Pattern | Key Idea |
-|--------|----------|
-| **Spreading** | BFS simulates time steps |
-| **Nearest Source** | BFS computes minimum distance |
-| **State-space** | BFS explores multiple initial states |
-| **Multi-entrance maze** | BFS from all entrances at once |
+| Pattern                 | Key Idea                             |     |
+| ----------------------- | ------------------------------------ | --- |
+| **Spreading**           | BFS simulates time steps             |     |
+| **Nearest Source**      | BFS computes minimum distance        |     |
+| **State-space**         | BFS explores multiple initial states |     |
+| **Multi-entrance maze** | BFS from all entrances at once       |     |
 
 # Note
 
