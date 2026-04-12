@@ -11,10 +11,24 @@ Tags: [[Union-Find(Disjoint Set Union, DSU)]] [[../../Coding/Data Structure and 
 # Content
 
 The find and union function look are the same in the below Leetcode problem,
-the only differences"
-how to get the two nodes to check the union. 
-1. for 323, the items in sub list is the connection/edge. easy to get the two nodes
-2. for 200, its matrix, the two nodes are the next one in right or the lower one in down
+the only differences are two:
+1. how to get the two nodes to check the union. 
+	1. for 323, the items in sub list is the connection/edge. easy to get the two nodes
+	2. for 200, its matrix, the two nodes are the next one in right or the lower one in down. it needs to have row and col loops to get the two nodes
+2. for 2D array, need to flatten index
+	```text
+	# The formula
+	index = r * cols + c
+	
+	Think of it as flattening the grid row by row
+	grid (3×4):             flattened index:
+	(0,0)(0,1)(0,2)(0,3)    0  1  2  3
+	(1,0)(1,1)(1,2)(1,3) →  4  5  6  7
+	(2,0)(2,1)(2,2)(2,3)    8  9  10 11
+	
+	because the parent = list(range(rows * cols))), aslo flatten the rows to 1D.
+	```
+	
 ```python
 # parent lenght is how many the nodes, for matrix, it should be rows times cols.
 parent = list(range(rows * cols))
