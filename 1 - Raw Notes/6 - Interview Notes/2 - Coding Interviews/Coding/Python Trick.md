@@ -69,6 +69,19 @@ visited = set((0,0)) # the (0,0) is treated as two items.
 range(10) returns range object, which return an object that produces a sequence of integers 
 list(range(10)), list gets the sequence from range 0 to 9
 so, list(range(10)) == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+## 7. `rank = [1] * rows * cols` is WRONG
+[1] * rows * cols  ❌
+This becomes: 
+```python
+([1] * rows) * cols
+```
+should use: 
+```python
+rank = [1] * (rows * cols)
+```
+
+
 # Note
 
 

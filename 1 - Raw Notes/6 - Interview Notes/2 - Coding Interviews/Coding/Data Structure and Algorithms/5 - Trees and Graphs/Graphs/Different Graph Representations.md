@@ -15,6 +15,7 @@ Tags: [[Graphs]]
 Adjacency List: O(v + e)
 Adjacency Matrix: O(v ^ 2)
 v == vertex
+e == edges
 
 **Note:** if the input were an adjacency list instead of a matrix, time complexity would drop to **O(V + E)** — you'd only visit real edges, not scan empty cells. That's the core trade-off between the two representations:
 
