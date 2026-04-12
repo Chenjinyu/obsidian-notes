@@ -51,12 +51,12 @@ Matrix stores 16 cells but only 2 are useful — **14 wasted cells**. And during
 
 **The numbers make it obvious:**
 
-| | Dense (E ≈ V²) | Sparse (E << V²) |
-|---|---|---|
-| Matrix time | O(V²) ≈ O(E) — acceptable | O(V²) >> O(E) — wasteful |
-| List time | O(V + E) ≈ O(V²) — no gain | O(V + E) — efficient |
-| Matrix space | O(V²) ≈ O(E) — acceptable | O(V²) >> O(E) — wasteful |
-| List space | O(V + E) ≈ O(V²) — no gain | O(V + E) — efficient |
+|                         | Dense (E ≈ V²)             | Sparse (E << V²)         |
+| ----------------------- | -------------------------- | ------------------------ |
+| Adjacency Matrix time   | O(V²) ≈ O(E) — acceptable  | O(V²) >> O(E) — wasteful |
+| Adjacency  List time    | O(V + E) ≈ O(V²) — no gain | O(V + E) — efficient     |
+| Adjacency  Matrix space | O(V²) ≈ O(E) — acceptable  | O(V²) >> O(E) — wasteful |
+| Adjacency  List space   | O(V + E) ≈ O(V²) — no gain | O(V + E) — efficient     |
 **Real world graphs are almost always sparse:**
 - Social network: 1 billion users, but each person has ~1000 friends → E << V²
 - Road map: millions of intersections, but each connects to ~4 roads → E << V²
@@ -92,7 +92,7 @@ nodes = ['a', 'b', 'c', 'd', 'e', 'f']
 #         0    1    2    3    4    5
 ```
 and basically, when the node includes integer value, it will use index instead of char.
-or if the node includes char, integer, string, set, etc. which are unique and immutable value, then can represent as the key, then the graph will look like:
+or if the node includes char, integer, string, tuple, etc. which are unique and immutable value, then can represent as the key, then the graph will look like:
 ```python
 adjancency_list = {
     'a': ['b', 'c'],
