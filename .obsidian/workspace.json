@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E M - 0496. Next Greater Element I.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E M - 0543. Diameter of Binary Tree.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -100,7 +100,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "E M - 0496. Next Greater Element I"
+              "title": "E M - 0543. Diameter of Binary Tree"
             }
           },
           {
@@ -323,6 +323,9 @@
   },
   "active": "74a065c8bbdef2ac",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0092. Reverse Linked List II.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/3 - Linked Lists/Reversing a Linked list.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E M - 0496. Next Greater Element I.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Trees/Binary Trees - BFS.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2368. Reachable Nodes With Restrictions.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Graphs - Depth and Breath First Traversal.md",
@@ -355,11 +358,8 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0542. 01 Matrix/file-20260408032937336.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0542. 01 Matrix",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Patterns/Tree converts to Graph + BFS.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Patterns/Binary Tree - BFS.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Stacks & Queues/Queues.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0863. All Nodes Distance K in Binary Tree/file-20260408021805783.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0863. All Nodes Distance K in Binary Tree",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E M - 0543. Diameter of Binary Tree.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1091. Shortest Path in Binary Matrix/file-20260407214824383.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1091. Shortest Path in Binary Matrix/file-20260407214808334.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1091. Shortest Path in Binary Matrix",
