@@ -81,7 +81,13 @@ should use:
 rank = [1] * (rows * cols)
 ```
 
-
+## 8. % operator: remainder
+7 % 3 = 1    ==>  7 / 3 = 2 remainder 1`
+10 % 2 = 0, remainder 0, the 10 is able to divide by 2
+-1 % 10 = 9
+-2 % 10 = 8
+-8 % 10 = 2
+ 8%10 = 8
 # Note
 
 
