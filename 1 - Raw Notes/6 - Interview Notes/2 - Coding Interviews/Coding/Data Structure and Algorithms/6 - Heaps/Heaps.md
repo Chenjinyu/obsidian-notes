@@ -19,6 +19,7 @@ A heap is a container that stores elements, and supports the following operation
 - Add an element in O(log⁡n)
 - Remove the minimum element in O(log⁡n)
 - Find the minimum element in O(1)
+- heapify array takes O(n)
 
 > > A heap can also find the max elements instead of the min elements. 
 > > If a heap is configured to find/remove the min element, it's called a min heap. 
@@ -143,8 +144,16 @@ import heapq
 
 class Solution:
 	def lastStoneWeight(self, stones: List[int]) -> int:
+		"""
+			Space Complexity: O(1), the stones is modified in place. and space complexity typically measures
+			extra space allocated beyong the input 
+			Time Complexity: O(n log n)
+				- heapify: O(n)
+				- while: loop runs at most n-1 times, each with O(log n) push/pop
+				- overall: O(n log n)
+		"""
 		stones = [-s for s in stones]
-		# turns an array into a heap in inear time O(log n)
+		# turns an array into a heap in inear time O(n)
 		heapq.heapify(stones) 
 		while len(stones) > 1:
 			fisrt = heapq.heappop(stones)
