@@ -28,11 +28,11 @@ A binary heap implements a binary tree, but with only an array.
 The idea is that each element in the array is a node in the tree. 
 The smallest element in the tree is the root, and the following property is maintained at every node: if `A` is the parent of `B`, then `A.val <= B.val`. 
 **Notice that this property directly implies that the root is the smallest element.**
-
+<span style="color:red">Another constraint is that the tree must be a [complete tree](https://en.wikipedia.org/wiki/Binary_tree#complete).</span>
 ## Bubbling up
 “**Bubbling up**” (also called **sift-up** or **heapify-up**) is what happens after you insert a new element into a heap.
 Insert at bottom, then keep swapping with parent until heap property is restored
-
+#### If a node is at index `i`, then its children are at indices `2i + 1` and `2i + 2`.
 ### # The core idea
 A heap must satisfy a rule:
 - **Min-heap** → parent ≤ children
