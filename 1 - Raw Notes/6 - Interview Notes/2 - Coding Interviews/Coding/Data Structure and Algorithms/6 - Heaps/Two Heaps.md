@@ -18,7 +18,7 @@ At its core, interviewers are checking if you can:
 - Keep **two balanced partitions**
 - Reason about **invariants under insert/delete**
     
-Typical setup:
+Typical setup: check out [[Two Hapes - Max and MIn]]
 - **Max heap (left)** → smaller half
 - **Min heap (right)** → larger half
 ---

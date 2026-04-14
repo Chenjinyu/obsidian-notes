@@ -1,9 +1,8 @@
 ---
-sr-due: <% tp.date.now("YYYY-MM-DD") %>
+sr-due: 2026-04-18
 sr-interval: 1
 sr-ease: 2.5
 ---
-
 Date: 2026-04-14
 Course:
 Tags: 
@@ -51,7 +50,7 @@ We put it in left (max heap):
 left = [-5]   # store negative!
 right = []
 ```
-Interpretation:
+Interpretation:(解释)
 ```text
 Left = [5]
 Right = []
@@ -60,8 +59,7 @@ Right = []
 Compare with max of left:
 ```python
 2 <= 5 → goes to left
-```
-```python
+
 left = [-5, -2]
 right = []
 ```
@@ -74,7 +72,7 @@ Final:
 left = [-2]
 right = [5]
 ```
-Interpretation:
+Interpretation:解释
 ```text
 Left = [2]
 Right = [5]
@@ -98,7 +96,7 @@ Final:
 left = [-5, -2]
 right = [8]
 ```
-Interpretation:
+Interpretation:解释
 ```text
 Left = [5, 2]   ← max heap (largest = 5)
 Right = [8]     ← min heap (smallest = 8)
