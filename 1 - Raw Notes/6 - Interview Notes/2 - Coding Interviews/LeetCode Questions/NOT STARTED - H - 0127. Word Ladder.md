@@ -5,8 +5,8 @@ sr-ease: 2.5
 ---
 
 Creation Date: 2026-04-14
-Course:
-Tags: [[LeetCode Template]]
+Course: https://leetcode.com/problems/word-ladder/description/
+Tags: [[../../../../3 - Zettelkasten/A - Templates/LeetCode Template]]
 
 #review/daily #review/3d 
 
