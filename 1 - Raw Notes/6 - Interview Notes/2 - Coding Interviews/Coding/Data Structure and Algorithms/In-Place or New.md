@@ -2,8 +2,8 @@ Date: 2026-02-27
 Course:
 Tags: [[Python]]
 
-This is a **very good Python question**, and you’re right to be suspicious here.  
-Let’s make this **systematic and precise**, not hand-wavy.
+This is a **very good Python question**, and you're right to be suspicious here.  
+Let's make this **systematic and precise**, not hand-wavy.
 
 ---
 # 1️⃣ Big rule first (memorize this)
@@ -20,17 +20,18 @@ You must know the method.
 # 2️⃣ Common Python objects that **mutate in-place**
 ## 🔹 `list` (VERY IMPORTANT)
 
-| Method              | In-place? | Return        |
-| ------------------- | --------- | ------------- |
-| `list.append(x)`    | ✅         | `None`        |
-| `list.extend(iter)` | ✅         | `None`        |
-| `list.insert(i, x)` | ✅         | `None`        |
-| `list.remove(x)`    | ✅         | `None`        |
-| `list.pop()`        | ✅         | element       |
-| `list.clear()`      | ✅         | `None`        |
-| `list.reverse()`    | ✅         | `None`        |
-| `list.sort()`       | ✅         | `None`        |
-| `+=`                | ✅         | modifies list |
+| Method              | In-place? | Return        | Time  | Space |
+| ------------------- | --------- | ------------- | ----- | ----- |
+| `list.append(x)`    | ✅         | `None`        | O(1) amortized | O(1) |
+| `list.extend(iter)` | ✅         | `None`        | O(k) | O(1) |
+| `list.insert(i, x)` | ✅         | `None`        | O(n) | O(1) |
+| `list.remove(x)`    | ✅         | `None`        | O(n) | O(1) |
+| `list.pop()`        | ✅         | element       | O(1) | O(1) |
+| `list.pop(i)`       | ✅         | element       | O(n) | O(1) |
+| `list.clear()`      | ✅         | `None`        | O(1) | O(1) |
+| `list.reverse()`    | ✅         | `None`        | O(n) | O(1) |
+| `list.sort()`       | ✅         | `None`        | O(n log n) | O(n) |
+| `+=`                | ✅         | modifies list | O(k) | O(1) |
 
 ❗ Key signal:
 > **Most mutating list methods return `None`**
@@ -45,14 +46,16 @@ nums.sort()
 ---
 ## 🔹 `dict`
 
-|Method|In-place?|
-|---|---|
-|`dict.clear()`|✅|
-|`dict.pop(k)`|✅|
-|`dict.popitem()`|✅|
-|`dict.update({...})`|✅|
-|`dict.setdefault(k, v)`|✅|
-|`del dict[k]`|✅|
+| Method               | In-place? | Time   | Space |
+| -------------------- | --------- | ------ | ----- |
+| `dict.clear()`       | ✅         | O(n)   | O(1)  |
+| `dict.pop(k)`        | ✅         | O(1)   | O(1)  |
+| `dict.popitem()`     | ✅         | O(1)   | O(1)  |
+| `dict.update({...})` | ✅         | O(k)   | O(1)  |
+| `dict.setdefault(k, v)` | ✅      | O(1)   | O(1)  |
+| `del dict[k]`        | ✅         | O(1)   | O(1)  |
+| `dict[k]` (lookup)   | ❌ read    | O(1)   | O(1)  |
+
 ### Example
 
 ```python
@@ -62,16 +65,28 @@ d.update({"b": 2})
 ---
 ## 🔹 `set`
 
-|Method|In-place?|
-|---|---|
-|`set.add(x)`|✅|
-|`set.remove(x)`|✅|
-|`set.discard(x)`|✅|
-|`set.pop()`|✅|
-|`set.clear()`|✅|
-|`set.update(...)`|✅|
-|`set.intersection_update(...)`|✅|
-|`set.difference_update(...)`|✅|
+| Method                        | In-place? | Time   | Space |
+| ----------------------------- | --------- | ------ | ----- |
+| `set.add(x)`                  | ✅         | O(1)   | O(1)  |
+| `set.remove(x)`               | ✅         | O(1)   | O(1)  |
+| `set.discard(x)`              | ✅         | O(1)   | O(1)  |
+| `set.pop()`                   | ✅         | O(1)   | O(1)  |
+| `set.clear()`                 | ✅         | O(n)   | O(1)  |
+| `set.update(...)`             | ✅         | O(k)   | O(1)  |
+| `set.intersection_update(...)` | ✅        | O(min(n,k)) | O(1) |
+| `set.difference_update(...)`  | ✅         | O(k)   | O(1)  |
+
+---
+## 🔹 `heapq`
+
+| Operation              | In-place? | Time      | Space |
+| ---------------------- | --------- | --------- | ----- |
+| `heapq.heapify(list)`  | ✅         | O(n)      | O(1)  |
+| `heapq.heappush(h, x)` | ✅         | O(log n)  | O(1)  |
+| `heapq.heappop(h)`     | ✅         | O(log n)  | O(1)  |
+| `h[0]` (peek min)      | ❌ read    | O(1)      | O(1)  |
+| `heapq.nlargest(k, iter)` | ❌ new list | O(n log k) | O(k) |
+| `heapq.nsmallest(k, iter)` | ❌ new list | O(n log k) | O(k) |
 
 ---
 ## 🔹 `bytearray`
@@ -99,15 +114,15 @@ s.replace("a", "x")  # returns new string
 # 4️⃣ Methods that look mutating but are NOT
 These **return new objects**:
 
-|Expression|In-place?|
-|---|---|
-|`sorted(nums)`|❌|
-|`nums + [1]`|❌|
-|`str.replace()`|❌|
-|`str.lower()`|❌|
-|`dict.copy()`|❌|
-|`list.copy()`|❌|
-|`set.union()`|❌|
+| Expression       | In-place? | Time       | Space |
+| ---------------- | --------- | ---------- | ----- |
+| `sorted(nums)`   | ❌         | O(n log n) | O(n)  |
+| `nums + [1]`     | ❌         | O(n)       | O(n)  |
+| `str.replace()`  | ❌         | O(n)       | O(n)  |
+| `str.lower()`    | ❌         | O(n)       | O(n)  |
+| `dict.copy()`    | ❌         | O(n)       | O(n)  |
+| `list.copy()`    | ❌         | O(n)       | O(n)  |
+| `set.union()`    | ❌         | O(n+k)     | O(n+k)|
 
 ---
 # 5️⃣ Very important: `+=` depends on the type
@@ -135,7 +150,7 @@ You must know:
 However, there is a **strong convention** in Python:
 > If a method **mutates in-place**, it usually returns `None`.
 
-That’s a design choice to prevent bugs like:
+That's a design choice to prevent bugs like:
 
 ```python
 nums = nums.sort()  # WRONG → nums becomes None
@@ -157,9 +172,9 @@ nums.sort()           # safe
 
 # 8️⃣ Interview-level summary (say this)
 
-> “In Python, mutability depends on the object type.  
+> "In Python, mutability depends on the object type.  
 > Lists, dicts, and sets have methods that mutate in-place and usually return `None`.  
-> Immutable types like strings and tuples always return new objects.”
+> Immutable types like strings and tuples always return new objects."
 
 That answer is **clean, correct, and senior-level**.
 
@@ -167,4 +182,3 @@ That answer is **clean, correct, and senior-level**.
 
 
 # Reference
-
