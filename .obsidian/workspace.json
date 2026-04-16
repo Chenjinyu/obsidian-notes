@@ -176,36 +176,12 @@
             }
           },
           {
-            "id": "878417c8fd5569a3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0215. Kth Largest Element in an Array.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "M - 0215. Kth Largest Element in an Array"
-            }
-          },
-          {
             "id": "4d4188ffa337ab7a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/In-Place or New.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0973. Closest Points to Origin.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -220,7 +196,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "In-Place or New"
+              "title": "M - 0973. Closest Points to Origin"
             }
           },
           {
@@ -248,7 +224,7 @@
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 7
       }
     ],
     "direction": "vertical"
@@ -443,10 +419,13 @@
   },
   "active": "4d4188ffa337ab7a",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0973. Closest Points to Origin/file-20260416013706169.png",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0973. Closest Points to Origin",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/In-Place or New.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0973. Closest Points to Origin.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0215. Kth Largest Element in an Array.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0658. Find K Closest Elements.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1167. Minimum Cost to Connect Sticks.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/In-Place or New.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/8 - Binary Search/Binary Search Pattern.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/6 - Heaps/Heaps.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0347. Top K Frequent Elements.md",
@@ -471,8 +450,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0909. Snakes and Ladders.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0542. 01 Matrix.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0547. Number of Provinces.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1129. Shortest Path with Alternating Colors.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Stacks & Queues/3(h) - Tag Valiator.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0909. Snakes and Ladders/file-20260412181238605.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0909. Snakes and Ladders",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1926. Nearest Exit from Entrance in Maze/file-20260412035422109.png",
@@ -488,7 +465,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0286. Walls and Gates",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/H - 1293. Shortest Path in a Grid with Obstacles Elimination",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0542. 01 Matrix",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0863. All Nodes Distance K in Binary Tree",
     "i changed the canvas name - check sync to git.canvas",
     "Untitled.canvas",
     "Untitled 5.canvas",
