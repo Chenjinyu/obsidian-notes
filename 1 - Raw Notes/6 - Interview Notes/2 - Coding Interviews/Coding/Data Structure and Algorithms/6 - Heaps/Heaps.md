@@ -11,6 +11,37 @@ Tags: [[Heaps]]
 #review/15d 
 # Content
 
+## IMPORTANT FIRST
+```python
+import heapq
+nums = [10, 21,4,1,3,6]
+heapq.heapify(nums)
+print(nums) # [1, 3, 4, 21, 10, 6]
+heapq.heappush(nums, 0)
+print(nums) # [0, 3, 1, 21, 10, 6, 4]
+heapq.heappop(nums)
+print(nums) # [1, 3, 4, 21, 10, 6]
+```
+<span style="color:red">-> A heap is not a sorted array. It only guarantees the minimum is at index 0.</span>
+## The heap property (min-heap)
+Every parent must be **smaller than its children**. That's the only rule — siblings have no guaranteed order.
+```
+heapify([10, 21, 4, 1, 3, 6])  →  [1, 3, 4, 21, 10, 6]
+
+visualized as a tree:
+        1          ← index 0 (min, always here)
+       / \
+      3    4       ← children of 1
+     / \  /
+   21  10 6        ← children of 3 and 4
+
+parent < children  ✅ (heap property satisfied)
+but siblings have no order between them)
+```
+
+
+
+---
 A heap is a data structure that is an implementation of the [priority queue](https://en.wikipedia.org/wiki/Priority_queue).
 
 Note that a priority queue is an abstract data structure. A heap is one of many ways to implement a priority queue. However, people often use the two terms interchangeably. In this course, we will use the term "heap".

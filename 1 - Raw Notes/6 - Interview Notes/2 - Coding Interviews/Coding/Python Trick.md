@@ -8,7 +8,7 @@ Course:
 Tags: 
 
 ## Reference
-[[Data Structure and Algorithms/In-Place or New|In-Place or New]]
+[[In-Place or New]]
 
 # Content
 
