@@ -205,7 +205,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0658. Find K Closest Elements.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/6 - Heaps/Heaps.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -220,7 +220,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "M - 0658. Find K Closest Elements"
+              "title": "Heaps"
             }
           }
         ],
@@ -256,7 +256,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "walls and",
+                "query": "python sorted in-place",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -421,10 +421,13 @@
   "lastOpenFiles": [
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0347. Top K Frequent Elements.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0658. Find K Closest Elements.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/In-Place or New.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Python Trick.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Mathematical formula.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Bitwise Operation (python vs mathematics).md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1962. Remove Stones to Minimize the Total.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1167. Minimum Cost to Connect Sticks.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1926. Nearest Exit from Entrance in Maze.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Python Trick.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 295. Find Median from Data Stream.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/6 - Heaps/Two Hapes - Max and MIn.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/6 - Heaps/Two Heaps.md",
@@ -448,13 +451,10 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0909. Snakes and Ladders/file-20260412181238605.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0909. Snakes and Ladders",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0286. Walls and Gates.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Patterns/Union-Find(Disjoint Set Union, DSU).md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Trees/Binary Trees - DFS.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1926. Nearest Exit from Entrance in Maze/file-20260412035422109.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1926. Nearest Exit from Entrance in Maze/file-20260412035404489.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1926. Nearest Exit from Entrance in Maze/file-20260412035344752.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1926. Nearest Exit from Entrance in Maze",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E M - 0530. Minimum Absolute Difference in BST.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0236. Lowest Common Ancestor of a Binary Tree/file-20260412034530191.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0236. Lowest Common Ancestor of a Binary Tree/file-20260412034518207.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0236. Lowest Common Ancestor of a Binary Tree/file-20260412034516431.png",

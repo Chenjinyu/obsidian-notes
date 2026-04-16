@@ -7,6 +7,9 @@ Date: 2026-03-01
 Course:
 Tags: 
 
+## Reference
+[[Data Structure and Algorithms/In-Place or New|In-Place or New]]
+
 # Content
 
 ## 1. `[[]] * 10`
