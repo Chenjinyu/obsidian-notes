@@ -1,12 +1,12 @@
 ---
-sr-due: <% tp.date.now("YYYY-MM-DD") %>
+sr-due: 2026-04-19
 sr-interval: 1
 sr-ease: 2.5
 ---
 
 Date: 2026-04-14
 Course:
-Tags: 
+Tags: [[Heaps]] [[Two Heaps]]
 
 # Content
 Two-heaps is one of those patterns that _looks niche but shows up a lot_—especially when companies want to test <span style="color:orange">streaming logic + data structure discipline.</span>
