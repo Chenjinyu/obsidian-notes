@@ -39,6 +39,38 @@ parent < children  ✅ (heap property satisfied)
 but siblings have no order between them)
 ```
 
+## Why the array looks "random"
+The list is just a **flattened representation** of that tree:
+```text
+index: 0  1  2   3   4  5
+value: 1  3  4  21  10  6
+```
+- index `0` → root
+- index `1, 2` → level 2
+- index `3, 4, 5, 6` → level 3
+Parent-child relationship by index:
+```python
+parent of i  →  (i - 1) // 2
+children of i →  2*i + 1  and  2*i + 2
+```
+
+### After heappush(0)
+```
+[0, 3, 1, 21, 10, 6, 4]
+```
+
+`0` was added at the end, then ****<span style="color:red">bubbled up</span>** by swapping with parents until heap property is restored. The rest of the array shifts accordingly.
+### After heappop()
+```
+[1, 3, 4, 21, 10, 6]
+```
+- Removes index 0 (the min)
+- Moves last element to index 0
+- **<span style="color:red">Bubbles down</span>** by swapping with smaller child until heap property is restored
+
+## One liner summary
+> heapify/heappush/heappop rearrange the array to maintain the **tree shape rule** (parent < children), NOT sorted order. Only `heap[0]` is guaranteed to be the minimum.
+
 
 
 ---
