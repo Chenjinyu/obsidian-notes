@@ -19,9 +19,12 @@ when the stair == 2, it has 2 options,
 1. from 0 jump to 1, and from 1 to 2, 
 2. from 0 jump to 2 directly
 
+### Pattern 1
 ```python
 # one direction solution pattern
 def climb_stairs(n):
+	# recursive + memory. 
+	# it's buttom-up
 	ways = []
 	ways[1], ways[2] = 1, 2
 	for i in range(3, n):
@@ -29,10 +32,11 @@ def climb_stairs(n):
 	return ways[-1]
 ```
 
+### Pattern 2
 ```python
 # one direction solution pattern
 def climb_stairs(n):
-	# Call this solution as Constant Transition
+	# Call this solution as `Constant Transition`
 	# becuase the problem only needs to know the accummuative answer, 
 	# It's not necessary to store all answers in the list.
 	prev_1, prev_2 = 1, 2
@@ -45,9 +49,13 @@ def climb_stairs(n):
 ## Memorization (Recursive)
 The memorization is recursion with memory, 
 is Top-Down when the order is unclear or hard to reason about, 
+
+### Pattern 3
 ```python
 # one direction solution pattern
 def climb_stairs(n):
+	# recursive + memory
+	# it's top to down
 	memo = {}
 	if n in memo: return memo[n]
 	if n == 1: return 1
@@ -75,12 +83,39 @@ problem is: there has a n x m grid, the rabbit from the (0, 0) to the (n - 1, m 
 The idea of solution
 ```text
 Its a grid, in the each cell, we can store the number of ways from the adjacency left or up directions. 
-If the rabbit goes all the way to the right, from (0,0) to (0,1) only has one way, from (0,1) to (0, 2), has one way, so I can say from the direction to the right, from 0 to n, each of the cell if it wants to get the all options from the left, only has one way.
-the same for the rabbit goes all the way down. it only has one way from the prev cell. 
+If the rabbit goes all the way to the right, 
+1. from (0,0) to (0,1) only has one way, from (0,1) to (0, 2), has one way, so I can say from the direction to the right, from 0 to n (the row), 
+2. each of the cell if it wants to get the all options from the left, only has one way. the same for the rabbit goes all the way down. it only has one way from the prev cell. 
 
 BUT, for the cell (1,1), it can get the way from (1,0)[goes down] or from (0, 1)[goes left]. some the (1, 0) and (0, 1) have one way to get there. the cell (1,1) has 1 + 1 = 2 ways.
 ```
 ![500](assets/Greedy/file-20260417013213699.png)
+```python
+# the same pattern as the pattern 1: recursive + memory + buttom-up
+def uniquePaths(m, n):
+	# m is row, n is col
+	# [0] * n is each row has n col
+	paths = [[0] * n for _ in range(m)] # paths = defaultdict(lambda: defaultdict(int))
+	# the item 2 in the above idea solution
+	for i in range(m): 
+		paths[0][i] = 1 # only one way from prev cell
+	# the item 2 in the above idea solution	
+	for j in range(n): 
+		paths[j][0] = 1 # only one way from prev cell
+		
+	for i in range(m):
+		for j in range(n):
+			paths[i][j] = paths[i - 1][j] + paths[i][j - 1]
+	return paths[m-1][n-1]
+```
+
+```python
+# since using collections.defaultdict, there is no need to setup the default lenght. 
+paths = defaultdict(lambda: defaultdict(int))
+# equals to, bue the below one has explicity define the row and cols
+paths = [[0] * n for _ in range(m)] 
+```
+
 # Note
 
 
