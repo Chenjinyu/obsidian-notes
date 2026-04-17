@@ -59,6 +59,28 @@ def climb_stairs(n):
 	memo[n] = result 
 	return result
 ```
+
+## Two Directions
+```
+problem is: there has a n x m grid, the rabbit from the (0, 0) to the (n - 1, m - 1). how many paths of the rabbit can go to reach the target location. Note, it only alows to right or down. 
+-----------------------------
+|(0,0) |    |               |
+-----------------------------
+|      |    |               |
+-----------------------------
+|      |    | (n -1, m - 1) |
+-----------------------------
+```
+
+The idea of solution
+```text
+Its a grid, in the each cell, we can store the number of ways from the adjacency left or up directions. 
+If the rabbit goes all the way to the right, from (0,0) to (0,1) only has one way, from (0,1) to (0, 2), has one way, so I can say from the direction to the right, from 0 to n, each of the cell if it wants to get the all options from the left, only has one way.
+the same for the rabbit goes all the way down. it only has one way from the prev cell. 
+
+BUT, for the cell (1,1), it can get the way from (1,0)[goes down] or from (0, 1)[goes left]. some the (1, 0) and (0, 1) have one way to get there. the cell (1,1) has 1 + 1 = 2 ways.
+```
+![500](assets/Greedy/file-20260417013213699.png)
 # Note
 
 
