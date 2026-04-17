@@ -20,6 +20,7 @@ when the stair == 2, it has 2 options,
 2. from 0 jump to 2 directly
 
 ```python
+# one direction solution pattern
 def climb_stairs(n):
 	ways = []
 	ways[1], ways[2] = 1, 2
@@ -28,10 +29,24 @@ def climb_stairs(n):
 	return ways[-1]
 ```
 
+```python
+# one direction solution pattern
+def climb_stairs(n):
+	# Call this solution as Constant Transition
+	# becuase the problem only needs to know the accummuative answer, 
+	# It's not necessary to store all answers in the list.
+	prev_1, prev_2 = 1, 2
+	for i in range(3, n):
+		curr = prev_1 + prev_2
+		prev_1 = prev_2
+		prev_2 = curr
+	return curr
+```
 ## Memorization (Recursive)
 The memorization is recursion with memory, 
 is Top-Down when the order is unclear or hard to reason about, 
 ```python
+# one direction solution pattern
 def climb_stairs(n):
 	memo = {}
 	if n in memo: return memo[n]
