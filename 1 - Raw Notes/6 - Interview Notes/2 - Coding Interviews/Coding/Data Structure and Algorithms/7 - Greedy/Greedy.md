@@ -1,5 +1,5 @@
 ---
-sr-due: <% tp.date.now("YYYY-MM-DD") %>
+sr-due: 2026-04-17
 sr-interval: 1
 sr-ease: 2.5
 ---
@@ -7,8 +7,12 @@ sr-ease: 2.5
 Date: 2026-04-17
 Course:
 Tags: 
-
+#review/daily  #review/7d 
 # Content
+
+## Dynamic Programming vs Greedy
+
+
 
 ## Tabulation
 is bottom up, fill to an array step by step form the start all the way to the final answer. 
@@ -92,6 +96,7 @@ BUT, for the cell (1,1), it can get the way from (1,0)[goes down] or from (0, 1)
 ![500](assets/Greedy/file-20260417013213699.png)
 ```python
 # the same pattern as the pattern 1: recursive + memory + buttom-up
+# dynamic programming
 def uniquePaths(m, n):
 	# m is row, n is col
 	# [0] * n is each row has n col
