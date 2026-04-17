@@ -8,7 +8,13 @@ Date: 2026-04-17
 Course:
 Tags: 
 #review #review/3d #review/15d 
-# Content
+# 💥 Key takeaway from code
+- Greedy = **one path, no correction**
+- DP = **many paths, keeps best**
+
+👉 The real skill:
+> Knowing when greedy breaks—and switching to DP fast.
+# Greedy vs DP
 #### 1. Dynamic Programmin
 - Solves problems by breaking them into overlapping sub-problems
 - Stores results (Memoization / table)
@@ -81,6 +87,12 @@ print(coin_change_greedy([1, 3, 4], 6))  # ❌ Output: 3
 - Then `1 + 1`
 - Total = **3 coins**
 👉 Looks smart locally, but misses the optimal.
+
+Greedy thinking:
+```
+“Take the biggest coin first”
+→ Fast, but blind to future consequences
+```
 ### 2. Dynamic Programming (Correct)
 ```python
 def coin_change_dp(coins, amount):
@@ -96,6 +108,17 @@ def coin_change_dp(coins, amount):
 
 print(coin_change_dp([1, 3, 4], 6))  # ✅ Output: 2
 ```
+#### What it does:
+- Tries **all combinations efficiently**
+- Builds from smaller amounts → larger
+- Finds: `3 + 3 = 2 coins`
+DP thinking:
+```
+“What’s the best way to make every amount up to 6?”
+→ Builds knowledge → guarantees optimal
+```
+
+
 # Note
 
 

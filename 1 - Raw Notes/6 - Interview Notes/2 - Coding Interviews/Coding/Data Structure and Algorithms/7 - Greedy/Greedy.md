@@ -113,6 +113,7 @@ def uniquePaths(m, n):
 			paths[i][j] = paths[i - 1][j] + paths[i][j - 1]
 	return paths[m-1][n-1]
 ```
+# The above is greedy or DP solution, and why
 
 ```python
 # since using collections.defaultdict, there is no need to setup the default lenght. 
