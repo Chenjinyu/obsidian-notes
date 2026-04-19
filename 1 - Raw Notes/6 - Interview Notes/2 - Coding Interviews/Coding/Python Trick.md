@@ -19,6 +19,9 @@ Python will create 10 sub-lists, and all sub-lists pointer point to the first su
 because, the `* 10` copies the reference, not the object itself.
 so, when you change one sub-list value, rest of sub-lists will be changed at the same time
 
+### NOT only include the list, but also the set, dict, have the same behaviors. 
+DOES NOT INCLUDE tuple()
+
 another example to create 3 rows and 3 cols 2D array include 0 integer
 ```python
 matrix = [[0] * mat_len for _ in range(mat_len)]
