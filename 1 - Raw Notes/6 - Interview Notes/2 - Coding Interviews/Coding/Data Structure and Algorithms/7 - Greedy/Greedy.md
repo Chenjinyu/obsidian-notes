@@ -1,5 +1,5 @@
 ---
-sr-due: 2026-04-17
+sr-due: 2026-04-19
 sr-interval: 1
 sr-ease: 2.5
 ---
@@ -8,11 +8,23 @@ Date: 2026-04-17
 Course:
 Tags: 
 #review/daily  #review/7d 
-# Content
+# Dynamic Programming vs Greedy
 
-## Dynamic Programming vs Greedy
+## What bottom-up vs top-down actually means
 
+| | Top-down | Bottom-up |
+|---|---|---|
+| Direction | Start from `n`, break into subproblems | Start from base case, build up to `n` |
+| Mechanism | Recursion + memoization | Iteration |
+| Call stack | Yes | No |
 
+## Memoization vs DP table
+| | True Memoization | DP Table (your code) |
+|---|---|---|
+| Used with | Top-down recursion | Bottom-up iteration |
+| Storage | Cache to avoid re-calling | Table to build up results |
+| Lookup purpose | Skip redundant recursive calls | Read previous iteration's result |
+| Trigger | "Have I computed this before?" | "What did I compute last step?" |
 
 ## Tabulation
 is bottom up, fill to an array step by step form the start all the way to the final answer. 
@@ -27,12 +39,12 @@ when the stair == 2, it has 2 options,
 ```python
 # one direction solution pattern
 def climb_stairs(n):
-	# recursive + memory. 
-	# it's top-down
+	# Mechanism: Iteration, Its not Recursion + Memoization
+	# it's button-up. start from the base cases
 	if n <= 2: return n
 	ways = [0] * (n) # pre-sized
 	# from stair 0 to 1, it has 1 way, from 0 to 2, it has two ways, jump form 0 to 1 and from 1 to 2, or from 0 to 2 directly
-	ways[0], ways[1] = 1, 2
+	ways[0], ways[1] = 1, 2 # these are the base cases
 	for i in range(2, n):
 		# if wants to jump to stair i, it counts from i - 1 and i - 2. 
 		# because i - 1 and i - 2 include all possibilities. 
@@ -64,10 +76,11 @@ is Top-Down when the order is unclear or hard to reason about,
 ```python
 # one direction solution pattern
 def climb_stairs(n):
-	# recursive + memory
-	# it's top to down
+	# recursive + memoization
+	# it's top to down, it starts from n. 
 	memo = {}
-	if n in memo: return memo[n]
+	# with memo - skips alreday-computed nodes.
+	if n in memo: return memo[n] # <- this is memoization
 	if n == 1: return 1
 	if n == 2: return 2
 	

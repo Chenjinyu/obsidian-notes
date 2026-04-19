@@ -15,6 +15,22 @@ Tags:
 👉 The real skill:
 > Knowing when greedy breaks—and switching to DP fast.
 # Greedy vs DP
+
+## What bottom-up vs top-down actually means
+
+| | Top-down | Bottom-up |
+|---|---|---|
+| Direction | Start from `n`, break into subproblems | Start from base case, build up to `n` |
+| Mechanism | Recursion + memoization | Iteration |
+| Call stack | Yes | No |
+## Memoization vs DP table
+| | True Memoization | DP Table (your code) |
+|---|---|---|
+| Used with | Top-down recursion | Bottom-up iteration |
+| Storage | Cache to avoid re-calling | Table to build up results |
+| Lookup purpose | Skip redundant recursive calls | Read previous iteration's result |
+| Trigger | "Have I computed this before?" | "What did I compute last step?" |
+
 #### 1. Dynamic Programmin
 - Solves problems by breaking them into overlapping sub-problems
 - Stores results (Memoization / table)
