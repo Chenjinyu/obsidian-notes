@@ -68,6 +68,13 @@ arrowheads箭头
 
 numerator: 分子
 denominator: 分母
+
+Amortized (分摊): Amortized = 分摊到多次操作后的平均成本
+```
+arr.append(x), noramlly it should be O(1), but it needs to expend from n to 2n when the capacity is full. 
+then, it should be O(n). 
+BUT from the long term, the average of the time complexity is O(1)
+```
 # Note
 
 
