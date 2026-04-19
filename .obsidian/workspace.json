@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0072. Edit Distance.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0005. Longest Palindromic Substring.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "M - 0072. Edit Distance"
+              "title": "M - 0005. Longest Palindromic Substring"
             }
           },
           {
@@ -153,7 +153,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0072. Edit Distance.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0005. Longest Palindromic Substring.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +163,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for M - 0072. Edit Distance"
+              "title": "Backlinks for M - 0005. Longest Palindromic Substring"
             }
           },
           {
@@ -201,13 +201,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0072. Edit Distance.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0005. Longest Palindromic Substring.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of M - 0072. Edit Distance"
+              "title": "Outline of M - 0005. Longest Palindromic Substring"
             }
           },
           {
@@ -216,7 +216,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0072. Edit Distance.md"
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0005. Longest Palindromic Substring.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -274,9 +274,10 @@
   },
   "active": "bef503a809c606f6",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0072. Edit Distance.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0005. Longest Palindromic Substring.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/7 - Greedy/Greedy.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/M - 1143. Longest Common Subsequence.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0072. Edit Distance.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Graphs - Depth and Breath First Traversal.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0542. 01 Matrix.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/7 - Greedy/Greedy vs Dynamic Programming (DP).md",
@@ -307,7 +308,6 @@
     "1 - Raw Notes/6 - Interview Notes/English.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/NOT STARTED - M - 0253. Meeting Rooms II.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0703. Kth Largest Element in a Stream.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/In-Place or New.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0973. Closest Points to Origin/file-20260416013706169.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0973. Closest Points to Origin",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/H - 295. Find Median from Data Stream/file-20260414102250184.png",
