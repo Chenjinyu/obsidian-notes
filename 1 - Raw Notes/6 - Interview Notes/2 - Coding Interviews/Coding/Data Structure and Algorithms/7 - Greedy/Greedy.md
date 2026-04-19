@@ -28,12 +28,16 @@ when the stair == 2, it has 2 options,
 # one direction solution pattern
 def climb_stairs(n):
 	# recursive + memory. 
-	# it's buttom-up
-	ways = []
-	ways[1], ways[2] = 1, 2
-	for i in range(3, n):
-		ways[i] = ways[i - 1] + ways[i - 2]
-	return ways[-1]
+	# it's top-down
+	if n <= 2: return n
+	ways = [0] * (n) # pre-sized
+	# from stair 0 to 1, it has 1 way, from 0 to 2, it has two ways, jump form 0 to 1 and from 1 to 2, or from 0 to 2 directly
+	ways[0], ways[1] = 1, 2
+	for i in range(2, n):
+		# if wants to jump to stair i, it counts from i - 1 and i - 2. 
+		# because i - 1 and i - 2 include all possibilities. 
+		ways[i] = ways[i - 1] + ways[i - 2] 
+	return ways[n-1] # ways[-1] works correctly here, but ways[n-1] is more explicit and communicates intent better.
 ```
 
 ### Pattern 2
@@ -43,6 +47,7 @@ def climb_stairs(n):
 	# Call this solution as `Constant Transition`
 	# becuase the problem only needs to know the accummuative answer, 
 	# It's not necessary to store all answers in the list.
+	if n <= 2: return n
 	prev_1, prev_2 = 1, 2
 	for i in range(3, n):
 		curr = prev_1 + prev_2
@@ -50,6 +55,7 @@ def climb_stairs(n):
 		prev_2 = curr
 	return curr
 ```
+
 ## Memorization (Recursive)
 The memorization is recursion with memory, 
 is Top-Down when the order is unclear or hard to reason about, 
