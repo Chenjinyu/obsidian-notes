@@ -90,8 +90,8 @@ Its a grid, in the each cell, we can store the number of ways from the adjacency
 If the rabbit goes all the way to the right, 
 1. from (0,0) to (0,1) only has one way, from (0,1) to (0, 2), has one way, so I can say from the direction to the right, from 0 to n (the row), 
 2. each of the cell if it wants to get the all options from the left, only has one way. the same for the rabbit goes all the way down. it only has one way from the prev cell. 
-
-BUT, for the cell (1,1), it can get the way from (1,0)[goes down] or from (0, 1)[goes left]. some the (1, 0) and (0, 1) have one way to get there. the cell (1,1) has 1 + 1 = 2 ways.
+3. Since all rest of cells are able to get the answer from the previous cells, there is no other condition need to be considered. 
+for the cell (1,1), it can get the way from (1,0)[goes down] or from (0, 1)[goes left]. some the (1, 0) and (0, 1) have one way to get there. the cell (1,1) has 1 + 1 = 2 ways.
 ```
 ![500](assets/Greedy/file-20260417013213699.png)
 ```python
@@ -107,7 +107,9 @@ def uniquePaths(m, n):
 	# the item 2 in the above idea solution	
 	for j in range(n): 
 		paths[j][0] = 1 # only one way from prev cell
-		
+	
+	# the item 3 in the above, the previous condition
+	# has been setup completely.
 	for i in range(m):
 		for j in range(n):
 			paths[i][j] = paths[i - 1][j] + paths[i][j - 1]

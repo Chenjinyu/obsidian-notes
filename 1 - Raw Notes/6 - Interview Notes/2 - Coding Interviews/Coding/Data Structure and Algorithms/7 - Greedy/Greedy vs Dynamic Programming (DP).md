@@ -67,7 +67,13 @@ it has cons = [1,3,4], to get the mim number of cons to count up to target = 6
 
 ### 1. Greedy Approach (can fail)
 ```python
+
 def coin_change_greedy(coins, amount):
+	"""
+	Greedy thinking:
+		“Take the biggest coin first”
+		→ Fast, but blind to future consequences
+	"""
     coins.sort(reverse=True)  # largest first
     count = 0
 
@@ -87,15 +93,14 @@ print(coin_change_greedy([1, 3, 4], 6))  # ❌ Output: 3
 - Then `1 + 1`
 - Total = **3 coins**
 👉 Looks smart locally, but misses the optimal.
-
-Greedy thinking:
-```
-“Take the biggest coin first”
-→ Fast, but blind to future consequences
-```
 ### 2. Dynamic Programming (Correct)
 ```python
 def coin_change_dp(coins, amount):
+	"""
+	DP thinking:
+		“What’s the best way to make every amount up to 6?”
+		→ Builds knowledge → guarantees optimal
+	"""
     dp = [float('inf')] * (amount + 1)
     dp[0] = 0
 
@@ -112,13 +117,6 @@ print(coin_change_dp([1, 3, 4], 6))  # ✅ Output: 2
 - Tries **all combinations efficiently**
 - Builds from smaller amounts → larger
 - Finds: `3 + 3 = 2 coins`
-DP thinking:
-```
-“What’s the best way to make every amount up to 6?”
-→ Builds knowledge → guarantees optimal
-```
-
-
 # Note
 
 
