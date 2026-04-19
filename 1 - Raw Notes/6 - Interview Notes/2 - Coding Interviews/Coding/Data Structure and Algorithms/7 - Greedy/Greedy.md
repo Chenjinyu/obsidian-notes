@@ -115,6 +115,24 @@ def uniquePaths(m, n):
 			paths[i][j] = paths[i - 1][j] + paths[i][j - 1]
 	return paths[m-1][n-1]
 ```
+
+```python
+# so the grid problem also can use the prev row and current row, 
+# without using an array to stores each path count, because
+paths [i][j] = paths[i-1][j] + paths[i][j-1]
+# so that we can use single row to store the current and prevous values 
+def uniquePaths(m, n):
+	"""
+	Space complexity: O(m)
+	"""
+	row = [1] * n # one row with n cols
+	for i in range(m):
+		for j in range(n):
+			row[j] = row[j] + row[j-1]
+			# row[j] += row[j-1]
+	return row[n - 1]
+
+```
 # The above is greedy or DP solution, and why
 
 ```python
