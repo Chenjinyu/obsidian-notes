@@ -116,6 +116,8 @@ def uniquePaths(m, n):
 	return paths[m-1][n-1]
 ```
 
+### Optimization
+
 ```python
 # so the grid problem also can use the prev row and current row, 
 # without using an array to stores each path count, because
