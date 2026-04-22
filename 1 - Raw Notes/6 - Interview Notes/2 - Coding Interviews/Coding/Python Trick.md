@@ -99,6 +99,8 @@ rank = [1] * (rows * cols)
 -2 % 10 = 8
 -8 % 10 = 2
  8%10 = 8
+
+## 9. cannot assign value to str.
 # Note
 
 
