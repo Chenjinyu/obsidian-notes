@@ -152,6 +152,30 @@
             }
           },
           {
+            "id": "e88d0195948cfdaf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0502. IPO.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "H - 0502. IPO"
+            }
+          },
+          {
             "id": "a3d6e54a67dbcedb",
             "type": "leaf",
             "state": {
@@ -224,7 +248,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -298,7 +322,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0881. Boats to Save People.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0502. IPO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -308,7 +332,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for M - 0881. Boats to Save People"
+              "title": "Backlinks for H - 0502. IPO"
             }
           },
           {
@@ -346,13 +370,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0881. Boats to Save People.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0502. IPO.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of M - 0881. Boats to Save People"
+              "title": "Outline of H - 0502. IPO"
             }
           },
           {
@@ -361,7 +385,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0881. Boats to Save People.md"
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0502. IPO.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -417,10 +441,10 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "a61640319ce09d1c",
+  "active": "e88d0195948cfdaf",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1481. Least Number of Unique Integers after K removals.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0881. Boats to Save People.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1481. Least Number of Unique Integers after K removals.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2294. Partition Array Such That Maximum Difference Is K.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/In-Place or New.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0502. IPO.md",
