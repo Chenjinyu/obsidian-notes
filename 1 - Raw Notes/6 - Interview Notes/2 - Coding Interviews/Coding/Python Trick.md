@@ -101,6 +101,24 @@ rank = [1] * (rows * cols)
  8%10 = 8
 
 ## 9. cannot assign value to str.
+```python
+test = str(123)
+for i, v in enumerate(test):
+    print(i, v)
+    test[i] = 'c' # <-TypeError: 'str' objet does not support item assignment
+print(test)
+```
+str is immutable in python, cannot modify itself in any ways
+fix to 
+```python
+test = list(str(123))   # ['1', '2', '3']
+for i, v in enumerate(test):
+    print(i, v)
+    test[i] = 'c'
+
+print("".join(test))    # 'ccc'
+```
+
 # Note
 
 
