@@ -128,6 +128,30 @@
             }
           },
           {
+            "id": "66cb66b8fbaa8684",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Patterns/Multi-Source - BFS.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Multi-Source - BFS"
+            }
+          },
+          {
             "id": "d047434cdb03a5d1",
             "type": "leaf",
             "state": {
@@ -152,7 +176,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 5
       }
     ],
     "direction": "vertical"
@@ -205,8 +229,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -227,7 +250,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0542. 01 Matrix.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Patterns/Multi-Source - BFS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -237,7 +260,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for M - 0542. 01 Matrix"
+              "title": "Backlinks for Multi-Source - BFS"
             }
           },
           {
@@ -275,13 +298,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0542. 01 Matrix.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Patterns/Multi-Source - BFS.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of M - 0542. 01 Matrix"
+              "title": "Outline of Multi-Source - BFS"
             }
           },
           {
@@ -290,7 +313,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0542. 01 Matrix.md"
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Patterns/Multi-Source - BFS.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -346,8 +369,9 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "29ccf8d5115ef0cc",
+  "active": "66cb66b8fbaa8684",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0542. 01 Matrix.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1338. Reduce Array Size to The Half.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1481. Least Number of Unique Integers after K removals.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/7 - Greedy and Dynamic Programming/1. Greedy.md",
@@ -382,7 +406,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/7 - Greedy and Dynamic Programming/assets/1.2. Top-down(aka memoization) and Bottom-up(aka tablulation)",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/10 - Dynamic Programming/1.3. When to use DP.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/7 - Greedy and Dynamic Programming/assets/Dynamic Programming (DP)",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0005. Longest Palindromic Substring.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/assets/M - 1143. Longest Common Subsequence/file-20260419022123459.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/assets/M - 1143. Longest Common Subsequence",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/7 - Greedy and Dynamic Programming/assets/2. Dynamic Programming (DP)/file-20260417013213699.png",
