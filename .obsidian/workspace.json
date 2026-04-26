@@ -229,7 +229,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Trees/Binary Trees - DFS.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1248. Count Number of Nice Subarrays.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -244,11 +244,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Binary Trees - DFS"
+              "title": "M - 1248. Count Number of Nice Subarrays"
             }
           }
         ],
-        "currentTab": 8
+        "currentTab": 9
       }
     ],
     "direction": "vertical"
@@ -441,12 +441,13 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "063800dbd5dae9db",
+  "active": "19b5d19f12f2a947",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Patterns/Pattern HashMap and Prefix Sum.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1248. Count Number of Nice Subarrays.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2342. Max Sum of a Pair With Equal Sum of Digits.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1448. Count Good Nodes in Binary Tree.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Trees/Binary Trees - DFS.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1448. Count Good Nodes in Binary Tree.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1448. Count Good Nodes in Binary Tree/file-20260426143607297.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1448. Count Good Nodes in Binary Tree/file-20260426143556638.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1448. Count Good Nodes in Binary Tree",
@@ -471,7 +472,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/8 - Binary Search/Binary Search Pattern.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0881. Boats to Save People.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0502. IPO.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/6 - Heaps/Two Heaps.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/7 - Greedy and Dynamic Programming/assets/2.1. DP - Top-down(aka memoization) and Bottom-up(aka tabulation)",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/assets/English",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/assets",
