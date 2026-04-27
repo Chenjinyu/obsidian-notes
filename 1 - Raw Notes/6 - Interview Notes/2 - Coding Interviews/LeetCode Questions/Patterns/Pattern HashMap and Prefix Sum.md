@@ -1,5 +1,5 @@
 ---
-sr-due: 2026-05-09
+sr-due: 2026-04-27
 sr-interval: 1
 sr-ease: 2.5
 ---
@@ -10,6 +10,14 @@ sr-ease: 2.5
 - [[../M - 0525. Contiguous Array|M - 0525. Contiguous Array]]
 - [[../M - 2342. Max Sum of a Pair With Equal Sum of Digits|M - 2342. Max Sum of a Pair With Equal Sum of Digits]]
 
+## Why prefix_sum_count[0] has to have value?
+because it wants to build the condition when first time matches from index 0. 
+problem 0560: prefix_sum_count[0] = 1. it gets the count, when the first time found, what you want the value should be? this case is count 1
+
+problem 0525: prefix_sum_count[0] = -1. it gets the max length of sub array, when the first time found from index 0, e.g. [-1, 1], the sub array length should be 2, 
+
+### Below is a very good explanation. 
+![](assets/Pattern%20HashMap%20and%20Prefix%20Sum/file-20260427011352939.png)
 ## Why ans += prefix[gap] in above references?
 
 ```python
