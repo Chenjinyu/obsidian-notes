@@ -9,6 +9,14 @@ sr-ease: 2.5
 - [[../M - 0560. Subarray Sum Equals K|M - 0560. Subarray Sum Equals K]]
 - [[../M - 0525. Contiguous Array|M - 0525. Contiguous Array]]
 - [[../M - 2342. Max Sum of a Pair With Equal Sum of Digits|M - 2342. Max Sum of a Pair With Equal Sum of Digits]]
+
+## Why ans += prefix[gap] in above references?
+
+```python
+ans += prefix[gap]
+# IS NOT 
+ans += 1
+```
 # The criteria to meet the pattern
 ```text
 1. Count the number of subarrays (NOTE: it's not get the sub-array)
@@ -23,6 +31,8 @@ sr-ease: 2.5
 4. Elements can be negative or zero (sliding window breaks down,
    prefix sum + hashmap handles it)
 ```
+
+
 
 # The template
 ```python
