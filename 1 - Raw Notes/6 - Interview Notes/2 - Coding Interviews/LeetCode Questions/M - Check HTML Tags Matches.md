@@ -1,5 +1,5 @@
 ---
-sr-due: 2026-04-18
+sr-due: 2026-05-30
 sr-interval: 3
 sr-ease: 2.5
 ---
@@ -13,10 +13,32 @@ Tags: [[../../../../3 - Zettelkasten/A - Templates/LeetCode Template]] [[Stack]]
 - stack
 ```text
 03/29/2026
-r'<(/?\w+)[^>]*>', 
+r'<(/?\w+)[^>]*>',  # (/?\w+), i use it to get the tag name
 <div class="div">
      ~~~~~~~~~~~ excluded by [^>]* 
+     
+`r` means the raw string in python. it tells python do not treat backslashes \ as escape characters, etc.
+so `r'\n'` means two characters: \ and n.
+
+
+`[^>]*` means: match any character except `>`, zero or more times.
+So given:
+<div class="div">
+The regex `<(/?\w+)[^>]*>` matches like this:
 ```
+
+| Part      | Matches                                       |
+| --------- | --------------------------------------------- |
+| `<`       | `<`                                           |
+| `(/?\w+)` | `div` — captured in group 1                   |
+| `[^>]*`   | `class="div"` — consumed but **not captured** |
+| `>`       | `>`                                           |
+|           |                                               |
+
+```
+`[^>]*` greedily eats everything between the tag name and the closing `>`, including spaces, quotes, attribute names and values — it just throws them away.
+```
+
 # Review Dates
 - 03/20/2026
 - 03/29/2026
