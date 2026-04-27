@@ -19,8 +19,10 @@ ans += 1
 ```
 ### Example with example from [[../M - 0560. Subarray Sum Equals K|M - 0560. Subarray Sum Equals K]]
 ```text
-nums = [1, 2, 3, 6, -6, 6, -6, 5, 1] 
-idx =  0   1  2  3   4  5   6  7  8 
+04/04/2026
+nums =   [1, 2, 3, 6, -6, 6, -6, 5, 1] 
+idx =     0   1  2  3  4  5   6  7  8
+prefix = [0, 1, 3, 6, 12, 6, 12, 6, 11, 12] 
 k = 6
 I was thinking the ans += prefix[gap] should change to ans = prefix[gap] + 1.
 actually, I was wrong, because when iterate to i = 5, the prefix[6] = 2, means when nums[5]=6, it has 2 sub_array matches. 
@@ -41,9 +43,10 @@ i=5: num=6,  cur_sum=12, gap=6  → prefix_sum[6]=2 → count+=2 → count=5
 i=8: num=1,  cur_sum=12, gap=6  → prefix_sum[6]=3 → count+=3 → count=9
      prefix_sum = {0:1, 1:1, 3:1, 6:3, 11:1, 12:3}
      matched:
-         prefix was 6 at i=2 → [6,-6,6,-6,5,1] <- the first 6 already count then i = 3
-                                               <- the [6,-6,6] already count when i = 5 
-                                               <- the last one positive [6] already count when i = 5
+         prefix was 6 at i=2 → [1,2,3]
+        [6,-6,6,-6,5,1] <- the first 6 already count then i = 3
+                        <- the [6,-6,6] already count when i = 5 
+                        <- the last one positive [6] already count when i = 5
          prefix was 6 at i=4 → [6,-6,5,1]
          prefix was 6 at i=6 → [5,1]
 ```
