@@ -68,13 +68,12 @@ The graph representation absorbs the directed/undirected distinction — the tra
 ### Time Complexity: O((V+E) log V)
 the sum of the number of Vertex + the number of edges and then times log Vertex
 
-<span style="color:red">
+
 Both example 1 and example 2 work correctly. <br/>
 Example 1's visited approach is slightly cleaner to read <br/>
 the example 1 uses the path to store all visited paths to the path list<br/>
 the example 2 uses the dictionary prev_dict to store prev_dict[neighbor] = node, and after while loop, iterative all nodes to get the path into list<br/>
 Overall: correct solutions, just trade off being extra space cost of carrying path in heap versus reconstructing with prev dict.
-</span>
 ### Simple Example 1 - I prefer this solution
 ```python
 
