@@ -54,8 +54,33 @@
               "icon": "lucide-file",
               "title": "Pattern HashMap and Prefix Sum"
             }
+          },
+          {
+            "id": "21acefab26ea4970",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "conflict-files-obsidian-git"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -248,8 +273,12 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "1a71e9f0de9191ea",
+  "active": "21acefab26ea4970",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Patterns/Pattern HashMap and Prefix Sum.md",
+    "conflict-files-obsidian-git.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0103. Binary Tree Zigzag Level Order Traversal.md",
+    "1 - Raw Notes/8 - OpenClaw & Stocks/Test2.md",
     "1 - Raw Notes/8 - OpenClaw & Stocks/Test.md",
     "1 - Raw Notes/8 - OpenClaw & Stocks",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0347. Top K Frequent Elements.md",
@@ -257,7 +286,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1962. Remove Stones to Minimize the Total.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - Check HTML Tags Matches.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2225. Find Players With Zero or One Losses.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Patterns/Pattern HashMap and Prefix Sum.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0020. Check Matches of Parentless.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1248. Count Number of Nice Subarrays.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0739. Daily Temperatures.md",
@@ -280,9 +308,6 @@
     "Monotonic Decreasing Stack.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0199. Binary Tree Right Side View.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Graphs.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Graphs - BFS.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Patterns/Multi-Source - BFS.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0542. 01 Matrix.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/7 - Greedy and Dynamic Programming/assets/2.1. DP - Top-down(aka memoization) and Bottom-up(aka tabulation)",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/assets/English",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/assets",
