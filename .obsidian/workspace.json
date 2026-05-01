@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0863. All Nodes Distance K in Binary Tree.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 1293. Shortest Path in a Grid with Obstacles Elimination.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "M - 0863. All Nodes Distance K in Binary Tree"
+              "title": "H - 1293. Shortest Path in a Grid with Obstacles Elimination"
             }
           }
         ],
@@ -251,6 +251,9 @@
   },
   "active": "cb57c570e8cefe62",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0286. Walls and Gates.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0542. 01 Matrix.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0863. All Nodes Distance K in Binary Tree.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0841. Keys and Rooms.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1557. Minimum Number of Vertices to Reach all Nodes.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1466. Reorder Routes to Make All Paths Lead to the City Zero.md",
@@ -274,9 +277,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0502. IPO.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0735. Asteroid Collision.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0881. Boats to Save People.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1338. Reduce Array Size to The Half.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1481. Least Number of Unique Integers after K removals.md",
     "1 - Raw Notes/8 - OpenClaw & Stocks/assets/Stock API/file-20260428005150690.png",
     "1 - Raw Notes/8 - OpenClaw & Stocks/assets/Stock API",
     "1 - Raw Notes/8 - OpenClaw & Stocks/assets",
