@@ -11,15 +11,39 @@ Tags: [[Heaps]]
 #review/15d 
 # Content
 
+## `heapify` is **O(n)** — not O(n log n).
+
+This surprises most people because you'd think inserting n elements one by one would be O(n log n). But `heapify` uses a smarter bottom-up approach:
+- It starts from the **last non-leaf node** and sifts down
+- Nodes near the bottom (majority of nodes) do very little work
+- Only nodes near the top do O(log n) work, but there are very few of them
+The math works out to **O(n)** total.
+## Comparison
+
+| Approach           | Cost       |
+| ------------------ | ---------- |
+| `heapify(nums)`    | O(n)       |
+| `heappush` n times | O(n log n) |
+| heappush           | O(log n)   |
+| heappop            | O(log n)   |
+## Practical rule
+```python
+# if you already have all elements upfront → heapify O(n)
+heapq.heapify(nums)
+
+# if elements arrive one by one → heappush O(log n) each
+heapq.heappush(heap, num)
+```
+
 ## IMPORTANT FIRST
 ```python
 import heapq
 nums = [10, 21,4,1,3,6]
-heapq.heapify(nums)
+heapq.heapify(nums) # O(n)
 print(nums) # [1, 3, 4, 21, 10, 6]
-heapq.heappush(nums, 0)
+heapq.heappush(nums, 0) # O(log n)
 print(nums) # [0, 3, 1, 21, 10, 6, 4]
-heapq.heappop(nums)
+heapq.heappop(nums) # O(log n)
 print(nums) # [1, 3, 4, 21, 10, 6]
 ```
 <span style="color:red">-> A heap is not a sorted array. It only guarantees the minimum is at index 0.</span>
