@@ -72,6 +72,7 @@ value: 1  3  4  21  10  6
 - index `0` → root
 - index `1, 2` → level 2
 - index `3, 4, 5, 6` → level 3
+
 Parent-child relationship by index:
 ```python
 parent of i  →  (i - 1) // 2
@@ -95,8 +96,6 @@ children of i →  2*i + 1  and  2*i + 2
 ## One liner summary
 > heapify/heappush/heappop rearrange the array to maintain the **tree shape rule** (parent < children), NOT sorted order. Only `heap[0]` is guaranteed to be the minimum.
 
-
-
 ---
 A heap is a data structure that is an implementation of the [priority queue](https://en.wikipedia.org/wiki/Priority_queue).
 
@@ -118,7 +117,7 @@ The smallest element in the tree is the root, and the following property is main
 **Notice that this property directly implies that the root is the smallest element.**
 <span style="color:red">Another constraint is that the tree must be a [complete tree](https://en.wikipedia.org/wiki/Binary_tree#complete).</span>
 ## Bubbling up
-“**Bubbling up**” (also called **sift-up** or **heapify-up**) is what happens after you insert a new element into a heap.
+“**Bubbling up**” (also called **sift-up(筛分)** or **heapify-up**) is what happens after you insert a new element into a heap.
 Insert at bottom, then keep swapping with parent until heap property is restored
 #### If a node is at index `i`, then its children are at indices `2i + 1` and `2i + 2`.
 ### # The core idea
@@ -193,7 +192,7 @@ while max_heap:
     print(-heapq.heappop(max_heap))
 ```
 
-## One simple problem and solution: [1046. Last Stone Weight](https://leetcode.com/problems/last-stone-weight/)
+## One simple problem and solution: [[../../../LeetCode Questions/E - 1046. Last Stone Weight|E - 1046. Last Stone Weight]]
 
 The problem
 ```text
