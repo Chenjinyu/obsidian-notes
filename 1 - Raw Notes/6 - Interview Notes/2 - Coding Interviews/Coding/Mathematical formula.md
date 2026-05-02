@@ -17,6 +17,18 @@ total_sum = n * (n + 1) // 2
 7  // 6 = 1   # 7  / 6 = 1.16 → drop .16 → 1
 13 // 6 = 2   # 13 / 6 = 2.16 → drop .16 → 2
 ```
+
+## 3. % is the modulo operator - it gives the remainder after division.
+```python
+11 % 6 = 5    # 11 = 1*6 + 5  → remainder 5
+12 % 6 = 0    # 12 = 2*6 + 0  → remainder 0
+0  % 6 = 0    # 0  = 0*6 + 0  → remainder 0
+7  % 6 = 1    # 7  = 1*6 + 1  → remainder 1
+13 % 6 = 1    # 13 = 2*6 + 1  → remainder 1
+4  % 2 = 0
+3  % 2 = 1
+6 % 10 = 6   # 6 = 0*10 + 6 -> remainder 6
+```
 # Note
 
 
