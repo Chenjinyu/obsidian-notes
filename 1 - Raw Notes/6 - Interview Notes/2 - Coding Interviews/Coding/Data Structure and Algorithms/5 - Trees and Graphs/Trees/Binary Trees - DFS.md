@@ -63,7 +63,7 @@ def preorder_dfs(node):
         return
 
     print(node.val) # read current node value first
-    preorder_dfs(node.left)
+    preorder_dfs(node.left) # recursive, the left node goes into loop first.
     preorder_dfs(node.right)
     return
     
