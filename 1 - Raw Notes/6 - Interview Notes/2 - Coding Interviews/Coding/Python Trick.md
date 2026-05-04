@@ -119,6 +119,25 @@ for i, v in enumerate(test):
 print("".join(test))    # 'ccc'
 ```
 
+## 10. sorted with iteration
+```python
+arr = [3,3,3,3,1,1,5,5,5,2,2,7]
+arr_counter = Counter(arr)
+# Counter({1: 2, 3: 4, 5: 3, 2: 2, 7: 1})
+# I want to order the arr_counter, the max count should be the first
+
+| Iterating over          | Each element     | key                        |
+|-------------------------|------------------|----------------------------|
+| `arr_counter`           | `1` (key)        | arr_counter.get(element)   |
+| `arr_counter.items()`   | `(1, 5)` (tuple) | lambda x: x[1]             |
+
+# it return the order with the keys, because sorted always return list
+arr_counter_sorted = sorted(arr_counter, key=arr_counter.get, reverse=True) 
+
+arr_counter_sorted = sorted(arr_counter.items, key=lambda x: x[1], reverse=True) # it return tuple
+# [(3, 4), (5, 3), (2, 2), (1, 2), (7, 1)]
+```
+
 # Note
 
 
