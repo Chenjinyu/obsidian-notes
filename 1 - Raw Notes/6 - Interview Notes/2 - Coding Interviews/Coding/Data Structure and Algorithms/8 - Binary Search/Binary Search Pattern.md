@@ -10,67 +10,62 @@ Tags: [[Binary Search]]
 
 ## Reference LeetCode Problem
 - [[../../../LeetCode Questions/M - 0658. Find K Closest Elements|M - 0658. Find K Closest Elements]]
-# Content
-## Binary Search Patterns
 
-### 1️⃣ Classic — find exact target
+# Binary Search
+Binary search is a search algorithm that runs in O(logn) in the worst case, where nn is the size of the search space
+
 ```python
-left, right = 0, len(arr) - 1
-
-while left <= right:
-    mid = (left + right) // 2
-    if arr[mid] == target:
-        return mid
-    elif arr[mid] < target:
-        left = mid + 1
-    else:
-        right = mid - 1
-
-return -1
-```
-### 2️⃣ Find leftmost (first occurrence)
-```python
-left, right = 0, len(arr)  # note: right = len(arr)
-
-while left < right:         # note: strict 
-    mid = (left + right) // 2
-    if arr[mid] < target:
-        left = mid + 1
-    else:
-        right = mid         # don't do mid - 1
-
-return left
+def binary_search(arr, target):
+    left = 0
+    right = len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == target:
+            # do something
+            return
+        if arr[mid] > target:
+            right = mid - 1
+        else:
+            left = mid + 1
+    
+    # target is not in arr, but left is at the insertion point
+    return left
 ```
 
-### 3️⃣ Find rightmost (last occurrence)
+## Duplicate elements
+If your input has duplicates, you can modify the binary search template to find either the first or the last position of a given element. If `target` appears multiple times, then the following template will find the left-most index:
+
 ```python
-left, right = 0, len(arr)
+def binary_search(arr, target):
+    left = 0
+    right = len(arr)
+    while left < right:
+        mid = (left + right) // 2
+        if arr[mid] >= target:
+            right = mid
+        else:
+            left = mid + 1
 
-while left < right:
-    mid = (left + right) // 2
-    if arr[mid] <= target:
-        left = mid + 1      # note: <=
-    else:
-        right = mid
-
-return left - 1
+    return left
 ```
 
-### 4️⃣ Binary search on answer (search space is a range, not array)
+The following template will find the right-most **insertion point** (the index of the right-most element plus one):
 ```python
-left, right = min_possible, max_possible
+def binary_search(arr, target):
+    left = 0
+    right = len(arr)
+    while left < right:
+        mid = (left + right) // 2
+        if arr[mid] > target:
+            right = mid
+        else:
+            left = mid + 1
 
-while left < right:
-    mid = (left + right) // 2
-    if feasible(mid):       # some condition function
-        right = mid
-    else:
-        left = mid + 1
-
-return left
+    return left
 ```
 
-> Used when you're not searching an array but a **value range** — e.g. "minimum capacity", "minimum days", "kth smallest".
+### > Regarding both of the above templates, if the element you are searching for does not exist, then `left` will be at the index where the element should be inserted to maintain sorted order (just like in a normal binary search). Note that you can also use these templates on arrays without duplicate elements.
+
 
 ## Key signals to recognize binary search
 
