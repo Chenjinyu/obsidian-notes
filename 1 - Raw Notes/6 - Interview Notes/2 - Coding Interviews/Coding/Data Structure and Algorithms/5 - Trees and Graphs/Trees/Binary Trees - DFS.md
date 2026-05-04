@@ -6,7 +6,7 @@ sr-ease: 2.5
 
 Date: 2026-03-24
 Course:
-Tags: [[Binary Trees - DFS]]
+Tags: [[Binary Trees - DFS]] [[Interview Algorithm Patterns]]
 
 
 # Reviews Knowledges Points

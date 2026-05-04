@@ -1,5 +1,5 @@
 ---
-sr-due: 2026-05-02
+sr-due: 2026-06-13
 sr-interval: 4
 sr-ease: 22.5
 ---
@@ -42,13 +42,14 @@ def reverse_list(head):
     prev = None
     curr = head
     while curr:
+	    # reverse between prev and curr, the next_node is a point for curr moves to next.
         next_node = curr.next # first, make sure we don't lose the next node
         curr.next = prev      # reverse the direction of the pointer
         prev = curr           # set the current node to prev for the next node
         curr = next_node      # move on
     
     # here should return prev, because the curr will point to None in the last step when curr is the end of node.
-    return prev
+    return prev # curr = curr.next = None
 ```
 
 
