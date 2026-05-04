@@ -33,17 +33,17 @@ Here's the full comparison — every function from your document paired with its
 | `lst.clear()`      | `lst = []`                       | rebind creates new list object; `.clear()` keeps same object, empties it |
 ### Complexity comparison
 
-|In-place|Time|Space|Standalone|Time|Space|
-|---|---|---|---|---|---|
-|`lst.append(x)`|`O(1)`|`O(1)`|`lst + [x]`|`O(n)`|`O(n)`|
-|`lst.extend(iter)`|`O(k)`|`O(1)`|`lst + list(iter)`|`O(n+k)`|`O(n+k)`|
-|`lst.insert(i, x)`|`O(n)`|`O(1)`|`lst[:i]+[x]+lst[i:]`|`O(n)`|`O(n)`|
-|`lst.remove(x)`|`O(n)`|`O(1)`|list comprehension|`O(n)`|`O(n)`|
-|`lst.pop()`|`O(1)`|`O(1)`|`lst[-1]` (read only)|`O(1)`|`O(1)`|
-|`lst.reverse()`|`O(n)`|`O(1)`|`lst[::-1]`|`O(n)`|`O(n)`|
-|`lst.reverse()`|`O(n)`|`O(1)`|`reversed(lst)`|`O(1)`*|`O(1)`|
-|`lst.sort()`|`O(n log n)`|`O(n)`|`sorted(lst)`|`O(n log n)`|`O(n)`|
-|`lst.clear()`|`O(n)`|`O(1)`|`lst = []`|`O(1)`|`O(1)`**|
+| In-place           | Time         | Space  | Standalone            | Time         | Space    |
+| ------------------ | ------------ | ------ | --------------------- | ------------ | -------- |
+| `lst.append(x)`    | `O(1)`       | `O(1)` | `lst + [x]`           | `O(n)`       | `O(n)`   |
+| `lst.extend(iter)` | `O(k)`       | `O(1)` | `lst + list(iter)`    | `O(n+k)`     | `O(n+k)` |
+| `lst.insert(i, x)` | `O(n)`       | `O(1)` | `lst[:i]+[x]+lst[i:]` | `O(n)`       | `O(n)`   |
+| `lst.remove(x)`    | `O(n)`       | `O(1)` | list comprehension    | `O(n)`       | `O(n)`   |
+| `lst.pop()`        | `O(1)`       | `O(1)` | `lst[-1]` (read only) | `O(1)`       | `O(1)`   |
+| `lst.reverse()`    | `O(n)`       | `O(1)` | `lst[::-1]`           | `O(n)`       | `O(n)`   |
+| `lst.reverse()`    | `O(n)`       | `O(1)` | `reversed(lst)`       | `O(1)`*      | `O(1)`   |
+| `lst.sort()`       | `O(n log n)` | `O(n)` | `sorted(lst)`         | `O(n log n)` | `O(n)`   |
+| `lst.clear()`      | `O(n)`       | `O(1)` | `lst = []`            | `O(1)`       | `O(1)`** |
 * lazy iterator, `O(n)` to fully consume ** old list still exists in memory until GC collects it
 ## Dict Operations
 

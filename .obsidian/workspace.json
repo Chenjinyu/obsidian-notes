@@ -133,7 +133,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2352. Equal Row and Column Pairs.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -148,7 +148,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "M - 2352. Equal Row and Column Pairs"
+              "title": "M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit"
             }
           },
           {
@@ -208,7 +208,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "nlargest",
+                "query": "lst.sort",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -229,7 +229,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -371,7 +372,9 @@
   },
   "active": "09a3a2af92c6a6ed",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1481. Least Number of Unique Integers after K removals.md",
     "HashMap.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/In-Place or New.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2352. Equal Row and Column Pairs.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Trees/Binary Trees - DFS.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2368. Reachable Nodes With Restrictions.md",
@@ -399,8 +402,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0072. Edit Distance",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/1 - Arrays and Strings/Prefix sum technique.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/3 - Linked Lists/Fast and slow pointers.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0703. Kth Largest Element in a Stream.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0215. Kth Largest Element in an Array.md",
     "1 - Raw Notes/8 - OpenClaw & Stocks/assets/Stock API/file-20260428005150690.png",
     "1 - Raw Notes/8 - OpenClaw & Stocks/assets/Stock API",
     "1 - Raw Notes/8 - OpenClaw & Stocks/assets",
