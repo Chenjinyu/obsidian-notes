@@ -1,5 +1,5 @@
 ---
-sr-due: 2026-05-01
+sr-due: 2026-05-16
 sr-interval: 15
 sr-ease: 2.5
 ---
@@ -26,7 +26,7 @@ function fn(head):
     slow = head
     fast = head
 
-    while fast and fast.next:
+    while fast and fast.next: # needs to check fast if is None first and then fast.next. other wise null.next raise None exeption
         Do something here
         slow = slow.next
         fast = fast.next.next
