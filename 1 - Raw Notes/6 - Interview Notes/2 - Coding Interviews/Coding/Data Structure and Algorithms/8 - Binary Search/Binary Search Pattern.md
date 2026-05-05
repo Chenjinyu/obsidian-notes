@@ -1,5 +1,5 @@
 ---
-sr-due: 2026-04-25
+sr-due: 2026-05-09
 sr-interval: 1
 sr-ease: 2.5
 ---
@@ -14,7 +14,7 @@ Tags: [[Binary Search]]
 # Binary Search
 Binary search is a search algorithm that runs in O(logn) in the worst case, where nn is the size of the search space
 
-
+### Find out the match within closed interval. [left, right] both ends included.
 ```python
 def binary_search(arr, target):
     left = 0
@@ -37,7 +37,36 @@ def binary_search(arr, target):
 If your input has duplicates, you can modify the binary search template to find either the first or the last position of a given element. If `target` appears multiple times, then the following template will find the left-most index:
 
 ### Left-Most Index
+#### Half-open interval, `[left, right)`, right is not included. But right = len(arr) is allowed, because its exclusive
 
+the leftmost position where arr[i] >=target
+that position might be:
+- inside the array
+- OR at the very end (insertion point)
+Example:
+```python
+arr = [1,2,3,4]  
+target = 10
+
+# Answer should be:
+4 # insert at the end
+# So:  👉 you MUST allow `left` to reach `len(arr)`
+# if using right = len(arr) - 1, you'd never return 4, you'd cap out at 3.
+
+```
+
+#### Why right = mid (not `mid - 1`)
+Because `mid` might still be the answer
+```python
+if arr[mid] >= target:
+    right = mid   # keep mid
+   
+# You’re shrinking: 
+# [left, right) → [left, mid)
+```
+
+```
+```
 ```python
 def binary_search(arr, target):
     left = 0
