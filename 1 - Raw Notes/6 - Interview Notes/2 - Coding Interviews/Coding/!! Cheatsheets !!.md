@@ -1,5 +1,5 @@
 ---
-sr-due: 2026-05-09
+sr-due: 2026-05-16
 sr-interval: 1
 sr-ease: 2.5
 ---
@@ -274,7 +274,7 @@ The following will be a summary of the "Stages of an interview" article. If you 
 
 ## **Stage 2: Problem statement**
 
-- Paraphrase the problem back to the interviewer after they have read it to you.
+- Paraphrase(释义) the problem back to the interviewer after they have read it to you.
 - Ask clarifying questions about the input such as the expected input size, edge cases, and invalid inputs.
 - Quickly walk through an example test case to confirm you understand the problem.
 
@@ -292,7 +292,7 @@ The following will be a summary of the "Stages of an interview" article. If you 
 ## **Stage 4: Implementation**
 
 - Explain your decision-making as you implement. When you declare things like sets, explain what the purpose is.
-- Write clean code that conforms to your programming language's conventions.
+- Write clean code that conforms(符合) to your programming language's conventions.
 - Avoid writing duplicate code - use a helper function or for loop if you are writing similar code multiple times.
 - If you are stuck, don't panic - communicate your concerns with your interviewer.
 - Don't be scared to start with a brute force solution (while acknowledging that it is brute force), then improve it by optimizing the "slow" parts.
@@ -302,9 +302,9 @@ The following will be a summary of the "Stages of an interview" article. If you 
 
 ## **Stage 5: Testing & debugging**
 
-- When walking through test cases, keep track of the variables by writing at the bottom of the file, and continuously update them. Condense trivial parts like creating a prefix sum to save time.
+- When walking through test cases, keep track of the variables by writing at the bottom of the file, and continuously update them. Condense(压缩) trivial(琐碎的) parts like creating a prefix sum to save time.
 - If there are errors and the environment supports running code, put print statements in your algorithm and walk through a small test case, comparing the expected value of variables and the actual values.
-- Be vocal and keep talking with your interviewer if you run into any problems.
+- Be vocal(声乐) and keep talking with your interviewer if you run into any problems.
 
 ---
 
@@ -314,7 +314,7 @@ Questions you should be prepared to answer:
 
 - Time and space complexity, average and worst case.
 - Why did you choose this data structure, algorithm, or logic?
-- Do you think the algorithm could be improved in terms of complexity? If they ask you this, then the answer is _usually_ yes, especially if your algorithm is slower than O(n)O(n).
+- Do you think the algorithm could be improved in terms of complexity? If they ask you this, then the answer is _usually_ yes, especially if your algorithm is slower than O(n).
 
 ---
 
