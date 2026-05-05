@@ -201,7 +201,7 @@ Consider brute force solutions that involve nested loops. If you come up with a 
 
 ---
 
-## **100 < n <= 1,000**
+## **100 < n <= 1,000 (10 ^ 3)**
 
 In this range, a quadratic time complexity O(n^2) should be sufficient, as long as the constant factor isn't too large.
 
@@ -226,7 +226,7 @@ If you have an O(n) algorithm, the constant factor can be reasonably large (ar
 
 ---
 
-## **100,000 < n < 1,000,000**
+## **100,000 (10 ^ 5)< n < 1,000,000 (10 ^ 6)**
 
 n<=10^6 is a rare constraint, and will likely require a time complexity of O(n). In this range, O(n⋅logn) is usually safe as long as it has a small constant factor. You will very likely need to incorporate(包含) a hash map in some way.
 

@@ -1,5 +1,5 @@
 ---
-sr-due: 2026-05-09
+sr-due: 2026-05-08
 sr-interval: 1
 sr-ease: 2.5
 ---
@@ -65,8 +65,7 @@ if arr[mid] >= target:
 # [left, right) → [left, mid)
 ```
 
-```
-```
+#### Pattern
 ```python
 def binary_search(arr, target):
     left = 0
@@ -79,6 +78,22 @@ def binary_search(arr, target):
             left = mid + 1
 
     return left
+```
+
+check [[../../../LeetCode Questions/E - 0035. Search Insert Position|E - 0035. Search Insert Position]], during the processing to find the left most index, also to check if the elem exists in nums.
+below the pattern is able to find out the matched target index, also is able to return the position to insert by returning the left index.
+```python
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        left, right = 0, len(nums)
+        while left < right:
+            mid = (left + right) // 2
+
+            if nums[mid]==target: return mid
+            elif nums[mid] > target: right = mid
+            else: left = mid + 1
+
+        return left
 ```
 
 ### Right-Most Index
