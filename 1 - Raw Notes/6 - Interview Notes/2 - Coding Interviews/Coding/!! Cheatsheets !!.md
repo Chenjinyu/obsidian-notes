@@ -209,7 +209,7 @@ Similar to the previous range, you should consider nested loops. The difference 
 
 ---
 
-## **1,000 < n < 100,000**
+## **1,000 < n < 100,000 (10 ^ 5)**
 
 n<=10^5 is the most common constraint you will see on LeetCode. In this range, the slowest acceptable **common** time complexity is O(n⋅logn), although a linear time approach O(n) is commonly the goal.
 

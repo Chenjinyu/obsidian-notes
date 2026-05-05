@@ -32,6 +32,30 @@
             }
           },
           {
+            "id": "7c8996d35c44dafd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/!! Cheatsheets !!.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "!! Cheatsheets !!"
+            }
+          },
+          {
             "id": "35c61ef2b748492a",
             "type": "leaf",
             "state": {
@@ -55,7 +79,8 @@
               "title": "M - 0909. Snakes and Ladders"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -248,10 +273,10 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "e804ef2081013f71",
+  "active": "7c8996d35c44dafd",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0909. Snakes and Ladders.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0074. Search a 2D Matrix.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0909. Snakes and Ladders.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/8 - Binary Search/Binary Search Pattern.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0103. Binary Tree Zigzag Level Order Traversal.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0215. Kth Largest Element in an Array.md",
