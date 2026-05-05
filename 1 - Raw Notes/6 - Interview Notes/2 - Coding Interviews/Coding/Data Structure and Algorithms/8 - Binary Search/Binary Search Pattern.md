@@ -14,6 +14,7 @@ Tags: [[Binary Search]]
 # Binary Search
 Binary search is a search algorithm that runs in O(logn) in the worst case, where nn is the size of the search space
 
+
 ```python
 def binary_search(arr, target):
     left = 0
@@ -35,6 +36,8 @@ def binary_search(arr, target):
 ## Duplicate elements
 If your input has duplicates, you can modify the binary search template to find either the first or the last position of a given element. If `target` appears multiple times, then the following template will find the left-most index:
 
+### Left-Most Index
+
 ```python
 def binary_search(arr, target):
     left = 0
@@ -49,7 +52,9 @@ def binary_search(arr, target):
     return left
 ```
 
+### Right-Most Index
 The following template will find the right-most **insertion point** (the index of the right-most element plus one):
+
 ```python
 def binary_search(arr, target):
     left = 0
