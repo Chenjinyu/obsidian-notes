@@ -98,7 +98,7 @@ class Solution:
 
 ### Right-Most Index
 The following template will find the right-most **insertion point** (the index of the right-most element plus one):
-
+if the if condition in the while loop, why it cannot `>= target`, check [[../../../LeetCode Questions/E M - 2389. Longest Subsequence With Limited Sum|E M - 2389. Longest Subsequence With Limited Sum]]
 ```python
 def binary_search(arr, target):
     left = 0
