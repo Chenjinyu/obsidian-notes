@@ -65,7 +65,7 @@ if arr[mid] >= target:
 # [left, right) → [left, mid)
 ```
 
-#### Pattern
+####  pattern for left most index, the only different with right most index is the >= target
 ```python
 def binary_search(arr, target):
     left = 0
