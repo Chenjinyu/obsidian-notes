@@ -104,12 +104,12 @@
             }
           },
           {
-            "id": "9980a908aa330142",
+            "id": "55ea79fc9efea79e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2300. Successful Pairs of Spells and Potions.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0875. Koko Eating Bananas.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -124,35 +124,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "M - 2300. Successful Pairs of Spells and Potions"
-            }
-          },
-          {
-            "id": "013e001c9ed8ef40",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/8 - Binary Search/Binary Search Pattern.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Binary Search Pattern"
+              "title": "M - 0875. Koko Eating Bananas"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -345,13 +321,14 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "e0ca9285d3b467e2",
+  "active": "55ea79fc9efea79e",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E M - 2389. Longest Subsequence With Limited Sum.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0875. Koko Eating Bananas.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/8 - Binary Search/On Solution Spaces.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/8 - Binary Search/Binary Search Pattern.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0035. Search Insert Position.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2300. Successful Pairs of Spells and Potions.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E M - 2389. Longest Subsequence With Limited Sum.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0035. Search Insert Position.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/!! Cheatsheets !!.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0909. Snakes and Ladders.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/6 - Heaps/Heaps.md",
@@ -372,7 +349,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/English.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/!! Code Templates !!.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/JC - Search/two functions comparsion.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0111. Minimum Depth of Binary Tree.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit/file-20260504024415671.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0072. Edit Distance/file-20260504000536621.png",
