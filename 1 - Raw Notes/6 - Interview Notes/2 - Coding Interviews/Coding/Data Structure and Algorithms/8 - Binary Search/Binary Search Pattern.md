@@ -12,6 +12,20 @@ Tags: [[Binary Search]]
 - [[../../../LeetCode Questions/M - 0658. Find K Closest Elements|M - 0658. Find K Closest Elements]]
 
 # Binary Search
+
+## Explanation left-most is >=target, and right-most is >target
+
+## LEFT-MOST
+is to find FIRST position where a condition becomes TRUE
+which not specfically:
+```python
+mid >= target
+# it aslo can be
+mid <= target # check the [[../../../LeetCode Questions/M - 1870. Minimum Speed to Arrive on Time|M - 1870. Minimum Speed to Arrive on Time]]
+```
+
+for left-most, it will get the first one which match the condition. 
+
 Binary search is a search algorithm that runs in O(logn) in the worst case, where nn is the size of the search space
 
 ### Find out the match within closed interval. [left, right] both ends included.
@@ -37,6 +51,7 @@ def binary_search(arr, target):
 If your input has duplicates, you can modify the binary search template to find either the first or the last position of a given element. If `target` appears multiple times, then the following template will find the left-most index:
 
 ### Left-Most Index - when asking the minimum, so getting the left index as possible as it can.
+
 #### Half-open interval, `[left, right)`, right is not included. But right = len(arr) is allowed, because its exclusive
 
 the leftmost position where arr[i] >=target
