@@ -1,5 +1,5 @@
 ---
-sr-due: 2026-05-08
+sr-due: 2026-05-16
 sr-interval: 1
 sr-ease: 2.5
 ---
@@ -13,18 +13,6 @@ Tags: [[Binary Search]]
 
 # Binary Search
 
-## Explanation left-most is >=target, and right-most is >target
-
-## LEFT-MOST
-is to find FIRST position where a condition becomes TRUE
-which not specfically:
-```python
-mid >= target
-# it aslo can be
-mid <= target # check the [[../../../LeetCode Questions/M - 1870. Minimum Speed to Arrive on Time|M - 1870. Minimum Speed to Arrive on Time]]
-```
-
-for left-most, it will get the first one which match the condition. 
 
 Binary search is a search algorithm that runs in O(logn) in the worst case, where nn is the size of the search space
 
