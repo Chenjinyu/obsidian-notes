@@ -36,7 +36,7 @@ def binary_search(arr, target):
 ## Duplicate elements
 If your input has duplicates, you can modify the binary search template to find either the first or the last position of a given element. If `target` appears multiple times, then the following template will find the left-most index:
 
-### Left-Most Index
+### Left-Most Index - when asking the minimum, so getting the left index as possible as it can.
 #### Half-open interval, `[left, right)`, right is not included. But right = len(arr) is allowed, because its exclusive
 
 the leftmost position where arr[i] >=target
@@ -96,7 +96,7 @@ class Solution:
         return left
 ```
 
-### Right-Most Index
+### Right-Most Index - when asking maximum, so getting the right index as possible as it can.
 The following template will find the right-most **insertion point** (the index of the right-most element plus one):
 if the if condition in the while loop, why it cannot `>= target`, check [[../../../LeetCode Questions/E M - 2389. Longest Subsequence With Limited Sum|E M - 2389. Longest Subsequence With Limited Sum]]
 ```python
