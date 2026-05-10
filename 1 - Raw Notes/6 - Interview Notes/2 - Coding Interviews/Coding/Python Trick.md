@@ -138,6 +138,16 @@ arr_counter_sorted = sorted(arr_counter.items, key=lambda x: x[1], reverse=True)
 # [(3, 4), (5, 3), (2, 2), (1, 2), (7, 1)]
 ```
 
+## 11. Pattern Idx convert to 2D position
+```python
+idx = 5 (value = 6), rows = 3, cols = 3
+1 2 3 
+4 5 6 
+7 8 9
+
+the 2D row: 5 // cols = 2
+the 2D col: 5 % cols = 
+```
 # Note
 
 
