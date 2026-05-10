@@ -20,7 +20,7 @@ total_sum = n * (n + 1) // 2
 
 ## 3. % is the modulo operator - it gives the remainder after division.
 ```python
-11 % 6 = 5    # 11 = 1*6 + 5  → remainder 5
+11 % 6 = 5    # 11 = 1*6 + 5  → remainder 5 取余
 12 % 6 = 0    # 12 = 2*6 + 0  → remainder 0
 0  % 6 = 0    # 0  = 0*6 + 0  → remainder 0
 7  % 6 = 1    # 7  = 1*6 + 1  → remainder 1
