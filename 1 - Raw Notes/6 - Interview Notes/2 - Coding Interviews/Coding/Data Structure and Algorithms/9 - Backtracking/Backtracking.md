@@ -1,0 +1,27 @@
+---
+sr-due: <% tp.date.now("YYYY-MM-DD") %>
+sr-interval: 1
+sr-ease: 2.5
+---
+
+Date: 2026-05-11
+Course:
+Tags: 
+
+# Content
+
+**Backtracking** is a way to efficiently run through all possibilities in a problem. It typically uses an optimization that involves abandoning a "path" once it is determined that the path cannot lead to a solution. The idea is similar to binary search trees - if you're looking for a value `x`, and the root node has a value greater than `x`, then you know you can ignore the entire right subtree. Because the number of nodes in each subtree is exponential relative to the depth, backtracking can save huge amounts of computation. Imagine if the constraint was that the string could only have vowels - an exhaustive search would still generate all 26n26n strings, and then check each one for if it only had vowels. With backtracking, we discard all subtrees that have non-vowels, improving from O(26n)O(26n) candidates to O(5n)O(5n).
+![800](assets/Backtracking/file-20260511001721935.png)
+<span style="color: orange">
+Abandoning a path is also sometimes called "pruning(修剪)". <br/>
+To summarize the difference between exhaustive search and backtracking: <br/>
+In an exhaustive search, we generate all possibilities and then check them for solutions. <br/>
+In backtracking, we prune(修剪) paths that cannot lead to a solution, generating far fewer possibilities
+</span>
+
+
+# Note
+
+
+# Reference
+
