@@ -32,6 +32,36 @@
             }
           }
         ]
+      },
+      {
+        "id": "389ae8a3bbde3a5c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c12bed8fd2e7f65b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -206,7 +236,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 664.5
+    "width": 265.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -224,7 +254,7 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "c01ca3ef7cffa161",
+  "active": "c12bed8fd2e7f65b",
   "lastOpenFiles": [
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0525. Contiguous Array.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit.md",
