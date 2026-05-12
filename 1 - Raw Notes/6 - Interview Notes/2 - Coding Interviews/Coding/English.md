@@ -75,6 +75,11 @@ arr.append(x), noramlly it should be O(1), but it needs to expend from n to 2n w
 then, it should be O(n). 
 BUT from the long term, the average of the time complexity is O(1)
 ```
+
+backtracking problem: permutations: 排列
+backtracking term: prune(修剪)
+
+factorial: 阶乘, eg 4! = 4 * 3 * 2 * 1. will say: 4 factorial. and 0! is 1 .
 # Note
 
 
