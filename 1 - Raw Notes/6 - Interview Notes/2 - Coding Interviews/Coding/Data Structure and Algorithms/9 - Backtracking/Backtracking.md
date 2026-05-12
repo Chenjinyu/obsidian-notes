@@ -79,9 +79,10 @@ skip it
 
 # Backtracking code
 ```python
+# DFS & Backtracking
 res = []
 def backtrack(start, path):
-    res.append(path[:])
+    res.append(path[:])s
     for i in range(start, len(nums)):
         path.append(nums[i])
         backtrack(i + 1, path)
@@ -112,9 +113,9 @@ Backtracking explores all valid continuations.
 
 # Common Backtracking Problems
 ## Subsets
-Choose/not choose.
+Choose/not choose. [[../../../LeetCode Questions/M - 0078. Subsets|M - 0078. Subsets]]
 ## Permutations
-Arrange elements.
+Arrange elements. [[../../../LeetCode Questions/M - 0046. Permutations|M - 0046. Permutations]]
 ## Combination Sum
 Find combinations reaching target.
 ## N-Queens
