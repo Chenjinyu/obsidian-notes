@@ -5,7 +5,7 @@ sr-ease: 2.5
 ---
 Date: 2026-05-11
 Course:
-Tags: [[Back]]
+Tags: [[Backtracking]]
 
 # Reference
 - [[../../../LeetCode Questions/M - 0046. Permutations|M - 0046. Permutations]]
