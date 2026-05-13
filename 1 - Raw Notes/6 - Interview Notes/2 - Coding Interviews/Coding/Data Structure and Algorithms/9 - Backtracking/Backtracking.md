@@ -78,6 +78,10 @@ skip it
 ```
 
 # Backtracking code
+The same pattern Leetcodes:
+- [[../../../LeetCode Questions/M - 0077. Combinations|M - 0077. Combinations]]
+- [[../../../LeetCode Questions/M - 0078. Subsets|M - 0078. Subsets]]
+- [[../../../LeetCode Questions/M - 0046. Permutations|M - 0046. Permutations]]
 ```python
 # DFS & Backtracking
 res = []
