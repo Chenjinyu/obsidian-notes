@@ -235,6 +235,63 @@ Backtracking is a core interview category alongside:
 
 Mastering it unlocks many medium/hard problems quickly.
 
+
+## Backtracking has stayed very common in technical interviews because it tests several important skills at once:
+- recursion
+- state management
+- tree/graph traversal
+- pruning
+- complexity analysis
+- clean coding under pressure
+
+Companies like Meta, Google, Amazon, and Capital One often use these problems because they reveal whether a candidate can systematically explore solution spaces.
+
+What you’re noticing on LeetCode is real:  
+recent interview trends heavily favor:
+- DFS/backtracking
+- graphs
+- trees
+- heap/top-k
+- interval problems
+- binary search on answer
+- dynamic programming with memoization
+
+Pure “hard DP” appears less frequently than a few years ago in many interviews. Backtracking especially appears because it’s flexible.
+ 
+--- 
+
+The important thing now is not memorizing solutions.
+You want to train yourself to recognize:
+# Signals for Backtracking
+If the problem says:
+- all possible
+- every combination
+- enumerate
+- generate
+- partition
+- permutations
+- subsets
+- paths
+
+you should immediately think:
+> “This is probably DFS + backtracking.” and Backtracking is essentially DFS on a decision tree.
+
+
+A very practical interview strategy:
+# Master these patterns deeply
+
+1. Subsets
+2. Combinations
+3. Permutations
+4. Combination Sum
+5. Word Search
+6. Palindrome Partitioning
+7. N-Queens
+8. All Paths From Source to Target
+
+If you truly understand these, most interview backtracking problems become variations instead of entirely new problems.
+
+
 # Content from LeetCode
 **Backtracking** is a way to efficiently run through all possibilities in a problem. It typically uses an optimization that involves abandoning a "path" once it is determined that the path cannot lead to a solution. The idea is similar to binary search trees - if you're looking for a value `x`, and the root node has a value greater than `x`, then you know you can ignore the entire right subtree. Because the number of nodes in each subtree is exponential relative to the depth, backtracking can save huge amounts of computation. Imagine if the constraint was that the string could only have vowels - an exhaustive search would still generate all 26n26n strings, and then check each one for if it only had vowels. With backtracking, we discard all subtrees that have non-vowels, improving from O(26n)O(26n) candidates to O(5n)O(5n).
 ![800](assets/Backtracking/file-20260511001721935.png)
