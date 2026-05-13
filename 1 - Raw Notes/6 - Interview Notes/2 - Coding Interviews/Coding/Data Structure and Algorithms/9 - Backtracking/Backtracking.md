@@ -55,8 +55,7 @@ def backtrack(path, choices):
         undo choice
 ```
 The “undo choice” part is what makes it backtracking.
-# Example 1 — Subsets
-
+# Example 1 — Subsets ([[../../../LeetCode Questions/M - 0078. Subsets|M - 0078. Subsets]])
 Problem:
 ```python
 nums = [1,2]
@@ -70,6 +69,7 @@ Find all subsets:
 ```
 
 # Decision tree
+Choose or not choose, Leetcode example: [[../../../LeetCode Questions/M - 0078. Subsets|M - 0078. Subsets]]
 At each number:
 ```python
 take it
@@ -82,7 +82,7 @@ skip it
 # DFS & Backtracking
 res = []
 def backtrack(start, path):
-    res.append(path[:])s
+    res.append(path[:])
     for i in range(start, len(nums)):
         path.append(nums[i])
         backtrack(i + 1, path)
@@ -227,7 +227,6 @@ Backtracking is a core interview category alongside:
 - greedy
 
 Mastering it unlocks many medium/hard problems quickly.
-
 
 # Content from LeetCode
 **Backtracking** is a way to efficiently run through all possibilities in a problem. It typically uses an optimization that involves abandoning a "path" once it is determined that the path cannot lead to a solution. The idea is similar to binary search trees - if you're looking for a value `x`, and the root node has a value greater than `x`, then you know you can ignore the entire right subtree. Because the number of nodes in each subtree is exponential relative to the depth, backtracking can save huge amounts of computation. Imagine if the constraint was that the string could only have vowels - an exhaustive search would still generate all 26n26n strings, and then check each one for if it only had vowels. With backtracking, we discard all subtrees that have non-vowels, improving from O(26n)O(26n) candidates to O(5n)O(5n).
