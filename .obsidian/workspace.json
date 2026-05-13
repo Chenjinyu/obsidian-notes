@@ -6,7 +6,7 @@
       {
         "id": "747a4362a5f0c5be",
         "type": "tabs",
-        "dimension": 50.45941807044411,
+        "dimension": 50.153139356814705,
         "children": [
           {
             "id": "f4777e1d588c2efa",
@@ -86,7 +86,7 @@
       {
         "id": "97e7407d8b04faca",
         "type": "tabs",
-        "dimension": 49.54058192955589,
+        "dimension": 49.846860643185295,
         "children": [
           {
             "id": "11fade56f0b14834",
@@ -307,9 +307,11 @@
   },
   "active": "1fe437e0a296d160",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/9 - Backtracking/Backtracking.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0078. Subsets.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0077. Combinations.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0077. Combinations/file-20260513014056355.png",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0077. Combinations",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0078. Subsets.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/9 - Backtracking/Backtracking.md",
     "DFS & Backtracking.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0046. Permutations.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/English.md",
@@ -335,7 +337,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2294. Partition Array Such That Maximum Difference Is K.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0515. Find Largest Value in Each Tree Row.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0739. Daily Temperatures.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0199. Binary Tree Right Side View.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit/file-20260504024415671.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0072. Edit Distance/file-20260504000536621.png",
@@ -351,8 +352,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Patterns/assets",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1448. Count Good Nodes in Binary Tree/file-20260426143607297.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1448. Count Good Nodes in Binary Tree/file-20260426143556638.png",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1448. Count Good Nodes in Binary Tree",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/assets/M - 1143. Longest Common Subsequence/file-20260419022123459.png",
     "i changed the canvas name - check sync to git.canvas",
     "Untitled.canvas",
     "Untitled 5.canvas",
