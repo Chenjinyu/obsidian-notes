@@ -6,7 +6,7 @@
       {
         "id": "747a4362a5f0c5be",
         "type": "tabs",
-        "dimension": 51.378254211332305,
+        "dimension": 38.89739663093415,
         "children": [
           {
             "id": "f4777e1d588c2efa",
@@ -134,7 +134,7 @@
       {
         "id": "97e7407d8b04faca",
         "type": "tabs",
-        "dimension": 48.62174578866769,
+        "dimension": 61.102603369065854,
         "children": [
           {
             "id": "11fade56f0b14834",
@@ -208,8 +208,7 @@
               "title": "M - 0046. Permutations"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -402,8 +401,9 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "36bca669a44be755",
+  "active": "11fade56f0b14834",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0046. Permutations.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/9 - Backtracking/Backtracking.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0797. All Paths From Source to Target.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0323. Number of Connected Components in an Undirected Graph.md",
@@ -415,7 +415,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0077. Combinations/file-20260513014056355.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0077. Combinations",
     "DFS & Backtracking.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0046. Permutations.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/English.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/!! Code Templates !!.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/9 - Backtracking/assets/Backtracking/file-20260511001721935.png",
