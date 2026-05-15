@@ -134,6 +134,8 @@ Find combinations reaching target. [[../../../LeetCode Questions/M - 0039. Combi
 
 ## N-Queens
 Place queens safely.
+[[../../../LeetCode Questions/H - 0051. N-Queens|H - 0051. N-Queens]]
+[[../../../LeetCode Questions/H - 0052. N-Queens II|H - 0052. N-Queens II]]
 ## Word Search
 DFS through board.
 ## Sudoku Solver
