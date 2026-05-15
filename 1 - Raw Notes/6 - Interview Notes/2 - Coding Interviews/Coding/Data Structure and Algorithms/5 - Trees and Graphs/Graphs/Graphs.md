@@ -16,7 +16,17 @@ Tags:
 
 # Content
 
-A graph is any collection of nodes and connections between those nodes.
+## A strong way to think about graph problems is:
+
+| Goal                | Common Technique   |
+| ------------------- | ------------------ |
+| One optimal path    | BFS / Dijkstra     |
+| Reachability        | DFS / BFS          |
+| Detect cycle        | DFS / Union-Find   |
+| Topological order   | DFS / Kahn         |
+| Enumerate all paths | DFS + Backtracking |
+
+## A graph is any collection of nodes and connections between those nodes.
 > Another term for nodes is vertices, and the connections between the nodes are called edges.
 
 
