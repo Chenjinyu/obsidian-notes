@@ -8,7 +8,11 @@ Course:
 Tags: [[Backtracking]] [[../../../../../../DFS & Backtracking|DFS & Backtracking]]
 
 # Reference
+- [[../../../LeetCode Questions/M - 0077. Combinations|M - 0077. Combinations]]
+- [[../../../LeetCode Questions/M - 0078. Subsets|M - 0078. Subsets]]
 - [[../../../LeetCode Questions/M - 0046. Permutations|M - 0046. Permutations]]
+- [[../../../LeetCode Questions/M - 0017. Letter Combinations of a Phone Number|M - 0017. Letter Combinations of a Phone Number]]
+- [[../../../LeetCode Questions/M - 0039. Combination Sum|M - 0039. Combination Sum]]
 
 # Content
 
@@ -126,7 +130,7 @@ Arrange elements.
 [[../../../LeetCode Questions/M - 0077. Combinations|M - 0077. Combinations]]
 [[../../../LeetCode Questions/M - 0017. Letter Combinations of a Phone Number|M - 0017. Letter Combinations of a Phone Number]]
 ## Combination Sum
-Find combinations reaching target.
+Find combinations reaching target. [[../../../LeetCode Questions/M - 0039. Combination Sum|M - 0039. Combination Sum]]
 
 ## N-Queens
 Place queens safely.
