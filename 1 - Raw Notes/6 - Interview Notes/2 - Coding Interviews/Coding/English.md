@@ -80,6 +80,8 @@ backtracking problem: permutations: 排列
 backtracking term: prune(修剪)
 
 factorial: 阶乘, eg 4! = 4 * 3 * 2 * 1. will say: 4 factorial. and 0! is 1 .
+
+positive and negative diagonals(正对角线和负对角线), [[../LeetCode Questions/H - 0051. N-Queens|H - 0051. N-Queens]]
 # Note
 
 
