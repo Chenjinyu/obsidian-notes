@@ -138,6 +138,7 @@ Place queens safely.
 [[../../../LeetCode Questions/H - 0052. N-Queens II|H - 0052. N-Queens II]]
 ## Word Search
 DFS through board.
+
 ## Sudoku Solver
 Try valid digits recursively.
 ## Palindrome Partitioning
