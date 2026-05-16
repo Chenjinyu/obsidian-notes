@@ -120,37 +120,58 @@ a partial solution state
 Backtracking explores all valid continuations.
 
 # Common Backtracking Problems
-## Subsets
+
+## 1. Mutable-state backtracking
+
+```python
+# It has explicit undo
+path.append()
+backtrack()
+path.pop()  # undo
+```
+
+### Subsets
 Choose/not choose. [[../../../LeetCode Questions/M - 0078. Subsets|M - 0078. Subsets]]
-## Permutations
+### Permutations
 Arrange elements. [[../../../LeetCode Questions/M - 0046. Permutations|M - 0046. Permutations]]
 
-## Combination
+### Combination
 Arrange elements. 
 [[../../../LeetCode Questions/M - 0077. Combinations|M - 0077. Combinations]]
 [[../../../LeetCode Questions/M - 0017. Letter Combinations of a Phone Number|M - 0017. Letter Combinations of a Phone Number]]
-## Combination Sum
+### Combination Sum
 Find combinations reaching target. 
 - [[../../../LeetCode Questions/M - 0039. Combination Sum|M - 0039. Combination Sum]]
 - [[../../../LeetCode Questions/NOT Started M - 0040. Combination Sum II|NOT Started M - 0040. Combination Sum II]]
 - [[../../../LeetCode Questions/Not Started M - 0216. Combination Sum III|Not Started M - 0216. Combination Sum III]]
 
-## N-Queens
+## N#-Queens
 Place queens safely.
 [[../../../LeetCode Questions/H - 0051. N-Queens|H - 0051. N-Queens]]
 [[../../../LeetCode Questions/H - 0052. N-Queens II|H - 0052. N-Queens II]]
-## Word Search
+### Word Search
 DFS through board. [[../../../LeetCode Questions/M - 0079. Word Search|M - 0079. Word Search]]
 
-## Parentheses
+### Parentheses
 - [[Not Started - M - 0022. Generate Parentheses]]
 - [[../../../LeetCode Questions/Not Stared M - 0047. Permutations II|Not Stared M - 0047. Permutations II]]
 
-## Sudoku Solver
+### Sudoku Solver
 Try valid digits recursively.
-## Palindrome Partitioning
+### Palindrome Partitioning
 Try every valid split.
 [[../../../LeetCode Questions/M - 0131. Palindrome Partitioning|M - 0131. Palindrome Partitioning]]
+
+### Other
+- 
+## 2. Immutable-state backtracking
+
+Each recursive call gets its own independent number/answer, and there is no choose or not choose term, it ONLY provides the possible candidates. 
+then to choose them and abandon them(invalid branches). so, it only has choose and abandon.
+
+- [[../../../LeetCode Questions/M - 0967. Numbers With Same Consecutive Differences|M - 0967. Numbers With Same Consecutive Differences]]
+- 
+
 # Mental model
 Backtracking usually means:
 ```python
