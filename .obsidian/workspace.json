@@ -6,7 +6,7 @@
       {
         "id": "747a4362a5f0c5be",
         "type": "tabs",
-        "dimension": 65.5425219941349,
+        "dimension": 61.070381231671554,
         "children": [
           {
             "id": "f4777e1d588c2efa",
@@ -182,7 +182,7 @@
       {
         "id": "4f2438786768184c",
         "type": "tabs",
-        "dimension": 34.457478005865106,
+        "dimension": 38.929618768328446,
         "children": [
           {
             "id": "19edf4964ca5f972",
@@ -281,7 +281,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -476,9 +476,9 @@
   },
   "active": "0ac65f5966d8e16d",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/9 - Backtracking/Backtracking.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0131. Palindrome Partitioning.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0017. Letter Combinations of a Phone Number.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0131. Palindrome Partitioning.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/9 - Backtracking/Backtracking.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0046. Permutations.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0077. Combinations.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Not Started - M - 0022. Generate Parentheses.md",
