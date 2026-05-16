@@ -139,6 +139,9 @@ Place queens safely.
 ## Word Search
 DFS through board. [[../../../LeetCode Questions/M - 0079. Word Search|M - 0079. Word Search]]
 
+## Parentheses
+[[../../../LeetCode Questions/M - 0022. Generate Parentheses|M - 0022. Generate Parentheses]]
+
 ## Sudoku Solver
 Try valid digits recursively.
 ## Palindrome Partitioning
