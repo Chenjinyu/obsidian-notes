@@ -150,7 +150,7 @@ DFS through board. [[../../../LeetCode Questions/M - 0079. Word Search|M - 0079.
 Try valid digits recursively.
 ## Palindrome Partitioning
 Try every valid split.
-[[../../../LeetCode Questions/M - 0131. Palindrome Partitioning|NOT Stared M - 0131. Palindrome Partitioning]]
+[[../../../LeetCode Questions/M - 0131. Palindrome Partitioning|M - 0131. Palindrome Partitioning]]
 # Mental model
 Backtracking usually means:
 ```python
