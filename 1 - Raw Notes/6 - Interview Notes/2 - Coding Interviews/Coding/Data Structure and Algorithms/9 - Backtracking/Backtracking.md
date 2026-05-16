@@ -130,7 +130,9 @@ Arrange elements.
 [[../../../LeetCode Questions/M - 0077. Combinations|M - 0077. Combinations]]
 [[../../../LeetCode Questions/M - 0017. Letter Combinations of a Phone Number|M - 0017. Letter Combinations of a Phone Number]]
 ## Combination Sum
-Find combinations reaching target. [[../../../LeetCode Questions/M - 0039. Combination Sum|M - 0039. Combination Sum]]
+Find combinations reaching target. 
+- [[../../../LeetCode Questions/M - 0039. Combination Sum|M - 0039. Combination Sum]]
+- [[../../../LeetCode Questions/NOT Started M - 0040. Combination Sum II|NOT Started M - 0040. Combination Sum II]]
 
 ## N-Queens
 Place queens safely.
@@ -140,13 +142,14 @@ Place queens safely.
 DFS through board. [[../../../LeetCode Questions/M - 0079. Word Search|M - 0079. Word Search]]
 
 ## Parentheses
-[[../../../LeetCode Questions/M - 0022. Generate Parentheses|M - 0022. Generate Parentheses]]
+- [[../../../LeetCode Questions/M - 0022. Generate Parentheses|M - 0022. Generate Parentheses]]
+- [[../../../LeetCode Questions/Not Stared M - 0047. Permutations II|Not Stared M - 0047. Permutations II]]
 
 ## Sudoku Solver
 Try valid digits recursively.
 ## Palindrome Partitioning
 Try every valid split.
-
+[[../../../LeetCode Questions/NOT Stared M - 0131. Palindrome Partitioning|NOT Stared M - 0131. Palindrome Partitioning]]
 # Mental model
 Backtracking usually means:
 ```python
