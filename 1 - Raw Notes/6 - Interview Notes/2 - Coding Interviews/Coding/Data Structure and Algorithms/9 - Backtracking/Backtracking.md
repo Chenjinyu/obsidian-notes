@@ -137,7 +137,7 @@ Place queens safely.
 [[../../../LeetCode Questions/H - 0051. N-Queens|H - 0051. N-Queens]]
 [[../../../LeetCode Questions/H - 0052. N-Queens II|H - 0052. N-Queens II]]
 ## Word Search
-DFS through board.
+DFS through board. [[../../../LeetCode Questions/M - 0079. Word Search|M - 0079. Word Search]]
 
 ## Sudoku Solver
 Try valid digits recursively.
