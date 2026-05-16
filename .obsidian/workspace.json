@@ -62,7 +62,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0323. Number of Connected Components in an Undirected Graph.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0051. N-Queens.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -77,7 +77,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "M - 0323. Number of Connected Components in an Undirected Graph"
+              "title": "H - 0051. N-Queens"
             }
           },
           {
@@ -105,7 +105,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 2
       },
       {
         "id": "d7f3ec8d668fd60e",
@@ -329,20 +329,21 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "ea065f98eb1a558c",
+  "active": "10f145fca32268e6",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0052. N-Queens II.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0323. Number of Connected Components in an Undirected Graph.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0051. N-Queens.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/H - 0051. N-Queens/file-20260515032850565.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/H - 0051. N-Queens/file-20260515032637161.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/H - 0051. N-Queens/file-20260515032432990.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/H - 0051. N-Queens/file-20260515032300230.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/H - 0051. N-Queens/file-20260515032243895.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/English.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0051. N-Queens.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/H - 0051. N-Queens/file-20260515030105285.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/H - 0051. N-Queens/file-20260515025635521.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/H - 0051. N-Queens",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/9 - Backtracking/Backtracking.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0052. N-Queens II.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0017. Letter Combinations of a Phone Number.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0077. Combinations.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0039. Combination Sum.md",
@@ -355,7 +356,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0200. Number of Islands.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Graphs.md",
     "DFS & Backtracking.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0323. Number of Connected Components in an Undirected Graph.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Graphs - Depth and Breath First Traversal.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Graphs - BFS.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0077. Combinations/file-20260513014056355.png",
@@ -371,7 +371,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0502. IPO.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0072. Edit Distance.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0881. Boats to Save People.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit/file-20260504024415671.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0072. Edit Distance",
     "1 - Raw Notes/8 - OpenClaw & Stocks/assets/Stock API",
