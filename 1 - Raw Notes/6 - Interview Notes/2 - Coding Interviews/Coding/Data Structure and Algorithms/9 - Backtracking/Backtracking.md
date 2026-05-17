@@ -145,6 +145,17 @@ Find combinations reaching target.
 - [[../../../LeetCode Questions/M - 0040. Combination Sum II|M - 0040. Combination Sum II]]
 - [[../../../LeetCode Questions/M - 0216. Combination Sum III|M - 0216. Combination Sum III]]
 
+#### Most accurate mental model
+think:
+
+| Problem         | What is a node?           | When save answer? |
+| --------------- | ------------------------- | ----------------- |
+| Subsets         | any partial subset        | every node        |
+| CombinationSum3 | partial valid combination | only leaf         |
+| Combination Sum | partial sum path          | only valid target |
+| Permutations    | ordering state            | leaf              |
+That distinction explains the traversal feeling much more accurately.
+
 ## N#-Queens
 Place queens safely.
 [[../../../LeetCode Questions/H - 0051. N-Queens|H - 0051. N-Queens]]
