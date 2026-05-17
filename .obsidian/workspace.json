@@ -142,7 +142,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0967. Numbers With Same Consecutive Differences.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0078. Subsets.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -157,7 +157,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "M - 0967. Numbers With Same Consecutive Differences"
+              "title": "M - 0078. Subsets"
             }
           }
         ]
@@ -355,9 +355,9 @@
   },
   "active": "a785d3f084295386",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0216. Combination Sum III.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0967. Numbers With Same Consecutive Differences.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/9 - Backtracking/Backtracking.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0967. Numbers With Same Consecutive Differences.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0216. Combination Sum III.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0040. Combination Sum II.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0039. Combination Sum.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0077. Combinations.md",
