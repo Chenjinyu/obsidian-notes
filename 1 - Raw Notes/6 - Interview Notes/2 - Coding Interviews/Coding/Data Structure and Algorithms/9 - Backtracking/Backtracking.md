@@ -181,7 +181,7 @@ Try every valid split.
 Each recursive call gets its own independent number/answer, and there is no choose or not choose term, it ONLY provides the possible candidates. 
 then to choose them and abandon them(invalid branches). so, it only has choose and abandon.
 
-- [[../../../LeetCode Questions/M - 0967. Numbers With Same Consecutive Differences|M - 0967. Numbers With Same Consecutive Differences]]
+- [[../../../LeetCode Questions/M - 0967. Numbers With Same Consecutive Differences|M - 0967. Numbers With Same Consecutive Differences]] this problem has a outer for loop, why
 - 
 
 # Mental model
