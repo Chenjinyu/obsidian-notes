@@ -6,6 +6,7 @@
       {
         "id": "747a4362a5f0c5be",
         "type": "tabs",
+        "dimension": 44.80968858131488,
         "children": [
           {
             "id": "f4777e1d588c2efa",
@@ -29,6 +30,37 @@
               },
               "icon": "lucide-file",
               "title": "E M - 2389. Longest Subsequence With Limited Sum"
+            }
+          }
+        ]
+      },
+      {
+        "id": "23c36f1cfa6aafee",
+        "type": "tabs",
+        "dimension": 55.19031141868512,
+        "children": [
+          {
+            "id": "8c23f8741fa863ca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/8 - Binary Search/Binary Search Pattern.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Binary Search Pattern"
             }
           }
         ]
@@ -88,7 +120,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 339.5
+    "width": 255.5
   },
   "right": {
     "id": "c375af2eeef2242a",
@@ -206,7 +238,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 441.5
+    "width": 380.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -224,8 +256,11 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "f4777e1d588c2efa",
+  "active": "8c23f8741fa863ca",
   "lastOpenFiles": [
+    "3 - Zettelkasten/B - Tags/Binary Search.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E M - 2389. Longest Subsequence With Limited Sum.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/8 - Binary Search/Binary Search Pattern.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0658. Find K Closest Elements.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E M - 0543. Diameter of Binary Tree.md",
     "3 - Zettelkasten/B - Tags/Multi-Resource BFS.md",
@@ -233,11 +268,8 @@
     "3 - Zettelkasten/B - Tags/Monotonic Decreasing Stack.md",
     "3 - Zettelkasten/B - Tags/Monotonic Decreasing Queue.md",
     "3 - Zettelkasten/B - Tags/Interview Algorithm Patterns.md",
-    "3 - Zettelkasten/B - Tags/Binary Search.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/8 - Binary Search/Binary Search Pattern.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0077. Combinations.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/9 - Backtracking/Backtracking.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E M - 2389. Longest Subsequence With Limited Sum.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0100. Same Tree.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0104. Maximum Depth of Binary Tree.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0112. Path Sum.md",

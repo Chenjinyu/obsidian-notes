@@ -111,7 +111,8 @@ def binary_search(arr, target):
         if arr[mid] > target:
             right = mid
         else:
-            left = mid + 1
+	        # why left is mid + 1, becuase here condition is: arr[mid] <= target. + 1 means the next elem may equals target. so, it incldues all.
+            left = mid + 1 
 
     return left
 ```
