@@ -153,7 +153,7 @@ Place queens safely.
 DFS through board. [[../../../LeetCode Questions/M - 0079. Word Search|M - 0079. Word Search]]
 
 ### Parentheses
-- [[Not Started - M - 0022. Generate Parentheses]]
+- [[M - 0022. Generate Parentheses]]
 - [[../../../LeetCode Questions/Not Stared M - 0047. Permutations II|Not Stared M - 0047. Permutations II]]
 
 ### Sudoku Solver
