@@ -14,7 +14,23 @@ Tags: [[../../../../../../3 - Zettelkasten/B - Tags/Binary Search]]
 # Binary Search
 
 
-## The MOST Important abo
+## The MOST Important thing to understand is:
+- Binary Search is NOT about "Finding Target"
+- Binary Search is about finding a BOUNDARY.
+
+### left-most = first valid position
+### right-most = last valid position.
+
+
+eg
+```python
+arr = [1,3,7,9,12,20]  
+target = 9
+
+# for left-most index pattern, we want to find the first elem >= target, find index.
+
+# for right-most index pattern, we want to find the first elem which is larget than target. first elem > target. find index 4
+```
 
 Binary search is a search algorithm that runs in O(logn) in the worst case, where nn is the size of the search space
 
