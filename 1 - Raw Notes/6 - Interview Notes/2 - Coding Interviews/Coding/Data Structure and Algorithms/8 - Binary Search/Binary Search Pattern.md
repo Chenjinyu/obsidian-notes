@@ -6,7 +6,7 @@ sr-ease: 2.5
 
 Date: 2026-04-16
 Course:
-Tags: [[Binary Search]] 
+Tags: [[../../../../../../3 - Zettelkasten/B - Tags/Binary Search]] 
 
 ## Reference LeetCode Problem
 - [[../../../LeetCode Questions/M - 0658. Find K Closest Elements|M - 0658. Find K Closest Elements]]

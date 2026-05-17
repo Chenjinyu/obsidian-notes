@@ -6,7 +6,7 @@ sr-ease: 2.5
 
 Date: 2026-03-29
 Course:
-Tags: [[../../../Coding/Data Structure and Algorithms/4 - Stacks & Queues/Monotonic(单调性)|Monotonic(单调性)]] [[../../../../../../Monotonic Decreasing Stack|Monotonic Decreasing Stack]]
+Tags: [[../../../Coding/Data Structure and Algorithms/4 - Stacks & Queues/Monotonic(单调性)|Monotonic(单调性)]] [[../../../../../../3 - Zettelkasten/B - Tags/Monotonic Decreasing Stack|Monotonic Decreasing Stack]]
 
 # Content
 
