@@ -1,5 +1,5 @@
 ---
-sr-due: 2026-05-16
+sr-due: 2026-06-27
 sr-interval: 1
 sr-ease: 2.5
 ---
@@ -8,7 +8,7 @@ Date: 2026-03-24
 Course:
 Tags: [[Binary Trees - DFS]] [[Interview Algorithm Patterns]]
 
-
+#review/daily #review/3d 
 # Reviews Knowledges Points
 ```text
 04/04/2026
@@ -24,6 +24,7 @@ In order to improve the memory,
 # Review dates
 - 04/04/2026
 - 04/05/2026
+- 05/17/2026
 # Traverse binary trees
 Tree traversal is how we access the elements of a tree, and thus is mandatory for solving tree problems.
 We start at the `root` and traverse by using the child pointers `.left` and `.right`. When traversing linked lists, we usually do it iteratively. With binary trees, we usually do it recursively.
