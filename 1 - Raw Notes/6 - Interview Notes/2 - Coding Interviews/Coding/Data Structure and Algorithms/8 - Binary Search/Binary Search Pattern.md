@@ -19,8 +19,25 @@ Tags: [[../../../../../../3 - Zettelkasten/B - Tags/Binary Search]]
 - Binary Search is about finding a BOUNDARY.
 
 ### left-most = first valid position
+the left most pattern as below, is to get the left most index which closest to target. 
+```python
+if arr[mid] >= target: 
+```
 ### right-most = last valid position.
 
+is to get the right most index which just bigger than target, so the index is the most right index in a valid window.
+```python
+if arr[mid] > target: 
+	right = mid
+```
+
+below pattern is the same logic, because in the else branch, is `arr[mid] > target`, and right = mid
+```python
+# or 
+if arr[mid] <= target:
+else:
+	right = mid
+```
 
 eg
 ```python
