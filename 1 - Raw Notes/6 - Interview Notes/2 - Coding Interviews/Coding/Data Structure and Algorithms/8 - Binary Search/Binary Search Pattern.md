@@ -14,6 +14,8 @@ Tags: [[../../../../../../3 - Zettelkasten/B - Tags/Binary Search]]
 # Binary Search
 
 
+## The MOST Important abo
+
 Binary search is a search algorithm that runs in O(logn) in the worst case, where nn is the size of the search space
 
 ### Find out the match within closed interval. [left, right] both ends included.
@@ -75,7 +77,7 @@ def binary_search(arr, target):
     right = len(arr)
     while left < right:
         mid = (left + right) // 2
-        if arr[mid] >= target:
+        if arr[mid] >= target: # here is the find the first elem whic >= target
             right = mid
         else:
             left = mid + 1
