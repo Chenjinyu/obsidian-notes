@@ -6,7 +6,7 @@
       {
         "id": "747a4362a5f0c5be",
         "type": "tabs",
-        "dimension": 39.47972456006121,
+        "dimension": 37.30984787830264,
         "children": [
           {
             "id": "f4777e1d588c2efa",
@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1870. Minimum Speed to Arrive on Time.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/8 - Binary Search/Binary Search Pattern.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -29,7 +29,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "M - 1870. Minimum Speed to Arrive on Time"
+              "title": "Binary Search Pattern"
             }
           },
           {
@@ -56,13 +56,12 @@
               "title": "Shortest Path Algorithms - Dijkstra and Bellman-Ford"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "23c36f1cfa6aafee",
         "type": "tabs",
-        "dimension": 60.520275439938786,
+        "dimension": 62.69015212169736,
         "children": [
           {
             "id": "8c23f8741fa863ca",
@@ -70,7 +69,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0875. Koko Eating Bananas.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0111. Minimum Depth of Binary Tree.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -85,7 +84,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "M - 0875. Koko Eating Bananas"
+              "title": "E - 0111. Minimum Depth of Binary Tree"
             }
           }
         ]
@@ -145,7 +144,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 233.5
+    "width": 290.5
   },
   "right": {
     "id": "c375af2eeef2242a",
@@ -283,11 +282,17 @@
   },
   "active": "8c23f8741fa863ca",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1631. Path With Minimum Effort.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Shortest Path Algorithms - Dijkstra and Bellman-Ford.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1870. Minimum Speed to Arrive on Time.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2342. Max Sum of a Pair With Equal Sum of Digits.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2300. Successful Pairs of Spells and Potions.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0875. Koko Eating Bananas.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/8 - Binary Search/Binary Search Pattern.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1870. Minimum Speed to Arrive on Time.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Trees/Binary Trees - BFS.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Trees/Binary Search Trees(BST).md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Trees/Binary Trees - DFS - Tips for Tree Traversal with Recursive.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Trees/Binary Trees - Types.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Shortest Path Algorithms - Dijkstra and Bellman-Ford.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1631. Path With Minimum Effort.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2342. Max Sum of a Pair With Equal Sum of Digits.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/6 - Heaps/Heaps.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E M - 2389. Longest Subsequence With Limited Sum.md",
     "3 - Zettelkasten/B - Tags/Binary Search.md",
@@ -303,12 +308,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0100. Same Tree.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0104. Maximum Depth of Binary Tree.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0112. Path Sum.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Trees/Binary Trees - DFS.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0111. Minimum Depth of Binary Tree.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/3 - Linked Lists/Fast and slow pointers.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0967. Numbers With Same Consecutive Differences.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0039. Combination Sum.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0047. Permutations II.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0047. Permutations II/file-20260517033740355.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0047. Permutations II/file-20260517032750257.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0047. Permutations II",
