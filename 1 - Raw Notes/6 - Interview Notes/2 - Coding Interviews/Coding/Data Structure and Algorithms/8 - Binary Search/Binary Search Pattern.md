@@ -15,17 +15,32 @@ Tags: [[../../../../../../3 - Zettelkasten/B - Tags/Binary Search]]
 
 # Binary Search
 
-
 ## The MOST Important thing to understand is:
 - Binary Search is NOT about "Finding Target"
 - Binary Search is about finding a BOUNDARY.
 
-### left-most = first valid position
+### left-most = first valid position ( is to find the minimum valid value under the condition)
 the left most pattern as below, is to get the left most index which closest to target. 
 ```python
 if arr[mid] >= target: 
+	right = mid
 ```
-### right-most = last valid position.
+
+```python
+def binary_search(arr, target):
+    left = 0
+    right = len(arr)
+    while left < right:
+        mid = (left + right) // 2
+        if arr[mid] >= target: # here is the find the first elem whic >= target
+            right = mid
+        else:
+            left = mid + 1
+
+    return left
+```
+
+### right-most = last valid position. (is to find the maximum valid value under the condition)
 
 is to get the right most index which just bigger than target, so the index is the most right index in a valid window.
 ```python
