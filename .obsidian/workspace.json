@@ -6,7 +6,7 @@
       {
         "id": "747a4362a5f0c5be",
         "type": "tabs",
-        "dimension": 47.016129032258064,
+        "dimension": 36.693548387096776,
         "children": [
           {
             "id": "f4777e1d588c2efa",
@@ -62,7 +62,7 @@
       {
         "id": "23c36f1cfa6aafee",
         "type": "tabs",
-        "dimension": 52.98387096774193,
+        "dimension": 63.306451612903224,
         "children": [
           {
             "id": "8c23f8741fa863ca",
@@ -281,10 +281,10 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "95284f370ec16ddf",
+  "active": "8c23f8741fa863ca",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1631. Path With Minimum Effort.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Shortest Path Algorithms - Dijkstra and Bellman-Ford.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1631. Path With Minimum Effort.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1870. Minimum Speed to Arrive on Time.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2342. Max Sum of a Pair With Equal Sum of Digits.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/8 - Binary Search/Binary Search Pattern.md",
