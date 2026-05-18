@@ -19,6 +19,11 @@ Tags: [[../../../../../../3 - Zettelkasten/B - Tags/Binary Search]]
 - Binary Search is NOT about "Finding Target"
 - Binary Search is about finding a BOUNDARY.
 
+## The mid <= target or mid >= target
+the condition here is depends on the problem we want to resolve. 
+if can be mid <= target or mid >= target. for this conditions are to find the left most / minimum valid value. 
+compare below pattern with [[../../../LeetCode Questions/M - 1283. Find the Smallest Divisor Given a threshold|M - 1283. Find the Smallest Divisor Given a threshold]]
+
 ### left-most = first valid position ( is to find the minimum valid value under the condition)
 the left most pattern as below, is to get the left most index which closest to target. 
 ```python
@@ -48,6 +53,20 @@ if arr[mid] > target:
 	right = mid
 ```
 
+```python
+def binary_search(arr, target):
+    left = 0
+    right = len(arr)
+    while left < right:
+        mid = (left + right) // 2
+        if arr[mid] > target:
+            right = mid
+        else:
+	        # why left is mid + 1, becuase here condition is: arr[mid] <= target. + 1 means the next elem may equals target. so, it incldues all.
+            left = mid + 1 
+
+    return left
+```
 below pattern is the same logic, because in the else branch, is `arr[mid] > target`, and right = mid
 ```python
 # or 
