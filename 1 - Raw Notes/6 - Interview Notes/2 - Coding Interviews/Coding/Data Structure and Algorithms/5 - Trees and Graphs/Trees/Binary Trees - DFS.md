@@ -233,6 +233,60 @@ def preorder_reverse_to_postorder_dfs(root):
 ### Solving Problems with DFS
 
 ## Breadth-First Search (BFS)
+### pattern with graph, Dijkstra uses this pattern. adjacency list
+```python
+from collections import deque
+
+def bfs(graph, start, target):
+    queue = deque([start])
+    visited = set()
+    visited.add(start)
+
+    while queue:
+        node = queue.popleft()
+        
+        if node == target:
+            return True
+        
+        for neighbor in graph[node]:
+            if neighbor not in visited:
+                visited.add(neighbor)
+                queue.append(neighbor)
+    
+    return False
+```
+
+### Pattern with matrix, 2D array, Multi-Source, etc. (more common in LeetCode). 
+```python
+def bfs(grid, start, target):
+    rows, cols = len(grid), len(grid[0])
+    directions = [(1,0), (-1,0), (0,1), (0,-1)]
+    
+    queue = deque([start])
+    visited = set()
+    visited.add(start)
+    steps = 0
+
+    while queue:
+        for _ in range(len(queue)):  # level by level
+            r, c = queue.popleft()
+            
+            if (r, c) == target:
+                return steps
+            
+            for dr, dc in directions:
+                nr, nc = r + dr, c + dc
+                if (
+                    0 <= nr < rows
+                    and 0 <= nc < cols
+                    and (nr, nc) not in visited
+                ):
+                    visited.add((nr, nc))
+                    queue.append((nr, nc))
+        steps += 1
+    
+    return -1
+```
 # Note
 
 
