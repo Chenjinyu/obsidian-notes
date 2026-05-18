@@ -6,7 +6,7 @@
       {
         "id": "747a4362a5f0c5be",
         "type": "tabs",
-        "dimension": 56.048387096774185,
+        "dimension": 47.016129032258064,
         "children": [
           {
             "id": "f4777e1d588c2efa",
@@ -31,21 +31,14 @@
               "icon": "lucide-file",
               "title": "M - 1870. Minimum Speed to Arrive on Time"
             }
-          }
-        ]
-      },
-      {
-        "id": "23c36f1cfa6aafee",
-        "type": "tabs",
-        "dimension": 43.95161290322581,
-        "children": [
+          },
           {
-            "id": "8c23f8741fa863ca",
+            "id": "95284f370ec16ddf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/8 - Binary Search/Binary Search Pattern.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Shortest Path Algorithms - Dijkstra and Bellman-Ford.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -60,7 +53,39 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Binary Search Pattern"
+              "title": "Shortest Path Algorithms - Dijkstra and Bellman-Ford"
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "23c36f1cfa6aafee",
+        "type": "tabs",
+        "dimension": 52.98387096774193,
+        "children": [
+          {
+            "id": "8c23f8741fa863ca",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1631. Path With Minimum Effort.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "M - 1631. Path With Minimum Effort"
             }
           }
         ]
@@ -256,12 +281,15 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "f4777e1d588c2efa",
+  "active": "95284f370ec16ddf",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1631. Path With Minimum Effort.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Shortest Path Algorithms - Dijkstra and Bellman-Ford.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1870. Minimum Speed to Arrive on Time.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2342. Max Sum of a Pair With Equal Sum of Digits.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/8 - Binary Search/Binary Search Pattern.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/6 - Heaps/Heaps.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E M - 2389. Longest Subsequence With Limited Sum.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/8 - Binary Search/Binary Search Pattern.md",
     "3 - Zettelkasten/B - Tags/Binary Search.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0658. Find K Closest Elements.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E M - 0543. Diameter of Binary Tree.md",
@@ -281,9 +309,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0967. Numbers With Same Consecutive Differences.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0039. Combination Sum.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0047. Permutations II.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0022. Generate Parentheses.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0040. Combination Sum II.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Graphs - Depth and Breath First Traversal.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0047. Permutations II/file-20260517033740355.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0047. Permutations II/file-20260517032750257.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0047. Permutations II",

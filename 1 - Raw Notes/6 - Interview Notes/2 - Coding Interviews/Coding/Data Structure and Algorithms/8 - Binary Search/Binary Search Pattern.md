@@ -1,5 +1,5 @@
 ---
-sr-due: 2026-05-16
+sr-due: 2026-05-24
 sr-interval: 1
 sr-ease: 2.5
 ---
@@ -7,6 +7,8 @@ sr-ease: 2.5
 Date: 2026-04-16
 Course:
 Tags: [[../../../../../../3 - Zettelkasten/B - Tags/Binary Search]] 
+
+#review/daily #review/3d 
 
 ## Reference LeetCode Problem
 - [[../../../LeetCode Questions/M - 0658. Find K Closest Elements|M - 0658. Find K Closest Elements]]

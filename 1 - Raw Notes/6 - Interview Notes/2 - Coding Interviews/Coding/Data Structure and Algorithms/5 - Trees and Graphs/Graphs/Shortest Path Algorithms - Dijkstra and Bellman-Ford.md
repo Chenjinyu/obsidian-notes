@@ -99,7 +99,7 @@ def dijkstra_simple_example(graph, start, end) -> List:
 	# assign inf to all vertices
 	shortest_cost = {city: float("inf") for city in graph}
 	shortest_cost[start] = 0
-	visted = set()
+	visted = set() # the start point have not started to visit.
 	
 	while pq:
 		# heappop costs O(log V) to reorder the heap, this happens at most V times(once per vertex), then total under while is V * log V
