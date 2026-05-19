@@ -1,5 +1,5 @@
 ---
-sr-due: 2026-05-18
+sr-due: 2026-06-01
 sr-interval: 1
 sr-ease: 2.5
 ---
@@ -157,7 +157,7 @@ think:
 | Permutations    | ordering state            | leaf              |
 That distinction explains the traversal feeling much more accurately.
 
-## N#-Queens
+### N-Queens
 Place queens safely.
 [[../../../LeetCode Questions/H - 0051. N-Queens|H - 0051. N-Queens]]
 [[../../../LeetCode Questions/H - 0052. N-Queens II|H - 0052. N-Queens II]]
