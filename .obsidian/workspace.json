@@ -6,7 +6,7 @@
       {
         "id": "747a4362a5f0c5be",
         "type": "tabs",
-        "dimension": 66.15146831530139,
+        "dimension": 57.174556213017745,
         "children": [
           {
             "id": "4383aba8faee9a23",
@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0051. N-Queens.md",
+                "file": "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/Harness Engineering Setup.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -29,7 +29,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "H - 0051. N-Queens"
+              "title": "Harness Engineering Setup"
             }
           },
           {
@@ -61,7 +61,7 @@
       {
         "id": "70901e92b9cb0467",
         "type": "tabs",
-        "dimension": 33.84853168469861,
+        "dimension": 42.82544378698225,
         "children": [
           {
             "id": "eb6b653b308e4da6",
@@ -169,7 +169,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 218.5
+    "width": 288.5
   },
   "right": {
     "id": "c375af2eeef2242a",
@@ -307,8 +307,10 @@
   },
   "active": "4383aba8faee9a23",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0078. Subsets.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0051. N-Queens.md",
+    "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/Harness Engineering Setup.md",
+    "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0078. Subsets.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0077. Combinations.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/9 - Backtracking/Backtracking.md",
     "3 - Zettelkasten/B - Tags/DFS & Backtracking.md",
@@ -335,7 +337,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1631. Path With Minimum Effort.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2342. Max Sum of a Pair With Equal Sum of Digits.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/6 - Heaps/Heaps.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E M - 2389. Longest Subsequence With Limited Sum.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0047. Permutations II/file-20260517033740355.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0047. Permutations II/file-20260517032750257.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0047. Permutations II",
@@ -352,7 +353,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/9 - Backtracking/assets/Backtracking",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/9 - Backtracking/assets",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0072. Edit Distance",
     "i changed the canvas name - check sync to git.canvas",
     "Untitled.canvas",
     "Untitled 5.canvas",
