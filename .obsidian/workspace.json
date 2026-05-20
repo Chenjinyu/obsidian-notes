@@ -6,7 +6,7 @@
       {
         "id": "747a4362a5f0c5be",
         "type": "tabs",
-        "dimension": 57.174556213017745,
+        "dimension": 57.17455621301775,
         "children": [
           {
             "id": "4383aba8faee9a23",
@@ -61,7 +61,7 @@
       {
         "id": "70901e92b9cb0467",
         "type": "tabs",
-        "dimension": 42.82544378698225,
+        "dimension": 42.825443786982255,
         "children": [
           {
             "id": "eb6b653b308e4da6",
@@ -305,7 +305,7 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "4383aba8faee9a23",
+  "active": "2bac451f8a1b6d29",
   "lastOpenFiles": [
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0051. N-Queens.md",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/Harness Engineering Setup.md",
