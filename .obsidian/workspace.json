@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/7 - Greedy and Dynamic Programming/2. Dynamic Programming (DP).md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1143. Longest Common Subsequence.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -29,7 +29,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2. Dynamic Programming (DP)"
+              "title": "M - 1143. Longest Common Subsequence"
             }
           },
           {
@@ -305,10 +305,14 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "718c803f55bef46b",
+  "active": "4383aba8faee9a23",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0046. Permutations.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2294. Partition Array Such That Maximum Difference Is K.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/7 - Greedy and Dynamic Programming/Greedy vs Dynamic Programming (DP).md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2126. Destroying Asteroids.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/7 - Greedy and Dynamic Programming/2. Dynamic Programming (DP).md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0079. Word Search.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0046. Permutations.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0077. Combinations.md",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/Harness Engineering Setup.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0051. N-Queens.md",
@@ -333,10 +337,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/8 - Binary Search/Binary Search Pattern.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1283. Find the Smallest Divisor Given a threshold.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2300. Successful Pairs of Spells and Potions.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0875. Koko Eating Bananas.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1870. Minimum Speed to Arrive on Time.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1631. Path With Minimum Effort.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2342. Max Sum of a Pair With Equal Sum of Digits.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0047. Permutations II/file-20260517033740355.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0047. Permutations II/file-20260517032750257.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0047. Permutations II",

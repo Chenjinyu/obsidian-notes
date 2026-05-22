@@ -1,5 +1,5 @@
 ---
-sr-due: 2026-05-17
+sr-due: 2026-06-07
 sr-interval: 1
 sr-ease: 2.5
 ---
@@ -8,6 +8,10 @@ Date: 2026-04-17
 Course:
 Tags: 
 #review #review/3d #review/15d 
+
+# Review dates
+- 05/22/2026
+- 
 # 💥 Key takeaway from code
 - Greedy = **one path, no correction**, **make the locally optimal choice at each step and never look back**
 - DP = **many paths, keeps best**
