@@ -6,7 +6,6 @@
       {
         "id": "747a4362a5f0c5be",
         "type": "tabs",
-        "dimension": 55.917159763313606,
         "children": [
           {
             "id": "4383aba8faee9a23",
@@ -14,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1143. Longest Common Subsequence.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -29,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "M - 1143. Longest Common Subsequence"
+              "title": "M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit"
             }
           },
           {
@@ -57,62 +56,6 @@
             }
           }
         ]
-      },
-      {
-        "id": "70901e92b9cb0467",
-        "type": "tabs",
-        "dimension": 44.08284023668639,
-        "children": [
-          {
-            "id": "eb6b653b308e4da6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0046. Permutations.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "M - 0046. Permutations"
-            }
-          },
-          {
-            "id": "718c803f55bef46b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0079. Word Search.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "M - 0079. Word Search"
-            }
-          }
-        ],
-        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -307,6 +250,7 @@
   },
   "active": "4383aba8faee9a23",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1143. Longest Common Subsequence.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2294. Partition Array Such That Maximum Difference Is K.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/7 - Greedy and Dynamic Programming/Greedy vs Dynamic Programming (DP).md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2126. Destroying Asteroids.md",
@@ -323,7 +267,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0078. Subsets/file-20260519001524497.png",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0078. Subsets",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0410. Split Array Largest Sum.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1143. Longest Common Subsequence.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1143. Longest Common Subsequence",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Trees/Binary Trees - DFS.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0111. Minimum Depth of Binary Tree.md",
