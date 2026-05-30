@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiAlignHorizontalJustifyStart",
       "💰",
       "LiLayoutTemplate",
       "🧑‍💻",
-      "LiFlaskConical",
-      "🖐"
+      "LiFlaskConical"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -48,5 +48,6 @@
   "1 - Raw Notes/6 - Interview Notes/Review Dashboard.md": "🖐",
   "3 - Zettelkasten/A - Templates/LeetCode Template.md": "LiLayoutTemplate",
   "3 - Zettelkasten/A - Templates/Academic Note Template.md": "LiLayoutTemplate",
-  "1 - Raw Notes/8 - OpenClaw & Stocks": "💰"
+  "1 - Raw Notes/8 - OpenClaw & Stocks": "LiAlignHorizontalJustifyStart",
+  "1 - Raw Notes/9 - Stocks": "💰"
 }
