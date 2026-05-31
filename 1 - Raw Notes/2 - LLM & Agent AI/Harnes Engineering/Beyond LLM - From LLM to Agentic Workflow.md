@@ -1,6 +1,6 @@
 
+How to build an AI agent, like chat agent / eco-system agent
 # Reference Links
-
 ### Stanford CS230 | Autumn 2025 | Lecture 8: Agents, Prompts, and RAG
 Original Stanford Course on Youtube: https://www.youtube.com/watch?v=k1njvbBmfsw
 
@@ -88,4 +88,6 @@ Because AI easy to Fuzzy, so bring the AppealFeature
 
 ![800](assets/Beyond%20LLM%20-%20From%20LLM%20to%20Agentic%20Workflow/file-20260531022902427.png)
 
-![800](assets/Beyond%20LLM%20-%20From%20LLM%20to%20Agentic%20Workflow/file-20260531022925795.png)
+![800](assets/Beyond%20LLM%20-%20From%20LLM%20to%20Agentic%20Workflow/file-20260531022948982.png)
+
+![800](assets/Beyond%20LLM%20-%20From%20LLM%20to%20Agentic%20Workflow/file-20260531023038413.png)
