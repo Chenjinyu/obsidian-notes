@@ -24,3 +24,37 @@ Chinese version summary of the standard course: https://www.youtube.com/watch?v=
 ### 3. Centaurs vs Cyborgs
 ![800](assets/Beyond%20LLM/file-20260531015823762.png)
 ![800](assets/Beyond%20LLM/file-20260531015915433.png)
+
+![](assets/Beyond%20LLM/file-20260531020011350.png)
+
+![800](assets/Beyond%20LLM/file-20260531020049415.png)
+
+Chaining, not only easy to debug one by one, and it improves the observability. 
+
+## Fine-Tuning. 
+![800](assets/Beyond%20LLM/file-20260531020232740.png)
+![800](assets/Beyond%20LLM/file-20260531020257655.png)
+
+## RAG
+![800](assets/Beyond%20LLM/file-20260531020340000.png)
+
+RAG chunk better choice: 
+![800](assets/Beyond%20LLM/file-20260531020606830.png)
+
+Long Context, cannot resolve the problem which RAG can provide:
+1. Latency, every query needs to re-read the entire doc
+2. RAG Index, prepare the answer. 
+	1. could improve the accuracy
+	2. improve query efficiency.
+	3. Easy to keep the content update. 
+
+![800](assets/Beyond%20LLM/file-20260531020916727.png)
+
+## Agent workflow, created by Andrew Ng. 
+Agent workflow = prompt + tools + 
+
+![800](assets/Beyond%20LLM/file-20260531021105810.png)
+![800](assets/Beyond%20LLM/file-20260531021234538.png)
+Because AI easy to Fuzzy, so bring the AppealFeature
+![](assets/Beyond%20LLM/file-20260531021305621.png)
+
