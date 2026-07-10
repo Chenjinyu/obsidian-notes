@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/2 - LLM & Agent AI/Technical Terms.md",
+                "file": "1 - Raw Notes/10 - JC Courses/Ch01.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Technical Terms"
+              "title": "Ch01"
             }
           },
           {
@@ -248,8 +248,11 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "2bac451f8a1b6d29",
+  "active": "4383aba8faee9a23",
   "lastOpenFiles": [
+    "1 - Raw Notes/2 - LLM & Agent AI/Technical Terms.md",
+    "1 - Raw Notes/10 - JC Courses/Ch01.md",
+    "1 - Raw Notes/10 - JC Courses",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/Beyond LLM - From LLM to Agentic Workflow.md",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow/file-20260531023038413.png",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow/file-20260531022948982.png",
@@ -265,7 +268,6 @@
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/Harness Engineering Setup.md",
-    "1 - Raw Notes/2 - LLM & Agent AI/Technical Terms.md",
     "1 - Raw Notes/100 - Notes/Some Temp Notes.md",
     "1 - Raw Notes/9 - Stocks",
     "1 - Raw Notes/100 - Notes/Note what you have done, what are the next things to do.md",
@@ -294,7 +296,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Trees/Binary Trees - DFS.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0047. Permutations II",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/H - 0051. N-Queens",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0039. Combination Sum",
     "i changed the canvas name - check sync to git.canvas",
     "Untitled.canvas",
     "Untitled 5.canvas",
