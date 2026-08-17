@@ -32,6 +32,18 @@
             }
           },
           {
+            "id": "41129a343005946a",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.13.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.13.7"
+            }
+          },
+          {
             "id": "327297775244cd53",
             "type": "leaf",
             "state": {
@@ -55,7 +67,8 @@
               "title": "DFS & Backtracking"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -75,7 +88,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -248,7 +263,7 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "4383aba8faee9a23",
+  "active": "2bac451f8a1b6d29",
   "lastOpenFiles": [
     "1 - Raw Notes/2 - LLM & Agent AI/Technical Terms.md",
     "1 - Raw Notes/10 - JC Courses/Ch01.md",
