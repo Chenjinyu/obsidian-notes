@@ -30,42 +30,6 @@
               "icon": "lucide-file",
               "title": "Ch01"
             }
-          },
-          {
-            "id": "41129a343005946a",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.13.7"
-              },
-              "icon": "lucide-book-up",
-              "title": "Release Notes 1.13.7"
-            }
-          },
-          {
-            "id": "327297775244cd53",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 - Zettelkasten/B - Tags/DFS & Backtracking.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": true,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "DFS & Backtracking"
-            }
           }
         ]
       }
@@ -264,8 +228,9 @@
   },
   "active": "4383aba8faee9a23",
   "lastOpenFiles": [
-    "1 - Raw Notes/2 - LLM & Agent AI/Technical Terms.md",
+    "3 - Zettelkasten/B - Tags/DFS & Backtracking.md",
     "1 - Raw Notes/10 - JC Courses/Ch01.md",
+    "1 - Raw Notes/2 - LLM & Agent AI/Technical Terms.md",
     "1 - Raw Notes/10 - JC Courses",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/Beyond LLM - From LLM to Agentic Workflow.md",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow/file-20260531023038413.png",
@@ -303,7 +268,6 @@
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0078. Subsets.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/9 - Backtracking/Backtracking.md",
-    "3 - Zettelkasten/B - Tags/DFS & Backtracking.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0078. Subsets",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0410. Split Array Largest Sum.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1143. Longest Common Subsequence",
