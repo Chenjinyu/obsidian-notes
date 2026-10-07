@@ -65,6 +65,37 @@ FedSSO decides whether that access can be granted
 ### The Authentication & Authorization Flow
 
 ```text
+                            OAuth 2.0 / FedSSO
+                                      │
+          ┌───────────────────────────┴──────────────────────────┐
+          │                                                      │
+     USER LOGIN                                            APP-TO-APP
+          │                                                      │
+ Authorization Code                                         Client Credentials
+          │                                                      │
+/authorization.oauth2 (scope=openid order.read)                  │
+          │                                                      │
+    user logs in                                                 │
+          │                                                      │
+          ▼                                                      ▼
+       Authorization code                                  client_id + secret
+          │                                                       │
+          └────────────────────────────┬──────────────────────────┘
+                                       ▼
+                           /token.oauth2  -> POST /as/token.auth2, grant_type=client_credentials&client_id=x&client_secret=x&scope=employe.read (ONLY when request authorization, need to provide scope)
+                                       │
+                                  Access Token (bearer token)
+                                       │
+                                       ▼
+                                      API (add bearer token in the API header, and do optional check with introsepct.auth2)
+                                       │
+                               optionally checks
+                                       │
+                                       ▼
+                              /introspect.oauth2
+```
+
+```text
                 REQUESTING TOKEN
                 =================
 
@@ -113,34 +144,107 @@ Authorization Code                             │
 ```
 
 ```text
-                            OAuth 2.0 / FedSSO
-                                      │
-          ┌───────────────────────────┴──────────────────────────┐
-          │                                                      │
-     USER LOGIN                                            APP-TO-APP
-          │                                                      │
- Authorization Code                                         Client Credentials
-          │                                                      │
-/authorization.oauth2 (scope=openid order.read)                  │
-          │                                                      │
-    user logs in                                                 │
-          │                                                      │
-          ▼                                                      ▼
-       Authorization code                                  client_id + secret
-          │                                                       │
-          └────────────────────────────┬──────────────────────────┘
-                                       ▼
-                           /token.oauth2  -> POST /as/token.auth2, grant_type=client_credentials&client_id=x&client_secret=x&scope=employe.read (ONLY when request authorization, need to provide scope)
-                                       │
-                                  Access Token (bearer token)
-                                       │
-                                       ▼
-                                      API (add bearer token in the API header, and do optional check with introsepct.auth2)
-                                       │
-                               optionally checks
-                                       │
-                                       ▼
-                              /introspect.oauth2
+                  Client
+                     │
+                     │ POST /api/orders
+                     │ Authorization: Bearer <access_token>
+                     ▼
+     ┌───────────────────────────────┐
+     │         Python API            │
+     │                               │
+     │  1. Is token present?         │
+     │  2. Verify signature          │ -> Was it really issued/signed by FedSSO?
+     │  3. Check exp                 │ -> Has it expired?
+     │  4. Check iss                 │ -> Did it come from the expected FedSSO?
+     │  5. Check aud (if applicable) │ -> Was it intended for this API?
+     │  6. Check required scope      │ -> is this operation permitted?
+     │                               │
+     │        All valid?             │
+     │           │                   │
+     │          YES                  │
+     │           ▼                   │
+     │    Execute API logic          │
+     └───────────────────────────────┘
+```
+
+```python
+from fastapi import FastAPI, Header, HTTPException
+import jwt
+
+app = FastAPI()
+
+PUBLIC_KEY = """-----BEGIN PUBLIC KEY-----
+...
+-----END PUBLIC KEY-----"""
+
+EXPECTED_ISSUER = "https://fedsso.example.com"
+EXPECTED_AUDIENCE = "order-api"
+
+
+def validate_access_token(
+    authorization: str,
+    required_scope: str
+):
+    # 1. Check Authorization header
+    if not authorization or not authorization.startswith("Bearer "):
+        raise HTTPException(
+            status_code=401,
+            detail="Missing Bearer token"
+        )
+
+    token = authorization.removeprefix("Bearer ").strip()
+
+    try:
+        # 2. Validate JWT
+        payload = jwt.decode(
+            token,
+            PUBLIC_KEY,
+            algorithms=["RS256"],
+            issuer=EXPECTED_ISSUER,
+            audience=EXPECTED_AUDIENCE
+        )
+    except jwt.ExpiredSignatureError:
+        raise HTTPException(
+            status_code=401,
+            detail="Token expired"
+        )
+    except jwt.InvalidTokenError:
+        raise HTTPException(
+            status_code=401,
+            detail="Invalid token"
+        )
+    # 3. Check authorization scope
+    scopes = payload.get("scope", "")
+
+    # Some providers return a string:
+    # "order.read order.write"
+    if isinstance(scopes, str):
+        scopes = scopes.split()
+
+    if required_scope not in scopes:
+        raise HTTPException(
+            status_code=403,
+            detail=f"Missing required scope: {required_scope}"
+        )
+    return payload
+
+
+@app.post("/orders")
+def create_order(
+    order: dict,
+    authorization: str = Header(None)
+):
+    claims = validate_access_token(
+        authorization,
+        required_scope="order.write"
+    )
+    # Token has passed authentication + authorization.
+    # Now execute business logic.
+    return {
+        "message": "Order created",
+        "order": order,
+        "subject": claims.get("sub")
+    }
 ```
 
 [1] User opens app

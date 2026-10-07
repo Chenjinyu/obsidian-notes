@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/3 - Technologies/Access Control/AuthN & AuthZ.md",
+                "file": "1 - Raw Notes/3 - Technologies/Access Control/Untitled.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "AuthN & AuthZ"
+              "title": "Untitled"
             }
           }
         ]
@@ -228,9 +228,10 @@
   },
   "active": "4383aba8faee9a23",
   "lastOpenFiles": [
+    "1 - Raw Notes/3 - Technologies/Access Control/AuthN & AuthZ.md",
+    "1 - Raw Notes/3 - Technologies/Access Control/Untitled.md",
     "1 - Raw Notes/3 - Technologies/Access Control/Agent-to-app Authorization.md",
     "1 - Raw Notes/3 - Technologies/Access Control/The AuthN & AuthZ Code Workflow for M2M and User.md",
-    "1 - Raw Notes/3 - Technologies/Access Control/AuthN & AuthZ.md",
     "1 - Raw Notes/3 - Technologies/Access Control",
     "1 - Raw Notes/10 - JC Courses/Ch01.md",
     "3 - Zettelkasten/B - Tags/DFS & Backtracking.md",
@@ -270,7 +271,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0077. Combinations.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0051. N-Queens.md",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0078. Subsets.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0078. Subsets",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1143. Longest Common Subsequence",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0047. Permutations II",
