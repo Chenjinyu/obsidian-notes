@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/10 - JC Courses/Ch01.md",
+                "file": "1 - Raw Notes/3 - Technologies/Access Control/AuthN&Z.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Ch01"
+              "title": "AuthN&Z"
             }
           }
         ]
@@ -226,10 +226,11 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "2bac451f8a1b6d29",
+  "active": "1a71e9f0de9191ea",
   "lastOpenFiles": [
-    "3 - Zettelkasten/B - Tags/DFS & Backtracking.md",
+    "1 - Raw Notes/3 - Technologies/Access Control",
     "1 - Raw Notes/10 - JC Courses/Ch01.md",
+    "3 - Zettelkasten/B - Tags/DFS & Backtracking.md",
     "1 - Raw Notes/2 - LLM & Agent AI/Technical Terms.md",
     "1 - Raw Notes/10 - JC Courses",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/Beyond LLM - From LLM to Agentic Workflow.md",
@@ -271,7 +272,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0078. Subsets",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0410. Split Array Largest Sum.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1143. Longest Common Subsequence",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Trees/Binary Trees - DFS.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0047. Permutations II",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/H - 0051. N-Queens",
     "i changed the canvas name - check sync to git.canvas",

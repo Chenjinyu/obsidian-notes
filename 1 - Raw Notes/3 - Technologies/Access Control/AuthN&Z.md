@@ -1,6 +1,6 @@
 Date: 2025-10-26
 Course:
-Tags: [[Terminology]] [[Base Knowledge]]
+Tags: [[../../../3 - Zettelkasten/B - Tags/Terminology]] [[../../../3 - Zettelkasten/B - Tags/Base Knowledge]]
 Revisit: <% tp.date.now("YYYY-MM-DD", +7) %>
 
 # Content
@@ -8,26 +8,57 @@ Revisit: <% tp.date.now("YYYY-MM-DD", +7) %>
 OAuth 2.0 & OpenID Connect
 
 ## 🧩 Short answer first
-- **OpenID Connect (OIDC)** = for **authentication** → _“Who is this user?”_
+- **OpenID Connect (OIDC)** = for **authentication** → _“Who is this user?”_ 
 - **OAuth 2.0** = for **authorization** → _“Can this app access this resource?”_
+- **Token validation/introspection** = Is this credential valid, and what does it say you're allowed to do?
+- Identity provider(IdP) = a service/system responsible for establishing a user's identity. 
 They share the **same mechanics** (redirects, tokens, scopes, authorization code flow),  
 but what they **issue** and **validate** differs.
+
 
 ---
 
 ## 🧠 The conceptual difference
 
-| Protocol           | Purpose                        | What you get   | Typical Use Case                      |
-| ------------------ | ------------------------------ | -------------- | ------------------------------------- |
-| **OpenID Connect** | Authentication (Login)         | `id_token`     | Log in user via Microsoft/Google/Okta |
-| **OAuth 2.0**      | Authorization (Access control) | `access_token` | Let app access protected APIs or data |
-## Authentication & Authorization Server
-1. Azure AD
-2. Google
+| Protocol           | Purpose                                                   | What you get   | Typical Use Case                      |
+| ------------------ | --------------------------------------------------------- | -------------- | ------------------------------------- |
+| **OpenID Connect** | Authentication (Login) protocol built on top of OAuth 2.0 | `id_token`     | Log in user via Microsoft/Google/Okta |
+| **OAuth 2.0**      | Authorization (Access control)                            | `access_token` | Let app access protected APIs or data |
+## Authentication & Authorization Server are the IdP
+1. Microsoft Entra ID
+2. PingFederate
 3. Okta
-4. 
+4. OAuth0
+5. or an enterprise FedSSO system
 
-The Authentication & Authorization Flow
+### An IdP can support different protocols, such as:
+```text
+              IdP
+               │
+       ┌───────┼────────┐
+       │       │        │
+      OIDC    SAML    OAuth 2.0
+      
+so, if someone says `we use an IdP`, but does not mean which protocl is being used.
+```
+
+for the FedSSO and any other IdP, it could involve password, MFA, an existing SSO session, and certificate, etc. 
+
+### Authorization
+```text
+JC
+ ↓
+Client application
+ ↓
+request:
+    scope=employee.read
+    resource=employee-api
+ ↓
+FedSSO decides whether that access can be granted
+```
+
+
+### The Authentication & Authorization Flow
 
 [1] User opens app
      ↓   -> The frontend app detects if the user has active session or valid token, if not, redirect to authentication/login page.

@@ -1,6 +1,6 @@
 Date: 2025-10-26
 Course:
-Tags: [[Base Knowledge]] 
+Tags: [[../../../3 - Zettelkasten/B - Tags/Base Knowledge]] 
 Revisit: <% tp.date.now("YYYY-MM-DD", +7) %>
 
 # Content
