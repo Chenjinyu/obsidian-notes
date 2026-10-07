@@ -20,10 +20,10 @@ but what they **issue** and **validate** differs.
 
 ## 🧠 The conceptual difference
 
-| Protocol           | Purpose                                                   | What you get   | Typical Use Case                      |
-| ------------------ | --------------------------------------------------------- | -------------- | ------------------------------------- |
-| **OpenID Connect** | Authentication (Login) protocol built on top of OAuth 2.0 | `id_token`     | Log in user via Microsoft/Google/Okta |
-| **OAuth 2.0**      | Authorization (Access control)                            | `access_token` | Let app access protected APIs or data |
+| Protocol           | Purpose                                                   | Audience                     | What you get                 | Standard Format                     | Typical Contents                                      | Typical Use Case                      |
+| ------------------ | --------------------------------------------------------- | ---------------------------- | ---------------------------- | ----------------------------------- | ----------------------------------------------------- | ------------------------------------- |
+| **OpenID Connect** | Authentication (Login) protocol built on top of OAuth 2.0 | your application             | `id_token`(ID Token)         | always a JWT                        | User's identity details (sub, name, email, auth_time) | Log in user via Microsoft/Google/Okta |
+| **OAuth 2.0**      | Authorization (Access control)                            | the resource server(the API) | `access_token`(Access Token) | Opaque string(random text) or a JWT | Scopes(read, write) and internal API date             | Let app access protected APIs or data |
 ## Authentication & Authorization Server are the IdP
 1. Microsoft Entra ID
 2. PingFederate
