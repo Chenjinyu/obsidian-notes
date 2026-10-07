@@ -33,12 +33,14 @@ but what they **issue** and **validate** differs.
 
 ### An IdP can support different protocols, such as:
 ```text
-              IdP
-               │
-       ┌───────┼────────┐
+                       IdP
+                        │
+       ┌────────────---─┼────────────────────┐
        │       │        │
-      OIDC    SAML    OAuth 2.0
+      OIDC(AuthN)    SAML(AuthN)    OAuth 2.0(AuthZ)
       
+
+an IdP is a system/role, and it _may support_ OIDC and OAuth 2.0. They aren't literally “inside” every IdP.
 so, if someone says `we use an IdP`, but does not mean which protocl is being used.
 ```
 
@@ -56,6 +58,8 @@ request:
  ↓
 FedSSO decides whether that access can be granted
 ```
+
+> Authentication frequently happens as part of an authorization flow, but you shouldn't think of authorization as simply a second endpoint that always runs “after authentication.”
 
 
 ### The Authentication & Authorization Flow
