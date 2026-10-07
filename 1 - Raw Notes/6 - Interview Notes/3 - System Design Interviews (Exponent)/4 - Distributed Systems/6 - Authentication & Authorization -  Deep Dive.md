@@ -1,6 +1,6 @@
 Date: 2026-02-16
 Course: https://www.tryexponent.com/courses/system-design-interviews/authentication-authorization
-Tags: [[System Design Interview]] [[Distributed System]] [[6 - Authentication & Authorization]] [[../../../3 - Technologies/Access Control/AuthN&Z|AuthN&Z]]
+Tags: [[System Design Interview]] [[Distributed System]] [[6 - Authentication & Authorization]] [[../../../3 - Technologies/Access Control/AuthN & AuthZ|AuthN&Z]]
 
 # Content
 
@@ -92,6 +92,6 @@ A few things worth noting in this flow. Step 8 can be done locally by the API (j
 
 - [[../../../3 - Technologies/Access Control/JWT vs SharedStorage Session Store]]
 - [[../../../3 - Technologies/Access Control/Identity & Least Privilege]]
-- [[../../../3 - Technologies/Access Control/AuthN&Z|AuthN&Z]]
+- [[../../../3 - Technologies/Access Control/AuthN & AuthZ|AuthN&Z]]
 - [[../../../3 - Technologies/Access Control/Agent-to-app Authorization|Agent-to-app Authorization]]
 - 
