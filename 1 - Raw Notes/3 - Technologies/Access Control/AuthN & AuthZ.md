@@ -64,6 +64,85 @@ FedSSO decides whether that access can be granted
 
 ### The Authentication & Authorization Flow
 
+```text
+                REQUESTING TOKEN
+                =================
+
+USER LOGIN                         APP-TO-APP
+
+/authorization.oauth2             /token.oauth2
+        │                               │
+scope=openid                      grant_type=
+      profile                     client_credentials
+      order.read                        │
+        │                         scope=order.read
+        ▼                               │
+   User login                           │
+        │                               │
+        ▼                               │
+Authorization Code                      │
+        │                               │
+        ▼                               ▼
+   /token.oauth2                  Access Token
+        │                               │
+        ▼                               │
+ ID Token + Access Token                │
+        │                               │
+        └───────────────┬───────────────┘
+                        │
+                        ▼
+                   CALLING API
+                   ===========
+
+                POST /api/orders
+
+        Authorization: Bearer <access_token>
+
+                        │
+                        ▼
+                     API
+                        │
+              validates token
+                        │
+              ┌─────────┴──────────┐
+              │                    │
+             aud                 scope
+              │                    │
+       "Is token for me?"    "Can caller
+                              write orders?"
+```
+
+```text
+                            OAuth 2.0 / FedSSO
+                                      │
+          ┌───────────────────────────┴──────────────────────────┐
+          │                                                      │
+     USER LOGIN                                            APP-TO-APP
+          │                                                      │
+ Authorization Code                                         Client Credentials
+          │                                                      │
+/authorization.oauth2 (scope=openid order.read)                  │
+          │                                                      │
+    user logs in                                                 │
+          │                                                      │
+          ▼                                                      ▼
+       Authorization code                                  client_id + secret
+          │                                                       │
+          └────────────────────────────┬──────────────────────────┘
+                                       ▼
+                           /token.oauth2  -> POST /as/token.auth2, grant_type=client_credentials&client_id=x&client_secret=x&scope=employe.read (ONLY when request authorization, need to provide scope)
+                                       │
+                                  Access Token (bearer token)
+                                       │
+                                       ▼
+                                      API (add bearer token in the API header, and do optional check with introsepct.auth2)
+                                       │
+                               optionally checks
+                                       │
+                                       ▼
+                              /introspect.oauth2
+```
+
 [1] User opens app
      ↓   -> The frontend app detects if the user has active session or valid token, if not, redirect to authentication/login page.
         -> the client_id is the **public identifier** for the web application that registered with the Authorization server. it tells the identity provider which app is asking for access
