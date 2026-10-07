@@ -70,45 +70,45 @@ FedSSO decides whether that access can be granted
 
 USER LOGIN                         APP-TO-APP
 
-/authorization.oauth2             /token.oauth2
-        │                               │
-scope=openid                      grant_type=
-      profile                     client_credentials
-      order.read                        │
-        │                         scope=order.read
-        ▼                               │
-   User login                           │
-        │                               │
-        ▼                               │
-Authorization Code                      │
-        │                               │
-        ▼                               ▼
-   /token.oauth2                  Access Token
-        │                               │
-        ▼                               │
- ID Token + Access Token                │
-        │                               │
-        └───────────────┬───────────────┘
-                        │
-                        ▼
-                   CALLING API
-                   ===========
+/authorization.oauth2                 /token.oauth2
+        │                                      │
+scope=openid (for user)                    grant_type=
+      profile                              client_credentials
+      order.read                               │
+        │                                scope=order.read
+        ▼                                      │
+   User login                                  │
+        │                                      │
+        ▼                                      │
+Authorization Code                             │
+        │                                      │
+        ▼                                      ▼
+   /token.oauth2                         Access Token
+        │                                      │
+        ▼                                      │
+ ID Token + Access Token                       │
+        │                                      │
+        └──────────────────┬───────────────────┘
+                           │
+                           ▼
+                      CALLING API
+                      ===========
 
-                POST /api/orders
+                   POST /api/orders
 
-        Authorization: Bearer <access_token>
+           Authorization: Bearer <access_token>
 
-                        │
-                        ▼
-                     API
-                        │
-              validates token
-                        │
-              ┌─────────┴──────────┐
-              │                    │
-             aud                 scope
-              │                    │
-       "Is token for me?"    "Can caller
+                           │
+                           ▼
+                          API
+                           │
+                 validates token
+                           │
+                 ┌─────────┴──────────┐
+                 │                    │
+                aud                 scope
+                 │                    │
+          "Is token for me?"    "Can caller
                               write orders?"
 ```
 
