@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/3 - Technologies/Access Control/Untitled.md",
+                "file": "1 - Raw Notes/3 - Technologies/Access Control/ID Token & Access Token & Refresh Token.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "ID Token & Access Token & Refresh Token"
             }
           }
         ]
@@ -229,7 +229,7 @@
   "active": "4383aba8faee9a23",
   "lastOpenFiles": [
     "1 - Raw Notes/3 - Technologies/Access Control/AuthN & AuthZ.md",
-    "1 - Raw Notes/3 - Technologies/Access Control/Untitled.md",
+    "1 - Raw Notes/3 - Technologies/Access Control/ID Token & Access Token & Refresh Token.md",
     "1 - Raw Notes/3 - Technologies/Access Control/Agent-to-app Authorization.md",
     "1 - Raw Notes/3 - Technologies/Access Control/The AuthN & AuthZ Code Workflow for M2M and User.md",
     "1 - Raw Notes/3 - Technologies/Access Control",
