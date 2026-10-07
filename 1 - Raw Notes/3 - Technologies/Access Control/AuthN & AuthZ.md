@@ -8,7 +8,7 @@ Revisit: <% tp.date.now("YYYY-MM-DD", +7) %>
 OAuth 2.0 & OpenID Connect
 
 ## 🧩 Short answer first
-- **OpenID Connect (OIDC)** = for **authentication** → _“Who is this user?”_ 
+- **OpenID Connect (OIDC)** = for **authentication** → _“Who is this user?”_  (The OIDC built on top of OAuth 2.0)
 - **OAuth 2.0** = for **authorization** → _“Can this app access this resource?”_
 - **Token validation/introspection** = Is this credential valid, and what does it say you're allowed to do?
 - Identity provider(IdP) = a service/system responsible for establishing a user's identity. 
@@ -28,7 +28,7 @@ but what they **issue** and **validate** differs.
 1. Microsoft Entra ID
 2. PingFederate
 3. Okta
-4. OAuth0
+4. OAuth0 (Its not OAuth 2.0 which is authorization framework)
 5. or an enterprise FedSSO system
 
 ### An IdP can support different protocols, such as:
