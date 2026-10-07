@@ -36,7 +36,7 @@ but what they **issue** and **validate** differs.
                        IdP
                         │
        ┌────────────---─┼────────────────────┐
-       │       │        │
+       │                │                    │
       OIDC(AuthN)    SAML(AuthN)    OAuth 2.0(AuthZ)
       
 
