@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/3 - Technologies/Access Control/ID Token & Access Token & Refresh Token.md",
+                "file": "1 - Raw Notes/10 - Canada Jobs/Around 30K in Toronto.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "ID Token & Access Token & Refresh Token"
+              "title": "Around 30K in Toronto"
             }
           }
         ]
@@ -226,11 +226,12 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "1a71e9f0de9191ea",
+  "active": "4383aba8faee9a23",
   "lastOpenFiles": [
+    "1 - Raw Notes/3 - Technologies/Access Control/ID Token & Access Token & Refresh Token.md",
+    "1 - Raw Notes/10 - Canada Jobs/Around 30K in Toronto.md",
     "1 - Raw Notes/10 - Canada Jobs",
     "1 - Raw Notes/3 - Technologies/Access Control/AuthN & AuthZ.md",
-    "1 - Raw Notes/3 - Technologies/Access Control/ID Token & Access Token & Refresh Token.md",
     "1 - Raw Notes/3 - Technologies/Access Control/Agent-to-app Authorization.md",
     "1 - Raw Notes/3 - Technologies/Access Control/The AuthN & AuthZ Code Workflow for M2M and User.md",
     "1 - Raw Notes/3 - Technologies/Access Control",
@@ -273,7 +274,6 @@
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0078. Subsets",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 1143. Longest Common Subsequence",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0047. Permutations II",
     "i changed the canvas name - check sync to git.canvas",
     "Untitled.canvas",
     "Untitled 5.canvas",
