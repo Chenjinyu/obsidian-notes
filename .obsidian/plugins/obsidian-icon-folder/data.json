@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiDatabaseZap",
       "LiNotebookPen",
       "🇨🇦",
       "LiAppWindowMac",
-      "LiAlignHorizontalJustifyStart",
-      "💰"
+      "LiAlignHorizontalJustifyStart"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -52,5 +52,6 @@
   "1 - Raw Notes/9 - Stocks": "💰",
   "1 - Raw Notes/7 - JCUS.LINK": "LiAppWindowMac",
   "1 - Raw Notes/10 - Canada Jobs": "🇨🇦",
-  "1 - Raw Notes/11 - Canada Jobs Report": "LiNotebookPen"
+  "1 - Raw Notes/11 - Canada Jobs Report": "LiNotebookPen",
+  "1 - Raw Notes/12 - Data Management": "LiDatabaseZap"
 }
