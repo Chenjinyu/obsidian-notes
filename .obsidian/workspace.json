@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 - Zettelkasten/A - Templates/Academic Note Template.md",
+                "file": "1 - Raw Notes/2 - LLM & Agent AI/MCP/MCP Workflow + Architecture Design.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Academic Note Template"
+              "title": "MCP Workflow + Architecture Design"
             }
           }
         ]
@@ -228,8 +228,8 @@
   },
   "active": "3ec7e4b7f6d91b31",
   "lastOpenFiles": [
-    "3 - Zettelkasten/A - Templates/LeetCode Template.md",
     "3 - Zettelkasten/A - Templates/Academic Note Template.md",
+    "3 - Zettelkasten/A - Templates/LeetCode Template.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/MCP Workflow + Architecture Design.md",
     "2026-05-30.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0547. Number of Provinces.md",
