@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "747a4362a5f0c5be",
+        "id": "3cf42c5525e927d4",
         "type": "tabs",
         "children": [
           {
-            "id": "4383aba8faee9a23",
+            "id": "3ec7e4b7f6d91b31",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/11 - Canada Jobs Report/ChatGPT Weekly Report.md",
+                "file": "3 - Zettelkasten/A - Templates/Academic Note Template.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "ChatGPT Weekly Report"
+              "title": "Academic Note Template"
             }
           }
         ]
@@ -226,13 +226,25 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "1a71e9f0de9191ea",
+  "active": "3ec7e4b7f6d91b31",
   "lastOpenFiles": [
+    "3 - Zettelkasten/A - Templates/LeetCode Template.md",
+    "3 - Zettelkasten/A - Templates/Academic Note Template.md",
+    "1 - Raw Notes/2 - LLM & Agent AI/MCP/MCP Workflow + Architecture Design.md",
+    "2026-05-30.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0547. Number of Provinces.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0035. Search Insert Position.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1302. Deepest Leaves Sum.md",
+    "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/MCP Workflow + Architecture Design/file-20261012015546099.png",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 1046. Last Stone Weight.md",
+    "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/MCP Workflow + Architecture Design/file-20261012015340773.png",
+    "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/MCP Workflow + Architecture Design",
+    "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets",
+    "1 - Raw Notes/11 - Canada Jobs Report/ChatGPT Weekly Report.md",
     "1 - Raw Notes/12 - Data Management",
     "1 - Raw Notes/11 - Canada Jobs Report/README.md",
     "1 - Raw Notes/11 - Canada Jobs Report/JOBS.md",
     "1 - Raw Notes/10 - Canada Jobs/Knowledge points.md",
-    "1 - Raw Notes/11 - Canada Jobs Report/ChatGPT Weekly Report.md",
     "1 - Raw Notes/11 - Canada Jobs Report",
     "1 - Raw Notes/10 - Canada Jobs/Around 30K in Toronto.md",
     "1 - Raw Notes/3 - Technologies/Access Control/ID Token & Access Token & Refresh Token.md",
@@ -255,25 +267,13 @@
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow/file-20260531022317272.png",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow/file-20260531022256622.png",
-    "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow/file-20260531022238267.png",
-    "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow/file-20260531022215802.png",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/Harness Engineering Setup.md",
     "1 - Raw Notes/100 - Notes/Some Temp Notes.md",
-    "1 - Raw Notes/9 - Stocks",
     "1 - Raw Notes/100 - Notes/Note what you have done, what are the next things to do.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 0502. IPO.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0072. Edit Distance.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 295. Find Median from Data Stream.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0797. All Paths From Source to Target.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0881. Boats to Save People.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1143. Longest Common Subsequence.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 2294. Partition Array Such That Maximum Difference Is K.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/7 - Greedy and Dynamic Programming/Greedy vs Dynamic Programming (DP).md",
-    "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/assets/M - 0078. Subsets",
     "i changed the canvas name - check sync to git.canvas",
     "Untitled.canvas",
     "Untitled 5.canvas",
