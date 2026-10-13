@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/2 - LLM & Agent AI/MCP/MCP Workflow + Architecture Design.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E M - 0543. Diameter of Binary Tree.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +52,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "MCP Workflow + Architecture Design"
+              "title": "E M - 0543. Diameter of Binary Tree"
             }
           }
         ],
@@ -115,7 +115,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 365.5
+    "width": 415.5357666015625
   },
   "right": {
     "id": "c375af2eeef2242a",
@@ -253,11 +253,12 @@
   },
   "active": "ac4ce6ce687a9512",
   "lastOpenFiles": [
+    "1 - Raw Notes/2 - LLM & Agent AI/MCP/Stateful MCP Sessions.md",
+    "1 - Raw Notes/2 - LLM & Agent AI/MCP/MCP Workflow + Architecture Design.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/MCP Workflow + Architecture Design/file-20261012203407794.png",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/MCP Workflow + Architecture Design/file-20261012203047784.png",
     "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-12.md",
     "1 - Raw Notes/11 - Canada Jobs Report/weekly",
-    "1 - Raw Notes/2 - LLM & Agent AI/MCP/Untitled.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 1293. Shortest Path in a Grid with Obstacles Elimination.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E M - 0496. Next Greater Element I.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0938. Range Sum of BST.md",
@@ -267,7 +268,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Trees/Binary Search Trees(BST).md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Graphs - Depth and Breath First Traversal.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Graphs - BFS.md",
-    "1 - Raw Notes/2 - LLM & Agent AI/MCP/MCP Workflow + Architecture Design.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/MCP Workflow + Architecture Design/file-20261012030517108.png",
     "3 - Zettelkasten/A - Templates/LeetCode Template.md",
     "3 - Zettelkasten/A - Templates/Academic Note Template.md",
@@ -296,7 +296,6 @@
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow/file-20260531022925795.png",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow/file-20260531022902427.png",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow/file-20260531022750949.png",
-    "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow/file-20260531022638505.png",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM",
     "i changed the canvas name - check sync to git.canvas",
