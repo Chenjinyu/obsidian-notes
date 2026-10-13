@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/2 - LLM & Agent AI/MCP/MCP Workflow + Architecture Design.md",
+                "file": "1 - Raw Notes/2 - LLM & Agent AI/MCP/Stateful MCP Sessions.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "MCP Workflow + Architecture Design"
+              "title": "Stateful MCP Sessions"
             }
           },
           {
@@ -55,8 +55,7 @@
               "title": "E M - 0543. Diameter of Binary Tree"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -90,7 +89,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "def dfs",
+                "query": "tag:#MCP",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -251,10 +250,12 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "ac4ce6ce687a9512",
+  "active": "3ec7e4b7f6d91b31",
   "lastOpenFiles": [
-    "1 - Raw Notes/2 - LLM & Agent AI/MCP/Stateful MCP Sessions.md",
+    "3 - Zettelkasten/B - Tags/MCP.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/MCP Workflow + Architecture Design.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E M - 0543. Diameter of Binary Tree.md",
+    "1 - Raw Notes/2 - LLM & Agent AI/MCP/Stateful MCP Sessions.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/MCP Workflow + Architecture Design/file-20261012203407794.png",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/MCP Workflow + Architecture Design/file-20261012203047784.png",
     "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-12.md",
@@ -286,7 +287,6 @@
     "1 - Raw Notes/11 - Canada Jobs Report/ChatGPT Weekly Report.md",
     "1 - Raw Notes/12 - Data Management",
     "1 - Raw Notes/11 - Canada Jobs Report/README.md",
-    "1 - Raw Notes/11 - Canada Jobs Report/JOBS.md",
     "1 - Raw Notes/11 - Canada Jobs Report",
     "1 - Raw Notes/10 - Canada Jobs",
     "1 - Raw Notes/3 - Technologies/Access Control",
