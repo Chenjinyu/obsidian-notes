@@ -9,8 +9,54 @@ Tags: #MCP
 
 # Content
 
-MCP support is stateful, because it has natural conversation flow, and its also security and access control, because all of the 3rd party API  credentials will manage and control by the MCP, the LLM(robot/AI model) never sees API keys, tokens, connection, strings, internal URLs. (how can i grant the MCP access to LLM?)
+MCP support stateful sessions at the protocol level, because it has natural conversation flow, in the below conversation will reference above conversation, 
+In other words, MCP is a protocol designed sppecifically for AI models, maintains context across multi-step interactions with tools.
+and its also security and access control, because all of the 3rd party API  credentials will manage and control by the MCP, the LLM(robot/AI model) never sees API keys, tokens, connection, strings, internal URLs. (how can i grant the MCP access to LLM?)
 
+### **MCP’s main advantage is reusable integrations. Its main drawback is an extra layer to build, secure, and operate.**
+
+For your Stripe, Kubernetes, and Slack example, I’d evaluate it this way:
+
+| Pros                                          | What it means for your project                                                                                           |
+| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| **Reuse across AI applications**              | Expose your integrations once, then connect compatible Claude, GPT, or Gemini hosts.                                     |
+| **Standard tool discovery**                   | Hosts can discover tool names, descriptions, and input schemas instead of requiring individually hardcoded integrations. |
+| **Separate integration code from model code** | Change your Stripe implementation without rewriting every model adapter.                                                 |
+| **More than API calls**                       | Expose local calculations, database queries, documents as resources, and reusable prompts.                               |
+| **Local or remote deployment**                | Use stdio for a local process or Streamable HTTP for a shared service.                                                   |
+
+These benefits follow from MCP’s client-server architecture, discovery mechanisms, and tools/resources/prompts interfaces. **Actual portability depends on each host’s supported features.** [Model Context Protocol](https://modelcontextprotocol.io/docs/learn/architecture?utm_source=chatgpt.com)
+
+|Cons|What you need to account for|
+|---|---|
+|**Additional complexity**|Manage MCP clients, server processes, transport, errors, and protocol/SDK compatibility.|
+|**Additional overhead**|Discovery, serialization, and remote network calls can add latency. Large tool definitions can consume model context.|
+|**Host differences**|A host may support tools but handle resources, prompts, authentication, or approvals differently.|
+|**Security responsibilities remain**|You still need authentication, authorization, least-privilege credentials, and protection against untrusted content.|
+|**Tool selection can be wrong**|The model may choose the wrong tool or arguments. Schemas help, but business validation must happen in your code.|
+|**No automatic workflow reliability**|MCP does not make a Stripe refund and Slack message atomic, or guarantee retries won’t duplicate actions.|
+
+The overhead and operational tradeoffs are engineering implications of the architecture. MCP’s security guidance also documents risks such as confused-deputy attacks and unsafe token handling. [Model Context Protocol](https://modelcontextprotocol.io/docs/learn/architecture?utm_source=chatgpt.com)
+
+**For example:** if a refund succeeds but the Slack notification fails, your application must retry or reconcile the notification independently. Repeating the whole workflow could create another refund. MCP provides the interface; your backend provides idempotency and recovery.
+
+### **When I would choose MCP:**
+
+|Situation|My recommendation|
+|---|---|
+|Multiple AI applications need the same integrations|**Use MCP**|
+|You want existing MCP-compatible tools to access your services|**Use MCP**|
+|One application needs two or three simple functions|**Direct function calling may be simpler**|
+|A scheduled backend job needs predictable execution|**Use ordinary APIs or a workflow engine**; expose it through MCP only if AI access is useful|
+
+For **your multi-provider project**, MCP is a reasonable choice. Keep the business operations—such as refund validation—in ordinary Python services, then expose those services through MCP. That lets conventional applications reuse the same logic too.
+
+### An interview-ready answer:
+
+> “MCP standardizes how AI applications discover and access tools and context. It improves integration reuse and separates business integrations from model-specific code. The tradeoffs are additional infrastructure, compatibility differences, and security responsibilities. It also doesn’t replace business authorization or reliable workflow orchestration.”
+> 
+the conversation stores in Context storage
+![](assets/MCP%20Workflow%20+%20Architecture%20Design/file-20261012203407794.png)
 ![](assets/MCP%20Workflow%20+%20Architecture%20Design/file-20261012203047784.png)
 LLM first discovers the available tools by calling tools/list from the MCP, understands their capabilities, and the decides which one to use.
 
