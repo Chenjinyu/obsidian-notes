@@ -1,0 +1,12 @@
+
+### Takeaways
+1. Web/App/Chatbot is integrated with multi-AI model(LLMs) inside of their code, and also include the MCP client. 
+2. The LLMs know what tools are available from the MCP by calling tools/list
+3. LLM analysis which tool(function) should call.
+4. Web application retains and maintains the chat conversation by itself.
+5. the MCP stores necessary information, also depends on the developer design. the server-side state: **the current state of a task** should store into database, rather than in-memory MCP sessions, to avoid the reconnect, server restart, or request reaching to different kubernetes pods. 
+6. The protocol-session-scoped state is usually temporary runtime state. BUT a onnection disconnecting does not necessarily mean the session has ended. 
+7. ![](assets/From%20Web%20to%20MCP/file-20261013034740164.png)
+
+
+![](assets/From%20Web%20to%20MCP/file-20261013033908753.png)

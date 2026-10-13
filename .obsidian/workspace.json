@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/2 - LLM & Agent AI/MCP/Untitled.md",
+                "file": "1 - Raw Notes/2 - LLM & Agent AI/MCP/MCP Server.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "MCP Server"
             }
           },
           {
@@ -252,8 +252,12 @@
   },
   "active": "3ec7e4b7f6d91b31",
   "lastOpenFiles": [
+    "1 - Raw Notes/2 - LLM & Agent AI/MCP/From Web to MCP.md",
+    "1 - Raw Notes/2 - LLM & Agent AI/MCP/MCP Server.md",
+    "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/From Web to MCP/file-20261013034740164.png",
+    "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/From Web to MCP/file-20261013033908753.png",
+    "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/From Web to MCP",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/Stateful MCP Sessions.md",
-    "1 - Raw Notes/2 - LLM & Agent AI/MCP/Untitled.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/NOT STARTED - M - 1129. Shortest Path with Alternating Colors.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1302. Deepest Leaves Sum.md",
     "3 - Zettelkasten/A - Templates/LeetCode Template.md",
@@ -281,7 +285,6 @@
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/Untitled 1.md",
     "2026-05-30.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0547. Number of Provinces.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0035. Search Insert Position.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/MCP Workflow + Architecture Design/file-20261012015546099.png",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/MCP Workflow + Architecture Design/file-20261012015340773.png",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/MCP Workflow + Architecture Design",
@@ -294,10 +297,7 @@
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow/file-20260531023038413.png",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow/file-20260531022948982.png",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow/file-20260531022925795.png",
-    "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow/file-20260531022902427.png",
-    "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow/file-20260531022750949.png",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow",
-    "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM",
     "i changed the canvas name - check sync to git.canvas",
     "Untitled.canvas",
     "Untitled 5.canvas",
