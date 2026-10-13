@@ -233,7 +233,7 @@ if __name__ == "__main__":
 1. server: mcp_server.py
 ```python
 import asyncio
-
+# **`Context` is a Python class representing the execution context of the current MCP request.** It gives your tool access to request information, the MCP session, and methods such as progress reporting.
 from mcp.server.fastmcp import Context, FastMCP
 
 mcp = FastMCP(
