@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/2 - LLM & Agent AI/MCP/SSE Connection via HTTP with event-stream in the API request header.md",
+                "file": "1 - Raw Notes/4 - Libs & Frameworks/Observability/Promethous.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "SSE Connection via HTTP with event-stream in the API request header"
+              "title": "Promethous"
             }
           },
           {
@@ -276,8 +276,13 @@
   },
   "active": "3ec7e4b7f6d91b31",
   "lastOpenFiles": [
-    "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/MCP Stateful vs REST Stateless.md",
+    "1 - Raw Notes/4 - Libs & Frameworks/Observability/Jaeger UI.md",
+    "1 - Raw Notes/4 - Libs & Frameworks/Observability/Promethous.md",
+    "1 - Raw Notes/4 - Libs & Frameworks/Observability/OpenTelemetry.md",
+    "1 - Raw Notes/4 - Libs & Frameworks/Kubernetes/Untitled.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/SSE Connection via HTTP with event-stream in the API request header.md",
+    "1 - Raw Notes/4 - Libs & Frameworks/Observability",
+    "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/MCP Stateful vs REST Stateless.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/3. From Web to MCP.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/4. MCP Server State Control.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/3. From Web to MCP",
@@ -307,10 +312,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Graphs - Depth and Breath First Traversal.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Graphs - BFS.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/1. MCP Workflow + Architecture Design/file-20261012030517108.png",
-    "3 - Zettelkasten/A - Templates/Academic Note Template.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 1231. Divide Chocolate.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Trees/Binary Trees - BFS.md",
-    "1 - Raw Notes/2 - LLM & Agent AI/MCP/Untitled 1.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/1. MCP Workflow + Architecture Design/file-20261012015546099.png",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/1. MCP Workflow + Architecture Design/file-20261012015340773.png",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/MCP Workflow + Architecture Design",
@@ -318,7 +319,6 @@
     "1 - Raw Notes/12 - Data Management",
     "1 - Raw Notes/11 - Canada Jobs Report",
     "1 - Raw Notes/10 - Canada Jobs",
-    "1 - Raw Notes/3 - Technologies/Access Control",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow/file-20260531023038413.png",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow/file-20260531022948982.png",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow/file-20260531022925795.png",
