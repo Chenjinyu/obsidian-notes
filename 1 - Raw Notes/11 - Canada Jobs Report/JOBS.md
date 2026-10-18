@@ -13,6 +13,8 @@ JC 可以直接修改「我的選擇」與「我的備註」，或在聊天中�
 
 | Stripe-8120494 | Stripe／Staff Software Engineer, Financial Crimes | Toronto hybrid | 官網 annual salary CAD 208K–312K；base 組成與 offer 待確認 | 架構高／領域中：Java、多租戶平台、金融業後端 | Ruby、AML／sanctions、entity matching、review workflows | 境外候選人與工作許可協助待確認 | P2（先確認） | 官方頁及申請表可讀；條件待確認 | 2026-10-12 | 2026-10-12 | [官方](https://stripe.com/careers/listing/staff-software-engineer-financial-crimes/8120494) | 待選 | |
 
+| NVIDIA-JR2025753 | NVIDIA／Senior Software Engineer, NeMo Helix Core Platform | Toronto／Canada remote；安排待官方確認 | LinkedIn NVIDIA 職缺列 L4 CAD 170K–220K；L5 CAD 225K–275K；官方正文未能讀取，待核實；股票另計 | 高：Python、API、Kubernetes、分散式系統、Airflow 任務編排與平台開發 | 生產級 Agent 平台、SDK／插件架構、Slurm、架構 RFC 與英文溝通需準備 | 境外聘用及工作許可協助待確認 | P1（使用者選定） | 官網網址可開啟但正文未能讀取；目前是否接受申請待確認 | 2026-10-18 | 2026-10-18 | [官方](https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/job/Senior-Software-Engineer--NeMo-Core-Platform_JR2025753-1) | 保留 | 2026-10-18 JC 明確表示願意面試；依使用者指示納入，不代表已申請。加拿大薪資與來源：[NVIDIA LinkedIn 職缺](https://ca.linkedin.com/jobs/view/senior-software-engineer-nemo-helix-core-platform-at-nvidia-4471571505)。基本薪資低於原 CAD 300K 目標，仍按使用者選擇保留；美國同名 JR2024160 為不同 requisition，不混用薪資。 |
+
 ## 報告索引
 
 ### 週報
