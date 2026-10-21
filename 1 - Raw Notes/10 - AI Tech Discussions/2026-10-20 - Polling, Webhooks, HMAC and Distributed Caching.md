@@ -3,7 +3,6 @@ sr-due: <% tp.date.now("YYYY-MM-DD", 3) %>
 sr-interval: 1
 sr-ease: 2.5
 ---
-
 # Polling, Webhooks, HMAC, and Distributed Caching — Interview Notes
 
 Discussion date: 2026-10-20 (America/Chicago).
