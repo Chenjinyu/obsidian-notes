@@ -8,6 +8,8 @@ sr-ease: 2.5
 Discussion date: 2026-10-20 (America/Chicago).
 Purpose: turn JC's questions and points of uncertainty into definitions, examples, interview answers, and active-recall practice.
 
+Expanded on 2026-10-21: [start with the learning map](00-learning-map.md). Separate guides now cover REST APIs, polling, SSE, WebSockets, webhooks, retry strategies, HMAC/encoding, and caching. Each explains the definition, use cases, Python implementation, supporting techniques, and interview follow-ups.
+
 The frontmatter above intentionally preserves the requested Templater expression literally. GitHub does not execute it; until evaluated in Obsidian, sr-due is a template string, not an actual due date.
 
 ## 1. My questions and what needed clarification
@@ -36,7 +38,7 @@ Questions below are lightly edited for readability, preserving their meaning.
 **Polling (輪詢):** the client repeatedly asks for current state.
 **Webhook:** a service sends an HTTP request to a registered backend endpoint when an event happens.
 **Long polling:** the server holds a request until there is an update or a timeout; the client reconnects.
-**SSE:** a server-to-client event stream over an open HTTP connection.
+**SSE (Server-Sent Events):** a web technology that lets a server push real-time updates or a continuing stream of text to a browser or another client over a single, long-lived HTTP response. The client connects once, and the server keeps sending new events through that response as information becomes available. This is useful for one-way streams such as sports scores, stock-price displays, job-status updates, and AI-generated text appearing piece by piece. The client can send commands through separate HTTP requests. Connections can break or finish, so production designs also need reconnection, heartbeats, and retained events if missed updates must be replayed. See [the complete SSE guide](03-server-sent-events.md) for the workflow, wire format, Python server/client examples, and reliability design.
 **WebSocket:** a persistent connection supporting bidirectional messages.
 
 | Mechanism | Good fit | Main trade-off |
