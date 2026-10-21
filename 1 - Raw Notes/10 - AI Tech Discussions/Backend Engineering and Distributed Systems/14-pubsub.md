@@ -14,6 +14,24 @@ Think of subscribing to a newsletter: multiple subscribers each want their own c
 
 Pub/sub describes routing and decoupling, not a universal durability guarantee. Redis Pub/Sub is live ephemeral delivery; SNS feeding durable SQS queues and retained streaming systems have different recovery behavior. Ask what happens while a subscriber is offline.
 
+## Real-world use cases
+
+| Real-world scenario | Event and independent subscribers | Why pub/sub fits |
+|---|---|---|
+| Online order accepted | Fulfillment, customer notifications, and analytics each react to the order event. | Each application needs its own delivery path instead of competing to take the only copy of a task. |
+| Live sports platform | Score changes reach browser gateways, statistics processors, and alert services. | One producer can distribute updates to multiple independently evolving consumers. |
+| IoT monitoring | Sensor observations reach storage, threshold-alert processing, and dashboard services. | Different subscribers use the same observation for different purposes. |
+| Content publishing | A new article triggers search indexing, subscriber notifications, and cache invalidation. | The publishing service does not need to call every downstream application directly. |
+| SaaS account lifecycle | A new user event reaches onboarding, analytics, and audit processing. | Teams can own separate reactions to the same business event. |
+| Deployment monitoring | A deployment event reaches a release dashboard, notification service, and metrics annotator. | Adding another observer need not change the deployment producer's application logic. |
+| Collaboration presence | Join, leave, and cursor events reach the gateways serving participants in a room. | Ephemeral fan-out can suit replaceable live state, provided reconnecting clients can obtain a fresh snapshot. |
+
+**Walk through an accepted order:** publish an `order.accepted` event. The notification service sends a confirmation while the analytics service records a metric. If fulfillment must never silently miss an order, give it a delivery path with suitable persistence and recovery. Live ephemeral pub/sub alone is insufficient for that requirement. Several fulfillment workers may compete within fulfillment's own subscription without taking away analytics' copy.
+
+Pub/sub does not by itself guarantee that all reactions finish together, in order, or exactly once. If the business needs a coordinated sequence with compensation, combine event delivery with a distributed workflow.
+
+**Interview practice:** distinguish “three workers share one email task” from “three independent services each need this order event,” then explain how an offline subscriber recovers.
+
 ## Use cases and design choices
 
 Use pub/sub for independent reactions to events, notifications, cache invalidation signals, and live updates. It reduces direct coupling: the producer does not need to know every consumer's URL or implementation.

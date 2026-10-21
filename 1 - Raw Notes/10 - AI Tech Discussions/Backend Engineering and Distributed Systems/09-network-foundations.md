@@ -25,6 +25,23 @@ For your Python service calling a job API, understand these layers before choosi
 
 TCP commonly establishes a connection with SYN, SYN-ACK, ACK. TLS negotiation is another layer; it is not the same handshake. A TCP acknowledgment confirms transport receipt, not that a database transaction committed. An HTTP success response can carry a stronger application contract, depending on the API.
 
+## Real-world use cases
+
+| Real-world scenario | Network foundations involved | Why understanding the layers matters |
+|---|---|---|
+| Opening an online store over HTTPS | DNS finds an endpoint; the client establishes a supported transport, negotiates TLS, and exchanges HTTP messages. | A DNS failure, certificate failure, and application error require different diagnoses even if the page simply appears unavailable. |
+| Service calling a database repeatedly | A connection pool reuses established transport connections for database requests. | Reuse avoids repeated setup, but stale connections, pool limits, and timeouts still affect reliability. |
+| Service discovery during scaling | New application instances appear while old instances are removed. | Clients or proxies must learn current endpoints and stop routing work to unhealthy or retired ones. |
+| Real-time voice call | Media commonly uses UDP-based protocols with application-level handling of loss and timing. | An old audio packet may be less useful than the next one; media systems need jitter handling, congestion control, and security above raw UDP. |
+| Fast multiplayer movement updates | A game may send position updates using a datagram-based transport while protecting purchases or inventory changes through reliable application operations. | Different message types have different latency, ordering, and correctness requirements. |
+| Dashboard with many concurrent API reads | HTTP/2 can multiplex multiple streams on one connection. | Multiplexing changes connection usage, but TCP packet loss can still delay delivery across streams on that connection. |
+| Mobile browsing on a lossy network | HTTP/3 uses QUIC streams over UDP, with integrated TLS security. | Loss recovery can avoid TCP-style cross-stream transport blocking; actual performance still depends on the network and implementation. |
+| IoT device behind a home router | A device initiates an outbound connection to a backend or broker. | NAT and firewall behavior explain why a cloud service usually cannot simply open a new inbound connection to that device. |
+
+**Walk through a failed checkout call:** if name resolution fails, no HTTP request reaches the payment service. If TLS certificate verification fails, the client should not bypass verification to proceed. If the client sends the request and then times out, the payment may already have been accepted. These failures look similar to a user but require different recovery behavior.
+
+**Interview practice:** trace an HTTPS request from name lookup to application response, then identify which layer could explain a timeout, connection reset, or certificate error. A transport acknowledgment is not proof that a business transaction committed.
+
 ## Trace an HTTPS call
 
 1. Parse the URL and decide whether a proxy is involved.

@@ -14,6 +14,22 @@ An AI batch job can take five minutes. The client submits it once and then calls
 
 **Long polling** means the server holds a request open until a change occurs or a timeout expires, then finishes the response. The client sends another request. SSE differs: one response can carry many events without finishing after the first update.
 
+## Real-world use cases
+
+| Real-world scenario | What happens in the product | Why polling fits |
+|---|---|---|
+| Long AI or MCP task | A client checks whether a submitted analysis or batch generation task has finished. | A few seconds of detection delay may be acceptable, and the client only needs the latest task state. |
+| Video processing | An upload page checks whether a video's thumbnails and playback formats are ready. | Processing takes much longer than a status request; a simple status endpoint is often sufficient. |
+| Report export | A user requests a large CSV export and waits for a download button to become available. | Occasional checks can detect completion without maintaining a persistent connection. |
+| CI command-line tool | A developer's CLI checks a build ID until the pipeline succeeds or fails. | The tool can make outbound HTTP requests without exposing a webhook receiver. |
+| Partner shipment synchronization | A retailer periodically queries a carrier that does not provide callbacks. | Polling works when the upstream service only offers a read API. |
+| Inventory dashboard with relaxed freshness | A purchasing team refreshes supplier stock figures every few minutes. | The business can tolerate a bounded delay, so continuous event delivery may add little value. |
+| Long-polling notification inbox | A client asks for messages after a cursor, and the server waits until messages arrive or the request expires. | Long polling avoids immediate empty responses when a client or service integration is built around request/response exchanges. |
+
+**Walk through a report export:** submit the export once, save its job ID, and poll its status while the page is visible. Stop when the job succeeds, fails, is cancelled, or reaches the client's waiting deadline. For a job expected to take several minutes, an illustrative policy might check every two seconds initially and then every ten seconds; this reduces requests by accepting slower completion detection later. Use measured job durations and the user's freshness requirement to choose actual intervals.
+
+**Interview practice:** state the acceptable detection delay and estimate request volume as active clients divided by polling interval. Explain why a live sports play-by-play screen may need a different delivery method.
+
 ## 2. When to choose polling
 
 Choose polling when updates every few seconds or minutes are sufficient, completion time is unpredictable, callbacks are unavailable, or simple HTTP request/response operations are easiest to operate. It is often an appropriate first implementation.

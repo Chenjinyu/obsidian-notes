@@ -16,6 +16,24 @@ If the tag matches, it provides evidence that a holder of the secret authenticat
 
 HMAC does not encrypt the message. HTTPS provides transport encryption. HMAC also does not prove the message is new, that its data is true, or that your business logic has not processed it already.
 
+## Real-world use cases
+
+| Real-world scenario | What needs protection or a shared byte format | Why HMAC or explicit encoding fits |
+|---|---|---|
+| Payment webhook verification | A store must detect forged or modified payment events. | The provider and receiver calculate an HMAC over the provider-defined bytes using a shared secret. |
+| Repository webhook verification | A CI service receives a request claiming that code was pushed. | An HMAC can authenticate the payload before the service decides whether to start a build. |
+| Partner warehouse integration | A partner submits shipment instructions through an API with a documented HMAC authentication scheme. | Both parties authenticate the agreed request representation, which may include method, path, timestamp, and body. |
+| Expiring private download link | A backend issues a link whose resource ID and expiry must not be editable by its holder. | A server-verified HMAC can authenticate those fields without exposing the signing secret. This requires a carefully specified format and access policy. |
+| Authenticated batch-file delivery | A partner sends a file and an authentication tag through an agreed integration. | Verifying the HMAC over the exact file bytes detects modification by someone without the shared key; it does not hide the file's contents. |
+| International customer notifications | A webhook body contains Chinese names, accented addresses, or emoji. | UTF-8 defines how that text becomes bytes. The receiver verifies the original request bytes rather than reserializing parsed JSON. |
+| Cross-language signed requests | A Python sender and a Java receiver must produce the same authentication tag. | Both implementations need identical encodings, field order, separators, and byte sequences. Different-looking code can interoperate only if the signed bytes agree. |
+
+**Walk through an international order:** the sender serializes a JSON body containing `"customer": "王小明"` to UTF-8 bytes. If its documented signature scheme is `timestamp + "." + raw_body`, it encodes the decimal timestamp as ASCII, adds the literal byte `b"."`, and appends the body bytes. The receiver follows that same scheme using the received body. ASCII and UTF-8 produce the same bytes for decimal digits; using ASCII here expresses that the timestamp format only permits those characters. The period is a protocol-defined separator, not an HMAC requirement.
+
+For webhook scenarios, a signed timestamp plus a freshness check can limit replay age, while an event ID and durable deduplication prevent repeat processing. Neither property comes from HMAC alone. Follow the actual provider's signing specification rather than imposing this illustrative format on every webhook.
+
+**Interview practice:** explain which party knows the secret, exactly which bytes are authenticated, and why a valid tag neither encrypts the data nor proves that an event is new.
+
 ## 2. Text versus bytes — the questions JC asked
 
 Python `str` represents text; `bytes` represents a sequence of byte values. Encoding defines how text becomes bytes. HMAC consumes bytes because cryptographic operations act on exact byte sequences.

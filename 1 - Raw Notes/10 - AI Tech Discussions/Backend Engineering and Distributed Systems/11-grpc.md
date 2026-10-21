@@ -14,6 +14,22 @@ RPC is the interaction model. gRPC is a particular framework. Protobuf defines/s
 
 It fits internal service-to-service communication, typed multilingual systems, and services that need streaming. For direct browser use, standard gRPC may require gRPC-Web and a compatible gateway; do not assume the browser exposes the same transport interface as a Python client.
 
+## Real-world use cases
+
+| Real-world scenario | How gRPC is used | Why it fits |
+|---|---|---|
+| Polyglot commerce services | A Python checkout service calls a Go inventory service using generated request and response types. | A shared contract and generated stubs reduce hand-written integration code across languages. |
+| Online model inference | An application sends a typed inference request to a model-serving backend and receives a prediction. | Unary RPC fits a bounded computation, with explicit deadlines and structured status handling. |
+| Internal job-progress monitoring | A client starts a server-streaming call and receives progress messages for a running job. | One request can produce many typed responses without repeated status calls. |
+| Sensor batch upload | A gateway sends a sequence of readings through a client-streaming call and receives a final result. | The input arrives incrementally, while the server can return one summary at completion. |
+| Streaming speech processing | A trusted client or backend sends audio chunks while receiving partial transcripts through a bidirectional stream. | Both directions carry ongoing typed messages; browser access and media handling need suitable adapters. |
+| Worker coordination | A worker sends capacity and progress updates while a coordinator sends commands over a bidirectional stream. | Ongoing control messages can share a typed session. Persist important work state outside the connection. |
+| Internal search aggregation | A frontend backend queries typed search or recommendation services with a deadline budget. | Generated contracts help multiple teams evolve well-defined service boundaries. |
+
+**Walk through job progress:** an internal Python client calls `WatchJob(job_id)`. The server yields messages such as queued, running, and completed on that call. If the connection breaks, a new call must recover from a current snapshot or an application-defined cursor; a gRPC stream is not a durable queue or event log. A web UI may instead consume SSE from a gateway that talks gRPC to the job service.
+
+**Interview practice:** select unary, server streaming, client streaming, or bidirectional streaming for a concrete product requirement. Then explain how the design behaves when a client disconnects or exceeds its deadline.
+
 ## Four call shapes
 
 | Shape | Client sends | Server sends | Example |

@@ -16,6 +16,23 @@ The familiar HTTP/1.1 setup uses an Upgrade handshake. After that, messages use 
 
 SSE fits one-way event delivery. A bidirectional WebSocket may be useful for chat, multiplayer interactions, collaborative tools, and frequent interactive commands. Ordinary messaging can also use HTTP submission plus SSE; choose based on requirements, not the word “chat.”
 
+## Real-world use cases
+
+| Real-world scenario | What travels in both directions | Why WebSocket fits |
+|---|---|---|
+| Collaborative document editing | A user sends edits and cursor positions while receiving other collaborators' changes. | Both sides independently send frequent messages during the editing session. |
+| Live chat with presence | Users send messages and typing indicators while receiving messages, presence changes, and receipts. | One connection can carry frequent interactive traffic in both directions. HTTP submission plus SSE is also a valid design for some chat products. |
+| Multiplayer board or casual game | Players send moves and receive game-state updates and other players' actions. | The application needs ongoing low-latency interaction; a server still validates legal moves and authoritative state. |
+| Browser-based remote terminal | The browser sends keystrokes and resize commands while receiving terminal output. | Input and output happen independently throughout a session. |
+| Live auction | Bidders send bids and receive accepted-bid updates and auction-clock changes. | Frequent commands and updates share a connection; authoritative server rules decide which bids count. |
+| Collaborative whiteboard | Participants send drawing operations while receiving strokes and selections from others. | Many small messages flow in both directions as users interact. |
+| IoT device control panel | An operator sends commands and receives device acknowledgments and telemetry. | A browser can maintain an interactive session with a gateway that connects to the devices. |
+| Interactive AI session | A client sends user input, cancellation, or control messages while receiving partial output and session events. | Bidirectional session control can be useful; media transport may require additional protocols depending on latency and playback needs. |
+
+**Walk through a shared whiteboard:** Alice sends a stroke operation to the server. The server checks that she belongs to the board, assigns application-level ordering metadata if required, and distributes the accepted operation to other participants. Bob can send his own stroke at the same time. WebSocket carries messages, but conflict resolution, reconnect recovery, and saving the board are application responsibilities.
+
+**Interview practice:** explain why a remote terminal benefits from bidirectional messages, while a page that only displays score changes can use SSE. For games, discuss latency requirements before assuming WebSocket suits every real-time game.
+
 ## 2. What does the protocol give me?
 
 It gives a connection and ordered message transport within that connection. It does not give database persistence, application-level acknowledgment, automatic recovery across reconnects, or exactly-once business effects.

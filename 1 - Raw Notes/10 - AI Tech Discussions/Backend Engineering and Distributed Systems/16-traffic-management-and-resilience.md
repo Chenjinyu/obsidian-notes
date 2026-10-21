@@ -26,6 +26,23 @@ Imagine 10,000 users requesting AI jobs while the model service slows down. A lo
 
 These names overlap in products: one proxy can perform several roles. Explain the responsibility rather than relying on a product name.
 
+## Real-world use cases
+
+| Real-world scenario | Product problem | Traffic-management or resilience response |
+|---|---|---|
+| Concert tickets go on sale | A sudden crowd exceeds normal API and inventory capacity. | Balance traffic across healthy instances and limit admitted work; use a bounded waiting room or explicit rejection when necessary. |
+| Multi-tenant SaaS import | One customer's large import consumes resources needed by everyone else. | Per-tenant limits and isolated worker or connection pools reduce the impact on other customers. |
+| Shipping provider outage during checkout | Slow quote requests occupy application workers and delay the whole page. | Deadlines and a circuit breaker bound waiting; show unavailable shipping options or a valid predefined fallback rather than inventing a quote. |
+| AI service with limited GPUs | Request volume rises while each generation occupies capacity for a long time. | Concurrency limits and bounded queues protect execution capacity; request-rate limits alone may be insufficient. |
+| Canary software release | A team wants to expose a new service version gradually. | Route a controlled traffic fraction to the new version, observe outcomes, and drain connections when retiring instances. |
+| Shared partner API quota | Many workers call an external API under one account limit. | Coordinate rate limiting across workers and honor the provider's retry guidance. |
+| Recommendation service slowdown | Optional recommendations delay the product page's essential content. | Separate resource pools and deadlines let the page omit recommendations while preserving core functions. |
+| Autoscaling service instances | Endpoints change as instances start, fail, or terminate. | Service discovery, readiness checks, load balancing, and graceful draining direct requests to usable capacity. |
+
+**Walk through an overloaded AI service:** admitting every request creates an ever-growing wait and may exhaust memory. Instead, cap concurrent model calls, keep only a bounded backlog, and return a clear overload response when no capacity remains. A caller with retryable work can try later within its budget. Separating interactive chat from background batch capacity can preserve the user experience during a batch surge.
+
+**Interview practice:** identify the bottleneck before naming a mechanism. Explain why adding a load balancer cannot fix an overloaded database, why rate and concurrency limits differ, and which product features can degrade safely.
+
 ## Load-balancing choices
 
 L4 balancing usually chooses a destination for a transport connection. L7 balancing understands application requests and can route by path, tenant, headers, or other protocol-aware information. Connection reuse and multiplexing affect how evenly load spreads.
