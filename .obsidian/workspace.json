@@ -123,7 +123,7 @@
       {
         "id": "c4e325c0b063c250",
         "type": "tabs",
-        "dimension": 81.04265402843602,
+        "dimension": 71.94312796208531,
         "children": [
           {
             "id": "92e943b1ca42dffb",
@@ -216,7 +216,7 @@
       {
         "id": "5660c549cda35e24",
         "type": "tabs",
-        "dimension": 18.95734597156398,
+        "dimension": 28.056872037914694,
         "children": [
           {
             "id": "6f0468b84a9b80eb",
@@ -250,7 +250,7 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "fb7d35a712f885b6",
+  "active": "1a71e9f0de9191ea",
   "lastOpenFiles": [
     "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-19.md",
     "1 - Raw Notes/10 - AI Tech Discussions/2026-10-20 - Polling, Webhooks, HMAC and Distributed Caching.md",
