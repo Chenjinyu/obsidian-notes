@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0643.Maximum Average Subarray I.md",
+                "file": "3 - Zettelkasten/A - Templates/LeetCode Template.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "E - 0643.Maximum Average Subarray I"
+              "title": "LeetCode Template"
             }
           },
           {
@@ -123,7 +123,7 @@
       {
         "id": "c4e325c0b063c250",
         "type": "tabs",
-        "dimension": 68.33941605839416,
+        "dimension": 81.04265402843602,
         "children": [
           {
             "id": "92e943b1ca42dffb",
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Patterns/Multi-Source - BFS.md",
+                "file": "3 - Zettelkasten/A - Templates/LeetCode Template.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +141,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Multi-Source - BFS"
+              "title": "Backlinks"
             }
           },
           {
@@ -150,12 +150,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Welcome.md",
+                "file": "3 - Zettelkasten/A - Templates/LeetCode Template.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Welcome"
+              "title": "Outgoing links"
             }
           },
           {
@@ -179,13 +179,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Patterns/Multi-Source - BFS.md",
+                "file": "3 - Zettelkasten/A - Templates/LeetCode Template.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Multi-Source - BFS"
+              "title": "Outline"
             }
           },
           {
@@ -194,7 +194,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/Patterns/Multi-Source - BFS.md"
+                "file": "3 - Zettelkasten/A - Templates/LeetCode Template.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -216,7 +216,7 @@
       {
         "id": "5660c549cda35e24",
         "type": "tabs",
-        "dimension": 31.660583941605843,
+        "dimension": 18.95734597156398,
         "children": [
           {
             "id": "6f0468b84a9b80eb",
@@ -252,8 +252,11 @@
   },
   "active": "fb7d35a712f885b6",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0876. Middle of the Linked List.md",
+    "3 - Zettelkasten/A - Templates/Learn Review Template.md",
+    "3 - Zettelkasten/A - Templates/Academic Note Template.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0112. Path Sum.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0643.Maximum Average Subarray I.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0876. Middle of the Linked List.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0100. Same Tree.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/MCP Stateful vs REST Stateless.md",
     "Untitled.md",
@@ -278,12 +281,9 @@
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/3. From Web to MCP",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/2. Stateful MCP Sessions.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/1. MCP Workflow + Architecture Design",
-    "1 - Raw Notes/2 - LLM & Agent AI/MCP/1. MCP Workflow + Architecture Design.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/3. From Web to MCP/file-20261013034740164.png",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/3. From Web to MCP/file-20261013033908753.png",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/From Web to MCP",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/NOT STARTED - M - 1129. Shortest Path with Alternating Colors.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1302. Deepest Leaves Sum.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/1. MCP Workflow + Architecture Design/file-20261012203407794.png",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/1. MCP Workflow + Architecture Design/file-20261012203047784.png",
     "1 - Raw Notes/11 - Canada Jobs Report/weekly",
