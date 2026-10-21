@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/2026-10-20 - Polling, Webhooks, HMAC and Distributed Caching.md",
+                "file": "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-12.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-10-20 - Polling, Webhooks, HMAC and Distributed Caching"
+              "title": "2026-10-12"
             }
           },
           {
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/2026-10-20 - Polling, Webhooks, HMAC and Distributed Caching.md",
+                "file": "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-12.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/2026-10-20 - Polling, Webhooks, HMAC and Distributed Caching.md",
+                "file": "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-12.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/2026-10-20 - Polling, Webhooks, HMAC and Distributed Caching.md",
+                "file": "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-12.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -194,7 +194,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/2026-10-20 - Polling, Webhooks, HMAC and Distributed Caching.md"
+                "file": "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-12.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -250,35 +250,36 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "1a71e9f0de9191ea",
+  "active": "fb7d35a712f885b6",
   "lastOpenFiles": [
     "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-19.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/2026-10-20 - Polling, Webhooks, HMAC and Distributed Caching.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/2026-10-20 - Polling, Webhooks, HMAC and Distributed Caching.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/18-other-api-styles.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/17-reliable-distributed-workflows.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/16-traffic-management-and-resilience.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/15-event-streaming.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/14-pubsub.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/13-message-queues.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/12-protocol-buffers.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/11-grpc.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/10-rpc.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/09-network-foundations.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/08-caching-and-coordination.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/07-hmac-and-encoding.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/06-retries-backoff-jitter.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/05-webhooks.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/04-websockets.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/03-server-sent-events.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/02-polling.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/01-rest-apis.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/00-learning-map.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems",
     "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-12.md",
     "3 - Zettelkasten/A - Templates/LeetCode Template.md",
     "3 - Zettelkasten/A - Templates/Learn Review Template.md",
     "3 - Zettelkasten/A - Templates/Academic Note Template.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0112. Path Sum.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0643.Maximum Average Subarray I.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0876. Middle of the Linked List.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0100. Same Tree.md",
-    "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/MCP Stateful vs REST Stateless.md",
-    "Untitled.md",
-    "3 - Zettelkasten/A - Templates/LeetCode New Template.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0104. Maximum Depth of Binary Tree.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0035. Search Insert Position.md",
-    "1 - Raw Notes/10 - Knowledge Conversation/Knowledge points.md",
-    "1 - Raw Notes/10 - Knowledge Conversation/Around 30K in Toronto.md",
-    "1 - Raw Notes/11 - Canada Jobs Report/JOBS.md",
-    "1 - Raw Notes/11 - Canada Jobs Report/ChatGPT Weekly Report.md",
-    "1 - Raw Notes/4 - Libs & Frameworks/Observability/Prometheus.md",
-    "1 - Raw Notes/4 - Libs & Frameworks/Observability/Jaeger UI.md",
-    "1 - Raw Notes/4 - Libs & Frameworks/Observability/OpenTelemetry.md",
-    "1 - Raw Notes/4 - Libs & Frameworks/Kubernetes/Untitled.md",
-    "1 - Raw Notes/2 - LLM & Agent AI/MCP/SSE Connection via HTTP with event-stream in the API request header.md",
     "1 - Raw Notes/4 - Libs & Frameworks/Observability",
-    "1 - Raw Notes/2 - LLM & Agent AI/MCP/3. From Web to MCP.md",
-    "1 - Raw Notes/2 - LLM & Agent AI/MCP/4. MCP Server State Control.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/3. From Web to MCP",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/1. MCP Workflow + Architecture Design",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/3. From Web to MCP/file-20261013034740164.png",
@@ -294,7 +295,6 @@
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets",
     "1 - Raw Notes/12 - Data Management",
     "1 - Raw Notes/11 - Canada Jobs Report",
-    "1 - Raw Notes/10 - AI Tech Discussions",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow/file-20260531023038413.png",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow/file-20260531022948982.png",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow/file-20260531022925795.png",
