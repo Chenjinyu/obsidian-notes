@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-12.md",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/00-learning-map.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-10-12"
+              "title": "00-learning-map"
             }
           },
           {
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-12.md",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/00-learning-map.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-12.md",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/00-learning-map.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-12.md",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/00-learning-map.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -194,7 +194,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-12.md"
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/00-learning-map.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -252,6 +252,7 @@
   },
   "active": "fb7d35a712f885b6",
   "lastOpenFiles": [
+    "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-12.md",
     "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-19.md",
     "1 - Raw Notes/10 - AI Tech Discussions/2026-10-20 - Polling, Webhooks, HMAC and Distributed Caching.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/2026-10-20 - Polling, Webhooks, HMAC and Distributed Caching.md",
@@ -275,7 +276,6 @@
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/01-rest-apis.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/00-learning-map.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems",
-    "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-12.md",
     "3 - Zettelkasten/A - Templates/LeetCode Template.md",
     "3 - Zettelkasten/A - Templates/Learn Review Template.md",
     "3 - Zettelkasten/A - Templates/Academic Note Template.md",
