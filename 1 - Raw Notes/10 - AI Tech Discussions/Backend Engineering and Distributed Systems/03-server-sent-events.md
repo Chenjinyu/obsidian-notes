@@ -15,6 +15,8 @@ It is a good fit for sports scores, stock-price displays, job-status updates, no
 “Long-lived” means the response stays open for a while, not forever. Connections fail, servers restart, proxies have timeouts, and the application may finish the stream. A TCP connection may also carry multiple HTTP/2 streams; SSE does not require a dedicated physical connection in every HTTP version.
 
 Imagine an AI answer: a normal JSON response can arrive after the entire answer is ready. With SSE, the response begins earlier and more text is appended while generation continues. Streaming improves time to first visible output; it does not necessarily shorten the model's total computation.
+![](assets/03-server-sent-events/file-20261021151505550.png)
+the client send GET /text/event-stream to start establish the connection, then, the server returns the same in the header and include the `Transfer-Encoding: chunked` in the header as well, because the SSE does not know when the connection will be ended, how many bytes will send back to client, then use `chunked` here. 
 
 ## 2. What actually travels over the wire?
 

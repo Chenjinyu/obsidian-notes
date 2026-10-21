@@ -8,7 +8,7 @@ sr-ease: 2.5
 
 ## 1. Definition and contrast with SSE
 
-**WebSocket is a protocol that lets a client and server independently send messages over an established connection.** After setup, the server can send a message without waiting for a new request, and the client can send one without opening a separate HTTP request.
+**WebSocket is a protocol that lets a client and server independently send messages over an established connection.** After setup, the server can send a message without waiting for a new request, and the client can send one without opening a separate HTTP request, and these messages send from each other are no order, they are bi-directional.
 
 Think of collaborative editing: you send cursor movements and edits while receiving other users' changes. Both directions are active. WebSocket supports text and binary messages. Use `wss://` for encrypted production connections; `ws://` is appropriate for local demonstrations.
 
