@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 - Zettelkasten/A - Templates/LeetCode Template.md",
+                "file": "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-19.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "LeetCode Template"
+              "title": "2026-10-19"
             }
           },
           {
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 - Zettelkasten/A - Templates/LeetCode Template.md",
+                "file": "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-19.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3 - Zettelkasten/A - Templates/LeetCode Template.md",
+                "file": "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-19.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3 - Zettelkasten/A - Templates/LeetCode Template.md",
+                "file": "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-19.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -194,7 +194,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "3 - Zettelkasten/A - Templates/LeetCode Template.md"
+                "file": "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-19.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -252,6 +252,9 @@
   },
   "active": "fb7d35a712f885b6",
   "lastOpenFiles": [
+    "1 - Raw Notes/10 - AI Tech Discussions/2026-10-20 - Polling, Webhooks, HMAC and Distributed Caching.md",
+    "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-12.md",
+    "3 - Zettelkasten/A - Templates/LeetCode Template.md",
     "3 - Zettelkasten/A - Templates/Learn Review Template.md",
     "3 - Zettelkasten/A - Templates/Academic Note Template.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0112. Path Sum.md",
@@ -260,7 +263,6 @@
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0100. Same Tree.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/MCP Stateful vs REST Stateless.md",
     "Untitled.md",
-    "3 - Zettelkasten/A - Templates/LeetCode Template.md",
     "3 - Zettelkasten/A - Templates/LeetCode New Template.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0104. Maximum Depth of Binary Tree.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0035. Search Insert Position.md",
@@ -269,7 +271,6 @@
     "1 - Raw Notes/10 - Knowledge Conversation/Around 30K in Toronto.md",
     "1 - Raw Notes/11 - Canada Jobs Report/JOBS.md",
     "1 - Raw Notes/11 - Canada Jobs Report/ChatGPT Weekly Report.md",
-    "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-12.md",
     "1 - Raw Notes/4 - Libs & Frameworks/Observability/Prometheus.md",
     "1 - Raw Notes/4 - Libs & Frameworks/Observability/Jaeger UI.md",
     "1 - Raw Notes/4 - Libs & Frameworks/Observability/OpenTelemetry.md",
@@ -279,7 +280,6 @@
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/3. From Web to MCP.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/4. MCP Server State Control.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/3. From Web to MCP",
-    "1 - Raw Notes/2 - LLM & Agent AI/MCP/2. Stateful MCP Sessions.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/1. MCP Workflow + Architecture Design",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/3. From Web to MCP/file-20261013034740164.png",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/3. From Web to MCP/file-20261013033908753.png",
