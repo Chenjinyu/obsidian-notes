@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/00-learning-map.md",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/03-server-sent-events.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "00-learning-map"
+              "title": "03-server-sent-events"
             }
           },
           {
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/00-learning-map.md",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/03-server-sent-events.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/00-learning-map.md",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/03-server-sent-events.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/00-learning-map.md",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/03-server-sent-events.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -194,7 +194,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/00-learning-map.md"
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/03-server-sent-events.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -252,6 +252,7 @@
   },
   "active": "fb7d35a712f885b6",
   "lastOpenFiles": [
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/00-learning-map.md",
     "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-12.md",
     "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-19.md",
     "1 - Raw Notes/10 - AI Tech Discussions/2026-10-20 - Polling, Webhooks, HMAC and Distributed Caching.md",
@@ -274,7 +275,6 @@
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/03-server-sent-events.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/02-polling.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/01-rest-apis.md",
-    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/00-learning-map.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems",
     "3 - Zettelkasten/A - Templates/LeetCode Template.md",
     "3 - Zettelkasten/A - Templates/Learn Review Template.md",
