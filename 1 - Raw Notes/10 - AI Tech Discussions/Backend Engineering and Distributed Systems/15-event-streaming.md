@@ -14,6 +14,25 @@ Think of a journal rather than a task that disappears after one worker takes it.
 
 Use event streaming for event-driven integration, audit/replay pipelines, telemetry, CDC, and continuously updated projections. A simple work queue is often easier when each task should be handed to one worker and historical replay is unimportant. SSE also streams events, but is a client-delivery mechanism; it is not itself a durable event log or stream-processing platform.
 
+## Real-world use cases
+
+| Real-world scenario | Events retained and processed | Why an event stream fits |
+|---|---|---|
+| Product clickstream analytics | Page views, searches, clicks, and purchases feed continuously updated metrics. | Independent consumers can calculate funnels or other views and replay retained events when logic changes. |
+| Transaction anomaly monitoring | Transaction events feed rolling counts and pattern detection. | Consumers can process events over time windows and maintain their own progress through the log. |
+| Connected vehicle telemetry | Vehicle measurements feed live monitoring and later historical analysis. | Retained events support both ongoing processing and replay within the configured retention period. |
+| Database change propagation | Change-data-capture events update a search index and analytical store. | Downstream systems can independently track progress and catch up after outages, with an appropriate initial snapshot strategy. |
+| Retail inventory projections | Stock changes from warehouses feed an availability read model. | Partitioned processing can build current views from retained changes; ordering and authoritative reservation rules remain explicit. |
+| Recommendation pipelines | User activity feeds feature updates and later experimentation. | Different consumers can read the same history at their own pace. |
+| Rebuilding a dashboard after a bug | A corrected consumer reprocesses retained job or order events. | Offsets and retention make historical reprocessing possible without asking the original producer to recreate every event. |
+| Operational event history | Deployment, job, and service events feed troubleshooting views. | A retained log can support multiple operational consumers, subject to storage and retention requirements. |
+
+**Walk through a clickstream:** one consumer group calculates active-session counts while another writes events to an analytical store. Their progress is independent. If the counting logic has a bug, a replacement consumer can replay the retained interval into a fresh output view. It must handle duplicates and avoid replaying irreversible side effects such as sending historical customer emails again.
+
+The log is available only according to its retention and compaction policies. Keeping events in a broker does not automatically make the application an event-sourced system, nor does it automatically satisfy a permanent audit requirement. A browser dashboard may consume SSE generated from a processed view of this backend stream.
+
+**Interview practice:** explain why replay matters to a product, how events should be partitioned, and what happens when a consumer falls behind the retention window.
+
 ## Core vocabulary
 
 | Concept | Meaning |

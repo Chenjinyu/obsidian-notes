@@ -18,6 +18,26 @@ Imagine an AI answer: a normal JSON response can arrive after the entire answer 
 ![](assets/03-server-sent-events/file-20261021151505550.png)
 the client send GET /text/event-stream to start establish the connection, then, the server returns the same in the header and include the `Transfer-Encoding: chunked` in the header as well, because the SSE does not know when the connection will be ended, how many bytes will send back to client, then use `chunked` here. 
 
+## Real-world use cases
+
+| Real-world scenario | What the server sends to the client | Why SSE fits |
+|---|---|---|
+| Real-time sports scores | Score changes, match-clock updates, and play-by-play text for a match a fan is watching. | Updates mainly flow toward viewers. This is score/event delivery, not live video transport. |
+| Monitoring dashboard | Current service health, error counts, job throughput, and new alert events. | An open dashboard should update as backend observations arrive without repeatedly requesting unchanged data. |
+| Live news feed | Breaking-news headlines and additions to a live coverage page. | Readers receive a continuing sequence of new items; they do not need to send frequent messages on that stream. |
+| In-app notifications | A new mention, completed export, approval request, or account alert appears in an open application. | The server can push notifications while the client is connected. Notifications when the page is closed require another mechanism, such as Web Push. |
+| IoT device updates on a dashboard | A browser receives sensor readings, battery levels, and device-online status from the backend. | SSE handles the backend-to-browser leg. Devices may send data to the backend using MQTT, HTTP, or another protocol. |
+| AI chat text generation | Pieces of an answer appear as the model produces them. | The main ongoing flow is generated text toward the client; a separate HTTP request can submit the prompt or cancel generation. |
+| Build logs and deployment progress | New log lines and stage changes appear while a build or deployment runs. | The client follows an ongoing sequence of server-produced events. |
+| Delivery or order tracking | An open tracking page receives updates such as preparing, dispatched, and delivered. | The viewer primarily needs server-originated progress changes. |
+| Stock-price watchlist | Updated quotes appear for the symbols a viewer follows. | A display can consume one-way updates; this does not imply SSE is suitable for every trading latency requirement. |
+
+**Walk through a sports scoreboard:** the backend receives a score change from its data source, identifies the connected viewers following that match, and sends an event containing the match ID and updated score. Each browser updates the relevant score card. The viewer can change their favorite team through a separate HTTP API. If a connection drops, the product needs a way to retrieve the current score or replay missed events; SSE alone does not store match history.
+
+For a busy IoT or monitoring screen, send updates at a useful display rate or aggregate readings rather than rendering every raw measurement. The incoming device rate and the human-visible refresh rate can be different.
+
+**Interview practice:** choose SSE for a live score display, then explain what changes if the same product adds frequent two-way controls or must notify users after they close the page.
+
 ## 2. What actually travels over the wire?
 
 The client requests an endpoint, commonly using GET. The response has `Content-Type: text/event-stream`. Its UTF-8 body contains records separated by a blank line:

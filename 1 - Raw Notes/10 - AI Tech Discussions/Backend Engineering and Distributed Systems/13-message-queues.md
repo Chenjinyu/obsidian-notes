@@ -14,6 +14,23 @@ For an AI batch job, the API can save the job, enqueue a command, and return a j
 
 Use queues for background jobs, email generation, image processing, batch imports, and load leveling. Prefer synchronous HTTP/RPC when the caller needs a short immediate response. Prefer pub/sub when independent applications each need a copy; prefer a retained event log when replaying history is central.
 
+## Real-world use cases
+
+| Real-world scenario | Work placed on the queue | Why a work queue fits |
+|---|---|---|
+| Video upload platform | Transcode an uploaded video into playback formats. | The API can return a job ID while workers perform expensive background processing. |
+| Photo-sharing application | Generate thumbnails and image variants after an upload. | Independent image jobs can be spread across workers as capacity becomes available. |
+| Transactional email delivery | Send an order receipt or password-reset message. | The request handler can hand off delivery work, with expiry and priority policies appropriate to the message. |
+| Large customer-data import | Validate and import bounded chunks of a CSV file. | Workers can process chunks with controlled concurrency and track progress without one long web request. |
+| Invoice generation | Render and store a PDF invoice after an order is finalized. | Document rendering can happen asynchronously without delaying the checkout response. |
+| AI batch processing | Run embedding, summarization, or media-generation tasks on a worker pool. | A backlog can absorb bursts while concurrency limits protect scarce GPU or API capacity. |
+| Warehouse fulfillment | Process packing or label-generation tasks for accepted orders. | Workers share pending work and can resume after temporary failures, with duplicate-effect protection. |
+| Search-index refresh jobs | Recompute a document's searchable representation after content changes. | Background workers can handle indexing independently from the content-editing request. |
+
+**Walk through a video upload:** the API stores the upload and records a transcoding job. A reliable publication mechanism submits the job to a queue. A worker receives it, produces output files, records completion, and acknowledges the message. If it crashes before acknowledgment, the job may be delivered again, so output naming and completion checks must make repeated processing safe. The user can follow progress with polling or SSE.
+
+**Interview practice:** explain what happens when upload volume doubles but worker capacity does not. A queue delays excess work; it does not eliminate the need for capacity limits, backlog monitoring, and admission decisions.
+
 ## Terms that matter
 
 | Term | Meaning |

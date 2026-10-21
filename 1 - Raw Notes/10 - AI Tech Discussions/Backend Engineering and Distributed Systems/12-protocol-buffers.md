@@ -14,6 +14,24 @@ Think of a shared form definition: both services agree what field number 1 means
 
 Protobuf is not a transport, encryption scheme, database, or complete business validator. It can be used in files, queues, logs, or gRPC. gRPC commonly uses it for messages and service definitions, but the ideas are distinct.
 
+## Real-world use cases
+
+| Real-world scenario | What Protobuf represents | Why it fits |
+|---|---|---|
+| Typed internal gRPC API | Inventory requests, job results, and service method contracts. | Generated classes and stable schemas let services written in different languages exchange agreed message types. |
+| IoT telemetry | Device IDs, measurement values, timestamps, and battery readings. | A binary schema can reduce repeated field-name overhead across many structured messages; measure actual payload size for the workload. |
+| Order events in an event log | Events such as order accepted or shipment created. | Producers and consumers can share an explicit schema and evolve it compatibly, with a strategy for identifying message types and schema versions. |
+| Offline mobile synchronization | A client stores structured changes locally and later uploads them. | The same serialization can be used in local files and transport payloads; conflict resolution remains an application concern. |
+| Game service messages | Structured player actions, match state, or inventory updates. | Typed compact messages can be useful across clients and servers, independently of the chosen transport. |
+| Long-term measurement archives | Stored records are read by later versions of analytics software. | Stable field numbers and compatibility rules support reading older data, provided the necessary schema definitions are retained. |
+| Batch exchange between languages | A Python pipeline writes records consumed by a Java service. | Generated implementations share a wire format rather than maintaining unrelated custom parsers. |
+
+**Walk through an evolving sensor message:** version one includes a device ID and temperature. A later version adds an optional battery field with a new field number. Older readers can ignore the unknown field; newer readers must handle its absence in old messages. If temperature is later removed, reserve its old field number instead of reusing it for an unrelated measurement.
+
+Protobuf answers “how are these structured values represented as bytes?” A broker, HTTP API, gRPC call, or file system still moves or stores those bytes. It is not general-purpose compression, and smaller size than JSON is workload-dependent.
+
+**Interview practice:** explain how an old consumer and a new producer can coexist, then describe a schema change that would break that compatibility.
+
 ## Why use it instead of JSON?
 
 | Need | Protobuf helps by... | Trade-off |

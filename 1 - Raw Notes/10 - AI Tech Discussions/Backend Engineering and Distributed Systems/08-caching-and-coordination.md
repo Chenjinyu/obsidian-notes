@@ -14,6 +14,25 @@ JC correctly identified other optimizations: select only needed fields, use appr
 
 Do not add Redis just because the system has a status endpoint. If one client polls every five seconds and the entry expires in two seconds, cache-aside can miss on every request.
 
+## Real-world use cases
+
+| Real-world scenario | What gets cached or coordinated | Why it helps and what must remain correct |
+|---|---|---|
+| Popular product catalog | Many shoppers request the same product description and images' metadata. | Reusing a cached representation reduces repeated database reads; checkout must still validate authoritative price and availability. |
+| AI job-status page | Many viewers or services request the same job's progress. | A short-lived shared status entry can reuse one read across callers, provided the allowed display delay is explicit. |
+| Live sports scoreboard | Many fans request the latest score snapshot when opening or reconnecting to a page. | A shared current-score cache avoids querying the primary store for every viewer; event delivery can keep connected screens updated separately. |
+| Breaking-news article | A sudden audience surge requests an article just as its cache entry expires. | Coalescing concurrent loads lets callers share a refresh instead of all fetching the same database record. |
+| Geocoding or route lookup | Customers repeatedly request the same location result. | Caching can avoid repeated expensive external calls when provider terms and the result's validity permit reuse. |
+| User profile display | The same name and avatar appear on many pages. | Reusable display data can tolerate a defined refresh delay; cache keys and authorization must prevent cross-user or cross-tenant exposure. |
+| Multi-service configuration reads | Many service instances repeatedly read tenant display preferences or feature configuration. | Local and shared caches reduce reads, but each layer needs a freshness policy; sensitive authorization decisions may need stronger validation. |
+| Concurrent cache refresh across replicas | Several API instances notice the same missing popular key. | A shared lease can reduce duplicate refresh work across processes; bounded waiting and lease expiry handle a refresher crash. |
+
+**Walk through cached job status:** suppose the product accepts progress displays up to three seconds behind the authoritative state. That is a product requirement, not a universal TTL recommendation. A design might allocate part of that budget to cache age and the rest to replica lag, refresh time, and client update delay. If the user then clicks a critical action such as cancel or charge, the backend checks and changes authoritative state atomically under its business rules; it does not trust the cached display alone.
+
+For a news article, one loader per key can refresh while others wait or receive a previously cached version when serving stale content is allowed. A process-local lock coordinates only that process; several replicas need an appropriate shared strategy if cross-replica duplicate loads matter.
+
+**Interview practice:** quantify acceptable staleness from the user impact, then discuss a hot-key expiry, a crashed refresher, and a cache outage.
+
 ## 2. Vocabulary and cache patterns
 
 | Term | Meaning |

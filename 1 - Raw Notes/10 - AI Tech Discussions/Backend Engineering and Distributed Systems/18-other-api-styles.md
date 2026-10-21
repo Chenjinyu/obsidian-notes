@@ -12,6 +12,27 @@ REST, RPC, GraphQL, SOAP, messaging, SSE, and WebSocket are not all alternatives
 
 A company can expose GraphQL to a web application, call internal gRPC services, publish Kafka events, and use SSE for notifications. Choose each boundary based on its consumers and requirements.
 
+## Real-world use cases
+
+GraphQL and SOAP solve different integration needs. These are illustrative product requirements, not claims that every company in an industry uses a particular API style.
+
+| API style | Real-world scenario | What happens and why it fits |
+|---|---|---|
+| GraphQL | Mobile home screen | A client requests a profile summary, recent orders, and notification count through one schema, selecting the fields that screen needs. |
+| GraphQL | E-commerce product page | A client selects product variants, prices, reviews, and seller details while another client requests a smaller view from the same schema. |
+| GraphQL | Internal support portal | An agent views related customer, subscription, and ticket information through an API that composes backend data. Resolver authorization and query cost remain essential. |
+| GraphQL | Several evolving frontends | Web and mobile clients request different views as their screens evolve, reducing the need for a separate endpoint shape for every screen. |
+| SOAP | Insurance partner integration | A partner exposes policy or claim operations through a WSDL contract; the application exchanges the required SOAP XML messages. |
+| SOAP | Airline or travel-system integration | An existing provider requires contract-defined reservation operations and SOAP fault handling. Using its supported interface is the integration requirement. |
+| SOAP | Existing financial enterprise service | A system exposes customer or account operations through a SOAP service contract. The client follows the required schema and any specified security standards. |
+| SOAP | Carrier or logistics integration | A carrier's existing SOAP API provides shipment creation or tracking operations. Generated clients can help with the published contract. |
+
+**Walk through a GraphQL product page:** the client asks for a product's title, selected variants, and a limited set of reviews. Resolvers obtain the underlying data, possibly from several services. A single client request can still trigger many backend reads, so selection flexibility does not automatically mean lower server cost. Batch repeated lookups, paginate collections, enforce authorization, and bound query complexity.
+
+**Walk through a SOAP carrier integration:** obtain the carrier's service contract, build the required shipment request, and handle its defined response or fault. If a timeout occurs after sending the request, use the provider's operation identifier or status lookup to avoid creating a duplicate shipment. SOAP's envelope and schema do not remove the unknown-outcome problem.
+
+**Interview practice:** explain why frontend data-selection flexibility may favor GraphQL, while compatibility with an existing partner contract may require SOAP. Neither choice replaces queues, event delivery, or workflow recovery elsewhere in the product.
+
 ## GraphQL: clients select fields from a schema
 
 **GraphQL** lets clients request particular fields from a typed schema. The server validates the query and executes resolver functions that retrieve those fields. A query reads data; a mutation represents a write operation; a subscription provides ongoing results through a transport chosen by the implementation.

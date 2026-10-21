@@ -14,6 +14,24 @@ The spelling is RPC, rather than PRC. **gRPC is one RPC framework**, not a diffe
 
 Think of REST as commonly asking for a resource representation, such as `GET /jobs/123`, and RPC as invoking a named operation, such as `GetJobStatus(job_id="123")`. Both can use HTTP and both need security, versioning, retries, and observability. This is a difference in interface design, not proof that one is always faster.
 
+## Real-world use cases
+
+| Real-world scenario | Example remote operation | Why an RPC-style interface fits |
+|---|---|---|
+| Shipping quote at checkout | `CalculateShipping(cart, destination)` returns available delivery options. | The caller requests a named calculation from a service that owns shipping rules. |
+| Transaction risk evaluation | `EvaluateTransaction(transaction)` returns a risk result for an order workflow. | A business operation and its input/output contract are central to the interface. |
+| Inventory reservation | `ReserveInventory(order_id, items)` attempts to hold stock. | The service owns an operation with atomic business rules, not merely a field update. |
+| Machine-learning inference | `ClassifyDocument(document_ref)` returns labels or scores. | The caller wants the result of a remote computation without knowing the model implementation. |
+| Document conversion | `StartConversion(source_ref, format)` returns an operation ID. | An operation-oriented interface can start long work without keeping the RPC open until completion. |
+| Internal identity service | `CheckPermission(subject, action, resource)` evaluates an authorization policy. | Several services can call a defined decision operation while keeping policy ownership centralized. |
+| Enterprise system integration | `ValidatePurchaseOrder(order)` returns contract-defined validation results. | A remote business method can map directly to an existing enterprise capability. |
+
+**Walk through inventory reservation:** the checkout service calls the inventory service with an order ID and requested quantities. Inventory checks availability and records the reservation within its own consistency boundary. If the response is lost, checkout cannot assume nothing was reserved; it can query the reservation or retry with the same operation identity under a documented idempotency contract. RPC syntax does not remove network uncertainty.
+
+The same product could expose a resource-oriented HTTP API externally and use RPC internally. These use cases justify a named operation, but they do not prove that RPC is the only valid API design.
+
+**Interview practice:** explain why `reserve_inventory()` looks like a function call but needs deadlines, error handling, and duplicate-effect protection that a simple local function may not need.
+
 ## Workflow
 
 ```mermaid

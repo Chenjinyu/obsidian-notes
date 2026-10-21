@@ -10,6 +10,23 @@ Created and expanded: 2026-10-21. These guides build on our 2026-10-20 discussio
 
 This folder contains 18 topic guides, this learning map, and the original conversation summary. It covers core backend communication and distributed-system patterns; it is not an exhaustive catalog of every backend technology. File numbers are stable identifiers, not a required learning sequence.
 
+## Learn through real-world use cases
+
+Every technology guide now includes a dedicated **Real-world use cases** section near the beginning. Each table identifies an actual product scenario, describes what the technology does there, and explains why it fits. A short walkthrough and interview prompt help connect the scenario to the implementation and supporting techniques already in the guide.
+
+These are realistic illustrative designs, not claims about a named company's implementation. Timing and freshness examples are assumptions to discuss, not universal defaults.
+
+| Product you can picture | Guides to connect | What each contributes |
+|---|---|---|
+| Live sports application | [SSE](03-server-sent-events.md), [pub/sub](14-pubsub.md), [caching](08-caching-and-coordination.md) | Push score changes to open pages, distribute events among backend subscribers, and share current-score snapshots across readers. |
+| Online store | [REST](01-rest-apis.md), [webhooks](05-webhooks.md), [workflows](17-reliable-distributed-workflows.md) | Manage products and orders, receive external payment events, and recover from partial fulfillment failures. |
+| AI batch platform | [Polling](02-polling.md), [queues](13-message-queues.md), [traffic management](16-traffic-management-and-resilience.md) | Expose progress, distribute background jobs, and protect limited processing capacity. |
+| Collaborative whiteboard | [WebSockets](04-websockets.md), [RPC](10-rpc.md), [network foundations](09-network-foundations.md) | Exchange interactive changes, call backend operations, and understand connection failures. |
+| Connected-device platform | [gRPC](11-grpc.md), [Protobuf](12-protocol-buffers.md), [event streaming](15-event-streaming.md), [SSE](03-server-sent-events.md) | Exchange typed service messages, represent telemetry, retain history, and display live readings in a browser. |
+| Partner commerce integration | [Webhooks](05-webhooks.md), [HMAC](07-hmac-and-encoding.md), [retries](06-retries-backoff-jitter.md), [other API styles](18-other-api-styles.md) | Receive events, authenticate bytes, recover safely, and follow the partner's API contract. |
+
+For interview review, pick one scenario and answer: **What happens in the product? Why does this technology fit? What could fail? Which supporting techniques address those failures?** Keep the application use case and its supporting techniques distinct, then explain how they work together.
+
 ## Start with one familiar application
 
 You submit a prompt to an AI service. Generating the answer takes time. You want to see progress, receive text as it is produced, and recover if the connection breaks.

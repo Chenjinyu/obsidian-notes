@@ -14,6 +14,24 @@ For example: create an AI job, reserve a user's credits, run generation, store t
 
 An HTTP timeout, lost broker acknowledgment, or crashed worker can leave an **unknown outcome**. Do not equate “no response” with “nothing happened.”
 
+## Real-world use cases
+
+| Real-world scenario | Steps that can partially succeed | Why a reliable distributed workflow is needed |
+|---|---|---|
+| E-commerce fulfillment | Reserve stock, authorize payment, create a shipment, and send confirmation. | Different services can fail independently; the order needs recorded progress, safe retries, and recovery actions. |
+| Travel-package booking | Reserve a flight and hotel through separate providers. | One reservation may succeed while another fails; cancellation, refund, or manual resolution depends on provider and product rules. |
+| Paid AI generation | Reserve credits, run a model, store the result, and settle usage. | A crash must not silently lose the result or charge repeatedly for the same logical job. |
+| SaaS tenant provisioning | Create tenant records, allocate resources, configure access, and send onboarding instructions. | Provisioning may span multiple systems and take longer than one web request. |
+| Document approval | Wait for human review, collect signatures, and activate a contract or account. | The process may pause for hours or days and must resume after service restarts. |
+| Subscription activation | Record a successful purchase, update entitlements, and notify other services. | An outbox can couple the local state change with a publishable event; downstream consumers still need deduplication. |
+| Warehouse reconciliation | Compare order records with an external fulfillment provider after ambiguous timeouts. | Recovery must detect missing, duplicated, or unresolved operations rather than assuming every earlier call failed. |
+
+**Walk through an order failure:** inventory is reserved, but payment authorization is declined. The workflow records that outcome and attempts to release the reservation. If releasing fails, it records a pending recovery step and retries or escalates later. This compensation is a new business action; it is not a database rollback that erases all history. If payment instead times out with an unknown result, first determine whether authorization exists before deciding the next action.
+
+For accepted orders, save the order change and its outbox record in the same local transaction. Publishing can then be retried without losing the intention to notify downstream systems. An inbox or another durable deduplication record protects consumers from repeat effects; it does not create a global transaction across every service.
+
+**Interview practice:** describe the system state after each possible crash, including a crash after an external side effect succeeds but before the workflow records success.
+
 ## Definitions and guarantees
 
 | Concept | Meaning | Important boundary |

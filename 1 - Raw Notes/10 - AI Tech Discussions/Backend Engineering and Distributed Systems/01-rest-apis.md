@@ -16,6 +16,22 @@ REST is not another name for JSON or HTTP. Formal REST includes client/server se
 
 **Stateless does not mean the server has no database.** It means requests carry the context needed to interpret them rather than depending on a hidden sequence of earlier interactions with a particular server instance. The resource's persistent state still exists.
 
+## Real-world use cases
+
+| Real-world scenario | What happens in the product | Why a REST-style HTTP API fits |
+|---|---|---|
+| Online shopping | A customer browses products, adds cart items, creates an order, and checks its details. | Products, carts, and orders are identifiable resources with bounded requests and responses. |
+| Appointment booking | A patient views available slots, books an appointment, and later cancels it. | Availability and appointments have clear resource representations; the server validates conflicts when accepting a booking. |
+| SaaS administration | An administrator lists employees, updates team membership, and disables an account. | Resource URLs and standard HTTP methods provide a straightforward interface for an admin UI and automation. |
+| AI job submission | A client submits a document for summarization and receives a job ID before processing finishes. | A request can create a job resource; its result can be retrieved later without holding the submission request open. |
+| Delivery tracking | A retailer retrieves a shipment's current location and estimated delivery time from a carrier API. | The caller wants a current snapshot of a known shipment, rather than a continuous conversation. |
+| Media management | A creator lists videos, changes titles, and retrieves upload instructions or download links. | Metadata and media resources can be managed through a stable resource-oriented interface. |
+| Personal finance dashboard | An authenticated customer retrieves account details and paginated transaction history. | Readable resource boundaries, access checks, and pagination fit a request-driven screen. |
+
+**Walk through an online order:** the app reads `GET /products/42`, submits `POST /orders`, and receives an order ID. Later, `GET /orders/{id}` returns its current state. The server must validate price, inventory, and authorization when creating the order; a previously displayed product response is not a reservation. If the UI also needs live delivery updates, that same product can add SSE or polling beside the resource API.
+
+**Interview practice:** explain why a product catalog needs bounded resource requests, then identify the separate requirement that would justify adding live updates.
+
 ## 2. What happens in a request?
 
 The client sends a method, URL, headers, and sometimes a body. The server authenticates the caller, validates the request, checks authorization, performs an operation, and returns a status code, headers, and optionally a body. A normal request completes when that response body ends. The underlying HTTP connection may be reused for later requests; it does not require a new TCP connection for every request.

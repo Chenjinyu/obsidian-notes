@@ -21,6 +21,25 @@ Your status request times out. Maybe the server is overloaded; maybe one packet 
 
 Full jitter chooses uniformly from zero to the current bound. Equal/delayed jitter designs use a minimum plus randomness. Select a policy for the workload; randomness is not a correctness guarantee.
 
+## Real-world use cases
+
+These mechanisms become useful when a real product must recover from temporary failures or spread recurring work over time.
+
+| Real-world scenario | What goes wrong or creates load | How timeouts, retries, backoff, or jitter help |
+|---|---|---|
+| Mobile app on an unstable connection | A request for the user's feed fails during a network transition. | A bounded retry can recover a safe read; backoff avoids hammering the service while connectivity is unavailable. |
+| Bulk CRM synchronization | A migration worker exceeds a partner API's request quota and receives `429`. | Honor `Retry-After` when provided, then resume within a bounded policy instead of repeatedly exhausting the quota. |
+| IoT fleet after a power outage | Thousands of devices regain connectivity together. | Randomized reconnect delays spread attempts so the gateway can recover without a synchronized surge. |
+| Large deployment restarting clients | Many workers reconnect to a broker or service at once. | Backoff with jitter reduces synchronized retry waves after startup or failure. |
+| Payment request with a lost response | A store cannot tell whether the provider accepted a charge. | A deadline bounds waiting; the application uses the provider's idempotency contract or queries the existing payment before retrying. A new charge request could duplicate the effect. |
+| Overnight reporting jobs | Every customer's scheduled report begins at exactly midnight. | Add schedule jitter when the product allows a start-time window, spreading work even though no failure occurred. |
+| Shipping-label generation | A carrier API briefly returns a transient service error. | A worker can retry within a budget using the same logical operation identity, while permanent validation errors need correction. |
+| Many users checking job progress | Status requests or reconnects line up on the same interval boundaries. | Jitter spreads the requests; a longer or adaptive interval reduces their total count. Jitter by itself mainly changes timing. |
+
+**Walk through a CRM import:** a worker receives `429` with `Retry-After: 30`. It defers the next allowed attempt for at least that delay, subject to its overall deadline, and can add positive random delay if many workers share the quota. It does not ignore the header and retry after one second. A shared limiter may also be needed because independent workers can collectively exceed the same account quota.
+
+**Interview practice:** distinguish a transient failure from an invalid request, and distinguish an operation that is safe to retry from one whose outcome is unknown.
+
 ## 2. Where these ideas fit
 
 | Situation | Useful policy |

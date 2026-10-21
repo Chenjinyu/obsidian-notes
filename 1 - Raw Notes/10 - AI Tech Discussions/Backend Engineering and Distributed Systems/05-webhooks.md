@@ -14,6 +14,22 @@ Examples: a payment provider reports payment completion, a build system reports 
 
 A webhook is not a persistent connection. Each delivery is typically an independent HTTP request. It needs a reachable receiver, so it normally cannot call a browser tab directly. It also is not automatically a REST API, although the receiving endpoint uses HTTP.
 
+## Real-world use cases
+
+| Real-world scenario | Event and receiving system | Why a webhook fits |
+|---|---|---|
+| Payment completion | A payment service tells a store's backend that a payment succeeded or failed. | The result can arrive after checkout, and the store needs a server-to-server notification. |
+| Repository automation | A code-hosting service notifies a CI service about a push or pull-request change. | The event can start a build without the CI system repeatedly querying every repository. |
+| Order fulfillment | A commerce platform notifies a warehouse integration that an order is ready to fulfill. | An independent backend needs to react to a business event. |
+| Shipping updates | A carrier calls a retailer's endpoint when a shipment is dispatched or delivered. | Tracking changes originate outside the retailer's system. |
+| Electronic document signing | A signing service notifies a workflow backend that all required signatures are complete. | A long-running human process can resume when the external service reports completion. |
+| AI batch completion | An AI service calls a registered endpoint when a batch has finished. | The receiving backend can download results and start the next processing stage. |
+| Appointment changes | A scheduling provider informs a CRM about a new booking, cancellation, or reschedule. | The CRM can update its own records when changes happen in another service. |
+
+**Walk through payment completion:** the provider sends an event to the store's backend. The receiver verifies the provider's authentication scheme, durably records the event with a unique identifier, and acknowledges it promptly. A worker then updates the order using validated payment details and business rules. Duplicate deliveries must not ship a second package. To update an open checkout page, the store can expose the new order state through polling or SSE.
+
+**Interview practice:** explain who hosts the receiving endpoint, what happens if it is temporarily unavailable, and why an authenticated notification still needs duplicate handling.
+
 ## 2. How delivery works
 
 ```mermaid
