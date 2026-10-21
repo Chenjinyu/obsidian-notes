@@ -8,36 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3ec7e4b7f6d91b31",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 - Zettelkasten/A - Templates/LeetCode Template.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "LeetCode Template"
-            }
-          },
-          {
             "id": "fb7d35a712f885b6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/MCP Stateful vs REST Stateless.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0643.Maximum Average Subarray I.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -52,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "MCP Stateful vs REST Stateless"
+              "title": "E - 0643.Maximum Average Subarray I"
             }
           },
           {
@@ -274,8 +250,15 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "1a71e9f0de9191ea",
+  "active": "fb7d35a712f885b6",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0876. Middle of the Linked List.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0643.Maximum Average Subarray I.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0100. Same Tree.md",
+    "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/MCP Stateful vs REST Stateless.md",
+    "Untitled.md",
+    "3 - Zettelkasten/A - Templates/LeetCode Template.md",
+    "3 - Zettelkasten/A - Templates/LeetCode New Template.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0104. Maximum Depth of Binary Tree.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E - 0035. Search Insert Position.md",
     "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-19.md",
@@ -290,7 +273,6 @@
     "1 - Raw Notes/4 - Libs & Frameworks/Kubernetes/Untitled.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/SSE Connection via HTTP with event-stream in the API request header.md",
     "1 - Raw Notes/4 - Libs & Frameworks/Observability",
-    "1 - Raw Notes/2 - LLM & Agent AI/MCP/FastMCP/MCP Stateful vs REST Stateless.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/3. From Web to MCP.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/4. MCP Server State Control.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/3. From Web to MCP",
@@ -302,15 +284,9 @@
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/From Web to MCP",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/NOT STARTED - M - 1129. Shortest Path with Alternating Colors.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1302. Deepest Leaves Sum.md",
-    "3 - Zettelkasten/A - Templates/LeetCode Template.md",
-    "3 - Zettelkasten/A - Templates/Learn Review Template.md",
-    "3 - Zettelkasten/B - Tags/MCP.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E M - 0543. Diameter of Binary Tree.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/1. MCP Workflow + Architecture Design/file-20261012203407794.png",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/1. MCP Workflow + Architecture Design/file-20261012203047784.png",
     "1 - Raw Notes/11 - Canada Jobs Report/weekly",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 1293. Shortest Path in a Grid with Obstacles Elimination.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E M - 0496. Next Greater Element I.md",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/1. MCP Workflow + Architecture Design/file-20261012030517108.png",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/1. MCP Workflow + Architecture Design/file-20261012015546099.png",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/1. MCP Workflow + Architecture Design/file-20261012015340773.png",
