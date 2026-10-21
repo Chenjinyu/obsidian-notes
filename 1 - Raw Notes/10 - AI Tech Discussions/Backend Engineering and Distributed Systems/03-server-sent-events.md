@@ -8,7 +8,7 @@ sr-ease: 2.5
 
 ## 1. A definition you can picture
 
-**SSE stands for Server-Sent Events.** It is a web technology that lets a server push updates or a continuing stream of text to a browser or another client over a single, long-lived HTTP response. The client connects once; the server sends another event whenever new information becomes available, without waiting for another status request.
+**SSE stands for Server-Sent Events.** It is a web technology that lets a server push updates or a continuing stream of text to a browser or another **<span style="color:salmon">client over a single, long-lived HTTP</span>** response. The client connects once; the server sends another event whenever new information becomes available, without waiting for another status request.
 
 It is a good fit for sports scores, stock-price displays, job-status updates, notifications, and AI-generated text arriving a piece at a time. It is one-way at the application-event level: server to client. The client can still submit commands through separate HTTP requests.
 
