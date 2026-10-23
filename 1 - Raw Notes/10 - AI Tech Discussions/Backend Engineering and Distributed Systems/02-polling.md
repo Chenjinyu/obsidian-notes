@@ -14,6 +14,58 @@ An AI batch job can take five minutes. The client submits it once and then calls
 
 **Long polling** means the server holds a request open until a change occurs or a timeout expires, then finishes the response. The client sends another request. SSE differs: one response can carry many events without finishing after the first update.
 
+## Plain-text request flows
+
+### Polling — repeat GET with a five-second interval
+
+The server responds immediately, even when nothing has changed. In this example, the client waits five seconds after each unfinished response before sending the next GET.
+
+```text
+Client                              Server
+  |                                    |
+  |-------- GET /status --------------->|
+  |<------- Pending -------------------|
+  |                                    |
+  | Wait 5 seconds                     |
+  |                                    |
+  |-------- GET /status --------------->|
+  |<------- Pending -------------------|
+  |                                    |
+  | Wait 5 seconds                     |
+  |                                    |
+  |-------- GET /status --------------->|
+  |<------- Completed + result --------|
+```
+
+### Long polling — hold the request until an update or timeout
+
+If no update is available, the server keeps the HTTP request pending until an update arrives or the hold timeout expires. After either normal response, the client immediately sends the next GET.
+
+```text
+Client                              Server
+  |                                    |
+  |-------- GET /updates ------------->|
+  |                                    | No update yet
+  |         Request stays open         | Wait...
+  |                                    |
+  |                                    | Update arrives
+  |<------- 200 + update --------------|
+  |                                    |
+  | Immediately send another GET       |
+  |-------- GET /updates ------------->|
+  |                                    | No update yet
+  |         Request stays open         | Wait...
+  |                                    |
+  |                                    | Timeout reached
+  |<------- 204 No Content ------------|
+  |                                    |
+  | Immediately send another GET       |
+  |-------- GET /updates ------------->|
+  |         Request stays open         | Wait...
+```
+
+Long polling returns one response per GET; it does not stream multiple updates within the same response. `204 No Content` is an illustrative timeout response, not a required status code. Ordinary polling can also reuse an HTTP connection; the distinction is whether the server holds the request pending. Network failures and rate limits should use bounded retry/backoff rather than immediate retry loops.
+
 ## Real-world use cases
 
 | Real-world scenario | What happens in the product | Why polling fits |
