@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/11 - Canada Jobs Report/JOBS.md",
+                "file": "1 - Raw Notes/12 - US Jobs Report/Untitled.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "JOBS"
+              "title": "Untitled"
             }
           },
           {
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/11 - Canada Jobs Report/JOBS.md",
+                "file": "1 - Raw Notes/12 - US Jobs Report/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/11 - Canada Jobs Report/JOBS.md",
+                "file": "1 - Raw Notes/12 - US Jobs Report/Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/11 - Canada Jobs Report/JOBS.md",
+                "file": "1 - Raw Notes/12 - US Jobs Report/Untitled.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -194,7 +194,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/11 - Canada Jobs Report/JOBS.md"
+                "file": "1 - Raw Notes/12 - US Jobs Report/Untitled.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -252,6 +252,10 @@
   },
   "active": "fb7d35a712f885b6",
   "lastOpenFiles": [
+    "1 - Raw Notes/11 - Canada Jobs Report/README.md",
+    "1 - Raw Notes/12 - US Jobs Report/Untitled.md",
+    "1 - Raw Notes/11 - Canada Jobs Report/JOBS.md",
+    "1 - Raw Notes/14 - Data Management",
     "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-24.md",
     "1 - Raw Notes/11 - Canada Jobs Report/ChatGPT Weekly Report.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/02-polling.md",
@@ -280,9 +284,6 @@
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/11-grpc.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/10-rpc.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/09-network-foundations.md",
-    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/08-caching-and-coordination.md",
-    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/07-hmac-and-encoding.md",
-    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/06-retries-backoff-jitter.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems",
     "1 - Raw Notes/4 - Libs & Frameworks/Observability",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/3. From Web to MCP",
@@ -292,7 +293,6 @@
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/From Web to MCP",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/1. MCP Workflow + Architecture Design/file-20261012203407794.png",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/1. MCP Workflow + Architecture Design/file-20261012203047784.png",
-    "1 - Raw Notes/11 - Canada Jobs Report/weekly",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/1. MCP Workflow + Architecture Design/file-20261012030517108.png",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/1. MCP Workflow + Architecture Design/file-20261012015546099.png",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/1. MCP Workflow + Architecture Design/file-20261012015340773.png",

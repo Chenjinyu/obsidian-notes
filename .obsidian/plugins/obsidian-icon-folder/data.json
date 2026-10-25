@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "🇺🇸",
       "LiMessagesSquare",
       "LiTelescope",
       "LiDatabaseZap",
-      "LiNotebookPen",
-      "🇨🇦"
+      "LiNotebookPen"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -52,7 +52,8 @@
   "1 - Raw Notes/9 - Stocks": "💰",
   "1 - Raw Notes/7 - JCUS.LINK": "LiAppWindowMac",
   "1 - Raw Notes/11 - Canada Jobs Report": "🇨🇦",
-  "1 - Raw Notes/12 - Data Management": "LiDatabaseZap",
   "1 - Raw Notes/4 - Libs & Frameworks/Observability": "LiTelescope",
-  "1 - Raw Notes/10 - AI Tech Discussions": "LiMessagesSquare"
+  "1 - Raw Notes/10 - AI Tech Discussions": "LiMessagesSquare",
+  "1 - Raw Notes/14 - Data Management": "LiDatabaseZap",
+  "1 - Raw Notes/12 - US Jobs Report": "🇺🇸"
 }
