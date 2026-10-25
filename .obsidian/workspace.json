@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/12 - US Jobs Report/Untitled.md",
+                "file": "1 - Raw Notes/12 - US Jobs Report/README.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "README"
             }
           },
           {
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/12 - US Jobs Report/Untitled.md",
+                "file": "1 - Raw Notes/12 - US Jobs Report/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/12 - US Jobs Report/Untitled.md",
+                "file": "1 - Raw Notes/12 - US Jobs Report/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/12 - US Jobs Report/Untitled.md",
+                "file": "1 - Raw Notes/12 - US Jobs Report/README.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -194,7 +194,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/12 - US Jobs Report/Untitled.md"
+                "file": "1 - Raw Notes/12 - US Jobs Report/README.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -253,7 +253,7 @@
   "active": "fb7d35a712f885b6",
   "lastOpenFiles": [
     "1 - Raw Notes/11 - Canada Jobs Report/README.md",
-    "1 - Raw Notes/12 - US Jobs Report/Untitled.md",
+    "1 - Raw Notes/12 - US Jobs Report/README.md",
     "1 - Raw Notes/11 - Canada Jobs Report/JOBS.md",
     "1 - Raw Notes/14 - Data Management",
     "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-24.md",
