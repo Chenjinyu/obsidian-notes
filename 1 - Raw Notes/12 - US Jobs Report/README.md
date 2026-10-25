@@ -8,9 +8,11 @@
 
 ## 篩選條件
 
+**2026-10-25 JC明確排除Capital One任何職缺，不考慮重新加入該公司。此規則優先於歷史清單；不可從舊報告恢復推薦。履歷中的既有工作經歷保留。**
+
 2026-10-25初始化。Dallas／DFW（含Plano、Garland、Richardson、Irving、Frisco等）接受現場、每週五天或hybrid；另一組為允許居住Texas受聘的美國remote，不推薦需搬往DFW以外的現場職位。地點或remote資格未知者另列待確認。
 
-成熟、有規模公司的高匹配Backend、Full Stack、Platform、分散式系統／資料平台技術IC；優先Staff／Senior Staff／Principal，符合條件的Senior及技術Lead也可。排除小公司及創業初期公司。Toronto工程團隊只作有據加分項，不保證轉調。
+成熟、有規模公司的高匹配Backend、Full Stack、Platform、分散式系統／資料平台技術IC；優先Staff／Senior Staff／Principal，符合條件的Senior及技術Lead也可。排除小公司及創業初期公司。Toronto工程團隊只作有據加分項，不保證轉調。每份報告逐公司列Toronto研發布局與官方來源／核查日期，區分Toronto工程團隊、加拿大remote研發及尚未確認；一般辦公室或加拿大人數不得冒充Toronto專門中心。
 
 年度基本薪資USD270,000+、無上限。官方完整區間須適用地點和職級；下限達標標全區間達標，僅上限達標標需爭取。跨級／其他城市區間不能冒充德州已核實底薪；薪資未知或Texas資格未知獨立列候選。股票、bonus及入職金不補足底薪差額。不湊數。
 
