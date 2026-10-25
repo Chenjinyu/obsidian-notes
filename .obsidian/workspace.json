@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/02-polling.md",
+                "file": "1 - Raw Notes/11 - Canada Jobs Report/JOBS.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "02-polling"
+              "title": "JOBS"
             }
           },
           {
@@ -114,7 +114,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 415.5357666015625
+    "width": 297.030517578125
   },
   "right": {
     "id": "c375af2eeef2242a",
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/02-polling.md",
+                "file": "1 - Raw Notes/11 - Canada Jobs Report/JOBS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/02-polling.md",
+                "file": "1 - Raw Notes/11 - Canada Jobs Report/JOBS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/02-polling.md",
+                "file": "1 - Raw Notes/11 - Canada Jobs Report/JOBS.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -194,7 +194,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/02-polling.md"
+                "file": "1 - Raw Notes/11 - Canada Jobs Report/JOBS.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -232,7 +232,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 402.8848876953125
+    "width": 264.193359375
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -252,11 +252,12 @@
   },
   "active": "fb7d35a712f885b6",
   "lastOpenFiles": [
+    "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-24.md",
+    "1 - Raw Notes/11 - Canada Jobs Report/ChatGPT Weekly Report.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/02-polling.md",
     "1 - Raw Notes/13 -Notes for Certified/Untitled.md",
     "1 - Raw Notes/13 -Notes for Certified/01 - Claude Certified Developer - Foundations(CCDV)",
-    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/02-polling.md",
     "1 - Raw Notes/13 -Notes for Certified",
-    "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-24.md",
     "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-23.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/01-rest-apis.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/04-websockets.md",
