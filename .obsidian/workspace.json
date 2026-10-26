@@ -250,8 +250,10 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "fb7d35a712f885b6",
+  "active": "1a71e9f0de9191ea",
   "lastOpenFiles": [
+    "1 - Raw Notes/10 - AI Tech Discussions/api-gateway-ecs-multi-tenant-rate-limiting.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/19-api-gateway-ecs-multi-tenant-rate-limiting.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/2 - CAP Theorem - PACELC.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/4 - Caching.md",
     "1 - Raw Notes/5 - Terminology/Blast-Radius.md",
@@ -283,8 +285,6 @@
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/18-other-api-styles.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/17-reliable-distributed-workflows.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/16-traffic-management-and-resilience.md",
-    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/15-event-streaming.md",
-    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/14-pubsub.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems",
     "1 - Raw Notes/4 - Libs & Frameworks/Observability",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/3. From Web to MCP",
