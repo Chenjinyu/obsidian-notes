@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/12 - US Jobs Report/README.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/2 - CAP Theorem (定理).md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "2 - CAP Theorem (定理)"
             }
           },
           {
@@ -114,7 +114,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 297.030517578125
+    "width": 364.662353515625
   },
   "right": {
     "id": "c375af2eeef2242a",
@@ -131,7 +131,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/12 - US Jobs Report/README.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/2 - CAP Theorem (定理).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +150,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/12 - US Jobs Report/README.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/2 - CAP Theorem (定理).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -179,7 +179,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/12 - US Jobs Report/README.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/2 - CAP Theorem (定理).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -194,7 +194,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/12 - US Jobs Report/README.md"
+                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/2 - CAP Theorem (定理).md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -252,11 +252,14 @@
   },
   "active": "fb7d35a712f885b6",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/2 - CAP Theorem - PACELC.md",
+    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/4 - Caching.md",
+    "1 - Raw Notes/5 - Terminology/Blast-Radius.md",
+    "1 - Raw Notes/12 - US Jobs Report/README.md",
     "1 - Raw Notes/12 - US Jobs Report/weekly/2026-10-25.md",
     "1 - Raw Notes/12 - US Jobs Report/weekly",
     "1 - Raw Notes/12 - US Jobs Report/JOBS.md",
     "1 - Raw Notes/11 - Canada Jobs Report/README.md",
-    "1 - Raw Notes/12 - US Jobs Report/README.md",
     "1 - Raw Notes/11 - Canada Jobs Report/JOBS.md",
     "1 - Raw Notes/14 - Data Management",
     "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-24.md",
@@ -282,9 +285,6 @@
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/16-traffic-management-and-resilience.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/15-event-streaming.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/14-pubsub.md",
-    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/13-message-queues.md",
-    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/12-protocol-buffers.md",
-    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/11-grpc.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems",
     "1 - Raw Notes/4 - Libs & Frameworks/Observability",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/3. From Web to MCP",
