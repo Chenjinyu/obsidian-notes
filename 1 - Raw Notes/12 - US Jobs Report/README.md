@@ -2,6 +2,8 @@
 
 ## 使用方式
 
+最新：[2026-10-28美國職缺與面試報告](weekly/2026-10-28.md)。累積歷史見[JOBS.md報告索引](JOBS.md#報告索引)。
+
 - [JOBS.md](JOBS.md)：累積總表，JC可修改「我的選擇／我的備註」。
 - weekly/YYYY-MM-DD.md：每次研究與來源快照，日期使用America/Chicago；同日重跑更新原檔。
 - monthly/YYYY-MM.md：供未來月度彙整使用；目前尚無月報。
