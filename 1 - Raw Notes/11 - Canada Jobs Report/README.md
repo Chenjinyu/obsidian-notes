@@ -79,3 +79,9 @@ JOBS.md 保留最新逐職位面試研究連結，使用者選擇與備註不變
 官方參考（本輪按已討論並核查的規則更新，未宣稱特定職位已獲公司承諾）：
 - [CUSMA 第16章及專業人士資格](https://www.international.gc.ca/trade-commerce/trade-agreements-accords-commerciaux/agr-acc/cusma-aceum/text-texte/16.aspx?lang=eng)
 - [IRCC：International Mobility Program 雇主聘用步驟](https://www.canada.ca/en/immigration-refugees-citizenship/services/work-canada/hire-temporary-foreign/international-mobility-program/how-to-hire.html)
+
+## 公司排除（2026-10-25生效）
+
+JC明確不考慮回Capital One。Capital One（含CapitalOne等名稱寫法）的任何職缺均不搜尋推薦、不重新加入JOBS.md、不納入共同技能樣本或面試準備目標。適用美國與加拿大職缺；不影響履歷既有工作經歷的真實記載。歷史報告若含該公司，只保留當時快照作排除紀錄，不再列候選。
+
+本規則於2026-10-28同步保存，優先於其他公司／薪資線索。
