@@ -48,6 +48,41 @@ The client sends a method, URL, headers, and sometimes a body. The server authen
 
 Useful statuses: 200 success; 201 created; 202 accepted but not complete; 204 success without body; 400 bad request; 401 missing/invalid authentication; 403 forbidden; 404 not found; 409 conflict; 412 failed precondition; 422 validation failure in this FastAPI example; 429 rate limit; 503 temporarily unavailable.
 
+### 204 use cases
+1. Deleting a resource
+2. Updating an entire resource without a read-back(PUT)
+3. Executing an Action/Command with No return data(POST)
+4. CORS Preflight Requests(OPTIONS)
+#### When should use 201 or 204
+![](assets/01-rest-apis/file-20261028215911594.png)
+```python
+from fastapi import FastAPI, Response, status
+from pydantic import BaseModel
+
+app = FastAPI()
+fake_db = {}  # Mock database
+
+class Item(BaseModel):
+    name: str
+    price: float
+
+@app.put("/items/{item_id}")
+async def save_item(item_id: int, item_data: Item, response: Response):
+    # 1. Check if the resource already exists
+    if item_id in fake_db:
+        # Update Path
+        fake_db[item_id] = item_data.model_dump()
+        response.status_code = status.HTTP_204_NO_CONTENT
+        return  # Returns an empty body with 204
+    
+    else:
+        # Creation Path
+        fake_db[item_id] = item_data.model_dump()
+        response.status_code = status.HTTP_201_CREATED
+        return {"message": "Resource created successfully", "id": item_id}
+
+```
+
 ## 3. When should I use it?
 
 Use an HTTP API for CRUD, job submission, retrieving final results, configuration, and occasional client commands. It fits browser, mobile, and backend callers. If a job takes minutes, return a job ID rather than making a normal request wait for the whole execution.
