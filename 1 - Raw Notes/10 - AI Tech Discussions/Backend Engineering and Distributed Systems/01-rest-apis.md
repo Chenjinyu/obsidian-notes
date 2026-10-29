@@ -133,6 +133,7 @@ Sending `Idempotency-Key` by itself does not make a POST safe. The minimal serve
 3. What does 202 promise, and what does it not promise?
 4. How do REST, polling, and SSE coexist in one application?
 5. Why can repeated DELETE calls be idempotent even if one returns 204 and another 404?
+	1. after one call or ten calls, the end state is identical -
 
 ## 7. References and next step
 
