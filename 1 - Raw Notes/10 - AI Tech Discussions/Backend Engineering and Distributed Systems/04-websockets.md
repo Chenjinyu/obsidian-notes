@@ -17,9 +17,10 @@ Think of collaborative editing: you send cursor movements and edits while receiv
 <span style="color:orange">FastAPI</span> supports websocket and HTTP, websocket wraps up on the TLS, uses TCP as its underlying transport, the HTTP/1.1.
 ```text
 REST API:
-HTTP -> TCP -> IP
+HTTPS -> TLS -> TCP -> IP
 
-Web
+WebSocket:
+WebSocket Protocol -> TLS -> TCP - IP
 ```
 
 The familiar HTTP/1.1 setup uses an Upgrade handshake. After that, messages use WebSocket frames rather than a sequence of REST requests. Other HTTP versions have their own standardized establishment mechanisms, so “always HTTP 101” is not universal.
