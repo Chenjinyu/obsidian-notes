@@ -10,7 +10,9 @@ sr-ease: 2.5
 
 **WebSocket is a protocol that lets a client and server independently send messages over an established connection.** After setup, the server can send a message without waiting for a new request, and the client can send one without opening a separate HTTP request, and these messages send from each other are no order, they are bi-directional.
 
-Think of collaborative editing: you send cursor movements and edits while receiving other users' changes. Both directions are active. WebSocket supports text and binary messages. Use `wss://` for encrypted production connections; `ws://` is appropriate for local demonstrations.
+Think of collaborative editing: you send cursor movements and edits while receiving other users' changes. Both directions are active. WebSocket supports text and binary messages. Use `wss://`  (WebSocket Secure)for encrypted production connections; `ws://` is appropriate for local demonstrations.
+
+`wss://` is the websocket secure wraps the connection in a Transport Layer Security(TLS/SSL) encryption tunnel. it typically operates over port 443. All real-time messages traveling back and forth are completely scrambled and encrypted. 
 
 The familiar HTTP/1.1 setup uses an Upgrade handshake. After that, messages use WebSocket frames rather than a sequence of REST requests. Other HTTP versions have their own standardized establishment mechanisms, so “always HTTP 101” is not universal.
 
@@ -18,18 +20,18 @@ SSE fits one-way event delivery. A bidirectional WebSocket may be useful for cha
 
 ## Real-world use cases
 
-| Real-world scenario | What travels in both directions | Why WebSocket fits |
-|---|---|---|
-| Collaborative document editing | A user sends edits and cursor positions while receiving other collaborators' changes. | Both sides independently send frequent messages during the editing session. |
-| Live chat with presence | Users send messages and typing indicators while receiving messages, presence changes, and receipts. | One connection can carry frequent interactive traffic in both directions. HTTP submission plus SSE is also a valid design for some chat products. |
-| Multiplayer board or casual game | Players send moves and receive game-state updates and other players' actions. | The application needs ongoing low-latency interaction; a server still validates legal moves and authoritative state. |
-| Browser-based remote terminal | The browser sends keystrokes and resize commands while receiving terminal output. | Input and output happen independently throughout a session. |
-| Live auction | Bidders send bids and receive accepted-bid updates and auction-clock changes. | Frequent commands and updates share a connection; authoritative server rules decide which bids count. |
-| Collaborative whiteboard | Participants send drawing operations while receiving strokes and selections from others. | Many small messages flow in both directions as users interact. |
-| IoT device control panel | An operator sends commands and receives device acknowledgments and telemetry. | A browser can maintain an interactive session with a gateway that connects to the devices. |
-| Interactive AI session | A client sends user input, cancellation, or control messages while receiving partial output and session events. | Bidirectional session control can be useful; media transport may require additional protocols depending on latency and playback needs. |
+| Real-world scenario              | What travels in both directions                                                                                 | Why WebSocket fits                                                                                                                                |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Collaborative document editing   | A user sends edits and cursor positions while receiving other collaborators' changes.                           | Both sides independently send frequent messages during the editing session.                                                                       |
+| Live chat with presence          | Users send messages and typing indicators while receiving messages, presence changes, and receipts.             | One connection can carry frequent interactive traffic in both directions. HTTP submission plus SSE is also a valid design for some chat products. |
+| Multiplayer board or casual game | Players send moves and receive game-state updates and other players' actions.                                   | The application needs ongoing low-latency interaction; a server still validates legal moves and authoritative state.                              |
+| Browser-based remote terminal    | The browser sends keystrokes and resize commands while receiving terminal output.                               | Input and output happen independently throughout a session.                                                                                       |
+| Live auction                     | Bidders send bids and receive accepted-bid updates and auction-clock changes.                                   | Frequent commands and updates share a connection; authoritative server rules decide which bids count.                                             |
+| Collaborative whiteboard         | Participants send drawing operations while receiving strokes and selections from others.                        | Many small messages flow in both directions as users interact.                                                                                    |
+| IoT device control panel         | An operator sends commands and receives device acknowledgments and telemetry.                                   | A browser can maintain an interactive session with a gateway that connects to the devices.                                                        |
+| Interactive AI session           | A client sends user input, cancellation, or control messages while receiving partial output and session events. | Bidirectional session control can be useful; media transport may require additional protocols depending on latency and playback needs.            |
 
-**Walk through a shared whiteboard:** Alice sends a stroke operation to the server. The server checks that she belongs to the board, assigns application-level ordering metadata if required, and distributes the accepted operation to other participants. Bob can send his own stroke at the same time. WebSocket carries messages, but conflict resolution, reconnect recovery, and saving the board are application responsibilities.
+**Walk through a shared whiteboard:** Alice sends a stroke(笔画) operation to the server. The server checks that she belongs to the board, assigns application-level ordering metadata if required, and distributes the accepted operation to other participants. Bob can send his own stroke at the same time. WebSocket carries messages, but conflict resolution, reconnect recovery, and saving the board are application responsibilities.
 
 **Interview practice:** explain why a remote terminal benefits from bidirectional messages, while a page that only displays score changes can use SSE. For games, discuss latency requirements before assuming WebSocket suits every real-time game.
 
