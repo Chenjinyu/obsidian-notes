@@ -8,29 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "fb7d35a712f885b6",
-            "type": "leaf",
-            "state": {
-              "type": "canvas",
-              "state": {
-                "file": "1 - Raw Notes/13 - Notes for Certified/Untitled.canvas",
-                "viewState": {
-                  "x": 0,
-                  "y": 0,
-                  "zoom": 0
-                }
-              },
-              "icon": "lucide-layout-dashboard",
-              "title": "Untitled"
-            }
-          },
-          {
             "id": "ac4ce6ce687a9512",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/E M - 0543. Diameter of Binary Tree.md",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/01-rest-apis.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -45,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "E M - 0543. Diameter of Binary Tree"
+              "title": "01-rest-apis"
             }
           }
         ]
@@ -107,7 +90,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 505.74169921875
+    "width": 450.25457763671875
   },
   "right": {
     "id": "c375af2eeef2242a",
@@ -124,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/13 - Notes for Certified/Untitled.canvas",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/01-rest-apis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -143,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/13 - Notes for Certified/Untitled.canvas",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/01-rest-apis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -172,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/13 - Notes for Certified/Untitled.canvas",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/01-rest-apis.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -187,7 +170,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/13 - Notes for Certified/Untitled.canvas"
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/01-rest-apis.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -243,13 +226,13 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "1a71e9f0de9191ea",
+  "active": "ac4ce6ce687a9512",
   "lastOpenFiles": [
+    "1 - Raw Notes/13 - Notes for Certified/Untitled.canvas",
     "1 - Raw Notes/12 - US Jobs Report/weekly/2026-10-28.md",
     "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-28.md",
     "1 - Raw Notes/13 - Notes for Certified/AWS Certified Generative AI Developer Professional(AIP-C01)",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/2 - CAP Theorem (定理).md",
-    "1 - Raw Notes/13 - Notes for Certified/Untitled.canvas",
     "1 - Raw Notes/10 - AI Tech Discussions/api-gateway-ecs-multi-tenant-rate-limiting.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/19-api-gateway-ecs-multi-tenant-rate-limiting.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/2 - CAP Theorem - PACELC.md",
@@ -279,7 +262,6 @@
     "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-12.md",
     "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-19.md",
     "1 - Raw Notes/10 - AI Tech Discussions/2026-10-20 - Polling, Webhooks, HMAC and Distributed Caching.md",
-    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/2026-10-20 - Polling, Webhooks, HMAC and Distributed Caching.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems",
     "1 - Raw Notes/4 - Libs & Frameworks/Observability",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/3. From Web to MCP",
