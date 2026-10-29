@@ -29,7 +29,276 @@ A webhook is not a persistent connection. Each delivery is typically an independ
 
 **Interview practice:** explain who hosts the receiving endpoint, what happens if it is temporarily unavailable, and why an authenticated notification still needs duplicate handling.
 
-## 2. How delivery works
+## 2. A complete webhook happy path: React → FastAPI → Stripe → React
+
+This section focuses on understanding **who calls whom** and **which HTTP response belongs to which request**. Code samples are deliberately **illustrative snippets**, not a runnable project. Stripe-side code is conceptual pseudocode, **not Stripe's source code**.
+
+**Actors:** customer browser (React + TypeScript), your FastAPI backend (Python), your database, and external Stripe.
+
+### End-to-end sequence
+
+\`\`\`mermaid
+sequenceDiagram
+    autonumber
+    participant C as Customer
+    participant UI as React TypeScript UI
+    participant API as Your FastAPI backend
+    participant DB as Database
+    participant S as Stripe
+    C->>UI: Click Pay
+    UI->>API: POST /api/payments {orderId}
+    API->>DB: Load order and trusted price
+    DB-->>API: Order
+    API->>S: Create Checkout Session (Stripe API)
+    S-->>API: Checkout URL and session ID
+    API->>DB: Store session ID for order
+    API-->>UI: {checkoutUrl}
+    UI->>S: Redirect browser to Stripe Checkout
+    C->>S: Complete payment
+    Note over S,API: New independent HTTP request
+    S->>API: POST /webhooks/stripe (payment event)
+    API->>API: Verify signature and event
+    API->>DB: Update order to paid
+    DB-->>API: Committed
+    API-->>S: HTTP 200 acknowledgement
+    Note over UI,API: Frontend can poll or listen with SSE
+    UI->>API: GET /api/orders/order-123
+    API->>DB: Read order status
+    DB-->>API: paid
+    API-->>UI: {paymentStatus: paid}
+    UI-->>C: Display success
+\`\`\`
+
+The initial Stripe API response **creates a checkout session**; it is **not** the final payment result. The webhook is a **second, provider-initiated HTTP request**. Stripe receives the webhook endpoint's HTTP 200 response; the browser does not. The Stripe browser redirect and webhook can happen in either order, so the UI reads your backend's actual status.
+
+### Step 1: React TypeScript calls your FastAPI backend
+
+\`\`\`tsx
+// Frontend: user clicks Pay
+async function handlePay(orderId: string): Promise<void> {
+  const response = await fetch("/api/payments", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({orderId}),
+  });
+  const data: {checkoutUrl: string} = await response.json();
+  window.location.assign(data.checkoutUrl);
+}
+\`\`\`
+
+**Request:** \`POST /api/payments\` with \`{"orderId":"order-123"}\`. Your backend checks the order and authoritative price; do not trust a price submitted by the browser.
+
+### Step 2: FastAPI calls the external Stripe API
+
+\`\`\`python
+# Illustrative endpoint; get_order(), save_session() and configuration omitted.
+@app.post("/api/payments")
+def create_payment(request: PaymentRequest):
+    order = get_order(request.orderId)
+    session = stripe.checkout.Session.create(
+        mode="payment",
+        line_items=[{"price": order.stripe_price_id, "quantity": 1}],
+        client_reference_id=order.id,
+        success_url="https://myapp.example/payment/success",
+        cancel_url="https://myapp.example/payment/cancel",
+    )
+    save_session(order.id, session.id)
+    return {"checkoutUrl": session.url}
+\`\`\`
+
+Conceptually, Stripe receives a request to \`POST /v1/checkout/sessions\` (authenticated with your server's Stripe secret key) with mode, order reference, items, and browser redirect URLs. Stripe immediately responds with something like:
+
+\`\`\`json
+{
+  "id": "cs_test_example",
+  "status": "open",
+  "payment_status": "unpaid",
+  "url": "https://checkout.stripe.com/..."
+}
+\`\`\`
+
+The frontend redirects the customer to that URL. **Important:** \`success_url\` and \`cancel_url\` are **browser redirects**, not webhook URLs.
+
+### Step 3: Stripe-side behavior (conceptual pseudocode)
+
+After checkout, the provider creates a payment event and sends it to webhook destinations registered for that event type. This is a **conceptual illustration of external provider behavior**, not Stripe's actual implementation:
+
+\`\`\`python
+def on_payment_completed(checkout_session):
+    event = {
+        "id": "evt_example",
+        "type": "checkout.session.completed",
+        "data": {"object": {
+            "id": checkout_session.id,
+            "client_reference_id": checkout_session.order_id,
+            "payment_status": "paid"
+        }}
+    }
+    # URL comes from provider webhook configuration, not this payment API call.
+    post_signed_webhook(registered_webhook_url, event)
+\`\`\`
+
+New HTTP request to your backend, simplified:
+
+\`\`\`http
+POST /webhooks/stripe HTTP/1.1
+Host: api.myapp.example
+Content-Type: application/json
+Stripe-Signature: t=...,v1=...
+
+{
+  "id": "evt_example",
+  "type": "checkout.session.completed",
+  "data": {
+    "object": {
+      "id": "cs_test_example",
+      "client_reference_id": "order-123",
+      "payment_status": "paid"
+    }
+  }
+}
+\`\`\`
+
+### Step 4: FastAPI receives the callback and updates its own database
+
+\`\`\`python
+# Conceptual short version: Stripe signature verification is essential.
+@app.post("/webhooks/stripe")
+async def stripe_webhook(request: Request):
+    raw_body = await request.body()
+    event = stripe.Webhook.construct_event(
+        raw_body,
+        request.headers["stripe-signature"],
+        STRIPE_WEBHOOK_SECRET,
+    )
+    if event["type"] == "checkout.session.completed":
+        session = event["data"]["object"]
+        if session["payment_status"] == "paid":
+            mark_order_paid_in_db(session["client_reference_id"])
+    return {"received": True}  # HTTP 200 goes to Stripe, NOT React
+\`\`\`
+
+Production implementations also validate the session/order relationship and amounts, deduplicate events, and handle delayed payment methods. Those reliability techniques are covered later; they are not the focus of this happy-path walkthrough.
+
+### How does Stripe know which webhook URL to call?
+
+**Pattern A — Register webhook URL with provider (usual Stripe pattern).** In the Stripe Dashboard, configure a **webhook event destination** (or configure it through Stripe's endpoint management API):
+
+\`\`\`text
+Webhook destination URL: https://api.myapp.example/webhooks/stripe
+Events: checkout.session.completed
+        checkout.session.async_payment_succeeded
+        checkout.session.async_payment_failed
+\`\`\`
+
+This configuration tells Stripe where to POST subscribed events. **You do not ordinarily provide \`callback_url\` on every Stripe Checkout Session API call.** One URL can handle multiple event types by checking the event's \`type\`; multiple destinations are also supported.
+
+**Pattern B — Put callback_url in the individual request (some other APIs).** A custom AI processing or batch-job service might explicitly support this:
+
+\`\`\`python
+# Your backend initiates an AI job with a per-job callback URL.
+httpx.post("https://ai.example/jobs", json={
+    "document_id": "doc-123",
+    "callback_url": "https://api.myapp.example/webhooks/ai",
+})
+
+# Later, the AI provider calls your webhook.
+httpx.post("https://api.myapp.example/webhooks/ai", json={
+    "job_id": "job-456", "status": "completed", "result": "Summary ..."
+})
+\`\`\`
+
+**Which is common?** Registered destinations are typical for Stripe payments, subscriptions, and GitHub events. Per-request callbacks appear in some async job-processing APIs. They are **provider-defined contracts**: you cannot simply add \`callback_url\` to Stripe's Checkout API and expect it to work. Per-request callbacks provide flexibility but require safe destination validation by the provider.
+
+### Step 5: Frontend gets the status — polling OR SSE
+
+The **database does not automatically send a message directly to React** in this architecture. Your backend saves the new status, and React can either query it or receive a notification from your backend.
+
+**Polling: React repeatedly reads status via FastAPI.**
+
+\`\`\`tsx
+const timer = window.setInterval(async () => {
+  const response = await fetch("/api/orders/order-123");
+  const order: {paymentStatus: string} = await response.json();
+  setPaymentStatus(order.paymentStatus);
+  if (order.paymentStatus === "paid" || order.paymentStatus === "failed") {
+    window.clearInterval(timer);
+  }
+}, 2000);
+\`\`\`
+
+\`\`\`python
+@app.get("/api/orders/{order_id}")
+def get_order_status(order_id: str):
+    return {"paymentStatus": read_payment_status_from_db(order_id)}
+\`\`\`
+
+\`\`\`text
+React -- GET /api/orders/123 --> FastAPI -- SELECT --> DB
+React <-- {"paymentStatus":"pending"} -- FastAPI
+...two seconds later...
+React -- GET /api/orders/123 --> FastAPI -- SELECT --> DB
+React <-- {"paymentStatus":"paid"} -- FastAPI
+\`\`\`
+
+**SSE: React keeps a server-to-client HTTP stream open; FastAPI pushes updates.**
+
+\`\`\`tsx
+const source = new EventSource("/api/orders/order-123/events");
+source.onmessage = (event: MessageEvent<string>) => {
+  const update: {status: string} = JSON.parse(event.data);
+  setPaymentStatus(update.status);
+  if (update.status === "paid" || update.status === "failed") source.close();
+};
+\`\`\`
+
+\`\`\`python
+# Conceptual FastAPI example; subscribe_to_updates is an app-specific helper.
+@app.get("/api/orders/{order_id}/events")
+async def order_events(order_id: str):
+    async def stream():
+        async for status in subscribe_to_updates(order_id):
+            yield f'data: {json.dumps({"status": status})}\n\n'
+    return StreamingResponse(stream(), media_type="text/event-stream")
+
+# After webhook database update succeeds, backend calls:
+# publish_update(order_id, "paid")   # app-specific helper
+\`\`\`
+
+\`\`\`text
+React --- GET /api/orders/123/events ---> FastAPI (SSE open)
+Stripe --- POST /webhooks/stripe -------> FastAPI
+FastAPI --- UPDATE payment status ------> Database
+FastAPI --- publish status to SSE ------> React displays paid
+\`\`\`
+
+These SSE helper names are **pseudocode**, not built-in FastAPI APIs. A real SSE stream should send current state on subscription to avoid missing a completed event. With multiple ECS tasks, a shared messaging mechanism (such as Redis Pub/Sub) can distribute events between tasks.
+
+| Mechanism | Direction | Responsibility |
+|---|---|---|
+| Webhook | Stripe → Your FastAPI | External event notification |
+| Polling | React → Your FastAPI | Repeatedly read DB-backed status |
+| SSE | Your FastAPI → React | Push DB updates to the UI |
+| WebSocket | Both directions | Alternative persistent two-way communication |
+
+### Popular real-world webhook use cases
+
+| Example | Provider event | Your backend's action |
+|---|---|---|
+| Online payment | Payment completed | Mark order paid |
+| Subscription billing | Renewed/canceled | Update account access |
+| GitHub / CI | Push / pull request | Trigger build or tests |
+| AI background job | Job finished | Store results and notify user |
+| Shipping | Delivered | Update tracking |
+| Email | Delivered/bounced | Update notification state |
+| Document signing | All signatures collected | Continue approval process |
+| Appointment scheduling | Booking/cancellation | Update calendar/CRM |
+
+**Interview summary:** A webhook is a provider-initiated HTTP callback. A frontend calls its backend, which may call an external API. Later the external provider makes a new HTTP request to a registered webhook URL. Our backend verifies it, updates its database, and acknowledges the provider. The frontend sees changes via polling or SSE. These are separate communications.
+
+---
+
+## 3. How delivery works
 
 ```mermaid
 sequenceDiagram
@@ -53,7 +322,7 @@ sequenceDiagram
 
 A 2xx acknowledgment should mean you have durably accepted responsibility, not necessarily finished every downstream action. If storing the event fails, do not falsely acknowledge it. Provider retry behavior differs: some retry automatically, others require configured/manual redelivery. Inspect the contract.
 
-## 3. Runnable receiver with a durable local inbox
+## 4. Runnable receiver with a durable local inbox
 
 Install `fastapi`, `uvicorn`, and `httpx`. Copy `webhook_security.py` from the [HMAC guide](07-hmac-and-encoding.md). Save the following as `webhook_server.py`.
 
@@ -138,7 +407,7 @@ async def receive(request: Request):
 
 The unique key makes concurrent duplicate inserts safe. A production deduplication key often includes provider/account/tenant plus event ID. The signing secret identifies the sender; validate the sender's authority over the event's tenant/job before accepting business effects. Add ingress timeouts as well as size limits.
 
-## 4. Runnable sender
+## 5. Runnable sender
 
 Save as `webhook_sender.py`; run with the same `WEBHOOK_SECRET` value:
 
@@ -173,13 +442,13 @@ with httpx.Client(timeout=5) as client:
 
 For a fresh inbox, the first response reports duplicate=false and the second duplicate=true. Re-running the script reports duplicates because the event remains stored. The stable event ID stays the same even if a delivery gets a fresh timestamp/signature.
 
-## 5. Acceptance is different from idempotent processing
+## 6. Acceptance is different from idempotent processing
 
 The receiver above ensures one inbox record. It does not prove a downstream action occurs once. A worker can crash after an effect but before marking processed.
 
 For effects in the same database, atomically claim/lock the event, apply the effect, and mark processed in a transaction with appropriate uniqueness constraints. For an external API, use a stable idempotency key and reconciliation. For an external queue, commit an outbox record with the state change and publish it reliably. Never assume “deduplicated ingestion” means every later effect is exactly once.
 
-## 6. Supporting techniques and use-case decisions
+## 7. Supporting techniques and use-case decisions
 
 | Failure | Response |
 |---|---|
@@ -195,7 +464,7 @@ Do not reset a completed job to running because an older event arrived late. Arr
 
 If you let users supply callback URLs, prevent SSRF: restrict destinations/schemes, validate resolved addresses, handle redirects safely, and avoid sending secrets to arbitrary hosts. This concern belongs to the webhook sender, not only the receiver.
 
-## 7. Interview answer and practice
+## 8. Interview answer and practice
 
 “I would authenticate the webhook, durably record it with a unique event ID, and acknowledge promptly. A worker would process it idempotently. I would plan for duplicate or out-of-order delivery and reconcile important missed events.”
 
