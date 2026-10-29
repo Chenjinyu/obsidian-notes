@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/01-rest-apis.md",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/04-websockets.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "01-rest-apis"
+              "title": "04-websockets"
             }
           }
         ]
@@ -107,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/01-rest-apis.md",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/04-websockets.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/01-rest-apis.md",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/04-websockets.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -155,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/01-rest-apis.md",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/04-websockets.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -170,7 +170,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/01-rest-apis.md"
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/04-websockets.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -228,11 +228,11 @@
   },
   "active": "ac4ce6ce687a9512",
   "lastOpenFiles": [
-    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/assets/01-rest-apis/file-20261028215911594.png",
-    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/assets/01-rest-apis",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/03-server-sent-events.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/02-polling.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/01-rest-apis.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/assets/01-rest-apis/file-20261028215911594.png",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/assets/01-rest-apis",
     "1 - Raw Notes/12 - US Jobs Report/weekly/2026-10-28.md",
     "1 - Raw Notes/13 - Notes for Certified/Untitled.canvas",
     "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-28.md",
@@ -274,7 +274,6 @@
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/1. MCP Workflow + Architecture Design/file-20261012015546099.png",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/1. MCP Workflow + Architecture Design/file-20261012015340773.png",
     "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow/file-20260531023038413.png",
-    "1 - Raw Notes/2 - LLM & Agent AI/Harnes Engineering/assets/Beyond LLM - From LLM to Agentic Workflow/file-20260531022948982.png",
     "i changed the canvas name - check sync to git.canvas",
     "Untitled.canvas",
     "Untitled 5.canvas",
