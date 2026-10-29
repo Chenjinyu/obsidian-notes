@@ -37,7 +37,7 @@ This section focuses on understanding **who calls whom** and **which HTTP respon
 
 ### End-to-end sequence
 
-\`\`\`mermaid
+```mermaid
 sequenceDiagram
     autonumber
     participant C as Customer
@@ -67,13 +67,13 @@ sequenceDiagram
     DB-->>API: paid
     API-->>UI: {paymentStatus: paid}
     UI-->>C: Display success
-\`\`\`
+```
 
 The initial Stripe API response **creates a checkout session**; it is **not** the final payment result. The webhook is a **second, provider-initiated HTTP request**. Stripe receives the webhook endpoint's HTTP 200 response; the browser does not. The Stripe browser redirect and webhook can happen in either order, so the UI reads your backend's actual status.
 
 ### Step 1: React TypeScript calls your FastAPI backend
 
-\`\`\`tsx
+```tsx
 // Frontend: user clicks Pay
 async function handlePay(orderId: string): Promise<void> {
   const response = await fetch("/api/payments", {
@@ -84,13 +84,13 @@ async function handlePay(orderId: string): Promise<void> {
   const data: {checkoutUrl: string} = await response.json();
   window.location.assign(data.checkoutUrl);
 }
-\`\`\`
+```
 
 **Request:** \`POST /api/payments\` with \`{"orderId":"order-123"}\`. Your backend checks the order and authoritative price; do not trust a price submitted by the browser.
 
 ### Step 2: FastAPI calls the external Stripe API
 
-\`\`\`python
+```python
 # Illustrative endpoint; get_order(), save_session() and configuration omitted.
 @app.post("/api/payments")
 def create_payment(request: PaymentRequest):
@@ -104,26 +104,25 @@ def create_payment(request: PaymentRequest):
     )
     save_session(order.id, session.id)
     return {"checkoutUrl": session.url}
-\`\`\`
+```
 
 Conceptually, Stripe receives a request to \`POST /v1/checkout/sessions\` (authenticated with your server's Stripe secret key) with mode, order reference, items, and browser redirect URLs. Stripe immediately responds with something like:
 
-\`\`\`json
+```json
 {
   "id": "cs_test_example",
   "status": "open",
   "payment_status": "unpaid",
   "url": "https://checkout.stripe.com/..."
 }
-\`\`\`
+```
 
 The frontend redirects the customer to that URL. **Important:** \`success_url\` and \`cancel_url\` are **browser redirects**, not webhook URLs.
-
 ### Step 3: Stripe-side behavior (conceptual pseudocode)
 
 After checkout, the provider creates a payment event and sends it to webhook destinations registered for that event type. This is a **conceptual illustration of external provider behavior**, not Stripe's actual implementation:
 
-\`\`\`python
+```python
 def on_payment_completed(checkout_session):
     event = {
         "id": "evt_example",
@@ -136,11 +135,11 @@ def on_payment_completed(checkout_session):
     }
     # URL comes from provider webhook configuration, not this payment API call.
     post_signed_webhook(registered_webhook_url, event)
-\`\`\`
+```
 
 New HTTP request to your backend, simplified:
 
-\`\`\`http
+```http
 POST /webhooks/stripe HTTP/1.1
 Host: api.myapp.example
 Content-Type: application/json
@@ -157,11 +156,11 @@ Stripe-Signature: t=...,v1=...
     }
   }
 }
-\`\`\`
+```
 
 ### Step 4: FastAPI receives the callback and updates its own database
 
-\`\`\`python
+```python
 # Conceptual short version: Stripe signature verification is essential.
 @app.post("/webhooks/stripe")
 async def stripe_webhook(request: Request):
@@ -176,7 +175,7 @@ async def stripe_webhook(request: Request):
         if session["payment_status"] == "paid":
             mark_order_paid_in_db(session["client_reference_id"])
     return {"received": True}  # HTTP 200 goes to Stripe, NOT React
-\`\`\`
+```
 
 Production implementations also validate the session/order relationship and amounts, deduplicate events, and handle delayed payment methods. Those reliability techniques are covered later; they are not the focus of this happy-path walkthrough.
 
@@ -184,18 +183,18 @@ Production implementations also validate the session/order relationship and amou
 
 **Pattern A — Register webhook URL with provider (usual Stripe pattern).** In the Stripe Dashboard, configure a **webhook event destination** (or configure it through Stripe's endpoint management API):
 
-\`\`\`text
+```text
 Webhook destination URL: https://api.myapp.example/webhooks/stripe
 Events: checkout.session.completed
         checkout.session.async_payment_succeeded
         checkout.session.async_payment_failed
-\`\`\`
+```
 
 This configuration tells Stripe where to POST subscribed events. **You do not ordinarily provide \`callback_url\` on every Stripe Checkout Session API call.** One URL can handle multiple event types by checking the event's \`type\`; multiple destinations are also supported.
 
 **Pattern B — Put callback_url in the individual request (some other APIs).** A custom AI processing or batch-job service might explicitly support this:
 
-\`\`\`python
+```python
 # Your backend initiates an AI job with a per-job callback URL.
 httpx.post("https://ai.example/jobs", json={
     "document_id": "doc-123",
@@ -206,7 +205,7 @@ httpx.post("https://ai.example/jobs", json={
 httpx.post("https://api.myapp.example/webhooks/ai", json={
     "job_id": "job-456", "status": "completed", "result": "Summary ..."
 })
-\`\`\`
+```
 
 **Which is common?** Registered destinations are typical for Stripe payments, subscriptions, and GitHub events. Per-request callbacks appear in some async job-processing APIs. They are **provider-defined contracts**: you cannot simply add \`callback_url\` to Stripe's Checkout API and expect it to work. Per-request callbacks provide flexibility but require safe destination validation by the provider.
 
@@ -216,7 +215,7 @@ The **database does not automatically send a message directly to React** in this
 
 **Polling: React repeatedly reads status via FastAPI.**
 
-\`\`\`tsx
+```tsx
 const timer = window.setInterval(async () => {
   const response = await fetch("/api/orders/order-123");
   const order: {paymentStatus: string} = await response.json();
@@ -225,34 +224,34 @@ const timer = window.setInterval(async () => {
     window.clearInterval(timer);
   }
 }, 2000);
-\`\`\`
+```
 
-\`\`\`python
+```python
 @app.get("/api/orders/{order_id}")
 def get_order_status(order_id: str):
     return {"paymentStatus": read_payment_status_from_db(order_id)}
-\`\`\`
+```
 
-\`\`\`text
+```text
 React -- GET /api/orders/123 --> FastAPI -- SELECT --> DB
 React <-- {"paymentStatus":"pending"} -- FastAPI
 ...two seconds later...
 React -- GET /api/orders/123 --> FastAPI -- SELECT --> DB
 React <-- {"paymentStatus":"paid"} -- FastAPI
-\`\`\`
+```
 
 **SSE: React keeps a server-to-client HTTP stream open; FastAPI pushes updates.**
 
-\`\`\`tsx
+```tsx
 const source = new EventSource("/api/orders/order-123/events");
 source.onmessage = (event: MessageEvent<string>) => {
   const update: {status: string} = JSON.parse(event.data);
   setPaymentStatus(update.status);
   if (update.status === "paid" || update.status === "failed") source.close();
 };
-\`\`\`
+```
 
-\`\`\`python
+```python
 # Conceptual FastAPI example; subscribe_to_updates is an app-specific helper.
 @app.get("/api/orders/{order_id}/events")
 async def order_events(order_id: str):
@@ -263,14 +262,14 @@ async def order_events(order_id: str):
 
 # After webhook database update succeeds, backend calls:
 # publish_update(order_id, "paid")   # app-specific helper
-\`\`\`
+```
 
-\`\`\`text
+```text
 React --- GET /api/orders/123/events ---> FastAPI (SSE open)
 Stripe --- POST /webhooks/stripe -------> FastAPI
 FastAPI --- UPDATE payment status ------> Database
 FastAPI --- publish status to SSE ------> React displays paid
-\`\`\`
+```
 
 These SSE helper names are **pseudocode**, not built-in FastAPI APIs. A real SSE stream should send current state on subscription to avoid missing a completed event. With multiple ECS tasks, a shared messaging mechanism (such as Redis Pub/Sub) can distribute events between tasks.
 

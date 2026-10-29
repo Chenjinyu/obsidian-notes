@@ -3,7 +3,6 @@ sr-due: 2026-10-21
 sr-interval: 1
 sr-ease: 2.5
 ---
-
 # Timeouts, Retries, Backoff, Jitter, and Retry-After
 
 ## 1. Definitions with a failure story
