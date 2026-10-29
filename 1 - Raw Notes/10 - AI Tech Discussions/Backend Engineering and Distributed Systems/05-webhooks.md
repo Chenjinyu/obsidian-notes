@@ -75,7 +75,7 @@ The initial Stripe API response **creates a checkout session**; it is **not** th
 
 ```tsx
 // Frontend: user clicks Pay
-async function handlePay(orderId: string): Promise<void> {
+async function handlePay(orderId: string): Promise<void> { // Promise: represents an asynchr
   const response = await fetch("/api/payments", {
     method: "POST",
     headers: {"Content-Type": "application/json"},
