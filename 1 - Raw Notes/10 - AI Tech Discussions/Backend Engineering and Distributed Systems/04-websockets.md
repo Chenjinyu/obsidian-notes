@@ -14,6 +14,14 @@ Think of collaborative editing: you send cursor movements and edits while receiv
 
 `wss://` is the websocket secure wraps the connection in a Transport Layer Security(TLS/SSL) encryption tunnel. it typically operates over port 443. All real-time messages traveling back and forth are completely scrambled and encrypted. 
 
+<span style="color:orange">FastAPI</span> supports websocket and HTTP, websocket wraps up on the TLS, uses TCP as its underlying transport, the HTTP/1.1.
+```text
+REST API:
+HTTP -> TCP -> IP
+
+Web
+```
+
 The familiar HTTP/1.1 setup uses an Upgrade handshake. After that, messages use WebSocket frames rather than a sequence of REST requests. Other HTTP versions have their own standardized establishment mechanisms, so “always HTTP 101” is not universal.
 
 SSE fits one-way event delivery. A bidirectional WebSocket may be useful for chat, multiplayer interactions, collaborative tools, and frequent interactive commands. Ordinary messaging can also use HTTP submission plus SSE; choose based on requirements, not the word “chat.”
@@ -34,6 +42,45 @@ SSE fits one-way event delivery. A bidirectional WebSocket may be useful for cha
 **Walk through a shared whiteboard:** Alice sends a stroke(笔画) operation to the server. The server checks that she belongs to the board, assigns application-level ordering metadata if required, and distributes the accepted operation to other participants. Bob can send his own stroke at the same time. WebSocket carries messages, but conflict resolution, reconnect recovery, and saving the board are application responsibilities.
 
 **Interview practice:** explain why a remote terminal benefits from bidirectional messages, while a page that only displays score changes can use SSE. For games, discuss latency requirements before assuming WebSocket suits every real-time game.
+
+```text
+Explain why a remote terminal benefits from bidirectional messages
+Answers:
+A remote terminal benefits from bidirectional communicaiton becauase both the client and server need to send message independently and in real time. 
+think about using SSH(Secure Shell) to connect to a remote Linux server, or opening a terminal inside VS Code connected to a remote machine. 
+the important point is that a teriminal is interactive, not just a remote-response application
+
+        Local Computer                     Remote Server
+      (Terminal Client)                   (Linux Server)
+              |                                 |
+              | -------- SSH Connection ------> |
+              |                                 |
+              |  User types: ls -la             |
+              | ------------------------------> |
+              |                                 |
+              |                 Execute command |
+              |                                 |
+              | <------------------------------ |
+              |     Directory listing           |
+              |                                 |
+              |  User types: top                |
+              | ------------------------------> |
+              |                                 |
+              | <------------------------------ |
+              |     CPU: 25%, Memory: 60%       |
+              | <------------------------------ |
+              |     CPU: 28%, Memory: 62%       |
+              | <------------------------------ |
+              |     CPU: 32%, Memory: 61%       |
+              |                                 |
+              |  User presses Ctrl+C            |
+              | ------------------------------> |
+              |                                 |
+              |          Stop running command   |
+Nethier side needs to wait for the other to finish before sending data. 
+
+and for the game socre using the SSE, because it does not need to interactive with server, and only need to get the data from server.
+```
 
 ## 2. What does the protocol give me?
 
