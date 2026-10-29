@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/04.1-websockets-vs-rest-api.md",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/05-webhooks.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "04.1-websockets-vs-rest-api"
+              "title": "05-webhooks"
             }
           }
         ]
@@ -90,7 +90,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 450.25457763671875
+    "width": 348.935791015625
   },
   "right": {
     "id": "c375af2eeef2242a",
@@ -107,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/04.1-websockets-vs-rest-api.md",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/05-webhooks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/04.1-websockets-vs-rest-api.md",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/05-webhooks.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -155,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/04.1-websockets-vs-rest-api.md",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/05-webhooks.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -170,7 +170,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/04.1-websockets-vs-rest-api.md"
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/05-webhooks.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -228,9 +228,9 @@
   },
   "active": "ac4ce6ce687a9512",
   "lastOpenFiles": [
-    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/04-websockets.md",
-    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/04.1-websockets-vs-rest-api.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/04.1-fastapi can do - websockets, rest api, sse.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/03-server-sent-events.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/04-websockets.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/02-polling.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/01-rest-apis.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/assets/01-rest-apis/file-20261028215911594.png",

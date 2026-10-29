@@ -3,7 +3,6 @@ sr-due: 2026-10-21
 sr-interval: 1
 sr-ease: 2.5
 ---
-
 # Webhooks — A Service Calls Your Backend When Something Happens
 
 ## 1. Definition and use cases
