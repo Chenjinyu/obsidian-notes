@@ -133,7 +133,13 @@ async def events(request: Request):
     return StreamingResponse(
         generate(),
         media_type="text/event-stream",
-        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
+        headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"}, 
+        # "Connection": "keep-alive" for real time live sport store, etc use cases.
+        # for the keep-alive conneciton, the server will keep the connection, until client disconnects
+        # for this case, the server side needs to add one condition:
+		```
+		if await request.is_disconnected(): break # there is no any return need. 
+		```
     )
 
 @app.get("/", response_class=HTMLResponse)
