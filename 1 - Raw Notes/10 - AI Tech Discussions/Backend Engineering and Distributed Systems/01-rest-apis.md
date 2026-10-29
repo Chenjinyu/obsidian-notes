@@ -16,6 +16,8 @@ REST is not another name for JSON or HTTP. Formal REST includes client/server se
 
 **Stateless does not mean the server has no database.** It means requests carry the context needed to interpret them rather than depending on a hidden sequence of earlier interactions with a particular server instance. The resource's persistent state still exists.
 
+## Idempotent Definition
+ Per the RFC 910 specification, an HTTP method is considered idempotent if the intended effect on the server of multiple identical requests is the exact same as the effect for a single such request
 ## Real-world use cases
 
 | Real-world scenario | What happens in the product | Why a REST-style HTTP API fits |
@@ -133,7 +135,7 @@ Sending `Idempotency-Key` by itself does not make a POST safe. The minimal serve
 3. What does 202 promise, and what does it not promise?
 4. How do REST, polling, and SSE coexist in one application?
 5. Why can repeated DELETE calls be idempotent even if one returns 204 and another 404?
-	1. after one call or ten calls, the end state is identical -
+	1. after one call or ten calls, the end state is identical - the resource does not exist. therefore, the method is idempotent
 
 ## 7. References and next step
 
