@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/05-webhooks.md",
+                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -28,7 +28,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "05-webhooks"
+              "title": "AWS Kafka"
             }
           }
         ]
@@ -107,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/05-webhooks.md",
+                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -126,7 +126,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/05-webhooks.md",
+                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -155,7 +155,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/05-webhooks.md",
+                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -170,7 +170,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/05-webhooks.md"
+                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -228,10 +228,11 @@
   },
   "active": "ac4ce6ce687a9512",
   "lastOpenFiles": [
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/05-webhooks.md",
+    "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
     "1 - Raw Notes/12 - US Jobs Report/weekly/2026-10-31.md",
     "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-31.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/06-retries-backoff-jitter.md",
-    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/05-webhooks.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/04.1-fastapi can do - websockets, rest api, sse.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/03-server-sent-events.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/04-websockets.md",
@@ -261,7 +262,6 @@
     "1 - Raw Notes/13 -Notes for Certified/Untitled.md",
     "1 - Raw Notes/13 - Notes for Certified/01 - Claude Certified Developer - Foundations(CCDV)",
     "1 - Raw Notes/13 - Notes for Certified",
-    "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-23.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/assets/03-server-sent-events/file-20261021151505550.png",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/assets/03-server-sent-events",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/assets",
