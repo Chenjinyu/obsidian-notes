@@ -56,6 +56,30 @@
             }
           },
           {
+            "id": "01e5f8c68213c818",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/1 - Screen Interviews/Interview Questions.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Interview Questions"
+            }
+          },
+          {
             "id": "1ff01bead84d5697",
             "type": "leaf",
             "state": {
@@ -80,7 +104,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -156,7 +180,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/1 - Screen Interviews/Interview Questions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -175,7 +199,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/1 - Screen Interviews/Interview Questions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -204,7 +228,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/1 - Screen Interviews/Interview Questions.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -219,7 +243,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md"
+                "file": "1 - Raw Notes/6 - Interview Notes/1 - Screen Interviews/Interview Questions.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -275,10 +299,11 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "a6e2347c87b33977",
+  "active": "01e5f8c68213c818",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/1 - Screen Interviews/Interview Questions.md",
+    "conflict-files-obsidian-git.md",
     "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
+    "1 - Raw Notes/6 - Interview Notes/1 - Screen Interviews/Interview Questions.md",
     "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/1 - Interview Process.md",
     "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/7 - Hiring Manager Interview.md",
     "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/2 - Phone Screen vs Coding Interview.md",
@@ -311,7 +336,6 @@
     "1 - Raw Notes/12 - US Jobs Report/weekly/2026-10-25.md",
     "1 - Raw Notes/12 - US Jobs Report/weekly",
     "1 - Raw Notes/12 - US Jobs Report/JOBS.md",
-    "1 - Raw Notes/11 - Canada Jobs Report/README.md",
     "1 - Raw Notes/14 - Data Management",
     "1 - Raw Notes/13 - Notes for Certified/01 - Claude Certified Developer - Foundations(CCDV)",
     "1 - Raw Notes/13 - Notes for Certified",
