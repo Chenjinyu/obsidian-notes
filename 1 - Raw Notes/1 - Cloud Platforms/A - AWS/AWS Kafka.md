@@ -188,14 +188,14 @@ Failover takes time and does not guarantee zero errors. A network split or lack 
 
 Start with the bottleneck, not a configuration shopping list. The following is a diagnostic approach; benchmark against your actual messages and downstream services.
 
-| Symptom                         | Investigate                                 | Possible action and trade-off                                                                      |
-| ------------------------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| All partitions accumulate lag   | Handler rate, DB/API capacity, consumer CPU | More consumers up to partition ownership limits; optimize downstream calls                         |
-| One partition is slow           | Hot key, uneven(不均匀) payload sizes          | Redesign key distribution; splitting one key can sacrifice its ordering                            |
-| Brokers saturate(饱和)            | Disk, network, CPU, leader distribution     | Add capacity and redistribute replicas/leaders; a new broker alone does not move all existing data |
-| Too many small produce requests | Batch sizes and request rate                | Increase batching/linger modestly; trade latency for throughput                                    |
-| Large payload pressure          | Record sizes and compression                | Store blobs separately; send references; align producer/broker/fetch limits                        |
-| Retry storm                     | Downstream failure and retry rate           | Bound attempts, exponential backoff with jitter, circuit breaking and admission control            |
+| Symptom                         | Investigate                                 | Possible action and trade-off                                                                                                                                                                             |
+| ------------------------------- | ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| All partitions accumulate lag   | Handler rate, DB/API capacity, consumer CPU | More consumers up to partition ownership limits; optimize downstream calls                                                                                                                                |
+| One partition is slow           | Hot key, uneven(不均匀) payload sizes          | Redesign key distribution; splitting one key can sacrifice its ordering                                                                                                                                   |
+| Brokers saturate(饱和)            | Disk, network, CPU, leader distribution     | Add capacity and redistribute replicas/leaders; a new broker alone does not move all existing data                                                                                                        |
+| Too many small produce requests | Batch sizes and request rate                | Increase batching/linger(萦回) modestly(谦虚地)(增加批处理/适度延长); trade latency for throughput                                                                                                                      |
+| Large payload pressure          | Record sizes and compression                | Store blobs separately; send references; align producer/broker/fetch limits                                                                                                                               |
+| Retry storm                     | Downstream failure and retry rate           | Bound attempts, exponential backoff with jitter(JC - right, the consumer can retry with exponential backoff with jitter to decrease to reach the rate limitation), circuit breaking and admission control |
 
 Partition count supports parallelism but costs metadata, buffers, files, recovery work, and operational complexity. More replicas do not create independent write capacity for a partition. Quotas and a 1-MB application limit protect resources; they do not increase underlying processing capacity.
 
@@ -224,15 +224,15 @@ The client retries eligible transport/broker failures according to its retry/bac
 
 ### Consumer: business-operation retry
 
-Kafka cannot infer whether your database write, HTTP call, or video job succeeded. Your proposal—**main topic, retry topic, then dead-letter topic**—is valid. A DLQ is an ordinary Kafka topic with application-defined behavior; there is no automatic business retry/DLQ policy for the consumer shown here. [S13]
+Kafka cannot infer(推断) whether your database write, HTTP call, or video job succeeded. Your proposal—**main topic, retry topic, then dead-letter topic**—is valid. A DLQ is an ordinary Kafka topic with application-defined behavior; there is no automatic business retry/DLQ policy for the consumer shown here. [S13]
 
-| Approach | Good fit | Main cost |
-| --- | --- | --- |
-| Short retry inside handler | Brief transient failure | Blocks that processing lane; budget time carefully |
-| Pause failed partition and retry | Strict per-partition processing order | Later records in that partition wait; keep polling and manage reassignment |
-| Retry topic and separate consumer | Independent work can keep moving | Later same-key events may overtake the failed event |
-| Durable external job queue | Long delays, job lifecycle, independent workers | Another system and a cross-system handoff |
-| DLQ plus controlled replay | Poison record or exhausted retry budget | Requires ownership, alerts, diagnosis, and replay tooling |
+| Approach                          | Good fit                                        | Main cost                                                                  |
+| --------------------------------- | ----------------------------------------------- | -------------------------------------------------------------------------- |
+| Short retry inside handler        | Brief transient failure                         | Blocks that processing lane; budget time carefully                         |
+| Pause failed partition and retry  | Strict per-partition processing order           | Later records in that partition wait; keep polling and manage reassignment |
+| Retry topic and separate consumer | Independent work can keep moving                | Later same-key events may overtake the failed event                        |
+| Durable(耐用的) external job queue   | Long delays, job lifecycle, independent workers | Another system and a cross-system handoff                                  |
+| DLQ plus controlled replay        | Poison record or exhausted retry budget         | Requires ownership, alerts, diagnosis, and replay tooling                  |
 
 ### Retry workflow and the handoff failure window
 
@@ -264,7 +264,7 @@ Calling a topic `retry-30s` does not make Kafka wait 30 seconds. Store an attemp
 
 ### Can SQS be used? What if Kafka is not on AWS?
 
-Yes. MSK and SQS are independent services; your consumer can bridge them. Self-managed Kafka outside AWS can also call SQS with permitted network access and AWS credentials. Kafka does not require SQS or AWS.
+Yes. MSK(Amazon Managed Streaming for Apache Kakfa) and SQS are independent services; your consumer can bridge them. Self-managed Kafka outside AWS can also call SQS with permitted network access and AWS credentials. Kafka does not require SQS or AWS.
 
 For an SQS handoff, send the retry job and confirm acceptance before committing the Kafka input. A crash between those operations can duplicate the job; there is no shared Kafka/SQS transaction. After SQS processing, delete the message on success. An expired visibility timeout can make unfinished work available again; standard-queue consumers must tolerate duplicates. A configured redrive policy can send repeated failures to an SQS DLQ. [S14]
 
