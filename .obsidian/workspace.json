@@ -162,7 +162,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -181,7 +181,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -210,7 +210,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -225,7 +225,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md"
+                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -281,15 +281,15 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "1a71e9f0de9191ea",
+  "active": "34f3e1f7d0bc809a",
   "lastOpenFiles": [
+    "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - From Daily Interview Questions",
     "1 - Raw Notes/6 - Interview Notes/1 - Screen Interviews/0 - From Daily Interview Questions",
     "1 - Raw Notes/6 - Interview Notes/4 - Behavior Interviews/0 - From Daily Interview Questions",
     "1 - Raw Notes/11 - Canada Jobs Report/monthly/2026-10.md",
     "1 - Raw Notes/11 - Canada Jobs Report/monthly",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
-    "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
     "1 - Raw Notes/6 - Interview Notes/1 - Screen Interviews/Interview Questions.md",
     "conflict-files-obsidian-git.md",
     "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/1 - Interview Process.md",
@@ -322,7 +322,6 @@
     "1 - Raw Notes/5 - Terminology/Blast-Radius.md",
     "1 - Raw Notes/12 - US Jobs Report/weekly",
     "1 - Raw Notes/14 - Data Management",
-    "1 - Raw Notes/13 - Notes for Certified/01 - Claude Certified Developer - Foundations(CCDV)",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/assets/03-server-sent-events/file-20261021151505550.png",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/3. From Web to MCP/file-20261013034740164.png",
     "1 - Raw Notes/2 - LLM & Agent AI/MCP/assets/3. From Web to MCP/file-20261013033908753.png",

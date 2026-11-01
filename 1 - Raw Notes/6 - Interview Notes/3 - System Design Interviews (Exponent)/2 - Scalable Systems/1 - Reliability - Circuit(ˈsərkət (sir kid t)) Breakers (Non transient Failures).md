@@ -6,7 +6,7 @@ A **circuit breaker** is a reliability pattern that **stops your service from re
 ### How it works (the core idea)
 Your service wraps an outbound call with a “breaker” that tracks failures:
 - **Closed (normal):** calls go through.
-- **Open (tripped):** calls are **blocked immediately** (fail fast) for a cooldown period.
+- **Open (tripped(绊倒)):** calls are **blocked immediately** (fail fast) for a cooldown period.
 - **Half-open (test mode):** after cooldown, allow a few test calls:
     - if they succeed → go back to **Closed**
     - if they fail → back to **Open**
