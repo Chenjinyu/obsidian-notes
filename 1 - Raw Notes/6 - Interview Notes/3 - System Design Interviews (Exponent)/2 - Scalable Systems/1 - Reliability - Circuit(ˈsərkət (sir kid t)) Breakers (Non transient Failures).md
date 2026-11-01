@@ -47,38 +47,32 @@ def call_payment_service():
 
 **Interview insight**: "Circuit breakers are for non-transient failures. For transient failures(瞬态故障), we use retry logic. Using circuit breaker for transient failures would cause unnecessary service degradation. Using retry for non-transient failures wastes resources and increases latency."
 
+**Where a circuit breaker helps**
+Suppose your  [[../../../1 - Cloud Platforms/A - AWS/AWS Kafka]] consumers call a video-processing API:
+- **One request times out:** retry within your budget.
+- **Requests keep timing out across many jobs:** the dependency may be unhealthy. A circuit breaker can temporarily stop further calls.
+- **After a waiting period:** allow a few trial calls. Resume normal traffic if they succeed.
+- **One job contains an unsupported video:** quarantine that job or send it to a DLQ. Usually, this should not open a shared circuit and block valid videos.
+
 ## 3. Circuit Breaker States
-```
-┌────────────────────────────────────────────────────┐
-│                                                    │
-│    ┌────────┐  Failure threshold  ┌──────┐         │
-│    │        │    exceeded         │      │         │
-│    │ CLOSED ├────────────────────→│ OPEN │         │
-│    │        │                     │      │         │
-│    └───▲────┘                     └───┬──┘         │
-│        │                              │            │
-│        │                              │            │
-│        │                              │            │
-│        │ Success                  Timeout          │
-│        │ threshold                expires          │
-│        │ met                          │            │
-│        │                              │            │
-│        │                              ▼            │
-│        │                          ┌─────────┐      │
-│        │                          │  HALF   │      │
-│        └──────────────────────────┤  OPEN   │      │
-│                                   └────┬────┘      │
-│                                        │           │
-│                                        │           │
-│                         Failure        │           │
-│                        threshold       │           │
-│                        exceeded        │           │
-│                           └────────────┘           │
-│                              (back to OPEN)        │
-└────────────────────────────────────────────────────┘
-```
+stateDiagram-v2
+    direction LR
+
+    state "CLOSED: allow normal requests" as Closed
+    state "OPEN: block calls to dependency" as Open
+    state "HALF-OPEN: allow limited trial requests" as HalfOpen
+
+    [*] --> Closed
+
+    Closed --> Closed: Failures remain below threshold
+    Closed --> Open: Failure threshold reached
+    Open --> HalfOpen: Cooldown expires
+    HalfOpen --> Closed: Enough trial requests succeed
+    HalfOpen --> Open: Trial request fails
 
 ### State 1: CLOSED (Normal Operation)
+
+
 
 **Behavior:** Requests pass through normally
 

@@ -215,25 +215,24 @@ with `acks=all`, the flow is:
 
 # Topic settings
 replication.factor = 3       # 1 leader + 2 followers
-min.insync.replicas = 2      # Require at least 2 in-sync copies
+min.insync.replicas = 2      # Require at least 2 in-sync copies (the leader plus at least 1 in-sync follower)
 ```
 
 `min.insync.replicas` is a minimum admissible ISR count for `acks=all`, **not an instruction to wait for only that many replicas when more are in sync**. [S10]
 
-```
-```For this write to succeed, at least $2$ replicas (the leader plus at least $1$ in-sync follower) must have successfully fetched and appended the record to their logs before we confirm success to the producer
-```
-```
+>For this write to succeed, at least <span style="color:red">2 replicas (the leader plus at least 1 in-sync follower)</span> must have successfully fetched and appended the record to their logs before we confirm success to the producer
+
 
 Assume RF(Replication Factor)=3(one leader and 2 follower replicas), minimum ISR=2, `acks=all`, conventional ISR mode:
 
-| Current ISR | Result                                                  |
-| ----------- | ------------------------------------------------------- |
-| B1, B2, B3  | All three in-sync copies must receive the write         |
-| B1, B2      | Two copies suffice after ISR membership changes         |
-| B1 only     | Writes cannot succeed under this durability requirement |
-
+| Current ISR(include leader + follower(s)) | Result                                                  |
+| ----------------------------------------- | ------------------------------------------------------- |
+| B1, B2, B3                                | All three in-sync copies must receive the write         |
+| B1, B2                                    | Two copies suffice after ISR membership changes         |
+| B1 only                                   | Writes cannot succeed under this durability requirement |
 With RF=2 and minimum ISR=2, losing one replica prevents successful writes. RF=2/minimum ISR=1 can continue on one copy, but losing that remaining copy can lose newly accepted data. The choice trades availability against durability. `acks` confirms Kafka storage, not consumer processing; consumer offset commits are a different operation. [S10]
+
+<span style="color:red">To prevent this silent data loss, Kafka explicitly **rejects the write** (returning an error like `NOT_ENOUGH_REPLICAS` or `NOT_ENOUGH_REPLICAS_AFTER_APPEND`) rather than lying to your application and risking durability.</span>
 
 ### Leader failure workflow
 
