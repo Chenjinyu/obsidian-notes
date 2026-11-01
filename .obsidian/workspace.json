@@ -54,57 +54,9 @@
               "icon": "lucide-file",
               "title": "AWS Kafka"
             }
-          },
-          {
-            "id": "01e5f8c68213c818",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/1 - Screen Interviews/Interview Questions.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Interview Questions"
-            }
-          },
-          {
-            "id": "1ff01bead84d5697",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/1 - Screen Interviews/Interview Questions.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Interview Questions"
-            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -180,7 +132,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/1 - Screen Interviews/Interview Questions.md",
+                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -199,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/1 - Screen Interviews/Interview Questions.md",
+                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -228,7 +180,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/1 - Screen Interviews/Interview Questions.md",
+                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -243,7 +195,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/1 - Screen Interviews/Interview Questions.md"
+                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -299,11 +251,11 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "01e5f8c68213c818",
+  "active": "a6e2347c87b33977",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/1 - Screen Interviews/Interview Questions.md",
     "conflict-files-obsidian-git.md",
     "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
-    "1 - Raw Notes/6 - Interview Notes/1 - Screen Interviews/Interview Questions.md",
     "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/1 - Interview Process.md",
     "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/7 - Hiring Manager Interview.md",
     "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/2 - Phone Screen vs Coding Interview.md",

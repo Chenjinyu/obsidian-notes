@@ -157,15 +157,15 @@ Keep polling within `max.poll.interval.ms`. A live process or heartbeat alone do
 
 The producer sends to the **leader once**. It does not call every replica. The leader coordinates replication; its response expresses whether the requested condition has been met. [S3]
 
-| Producer setting | Meaning | Failure consequence |
-| --- | --- | --- |
-| `acks=0` | Do not wait for broker acknowledgement | Cannot confirm broker acceptance |
-| `acks=1` | Leader has appended to its local log | A leader failure before replication can lose that write |
-| `acks=all` | Wait for current ISR replication, subject to minimum ISR | Stronger durability; may reject writes to protect data |
+| Producer setting | Meaning                                                                   | Failure consequence                                     |
+| ---------------- | ------------------------------------------------------------------------- | ------------------------------------------------------- |
+| `acks=0`         | Do not wait for broker acknowledgement                                    | Cannot confirm broker acceptance                        |
+| `acks=1`         | Leader has appended to its local log                                      | A leader failure before replication can lose that write |
+| `acks=all`       | Wait for current ISR(In-Sync Replica) replication, subject to minimum ISR | Stronger durability; may reject writes to protect data  |
 
 `min.insync.replicas` is a minimum admissible ISR count for `acks=all`, **not an instruction to wait for only that many replicas when more are in sync**. [S10]
 
-Assume RF=3, minimum ISR=2, `acks=all`, conventional ISR mode:
+Assume RF(Replication Factor)=3(one leader and 2 follower replicas), minimum ISR=2, `acks=all`, conventional ISR mode:
 
 | Current ISR | Result |
 | --- | --- |
@@ -188,14 +188,14 @@ Failover takes time and does not guarantee zero errors. A network split or lack 
 
 Start with the bottleneck, not a configuration shopping list. The following is a diagnostic approach; benchmark against your actual messages and downstream services.
 
-| Symptom | Investigate | Possible action and trade-off |
-| --- | --- | --- |
-| All partitions accumulate lag | Handler rate, DB/API capacity, consumer CPU | More consumers up to partition ownership limits; optimize downstream calls |
-| One partition is slow | Hot key, uneven payload sizes | Redesign key distribution; splitting one key can sacrifice its ordering |
-| Brokers saturate | Disk, network, CPU, leader distribution | Add capacity and redistribute replicas/leaders; a new broker alone does not move all existing data |
-| Too many small produce requests | Batch sizes and request rate | Increase batching/linger modestly; trade latency for throughput |
-| Large payload pressure | Record sizes and compression | Store blobs separately; send references; align producer/broker/fetch limits |
-| Retry storm | Downstream failure and retry rate | Bound attempts, exponential backoff with jitter, circuit breaking and admission control |
+| Symptom                         | Investigate                                 | Possible action and trade-off                                                                      |
+| ------------------------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| All partitions accumulate lag   | Handler rate, DB/API capacity, consumer CPU | More consumers up to partition ownership limits; optimize downstream calls                         |
+| One partition is slow           | Hot key, uneven(不均匀) payload sizes          | Redesign key distribution; splitting one key can sacrifice its ordering                            |
+| Brokers saturate(饱和)            | Disk, network, CPU, leader distribution     | Add capacity and redistribute replicas/leaders; a new broker alone does not move all existing data |
+| Too many small produce requests | Batch sizes and request rate                | Increase batching/linger modestly; trade latency for throughput                                    |
+| Large payload pressure          | Record sizes and compression                | Store blobs separately; send references; align producer/broker/fetch limits                        |
+| Retry storm                     | Downstream failure and retry rate           | Bound attempts, exponential backoff with jitter, circuit breaking and admission control            |
 
 Partition count supports parallelism but costs metadata, buffers, files, recovery work, and operational complexity. More replicas do not create independent write capacity for a partition. Quotas and a 1-MB application limit protect resources; they do not increase underlying processing capacity.
 

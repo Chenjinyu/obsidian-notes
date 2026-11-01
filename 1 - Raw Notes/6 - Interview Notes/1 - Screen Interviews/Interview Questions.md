@@ -153,15 +153,15 @@ A quoted "total compensation" figure is not enough on its own. Establish **what 
 
 ### Main components
 
-| Component | Meaning | What to establish |
-| --- | --- | --- |
-| Base salary | Fixed cash pay for the role, quoted on an annual or other stated basis | Currency, gross amount, pay frequency, role level, and applicable salary band. |
-| Target annual cash bonus | An incentive amount used for planning; actual payout follows the employer's plan | Target percentage or amount, performance formula, eligibility, payout date, and any guarantee. |
-| Equity | Share-based compensation, such as RSUs or employee stock options | Award type, number of units/shares, valuation basis, vesting, and ability to sell. |
-| Signing bonus | Joining-related cash or another award, sometimes paid in installments | Amount, dates, duration, repayment conditions, and whether it is included in quoted TC. |
-| Equity refresher | A possible additional grant after joining | Whether it is committed or discretionary; its own vesting schedule. |
-| Benefits and retirement contributions | Employer-provided value beyond salary and incentive awards | Coverage, employer contributions, employee costs, eligibility, and waiting periods. |
-| Relocation or other joining support | Assistance tied to starting or moving for a job | What is covered, whether paid in advance or reimbursed, and repayment terms. |
+| Component                             | Meaning                                                                              | What to establish                                                                              |
+| ------------------------------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| Base salary                           | Fixed cash pay for the role, quoted on an annual or other stated basis               | Currency, gross amount, pay frequency, role level, and applicable salary band.                 |
+| Target annual cash bonus              | An incentive(激励) amount used for planning; actual payout follows the employer's plan | Target percentage or amount, performance formula, eligibility, payout date, and any guarantee. |
+| Equity                                | Share-based compensation, such as RSUs or employee stock options                     | Award type, number of units/shares, valuation basis, vesting, and ability to sell.             |
+| Signing bonus                         | Joining-related cash or another award, sometimes paid in installments                | Amount, dates, duration, repayment conditions, and whether it is included in quoted TC.        |
+| Equity refresher                      | A possible additional grant after joining                                            | Whether it is committed or discretionary; its own vesting schedule.                            |
+| Benefits and retirement contributions | Employer-provided value beyond salary and incentive awards                           | Coverage, employer contributions, employee costs, eligibility, and waiting periods.            |
+| Relocation or other joining support   | Assistance tied to starting or moving for a job                                      | What is covered, whether paid in advance or reimbursed, and repayment terms.                   |
 
 **Annual bonus is different from signing bonus.** In the salary-answer scripts here, "bonus" means the target annual cash incentive, with signing payments discussed separately. An annual incentive opportunity may recur, but its payment is not automatically guaranteed.
 
