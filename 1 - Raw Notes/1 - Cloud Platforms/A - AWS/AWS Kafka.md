@@ -124,7 +124,7 @@ flowchart TD
 
 ## 4. Workflow: consumption, offsets, and rebalancing
 
-In an ordinary consumer group, one partition has at most one assigned consumer at a time. One consumer can own several partitions. Separate groups maintain independent progress. This assignment rule does **not** guarantee that application side effects happen exactly once. A stale handler can also continue external work after losing ownership unless the application stops or fences it. [S4]
+In an ordinary(普通的) consumer group, one partition has at most one assigned consumer at a time. One consumer can own several partitions. Separate groups maintain independent progress. This assignment rule does **not** guarantee that application side effects happen exactly once. A stale(陈旧) handler can also continue external work after losing ownership unless the application stops or fences it. [S4]
 
 Illustrative assignments for six partitions:
 
@@ -140,7 +140,7 @@ Suppose P0 has records 40, 41, 42 and 43. The group has committed **42**: its re
 
 Keep three positions separate: fetched/current position, successfully processed position, and durably committed position. Prefetching or handing work to a thread pool does not prove processing completed.
 
-`auto.offset.reset` is a fallback when a usable committed offset is absent or out of range. `earliest` starts at the oldest retained position; `latest` starts at the end and can skip retained backlog. It does not override a valid committed offset on every restart. In production, consider failing visibly on an unexpected reset and investigating retention or group identity. [S9]
+`auto.offset.reset` is a fallback when a usable committed offset is absent(缺席的) or out of range. `earliest` starts at the oldest retained position; `latest` starts at the end and can skip retained backlog. It does not override a valid committed offset on every restart. In production, consider failing visibly on an unexpected reset and investigating retention or group identity. [S9]
 
 ### Rebalance sequence
 

@@ -36,7 +36,7 @@ Confirm the currency and whether the conversation concerns base salary or annual
 
 **Preferred first response:**
 
-> I'm interested in the role. Could you share the budgeted base salary range and how bonus and equity fit into the package?
+> I'm interested in the role. Could you share the budgeted base salary range and how bonus and equity(股权) fit into the package?
 
 Then pause and let the recruiter answer.
 
@@ -46,14 +46,14 @@ Then pause and let the recruiter answer.
 
 - What level is the role being considered for?
 - What currency are the figures in?
-- Is the range base salary or annual total compensation?
+- Is the range **base salary** or annual **total compensation**?
 - What are the target bonus and annual equity amounts?
 
 ### Q2. "We need your expectations first. What number are you targeting?"
 
 **Answer to practice:**
 
-> My target is around [target amount and currency] in annual total compensation, including base salary, bonus, and equity. That's a target rather than a firm minimum. I'm open to discussing the role and overall package. Does that overlap with your budget?
+> My target is around [target amount and currency] in **annual** total compensation, including base salary, bonus, and equity. That's a target rather than a firm minimum. I'm open to discussing the role and overall package. Does that overlap with your budget?
 
 **Short version:**
 
