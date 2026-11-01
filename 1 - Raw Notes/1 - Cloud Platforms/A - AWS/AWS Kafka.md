@@ -1,5 +1,5 @@
 ---
-sr-due: 2026-11-01T08:53:48.276Z
+sr-due: 2026-11-01T08:57:49.365Z
 sr-interval: 1
 sr-ease: 2.5
 ---
@@ -333,7 +333,7 @@ Set retention from outage duration + catch-up time + replay needs, with capacity
 
 This section replaces the previous local Kafka/SQLite/retry-worker lab. It uses **Amazon MSK Provisioned, Standard brokers, and IAM authentication**. No local Kafka server, Docker cluster, database, retry-worker framework, or shared application module is required.
 
-The two standalone source files are [producer.py](examples/msk_orders/producer.py) and [consumer.py](examples/msk_orders/consumer.py). The code below matches those files. They run as independent applications, potentially on different AWS hosts/services. They do not import or call each other.
+The following `producer.py` and `consumer.py` sections are separate **inline code examples in this Markdown note**. They represent independent applications, potentially on different AWS hosts/services, and do not import or call each other. No standalone Python files are included in the repository.
 
 ### Step 1: AWS creates the cluster and brokers
 
@@ -577,7 +577,7 @@ These are practice formulations applying the concepts above, not claims about a 
 
 ## 13. Verification and limits
 
-Updated 2026-11-01. The standalone producer and consumer and the one-time AWS setup snippet passed Python syntax checks and offline checks with simulated clients. Checks cover the producer's topic/key and delivery callback, consumer processing before a manual commit, closing without committing on an error, topic-creation parameters, and the IAM token-expiry conversion.
+Updated 2026-11-01. The inline producer and consumer examples and the one-time AWS setup snippet passed Python syntax checks and offline checks with simulated clients. Checks cover the producer's topic/key and delivery callback, consumer processing before a manual commit, closing without committing on an error, topic-creation parameters, and the IAM token-expiry conversion.
 
 No real Kafka/MSK connection, AWS resource creation, live IAM authorization, broker placement, failover, or throughput test was performed. The consumer prints a decoded order as its placeholder action; it does not implement a database, business deduplication, or retry/DLQ workers. Those design concerns are explained separately.
 
