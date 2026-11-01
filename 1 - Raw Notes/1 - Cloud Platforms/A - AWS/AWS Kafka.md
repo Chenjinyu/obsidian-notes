@@ -1,5 +1,5 @@
 ---
-sr-due: 2026-11-01T08:57:49.365Z
+sr-due: 2026-11-01T09:13:35.307Z
 sr-interval: 1
 sr-ease: 2.5
 ---
@@ -388,7 +388,7 @@ export MSK_BOOTSTRAP='YOUR_CLUSTER_IAM_BOOTSTRAP_STRING'
 
 Use the real IAM bootstrap string returned by the setup snippet or the MSK client-connection screen. The applications need VPC routing, DNS, security-group access to **all advertised brokers**, and AWS roles with the relevant topic/group permissions. The setup identity needs separate AWS topic-management permissions. Credentials come from the AWS default credential chain; access keys are not embedded in the scripts.
 
-The short `iam_token` callback is MSK connection/authentication code. AWS's signer uses IAM credentials; `confluent-kafka` expects expiry in seconds, so it divides milliseconds by 1000. Both files repeat this small callback to stay independently readable. These settings are specifically for MSK IAM, not SCRAM or mutual TLS. [S22][S23]
+The short `iam_token` callback is MSK connection/authentication code. AWS's signer uses IAM credentials; `confluent-kafka` expects expiry in seconds, so it divides milliseconds by 1000. Both inline examples repeat this small callback to stay independently readable. These settings are specifically for MSK IAM, not SCRAM or mutual TLS. [S22][S23]
 
 ### producer.py: one application publishes an order event
 
@@ -400,15 +400,19 @@ from aws_msk_iam_sasl_signer import MSKAuthTokenProvider
 
 
 def iam_token(_):
+    # Sign a short-lived MSK IAM token using the AWS runtime's credentials.
     token, expiry_ms = MSKAuthTokenProvider.generate_auth_token(
         os.environ["AWS_REGION"]
     )
+    # The signer returns milliseconds; this client expects seconds.
     return token, expiry_ms / 1000
 
 
 def delivered(error, message):
+    # Called when Kafka delivery succeeds or ultimately fails.
     if error is not None:
         raise RuntimeError(f"Delivery failed: {error}")
+    # Show the actual partition/offset chosen, not a hard-coded broker.
     print(
         f"Sent: {message.topic()} / partition {message.partition()} "
         f"/ offset {message.offset()}"
@@ -416,21 +420,28 @@ def delivered(error, message):
 
 
 producer = Producer({
+    # Discovery endpoints: metadata supplies each partition's current leader.
     "bootstrap.servers": os.environ["MSK_BOOTSTRAP"],
-    "security.protocol": "SASL_SSL",
-    "sasl.mechanism": "OAUTHBEARER",
-    "oauth_cb": iam_token,
-    "acks": "all",
+    "security.protocol": "SASL_SSL",  # TLS-encrypted Kafka connection.
+    "sasl.mechanism": "OAUTHBEARER",  # Authenticate with the signed IAM token.
+    "oauth_cb": iam_token,           # Client calls this to obtain/refresh tokens.
+    "acks": "all",                   # Replication ACK, not consumer completion.
+    # With a key: (Murmur2(key_bytes) & 0x7fffffff) % partition_count.
+    # With key=None: keyless random selection; batching can make it sticky.
+    # "random" does NOT randomize records that have the same key bytes.
     "partitioner": "murmur2_random",
 })
 
 order = {"order_id": "order-1001", "customer_id": "customer-42"}
+# Send the original key as UTF-8 bytes. The client performs the hashing.
+key_bytes = order["customer_id"].encode("utf-8")
 producer.produce(
-    topic="orders",
-    key=order["customer_id"],
-    value=json.dumps(order),
+    topic="orders",          # Select the topic before choosing its partition.
+    key=key_bytes,           # Chooses a partition inside Orders, not a broker.
+    value=json.dumps(order),  # Event payload; the whole JSON is not hashed.
     on_delivery=delivered,
 )
+# Serve delivery callbacks and wait for this one-shot publisher at shutdown.
 if producer.flush(10):
     raise TimeoutError("Delivery is unconfirmed; the outcome is unknown.")
 ```
@@ -438,11 +449,53 @@ if producer.flush(10):
 What to notice:
 
 - `Producer(...)` is a Kafka client. It creates no brokers, topics, or partitions.
-- `topic="orders"` selects the stream; `key=order["customer_id"]` supplies the **message key**.
+- `topic="orders"` selects the stream; `key=key_bytes` supplies the **message key**, explicitly encoded as UTF-8.
 - No partition or broker ID is hard-coded. The partitioner chooses a partition; metadata locates its leader.
 - `delivered` prints the actual topic, partition ID, and offset acknowledged by Kafka.
 - This one-shot publisher flushes at shutdown. A timeout means unconfirmed delivery, not proof that the event was rejected.
 - `acks="all"` concerns replication acknowledgements, not consumer completion.
+
+
+### How murmur2_random actually finds a partition
+
+The `Producer({...})` argument is a Python configuration dictionary. The `order` object is the event payload. They serve different purposes.
+
+For this Python client, the partitioner runs locally in **librdkafka**, the native library behind `confluent-kafka`. It is hash-based partitioning: compute a number from key bytes, then use modulo to select one of the topic's partition IDs. It does not search stored messages or ask each broker whether it has this customer. [S30]
+
+For a keyed record, the implementation is equivalent to this explanatory formula:
+
+```text
+key_bytes = UTF8(customer_id)
+hash32 = Murmur2(key_bytes)
+positive_hash = hash32 & 0x7fffffff
+partition_id = positive_hash % partition_count
+```
+
+This is an explanation of what the client already does, not another Python script or a function you need to implement in the application.
+
+**Inside Murmur2:** it mixes the input bytes in small blocks using 32-bit multiplication, XOR, and bit shifts, then performs final mixing. This is a fast, deterministic, non-cryptographic hash. The sign-bit mask gives the nonnegative 31-bit value used for Java-compatible partition selection. The modulo operation converts it into a valid partition ID from 0 through `partition_count - 1`. [S30][S31]
+
+Worked example, verified against the implementation's reference vectors:
+
+| Step | Result for `customer-42` |
+| --- | --- |
+| UTF-8 key bytes, shown in hexadecimal | `637573746f6d65722d3432` |
+| Unsigned 32-bit Murmur2 result | `3751979801` |
+| After `& 0x7fffffff` | `1604496153` |
+| With three partitions | `1604496153 % 3 = 0`: Orders P0 |
+| With four partitions | `1604496153 % 4 = 1`: Orders P1 |
+
+This explains why increasing partition count can remap **future** records with the same key. The existing records do not move. Different keys can also land in the same partition; hashing does not create one unique partition per customer.
+
+After computing P0, the producer uses its cached cluster metadata to look up P0's **current leader broker**, then sends the record there. Metadata is refreshed as needed. The hash selects the partition; metadata locates the broker. Neither the topic name, whole JSON payload, nor broker hostname is the hash input in this example. [S5]
+
+| Key situation | murmur2_random behavior |
+| --- | --- |
+| Non-null key, including an empty byte string | Deterministic Murmur2-based selection. |
+| `key=None` | Keyless random selection; sticky batching can reuse a partition for a batch. |
+| Explicit `partition=...` supplied | The explicit partition overrides automatic selection. |
+
+Thus `random` does **not** mean that records carrying the same serialized customer key randomly jump between partitions. Keyless behavior is not a promise of strict per-record round-robin. We selected this partitioner for Java-compatible keyed routing; it is not an Amazon MSK requirement. Matching other producers requires the same serialized key bytes, partitioning algorithm, and partition count. [S7]
 
 ### consumer.py: another application processes the event
 
@@ -454,25 +507,32 @@ from aws_msk_iam_sasl_signer import MSKAuthTokenProvider
 
 
 def iam_token(_):
+    # Same MSK authentication setup; this application does not call the producer.
     token, expiry_ms = MSKAuthTokenProvider.generate_auth_token(
         os.environ["AWS_REGION"]
     )
-    return token, expiry_ms / 1000
+    return token, expiry_ms / 1000  # Milliseconds to seconds.
 
 
 consumer = Consumer({
-    "bootstrap.servers": os.environ["MSK_BOOTSTRAP"],
-    "security.protocol": "SASL_SSL",
-    "sasl.mechanism": "OAUTHBEARER",
+    "bootstrap.servers": os.environ["MSK_BOOTSTRAP"],  # Discover cluster metadata.
+    "security.protocol": "SASL_SSL",                 # TLS encryption.
+    "sasl.mechanism": "OAUTHBEARER",                 # MSK IAM authentication.
     "oauth_cb": iam_token,
+    # Shared GROUP name, not the ID of this individual consumer process.
+    # Kafka establishes/joins this group automatically; no create-group call.
     "group.id": "orders-workers",
+    # Start at the earliest retained offset only if no valid committed one exists.
     "auto.offset.reset": "earliest",
-    "enable.auto.commit": False,
+    "enable.auto.commit": False,  # Commit explicitly after successful processing.
 })
+# Subscribe to the topic. The client handles coordinator discovery/group joining
+# and partition assignment asynchronously during normal consumption.
 consumer.subscribe(["orders"])
 
 try:
     while True:
+        # Drive consumption and group events; None can mean no record is ready.
         message = consumer.poll(1)
         if message is None:
             continue
@@ -483,12 +543,13 @@ try:
             f"Process {order} from {message.topic()} "
             f"/ partition {message.partition()} / offset {message.offset()}"
         )
-        # Replace print with successful business work before committing.
+        # Replace print with successful durable business work before committing.
+        # Records the next offset for this GROUP and topic-partition; no deletion.
         consumer.commit(message=message, asynchronous=False)
 except KeyboardInterrupt:
     pass
 finally:
-    consumer.close()
+    consumer.close()  # Leave the group and release network resources.
 ```
 
 What to notice:
@@ -502,6 +563,40 @@ What to notice:
 
 The consumer acts as the worker; the record describes the work. A crash after the business action but before the offset commit can cause replay. The example therefore does not promise exactly-once business effects. Idempotency, durable retries, and DLQ design remain explained separately in section 7.
 
+
+### Why the consumer group needs no explicit creation script
+
+`"group.id": "orders-workers"` means **join the consumer group named orders-workers**. It is not an individual consumer ID. The client and Kafka's group coordinator establish group membership automatically as the consumer subscribes and starts normal polling; there is no separate `create_consumer_group()` call in this example. Existing group state is reused rather than creating a fresh group on each restart. MSK IAM must still permit the required topic and group operations. [S4][S32]
+
+The steps are:
+
+1. Construct the consumer with the shared group name.
+2. Subscribe to `orders`.
+3. During consumption, the client discovers the group's coordinator and joins; the coordinator/client assignment mechanism manages membership and partition ownership.
+4. The consumer reads assigned partitions and commits its group's next offsets after successful processing.
+
+This membership/assignment work is asynchronous; the first poll is not guaranteed to return a record. The broker-side coordinator tracks the group. The application does not need to manually assign a unique runtime member ID. An optional `client.id` is a diagnostic label, while `group.id` controls shared consumption and progress. [S32][S33]
+
+For ordinary partition-assigned consumption, a possible assignment is:
+
+| Consumer process | group.id | Example assignment |
+| --- | --- | --- |
+| Worker A | `orders-workers` | Orders P0 and P1 |
+| Worker B | `orders-workers` | Orders P2 |
+| Analytics consumer | `orders-analytics` | Orders P0, P1, and P2 independently |
+
+The exact assignment may differ. Starting Worker B with the same group ID joins the existing group and can trigger reassignment. A different group ID represents an independent subscriber with its own committed progress; it can read the same retained records. Group membership does not delete or copy the topic's stored records. [S32][S33]
+
+### Three separate decisions
+
+| Decision | Responsible component |
+| --- | --- |
+| Which partition receives a keyed record? | Producer's partitioner, using key bytes and topic partition count. |
+| Which broker accepts that partition's writes? | Current partition-leader metadata. |
+| Which worker in a group reads that partition? | Consumer-group membership and partition assignment. |
+
+A producer's key hash does not directly select a particular consumer process.
+
 ### How the AWS setup maps to the scripts
 
 | Stage | Example | Owner |
@@ -509,13 +604,13 @@ The consumer acts as the worker; the record describes the work. A crash after th
 | Provision | Three-broker MSK cluster | AWS console/infrastructure deployment; MSK runs brokers. |
 | Create topic | Orders, 3 partitions, RF=3 | One-time console action or `boto3` setup. |
 | Publish | `produce(topic="orders", key="customer-42", ...)` | `producer.py`. |
-| Route | Key-aware partitioner selects, for example, P1 | Producer client. |
-| Locate | Metadata says P1's leader is on Broker 2 | Kafka metadata and producer client. |
+| Route | With the shown UTF-8 key, Murmur2 partitioner, and three partitions, selects P0 | Producer client. |
+| Locate | Metadata says P0's leader is on Broker 2 (illustrative placement) | Kafka metadata and producer client. |
 | Store | Leader appends; followers copy the same partition's records | MSK/Kafka brokers. |
-| Read | Assigned consumer receives the Orders P1 record | `consumer.py`. |
+| Read | Assigned consumer receives the Orders P0 record | `consumer.py`. |
 | Process | Perform the action, then commit the next offset | Consumer application. |
 
-P1/Broker 2 are illustrative, not guaranteed results for this particular key. The print statements expose the actual results. Leader placement can change without changing the topic-partition identity.
+For the shown key bytes and partitioner with three partitions, the computed partition is P0. Broker 2 remains an illustrative leader placement; consult metadata for the real leader. The print statements expose actual results. Leader placement can change without changing the topic-partition identity.
 
 Run the applications as separate processes/services if deployed: the producer sends one event and exits; the consumer waits until interrupted. The producer can publish while the consumer is stopped, and the consumer can later read retained events. They share the topic and event contract, not a direct application-to-application call.
 
@@ -577,7 +672,7 @@ These are practice formulations applying the concepts above, not claims about a 
 
 ## 13. Verification and limits
 
-Updated 2026-11-01. The inline producer and consumer examples and the one-time AWS setup snippet passed Python syntax checks and offline checks with simulated clients. Checks cover the producer's topic/key and delivery callback, consumer processing before a manual commit, closing without committing on an error, topic-creation parameters, and the IAM token-expiry conversion.
+Updated 2026-11-01. The inline producer and consumer examples and the one-time AWS setup snippet passed Python syntax checks and offline checks with simulated clients. The follow-up comment review also verified unchanged consumer behavior by AST comparison, explicit UTF-8 producer keys, and the worked Murmur2 example against three implementation reference vectors. Checks cover the producer's topic/key and delivery callback, consumer processing before a manual commit, closing without committing on an error, topic-creation parameters, and the IAM token-expiry conversion.
 
 No real Kafka/MSK connection, AWS resource creation, live IAM authorization, broker placement, failover, or throughput test was performed. The consumer prints a decoded order as its placeholder action; it does not implement a database, business deduplication, or retry/DLQ workers. Those design concerns are explained separately.
 
@@ -613,3 +708,8 @@ No real Kafka/MSK connection, AWS resource creation, live IAM authorization, bro
 - [S27: Boto3 Kafka create_topic](https://docs.aws.amazon.com/boto3/latest/reference/services/kafka/client/create_topic.html)
 - [S28: Create topics in the MSK console](https://docs.aws.amazon.com/msk/latest/developerguide/create-topic-console.html)
 - [S29: Express intelligent rebalancing during broker scaling](https://docs.aws.amazon.com/msk/latest/developerguide/intelligent-rebalancing-scaling-clusters.html)
+
+- [S30: librdkafka's actual Murmur2 partitioner implementation](https://github.com/confluentinc/librdkafka/blob/master/src/rdkafka_msg.c)
+- [S31: librdkafka Murmur2 implementation and reference vectors](https://github.com/confluentinc/librdkafka/blob/master/src/rdmurmur2.c)
+- [S32: Confluent client FAQ: group.id, client.id, and consumer groups](https://developer.confluent.io/faq/apache-kafka/kafka-clients/)
+- [S33: Apache Kafka consumer groups and topic subscriptions](https://kafka.apache.org/42/javadoc/org/apache/kafka/clients/consumer/KafkaConsumer.html)
