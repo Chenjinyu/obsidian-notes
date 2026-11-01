@@ -55,6 +55,8 @@ Suppose your  [[../../../1 - Cloud Platforms/A - AWS/AWS Kafka]] consumers call 
 - **One job contains an unsupported video:** quarantine that job or send it to a DLQ. Usually, this should not open a shared circuit and block valid videos.
 
 ## 3. Circuit Breaker States
+
+```mermaid
 stateDiagram-v2
     direction LR
 
@@ -69,10 +71,14 @@ stateDiagram-v2
     Open --> HalfOpen: Cooldown expires
     HalfOpen --> Closed: Enough trial requests succeed
     HalfOpen --> Open: Trial request fails
+```
 
+| State         | What happens                                                                        |
+| ------------- | ----------------------------------------------------------------------------------- |
+| **Closed**    | Requests reach the dependency. The breaker monitors failures.                       |
+| **Open**      | Calls are blocked immediately; the application returns an error or uses a fallback. |
+| **Half-open** | A few trial requests check whether the dependency has recovered.                    |
 ### State 1: CLOSED (Normal Operation)
-
-
 
 **Behavior:** Requests pass through normally
 
@@ -116,6 +122,7 @@ Request 3 → IMMEDIATE FAIL (CircuitOpenException)
 - Protects downstream service from overload
 - Prevents resource exhaustion (threads, connections)
 - After timeout period → transitions to HALF_OPEN
+
 ### State 3: HALF_OPEN (Testing Recovery)
 **Behavior:** Allow limited requests to test if service recovered
 
