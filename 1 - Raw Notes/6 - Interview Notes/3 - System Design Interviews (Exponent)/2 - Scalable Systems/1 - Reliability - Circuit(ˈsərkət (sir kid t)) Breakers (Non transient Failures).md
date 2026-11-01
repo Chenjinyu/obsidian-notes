@@ -48,7 +48,6 @@ def call_payment_service():
 **Interview insight**: "Circuit breakers are for non-transient failures. For transient failures, we use retry logic. Using circuit breaker for transient failures would cause unnecessary service degradation. Using retry for non-transient failures wastes resources and increases latency."
 
 ## 3. Circuit Breaker States
-
 ```
 ┌────────────────────────────────────────────────────┐
 │                                                    │

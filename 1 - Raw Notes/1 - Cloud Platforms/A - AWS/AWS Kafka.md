@@ -429,7 +429,7 @@ producer = Producer({
     # With a key: (Murmur2(key_bytes) & 0x7fffffff) % partition_count.
     # With key=None: keyless random selection; batching can make it sticky.
     # "random" does NOT randomize records that have the same key bytes.
-    "partitioner": "murmur2_random",
+    "partitioner": "murmur2_random", # use the Murmur2 hash algorithm, it converts the key's bytes into a number used to select a partition.
 })
 
 order = {"order_id": "order-1001", "customer_id": "customer-42"}

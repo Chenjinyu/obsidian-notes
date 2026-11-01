@@ -57,6 +57,36 @@
           }
         ],
         "currentTab": 1
+      },
+      {
+        "id": "aa068a2ca0af479d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "34f3e1f7d0bc809a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures)"
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -90,7 +120,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#MCP",
+                "query": "Circuit breaker",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -115,7 +145,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 348.935791015625
+    "width": 270.180908203125
   },
   "right": {
     "id": "c375af2eeef2242a",
@@ -132,7 +162,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +181,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -180,7 +210,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -195,7 +225,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md"
+                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -251,11 +281,12 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "a6e2347c87b33977",
+  "active": "34f3e1f7d0bc809a",
   "lastOpenFiles": [
+    "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
+    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
     "1 - Raw Notes/6 - Interview Notes/1 - Screen Interviews/Interview Questions.md",
     "conflict-files-obsidian-git.md",
-    "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
     "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/1 - Interview Process.md",
     "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/7 - Hiring Manager Interview.md",
     "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/2 - Phone Screen vs Coding Interview.md",
@@ -287,7 +318,6 @@
     "1 - Raw Notes/12 - US Jobs Report/README.md",
     "1 - Raw Notes/12 - US Jobs Report/weekly/2026-10-25.md",
     "1 - Raw Notes/12 - US Jobs Report/weekly",
-    "1 - Raw Notes/12 - US Jobs Report/JOBS.md",
     "1 - Raw Notes/14 - Data Management",
     "1 - Raw Notes/13 - Notes for Certified/01 - Claude Certified Developer - Foundations(CCDV)",
     "1 - Raw Notes/13 - Notes for Certified",
