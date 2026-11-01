@@ -59,27 +59,27 @@ For the video example, store the file in object storage first; publish its ident
 
 ## 2. Terminology
 
-| Term | Definition | Concrete example |
-| --- | --- | --- |
-| Cluster | Brokers and the metadata/control system working together | A three-broker deployment |
-| Broker | Server that serves partition replicas | Broker 1 hosts leaders and followers for different partitions |
-| Topic | Named stream split into partitions | `video.uploaded` |
-| Partition | Ordered append-only log within a topic | `video.uploaded`, partition 0 |
-| Record/event/message | Key, value, timestamp, headers and Kafka metadata | JSON upload metadata |
-| Key | Optional bytes used by a key-aware partitioner | UTF-8 bytes of `video_id` |
-| Offset | Record position within one partition | Partition 0, offset 42 |
-| Producer | Client that publishes records | Upload API or outbox publisher |
-| Consumer | Client that fetches records | Job-registration worker |
-| Consumer group | Consumers sharing partition ownership and progress | `transcoding-workers` |
-| Replica | Copy of one partition log on another broker | Another copy of partition 0 |
-| Leader | Replica currently accepting writes for that partition | P0 leader on Broker 1 |
-| Follower | Replica that fetches the leader's data | P0 follower on Broker 2 |
-| Replication factor / RF | Total replicas, including the leader | RF=3 means 1 leader + 2 followers |
-| ISR | Current in-sync replica set, including the leader | Brokers 1, 2 and 3 while all are caught up |
-| Group coordinator | Broker role coordinating group membership/progress | Tracks the worker group |
-| KRaft controller | Metadata/control-plane role in modern Kafka | Coordinates partition leadership changes |
-| Committed consumer offset | Durable next position to resume for a group and partition | Commit 43 after processing record 42 |
-| Consumer lag | Distance behind a chosen end/readable position | End 120, committed 100: offset gap 20 |
+| Term                      | Definition                                                | Concrete example                                              |
+| ------------------------- | --------------------------------------------------------- | ------------------------------------------------------------- |
+| Cluster                   | Brokers and the metadata/control system working together  | A three-broker deployment                                     |
+| Broker                    | Server that serves partition replicas                     | Broker 1 hosts leaders and followers for different partitions |
+| Topic                     | Named stream split into partitions                        | `video.uploaded`                                              |
+| Partition                 | Ordered append-only log within a topic                    | `video.uploaded`, partition 0                                 |
+| Record/event/message      | Key, value, timestamp, headers and Kafka metadata         | JSON upload metadata                                          |
+| Key                       | Optional bytes used by a key-aware partitioner            | UTF-8 bytes of `video_id`                                     |
+| Offset                    | Record position within one partition                      | Partition 0, offset 42                                        |
+| Producer                  | Client that publishes records                             | Upload API or outbox publisher                                |
+| Consumer                  | Client that fetches records                               | Job-registration worker                                       |
+| Consumer group            | Consumers sharing partition ownership and progress        | `transcoding-workers`                                         |
+| Replica                   | Copy of one partition log on another broker               | Another copy of partition 0                                   |
+| Leader                    | Replica currently accepting writes for that partition     | P0 leader on Broker 1                                         |
+| Follower                  | Replica that fetches the leader's data                    | P0 follower on Broker 2                                       |
+| Replication factor / RF   | Total replicas, including the leader                      | RF=3 means 1 leader + 2 followers                             |
+| ISR (in-sync replica)     | Current in-sync replica set, including the leader         | Brokers 1, 2 and 3 while all are caught up                    |
+| Group coordinator         | Broker role coordinating group membership/progress        | Tracks the worker group                                       |
+| KRaft controller          | Metadata/control-plane role in modern Kafka               | Coordinates partition leadership changes                      |
+| Committed consumer offset | Durable next position to resume for a group and partition | Commit 43 after processing record 42                          |
+| Consumer lag              | Distance behind a chosen end/readable position            | End 120, committed 100: offset gap 20                         |
 
 Topics, keys, partitions, and offsets describe the data model [S1]; replicas and ISR describe durability [S3]. Group coordination and offset commits describe consumption [S4]. KRaft metadata coordination is separate from application-event processing [S18]. An offset gap is not always an exact count of business events: compaction, transactions, and offset gaps can matter.
 
