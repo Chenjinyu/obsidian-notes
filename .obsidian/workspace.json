@@ -6,7 +6,7 @@
       {
         "id": "3cf42c5525e927d4",
         "type": "tabs",
-        "dimension": 38.31041257367387,
+        "dimension": 24.33862433862434,
         "children": [
           {
             "id": "ac4ce6ce687a9512",
@@ -38,7 +38,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Mesh and Envoy.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -53,7 +53,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "AWS Kafka"
+              "title": "1 - Reliability - Mesh and Envoy"
             }
           }
         ],
@@ -62,7 +62,7 @@
       {
         "id": "aa068a2ca0af479d",
         "type": "tabs",
-        "dimension": 61.68958742632613,
+        "dimension": 75.66137566137566,
         "children": [
           {
             "id": "34f3e1f7d0bc809a",
@@ -147,7 +147,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 221.87091064453125
+    "width": 293.8032531738281
   },
   "right": {
     "id": "c375af2eeef2242a",
@@ -286,6 +286,12 @@
   },
   "active": "34f3e1f7d0bc809a",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Mesh and Envoy.md",
+    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/2 - Availability.md",
+    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/3 - Scalability - Load Balancing.md",
+    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/3 - Scalability.md",
+    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/Reliability.md",
+    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/Availability.md",
     "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
     "().md",
@@ -318,12 +324,6 @@
     "1 - Raw Notes/13 - Notes for Certified/Untitled.canvas",
     "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-28.md",
     "1 - Raw Notes/13 - Notes for Certified/AWS Certified Generative AI Developer Professional(AIP-C01)",
-    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/2 - CAP Theorem (定理).md",
-    "1 - Raw Notes/10 - AI Tech Discussions/api-gateway-ecs-multi-tenant-rate-limiting.md",
-    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/19-api-gateway-ecs-multi-tenant-rate-limiting.md",
-    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/2 - CAP Theorem - PACELC.md",
-    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/4 - Distributed Systems/4 - Caching.md",
-    "1 - Raw Notes/5 - Terminology/Blast-Radius.md",
     "1 - Raw Notes/12 - US Jobs Report/weekly",
     "1 - Raw Notes/14 - Data Management",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/assets/03-server-sent-events/file-20261021151505550.png",

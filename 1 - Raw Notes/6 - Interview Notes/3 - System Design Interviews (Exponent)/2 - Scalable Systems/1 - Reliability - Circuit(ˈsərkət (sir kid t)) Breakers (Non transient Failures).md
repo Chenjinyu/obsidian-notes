@@ -1031,13 +1031,6 @@ Multiple service instances?
 
 ```
 
-
-# Note
-
-
-# Reference
-
-
 ---
 
 ## 13. Practical placement: shared library or ECS sidecar?
