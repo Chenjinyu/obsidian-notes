@@ -88,14 +88,14 @@ Topics, keys, partitions, and offsets describe the data model [S1]; replicas and
 
 A **topic** is a named stream. A **partition** is one ordered log within that topic. A **replica** is a stored copy of the partition log. A **broker** is a Kafka server hosting those copies. A Kafka partition is not a general disk partition shared by several topics.
 
-| Item | Example | Meaning |
-| --- | --- | --- |
-| Topic | `orders` | Stream chosen by the publisher and subscriber. |
-| Topic-partition | `(orders, 0)` | Partition 0 specifically within Orders. |
-| Different topic-partition | `(payments, 0)` | A separate log, despite also having partition ID 0. |
-| Replica | Another copy of `(orders, 0)` on Broker 2 | The same logical partition, not another independent write lane. |
-| Message key | `customer-42` | Record value used by a key-aware partitioner to select a partition. |
-| Broker | Broker 1 | Server hosting replicas from many partitions and topics. |
+| Item                      | Example                                   | Meaning                                                             |
+| ------------------------- | ----------------------------------------- | ------------------------------------------------------------------- |
+| Topic                     | `orders`                                  | Stream chosen by the publisher and subscriber.                      |
+| Topic-partition           | `(orders, 0)`                             | Partition 0 specifically within Orders.                             |
+| Different topic-partition | `(payments, 0)`                           | A separate log, despite also having partition ID 0.                 |
+| Replica                   | Another copy of `(orders, 0)` on Broker 2 | The same logical partition, not another independent write lane.     |
+| Message key               | `customer-42`                             | Record value used by a key-aware partitioner to select a partition. |
+| Broker                    | Broker 1                                  | Server hosting replicas from many partitions and topics.            |
 
 **Partition ID is not message key.** The ID is a number such as 0, 1, or 2. Many message keys can map to one partition. The producer first specifies the topic, then uses its configured partitioner and serialized message key to choose a partition within that topic. Metadata identifies the current leader broker. The producer does not normally hash the topic name or directly select a physical disk. [S5][S6][S7]
 
