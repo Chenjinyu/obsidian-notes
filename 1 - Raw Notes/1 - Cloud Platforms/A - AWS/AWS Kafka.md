@@ -198,21 +198,40 @@ Keep polling within `max.poll.interval.ms`. A live process or heartbeat alone do
 
 The producer sends to the **leader once**. It does not call every replica. The leader coordinates replication; its response expresses whether the requested condition has been met. [S3]
 
-| Producer setting | Meaning                                                                   | Failure consequence                                     |
-| ---------------- | ------------------------------------------------------------------------- | ------------------------------------------------------- |
-| `acks=0`         | Do not wait for broker acknowledgement                                    | Cannot confirm broker acceptance                        |
-| `acks=1`         | Leader has appended to its local log                                      | A leader failure before replication can lose that write |
-| `acks=all`       | Wait for current ISR(In-Sync Replica) replication, subject to minimum ISR | Stronger durability; may reject writes to protect data  |
+| Producer setting | Meaning                                                                   | Failure consequence                                                                                          |
+| ---------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| `acks=0`         | Do not wait for broker acknowledgement                                    | Cannot confirm broker acceptance                                                                             |
+| `acks=1`         | Leader has appended to its local log                                      | A leader failure before replication can lose that write                                                      |
+| `acks=all`       | Wait for current ISR(In-Sync Replica) replication, subject to minimum ISR | Stronger durability; may reject writes to protect data (when the followers crash, lose network connectivity) |
+with `acks=all`, the flow is:
+1. Producer -> Leader: store this record and confirm after the required replication
+2. the leader appends the record to its log
+3. Follower fetch the record from the leader and store their copies
+4. once the replication conditions are satisfied, leader -> producer: "Success".
+
+```python
+# Producer setting
+"acks": "all"
+
+# Topic settings
+replication.factor = 3       # 1 leader + 2 followers
+min.insync.replicas = 2      # Require at least 2 in-sync copies
+```
 
 `min.insync.replicas` is a minimum admissible ISR count for `acks=all`, **not an instruction to wait for only that many replicas when more are in sync**. [S10]
 
+```
+```For this write to succeed, at least $2$ replicas (the leader plus at least $1$ in-sync follower) must have successfully fetched and appended the record to their logs before we confirm success to the producer
+```
+```
+
 Assume RF(Replication Factor)=3(one leader and 2 follower replicas), minimum ISR=2, `acks=all`, conventional ISR mode:
 
-| Current ISR | Result |
-| --- | --- |
-| B1, B2, B3 | All three in-sync copies must receive the write |
-| B1, B2 | Two copies suffice after ISR membership changes |
-| B1 only | Writes cannot succeed under this durability requirement |
+| Current ISR | Result                                                  |
+| ----------- | ------------------------------------------------------- |
+| B1, B2, B3  | All three in-sync copies must receive the write         |
+| B1, B2      | Two copies suffice after ISR membership changes         |
+| B1 only     | Writes cannot succeed under this durability requirement |
 
 With RF=2 and minimum ISR=2, losing one replica prevents successful writes. RF=2/minimum ISR=1 can continue on one copy, but losing that remaining copy can lose newly accepted data. The choice trades availability against durability. `acks` confirms Kafka storage, not consumer processing; consumer offset commits are a different operation. [S10]
 
