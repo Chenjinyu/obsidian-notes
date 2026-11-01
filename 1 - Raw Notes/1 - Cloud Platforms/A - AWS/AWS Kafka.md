@@ -1,5 +1,5 @@
 ---
-sr-due: <% tp.date.now("YYYY-MM-DD", 3) %>
+sr-due: 2026-11-01T08:57:49.365Z
 sr-interval: 1
 sr-ease: 2.5
 ---
@@ -13,7 +13,7 @@ the follower partitions will take over the leader partition when the leader part
 
 # Kafka and Amazon MSK: production concepts and interview guide
 
-Added: 2026-10-31. The original notes and images above are preserved.
+Added: 2026-10-31. Updated: 2026-11-01 with the broker/topic/partition explanation and simplified MSK examples. The original notes and images above are preserved.
 
 **Correction to the original sentence:** a follower **replica of the same topic-partition** can become its leader. `topic-A / partition-1` is not the backup of `topic-A / partition-0`, and topic B is not the backup of topic A.
 
@@ -25,7 +25,7 @@ This guide uses ordinary **partition-assigned consumer groups** and the conventi
 2. Terminology and the partition/replica mental model.
 3. Producer routing, consumer offsets, rebalancing, and leader failover.
 4. Scalability, durability, retries, performance, and retention.
-5. Python producer and consumer, including retry-topic and DLQ handling.
+5. Simple AWS MSK setup plus standalone producer.py and consumer.py; no local Kafka lab.
 6. MSK responsibilities, troubleshooting, and interview practice.
 
 ## 1. What Kafka is and when to use it
@@ -82,6 +82,47 @@ For the video example, store the file in object storage first; publish its ident
 | Consumer lag              | Distance behind a chosen end/readable position            | End 120, committed 100: offset gap 20                         |
 
 Topics, keys, partitions, and offsets describe the data model [S1]; replicas and ISR describe durability [S3]. Group coordination and offset commits describe consumption [S4]. KRaft metadata coordination is separate from application-event processing [S18]. An offset gap is not always an exact count of business events: compaction, transactions, and offset gaps can matter.
+
+
+### Broker, topic, partition ID, replica, and message key
+
+A **topic** is a named stream. A **partition** is one ordered log within that topic. A **replica** is a stored copy of the partition log. A **broker** is a Kafka server hosting those copies. A Kafka partition is not a general disk partition shared by several topics.
+
+| Item | Example | Meaning |
+| --- | --- | --- |
+| Topic | `orders` | Stream chosen by the publisher and subscriber. |
+| Topic-partition | `(orders, 0)` | Partition 0 specifically within Orders. |
+| Different topic-partition | `(payments, 0)` | A separate log, despite also having partition ID 0. |
+| Replica | Another copy of `(orders, 0)` on Broker 2 | The same logical partition, not another independent write lane. |
+| Message key | `customer-42` | Record value used by a key-aware partitioner to select a partition. |
+| Broker | Broker 1 | Server hosting replicas from many partitions and topics. |
+
+**Partition ID is not message key.** The ID is a number such as 0, 1, or 2. Many message keys can map to one partition. The producer first specifies the topic, then uses its configured partitioner and serialized message key to choose a partition within that topic. Metadata identifies the current leader broker. The producer does not normally hash the topic name or directly select a physical disk. [S5][S6][S7]
+
+#### Can Orders partition 0 exist on two brokers?
+
+Yes—as replicas of **one partition**. For a two-partition topic with replication factor two, this is a valid illustrative layout:
+
+| Broker | `orders / partition 0` | `orders / partition 1` |
+| --- | --- | --- |
+| Broker 1 | Leader copy of P0 | Follower copy of P1 |
+| Broker 2 | Follower copy of P0 | Leader copy of P1 |
+
+There are **two independent logs and four stored copies**. P0's follower copies P0, not P1. Both brokers host a leader, but for different partitions. A replica of P0 keeps P0's identity; a new independent partition needs a different ID within Orders. Leader/follower roles apply per topic-partition, not to the entire broker. [S3]
+
+Replicas of the **same** partition are placed on different brokers, not together on one broker. With one broker, a topic can have several partitions, each with one leader copy and no followers. A broker can host many partition replicas: **four partitions was an example, not its maximum**.
+
+#### What changes when capacity is added?
+
+| Change | Purpose | Important distinction |
+| --- | --- | --- |
+| Add a topic partition | Another independent log and potential parallel work | Adds no physical server; existing records remain in their old partitions. |
+| Add a partition replica | Another copy for recovery | Does not create another independent write lane. |
+| Add a broker | More server resources | Does not by itself increase the topic's partition count. |
+
+A new partition can have its leader on an existing or new broker. Check placement rather than assuming the new leader is automatically on the newly added broker. Producers must distribute traffic across partitions to use the parallelism; one hot key can remain a bottleneck.
+
+Increasing partition count can remap future keyed messages and affect ordering across the change. Standard MSK capacity expansion and replica/leader redistribution need planning; supported Express intelligent-rebalancing operations can automate redistribution. Broker scaling and creating new partitions remain separate concepts. [S20][S29]
 
 ### Three partitions with replication factor three
 
@@ -192,16 +233,16 @@ Start with the bottleneck, not a configuration shopping list. The following is a
 | ------------------------------- | ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | All partitions accumulate lag   | Handler rate, DB/API capacity, consumer CPU | More consumers up to partition ownership limits; optimize downstream calls                                                                                                                                |
 | One partition is slow           | Hot key, uneven(不均匀) payload sizes          | Redesign key distribution; splitting one key can sacrifice its ordering                                                                                                                                   |
-| Brokers saturate(饱和)            | Disk, network, CPU, leader distribution     | Add capacity and redistribute replicas/leaders; a new broker alone does not move all existing data                                                                                                        |
+| Brokers saturate(饱和)            | Disk, network, CPU, leader distribution     | For Standard clusters, add capacity and plan replica/leader redistribution; supported Express intelligent rebalancing can automate movement [S29]                                                                                                        |
 | Too many small produce requests | Batch sizes and request rate                | Increase batching/linger(萦回) modestly(谦虚地)(增加批处理/适度延长); trade latency for throughput                                                                                                                      |
 | Large payload pressure          | Record sizes and compression                | Store blobs separately; send references; align producer/broker/fetch limits                                                                                                                               |
 | Retry storm                     | Downstream failure and retry rate           | Bound attempts, exponential backoff with jitter(JC - right, the consumer can retry with exponential backoff with jitter to decrease to reach the rate limitation), circuit breaking and admission control |
 
 Partition count supports parallelism but costs metadata, buffers, files, recovery work, and operational complexity. More replicas do not create independent write capacity for a partition. Quotas and a 1-MB application limit protect resources; they do not increase underlying processing capacity.
 
-For the Python producer, `linger.ms=10` allows short batching, `batch.size=65536` bounds batch size, and `compression.type=lz4` uses Kafka's record-batch compression. This does not create a `.zip` file. The consumer library decompresses batches and returns individual records. These are example starting values, not universal optimums. [S7]
+For a later tuning exercise, `linger.ms=10`, `batch.size=65536`, and `compression.type=lz4` illustrate batching and record-batch compression. They are not required by the simple scripts in section 9 or universal optimums. The consumer library decompresses batches; this does not create a `.zip` file. [S7]
 
-Avoid flushing after every event in the throughput path. `produce()` enqueues asynchronously; delivery callbacks report eventual success or failure. Poll to serve callbacks and flush at shutdown. The retry-transfer helper intentionally waits for one record's acknowledgement to make the safety boundary easy to see, at a throughput cost. [S11]
+Avoid flushing after every event in the throughput path. `produce()` enqueues asynchronously; delivery callbacks report eventual success or failure. Poll to serve callbacks and flush at shutdown. A retry-topic handoff must be confirmed before committing the source offset; synchronous confirmation trades throughput for simpler control flow. [S11]
 
 ## 7. Producer retries versus consumer retries
 
@@ -288,404 +329,205 @@ For an illustrative size budget: six partitions × 1 GiB/partition gives about 6
 
 Set retention from outage duration + catch-up time + replay needs, with capacity headroom. Alert on the **age of the oldest unprocessed event**, not just a count. If retention deletes unread data, retries and offsets cannot restore it. Replaying with a new group re-executes side effects unless your application protects them.
 
-## 9. Python lab: producer, consumer, retries, DLQ, and idempotent DB work
+## 9. Simple Amazon MSK example: separate producer.py and consumer.py
 
-Save each code block below using the shown filename in the same directory. The three files form one teaching example. The scripts need a reachable Kafka cluster; the examples do not create or modify AWS infrastructure.
+This section replaces the previous local Kafka/SQLite/retry-worker lab. It uses **Amazon MSK Provisioned, Standard brokers, and IAM authentication**. No local Kafka server, Docker cluster, database, retry-worker framework, or shared application module is required.
 
-The consumer's business action is **registering a video job in SQLite**, not transcoding a video. It inserts an inbox deduplication key and the job in one database transaction. On a crash after DB commit but before Kafka offset commit, replay finds the existing event ID. For multiple hosts, replace this local SQLite demonstration with a shared durable database and an atomic unique constraint/transaction. A local file per container cannot provide group-wide deduplication.
+The following `producer.py` and `consumer.py` sections are separate **inline code examples in this Markdown note**. They represent independent applications, potentially on different AWS hosts/services, and do not import or call each other. No standalone Python files are included in the repository.
 
-The `demo_mode` field injects failures for learning; remove it from a real event contract. Retry delays are intentionally limited to 5 and 30 seconds. The synchronous waiting blocks every partition assigned to this worker. It keeps the example readable but is unsuitable for high throughput or long jobs. Its bounded handler/delay/transfer path must remain comfortably below the five-minute poll interval; if you add real network calls, set their deadlines and redesign polling. Rebalance/commit errors stop the process rather than allowing it to commit later records past a failed one.
+### Step 1: AWS creates the cluster and brokers
 
-### Local prerequisites and topic setup
+In the MSK console, create a Provisioned Standard cluster using an available Kafka version **3.6 or later**, three Availability Zones, and one broker per zone: **three managed brokers total**. Select the VPC/subnets/security groups and enable IAM client authentication with TLS. MSK creates and runs the broker servers; neither application script creates brokers. MSK Serverless abstracts broker counts and is not the provisioning example here. [S25]
 
-Install the Python client in your own virtual environment:
+### Step 2: create the topic and partitions once
 
-```bash
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install confluent-kafka
-export KAFKA_BOOTSTRAP=localhost:9092
-```
-
-Using the Kafka distribution's CLI against a **disposable one-broker local cluster**, create the three topics:
-
-```bash
-for topic in video.uploaded video.retry video.dlq; do
-  kafka-topics.sh --bootstrap-server localhost:9092 --create \
-    --topic "$topic" --partitions 3 --replication-factor 1 \
-    --config min.insync.replicas=1 \
-    --config cleanup.policy=delete \
-    --config retention.ms=604800000
-done
-```
-
-RF=1/minimum ISR=1 is only for this local lab. A provisioned three-broker production illustration uses RF=3/minimum ISR=2, sufficient capacity, and replicas across failure domains. Provision real topics through your normal reviewed infrastructure workflow.
-
-### `common.py`: connection and delivery confirmation
+Use either the MSK console's **Topics → Create topic** screen or the AWS Python setup snippet below. Set topic name `orders`, partition count `3`, and replication factor `3`. These topic-management features apply to supported MSK Provisioned clusters using Kafka 3.6+. [S26][S28]
 
 ```python
 import os
-import time
+import boto3
 
-
-def connection_config():
-    # Local-only default. Set KAFKA_SECURITY=msk_iam for the MSK example.
-    config = {"bootstrap.servers": os.getenv("KAFKA_BOOTSTRAP", "localhost:9092")}
-    security = os.getenv("KAFKA_SECURITY", "local")
-    if security == "msk_iam":
-        from aws_msk_iam_sasl_signer import MSKAuthTokenProvider
-
-        def oauth_cb(_):
-            token, expiry_ms = MSKAuthTokenProvider.generate_auth_token(
-                os.environ["AWS_REGION"]
-            )
-            return token, expiry_ms / 1000.0
-
-        config.update({
-            "security.protocol": "SASL_SSL",
-            "sasl.mechanism": "OAUTHBEARER",
-            "oauth_cb": oauth_cb,
-        })
-    elif security != "local":
-        raise ValueError("This demo supports local or msk_iam")
-    return config
-
-
-def producer_config():
-    return {
-        **connection_config(),
-        "enable.idempotence": True,
-        "acks": "all",
-        "max.in.flight.requests.per.connection": 5,
-        "delivery.timeout.ms": 30000,
-        "retry.backoff.ms": 100,
-        "retry.backoff.max.ms": 1000,
-        "linger.ms": 10,
-        "batch.size": 65536,
-        "compression.type": "lz4",
-        "partitioner": "murmur2_random",
-    }
-
-
-def send_confirmed(producer, topic, key, value, headers=None, timeout=35):
-    """Teaching helper: wait for THIS record's delivery report or fail closed."""
-    result = []
-    deadline = time.monotonic() + timeout
-
-    def delivered(error, message):
-        result.append((error, message))
-
-    while True:
-        try:
-            producer.produce(topic, key=key, value=value, headers=headers,
-                             on_delivery=delivered)
-            break
-        except BufferError:
-            # Local buffer full: this call did not enqueue the record.
-            if time.monotonic() >= deadline:
-                raise TimeoutError("Producer local buffer remained full")
-            producer.poll(0.1)
-    while not result:
-        if time.monotonic() >= deadline:
-            # Delivery may be uncertain. Caller must NOT commit the input.
-            raise TimeoutError("No final delivery report; outcome may be unknown")
-        producer.poll(0.1)
-    error, message = result[0]
-    if error is not None:
-        raise RuntimeError(f"Kafka delivery failed: {error}")
-    return message
+msk = boto3.client("kafka", region_name=os.environ["AWS_REGION"])
+cluster_arn = os.environ["MSK_CLUSTER_ARN"]
+result = msk.create_topic(
+    ClusterArn=cluster_arn,
+    TopicName="orders",
+    PartitionCount=3,
+    ReplicationFactor=3,
+)
+print("Topic status:", result["Status"])
+print("IAM endpoints:", msk.get_bootstrap_brokers(
+    ClusterArn=cluster_arn
+)["BootstrapBrokerStringSaslIam"])
 ```
 
-The producer's built-in retries remain bounded by its delivery timeout; the example does not impose a separate five-retry count. A new application call after final failure is not the same thing as an internal protocol retry. The helper raises if delivery is failed or uncertain. [S7][S11][S12]
+The setup uses current `boto3` with `create_topic` support. The cluster must already be active. Topic creation is asynchronous: wait for topic status **ACTIVE** before starting the applications. Run creation once; an existing name produces a topic-exists error. Choose the console or script method, not both for the same topic. [S27]
 
-### `producer.py`: key-based routing, batching, and delivery reports
+| Setup value | What it creates or identifies |
+| --- | --- |
+| Three brokers | Three managed servers, not three producer applications. |
+| `TopicName="orders"` | One named topic used by both scripts. |
+| `PartitionCount=3` | Three independent logs: Orders P0, P1, and P2. |
+| `ReplicationFactor=3` | Three copies per partition: one leader and two followers on different brokers. |
+| Three partitions × three copies | Nine replica copies, not nine independent work streams. |
+| `MSK_CLUSTER_ARN` | AWS resource identity used by the setup API. |
+| `MSK_BOOTSTRAP` | Kafka connection endpoints used by the two applications; not the cluster ARN. |
+
+RF=3 does not itself configure `min.insync.replicas=2`. Apply that topic setting separately if using the RF=3/minimum-ISR=2 policy explained in section 5.
+
+### Step 3: give the AWS applications connection settings
+
+If deploying the examples, use AWS compute such as EC2 or ECS with network access to the cluster. Install only the Python client libraries; a Kafka server/CLI installation on the client machine is unnecessary.
+
+```bash
+python -m pip install --upgrade boto3 confluent-kafka aws-msk-iam-sasl-signer-python
+export AWS_REGION='us-east-1'
+export MSK_CLUSTER_ARN='YOUR_MSK_CLUSTER_ARN'
+export MSK_BOOTSTRAP='YOUR_CLUSTER_IAM_BOOTSTRAP_STRING'
+```
+
+Use the real IAM bootstrap string returned by the setup snippet or the MSK client-connection screen. The applications need VPC routing, DNS, security-group access to **all advertised brokers**, and AWS roles with the relevant topic/group permissions. The setup identity needs separate AWS topic-management permissions. Credentials come from the AWS default credential chain; access keys are not embedded in the scripts.
+
+The short `iam_token` callback is MSK connection/authentication code. AWS's signer uses IAM credentials; `confluent-kafka` expects expiry in seconds, so it divides milliseconds by 1000. Both files repeat this small callback to stay independently readable. These settings are specifically for MSK IAM, not SCRAM or mutual TLS. [S22][S23]
+
+### producer.py: one application publishes an order event
 
 ```python
 import json
-import time
-import uuid
-
+import os
 from confluent_kafka import Producer
-from common import producer_config
+from aws_msk_iam_sasl_signer import MSKAuthTokenProvider
 
 
-def main():
-    producer = Producer(producer_config())
-    failures = []
-
-    def delivered(error, message):
-        if error is not None:
-            failures.append(str(error))
-        else:
-            print(message.topic(), message.partition(), message.offset())
-
-    # No actual video bytes: these are references to an already stored object.
-    for mode in ("ok", "transient", "permanent", "exhaust"):
-        video_id = str(uuid.uuid4())
-        event = {
-            "event_id": str(uuid.uuid4()),
-            "schema_version": 1,
-            "video_id": video_id,
-            "object_uri": f"s3://example-video-bucket/{video_id}.mp4",
-            "demo_mode": mode,
-        }
-        payload = json.dumps(event).encode("utf-8")
-        deadline = time.monotonic() + 5
-        while True:
-            try:
-                producer.produce(
-                    "video.uploaded", key=video_id.encode("utf-8"),
-                    value=payload, on_delivery=delivered,
-                )
-                break
-            except BufferError:
-                if time.monotonic() >= deadline:
-                    raise TimeoutError("Local producer queue is full")
-                producer.poll(0.1)
-        producer.poll(0)
-
-    remaining = producer.flush(35)
-    if remaining or failures:
-        raise RuntimeError(f"Unconfirmed={remaining}; delivery errors={failures}")
+def iam_token(_):
+    token, expiry_ms = MSKAuthTokenProvider.generate_auth_token(
+        os.environ["AWS_REGION"]
+    )
+    return token, expiry_ms / 1000
 
 
-if __name__ == "__main__":
-    main()
+def delivered(error, message):
+    if error is not None:
+        raise RuntimeError(f"Delivery failed: {error}")
+    print(
+        f"Sent: {message.topic()} / partition {message.partition()} "
+        f"/ offset {message.offset()}"
+    )
+
+
+producer = Producer({
+    "bootstrap.servers": os.environ["MSK_BOOTSTRAP"],
+    "security.protocol": "SASL_SSL",
+    "sasl.mechanism": "OAUTHBEARER",
+    "oauth_cb": iam_token,
+    "acks": "all",
+    "partitioner": "murmur2_random",
+})
+
+order = {"order_id": "order-1001", "customer_id": "customer-42"}
+producer.produce(
+    topic="orders",
+    key=order["customer_id"],
+    value=json.dumps(order),
+    on_delivery=delivered,
+)
+if producer.flush(10):
+    raise TimeoutError("Delivery is unconfirmed; the outcome is unknown.")
 ```
 
-With `key=video_id.encode(...)`, events for that key use the configured hash partitioner. To observe keyless behavior, omit `key`. To explicitly target a partition in a controlled experiment, pass `partition=0`; do not hard-code broker selection.
+What to notice:
 
-### `consumer.py`: manual commits, retry topic, and DLQ
+- `Producer(...)` is a Kafka client. It creates no brokers, topics, or partitions.
+- `topic="orders"` selects the stream; `key=order["customer_id"]` supplies the **message key**.
+- No partition or broker ID is hard-coded. The partitioner chooses a partition; metadata locates its leader.
+- `delivered` prints the actual topic, partition ID, and offset acknowledged by Kafka.
+- This one-shot publisher flushes at shutdown. A timeout means unconfirmed delivery, not proof that the event was rejected.
+- `acks="all"` concerns replication acknowledgements, not consumer completion.
+
+### consumer.py: another application processes the event
 
 ```python
 import json
 import os
-import random
-import sqlite3
-import time
-
-from confluent_kafka import Consumer, KafkaException, Producer
-from common import connection_config, producer_config, send_confirmed
-
-MAIN = "video.uploaded"
-RETRY = "video.retry"
-DLQ = "video.dlq"
-MAX_ATTEMPTS = 3  # 1 main attempt + 2 retry-topic attempts
+from confluent_kafka import Consumer, KafkaException
+from aws_msk_iam_sasl_signer import MSKAuthTokenProvider
 
 
-class PermanentFailure(Exception):
-    pass
+def iam_token(_):
+    token, expiry_ms = MSKAuthTokenProvider.generate_auth_token(
+        os.environ["AWS_REGION"]
+    )
+    return token, expiry_ms / 1000
 
 
-class TemporaryFailure(Exception):
-    pass
+consumer = Consumer({
+    "bootstrap.servers": os.environ["MSK_BOOTSTRAP"],
+    "security.protocol": "SASL_SSL",
+    "sasl.mechanism": "OAUTHBEARER",
+    "oauth_cb": iam_token,
+    "group.id": "orders-workers",
+    "auto.offset.reset": "earliest",
+    "enable.auto.commit": False,
+})
+consumer.subscribe(["orders"])
 
-
-def open_db(path):
-    db = sqlite3.connect(path, timeout=5)
-    db.executescript("""
-        CREATE TABLE IF NOT EXISTS inbox (
-            event_id TEXT PRIMARY KEY
-        );
-        CREATE TABLE IF NOT EXISTS video_jobs (
-            video_id TEXT PRIMARY KEY,
-            object_uri TEXT NOT NULL,
-            status TEXT NOT NULL
-        );
-    """)
-    return db
-
-
-def decode_event(raw):
-    try:
-        event = json.loads(raw)
-    except (ValueError, TypeError, UnicodeError) as exc:
-        raise PermanentFailure("Invalid JSON") from exc
-    if not isinstance(event, dict):
-        raise PermanentFailure("Event must be an object")
-    for field in ("event_id", "video_id", "object_uri"):
-        if not isinstance(event.get(field), str) or not event[field]:
-            raise PermanentFailure(f"Missing or invalid {field}")
-    if event.get("schema_version") != 1:
-        raise PermanentFailure("Unsupported schema version")
-    return event
-
-
-def retry_metadata(message):
-    if message.topic() == MAIN:
-        return 0, 0.0
-    headers = dict(message.headers() or [])
-    try:
-        attempt = int(headers["x-demo-attempt"])
-        due = float(headers["x-demo-not-before"])
-    except (KeyError, ValueError, TypeError) as exc:
-        raise PermanentFailure("Invalid retry metadata") from exc
-    # This demo only creates 5s/30s delays. Reject malformed metadata.
-    if not 1 <= attempt < MAX_ATTEMPTS or not 0 <= due <= time.time() + 31:
-        raise PermanentFailure("Retry metadata outside demo limits")
-    return attempt, due
-
-
-def process_once(db, event, attempt):
-    """A durable DB job-registration demo, NOT a video transcoder."""
-    mode = event.get("demo_mode", "ok")
-    if mode == "permanent":
-        raise PermanentFailure("Simulated unsupported video")
-    if mode == "exhaust" or (mode == "transient" and attempt == 0):
-        raise TemporaryFailure("Simulated downstream service unavailable")
-    # Both writes commit or roll back together. No external HTTP side effect.
-    with db:
-        inserted = db.execute(
-            "INSERT OR IGNORE INTO inbox(event_id) VALUES (?)",
-            (event["event_id"],),
-        ).rowcount
-        if inserted == 0:
-            return False
-        db.execute(
-            "INSERT INTO video_jobs(video_id, object_uri, status) VALUES (?, ?, ?) "
-            "ON CONFLICT(video_id) DO UPDATE SET "
-            "object_uri=excluded.object_uri, status=excluded.status",
-            (event["video_id"], event["object_uri"], "registered"),
+try:
+    while True:
+        message = consumer.poll(1)
+        if message is None:
+            continue
+        if message.error():
+            raise KafkaException(message.error())
+        order = json.loads(message.value().decode("utf-8"))
+        print(
+            f"Process {order} from {message.topic()} "
+            f"/ partition {message.partition()} / offset {message.offset()}"
         )
-    return True
-
-
-def transfer(producer, message, destination, attempt, delay, reason):
-    headers = list(message.headers() or [])
-    if not any(name == "x-demo-origin" for name, _ in headers):
-        origin = f"{message.topic()}:{message.partition()}:{message.offset()}"
-        headers.append(("x-demo-origin", origin.encode()))
-    replace = {"x-demo-attempt", "x-demo-not-before", "x-demo-error"}
-    headers = [(name, value) for name, value in headers if name not in replace]
-    headers.extend([
-        ("x-demo-attempt", str(attempt).encode()),
-        ("x-demo-not-before", str(time.time() + delay).encode()),
-        ("x-demo-error", reason.encode()),
-    ])
-    # Preserve the original raw bytes and key, including malformed JSON.
-    send_confirmed(producer, destination, message.key(), message.value(), headers)
-
-
-def handle_record(message, db, producer):
-    attempt = 0
-    try:
-        attempt, due = retry_metadata(message)
-        # BOUNDED teaching delay; blocks all partitions assigned to this worker.
-        time.sleep(max(0.0, due - time.time()))
-        event = decode_event(message.value())
-        for local_try in range(3):  # up to 3 handler calls per stage
-            try:
-                process_once(db, event, attempt)
-                return
-            except TemporaryFailure:
-                if local_try == 2:
-                    raise
-                time.sleep(random.uniform(0, 0.2 * (2 ** local_try)))
-    except PermanentFailure as exc:
-        transfer(producer, message, DLQ, attempt, 0, str(exc))
-    except TemporaryFailure as exc:
-        next_attempt = attempt + 1
-        if next_attempt < MAX_ATTEMPTS:
-            delay = (5, 30)[next_attempt - 1]
-            transfer(producer, message, RETRY, next_attempt, delay, str(exc))
-        else:
-            transfer(producer, message, DLQ, next_attempt, 0, str(exc))
-    # Unexpected/infrastructure errors propagate: do not commit or skip them.
-
-
-def handle_and_commit(consumer, producer, db, message):
-    handle_record(message, db, producer)
-    # Reached only after DB success/deduplication OR confirmed retry/DLQ write.
-    committed = consumer.commit(message=message, asynchronous=False)
-    for partition in committed or []:
-        if partition.error is not None:
-            raise KafkaException(partition.error)
-
-
-def main():
-    topic = os.getenv("INPUT_TOPIC", MAIN)
-    if topic not in (MAIN, RETRY):
-        raise ValueError("INPUT_TOPIC must be video.uploaded or video.retry")
-    db = open_db(os.getenv("DEMO_DB", "video-demo.sqlite3"))
-    producer = Producer(producer_config())
-    consumer = Consumer({
-        **connection_config(),
-        "group.id": f"video-demo-{topic}",
-        "enable.auto.commit": False,
-        "enable.auto.offset.store": False,
-        "auto.offset.reset": "earliest",
-        "isolation.level": "read_committed",
-        "max.poll.interval.ms": 300000,
-        "allow.auto.create.topics": False,
-    })
-    consumer.subscribe([topic])
-    try:
-        while True:
-            message = consumer.poll(1.0)
-            if message is None:
-                continue
-            if message.error():
-                raise KafkaException(message.error())
-            handle_and_commit(consumer, producer, db, message)
-    except KeyboardInterrupt:
-        pass
-    finally:
-        # Auto-commit is disabled; close cannot acknowledge unfinished work.
-        consumer.close()
-        db.close()
-
-
-if __name__ == "__main__":
-    main()
+        # Replace print with successful business work before committing.
+        consumer.commit(message=message, asynchronous=False)
+except KeyboardInterrupt:
+    pass
+finally:
+    consumer.close()
 ```
 
-Only `TemporaryFailure` receives bounded retries. Invalid JSON/schema or the simulated permanent error is quarantined. Database failures and unexpected programming errors stop processing with the input uncommitted. In a real service, classify errors deliberately: do not turn a database outage into a flood of poison-message reports.
+What to notice:
 
-`MAX_ATTEMPTS=3` permits the main stage plus two retry-topic stages; each stage makes up to three short handler attempts. Crashes/redeliveries can add executions beyond that nominal budget. Retry/DLQ copies preserve raw value, key, original location, error category text, and attempt metadata. The same event ID must survive every handoff. Keep sensitive payloads protected in retry/DLQ topics too.
+- `subscribe(["orders"])` selects a **topic**, not a message key or broker.
+- `orders-workers` is the consumer group. With ordinary partition assignment, one member can own all three partitions; multiple members divide them.
+- `poll(1)` fetches an event. The message exposes its topic, partition, offset, key, and value.
+- The print is a placeholder business action. Replace it with successful durable processing before committing.
+- `commit(message=...)` stores the next offset for that topic-partition; it does not delete the event.
+- `earliest` applies when no valid committed offset exists. It does not force replay on every restart.
 
-### Run and inspect
+The consumer acts as the worker; the record describes the work. A crash after the business action but before the offset commit can cause replay. The example therefore does not promise exactly-once business effects. Idempotency, durable retries, and DLQ design remain explained separately in section 7.
 
-In separate terminals sharing this directory and the same SQLite path:
+### How the AWS setup maps to the scripts
 
-```bash
-# Terminal 1: main worker
-python consumer.py
+| Stage | Example | Owner |
+| --- | --- | --- |
+| Provision | Three-broker MSK cluster | AWS console/infrastructure deployment; MSK runs brokers. |
+| Create topic | Orders, 3 partitions, RF=3 | One-time console action or `boto3` setup. |
+| Publish | `produce(topic="orders", key="customer-42", ...)` | `producer.py`. |
+| Route | Key-aware partitioner selects, for example, P1 | Producer client. |
+| Locate | Metadata says P1's leader is on Broker 2 | Kafka metadata and producer client. |
+| Store | Leader appends; followers copy the same partition's records | MSK/Kafka brokers. |
+| Read | Assigned consumer receives the Orders P1 record | `consumer.py`. |
+| Process | Perform the action, then commit the next offset | Consumer application. |
 
-# Terminal 2: retry worker, separate group, same demo database
-INPUT_TOPIC=video.retry python consumer.py
+P1/Broker 2 are illustrative, not guaranteed results for this particular key. The print statements expose the actual results. Leader placement can change without changing the topic-partition identity.
 
-# Terminal 3: publish four demonstration records
-python producer.py
-
-# Inspect retained DLQ records
-kafka-console-consumer.sh --bootstrap-server localhost:9092 \
-  --topic video.dlq --from-beginning
-
-# Inspect the main group's committed progress
-kafka-consumer-groups.sh --bootstrap-server localhost:9092 \
-  --describe --group video-demo-video.uploaded
-```
-
-Expected behavior: `ok` registers immediately; `transient` reaches the retry topic and then registers; `permanent` goes directly to DLQ; `exhaust` reaches DLQ after the retry stages. Re-running the producer creates fresh IDs and therefore new business events. To test deduplication, replay the same serialized event with its original ID. [S20]
-
-Suggested failure experiments: stop a worker before its offset commit; make retry-topic writes unavailable; replay invalid JSON; compare one group with two consumers against two distinct groups. A real broker test is necessary to observe actual reassignment, failover, and transactional behavior.
+Run the applications as separate processes/services if deployed: the producer sends one event and exits; the consumer waits until interrupted. The producer can publish while the consumer is stopped, and the consumer can later read retained events. They share the topic and event contract, not a direct application-to-application call.
 
 ## 10. Amazon MSK: what AWS manages and what you still design
 
-MSK is AWS's managed Apache Kafka service. Managed brokers still experience maintenance, leader movement, network failures, and capacity constraints. For Standard provisioned brokers, AWS recommends a three-AZ cluster and replication factor at least three; minimum ISR two with RF three permits a replica to be offline while retaining two-copy writes. Service mode, broker type, supported Kafka versions, and allowed configurations matter. [S21]
+MSK runs the broker service and its infrastructure. You choose the cluster mode/capacity, topic partitioning, authentication/network access, and durability policy. Section 9 uses Provisioned Standard brokers; Serverless hides broker counts, and Express has different protected settings and operational features. [S25]
 
-Your application still owns event schemas, partition keys, retries, idempotency, offset correctness, backpressure, monitoring, and downstream failures. Define an RPO/RTO for wider outages; replication within one cluster is not a cross-region recovery plan.
+Managed brokers still experience maintenance, leadership changes, network failures, and capacity constraints. Applications still own event schemas, message keys, processing, retries, idempotency, offset correctness, backpressure, and downstream failures. A separate recovery plan is needed for cross-region outages.
 
-For the included **MSK IAM** connection option:
+For Standard capacity expansion, examine replica and leader placement rather than assuming all existing data moves when brokers are added. Supported Express intelligent rebalancing can redistribute partitions automatically during broker-count changes. This is distinct from increasing a topic's partition count. [S29]
 
-```bash
-python -m pip install aws-msk-iam-sasl-signer-python
-export KAFKA_SECURITY=msk_iam
-export AWS_REGION=us-east-1
-export KAFKA_BOOTSTRAP='YOUR_MSK_IAM_BOOTSTRAP_BROKERS'
-```
-
-Use the actual IAM bootstrap string from your cluster, a permitted network route to all advertised broker endpoints, appropriate security groups/DNS, and an AWS role with topic/group permissions. The callback in `common.py` uses SASL/OAUTHBEARER over TLS and converts token expiry milliseconds to seconds for librdkafka. It obtains credentials through AWS's normal credential chain rather than embedding access keys. This configuration is not interchangeable with MSK SCRAM or mutual TLS. [S22][S23]
+The independent scripts in section 9 use MSK IAM bootstrap endpoints with SASL/OAUTHBEARER over TLS. Their IAM callbacks are connection code, not a connection between the producer application and the consumer application. [S22][S23]
 
 ## 11. Operational signals and interview troubleshooting
 
@@ -735,9 +577,9 @@ These are practice formulations applying the concepts above, not claims about a 
 
 ## 13. Verification and limits
 
-Validation on 2026-10-31: all three Python blocks passed syntax checks, and 17 offline checks passed using simulated Kafka clients and a real SQLite database. The checks cover database deduplication and rollback, successful and failed retry/DLQ handoffs, invalid payload preservation, retry recovery/exhaustion, commit-error propagation, full-buffer handling, uncertain delivery, and the IAM callback expiry conversion.
+Updated 2026-11-01. The inline producer and consumer examples and the one-time AWS setup snippet passed Python syntax checks and offline checks with simulated clients. Checks cover the producer's topic/key and delivery callback, consumer processing before a manual commit, closing without committing on an error, topic-creation parameters, and the IAM token-expiry conversion.
 
-These checks did **not** run a Kafka broker, exercise a real rebalance or leader failure, validate live client configuration, authenticate to MSK, or test SQS/RabbitMQ. The broker commands are a lab recipe; the Python examples are teaching code with the stated polling, throughput, database, and cross-system limitations. Transactional processing is explained but not implemented in these scripts.
+No real Kafka/MSK connection, AWS resource creation, live IAM authorization, broker placement, failover, or throughput test was performed. The consumer prints a decoded order as its placeholder action; it does not implement a database, business deduplication, or retry/DLQ workers. Those design concerns are explained separately.
 
 ## Official references
 
@@ -765,3 +607,9 @@ These checks did **not** run a Kafka broker, exercise a real rebalance or leader
 - [S22: MSK IAM client configuration](https://docs.aws.amazon.com/msk/latest/developerguide/configure-clients-for-iam-access-control.html)
 - [S23: AWS MSK Python IAM signer](https://github.com/aws/aws-msk-iam-sasl-signer-python)
 - [S24: Apache Kafka monitoring](https://kafka.apache.org/41/operations/monitoring/)
+
+- [S25: Amazon MSK service, brokers, and cluster modes](https://aws.amazon.com/msk/faqs/)
+- [S26: AWS topic-management APIs for Provisioned Kafka 3.6+](https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-msk-kafka-topics-public-apis/)
+- [S27: Boto3 Kafka create_topic](https://docs.aws.amazon.com/boto3/latest/reference/services/kafka/client/create_topic.html)
+- [S28: Create topics in the MSK console](https://docs.aws.amazon.com/msk/latest/developerguide/create-topic-console.html)
+- [S29: Express intelligent rebalancing during broker scaling](https://docs.aws.amazon.com/msk/latest/developerguide/intelligent-rebalancing-scaling-clusters.html)
