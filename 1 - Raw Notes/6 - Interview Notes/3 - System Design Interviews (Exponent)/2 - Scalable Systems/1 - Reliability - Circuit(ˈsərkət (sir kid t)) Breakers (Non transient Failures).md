@@ -1037,3 +1037,583 @@ Multiple service instances?
 
 # Reference
 
+
+---
+
+## 13. Practical placement: shared library or ECS sidecar?
+
+Added: **2026-11-01**. This appendix uses **Order → Payment** to explain code ownership, runtime placement, request routing, and AWS Console setup. The examples check payment status with **GET**; they do not charge a card or pretend to persist/queue an order.
+
+### 13.1 Clarifications that apply to the earlier examples
+
+- A breaker observes the outcome of real dependency calls. It must be able to prevent an outbound call, rather than merely monitor a service from somewhere else.
+- Reuse breaker state across requests. A new breaker for every request cannot accumulate failure history.
+- Sharing a repository/package does **not** mean sharing one running service or one global counter. Usually each caller process has its own breaker for each dependency or independently failing operation.
+- Repeated timeouts or overload can justify opening a breaker even when the underlying problem is temporary. The earlier “transient = retry, non-transient = breaker” shortcut is too absolute. Use bounded retries for safe operations and a breaker to stop repeated calls to an unhealthy dependency; classify failures before counting them.
+- A valid business rejection, such as a declined card, does not by itself mean Payment is unhealthy.
+- The earlier `x-amazon-apigateway-integration.circuitBreaker` block is **not a supported native API Gateway integration setting**. API Gateway does not acquire an outbound three-state breaker merely by adding those keys. Put supported protection in the application or a suitable proxy. [Supported integration fields](https://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-swagger-extensions-integration.html)
+- The ECS Console's **deployment circuit breaker** detects failed deployments and can roll them back. It is different from the request-time breaker discussed here. [ECS deployment breaker](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-circuit-breaker.html)
+
+### 13.2 Compare the two choices
+
+| Question | Option 1: application library | Option 2: ECS Service Connect proxies |
+| --- | --- | --- |
+| Where is the implementation maintained? | A package repository; callers install a version | AWS manages the proxy software; you configure ECS services |
+| Where does protection execute? | Inside the caller's application process | In a separate proxy container in each ECS task |
+| Does Order import a breaker library? | Yes | No, for the proxy protection shown here |
+| Where are runtime counters/state? | Local to each caller process by default | Local to each managed proxy; not a single shared breaker service |
+| Who decides business fallback? | Order application | Order application |
+| Can I configure the exact three-state algorithm below? | Yes, through the library | Not through equivalent Service Connect threshold/cooldown/half-open settings |
+| Practical starting point | A system needing application-specific protection without an existing mesh | An ECS platform needing managed service discovery and communication policies |
+
+“Service mesh” means software infrastructure for service-to-service communication. A sidecar is one component of such a system. On ECS, the deployment boundary in this example is a **task**, not a Kubernetes pod.
+
+## 14. Option 1 — a reusable Python library inside Order
+
+### 14.1 Repository location versus runtime location
+
+Maintain `company_resilience` in a separate repository and distribute it as a Python wheel. Each microservice installs that package during its image build. Importing it loads code into that microservice's process; there is no network call to a central “breaker server.”
+
+```mermaid
+flowchart TD
+    PKG["Shared package repository"]
+    subgraph OT["Order ECS task"]
+        O["Order application process"]
+        B["Payment breaker object in Order memory"]
+        O -->|"Check before outbound call"| B
+    end
+    subgraph PT["Payment ECS task"]
+        P["Payment application process"]
+    end
+    PKG -.->|"Install package at image build"| O
+    B -->|"Allowed: HTTP request"| P
+    B -.->|"Open: local exception"| O
+```
+
+Payment does not need a breaker merely to **receive** this request. If Payment later calls another dependency, it can import the same package and create its own outbound breaker. Code is reusable; runtime state remains separate. Two Order workers also have separate in-memory state.
+
+### 14.2 Shared package: `company_resilience/__init__.py`
+
+This wrapper uses **PyBreaker 1.4.1** rather than reproducing the earlier teaching implementation. Its breaker object is created once and reused. The simple threshold below counts consecutive failures; it is not a sliding-window percentage.
+
+```python
+# company_resilience/__init__.py — in the shared package repository
+import logging
+import pybreaker
+
+log = logging.getLogger("company_resilience")
+
+
+class StateLogger(pybreaker.CircuitBreakerListener):
+    def state_change(self, cb, old_state, new_state):
+        log.warning("breaker=%s %s -> %s", cb.name,
+                    old_state.name, new_state.name)
+
+
+def make_breaker(name, excluded_exceptions=()):
+    # Each invocation creates an INDEPENDENT object, not shared global state.
+    # Call this during application initialization, not per HTTP request.
+    return pybreaker.CircuitBreaker(
+        name=name,
+        fail_max=3,                  # Three consecutive counted failures.
+        reset_timeout=10,            # Seconds before a trial is permitted.
+        success_threshold=1,         # One successful trial closes this demo.
+        exclude=list(excluded_exceptions),
+        listeners=[StateLogger()],
+    )
+```
+
+Package metadata, `pyproject.toml` in that same repository:
+
+```toml
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "company-resilience"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = ["pybreaker==1.4.1"]
+
+[tool.setuptools.packages.find]
+include = ["company_resilience*"]
+```
+
+Build with `python -m build` after installing `build`. Publish the wheel to your package registry. Order installs `company-resilience==0.1.0` from that registry. For a local exercise, put the package repository beside your demo directory and run `python -m pip install -e ../company-resilience`.
+
+PyBreaker exposes failure thresholds, reset timeouts, success thresholds and excluded exceptions. Its synchronous API is used with synchronous HTTP calls here. Do not wrap an `async def` HTTP operation with this synchronous example and assume it awaits the operation. [PyBreaker documentation](https://github.com/danielfm/pybreaker)
+
+### 14.3 Payment service: `payment_service.py` — used by both options
+
+```python
+import logging
+import os
+from fastapi import FastAPI, HTTPException
+
+app = FastAPI()
+log = logging.getLogger("uvicorn.error")
+# Change this environment variable and restart Payment to simulate recovery.
+# Leave it unset (healthy) in a normal deployment.
+MODE = os.getenv("PAYMENT_MODE", "healthy")
+
+
+@app.get("/health")
+def health():
+    # Liveness stays independent of the simulated business dependency failure.
+    return {"status": "ok"}
+
+
+@app.get("/payments/{order_id}/status")
+def payment_status(order_id: str):
+    log.info("Payment received order_id=%s mode=%s", order_id, MODE)
+    if MODE == "unavailable":
+        raise HTTPException(503, "Payment temporarily unavailable")
+    if MODE == "declined":
+        raise HTTPException(402, "Payment declined")
+    return {"order_id": order_id, "payment_status": "authorized"}
+```
+
+### 14.4 HTTP adapter: `payment_client.py` — used by both Order examples
+
+HTTP 5xx responses are ordinary HTTP responses, so explicitly translate them into exceptions that a Python breaker can count. Do not count a documented business rejection as an outage. The HTTP client has no automatic application retry in these examples.
+
+```python
+import httpx
+
+
+class PaymentRejected(Exception):
+    def __init__(self, status_code):
+        self.status_code = status_code
+        super().__init__("Payment rejected the request")
+
+
+class PaymentUnavailable(Exception):
+    pass
+
+
+def fetch_payment_status(client, base_url, order_id):
+    # order_id comes from a single FastAPI path segment in this exercise.
+    try:
+        response = client.get(
+            f"{base_url.rstrip('/')}/payments/{order_id}/status"
+        )
+    except httpx.TransportError as exc:
+        # Includes connection errors and HTTPX timeout exceptions.
+        raise PaymentUnavailable("Payment connection failed") from exc
+
+    # These are business/client outcomes in THIS demo's contract.
+    if response.status_code in {400, 402, 404, 409, 422}:
+        raise PaymentRejected(response.status_code)
+    if response.is_error:
+        # Includes 429, 5xx, and integration problems such as 401/403.
+        raise PaymentUnavailable(f"Payment returned {response.status_code}")
+    try:
+        data = response.json()
+        if not isinstance(data, dict) or "payment_status" not in data:
+            raise ValueError("Unexpected Payment response schema")
+        return data
+    except ValueError as exc:
+        raise PaymentUnavailable("Invalid Payment response") from exc
+```
+
+### 14.5 Order service with the library: `order_library.py`
+
+```python
+import logging
+import os
+from contextlib import asynccontextmanager
+
+import httpx
+import pybreaker
+from fastapi import FastAPI, HTTPException
+from company_resilience import make_breaker
+from payment_client import (
+    PaymentRejected, PaymentUnavailable, fetch_payment_status,
+)
+
+logging.basicConfig(level=logging.INFO)
+PAYMENT_BASE_URL = os.getenv("PAYMENT_BASE_URL", "http://127.0.0.1:8080")
+
+# One long-lived breaker PER CALLER PROCESS for this Payment integration.
+# A declined payment is excluded from the dependency failure count.
+payment_breaker = make_breaker("order-to-payment", (PaymentRejected,))
+
+
+@asynccontextmanager
+async def lifespan(app):
+    # Reuse connections. These are HTTPX operation timeouts, not a total
+    # end-to-end deadline. No retries are added to this teaching example.
+    # Internal dependency calls bypass ambient HTTP_PROXY/HTTPS_PROXY settings.
+    with httpx.Client(timeout=httpx.Timeout(5.0, connect=1.0),
+                      trust_env=False) as client:
+        app.state.payment_http = client
+        yield
+
+
+app = FastAPI(lifespan=lifespan)
+
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
+
+@app.get("/orders/{order_id}/payment-status")
+def get_order_payment_status(order_id: str):
+    try:
+        payment = payment_breaker.call(
+            fetch_payment_status,
+            app.state.payment_http, PAYMENT_BASE_URL, order_id,
+        )
+        return {"order_id": order_id, "payment": payment}
+    except pybreaker.CircuitBreakerError:
+        # fetch_payment_status is skipped if the circuit was already OPEN.
+        # On the trip-causing request, the failed call has already happened.
+        raise HTTPException(503, "Payment circuit open; try later")
+    except PaymentRejected as exc:
+        raise HTTPException(exc.status_code, "Payment rejected the request")
+    except PaymentUnavailable:
+        raise HTTPException(503, "Payment unavailable")
+
+
+@app.get("/debug/payment-breaker")
+def breaker_status():
+    # Local learning endpoint: do not expose through the public API route.
+    return {"state": payment_breaker.current_state,
+            "consecutive_failures": payment_breaker.fail_counter}
+```
+
+Order still owns the response when Payment cannot be reached. A real “pending payment” workflow would additionally persist state, use a durable queue, and handle idempotency; this example returns 503 instead of claiming that work was queued.
+
+### 14.6 Run and observe the state transitions locally
+
+Install `fastapi`, `uvicorn`, `httpx`, and the shared package into one virtual environment for the exercise. Copy the three application files into the same demo directory. Run each server in its own terminal, with **one worker** to make the local failure history easy to observe.
+
+Payment terminal:
+
+```bash
+PAYMENT_MODE=unavailable python -m uvicorn payment_service:app --host 0.0.0.0 --port 8080
+```
+
+Order terminal:
+
+```bash
+PAYMENT_BASE_URL=http://127.0.0.1:8080 python -m uvicorn order_library:app --host 0.0.0.0 --port 8000 --workers 1
+```
+
+Client terminal:
+
+```bash
+curl -i http://127.0.0.1:8000/orders/demo-1/payment-status
+curl -i http://127.0.0.1:8000/orders/demo-2/payment-status
+curl -i http://127.0.0.1:8000/orders/demo-3/payment-status
+curl -i http://127.0.0.1:8000/orders/demo-4/payment-status
+curl http://127.0.0.1:8000/debug/payment-breaker
+```
+
+| Request | What happens |
+| --- | --- |
+| First and second failures | Payment is called; Order returns 503; breaker remains closed |
+| Third consecutive failure | Payment is called; failure reaches threshold; breaker opens |
+| Fourth request, within 10 seconds | Order fails locally; Payment receives no request |
+| First request after at least 10 seconds | PyBreaker permits a half-open trial |
+| Trial succeeds | Breaker closes; future calls resume |
+| Trial fails | Breaker reopens for another cooldown |
+
+Stop only Payment with Ctrl-C and restart it using `PAYMENT_MODE=healthy`; leave Order running so its breaker state survives. After the cooldown, call Order again and inspect its logs/debug endpoint. To test business errors independently, restart Order for a clean state, start Payment in `declined` mode, and verify repeated 402 responses do not open the circuit.
+
+The cooldown does not create a background health-check loop here. The **next incoming request** after the cooldown triggers the half-open trial. Multiple workers/replicas retain separate counters. Review concurrency behavior and throughput for the chosen library before a production rollout.
+
+### 14.7 If Option 1 runs on ECS
+
+Use the same external ingress described in section 15.4: HTTP API → VPC link → internal ALB → Order. Disable Service Connect for this comparison. Give Payment a private internal load balancer or separately configured service discovery address, set Order's `PAYMENT_BASE_URL` to it, and allow the corresponding security-group path. The name `payment` does not automatically resolve without discovery configuration. The breaker remains in Order memory; API Gateway does not decide its state.
+
+## 15. Option 2 — ECS Service Connect manages sidecar proxies
+
+### 15.1 Current AWS choice and a limit of this option
+
+As of **2026-11-01**, use **Amazon ECS Service Connect** for this managed ECS example. AWS's App Mesh end-of-support date was **2026-09-30**; the App Mesh documentation says its console/resources are unavailable after that date. Do not follow an old App Mesh virtual-node setup for a new deployment. [AWS App Mesh notice](https://docs.aws.amazon.com/app-mesh/latest/userguide/what-is-app-mesh.html)
+
+Service Connect supplies discovery and managed proxies. You do not deploy a separate Python “breaker service,” manually add the managed proxy to the task definition, or send application requests through a central control-plane server. [Service Connect overview](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-connect.html)
+
+**It is not a drop-in implementation of the Python three-state breaker.** Service Connect provides managed endpoint selection, passive outlier detection, retries and timeouts. Its public configuration does not offer equivalents of `fail_max=3`, `reset_timeout=10`, and `success_threshold=1`. If that exact application-level policy is required, retain a suitable application breaker, including when using Service Connect for networking. Do not duplicate retry loops across layers without budgeting the total attempts.
+
+### 15.2 Request path: tasks, containers, ports and control plane
+
+The example intentionally makes Order **client side only** for Service Connect. It receives external requests directly from the internal ALB on port 8000. It uses its sidecar for the outgoing Payment call. Payment is **client and server** in Service Connect.
+
+```mermaid
+flowchart TD
+    G["API Gateway HTTP API"] --> V["VPC link"]
+    V --> A["Internal ALB listener 80"]
+    subgraph EC["ECS cluster: checkout-demo"]
+        subgraph OT["Order task: shared task network"]
+            O["Order app: port 8000"]
+            OP["Managed Order proxy"]
+            O -->|"HTTP to payment:8080"| OP
+        end
+        subgraph PT["Payment task: shared task network"]
+            PP["Managed Payment proxy: port 15000"]
+            P["Payment app: port 8080"]
+            PP -->|"Local forward to 127.0.0.1:8080"| P
+        end
+        OP -->|"Select Payment task; connect to port 15000"| PP
+    end
+    A -->|"Target group: task IP, port 8000"| O
+    C["ECS Service Connect and Cloud Map configuration"]
+    C -.->|"Configure discovery and proxy"| OP
+    C -.->|"Configure endpoint"| PP
+```
+
+Solid arrows carry requests. Dashed arrows describe configuration, not business traffic. Responses return along the same request path in reverse. ECS task containers use the task's network namespace in `awsvpc` mode. [ECS task networking](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-networking-awsvpc.html)
+
+Order calls `http://payment:8080`, which is a **Service Connect client alias**. ECS configures that endpoint to reach Order's local proxy. That proxy chooses a Payment task and connects to its managed proxy on port **15000**. Payment's proxy forwards to the app on local port **8080**. A direct task-IP call can bypass the intended alias routing; use the configured endpoint. Service Connect does not intercept every arbitrary outbound URL. [Service Connect networking and proxy](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-connect-concepts-deploy.html)
+
+### 15.3 Python app for Order: `order_mesh.py`
+
+Reuse `payment_service.py` and `payment_client.py` from Option 1. This Order app does **not** import `company_resilience` or PyBreaker. It makes a normal HTTP call and handles errors returned through the proxies.
+
+```python
+import os
+from contextlib import asynccontextmanager
+
+import httpx
+from fastapi import FastAPI, HTTPException
+from payment_client import (
+    PaymentRejected, PaymentUnavailable, fetch_payment_status,
+)
+
+# This short endpoint exists inside configured Service Connect client tasks.
+# It is not a public hostname and is not the control plane's URL.
+PAYMENT_BASE_URL = os.getenv("PAYMENT_BASE_URL", "http://payment:8080")
+
+
+@asynccontextmanager
+async def lifespan(app):
+    # Keep this internal alias call out of any ambient corporate HTTP proxy.
+    with httpx.Client(timeout=httpx.Timeout(5.0, connect=1.0),
+                      trust_env=False) as client:
+        app.state.payment_http = client
+        yield
+
+
+app = FastAPI(lifespan=lifespan)
+
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
+
+@app.get("/orders/{order_id}/payment-status")
+def get_order_payment_status(order_id: str):
+    try:
+        payment = fetch_payment_status(
+            app.state.payment_http, PAYMENT_BASE_URL, order_id,
+        )
+        return {"order_id": order_id, "payment": payment}
+    except PaymentRejected as exc:
+        raise HTTPException(exc.status_code, "Payment rejected the request")
+    except PaymentUnavailable:
+        # This can represent a backend failure, proxy rejection or timeout.
+        # A generic 503 does not prove that a circuit or ejection occurred.
+        raise HTTPException(503, "Payment unavailable through Service Connect")
+```
+
+For a **local app-only** check, start Payment on 8080 and run Order with `PAYMENT_BASE_URL=http://127.0.0.1:8080`. That verifies Python request/response handling; it does not emulate or validate Service Connect.
+
+### 15.4 AWS Console: create ingress and networking
+
+These steps describe an example in one account/Region/VPC. Resource names and JSON placeholders below must be replaced. Console labels can vary; the API field names show the intended configuration. The selected HTTP API has a public client-facing endpoint and a **private backend integration**; “private integration” does not mean the HTTP API itself is VPC-only.
+
+1. **VPC Console:** use two private subnets across two Availability Zones for tasks and the internal ALB. Provide NAT or appropriate VPC endpoints for image pulls, logging and required AWS API access. Task public IPs remain disabled.
+2. **EC2 Console → Target groups:** create target group `order-tg`, target type **IP**, protocol HTTP, port **8000**, health-check path `/health`. ECS will register Order task IPs.
+3. **EC2 Console → Load balancers:** create an **internal Application Load Balancer** in the VPC, listener HTTP **80**, forwarding to `order-tg`. The ALB does not need a public IP to accept VPC-link traffic.
+4. **API Gateway Console → VPC links → Create:** create an HTTP-API-compatible VPC link using private subnets and `sg-vpclink`. Wait until it is available.
+5. **API Gateway → HTTP APIs:** create an HTTP API. Add a **private resource integration** targeting the internal ALB's **listener ARN**, using that VPC link. Add route `GET /orders/{order_id}/payment-status` to this integration. Create an auto-deploy stage such as `$default`.
+6. In the integration request parameter mapping, overwrite the path with `$request.path` so a named API stage is not prepended to the backend route. Set integration timeout to **10000 ms** for this example. Configure the API's intended authorization before exposing business data.
+
+Relevant API Gateway integration fields (a **configuration fragment**, not an entire API export):
+
+```json
+{
+  "IntegrationType": "HTTP_PROXY",
+  "IntegrationMethod": "ANY",
+  "ConnectionType": "VPC_LINK",
+  "ConnectionId": "REPLACE_WITH_VPC_LINK_ID",
+  "IntegrationUri": "REPLACE_WITH_INTERNAL_ALB_LISTENER_ARN",
+  "PayloadFormatVersion": "1.0",
+  "TimeoutInMillis": 10000,
+  "RequestParameters": {"overwrite:path": "$request.path"}
+}
+```
+
+These are API/CloudFormation-style integration property names. AWS CLI command flags and ECS JSON use their own casing; do not paste this fragment into an ECS task definition. [Private integration reference](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-private.html), [AWS Console tutorial](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-private-integration.html)
+
+Security groups for the example's application traffic:
+
+| Destination security group | Allow inbound TCP | Source security group |
+| --- | --- | --- |
+| `sg-alb` | 80 | `sg-vpclink` |
+| `sg-order` | 8000 | `sg-alb` |
+| `sg-payment` | 15000 | `sg-order` |
+
+Allow matching outbound flows from VPC link → ALB → Order, and Order → Payment proxy, plus the AWS access required for the deployment. Security groups are stateful, so replies do not need a separate inbound ephemeral-port rule. Do not open Payment app port 8080 to Order in this design; the intended inter-task entry point is its proxy port 15000.
+
+### 15.5 AWS Console: task definitions and managed proxy configuration
+
+**Images and task definitions**
+
+Build separate Order and Payment application images and push them to ECR. Their requirements are `fastapi`, `uvicorn` and `httpx` (HTTPX is needed by Order). Use a locked dependency set for deployed images. The application commands are:
+
+```text
+Order:   python -m uvicorn order_mesh:app --host 0.0.0.0 --port 8000
+Payment: python -m uvicorn payment_service:app --host 0.0.0.0 --port 8080
+```
+
+In **ECS → Task definitions**, create Linux/Fargate definitions with `awsvpc` networking. For a small demo, use task CPU **512** and task memory **1024 MiB**, leaving room for the managed proxy; size production tasks from load tests. Set the task execution role for ECR/log access and application logs to CloudWatch. Do not allocate the entire task's memory to an application container.
+
+Application-container fragments, not complete task definitions:
+
+```json
+{
+  "name": "payment",
+  "image": "REPLACE_WITH_PAYMENT_ECR_IMAGE_URI",
+  "essential": true,
+  "command": ["python", "-m", "uvicorn", "payment_service:app", "--host", "0.0.0.0", "--port", "8080"],
+  "portMappings": [{"name": "payment-http", "containerPort": 8080, "protocol": "tcp", "appProtocol": "http"}],
+  "healthCheck": {
+    "command": ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/health', timeout=1)"],
+    "interval": 10, "timeout": 3, "retries": 3, "startPeriod": 10
+  }
+}
+```
+
+```json
+{
+  "name": "order",
+  "image": "REPLACE_WITH_ORDER_ECR_IMAGE_URI",
+  "essential": true,
+  "command": ["python", "-m", "uvicorn", "order_mesh:app", "--host", "0.0.0.0", "--port", "8000"],
+  "portMappings": [{"name": "order-http", "containerPort": 8000, "protocol": "tcp", "appProtocol": "http"}],
+  "environment": [{"name": "PAYMENT_BASE_URL", "value": "http://payment:8080"}],
+  "healthCheck": {
+    "command": ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=1)"],
+    "interval": 10, "timeout": 3, "retries": 3, "startPeriod": 10
+  }
+}
+```
+
+Add image-compatible runtime architecture, `executionRoleArn`, task CPU/memory, `requiresCompatibilities`, and the application `logConfiguration` in the full definitions. **Do not add a second hand-written Service Connect proxy container**: enabling Service Connect on the ECS service adds it. [Configuration overview](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-connect-concepts.html)
+
+**Create Payment first**
+
+In **ECS → Clusters**, create/select `checkout-demo` and a Service Connect namespace named `checkout` (a Cloud Map HTTP namespace is sufficient). In **Services → Create**, choose Payment's task definition, Fargate, two desired tasks, the private subnets, `sg-payment`, and no public IP. Payment needs no load balancer in this design.
+
+Expand **Service Connect**, select **Turn on Service Connect**, mode **Client and server**, namespace `checkout`. Select named port `payment-http`, discovery name `payment`, client DNS name `payment`, client port **8080**, ingress override **15000**, request timeout **2 seconds**, and idle timeout **60 seconds**. Enable proxy log collection. If a Console revision does not expose an advanced field, set that field through the ECS service API/CLI instead of inventing a Console control.
+
+The exact `serviceConnectConfiguration` object for Payment is:
+
+```json
+{
+  "enabled": true,
+  "namespace": "checkout",
+  "services": [{
+    "portName": "payment-http",
+    "discoveryName": "payment",
+    "clientAliases": [{"dnsName": "payment", "port": 8080}],
+    "ingressPortOverride": 15000,
+    "timeout": {"perRequestTimeoutSeconds": 2, "idleTimeoutSeconds": 60}
+  }],
+  "logConfiguration": {
+    "logDriver": "awslogs",
+    "options": {
+      "awslogs-group": "/ecs/service-connect",
+      "awslogs-region": "us-east-1",
+      "awslogs-stream-prefix": "payment-proxy"
+    }
+  }
+}
+```
+
+Create the log group in the chosen Region first and grant the execution role its log-stream/write permissions. Replace `us-east-1` throughout if using another Region. Field definitions: [ServiceConnectService](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ServiceConnectService.html), [client aliases](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ServiceConnectClientAlias.html), [timeouts](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_TimeoutConfiguration.html).
+
+**Create Order second**
+
+Create Order's ECS service with two desired tasks, Fargate, private subnets, `sg-order`, no public IP, and attach `order-tg` to container `order`, port **8000**. Under Service Connect select **Client side only**, namespace `checkout`, and enable proxy logs. Do not publish an Order Service Connect endpoint for this client-only design.
+
+Order's `serviceConnectConfiguration`:
+
+```json
+{
+  "enabled": true,
+  "namespace": "checkout",
+  "logConfiguration": {
+    "logDriver": "awslogs",
+    "options": {
+      "awslogs-group": "/ecs/service-connect",
+      "awslogs-region": "us-east-1",
+      "awslogs-stream-prefix": "order-proxy"
+    }
+  }
+}
+```
+
+“Client side only” refers to Order's role **inside Service Connect**; it can still receive HTTP from the ALB. The missing `services` array is intentional. [ServiceConnectConfiguration](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ServiceConnectConfiguration.html), [ECS Console creation flow](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/create-service-console-v2.html)
+
+Deploy Payment before Order. If Order already existed before Payment's endpoint was created, choose **Update service → Force new deployment** for Order so new client tasks receive endpoint configuration. Merely editing a Python environment variable does not configure discovery. For later controlled changes, keep these configurations in infrastructure code and deploy them through the normal pipeline.
+
+### 15.6 How does the sidecar decide to forward or avoid Payment?
+
+There are **two different mechanisms** to understand:
+
+| Mechanism | Decision | Recovery |
+| --- | --- | --- |
+| Python library breaker | Stop this caller's protected operation after its configured failure threshold | Permit a gated half-open trial after the cooldown |
+| Service Connect outlier detection | Temporarily avoid a particular unhealthy Payment task when selecting an endpoint | Make it eligible again after the ejection interval; continued failures can cause renewed avoidance |
+| Proxy resource limits | Reject/limit work when a connection/request resource threshold is exhausted | Capacity becomes available as active work finishes |
+
+AWS documents Service Connect's managed passive detection using this example: **5 or more failed connections to a specific task within the last 30 seconds** cause that task to be avoided for **30–300 seconds**. The client proxy observes actual failures and makes the endpoint-selection decision locally. A healthy second Payment task can continue receiving traffic. Do not describe this as one global Payment breaker opening for every Order task. [Managed proxy behavior](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-connect-concepts-deploy.html)
+
+```mermaid
+flowchart TD
+    R["Order calls payment alias"] --> S["Order proxy selects eligible Payment task"]
+    S --> P["Attempt Payment call"]
+    P -->|"Success"| OK["Return response to Order"]
+    P -->|"Counted connection failure"| F["Update local history for that Payment task"]
+    F -->|"Threshold reached"| E["Temporarily avoid that task"]
+    F -->|"Below threshold"| X["Return failure or use a bounded retry"]
+    E -->|"Next call can select another eligible task"| S
+    E -->|"Ejection interval expires"| A["Task becomes eligible again"]
+    A --> S
+```
+
+This diagram describes endpoint selection across requests and **bounded** retry opportunities. It is not an infinite retry loop for one request. A failed call may be retried only within the proxy's managed retry/timeout behavior. When no usable endpoint or budget remains, Order receives a failure.
+
+**Where are the settings?** ECS configures Service Connect's managed behavior. The API object above exposes endpoint/port, timeout, logging and optional TLS configuration; it does not expose the Python-style failure count, cooldown, or half-open success threshold. Do not add arbitrary `outlierDetection`, `circuitBreaker`, or raw Envoy YAML to `serviceConnectConfiguration` and assume ECS accepts it.
+
+**Is this literally OPEN → HALF_OPEN → CLOSED?** No. Generic Envoy calls its connection/request-capacity limits “circuit breaking,” and separately supports unhealthy-host ejection as outlier detection. Timed re-eligibility is not the same as a controlled half-open state with exactly one probe. Ejection limits and fallback/panic behavior can also affect endpoint selection; all backends failing does not imply guaranteed immediate rejection of every subsequent call. [Envoy circuit breaking](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/circuit_breaking), [Envoy outlier detection](https://www.envoyproxy.io/docs/envoy/latest/intro/arch_overview/upstream/outlier)
+
+The **2-second request timeout** in the sample is a response-wait budget, not the **30–300-second endpoint-avoidance interval**. Order's HTTP client and API Gateway have separate outer timeouts. A timed-out request might already have reached Payment. For real money-moving POSTs, use durable idempotency and reconciliation; this is why the exercise uses GET.
+
+### 15.7 Verify the AWS request path and failure handling
+
+1. Check both ECS services have healthy running tasks and Order is healthy in `order-tg`.
+2. Inspect an Order task: it should contain the application container and the ECS-managed Service Connect proxy. Confirm `PAYMENT_BASE_URL=http://payment:8080`.
+3. Call the configured HTTP API route `/orders/demo-1/payment-status`. Expect the normal Payment response. Correlate Order, proxy and Payment logs to follow the request.
+4. From an Order task using configured ECS Exec, call `http://payment:8080/payments/demo-1/status`. This isolates service-to-service routing from API Gateway/ALB ingress. Do not use the Payment task IP as the primary alias-routing test.
+5. In an isolated test environment, introduce controlled connection failures for one Payment instance while keeping another healthy. Observe proxy errors/endpoint avoidance and continued traffic to the healthy instance. ECS health replacement may remove the bad task before passive detection is visible; capture that distinction in the test result.
+6. Restore the backend and observe eventual traffic eligibility. Do not redeploy Order during this observation if you want to retain that particular proxy's local failure history.
+7. Use `PAYMENT_MODE=declined` to test the app's business-error response. Do not assume that a 402 should eject Payment. Likewise, a 503 or timeout alone is not proof that an endpoint was ejected; inspect proxy diagnostics.
+
+The Python-only local exercise verifies application code and the library's three-state transitions. The ECS configuration here is a sourced deployment walkthrough; it must be validated in the target AWS account. No AWS resources are created by adding this note.
+
+### 15.8 What I would say in an interview
+
+> “I protect outgoing dependency calls at the caller. A reusable application library gives me explicit failure classification and a three-state circuit breaker. On ECS, Service Connect can supply managed discovery and proxies, with outlier detection, retries and timeouts. I distinguish endpoint ejection from an application breaker, and keep business fallback in the calling service. API Gateway handles the external entry path; it does not automatically protect a direct Order-to-Payment call.”
+
+### 15.9 Validation recorded when adding these examples
+
+The five Python blocks were extracted and checked with Python 3.12 and PyBreaker 1.4.1. Functional checks verified opening after counted failures, skipping the downstream call while open, reopening after a failed trial, closing after recovery, excluding business rejections, and handling connection/schema errors. Both Order variants' response handling was exercised, and separate local Order/Payment HTTP processes completed a successful request. The three Mermaid diagrams passed syntax parsing; the five JSON fragments and package TOML parsed, with endpoint/port names cross-checked. This does not validate an AWS deployment, live Service Connect ejection behavior, or every library concurrency scenario.
+
