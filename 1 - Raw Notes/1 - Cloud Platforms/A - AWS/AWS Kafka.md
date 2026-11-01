@@ -93,7 +93,7 @@ Topics, keys, partitions, and offsets describe the data model [S1]; replicas and
 
 There are **3 independent logs and 9 replica copies**, not 9 independent work queues. A single broker does not have to contain every partition. Adding replicas improves redundancy but adds storage/network work; adding partitions creates more units of parallelism.
 
-A log resembles a FIFO queue only within a partition. Reading a record does not remove it. Other groups can read it, and the same group can replay it while retained. Ordering is by partition offset, not global event timestamp. Parallel handlers and retry topics can change completion order even when Kafka's log order is intact.
+A log resembles a FIFO queue only within a partition. Reading a record does not **remove** it. Other groups can read it, and the same group can replay it while retained. Ordering is by partition offset, not global event timestamp. Parallel handlers and retry topics can change completion order even when Kafka's log order is intact(完好无损的).
 
 ## 3. Workflow: how a producer finds the right broker
 
