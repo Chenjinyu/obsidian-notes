@@ -1032,8 +1032,8 @@ Multiple service instances?
 ```
 
 ---
-
-## 13. Practical placement: shared library or ECS sidecar?
+From Conversation with ChatGPT
+# 13. Practical placement: shared library or ECS sidecar?
 
 Added: **2026-11-01**. This appendix uses **Order → Payment** to explain code ownership, runtime placement, request routing, and AWS Console setup. The examples check payment status with **GET**; they do not charge a card or pretend to persist/queue an order.
 
