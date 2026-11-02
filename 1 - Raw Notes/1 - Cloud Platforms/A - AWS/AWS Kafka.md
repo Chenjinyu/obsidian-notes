@@ -571,8 +571,7 @@ finally:
 ```
 
 What to notice:
-
-- `subscribe(["orders"])` selects a **topic**, not a message key or broker.
+* `subscribe(["orders"])` selects a **topic**, not a message key or broker.
 - `orders-workers` is the consumer group. With ordinary partition assignment, one member can own all three partitions; multiple members divide them.
 - `poll(1)` fetches an event. The message exposes its topic, partition, offset, key, and value.
 - The print is a placeholder business action. Replace it with successful durable processing before committing.
@@ -580,7 +579,49 @@ What to notice:
 - `earliest` applies when no valid committed offset exists. It does not force replay on every restart.
 
 The consumer acts as the worker; the record describes the work. A crash after the business action but before the offset commit can cause replay. The example therefore does not promise exactly-once business effects. Idempotency, durable retries, and DLQ design remain explained separately in section 7.
+## Kafka Messages Batch Process
+```python
+# consumer batch process
+# from confluent_kafka import Consumer
+messages = consumer.consume(
+	num_message=100,
+	timeout=1.0,
+)
 
+process_batch(consumer, messages, db_pool)
+```
+
+### use cases
+| Use case               | 為什麼適合                                  |
+| ---------------------- | -------------------------------------- |
+| 大量events寫入PostgreSQL   | 可以使用bulk insert／批次transaction，攤薄DB往返成本 |
+| Logs、clickstream寫入分析平台 | 大量小事件可以合併寫入                            |
+| Kafka資料輸出到S3           | 累積後寫成較大的檔案，避免每個event產生一個小檔案            |
+| 呼叫支援bulk操作的API         | 例如一次送多筆搜尋索引更新                          |
+| 高吞吐consumer            | 多筆處理後一起commit，減少commit請求               |
+### Batch的offset怎麼commit？
+
+**每個topic-partition都要分開記錄進度。**
+假設這批資料全部成功：
+
+|Partition|成功處理的offsets|應commit的offset|
+|---|---|---|
+|P0|100、101、102|**103**|
+|P1|50、51|**52**|
+意思是：
+> P0下次從103繼續；P1下次從52繼續。
+不是對整個list提交一個「最大offset」。`commit(offsets=[...])`可以在一次呼叫中提交多個partition的位置。[confluent-kafka 2.16.0 documentation](https://docs.confluent.io/platform/current/clients/confluent-kafka-python/html/index.html?utm_source=chatgpt.com)
+
+### 如果中途失敗呢？
+假設P0：
+
+| Offset | 結果  |
+| ------ | --- |
+| 100    | 成功  |
+| 101    | 失敗  |
+| 102    | 成功  |
+**不能commit 103。**那會讓重啟後的consumer跳過101。
+如果100之前的資料也已安全完成，那P0最多能commit **101**，代表下次仍要處理101。P1的安全進度可以獨立判斷。
 
 ### Why the consumer group needs no explicit creation script
 
