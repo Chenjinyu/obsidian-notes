@@ -164,7 +164,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Mesh and Envoy.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,7 +183,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Mesh and Envoy.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -212,7 +212,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Mesh and Envoy.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -227,7 +227,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Mesh and Envoy.md"
+                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -284,8 +284,9 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "a6e2347c87b33977",
+  "active": "34f3e1f7d0bc809a",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Mesh and Envoy.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/assets/1 - Reliability - Mesh and Envoy/file-20261101232410131.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/assets/1 - Reliability - Mesh and Envoy/file-20261101232345051.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/assets/1 - Reliability - Mesh and Envoy/file-20261101232208026.png",
@@ -294,7 +295,6 @@
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/assets/1 - Reliability - Mesh and Envoy/file-20261101225620130.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/assets/1 - Reliability - Mesh and Envoy/file-20261101225614517.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
-    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Mesh and Envoy.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/assets/1 - Reliability - Mesh and Envoy/file-20261101225228396.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/assets/1 - Reliability - Mesh and Envoy",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/2 - Availability.md",
@@ -327,7 +327,6 @@
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/04-websockets.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/02-polling.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/01-rest-apis.md",
-    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/assets/01-rest-apis/file-20261028215911594.png",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/assets/01-rest-apis",
     "1 - Raw Notes/12 - US Jobs Report/weekly/2026-10-28.md",
     "1 - Raw Notes/13 - Notes for Certified/Untitled.canvas",
