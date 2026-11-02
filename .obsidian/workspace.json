@@ -6,7 +6,7 @@
       {
         "id": "3cf42c5525e927d4",
         "type": "tabs",
-        "dimension": 54.385964912280706,
+        "dimension": 40.418353576248315,
         "children": [
           {
             "id": "ac4ce6ce687a9512",
@@ -62,7 +62,7 @@
       {
         "id": "aa068a2ca0af479d",
         "type": "tabs",
-        "dimension": 45.614035087719294,
+        "dimension": 59.581646423751685,
         "children": [
           {
             "id": "34f3e1f7d0bc809a",
@@ -87,8 +87,33 @@
               "icon": "lucide-file",
               "title": "1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures)"
             }
+          },
+          {
+            "id": "468298d940146206",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "AWS Kafka"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -164,7 +189,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
+                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -183,7 +208,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
+                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -212,7 +237,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
+                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -227,7 +252,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md"
+                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -284,8 +309,9 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "34f3e1f7d0bc809a",
+  "active": "468298d940146206",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Mesh and Envoy.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/assets/1 - Reliability - Mesh and Envoy/file-20261101232410131.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/assets/1 - Reliability - Mesh and Envoy/file-20261101232345051.png",
@@ -294,7 +320,6 @@
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/assets/1 - Reliability - Mesh and Envoy/file-20261101232055091.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/assets/1 - Reliability - Mesh and Envoy/file-20261101225620130.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/assets/1 - Reliability - Mesh and Envoy/file-20261101225614517.png",
-    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/assets/1 - Reliability - Mesh and Envoy/file-20261101225228396.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/assets/1 - Reliability - Mesh and Envoy",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/2 - Availability.md",
