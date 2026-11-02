@@ -147,7 +147,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 293.8032531738281
+    "width": 460.27288818359375
   },
   "right": {
     "id": "c375af2eeef2242a",
@@ -284,7 +284,7 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "34f3e1f7d0bc809a",
+  "active": "1a71e9f0de9191ea",
   "lastOpenFiles": [
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Mesh and Envoy.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/2 - Availability.md",
