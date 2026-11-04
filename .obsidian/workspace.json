@@ -6,7 +6,7 @@
       {
         "id": "3cf42c5525e927d4",
         "type": "tabs",
-        "dimension": 40.418353576248315,
+        "dimension": 33.5042735042735,
         "children": [
           {
             "id": "ac4ce6ce687a9512",
@@ -62,7 +62,7 @@
       {
         "id": "aa068a2ca0af479d",
         "type": "tabs",
-        "dimension": 59.581646423751685,
+        "dimension": 66.49572649572649,
         "children": [
           {
             "id": "34f3e1f7d0bc809a",
@@ -135,9 +135,33 @@
               "icon": "lucide-file",
               "title": "M - 0542. 01 Matrix"
             }
+          },
+          {
+            "id": "f8acc390b3ff51a2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-11-04.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "2026-11-04"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -213,7 +237,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0542. 01 Matrix.md",
+                "file": "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-11-04.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -232,7 +256,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0542. 01 Matrix.md",
+                "file": "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-11-04.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -261,7 +285,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0542. 01 Matrix.md",
+                "file": "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-11-04.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -276,7 +300,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0542. 01 Matrix.md"
+                "file": "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-11-04.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -332,10 +356,12 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "794c29561678b38f",
+  "active": "f8acc390b3ff51a2",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)/Example 2 - Design Connect Four Game.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0542. 01 Matrix.md",
+    "1 - Raw Notes/12 - US Jobs Report/weekly/2026-11-04.md",
+    "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-11-04.md",
+    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)/Example 2 - Design Connect Four Game.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0323. Number of Connected Components in an Undirected Graph.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 1231. Divide Chocolate.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1026. Maximum Difference Between Node and Ancestor.md",
@@ -377,8 +403,6 @@
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/05-webhooks.md",
     "1 - Raw Notes/12 - US Jobs Report/weekly/2026-10-31.md",
     "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-31.md",
-    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/06-retries-backoff-jitter.md",
-    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/04.1-fastapi can do - websockets, rest api, sse.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/assets/01-rest-apis",
     "1 - Raw Notes/13 - Notes for Certified/Untitled.canvas",
     "i changed the canvas name - check sync to git.canvas",
