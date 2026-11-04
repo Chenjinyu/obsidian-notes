@@ -94,7 +94,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)/Example 2 - Design Connect Four Game.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -109,11 +109,35 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "AWS Kafka"
+              "title": "Example 2 - Design Connect Four Game"
+            }
+          },
+          {
+            "id": "794c29561678b38f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0542. 01 Matrix.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "M - 0542. 01 Matrix"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -189,7 +213,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0542. 01 Matrix.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -208,7 +232,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0542. 01 Matrix.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -237,7 +261,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0542. 01 Matrix.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -252,7 +276,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md"
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0542. 01 Matrix.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -290,8 +314,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 264.193359375,
-    "collapsed": true
+    "width": 311.67724609375
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -309,8 +332,18 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "468298d940146206",
+  "active": "794c29561678b38f",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)/Example 2 - Design Connect Four Game.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0542. 01 Matrix.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0323. Number of Connected Components in an Undirected Graph.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/H - 1231. Divide Chocolate.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 1026. Maximum Difference Between Node and Ancestor.md",
+    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)/assets/Example 2 - Design Connect Four Game/file-20261104021733912.png",
+    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)/assets/Example 2 - Design Connect Four Game",
+    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)/assets",
+    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)/Example 1 - Design a Parking Lot.md",
+    "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Mesh and Envoy.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/assets/1 - Reliability - Mesh and Envoy/file-20261101232410131.png",
@@ -327,7 +360,6 @@
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/3 - Scalability.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/Reliability.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/Availability.md",
-    "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
     "().md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - From Daily Interview Questions",
     "1 - Raw Notes/6 - Interview Notes/1 - Screen Interviews/0 - From Daily Interview Questions",
@@ -340,7 +372,6 @@
     "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/7 - Hiring Manager Interview.md",
     "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/2 - Phone Screen vs Coding Interview.md",
     "1 - Raw Notes/1 - Cloud Platforms/A - AWS/assets/AWS Kafka/file-20261031174939958.png",
-    "1 - Raw Notes/1 - Cloud Platforms/A - AWS/assets/AWS Kafka/file-20261031173039641.png",
     "1 - Raw Notes/1 - Cloud Platforms/A - AWS/assets/AWS Kafka",
     "1 - Raw Notes/1 - Cloud Platforms/A - AWS/assets",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/05-webhooks.md",
@@ -348,15 +379,8 @@
     "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-10-31.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/06-retries-backoff-jitter.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/04.1-fastapi can do - websockets, rest api, sse.md",
-    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/03-server-sent-events.md",
-    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/04-websockets.md",
-    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/02-polling.md",
-    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/01-rest-apis.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/assets/01-rest-apis",
-    "1 - Raw Notes/12 - US Jobs Report/weekly/2026-10-28.md",
     "1 - Raw Notes/13 - Notes for Certified/Untitled.canvas",
-    "1 - Raw Notes/13 - Notes for Certified/AWS Certified Generative AI Developer Professional(AIP-C01)",
-    "1 - Raw Notes/12 - US Jobs Report/weekly",
     "i changed the canvas name - check sync to git.canvas",
     "Untitled.canvas",
     "Untitled 5.canvas",
