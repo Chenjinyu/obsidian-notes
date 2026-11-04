@@ -8,15 +8,17 @@ JC可修改「我的選擇／我的備註」；狀態為待選／保留／略過
 
 | 固定ID | 公司／完整職稱 | 地點／模式 | USD基本年薪／狀態 | 匹配點 | 差距 | 優先級 | 開放狀態 | 首次發現 | 最後核查 | 官方 | 我的選擇 | 我的備註 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| ServiceNow-JB0075304 | ServiceNow／[Principal Software Engineer](https://careers.servicenow.com/jobs/744000149766289/principal-software-engineer/) | Santa Clara，Flexible or Remote；Texas remote／到場與旅行待確認，需搬遷則不推薦 | USD221,200–387,100僅Santa Clara；Texas適用base未知，不作達標 | Java／Python、分散式一致性、資料管線、Kubernetes | billing／licensing／metering實務、Principal影響與Texas條件待核 | P2條件式待確認 | 官方完整JD／Apply可讀 | 2026-10-31 | 2026-10-31 | [JD](https://careers.servicenow.com/jobs/744000149766289/principal-software-engineer/) | 待選 | |
-| Stripe-8257935 | Stripe／[Staff Software Engineer, Alloy Integrations](https://stripe.com/careers/listing/staff-software-engineer-alloy-integrations/8257935) | US remote；Texas資格待確認、距辦公室35英里以上 | 224,000–336,000；Texas／職級範圍待確認 | 事件整合、AWS及遷移 | billing／ERP／GraphQL | 待確認候選首選 | 完整JD／Apply可讀 | 2026-10-25 | 2026-10-31 | [JD](https://stripe.com/careers/listing/staff-software-engineer-alloy-integrations/8257935) | 待選 | |
-| Airbnb-8238592 | Airbnb／[Senior Staff Engineer, Guest & Host (Host Listings & Quality)](https://careers.airbnb.com/positions/8238592/) | TX remote可；偶爾到場 | 248,000–310,000；可能跨級，適用範圍待確認 | Java／API／平台架構 | AI guardrails與Senior Staff ownership | P2待確認 | 完整JD／Apply可讀 | 2026-10-25 | 2026-10-31 | [JD](https://careers.airbnb.com/positions/8238592/) | 待選 | |
-| Coinbase-P75554 | Coinbase／[Senior Staff Software Engineer, Data Platform](https://www.coinbase.com/careers/positions/7711287) | US remote；Texas待確認、每季surge | 歷史253,895–298,700（2026-10-25）；現行base／Texas待確認 | 資料平台、Kafka、架構 | ML負載／全域策略深度 | 狀態待確認，暫停申請排序 | 原頁Not found／ATS轉首頁；不推定關閉 | 2026-10-25 | 2026-10-31 | [JD](https://www.coinbase.com/careers/positions/7711287) | 待選 | |
-| Stripe-8209967 | Stripe／[Staff Software Engineer, High Availability and Disaster Recovery](https://stripe.com/careers/listing/staff-software-engineer-high-availability-and-disaster-recovery/8209967) | JD明文美國／加拿大各地remote，含TX；團隊到場／旅行頻率待確認 | 224,000–336,000；僅公開上限達標／需爭取，Texas／Staff範圍待確認 | 雲原生／分散式平台／可靠性／跨團隊帶領 | hyperscaler年資與跨區容災深度待驗證 | P1待確認候選 | 完整JD／Apply可讀 | 2026-10-25（布局證據；10-28列US候選） | 2026-10-31 | [JD](https://stripe.com/careers/listing/staff-software-engineer-high-availability-and-disaster-recovery/8209967) | 待選 | |
+| ServiceNow-JB0075304 | ServiceNow／[Principal Software Engineer](https://jobs.smartrecruiters.com/ServiceNow/744000149766289-principal-software-engineer) | Santa Clara，Flexible or Remote；Texas remote／到場與旅行待確認，需搬遷則不推薦 | 歷史USD221,200–387,100（Santa Clara；10-31），已過期不作現行base | Java／Python、分散式一致性、資料管線、Kubernetes | billing／licensing／metering實務、Principal影響與Texas條件待核 | 關閉／停止推薦 | 官方ATS明文This job has expired，已重讀確認 | 2026-10-31 | 2026-11-04 | [過期ATS](https://jobs.smartrecruiters.com/ServiceNow/744000149766289-principal-software-engineer) | 待選 | |
+| Stripe-8257935 | Stripe／[Staff Software Engineer, Alloy Integrations](https://stripe.com/careers/listing/staff-software-engineer-alloy-integrations/8257935) | 官方申請頁仍列US remote；TX待確認，完整JD失效 | 歷史USD224,000–336,000（2026-10-31）；現行base待恢復 | 事件整合、AWS及遷移 | billing／ERP／GraphQL | 暫停優先排序／JD待核實 | listing 404；[官方申請頁](https://stripe.com/careers/apply/staff-software-engineer-alloy-integrations/8257935)與表單可讀，不推定關閉 | 2026-10-25 | 2026-11-04 | [JD](https://stripe.com/careers/listing/staff-software-engineer-alloy-integrations/8257935) | 待選 | |
+| Airbnb-8238592 | Airbnb／[Senior Staff Engineer, Guest & Host (Host Listings & Quality)](https://careers.airbnb.com/positions/8238592/) | TX remote可；偶爾到場 | 248,000–310,000；可能跨級，適用範圍待確認 | Java／API／平台架構 | AI guardrails與Senior Staff ownership | P2待確認 | 完整JD／Apply可讀 | 2026-10-25 | 2026-11-04 | [JD](https://careers.airbnb.com/positions/8238592/) | 待選 | |
+| Coinbase-P75554 | Coinbase／[Senior Staff Software Engineer, Data Platform](https://www.coinbase.com/careers/positions/7711287) | US remote；Texas待確認、每季surge | 歷史253,895–298,700（2026-10-25）；現行base／Texas待確認 | 資料平台、Kafka、架構 | ML負載／全域策略深度 | 狀態待確認，暫停申請排序 | 原頁仍Not found；當前未知，不推定關閉 | 2026-10-25 | 2026-11-04 | [JD](https://www.coinbase.com/careers/positions/7711287) | 待選 | |
+| Stripe-8209967 | Stripe／[Staff Software Engineer, High Availability and Disaster Recovery](https://stripe.com/careers/listing/staff-software-engineer-high-availability-and-disaster-recovery/8209967) | JD明文美國／加拿大各地remote，含TX；團隊到場／旅行頻率待確認 | 224,000–336,000；僅公開上限達標／需爭取，Texas／Staff範圍待確認 | 雲原生／分散式平台／可靠性／跨團隊帶領 | hyperscaler年資與跨區容災深度待驗證 | P1待確認候選 | 完整JD／Apply可讀 | 2026-10-25（布局證據；10-28列US候選） | 2026-11-04 | [JD](https://stripe.com/careers/listing/staff-software-engineer-high-availability-and-disaster-recovery/8209967) | 待選 | |
 
 本表不代表已申請或已有offer。各項bonus、equity、sign-on／返還、搬遷及福利，以及面試證據／日期，見最新報告。
 
 ## 報告索引
+
+- [2026-11-04：美國職缺與面試報告](weekly/2026-11-04.md)：新增0、重核5，實質狀態更新2（ServiceNow官方ATS過期；Stripe Alloy完整JD失效但申請頁可讀）；已核實達標推薦0。新增Stripe求職時程與Airbnb歷史G10流程證據；Microsoft線索未達官方完整核實標準。
 
 - [2026-10-31：美國職缺與面試報告](weekly/2026-10-31.md)：新增待確認1（ServiceNow JB0075304）、重核既有4；累積待選5，完整門檻核實推薦0。新增Toronto工程CAD對照；Stripe Risk以Ontario remote條件為準；Airbnb面經補正2022發布日。
 
@@ -94,6 +96,21 @@ JC可修改「我的選擇／我的備註」；狀態為待選／保留／略過
 
 
 ServiceNow加拿大Staff Database的CAD底薪明確，仍低於250k僅比較；Reliability Status與加拿大公民／PR條件不能用美國公民身分直接替代。該角色福利列RRSP配對、ESPP、health、family／medical leave及20天年假；bonus目標、equity金額／vesting及sign-on未公開。其他未公開待遇均待確認，詳見[本次完整報告](weekly/2026-10-31.md)。Stripe Risk以Toronto hybrid或Ontario remote、偶爾赴Toronto的具體JD為準；不是全加拿大任意地點remote保證。歷史ML Platform／Payments／Finhub最後核查仍為原日期。
+
+## 2026-11-04 最新狀態與Toronto對照
+
+美國累積追蹤5，使用者選擇均保留：2個完整JD可讀且薪資待確認、Alloy僅申請頁可讀、Coinbase當前未知、ServiceNow Principal官方ATS明文過期。**關閉是職缺狀態，不替JC改成略過。** 詳見[本次報告](weekly/2026-11-04.md)。上述舊日期段落保留歷史，以本段及主表作現行判斷。
+
+| 公司／布局 | 完整加拿大職稱／官方ID及直達連結 | 範圍／與US角色關係 | 官方完整CAD年薪／口徑 | 其他待遇／限制／日期 |
+| --- | --- | --- | --- | --- |
+| Stripe：確認Toronto工程職位與研發布局 | [Staff Software Engineer, High Availability and Disaster Recovery](https://stripe.com/careers/listing/staff-software-engineer-high-availability-and-disaster-recovery/8209967)／8209967 | Toronto辦公地點，美國／加拿大各地可工作；**同一req有兩國聘用選項** | 加拿大未公開／待確認；USD224,000–336,000僅US base，不能換算 | 加拿大bonus／equity／sign-on未公開；不保證未來個人內轉。2026-11-04 |
+| Stripe：Toronto／Ontario工程 | [Staff Software Engineer, Risk Engineering](https://stripe.com/careers/listing/staff-software-engineer-risk-engineering/8120494)／8120494 | Toronto hybrid或Ontario remote，偶爾赴Toronto；**其他Staff，非Alloy或HADR** | **CAD208,000–312,000 annual salary**；純base及精確級別口徑待確認，非已核實250k底薪推薦 | 可能equity／company bonus／退休及健康福利；目標、金額、vesting、sign-on服務期與返還未知。2026-11-04 |
+| ServiceNow：Toronto工程／平台研發職位確認 | [Staff Database Engineer](https://careers.servicenow.com/jobs/744000154789179/staff-database-engineer/)／JB0073869，頁744000154789179 | Toronto、Flexible or Remote；**其他Staff，不是已過期Principal JB0075304的加拿大版本** | **CAD109,400–191,500 base**，低於250k僅比較；另計equity／variable | RRSP配對、ESPP、health、family／medical leave、年假20天；bonus目標、股票金額／vesting、sign-on未知。JD要求Reliability Status、5年可驗證歷史，稱一般需加拿大公民／PR，不推定US公民即可符合。2026-11-04 |
+| Coinbase：確認Canada remote工程，Toronto獨立實體中心未證實 | [Senior Software Engineer, Backend (Consumer - Growth Foundations)](https://www.coinbase.com/careers/positions/8092651)／P77683，頁8092651 | Remote-Canada，季度surges；**其他Senior，非Senior Staff Data Platform** | **CAD191,100–191,100 base**，排除equity／bonus；未達250k只比較 | bonus／equity可能eligible，金額與vesting／sign-on未公開；JD加拿大醫牙視、生育福利與休假，具體額度未知。2026-11-04 |
+| Airbnb：Toronto專門研發部門仍未確認 | 尚無本次可核實Toronto工程requisition；[US原職位](https://careers.airbnb.com/positions/8238592/)不當加拿大版本 | 官方加拿大職缺篩選頁本次工具無法讀；不從一般Canada標籤推定Toronto研發中心 | 加拿大範圍未公開／待確認 | 本次未新增充分證據，不等於不存在。2026-11-04 |
+
+
+對照職位非美國offer，不保證轉調；加拿大bonus／equity／sign-on及返還未知者仍待確認。歷史ML Platform／Coinbase Payments／Finhub與ServiceNow SRE未本次重驗，沿用原核查日期。兩個目前可讀候選完整官方JD為本次技能樣本M=2；使用者保留R=0；已過期ServiceNow不混入現行樣本。
 
 ## 月報
 
