@@ -232,7 +232,8 @@ def dfs_matrix(matrix, start):
 	"""
     n = len(matrix)
     stack = [start]
-    visited = set([start])
+    visited = set([start]) # set needs interable value, can use visited = {start} instead.
+    # or visited = set(), and then visited.add(start)
 
     while stack:
         node = stack.pop() # the node is the row's index.
