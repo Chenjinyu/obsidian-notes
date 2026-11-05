@@ -183,6 +183,54 @@
               "icon": "lucide-file",
               "title": "Different Graph Representations"
             }
+          },
+          {
+            "id": "79aa4459294478db",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0547. Number of Provinces.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "M - 0547. Number of Provinces"
+            }
+          },
+          {
+            "id": "b97be1bd7f63ae6d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Trees/Binary Trees - DFS.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Binary Trees - DFS"
+            }
           }
         ],
         "currentTab": 4
@@ -244,7 +292,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 366.8046569824219
+    "width": 200
   },
   "right": {
     "id": "c375af2eeef2242a",
@@ -382,6 +430,9 @@
   },
   "active": "f8acc390b3ff51a2",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0547. Number of Provinces.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Different Graph Representations.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Trees/Binary Trees - DFS.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Stacks & Queues/Queues.md",
     "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-11-04.md",
     "3 - Zettelkasten/A - Templates/LeetCode Template.md",
@@ -421,9 +472,6 @@
     "1 - Raw Notes/6 - Interview Notes/4 - Behavior Interviews/0 - From Daily Interview Questions",
     "1 - Raw Notes/11 - Canada Jobs Report/monthly/2026-10.md",
     "1 - Raw Notes/11 - Canada Jobs Report/monthly",
-    "1 - Raw Notes/6 - Interview Notes/1 - Screen Interviews/Interview Questions.md",
-    "conflict-files-obsidian-git.md",
-    "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/1 - Interview Process.md",
     "1 - Raw Notes/1 - Cloud Platforms/A - AWS/assets/AWS Kafka/file-20261031174939958.png",
     "1 - Raw Notes/1 - Cloud Platforms/A - AWS/assets/AWS Kafka",
     "1 - Raw Notes/1 - Cloud Platforms/A - AWS/assets",

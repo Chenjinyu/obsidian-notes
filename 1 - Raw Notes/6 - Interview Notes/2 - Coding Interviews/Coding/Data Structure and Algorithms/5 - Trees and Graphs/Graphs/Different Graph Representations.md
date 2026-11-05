@@ -68,7 +68,19 @@ This is why adjacency list is the **default choice** in practice.
 the edges present the between `edges[i][0]` and `edges[i][1]` has a edge/arrow
 means 0 -> 1, 1 ->2, 2 -> 0, and 2 -> 3
 BUT it does represent the neighbors of any given node, Before starting the traversal, we need to pre-process the input so that we can easily find all neighbors.
-There should use <span style="color:red">hashmap.</span>
+There should use <span style="color:red">hashmap.</span>, and defaultdict is a hashmap.
+
+defaultdict automatically creates and inserts a default value when you access a missing key with [], eg
+```python
+counts = defaultdict(int) # int() provides the default value: 0
+# and then
+counts['apple'] += 1 
+print(counts['apple']) # 1
+
+# with a regular dictionary
+counts = {}
+counts["apple"] += 1  # KeyError
+```
 
 ```python
 # example code for building graph from any array of edges
