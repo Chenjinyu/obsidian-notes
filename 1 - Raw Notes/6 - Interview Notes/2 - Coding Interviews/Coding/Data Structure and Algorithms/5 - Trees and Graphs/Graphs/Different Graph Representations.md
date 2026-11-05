@@ -51,7 +51,7 @@ Matrix stores 16 cells but only 2 are useful — **14 wasted cells**. And during
 
 **The numbers make it obvious:**
 
-|                         | Dense (E ≈ V²)             | Sparse (E << V²)         |
+|                         | Dense 稠密(E ≈ V²)           | Sparse 疏(E << V²)        |
 | ----------------------- | -------------------------- | ------------------------ |
 | Adjacency Matrix time   | O(V²) ≈ O(E) — acceptable  | O(V²) >> O(E) — wasteful |
 | Adjacency  List time    | O(V + E) ≈ O(V²) — no gain | O(V + E) — efficient     |
