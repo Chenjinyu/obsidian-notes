@@ -166,7 +166,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-11-04.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Stacks & Queues/Queues.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -181,11 +181,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "2026-11-04"
+              "title": "Queues"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -244,7 +244,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 262.8540344238281
+    "width": 366.8046569824219
   },
   "right": {
     "id": "c375af2eeef2242a",
@@ -261,7 +261,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0739. Daily Temperatures.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Stacks & Queues/Queues.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -280,7 +280,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0739. Daily Temperatures.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Stacks & Queues/Queues.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -309,7 +309,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0739. Daily Temperatures.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Stacks & Queues/Queues.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -324,7 +324,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0739. Daily Temperatures.md"
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Stacks & Queues/Queues.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -380,12 +380,14 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "64d984f8b398d0c2",
+  "active": "f8acc390b3ff51a2",
   "lastOpenFiles": [
+    "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-11-04.md",
+    "3 - Zettelkasten/A - Templates/LeetCode Template.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0739. Daily Temperatures.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Stacks & Queues/Monotonic(单调性).md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Stacks & Queues/deque.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0542. 01 Matrix.md",
-    "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-11-04.md",
     "1 - Raw Notes/12 - US Jobs Report/weekly/2026-11-04.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)/Example 2 - Design Connect Four Game.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0323. Number of Connected Components in an Undirected Graph.md",
@@ -422,11 +424,9 @@
     "conflict-files-obsidian-git.md",
     "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/1 - Interview Process.md",
     "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/7 - Hiring Manager Interview.md",
-    "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/2 - Phone Screen vs Coding Interview.md",
     "1 - Raw Notes/1 - Cloud Platforms/A - AWS/assets/AWS Kafka/file-20261031174939958.png",
     "1 - Raw Notes/1 - Cloud Platforms/A - AWS/assets/AWS Kafka",
     "1 - Raw Notes/1 - Cloud Platforms/A - AWS/assets",
-    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/05-webhooks.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/assets/01-rest-apis",
     "1 - Raw Notes/13 - Notes for Certified/Untitled.canvas",
     "i changed the canvas name - check sync to git.canvas",
