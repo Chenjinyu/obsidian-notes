@@ -166,7 +166,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Graphs - Depth and Breath First Traversal.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Python Trick.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -181,7 +181,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Graphs - Depth and Breath First Traversal"
+              "title": "Python Trick"
             }
           },
           {
@@ -309,7 +309,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Graphs - Depth and Breath First Traversal.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Python Trick.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -328,7 +328,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Graphs - Depth and Breath First Traversal.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Python Trick.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -357,7 +357,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Graphs - Depth and Breath First Traversal.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Python Trick.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -372,7 +372,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Graphs - Depth and Breath First Traversal.md"
+                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Python Trick.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -430,6 +430,7 @@
   },
   "active": "f8acc390b3ff51a2",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Graphs - Depth and Breath First Traversal.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Graphs - BFS.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Graphs.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Different Graph Representations.md",
@@ -467,7 +468,6 @@
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/3 - Scalability - Load Balancing.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/3 - Scalability.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/Reliability.md",
-    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/Availability.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - From Daily Interview Questions",
     "1 - Raw Notes/6 - Interview Notes/1 - Screen Interviews/0 - From Daily Interview Questions",
     "1 - Raw Notes/6 - Interview Notes/4 - Behavior Interviews/0 - From Daily Interview Questions",

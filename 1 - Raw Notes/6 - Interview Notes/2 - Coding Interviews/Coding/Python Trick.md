@@ -134,7 +134,7 @@ arr_counter = Counter(arr)
 # it return the order with the keys, because sorted always return list
 arr_counter_sorted = sorted(arr_counter, key=arr_counter.get, reverse=True) 
 
-arr_counter_sorted = sorted(arr_counter.items, key=lambda x: x[1], reverse=True) # it return tuple
+arr_counter_sorted = sorted(arr_counter.items(), key=lambda x: x[1], reverse=True) # it return tuple
 # [(3, 4), (5, 3), (2, 2), (1, 2), (7, 1)]
 ```
 
