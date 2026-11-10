@@ -2,7 +2,11 @@
 
 JC 可以直接修改「我的選擇」與「我的備註」，或在聊天中提供固定 ID 和選擇。自動更新必須保留這兩欄。
 
-可選狀態：**待選 / 保留 / 略過 / 已申請**。2026-11-07 更新：新推薦／待確認候選0個；更新8個既有職位。Affirm官方加拿大base恢復CAD209,000–269,000，僅上限達標／需爭取，11-04模板異常保留歷史；技術硬門檻仍待核。現行完整base上限達標4項（含NVIDIA僅L5）、Stripe薪資待確認4項，全區間達標0項。累積8項：JC保留Veeva、NVIDIA；Stripe待選4、Affirm待選1、1Password待選1。**薪資條件自2026-10-19生效：加拿大年度基本薪資 CAD250,000+，無上限，非總包。** 僅上限達標須明示需爭取；未知加拿大 base 與已確認項目分開。2026-10-23 起不以公開 sponsorship 承諾作初篩門檻；CUSMA 雇主配合未知不降低技術／薪資匹配排序。
+**2026-11-09 JC 選擇更新：** 三個 Robinhood 職位按 JC 明確要求加入「保留／持續關注」，納入既有每週三／週六職缺與面試報告及月報；不代表已申請或已確認符合職級。累積11項：保留5、待選6。**整體搜尋最低基本年薪仍為 CAD250,000，非總包；JC 已再次確認，不因討論 CAD230,000 而下調。** Robinhood Backend Platform 的 CAD200,000–235,000 base 明確低於門檻，只作使用者指定觀察例外，不能當達標推薦；兩個 Senior Staff 的 CAD234,000–275,000 僅上限達標／需爭取。詳見下方「2026-11-09 Robinhood 追蹤與 AI 職位選擇」。
+
+可選狀態：**待選 / 保留 / 略過 / 已申請**。
+
+**2026-11-07 報告快照（Robinhood 加入前；以下計數保留當日口徑）：** 新推薦／待確認候選0個；更新8個既有職位。Affirm官方加拿大base恢復CAD209,000–269,000，僅上限達標／需爭取，11-04模板異常保留歷史；技術硬門檻仍待核。現行完整base上限達標4項（含NVIDIA僅L5）、Stripe薪資待確認4項，全區間達標0項。累積8項：JC保留Veeva、NVIDIA；Stripe待選4、Affirm待選1、1Password待選1。**薪資條件自2026-10-19生效：加拿大年度基本薪資 CAD250,000+，無上限，非總包。** 僅上限達標須明示需爭取；未知加拿大 base 與已確認項目分開。2026-10-23 起不以公開 sponsorship 承諾作初篩門檻；CUSMA 雇主配合未知不降低技術／薪資匹配排序。
 
 | 職位 ID | 公司／職位 | 地點／模式 | CAD 基本年薪 | 匹配點 | 技能差距 | 境外聘用／工作許可 | 優先級 | 招聘狀態 | 首次發現 | 最後核查 | 官方連結 | 我的選擇 | 我的備註 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -14,6 +18,9 @@ JC 可以直接修改「我的選擇」與「我的備註」，或在聊天中�
 | Stripe-7292520 | Stripe／Backend Engineer, Developer & End-user Experience Platform | Toronto；office通常每月50%；未列Canada remote | CAD base完整區間待確認；官方annual salary CAD135,200–258,000，跨職級；若確認為base則僅上限達標／需爭取 | 高：平台API、跨服務debugging、金融後端、AWS／Kubernetes與帶領 | Senior+定級／scope、financial tracking規模、gRPC／GraphQL深度待確認 | CUSMA雇主配合待確認；未見明確拒絕境外搬遷 | P2待核；先確認base組成與Senior+level，不當已核實達標 | 官方JD／Apply連結可讀，未見關閉；未測試收件 | 2026-10-28 | 2026-11-07 | [官方](https://stripe.com/careers/listing/backend-engineer-developer-end-user-experience-platform/7292520) | 待選 |  |
 | Affirm-8057950003 | Affirm／Senior Staff Software Engineer, Backend (Compute Platform) | Remote Canada，可居Toronto；可能到場onboarding | Canada Senior Staff base CAD209,000–269,000；僅上限達標／需爭取；11-07官方正文恢復數值；11-04模板異常保留歷史 | AWS／EKS／Terraform平台方向高匹配；硬門檻待驗證 | 6+年規模化production K8s、controller/operator實績、fleet治理與GitOps深度待核 | CUSMA雇主配合待確認；現行未見先前條件式no sponsorship模板，不推定已承諾 | P2條件式；先核6+年production K8s及controller/operator實績，250K需爭取 | 官方完整JD／Apply可讀；薪資欄已修復，未測試收件 | 2026-10-31 | 2026-11-07 | [官方](https://job-boards.greenhouse.io/affirm/jobs/8057950003) | 待選 |  |
 | 1Password-25e52edb-3d1a-43ab-a6d1-ad2a36f0c8ee | 1Password／Senior Staff Cloud Platform Engineer | Remote Canada／US；Toronto可居，出差及搬遷安排待確認 | Canada Senior Staff CAD202,000–293,000 base；僅上限達標／需爭取；官方ATS索引＋公司公開LinkedIn，11-04 | 高方向匹配：多租戶K8s／EKS、Terraform、平台架構與跨團隊帶領 | 組織級multi-year影響、fleet治理／SLO、成本成果、network/stateful深度及Go或類似語言實績待核 | CUSMA雇主配合及美國搬Toronto待確認；home-country remote文字未當境外拒絕 | P2條件式候選；平台方向高匹配、scope深度待實證 | 公司LinkedIn完整JD／Apply及existing vacancy可見；Ashby live僅JS，實際收件待確認 | 2026-11-04 | 2026-11-07 | [官方ATS](https://jobs.ashbyhq.com/1password/25e52edb-3d1a-43ab-a6d1-ad2a36f0c8ee) | 待選 |  |
+| Robinhood-8189869 | Robinhood／Senior Staff Software Developer, Developer Infrastructure | Toronto；每週至少3天辦公室 | CAD234,000–275,000 base；僅上限達標／需爭取；bonus／equity另列、金額未公開 | 平台、Python、AWS／K8s、CI/CD、跨團隊帶領方向相關 | Bazel／大型monorepo、remote build execution、每日數千build及跨四團隊技術影響深度待核；不能把未知當沒有 | CUSMA雇主配合及境外搬遷待確認 | JC指定保留；stretch，按證據準備 | 官方完整JD及Apply表單可讀；未測試提交 | 2026-10-23 | 2026-11-09 | [官方](https://job-boards.greenhouse.io/robinhood/jobs/8189869) | 保留 | 2026-11-09 JC要求持續關注並認為可爭取面試。首次沿用10-23研究紀錄；250K base門檻不變。未申請，不保證面試或level；[本次紀錄](#2026-11-09-robinhood-追蹤與-ai-職位選擇)。 |
+| Robinhood-8142278 | Robinhood／Senior Staff Software Developer, Core Infrastructure | Toronto；每週至少3天辦公室 | CAD234,000–275,000 base；僅上限達標／需爭取；bonus／equity另列、金額未公開 | AWS／K8s／Terraform、Python、平台可靠性及技術帶領方向相關 | K8s API machinery／etcd／scheduler、Istio／Envoy source-level、xDS及HTTP/2／gRPC wire-level待核；與使用K8s區分 | CUSMA雇主配合及境外搬遷待確認 | JC指定保留；stretch，專業深度待核 | 官方完整JD及Apply表單可讀；未測試提交 | 2026-10-23 | 2026-11-09 | [官方](https://job-boards.greenhouse.io/robinhood/jobs/8142278) | 保留 | 2026-11-09 JC要求持續關注；首次沿用10-23研究紀錄。250K base門檻不變；未申請，不保證面試或level；[本次紀錄](#2026-11-09-robinhood-追蹤與-ai-職位選擇)。 |
+| Robinhood-8244209 | Robinhood／Staff Software Engineer, Backend Platform | Toronto；每週至少3天辦公室 | CAD200,000–235,000 base；低於250K門檻；bonus／equity另列、金額未公開 | Python後端、內部平台／共享框架、開發者工具及跨團隊帶領方向相關 | production Go／Python規模、Django／gRPC、Bazel／static analysis及組織級scope待核 | CUSMA雇主配合及境外搬遷待確認 | 使用者指定觀察例外；薪資未達，不作達標推薦 | 官方完整JD及Apply表單可讀；未測試提交 | 2026-11-09 | 2026-11-09 | [官方](https://job-boards.greenhouse.io/robinhood/jobs/8244209) | 保留 | 2026-11-09 JC指定持續關注Staff／Senior Staff。只保留觀察，不代表接受235K或降低整體250K base底線；未申請；[本次紀錄](#2026-11-09-robinhood-追蹤與-ai-職位選擇)。 |
 
 ## 報告索引
 
@@ -84,3 +91,13 @@ JC 可以直接修改「我的選擇」與「我的備註」，或在聊天中�
 ## 公司排除（2026-10-25生效）
 
 Capital One／CapitalOne及其他同公司名稱寫法的任何職缺均不搜尋推薦、不重新加入總表、不納入共同技能樣本或面試準備目標。此為JC明確選擇，適用加拿大及美國；不影響真實履歷工作經歷。歷史快照不改寫。
+
+
+## 2026-11-09 Robinhood 追蹤與 AI 職位選擇
+
+- **已確認偏好：** JC 持續關注 Robinhood 的兩個 Senior Staff 與一個 Staff 職位，以上三項列為保留，後續既有每週三／週六報告優先重核開放狀態、base／bonus／equity、匹配證據、公開面試流程與準備重點。無須另建重複排程；總表由既有任務讀取。使用者指定關注不等於已符合任職條件或已申請。
+- **薪資底線：** 整體加拿大基本年薪仍 CAD250,000+。JC 討論 Toronto 的 CAD230,000 base 是否難找，並重申家庭財務需求、不願降低base；該討論不是授權把整體門檻改成230K。Backend Platform 235K上限是觀察例外，若無薪資／職級變化仍不作符合門檻推薦。
+- **AI經驗：** JC 明確表示正在學AI engineering，目前不具備所列SecurityScorecard AI職位需要的經驗；不得以學習計畫冒充production agent／LLM履歷。可把AI工程作為既有平台／後端經驗的補強方向，是否達標依可驗證專案與職責判定。
+- **目前不考慮的職位：** SecurityScorecard [Distinguished Software Engineer, AI（8324966）](https://job-boards.greenhouse.io/securityscorecard/jobs/8324966) 與 [Principal AI Architect（8191929）](https://job-boards.greenhouse.io/securityscorecard/jobs/8191929) 依JC本次說明暫略過，不重複當近期申請建議；不擴大成排除整間公司。若JC日後更新production AI經驗或改變選擇，再重評。
+- **核查與準備：** 2026-11-09三個Robinhood官方完整JD及Apply表單可讀，未提交；兩個Senior Staff要求Bazel／remote execution或K8s／Envoy專業深度，已知背景未足以驗證，保留為stretch。Staff Backend Platform的職責方向較貼近已知平台經驗，但Go／框架深度仍待核，且base未達。面試流程／公開題目及單輪時長尚未於本次完整研究；[10-23歷史研究](weekly/2026-10-23.md)只作有日期的參考，後續按README補充，不把公司通用流程當同職位保證。
+- **歷史統計：** 上方11-07技能M=8、保留R=2等為當日快照；本次新增三個使用者指定關注項目，後續報告重新計算完整JD樣本及保留樣本，不把舊分母稱為現行結果。
