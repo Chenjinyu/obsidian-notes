@@ -26,3 +26,4 @@ Prepare new notes and discussion updates on a branch from `master`, then open a 
 |---|---|
 | 2026-11-11 13:13:11 | [Protobuf: Wire Compatibility vs Application Semantics](2026-11-11_13-13-11/protobuf-wire-compatibility-vs-application-semantics.md) |
 | 2026-11-11 13:13:11 (continued) | [Proto3 Optional Progress: Interview Answer and Feedback](2026-11-11_13-13-11/proto3-optional-progress-migration.md) |
+| 2026-11-11 13:13:11 (continued) | [gRPC Contract Collaboration and Evolution](2026-11-11_13-13-11/grpc-contract-evolution-best-practices.md) |
