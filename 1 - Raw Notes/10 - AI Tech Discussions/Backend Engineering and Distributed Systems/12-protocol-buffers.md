@@ -184,14 +184,23 @@ user = User()# 一开始是空列表print(list(user.roles))  # []# 添加一个�
 
 两者的区别可以放在一起看：
 
-|`optional int32 age`|`repeated string roles`|
-|---|---|---|
-|存放什么|一个整数|多个字符串组成的列表|
-|可以不提供吗|可以|可以|
-|没提供时读取什么|`0`|空列表|
-|能区分“没提供”和“提供默认值”吗|可以，用 `HasField()`|不能区分“没提供”和“提供空列表”|
+|                   | `optional int32 age` | `repeated string roles` |
+| ----------------- | -------------------- | ----------------------- |
+| 存放什么              | 一个整数                 | 多个字符串组成的列表              |
+| 可以不提供吗            | 可以                   | 可以                      |
+| 没提供时读取什么          | `0`                  | 空列表                     |
+| 能区分“没提供”和“提供默认值”吗 | 可以，用 `HasField()`    | 不能区分“没提供”和“提供空列表”       |
 
 `repeated` 本身已经允许零个元素，因此不需要、也不能写成 `optional repeated`。[protobuf.dev](https://protobuf.dev/programming-guides/field_presence/?utm_source=chatgpt.com)
+
+![](assets/12-protocol-buffers/file-20261111110955540.png)
+
+serialized后的数据传到任何的后端都可以被deserialize，数据都是一致的， 不管是c++, java or python
+protoBuf 就像一个默认的共同语言，不管两边的service是什么语言，这个buffer的传递都是一样的
+### Extensibility
+![](assets/12-protocol-buffers/file-20261111112418692.png)
+
+
 ## The schema used by our gRPC guide
 Save this as `jobs.proto`. The examples deliberately use proto3; newer Protobuf editions exist, but are not required for learning these fundamentals.
 ```proto
@@ -229,12 +238,7 @@ The numbers are permanent field identities, not positions that should be renumbe
 ## Generate Python code and run a round trip
 
 Install `grpcio` and `grpcio-tools`, then run in the directory containing `jobs.proto`:
-![](assets/12-protocol-buffers/file-20261111110955540.png)
 
-serialized后的数据传到任何的后端都可以被deserialize，数据都是一致的， 不管是c++, java or python
-protoBuf 就像一个默认的共同语言，不管两边的service是什么语言，这个buffer的传递都是一样的
-### Extensibility
-![](assets/12-protocol-buffers/file-20261111112418692.png)
 ```bash
 python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. jobs.proto
 ```
