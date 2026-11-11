@@ -3,6 +3,7 @@ sr-due: 2026-11-11
 sr-interval: 1
 sr-ease: 2.5
 created: "2026-11-11T13:20:15-06:00"
+updated: "2026-11-11T13:31:33-06:00"
 timezone: America/Chicago
 source: voice-interview
 status: answer-and-feedback-recorded
@@ -111,11 +112,42 @@ Lead with the conclusion, then explain **old clients**, **new clients**, **serve
 
 Useful wording: "The server checks whether progress was explicitly provided in this request." This is clearer than "the server checks whether the progress field exists," which could refer to the schema.
 
+## Continued explanation: client/server roles and integer validation
+
+### JC's revised understanding — summarized
+
+After reviewing the definitions, JC identified `optional` as the relevant presence mechanism and emphasized that the communicating services need an agreed contract. He proposed checking progress with `HasField`, but still associated presence with detecting an old or new client. He also asked whether the server must verify that deserialized progress remains an integer and how to name the two communicating services.
+
+### Naming the participants
+
+For a particular RPC, **the caller is the gRPC client, and the service handling the call is the gRPC server**. Both participants may be backend microservices. [5]
+
+A clear way to describe the example is: "Service A acts as the gRPC client and sends an update request to Service B, the gRPC server."
+
+Client and server describe roles in that call. The same service can handle incoming calls as a server and initiate downstream calls as a client. In this interview scenario, the update client supplies progress, and the job server checks its presence in the incoming request.
+
+### What the presence check establishes
+
+With the updated optional-aware receiver:
+
+- `HasField("progress")` false means progress was absent from this parsed request. Reading the accessor still returns the default integer zero.
+- Presence true with value zero means an explicitly encoded zero arrived.
+- The new partial-update contract defines the first case as preserve and the second as reset.
+
+This does **not** establish whether the caller used old or new generated code. Either client version may omit progress. Moreover, an old implicit-presence client explicitly assigning zero still omits that field during normal serialization. Presence identifies an encoded field, not the caller's software version. [1, 2]
+
+### What to validate after parsing
+
+For an agreed schema, the generated API exposes the declared integer value; checking `isinstance` again is not the main migration safeguard. Validate whether a value was supplied and whether it obeys the application's rules. For example, **if** progress is defined as a percentage, validate the agreed range such as 0–100. A value of 150 can be a valid Protobuf integer while violating that business rule. [2]
+
+To establish cross-version correctness, verify actual decoded values and persisted update outcomes. Checking only that the value is an integer cannot reveal lost presence or a changed business meaning.
+
 ## References and related notes
 
 1. [Field presence: semantic differences and change compatibility](https://protobuf.dev/programming-guides/field_presence/)
 2. [Python generated code: explicit and implicit field presence](https://protobuf.dev/reference/python/python-generated/#fields)
 3. [FieldMask update semantics](https://protobuf.dev/reference/protobuf/google.protobuf/#field-mask)
 4. [Proto3 guide: optional and reserved fields](https://protobuf.dev/programming-guides/proto3/)
+5. [Introduction to gRPC](https://grpc.io/docs/what-is-grpc/introduction/)
 
 Related: [Wire Compatibility vs Application Semantics](protobuf-wire-compatibility-vs-application-semantics.md).
