@@ -166,7 +166,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/12-protocol-buffers.md",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Daily Interview Questions/ReadMe.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -181,7 +181,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "12-protocol-buffers"
+              "title": "ReadMe"
             }
           },
           {
@@ -292,7 +292,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 224.67550659179688
+    "width": 387.85089111328125
   },
   "right": {
     "id": "c375af2eeef2242a",
@@ -309,7 +309,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/12-protocol-buffers.md",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Daily Interview Questions/ReadMe.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -328,7 +328,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/12-protocol-buffers.md",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Daily Interview Questions/ReadMe.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -357,7 +357,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/12-protocol-buffers.md",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Daily Interview Questions/ReadMe.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -372,7 +372,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/12-protocol-buffers.md"
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Daily Interview Questions/ReadMe.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -430,6 +430,9 @@
   },
   "active": "f8acc390b3ff51a2",
   "lastOpenFiles": [
+    "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/12-protocol-buffers.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Daily Interview Questions/ReadMe.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Daily Interview Questions",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/assets/12-protocol-buffers/file-20261111112418692.png",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/assets/12-protocol-buffers/file-20261111110955540.png",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/assets/12-protocol-buffers/file-20261111110922719.png",
@@ -463,19 +466,16 @@
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)/assets/Example 2 - Design Connect Four Game",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)/assets",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)/Example 1 - Design a Parking Lot.md",
-    "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/assets/1 - Reliability - Mesh and Envoy/file-20261101232410131.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/assets/1 - Reliability - Mesh and Envoy/file-20261101232345051.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/assets/1 - Reliability - Mesh and Envoy/file-20261101232208026.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/assets/1 - Reliability - Mesh and Envoy/file-20261101232144596.png",
-    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/assets/1 - Reliability - Mesh and Envoy/file-20261101232055091.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/assets/1 - Reliability - Mesh and Envoy",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - From Daily Interview Questions",
     "1 - Raw Notes/6 - Interview Notes/1 - Screen Interviews/0 - From Daily Interview Questions",
     "1 - Raw Notes/6 - Interview Notes/4 - Behavior Interviews/0 - From Daily Interview Questions",
     "1 - Raw Notes/11 - Canada Jobs Report/monthly",
     "1 - Raw Notes/1 - Cloud Platforms/A - AWS/assets/AWS Kafka",
-    "1 - Raw Notes/1 - Cloud Platforms/A - AWS/assets",
     "1 - Raw Notes/13 - Notes for Certified/Untitled.canvas",
     "i changed the canvas name - check sync to git.canvas",
     "Untitled.canvas",
