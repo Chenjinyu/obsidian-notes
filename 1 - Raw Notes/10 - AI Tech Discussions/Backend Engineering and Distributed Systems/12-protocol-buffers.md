@@ -14,6 +14,16 @@ Think of a shared form definition: both services agree what field number 1 means
 
 Protobuf is not a transport, encryption scheme, database, or complete business validator. It can be used in files, queues, logs, or gRPC. gRPC commonly uses it for messages and service definitions, but the ideas are distinct.
 
+## Why do we need Serialization??
+![](assets/12-protocol-buffers/file-20261111103745231.png)
+For a complex object, "Data" are <span style="color:red">everywhere</span> in memory. 
+how can we store this object to a file?
+how can we pass this object to another process for inter-process communication(IPC) or even machine for remote procedure call(RPC)?
+We can not just store the memory address since there is no way to restore it.
+we need **serialization**
+
+### Serializa
+
 ## Real-world use cases
 
 | Real-world scenario | What Protobuf represents | Why it fits |
