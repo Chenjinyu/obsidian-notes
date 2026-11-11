@@ -5,7 +5,7 @@ sr-ease: 2.5
 created: "2026-11-11T13:13:11-06:00"
 timezone: America/Chicago
 source: voice-discussion
-status: clarification-notes
+status: discussion-and-interview-feedback
 tags:
   - interview
   - protobuf
@@ -18,7 +18,7 @@ tags:
 
 > What do wire compatibility and application semantics mean? How do they differ, and why should we check both when evolving a gRPC API that uses Protobuf?
 
-This question summarizes the clarification discussed on November 11, 2026; it is not a verbatim copy of the morning's original interview prompt. This session clarified the concepts before a full interview answer.
+This question summarizes the initial clarification discussed on November 11, 2026. The interview scenario subsequently read aloud by JC, his answer, and the feedback are recorded in [Optional Progress: Partial Updates and Safe Migration](proto3-optional-progress-migration.md).
 
 ## The two checks
 
