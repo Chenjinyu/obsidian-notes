@@ -7,12 +7,13 @@ sr-ease: 2.5
 # Protocol Buffers — Typed Messages and Compatible Schema Evolution
 
 ## Definition
-
 **Protocol Buffers, or Protobuf, is a language-neutral schema and serialization system.** You describe structured messages in a `.proto` file, generate classes for your programming language, and serialize instances to a compact binary representation.
 
 Think of a shared form definition: both services agree what field number 1 means, how field 2 is typed, and which values are allowed. Generated code provides convenient accessors; the wire format uses field numbers rather than sending full field names for each value.
 
 Protobuf is not a transport, encryption scheme, database, or complete business validator. It can be used in files, queues, logs, or gRPC. gRPC commonly uses it for messages and service definitions, but the ideas are distinct.
+
+its extensible， 也就是说可以向下兼容
 
 ## Why do we need Serialization??
 ![](assets/12-protocol-buffers/file-20261111103745231.png)
@@ -22,8 +23,11 @@ how can we pass this object to another process for inter-process communication(I
 We can not just store the memory address since there is no way to restore it.
 we need **serialization**
 
-### Serializa
-
+### Serialization
+serialization is the process of translating data structure or object state into a format that can be stored(for example, in a file or memory buffer) or transmitted(for example, across a network connection link) and reconstructed later(possibly in a different computer environment) 
+序列化后，就会把那些存储在零散的各个地方的数据存储到一个完整的数据结构。 因为复杂数据对象大部分都是存的指针，而具体指向的内容分散在内存里的各个地方，这个复杂数据对象很难进行传播。
+#### serialization with text
+![](assets/12-protocol-buffers/file-20261111104425264.png)
 ## Real-world use cases
 
 | Real-world scenario | What Protobuf represents | Why it fits |
