@@ -184,7 +184,7 @@ user = User()# 一开始是空列表print(list(user.roles))  # []# 添加一个�
 
 两者的区别可以放在一起看：
 
-||`optional int32 age`|`repeated string roles`|
+|`optional int32 age`|`repeated string roles`|
 |---|---|---|
 |存放什么|一个整数|多个字符串组成的列表|
 |可以不提供吗|可以|可以|
@@ -194,7 +194,6 @@ user = User()# 一开始是空列表print(list(user.roles))  # []# 添加一个�
 `repeated` 本身已经允许零个元素，因此不需要、也不能写成 `optional repeated`。[protobuf.dev](https://protobuf.dev/programming-guides/field_presence/?utm_source=chatgpt.com)
 ## The schema used by our gRPC guide
 Save this as `jobs.proto`. The examples deliberately use proto3; newer Protobuf editions exist, but are not required for learning these fundamentals.
-
 ```proto
 syntax = "proto3";
 package learning;
