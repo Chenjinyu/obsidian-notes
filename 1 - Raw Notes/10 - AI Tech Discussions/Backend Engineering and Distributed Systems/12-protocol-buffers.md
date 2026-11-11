@@ -193,7 +193,7 @@ repeated string roles = 3;
 意思是：`roles` 可以包含多个字符串，例如：
 
 ```python
-user = User(    roles=["admin", "editor"])
+user = User(roles=["admin", "editor"])
 ```
 
 也可以逐个添加：
