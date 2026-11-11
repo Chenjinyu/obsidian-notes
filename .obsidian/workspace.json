@@ -166,7 +166,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Python Trick.md",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/12-protocol-buffers.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -181,7 +181,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "Python Trick"
+              "title": "12-protocol-buffers"
             }
           },
           {
@@ -309,7 +309,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Python Trick.md",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/12-protocol-buffers.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -328,7 +328,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Python Trick.md",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/12-protocol-buffers.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -357,7 +357,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Python Trick.md",
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/12-protocol-buffers.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -372,7 +372,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Python Trick.md"
+                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/12-protocol-buffers.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -430,6 +430,8 @@
   },
   "active": "f8acc390b3ff51a2",
   "lastOpenFiles": [
+    "1 - Raw Notes/12 - US Jobs Report/weekly/2026-11-11.md",
+    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Python Trick.md",
     "1 - Raw Notes/12 - US Jobs Report/weekly/2026-11-07.md",
     "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-11-07.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Graphs/Graphs - Depth and Breath First Traversal.md",
@@ -466,8 +468,6 @@
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/assets/1 - Reliability - Mesh and Envoy/file-20261101225614517.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/assets/1 - Reliability - Mesh and Envoy/file-20261101225228396.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/assets/1 - Reliability - Mesh and Envoy",
-    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/2 - Availability.md",
-    "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/3 - Scalability - Load Balancing.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - From Daily Interview Questions",
     "1 - Raw Notes/6 - Interview Notes/1 - Screen Interviews/0 - From Daily Interview Questions",
     "1 - Raw Notes/6 - Interview Notes/4 - Behavior Interviews/0 - From Daily Interview Questions",
