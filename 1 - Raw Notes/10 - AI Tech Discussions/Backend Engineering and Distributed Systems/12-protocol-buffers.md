@@ -148,14 +148,36 @@ optional int32 age = 2;
 
 编译生成 Python 类后：
 
-```
-from user_pb2 import User# 情况一：没有提供年龄user_a = User()print(user_a.age)               # 0print(user_a.HasField("age"))   # False# 情况二：明确提供年龄为 0user_b = User(age=0)print(user_b.age)               # 0print(user_b.HasField("age"))   # True# 情况三：明确提供年龄为 40user_c = User(age=40)print(user_c.age)               # 40print(user_c.HasField("age"))   # True
+```python
+from user_pb2 import User
+
+# 情况一：没有提供年龄
+user_a = User()
+
+print(user_a.age)               # 0
+print(user_a.HasField("age"))   # False
+
+
+# 情况二：明确提供年龄为 0
+user_b = User(age=0)
+
+print(user_b.age)               # 0
+print(user_b.HasField("age"))   # True
+
+
+# 情况三：明确提供年龄为 40
+user_c = User(age=40)
+
+print(user_c.age)               # 40
+print(user_c.HasField("age"))   # True
 ```
 
 这种能力适合**更新接口**。你可以在业务代码中约定：
 
-```
-if request.HasField("age"):    # 用户提供了年龄，才更新数据库    update_age(request.age)
+```python
+if request.HasField("age"):
+    # 用户提供了年龄，才更新数据库
+    update_age(request.age)
 ```
 
 这样，没有提供 `age` 时，就可以保持数据库中的年龄不变。
@@ -164,20 +186,32 @@ if request.HasField("age"):    # 用户提供了年龄，才更新数据库    u
 
 **再看 `repeated`：它表示列表。**
 
-```
+```python
 repeated string roles = 3;
 ```
 
 意思是：`roles` 可以包含多个字符串，例如：
 
-```
+```python
 user = User(    roles=["admin", "editor"])
 ```
 
 也可以逐个添加：
 
-```
-user = User()# 一开始是空列表print(list(user.roles))  # []# 添加一个角色user.roles.append("admin")# 再添加多个角色user.roles.extend(["editor", "viewer"])print(list(user.roles))# ["admin", "editor", "viewer"]
+```python
+user = User()
+
+# 一开始是空列表
+print(list(user.roles))  # []
+
+# 添加一个角色
+user.roles.append("admin")
+
+# 再添加多个角色
+user.roles.extend(["editor", "viewer"])
+
+print(list(user.roles))
+# ["admin", "editor", "viewer"]
 ```
 
 `repeated` 会保留元素顺序，也允许重复值。**`= 3` 不是限制只能放三个角色，而是说明 `roles` 的字段编号为 3。**[protobuf.dev](https://protobuf.dev/programming-guides/proto3/?utm_source=chatgpt.com)
