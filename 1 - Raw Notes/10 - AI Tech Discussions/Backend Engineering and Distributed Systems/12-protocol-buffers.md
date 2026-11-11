@@ -57,8 +57,142 @@ Protobuf answers “how are these structured values represented as bytes?” A b
 
 Do not promise that Protobuf is always faster or smaller for every workload. Measure representative messages, CPU cost, compression, and network size. Avoid treating deterministic serialization as a universal canonical byte representation for signatures or hashes.
 
-## The schema used by our gRPC guide
 
+-------------------------- Explanation ProtoBuf definition.  --------------------------
+# Additional Explanation
+关键是：**`.proto` 文件里的 `= 1`、`= 3` 不是赋值，而是给字段编号。**这里的 `=` 容易让人误以为它和 Python、Java 中的赋值一样。
+看这两行：
+```
+string user_id = 1;
+repeated string roles = 3;
+```
+它们的意思是：
+
+| 字段名称      | 数据类型                    | 字段编号 | 实际数据示例                |
+| --------- | ----------------------- | ---- | --------------------- |
+| `user_id` | `string`：一个字符串          | `1`  | `"U1001"`             |
+| `roles`   | `repeated string`：字符串列表 | `3`  | `["admin", "editor"]` |
+所以，`user_id` 的**值是字符串**，而 `1` 是这个字段的**固定编号**。`roles` 的值是字符串列表，`3` 也是编号。接收方通过编号识别传过来的是哪个字段。[protobuf.dev](https://protobuf.dev/programming-guides/proto3/?utm_source=chatgpt.com)
+编译生成 Python 的 `User` 类以后，**真正赋值**会是这样：
+```
+user = User(    user_id="U1001",    roles=["admin", "editor"])
+```
+你没有把 `1` 放进 `user_id`，也没有把 `3` 放进 `roles`。这些编号已经写在 `.proto` 的定义里了。
+再看 `reserved`：
+```
+reserved 4, 9 to 11;
+reserved "old_username";
+```
+**`reserved` 的意思是：把指定的字段编号或字段名称禁用，以后不能拿来定义字段。**
+
+|声明|禁用什么|
+|---|---|
+|`reserved 4;`|字段编号 `4`|
+|`reserved 9 to 11;`|字段编号 `9`、`10`、`11`，包含两端|
+|`reserved "old_username";`|字段名称 `old_username`|
+因此，在同一个 `User` 定义里，下面这些声明会报编译错误：
+```
+int32 age = 4;             // 错误：编号 4 被禁用了
+string email = 9;          // 错误：编号 9 被禁用了
+string old_username = 20;  // 错误：虽然编号可用，但名称被禁用了
+```
+这里限制的是**字段的定义**。例如，`reserved 4` 不会禁止某个整数类型字段的实际值等于 `4`。
+为什么要这样做？**主要是为了避免删除旧字段后，别人误用它原来的编号。**
+假设旧版有：
+```
+string old_username = 4;
+```
+旧数据里，编号 `4` 代表用户名。后来你删除了这个字段，如果新版本写成：
+```
+string email = 4;
+```
+新程序读取旧数据时，就可能把旧用户名当成邮箱，因为它们都使用编号 `4`。
+所以，删除旧字段后，应把它的编号和名称保留下来禁用：
+```
+reserved 4;
+reserved "old_username";
+```
+这样编译器就能阻止后续开发者误用它们。
+
+在 **proto3** 中，你可以这样理解：
+- **`optional`：一个值，可以不提供，而且能检查“有没有提供”。**
+- **`repeated`：一组同类型的值，可以有零个、一个或多个。**
+
+例如：
+```
+syntax = "proto3";
+
+message User {
+  optional int32 age = 2;
+  repeated string roles = 3;
+}
+```
+
+这里的 `2` 和 `3` 仍然是**字段编号**。
+
+**先看 `optional`：为什么需要知道“有没有提供”？**
+
+```
+optional int32 age = 2;
+```
+
+接收方可能遇到两种不同情况：
+
+|情况|业务含义|读取 `age`|检查是否提供|
+|---|---|---|---|
+|没有提供年龄|年龄未知|`0`|`False`|
+|明确提供年龄 `0`|年龄是零岁|`0`|`True`|
+|明确提供年龄 `40`|年龄是四十岁|`40`|`True`|
+
+虽然前两种情况读取的值都是 `0`，但 **`optional` 让你能区分它们**。它不会让未提供的整数自动变成 Python 的 `None`。[protobuf.dev](https://protobuf.dev/programming-guides/field_presence/?utm_source=chatgpt.com)
+
+编译生成 Python 类后：
+
+```
+from user_pb2 import User# 情况一：没有提供年龄user_a = User()print(user_a.age)               # 0print(user_a.HasField("age"))   # False# 情况二：明确提供年龄为 0user_b = User(age=0)print(user_b.age)               # 0print(user_b.HasField("age"))   # True# 情况三：明确提供年龄为 40user_c = User(age=40)print(user_c.age)               # 40print(user_c.HasField("age"))   # True
+```
+
+这种能力适合**更新接口**。你可以在业务代码中约定：
+
+```
+if request.HasField("age"):    # 用户提供了年龄，才更新数据库    update_age(request.age)
+```
+
+这样，没有提供 `age` 时，就可以保持数据库中的年龄不变。
+
+注意：在 proto3 中，普通的 `int32 age = 2;` 也可以省略。**加上 `optional` 的关键作用，是额外记录有没有设置这个字段。**
+
+**再看 `repeated`：它表示列表。**
+
+```
+repeated string roles = 3;
+```
+
+意思是：`roles` 可以包含多个字符串，例如：
+
+```
+user = User(    roles=["admin", "editor"])
+```
+
+也可以逐个添加：
+
+```
+user = User()# 一开始是空列表print(list(user.roles))  # []# 添加一个角色user.roles.append("admin")# 再添加多个角色user.roles.extend(["editor", "viewer"])print(list(user.roles))# ["admin", "editor", "viewer"]
+```
+
+`repeated` 会保留元素顺序，也允许重复值。**`= 3` 不是限制只能放三个角色，而是说明 `roles` 的字段编号为 3。**[protobuf.dev](https://protobuf.dev/programming-guides/proto3/?utm_source=chatgpt.com)
+
+两者的区别可以放在一起看：
+
+||`optional int32 age`|`repeated string roles`|
+|---|---|---|
+|存放什么|一个整数|多个字符串组成的列表|
+|可以不提供吗|可以|可以|
+|没提供时读取什么|`0`|空列表|
+|能区分“没提供”和“提供默认值”吗|可以，用 `HasField()`|不能区分“没提供”和“提供空列表”|
+
+`repeated` 本身已经允许零个元素，因此不需要、也不能写成 `optional repeated`。[protobuf.dev](https://protobuf.dev/programming-guides/field_presence/?utm_source=chatgpt.com)
+## The schema used by our gRPC guide
 Save this as `jobs.proto`. The examples deliberately use proto3; newer Protobuf editions exist, but are not required for learning these fundamentals.
 
 ```proto
@@ -99,6 +233,9 @@ Install `grpcio` and `grpcio-tools`, then run in the directory containing `jobs.
 ![](assets/12-protocol-buffers/file-20261111110955540.png)
 
 serialized后的数据传到任何的后端都可以被deserialize，数据都是一致的， 不管是c++, java or python
+protoBuf 就像一个默认的共同语言，不管两边的service是什么语言，这个buffer的传递都是一样的
+### Extensibility
+![](assets/12-protocol-buffers/file-20261111112418692.png)
 ```bash
 python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. jobs.proto
 ```
