@@ -4,7 +4,7 @@ Archive daily interview questions, JC's answers, and the explanations developed 
 
 ## Session folders
 
-Use `YYYY-MM-DD_HH-mm-ss/` for each session, based on **America/Chicago** local time. Record the actual ISO timestamp and timezone in the note's frontmatter. Reuse the existing session note when continuing the same discussion.
+Use `YYYY-MM-DD_topic-slug/` so the date and subject are visible before opening the folder, for example `2026-11-11_protobuf-grpc-compatibility/`. Use the **America/Chicago** date and keep the exact ISO creation timestamp and timezone in each note's frontmatter. Reuse the existing topic folder and session notes when continuing the same discussion.
 
 Create one descriptive Markdown file per topic. Each note should contain:
 
@@ -24,6 +24,6 @@ Prepare new notes and discussion updates on a branch from `master`, then open a 
 
 | Session (America/Chicago) | Topic |
 |---|---|
-| 2026-11-11 13:13:11 | [Protobuf: Wire Compatibility vs Application Semantics](2026-11-11_13-13-11/protobuf-wire-compatibility-vs-application-semantics.md) |
-| 2026-11-11 13:13:11 (continued) | [Proto3 Optional Progress: Interview Answer and Feedback](2026-11-11_13-13-11/proto3-optional-progress-migration.md) |
-| 2026-11-11 13:13:11 (continued) | [gRPC Contract Collaboration and Evolution](2026-11-11_13-13-11/grpc-contract-evolution-best-practices.md) |
+| 2026-11-11 13:13:11 | [Protobuf: Wire Compatibility vs Application Semantics](2026-11-11_protobuf-grpc-compatibility/protobuf-wire-compatibility-vs-application-semantics.md) |
+| 2026-11-11 13:13:11 (continued) | [Proto3 Optional Progress: Interview Answer and Feedback](2026-11-11_protobuf-grpc-compatibility/proto3-optional-progress-migration.md) |
+| 2026-11-11 13:13:11 (continued) | [gRPC Contract Collaboration and Evolution](2026-11-11_protobuf-grpc-compatibility/grpc-contract-evolution-best-practices.md) |
