@@ -96,7 +96,9 @@ The numbers are permanent field identities, not positions that should be renumbe
 ## Generate Python code and run a round trip
 
 Install `grpcio` and `grpcio-tools`, then run in the directory containing `jobs.proto`:
+![](assets/12-protocol-buffers/file-20261111110955540.png)
 
+serialized后的数据传到任何的后端都可以被deserialize，数据都是一致的， 不管是c++, java or python
 ```bash
 python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. jobs.proto
 ```
