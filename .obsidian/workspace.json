@@ -166,7 +166,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Daily Interview Questions/2026-11-11_protobuf-grpc-compatibility/protobuf-wire-compatibility-vs-application-semantics.md",
+                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -181,7 +181,7 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "protobuf-wire-compatibility-vs-application-semantics"
+              "title": "AWS Kafka"
             }
           },
           {
@@ -333,7 +333,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Daily Interview Questions/2026-11-11_protobuf-grpc-compatibility/protobuf-wire-compatibility-vs-application-semantics.md",
+                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -352,7 +352,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Daily Interview Questions/2026-11-11_protobuf-grpc-compatibility/protobuf-wire-compatibility-vs-application-semantics.md",
+                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -381,7 +381,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Daily Interview Questions/2026-11-11_protobuf-grpc-compatibility/protobuf-wire-compatibility-vs-application-semantics.md",
+                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -396,7 +396,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Daily Interview Questions/2026-11-11_protobuf-grpc-compatibility/protobuf-wire-compatibility-vs-application-semantics.md"
+                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -454,11 +454,11 @@
   },
   "active": "d738b8b8c13857fd",
   "lastOpenFiles": [
+    "1 - Raw Notes/10 - AI Tech Discussions/Daily Interview Questions/2026-11-11_protobuf-grpc-compatibility/proto3-optional-progress-migration.md",
+    "1 - Raw Notes/10 - AI Tech Discussions/Daily Interview Questions/2026-11-11_protobuf-grpc-compatibility/protobuf-wire-compatibility-vs-application-semantics.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Daily Interview Questions/2026-11-11_protobuf-grpc-compatibility/grpc-contract-evolution-best-practices.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/12-protocol-buffers.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Daily Interview Questions/README.md",
-    "1 - Raw Notes/10 - AI Tech Discussions/Daily Interview Questions/2026-11-11_protobuf-grpc-compatibility/protobuf-wire-compatibility-vs-application-semantics.md",
-    "1 - Raw Notes/10 - AI Tech Discussions/Daily Interview Questions/2026-11-11_protobuf-grpc-compatibility/proto3-optional-progress-migration.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Daily Interview Questions/2026-11-11_protobuf-grpc-compatibility",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0739. Daily Temperatures.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Daily Interview Questions/ReadMe.md",
