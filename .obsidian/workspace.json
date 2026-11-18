@@ -4,169 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "3cf42c5525e927d4",
-        "type": "tabs",
-        "dimension": 31.435643564356436,
-        "children": [
-          {
-            "id": "ac4ce6ce687a9512",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/0 - ReadMe & Taskaways/1 - Interview Process.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "1 - Interview Process"
-            }
-          },
-          {
-            "id": "a6e2347c87b33977",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Mesh and Envoy.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "1 - Reliability - Mesh and Envoy"
-            }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
         "id": "aa068a2ca0af479d",
         "type": "tabs",
-        "dimension": 68.56435643564357,
         "children": [
-          {
-            "id": "34f3e1f7d0bc809a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/2 - Scalable Systems/1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures).md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "1 - Reliability - Circuit(ˈsərkət (sir kid t)) Breakers (Non transient Failures)"
-            }
-          },
-          {
-            "id": "468298d940146206",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)/Example 2 - Design Connect Four Game.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Example 2 - Design Connect Four Game"
-            }
-          },
-          {
-            "id": "794c29561678b38f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0542. 01 Matrix.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "M - 0542. 01 Matrix"
-            }
-          },
-          {
-            "id": "64d984f8b398d0c2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Backend Engineering and Distributed Systems/12-protocol-buffers.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "12-protocol-buffers"
-            }
-          },
           {
             "id": "d738b8b8c13857fd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/Algorithms In System Design/Round-Robin(RR) Algorithm.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -181,16 +28,16 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "AWS Kafka"
+              "title": "Round-Robin(RR) Algorithm"
             }
           },
           {
-            "id": "f8acc390b3ff51a2",
+            "id": "267c62cbef473900",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1 - Raw Notes/10 - AI Tech Discussions/Daily Interview Questions/ReadMe.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/Algorithms In System Design/Round-Robin(RR) Algorithm - Exception for long-lived connection.md",
                 "mode": "source",
                 "source": false,
                 "backlinks": true,
@@ -205,59 +52,11 @@
                 }
               },
               "icon": "lucide-file",
-              "title": "ReadMe"
-            }
-          },
-          {
-            "id": "79aa4459294478db",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0547. Number of Provinces.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "M - 0547. Number of Provinces"
-            }
-          },
-          {
-            "id": "b97be1bd7f63ae6d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/5 - Trees and Graphs/Trees/Binary Trees - DFS.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": true,
-                "backlinkOpts": {
-                  "collapseAll": false,
-                  "extraContext": false,
-                  "sortOrder": "alphabetical",
-                  "showSearch": false,
-                  "searchQuery": "",
-                  "backlinkCollapsed": false,
-                  "unlinkedCollapsed": true
-                }
-              },
-              "icon": "lucide-file",
-              "title": "Binary Trees - DFS"
+              "title": "Round-Robin(RR) Algorithm - Exception for long-lived connection"
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -291,7 +90,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Circuit breaker",
+                "query": "round robin",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -312,7 +111,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -333,7 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/Algorithms In System Design/Round-Robin(RR) Algorithm - Exception for long-lived connection.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -352,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/Algorithms In System Design/Round-Robin(RR) Algorithm - Exception for long-lived connection.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -381,7 +181,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/Algorithms In System Design/Round-Robin(RR) Algorithm - Exception for long-lived connection.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -396,7 +196,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md"
+                "file": "1 - Raw Notes/6 - Interview Notes/Algorithms In System Design/Round-Robin(RR) Algorithm - Exception for long-lived connection.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -452,8 +252,10 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "d738b8b8c13857fd",
+  "active": "267c62cbef473900",
   "lastOpenFiles": [
+    "1 - Raw Notes/6 - Interview Notes/Algorithms In System Design/Round-Robin(RR) Algorithm.md",
+    "1 - Raw Notes/1 - Cloud Platforms/A - AWS/AWS Kafka.md",
     "1 - Raw Notes/12 - US Jobs Report/weekly/2026-11-14.md",
     "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-11-14.md",
     "1 - Raw Notes/10 - AI Tech Discussions/Daily Interview Questions/2026-11-11_protobuf-grpc-compatibility/proto3-optional-progress-migration.md",
@@ -486,8 +288,6 @@
     "1 - Raw Notes/11 - Canada Jobs Report/weekly/2026-11-04.md",
     "3 - Zettelkasten/A - Templates/LeetCode Template.md",
     "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Stacks & Queues/Monotonic(单调性).md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/Coding/Data Structure and Algorithms/4 - Stacks & Queues/deque.md",
-    "1 - Raw Notes/6 - Interview Notes/2 - Coding Interviews/LeetCode Questions/M - 0542. 01 Matrix.md",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)/assets/Example 2 - Design Connect Four Game/file-20261104021733912.png",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)/assets/Example 2 - Design Connect Four Game",
     "1 - Raw Notes/6 - Interview Notes/3 - System Design Interviews (Exponent)/0 - Low-Level System Design Interview(LLD)/assets",
