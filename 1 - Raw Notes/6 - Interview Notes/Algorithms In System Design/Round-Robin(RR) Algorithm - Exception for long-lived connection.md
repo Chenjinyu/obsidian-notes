@@ -4,6 +4,24 @@ Tags: [[Round Robin]] [[Round-Robin(RR) Algorithm]][[../../7 - JCUS.LINK/System 
 
 # Content
 
+**_Round Robin (RR)_** _is a CPU scheduling algorithm that gives_ **_each process a fixed amount of time_** _(called a_ **_time quantum_**_) to execute. If the process doesn’t finish in that time, it goes to the back of the queue, and the next process gets its turn._
+
+## Key Terminologies
+- **Process:** A task or program waiting to be executed.
+- **Time Quantum / Time Slice:** A small fixed amount of CPU time given to each process.
+- **Ready Queue:** A line (queue) where processes wait for their turn to run.
+
+##  How Round Robin Works
+1. All processes are placed in a queue.
+2. The first process gets the CPU for a time quantum.
+3. If the process finishes in that time, it leaves the queue.
+4. If not, it goes to the back of the queue to wait for another turn.
+5. This continues in a circular manner until all processes are completed.
+
+
+
+---
+
 **Round Robin does NOT replace existing connections and it does NOT cause an error.**  
 It simply keeps assigning **new connections** in order, **ignoring how long old ones stay open**.
 
