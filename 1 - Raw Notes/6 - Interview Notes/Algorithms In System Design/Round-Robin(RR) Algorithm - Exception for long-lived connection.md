@@ -67,7 +67,7 @@ This is why Round Robin is **bad for**:
 ---
 
 ### What systems do instead
-For long-lived or uneven connections, use:
+For long-lived or uneven(不均匀) connections, use:
 - **Least Connections**
 - **Weighted Least Connections**
 - **Least Response Time**
