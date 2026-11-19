@@ -19,6 +19,41 @@ Tags: [[Round Robin]] [[Round-Robin(RR) Algorithm]][[../../7 - JCUS.LINK/System 
 5. This continues in a circular manner until all processes are completed.
 
 
+![](assets/Round-Robin(RR)%20Algorithm%20-%20Exception%20for%20long-lived%20connection/file-20261118234722379.png)
+The BT(Burst time) is the amount of CPU execution time for a process needed. 中文叫「CPU 執行時間」。
+TQ = Time Quantum, which is the amount of CPU execution time in each turn
+
+## Example of Round Robin Scheduling
+
+Let us consider a system that has four processes which have arrived at the same time in the order P1, P2, P3 and P4. The burst time in milliseconds of each process is given by the following table −
+
+|Process|CPU Burst Times in ms|
+|---|---|
+|P1|8|
+|P2|10|
+|P3|6|
+|P4|4|
+
+Let us consider time quantum of 2ms and perform RR scheduling on this. We will draw GANTT chart and find the average turnaround time and average waiting time.
+
+### GANTT Chart with time quantum of 2ms
+
+![GANTT Chart with time quantum of 2ms](https://www.tutorialspoint.com/operating_system/images/gantt_chart_with_time_quantum_of_2ms.jpg)
+
+### Average Turnaround Time
+
+Average TAT = Sum of Turnaround Time of each Process **/** Number of Processes
+=(TATP1+TATP2+TATP3+TATP4)/4
+= ( 24 + 28 + 22+ 16) / 4 = 22.5 ms
+
+In order to calculate the waiting time of each process, we multiply the time quantum with the number of time slices the process was waiting in the ready queue.
+
+### Average Waiting Time
+Average WT = Sum of Waiting Time of Each Process **/** Number of processes
+=(WTP1+WTP2+WTP3+WTP4)/4
+= ( 8*2 + 9*2+ 8*2+ 6*2) / 4 = 15.5 ms
+
+
 
 ---
 
