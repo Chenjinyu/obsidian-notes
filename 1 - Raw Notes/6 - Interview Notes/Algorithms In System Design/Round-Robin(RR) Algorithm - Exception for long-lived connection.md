@@ -3,20 +3,7 @@ Course:
 Tags: [[Round Robin]] [[Round-Robin(RR) Algorithm]][[../../7 - JCUS.LINK/System Design]] [[Algorithms]] [[System Design Interview]]
 
 # Reference
-## Advantages of Round Robin Scheduling
-
-- Round Robin scheduling is the most a fair scheduling algorithm whereby all processes are given equal time quantum for execution.
-- Starvation of any process caused by indefinite waiting in ready queue is totally eliminated in RR scheduling.
-- It does not require any complicated method to calculate the CPU burst time of each process prior to scheduling.
-- It is pretty simple to implement and so finds application in a wide range of situations.
-- Convoy effect does not occur in RR scheduling as in First Come First Serve CPU (FCFS) scheduling.
-
-## Disadvantages of Round Robin Scheduling
-
-- The performance of Round Robin scheduling is highly dependent upon the chosen time quantum. This requires prudent analysis before implementation, failing which required results are not received.
-- If the chosen time quantum is very large, most of the processes with complete within the burst time. In effect, RR scheduling will act as FCFS scheduling. Thus, all the limitations of FCFS will come into the system.
-- If the chosen time quantum is too small, the CPU will be very busy in context switching, i.e. swapping in swapping out processes to and from the CPU and memory. This would reduce the throughput of the system since more time will be expended in context switching rather than actual execution of the processes.
-- RR scheduling does not give any scope to assign priorities to processes. So, system processes which need high priority gets the same preference as background processes. This may often hamper the overall performance of a system.
+Good explanation: https://www.youtube.com/watch?v=QlCmgBOMjlI
 # Content
 
 **_Round Robin (RR)_** _is a CPU scheduling algorithm that gives_ **_each process a fixed amount of time_** _(called a_ **_time quantum_**_) to execute. If the process doesn’t finish in that time, it goes to the back of the queue, and the next process gets its turn._

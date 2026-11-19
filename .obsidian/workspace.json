@@ -78,9 +78,33 @@
               "icon": "lucide-file",
               "title": "Round-Robin(RR) Algorithm - Exception for long-lived connection"
             }
+          },
+          {
+            "id": "8208531352a3e0aa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 - Raw Notes/6 - Interview Notes/Algorithms In System Design/Load Balancing Algorithm - Least Connection.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": true,
+                "backlinkOpts": {
+                  "collapseAll": false,
+                  "extraContext": false,
+                  "sortOrder": "alphabetical",
+                  "showSearch": false,
+                  "searchQuery": "",
+                  "backlinkCollapsed": false,
+                  "unlinkedCollapsed": true
+                }
+              },
+              "icon": "lucide-file",
+              "title": "Load Balancing Algorithm - Least Connection"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -156,7 +180,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/Algorithms In System Design/Round-Robin(RR) Algorithm - Exception for long-lived connection.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/Algorithms In System Design/Load Balancing Algorithm - Least Connection.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -175,7 +199,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/Algorithms In System Design/Round-Robin(RR) Algorithm - Exception for long-lived connection.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/Algorithms In System Design/Load Balancing Algorithm - Least Connection.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -204,7 +228,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/Algorithms In System Design/Round-Robin(RR) Algorithm - Exception for long-lived connection.md",
+                "file": "1 - Raw Notes/6 - Interview Notes/Algorithms In System Design/Load Balancing Algorithm - Least Connection.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -219,7 +243,7 @@
             "state": {
               "type": "footnotes",
               "state": {
-                "file": "1 - Raw Notes/6 - Interview Notes/Algorithms In System Design/Round-Robin(RR) Algorithm - Exception for long-lived connection.md"
+                "file": "1 - Raw Notes/6 - Interview Notes/Algorithms In System Design/Load Balancing Algorithm - Least Connection.md"
               },
               "icon": "lucide-file-signature",
               "title": "Footnotes"
@@ -275,10 +299,10 @@
       "3d-graph-new:Global 3D Graph": false
     }
   },
-  "active": "267c62cbef473900",
+  "active": "8208531352a3e0aa",
   "lastOpenFiles": [
-    "1 - Raw Notes/6 - Interview Notes/Algorithms In System Design/Round-Robin(RR) Algorithm.md",
     "1 - Raw Notes/6 - Interview Notes/Algorithms In System Design/Round-Robin(RR) Algorithm - Exception for long-lived connection.md",
+    "1 - Raw Notes/6 - Interview Notes/Algorithms In System Design/Round-Robin(RR) Algorithm.md",
     "1 - Raw Notes/6 - Interview Notes/Algorithms In System Design/assets/Round-Robin(RR) Algorithm - Exception for long-lived connection/file-20261118234722379.png",
     "1 - Raw Notes/6 - Interview Notes/Algorithms In System Design/assets/Round-Robin(RR) Algorithm - Exception for long-lived connection",
     "1 - Raw Notes/6 - Interview Notes/Algorithms In System Design/assets",
